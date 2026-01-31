@@ -1629,22 +1629,112 @@ export const ContactPage = ({ isUrdu }: { isUrdu: boolean }) => (
 );
 
 export const PrivacyPage = () => (
-  <div className="max-w-4xl mx-auto py-20 px-4">
-    <h2 className="text-4xl font-black mb-8">Privacy Policy</h2>
-    <p className="text-slate-600 leading-relaxed">PakCalc operates on a "No Data Stored" principle. All calculations are performed on the client-side.</p>
+  <div className="max-w-4xl mx-auto py-20 px-4 space-y-8">
+    <h2 className="text-4xl font-black mb-8 border-b pb-4 border-slate-200">Privacy Policy</h2>
+
+    <div className="space-y-6 text-slate-600 leading-relaxed text-justify">
+      <section>
+        <h3 className="text-xl font-bold text-slate-900 mb-3">1. Information We Collect</h3>
+        <p>PakCalc is designed with privacy at its core. We do not require users to register or provide personal information such as names, email addresses, or phone numbers to use our financial tools. All calculations are performed directly within your browser (client-side), meaning your financial data never leaves your device and is not stored on our servers.</p>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-bold text-slate-900 mb-3">2. Log Files and Analytics</h3>
+        <p>Like most websites, PakCalc uses log files. These files typically log visitors to the site—usually a standard procedure for hosting companies and a part of hosting services' analytics. The information inside the log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date/time stamp, referring/exit pages, and possibly the number of clicks. This information is used to analyze trends, administer the site, track user movement around the site, and gather demographic information.</p>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-bold text-slate-900 mb-3">3. Cookies and Web Beacons</h3>
+        <p>PakCalc uses cookies to store information about visitors' preferences, to record user-specific information on which pages the site visitor accesses or visits, and to personalize or customize our web page content based upon visitors' browser type or other information that the visitor sends via their browser.</p>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-bold text-slate-900 mb-3">4. Google DoubleClick DART Cookie</h3>
+        <p>Google is one of the third-party vendors on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to PakCalc and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL – <a href="https://policies.google.com/technologies/ads" className="text-emerald-600 hover:underline">https://policies.google.com/technologies/ads</a></p>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-bold text-slate-900 mb-3">5. Advertising Partners</h3>
+        <p>Some of the advertisers on our site may use cookies and web beacons. Each of our advertising partners has their own Privacy Policy for their policies on user data. For easier access, we hyperlinked to their Privacy Policies below:</p>
+        <ul className="list-disc pl-5 mt-2">
+          <li>Google: <a href="https://policies.google.com/technologies/ads" className="text-emerald-600 hover:underline">https://policies.google.com/technologies/ads</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-bold text-slate-900 mb-3">6. Third-Party Privacy Policies</h3>
+        <p>PakCalc's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options. You can choose to disable cookies through your individual browser options.</p>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-bold text-slate-900 mb-3">7. Consent</h3>
+        <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
+      </section>
+    </div>
   </div>
 );
 
 export const TermsPage = () => (
-  <div className="max-w-4xl mx-auto py-20 px-4">
-    <h2 className="text-4xl font-black mb-8">Terms of Service</h2>
-    <p className="text-slate-600 leading-relaxed">By using PakCalc, you acknowledge that all results are estimates.</p>
+  <div className="max-w-4xl mx-auto py-20 px-4 space-y-8">
+    <h2 className="text-4xl font-black mb-8 border-b pb-4 border-slate-200">Terms of Service</h2>
+
+    <div className="space-y-6 text-slate-600 leading-relaxed text-justify">
+      <section>
+        <h3 className="text-xl font-bold text-slate-900 mb-3">1. Acceptance of Terms</h3>
+        <p>By accessing and using PakCalc, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you do not agree with any part of these terms, you must not use our services.</p>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-bold text-slate-900 mb-3">2. Use of Service</h3>
+        <p>PakCalc provides financial calculation tools for informational purposes only. You agree to use the website for lawful purposes and in a way that does not infringe the rights of, restrict, or inhibit anyone else's use of the portal.</p>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-bold text-slate-900 mb-3">3. Intellectual Property</h3>
+        <p>All content, features, and functionality (including but not limited to text, graphics, logos, and software) on PakCalc are the exclusive property of PakCalc and are protected by international copyright, trademark, and other intellectual property laws.</p>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-bold text-slate-900 mb-3">4. Accuracy of Information</h3>
+        <p>While we strive to provide the most accurate and up-to-date financial tools based on current Pakistan laws (FBR/SBP), all results are estimates. We do not guarantee the completeness or accuracy of any results produced by our calculators.</p>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-bold text-slate-900 mb-3">5. Limitation of Liability</h3>
+        <p>In no event shall PakCalc or its affiliates be liable for any damages arising out of the use or inability to use the materials on PakCalc, even if notified orally or in writing of the possibility of such damage. These tools should not be used as a substitute for professional financial or legal advice.</p>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-bold text-slate-900 mb-3">6. Governing Law</h3>
+        <p>These terms and conditions are governed by and construed in accordance with the laws of the Islamic Republic of Pakistan, and you irrevocably submit to the exclusive jurisdiction of the courts in that location.</p>
+      </section>
+    </div>
   </div>
 );
 
 export const DisclaimerPage = () => (
-  <div className="max-w-4xl mx-auto py-20 px-4">
-    <h2 className="text-4xl font-black mb-8">Disclaimer</h2>
-    <p className="text-slate-600 leading-relaxed">Financial regulations in Pakistan change frequently. PakCalc is not legally responsible.</p>
+  <div className="max-w-4xl mx-auto py-20 px-4 space-y-8">
+    <h2 className="text-4xl font-black mb-8 border-b pb-4 border-slate-200">Legal Disclaimer</h2>
+
+    <div className="space-y-6 text-slate-600 leading-relaxed text-justify">
+      <div className="p-6 bg-amber-50 border-l-4 border-amber-500 text-amber-900 rounded-r-xl font-medium">
+        IMPORTANT: The information provided by PakCalc is for general informational purposes only. All information on the site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the site.
+      </div>
+
+      <section>
+        <h3 className="text-xl font-bold text-slate-900 mb-3">1. No Financial Advice</h3>
+        <p>The calculators and content on PakCalc are designed to provide estimates and should not be construed as professional financial, investment, or legal advice. Financial regulations in Pakistan (such as FBR Tax Slabs and SBP Interest Rates) are subject to frequent changes. Always consult with a qualified financial advisor, tax professional, or legal counsel before making major financial decisions.</p>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-bold text-slate-900 mb-3">2. "As-Is" Usage</h3>
+        <p>Your use of the site and your reliance on any information on the site is solely at your own risk. PakCalc is provided on an "as-is" and "as-available" basis without any warranties of any kind.</p>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-bold text-slate-900 mb-3">3. External Links</h3>
+        <p>The site may contain links to other websites or content belonging to or originating from third parties. Such external links are not investigated, monitored, or checked for accuracy, adequacy, validity, reliability, availability, or completeness by us. We do not warrant, endorse, guarantee, or assume responsibility for the accuracy or reliability of any information offered by third-party websites linked through the site.</p>
+      </section>
+    </div>
   </div>
 );
