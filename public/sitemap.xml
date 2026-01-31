@@ -1,65 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://pakcalc.vercel.app/</loc>
+    <loc>https://pakcalc.site/</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://pakcalc.vercel.app/all-tools</loc>
+    <loc>https://pakcalc.site/all-tools</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pakcalc.vercel.app/slabs</loc>
+    <loc>https://pakcalc.site/slabs</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pakcalc.vercel.app/zakat-info</loc>
+    <loc>https://pakcalc.site/zakat-info</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pakcalc.vercel.app/contact</loc>
+    <loc>https://pakcalc.site/contact</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://pakcalc.vercel.app/privacy</loc>
+    <loc>https://pakcalc.site/privacy</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://pakcalc.vercel.app/terms</loc>
+    <loc>https://pakcalc.site/terms</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://pakcalc.vercel.app/disclaimer</loc>
+    <loc>https://pakcalc.site/disclaimer</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <!-- Tools -->
-  <url><loc>https://pakcalc.vercel.app/income-tax</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.vercel.app/zakat</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.vercel.app/loan-emi</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.vercel.app/profit-margin</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.vercel.app/bmi</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.vercel.app/investment-return</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.vercel.app/retirement-plan</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.vercel.app/real-estate-roi</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.vercel.app/provident-fund</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.vercel.app/gratuity</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.vercel.app/freelancer-tax</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.vercel.app/unit-converter</loc><priority>0.7</priority></url>
+  <url><loc>https://pakcalc.site/income-tax</loc><priority>0.7</priority></url>
+  <url><loc>https://pakcalc.site/zakat</loc><priority>0.7</priority></url>
+  <url><loc>https://pakcalc.site/loan-emi</loc><priority>0.7</priority></url>
+  <url><loc>https://pakcalc.site/profit-margin</loc><priority>0.7</priority></url>
+  <url><loc>https://pakcalc.site/bmi</loc><priority>0.7</priority></url>
+  <url><loc>https://pakcalc.site/investment-return</loc><priority>0.7</priority></url>
+  <url><loc>https://pakcalc.site/retirement-plan</loc><priority>0.7</priority></url>
+  <url><loc>https://pakcalc.site/real-estate-roi</loc><priority>0.7</priority></url>
+  <url><loc>https://pakcalc.site/provident-fund</loc><priority>0.7</priority></url>
+  <url><loc>https://pakcalc.site/gratuity</loc><priority>0.7</priority></url>
+  <url><loc>https://pakcalc.site/freelancer-tax</loc><priority>0.7</priority></url>
+  <url><loc>https://pakcalc.site/unit-converter</loc><priority>0.7</priority></url>
 </urlset>

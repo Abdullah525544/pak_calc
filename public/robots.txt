@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pakcalc.vercel.app/sitemap.xml
+Sitemap: https://pakcalc.site/sitemap.xml
