@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { SALARIED_TAX_SLABS, NISAB_GOLD_GRAMS, NISAB_SILVER_GRAMS } from '../constants';
 
 export const RetirementBlogContent = () => (
@@ -24,10 +25,10 @@ export const RetirementBlogContent = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <p>
-            The biggest enemy of your retirement is not market risk, but <strong>PKR Inflation</strong>. In Pakistan, what costs Rs. 100 today might cost Rs. 1,000 thirty years from now. If your retirement plan doesn't account for compounding inflation, your savings will evaporate.
+            The biggest enemy of your retirement is not market risk, but <strong>PKR Inflation</strong>. In Pakistan, what costs Rs. 100 today might cost Rs. 1,000 thirty years from now. If your <Link to="/retirement-plan" className="text-emerald-600 hover:underline">retirement plan</Link> doesn't account for compounding inflation, your savings will evaporate.
           </p>
           <p>
-            Our calculator uses a <strong>"Real Rate of Return"</strong> approach. This means we subtract the expected inflation rate from your investment growth to show you the <em>actual</em> purchasing power of your future wealth.
+            Our <Link to="/investment-return" className="text-emerald-600 hover:underline">investment calculator</Link> uses a <strong>"Real Rate of Return"</strong> approach. This means we subtract the expected inflation rate from your investment growth to show you the <em>actual</em> purchasing power of your future wealth.
           </p>
         </div>
         <div className="bg-slate-900 text-white p-10 rounded-[3rem] shadow-2xl relative overflow-hidden">
