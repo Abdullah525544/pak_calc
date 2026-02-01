@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { View } from '../types';
 
 interface LayoutProps {
@@ -11,11 +12,12 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children, isUrdu, setIsUrdu, onNavigate }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  const handleMobileNavigate = (view: View) => {
-    onNavigate(view);
+  const handleMobileNavigate = (path: string) => {
+    navigate(path);
     setIsMenuOpen(false);
   };
 
@@ -24,9 +26,10 @@ const Layout: React.FC<LayoutProps> = ({ children, isUrdu, setIsUrdu, onNavigate
       <header className="glass sticky top-0 z-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
           {/* Logo Section */}
-          <div 
+          <Link
+            to="/"
             className="flex items-center space-x-2 md:space-x-3 cursor-pointer group shrink-0"
-            onClick={() => handleMobileNavigate('home')}
+            onClick={() => setIsMenuOpen(false)}
           >
             <div className="w-8 h-8 md:w-10 md:h-10 bg-emerald-700 rounded-lg md:rounded-xl flex items-center justify-center shadow-lg transform group-hover:rotate-12 transition-transform">
               <span className="text-white font-black text-sm md:text-lg">PK</span>
@@ -35,14 +38,14 @@ const Layout: React.FC<LayoutProps> = ({ children, isUrdu, setIsUrdu, onNavigate
               <h1 className="text-lg md:text-xl font-extrabold text-slate-900 tracking-tight">PakCalc</h1>
               <p className="hidden xs:block text-[9px] md:text-[10px] uppercase tracking-widest text-emerald-600 font-bold -mt-0.5 md:-mt-1">Financial Suite</p>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8 text-sm font-semibold text-slate-600">
-            <button onClick={() => onNavigate('home')} className="hover:text-emerald-600 transition-colors">Home</button>
-            <button onClick={() => onNavigate('all-tools')} className="hover:text-emerald-600 transition-colors">All Tools</button>
-            <button onClick={() => onNavigate('slabs')} className="hover:text-emerald-600 transition-colors">FBR Slabs</button>
-            <button onClick={() => onNavigate('zakat-info')} className="hover:text-emerald-600 transition-colors">Zakat Info</button>
+            <Link to="/" className="hover:text-emerald-600 transition-colors">Home</Link>
+            <Link to="/all-tools" className="hover:text-emerald-600 transition-colors">All Tools</Link>
+            <Link to="/slabs" className="hover:text-emerald-600 transition-colors">FBR Slabs</Link>
+            <Link to="/zakat-info" className="hover:text-emerald-600 transition-colors">Zakat Info</Link>
           </nav>
 
           {/* Right Actions */}
@@ -53,14 +56,14 @@ const Layout: React.FC<LayoutProps> = ({ children, isUrdu, setIsUrdu, onNavigate
             >
               {isUrdu ? 'English' : 'اردو'}
             </button>
-            
+
             <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1.5 md:px-5 md:py-2.5 rounded-full text-xs md:text-sm font-bold shadow-md hover:shadow-emerald-200 transition-all flex items-center gap-2">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.603-1.921 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
               <span className="hidden sm:inline">Go Pro</span>
             </button>
 
             {/* Mobile Menu Toggle */}
-            <button 
+            <button
               onClick={toggleMenu}
               className="lg:hidden p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors"
               aria-label="Toggle Menu"
@@ -80,14 +83,14 @@ const Layout: React.FC<LayoutProps> = ({ children, isUrdu, setIsUrdu, onNavigate
         <div className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-96 border-b border-slate-200 bg-white' : 'max-h-0'}`}>
           <div className="px-4 pt-2 pb-6 space-y-2">
             {[
-              { id: 'home', label: 'Home', labelUrdu: 'ہوم' },
-              { id: 'all-tools', label: 'All Tools', labelUrdu: 'تمام ٹولز' },
-              { id: 'slabs', label: 'FBR Slabs', labelUrdu: 'ٹیکس سلیبس' },
-              { id: 'zakat-info', label: 'Zakat Info', labelUrdu: 'زکوٰۃ معلومات' },
+              { path: '/', label: 'Home', labelUrdu: 'ہوم' },
+              { path: '/all-tools', label: 'All Tools', labelUrdu: 'تمام ٹولز' },
+              { path: '/slabs', label: 'FBR Slabs', labelUrdu: 'ٹیکس سلیبس' },
+              { path: '/zakat-info', label: 'Zakat Info', labelUrdu: 'زکوٰۃ معلومات' },
             ].map((item) => (
               <button
-                key={item.id}
-                onClick={() => handleMobileNavigate(item.id as View)}
+                key={item.path}
+                onClick={() => handleMobileNavigate(item.path)}
                 className={`w-full text-left px-4 py-3 rounded-xl text-sm font-bold transition-colors hover:bg-emerald-50 hover:text-emerald-700 ${isUrdu ? 'urdu' : ''}`}
               >
                 {isUrdu ? item.labelUrdu : item.label}
@@ -107,7 +110,7 @@ const Layout: React.FC<LayoutProps> = ({ children, isUrdu, setIsUrdu, onNavigate
             <div className="col-span-1 md:col-span-2 space-y-6">
               <div className="flex items-center space-x-2">
                 <div className="w-8 h-8 bg-emerald-700 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">PK</span>
+                  <span className="text-white font-bold text-sm">PK</span>
                 </div>
                 <span className="text-xl font-bold">PakCalc</span>
               </div>
@@ -118,18 +121,18 @@ const Layout: React.FC<LayoutProps> = ({ children, isUrdu, setIsUrdu, onNavigate
             <div>
               <h4 className="font-bold text-slate-900 mb-4">Calculators</h4>
               <ul className="space-y-2 text-slate-500 text-sm">
-                <li><button onClick={() => onNavigate('all-tools')} className="hover:text-emerald-600">Browse All Tools</button></li>
-                <li><button onClick={() => onNavigate('slabs')} className="hover:text-emerald-600">FBR Slabs 2025</button></li>
-                <li><button onClick={() => onNavigate('zakat-info')} className="hover:text-emerald-600">Zakat & Nisab</button></li>
-                <li><button onClick={() => onNavigate('disclaimer')} className="hover:text-emerald-600">Disclaimer</button></li>
+                <li><Link to="/all-tools" className="hover:text-emerald-600">Browse All Tools</Link></li>
+                <li><Link to="/slabs" className="hover:text-emerald-600">FBR Slabs 2025</Link></li>
+                <li><Link to="/zakat-info" className="hover:text-emerald-600">Zakat & Nisab</Link></li>
+                <li><Link to="/disclaimer" className="hover:text-emerald-600">Disclaimer</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold text-slate-900 mb-4">Support & Legal</h4>
               <ul className="space-y-2 text-slate-500 text-sm">
-                <li><button onClick={() => onNavigate('privacy')} className="hover:text-emerald-600">Privacy Policy</button></li>
-                <li><button onClick={() => onNavigate('terms')} className="hover:text-emerald-600">Terms of Service</button></li>
-                <li><button onClick={() => onNavigate('contact')} className="hover:text-emerald-600">Contact Us</button></li>
+                <li><Link to="/privacy" className="hover:text-emerald-600">Privacy Policy</Link></li>
+                <li><Link to="/terms" className="hover:text-emerald-600">Terms of Service</Link></li>
+                <li><Link to="/contact" className="hover:text-emerald-600">Contact Us</Link></li>
               </ul>
             </div>
           </div>

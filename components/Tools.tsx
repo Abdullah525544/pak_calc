@@ -4,6 +4,7 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip, AreaChart, A
 import { SALARIED_TAX_SLABS } from '../constants';
 import { getFinancialAdvice } from '../services/geminiService';
 import { EMIBlogContent, TaxBlogContent, ZakatBlogContent, ProfitMarginBlogContent, BMIBlogContent, InvestmentBlogContent, RetirementBlogContent, RealEstateBlogContent, PFBlogContent, GratuityBlogContent, FreelancerBlogContent, UnitConverterBlogContent } from './InfoPages';
+import { RelatedTools } from './RelatedTools';
 
 const COLORS = ['#10b981', '#ef4444', '#f59e0b', '#3b82f6', '#8b5cf6', '#ec4899'];
 
@@ -38,6 +39,7 @@ export const IncomeTaxTool = ({ isUrdu }: { isUrdu: boolean }) => {
         </div>
       </div>
       <TaxBlogContent />
+      <RelatedTools toolIds={['zakat', 'investment-return', 'provident-fund', 'freelancer-tax']} />
     </div>
   );
 };
@@ -60,6 +62,7 @@ export const ZakatTool = () => {
         </div>
       </div>
       <ZakatBlogContent />
+      <RelatedTools toolIds={['income-tax', 'investment-return', 'real-estate-roi']} />
     </div>
   );
 };
@@ -88,6 +91,7 @@ export const EMITool = () => {
         </div>
       </div>
       <EMIBlogContent />
+      <RelatedTools toolIds={['real-estate-roi', 'income-tax', 'investment-return']} />
     </div>
   );
 };
@@ -112,6 +116,7 @@ export const ProfitMarginTool = () => {
         </div>
       </div>
       <ProfitMarginBlogContent />
+      <RelatedTools toolIds={['freelancer-tax', 'income-tax', 'unit-converter']} />
     </div>
   );
 };
@@ -135,6 +140,7 @@ export const BMICalcTool = () => {
         </div>
       </div>
       <BMIBlogContent />
+      <RelatedTools toolIds={['retirement-plan', 'unit-converter']} />
     </div>
   );
 };
@@ -241,6 +247,7 @@ export const InvestmentReturnTool = () => {
         </div>
       </div>
       <InvestmentBlogContent />
+      <RelatedTools toolIds={['retirement-plan', 'real-estate-roi', 'zakat', 'income-tax']} />
     </div>
   );
 };
@@ -300,6 +307,7 @@ export const RetirementTool = () => {
         </div>
       </div>
       <RetirementBlogContent />
+      <RelatedTools toolIds={['investment-return', 'provident-fund', 'gratuity']} />
     </div>
   );
 };
@@ -371,6 +379,7 @@ export const RealEstateROITool = () => {
         </p>
       </div>
       <RealEstateBlogContent />
+      <RelatedTools toolIds={['loan-emi', 'zakat', 'investment-return']} />
     </div>
   );
 };
@@ -386,6 +395,7 @@ export const PFTool = () => {
       <input type="number" value={salary} onChange={e => setSalary(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl mb-4" />
       <p className="text-xl font-bold">Monthly PF Contribution: Rs. {Math.round(pf).toLocaleString()}</p>
       <PFBlogContent />
+      <RelatedTools toolIds={['gratuity', 'retirement-plan', 'income-tax']} />
     </div>
   );
 };
@@ -402,6 +412,7 @@ export const GratuityTool = () => {
       <input type="number" value={years} onChange={e => setYears(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl mb-4" />
       <p className="text-xl font-bold">Total Gratuity: Rs. {Math.round(gratuity).toLocaleString()}</p>
       <GratuityBlogContent />
+      <RelatedTools toolIds={['provident-fund', 'retirement-plan', 'income-tax']} />
     </div>
   );
 };
@@ -416,6 +427,7 @@ export const FreelancerTool = () => {
       <input type="number" value={income} onChange={e => setIncome(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl mb-4" />
       <p className="text-xl font-bold">Estimated Withholding Tax (1%): Rs. {Math.round(tax).toLocaleString()}</p>
       <FreelancerBlogContent />
+      <RelatedTools toolIds={['profit-margin', 'income-tax', 'investment-return']} />
     </div>
   );
 };
@@ -430,6 +442,7 @@ export const UnitConverterTool = () => {
       <input type="number" value={marla} onChange={e => setMarla(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl mb-4" />
       <p className="text-xl font-bold">{marla} Marla = {sqft.toLocaleString()} Sq. Ft.</p>
       <UnitConverterBlogContent />
+      <RelatedTools toolIds={['real-estate-roi', 'zakat']} />
     </div>
   );
 };

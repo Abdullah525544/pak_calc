@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { CALCULATORS } from '../constants';
 import { Category, Calculator, View } from '../types';
 
@@ -75,10 +76,10 @@ const CalculatorList: React.FC<CalculatorListProps> = ({ onSelect, onNavigate, i
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {catCalcs.map(calc => (
-                  <div
+                  <Link
                     key={calc.id}
-                    onClick={() => onSelect(calc)}
-                    className="tool-card group bg-white p-8 rounded-[2.5rem] border border-slate-200/60 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_50px_rgba(16,185,129,0.1)] hover:-translate-y-2 transition-all duration-500 cursor-pointer overflow-hidden relative"
+                    to={`/${calc.id}`}
+                    className="tool-card group bg-white p-8 rounded-[2.5rem] border border-slate-200/60 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_50px_rgba(16,185,129,0.1)] hover:-translate-y-2 transition-all duration-500 cursor-pointer overflow-hidden relative block"
                   >
                     <div className="absolute -right-4 -top-4 w-24 h-24 bg-emerald-50 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 scale-150"></div>
 
@@ -99,7 +100,7 @@ const CalculatorList: React.FC<CalculatorListProps> = ({ onSelect, onNavigate, i
                         </svg>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </section>
