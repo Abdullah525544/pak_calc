@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Layout from './components/Layout';
 import CalculatorList from './components/CalculatorList';
 import ToolsDirectory from './components/ToolsDirectory';
 import SEOHead from './components/SEOHead';
 import { Calculator, View } from './types';
 import ScrollToTop from './components/ScrollToTop';
+import { Breadcrumbs } from './components/Breadcrumbs';
 import {
   IncomeTaxTool, ZakatTool, EMITool, ProfitMarginTool, BMICalcTool,
   InvestmentReturnTool, RetirementTool, PFTool, GratuityTool,
@@ -205,27 +207,35 @@ const ToolWrapper = ({ id, component, isUrdu, handleNavigate }: { id: string, co
       />
 
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
-        <div className="space-y-4">
-          <button
-            onClick={() => navigate('/all-tools')}
-            className="group inline-flex items-center gap-2 text-emerald-600 font-bold text-sm tracking-wide"
-          >
-            <div className="w-8 h-8 rounded-full border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-50 transition-colors">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-              </svg>
-            </div>
-            {isUrdu ? 'تمام ٹولز' : 'All Tools'}
-          </button>
+        <div className="space-y-4 w-full">
+          <Breadcrumbs />
           <div className="flex items-center gap-4">
             <div className="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center text-3xl">
               {tool.icon}
             </div>
             <div>
-              <h2 className={`text-4xl font-black text-slate-900 tracking-tight ${isUrdu ? 'urdu' : ''}`}>
+              <h1 className={`text-4xl font-black text-slate-900 tracking-tight ${isUrdu ? 'urdu' : ''}`}>
                 {isUrdu ? tool.nameUrdu : tool.name}
-              </h2>
+              </h1>
               <p className="text-slate-500 font-medium">Free Financial Utility Tool</p>
+
+              <Helmet>
+                <script type="application/ld+json">
+                  {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "SoftwareApplication",
+                    "name": tool.name,
+                    "applicationCategory": "FinanceApplication",
+                    "operatingSystem": "Any",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "0",
+                      "priceCurrency": "PKR"
+                    },
+                    "description": tool.description
+                  })}
+                </script>
+              </Helmet>
             </div>
           </div>
         </div>

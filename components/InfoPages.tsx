@@ -10,10 +10,10 @@ export const RetirementBlogContent = () => (
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-blue-50 text-blue-700 rounded-full text-xs font-black uppercase tracking-widest border border-blue-100">
         🌅 Secure Your Legacy in Pakistan
       </div>
-      <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
+      <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         Retirement Calculator Pakistan 2026: <br />
         <span className="text-blue-600 italic">Financial Freedom for Your Golden Years</span>
-      </h1>
+      </h2>
       <p className="text-xl text-slate-500 max-w-4xl mx-auto leading-relaxed text-center">
         Retirement planning in Pakistan is often overlooked until it's too late. With inflation rates frequently hitting double digits and a lack of a universal social security net, the burden of a comfortable old age lies solely on your shoulders. This guide explains how to use our retirement calculator to outpace inflation and build a corpus that lasts a lifetime.
       </p>
@@ -122,10 +122,10 @@ export const InvestmentBlogContent = () => (
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-emerald-50 text-emerald-700 rounded-full text-xs font-black uppercase tracking-widest border border-emerald-100">
         💸 Wealth Creation
       </div>
-      <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
+      <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         Investment Profit Calculator: <br />
         <span className="text-emerald-600 italic">Growing Your Wealth in Pakistan 2026</span>
-      </h1>
+      </h2>
       <p className="text-xl text-slate-500 max-w-4xl mx-auto leading-relaxed text-center">
         In an economy with high inflation, saving cash is equivalent to losing money. True wealth is built by investing in productive assets that outpace the devaluation of the rupee. Our investment calculator helps you project your gains across various asset classes, from the stability of National Savings to the high-reward potential of the PSX.
       </p>
@@ -235,10 +235,10 @@ export const BMIBlogContent = () => (
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-rose-50 text-rose-700 rounded-full text-xs font-black uppercase tracking-widest border border-rose-100">
         🏃‍♂️ Health & Wellness Pakistan
       </div>
-      <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
+      <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         Body Mass Index (BMI) Guide: <br />
         <span className="text-rose-600 italic">More Than Just a Number on the Scale</span>
-      </h1>
+      </h2>
       <p className="text-xl text-slate-500 max-w-4xl mx-auto leading-relaxed text-center">
         BMI is a widely used screening tool to categorize weight status and identify potential health risks. In Pakistan, where lifestyles are becoming increasingly sedentary and dietary habits are changing, understanding your BMI is the first step towards a healthier, more active life. This guide explains how BMI works, its limitations, and what your results actually mean for your long-term health.
       </p>
@@ -350,10 +350,10 @@ export const EMIBlogContent = () => (
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-blue-50 text-blue-700 rounded-full text-xs font-black uppercase tracking-widest border border-blue-100">
         🏦 Banking & Home Finance Pakistan
       </div>
-      <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
+      <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         Loan & EMI Calculator Pakistan: <br />
         <span className="text-blue-600 italic">Decoding KIBOR, Markups, and Monthly Payments</span>
-      </h1>
+      </h2>
       <p className="text-xl text-slate-500 max-w-4xl mx-auto leading-relaxed text-center">
         Taking a loan is one of the most significant financial commitments a Pakistani household or business can make. Whether you are applying for a Home Loan (Mera Pakistan Mera Ghar), a Car Loan, or a Personal Loan, the jargon—KIBOR, reducing balance, processing fees, and insurance—can be overwhelming. This guide demystifies the Equated Monthly Installment (EMI) system and helps you plan your borrowing with absolute clarity.
       </p>
@@ -477,10 +477,10 @@ export const TaxBlogContent = () => (
       <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-xs font-black uppercase tracking-widest border border-emerald-100">
         🏛️ FBR Tax Year 2025-2026
       </div>
-      <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
+      <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         Pakistan Income Tax Calculator 2026: <br />
         <span className="text-emerald-600 italic">Complete Guide for Salaried Individuals</span>
-      </h1>
+      </h2>
       <p className="text-xl text-slate-500 max-w-4xl mx-auto leading-relaxed">
         Navigating the complex tax landscape in Pakistan shouldn't be a headache. Whether you're a fresh graduate starting your first job or a seasoned professional, understanding how the Federal Board of Revenue (FBR) calculates your "Take-Home" salary is essential for financial freedom. This guide breaks down the latest Finance Bill 2025-2026 tax slabs, exemptions, and legal tax-saving strategies.
       </p>
@@ -690,10 +690,10 @@ export const ZakatBlogContent = () => (
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-amber-50 text-amber-700 rounded-full text-xs font-black uppercase tracking-widest border border-amber-100">
         🌙 Third Pillar of Islam
       </div>
-      <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
+      <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         Zakat Calculator Pakistan 2026: <br />
         <span className="text-amber-600 italic">The Ultimate Guide to Purifying Your Wealth</span>
-      </h1>
+      </h2>
       <p className="text-xl text-slate-500 max-w-4xl mx-auto leading-relaxed text-center">
         Zakat is not merely a charitable act; it is a fundamental spiritual obligation and the third pillar of Islam. In the context of Pakistan's economy, fulfilling this duty correctly requires a deep understanding of what constitutes "Zakatable Assets," how the "Nisab" threshold is determined, and the specific rules set by the State Bank of Pakistan. This guide provides a comprehensive framework to ensure your Zakat is calculated with precision and sincerity.
       </p>
@@ -1066,10 +1066,10 @@ export const RealEstateBlogContent = () => (
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-slate-100 text-slate-700 rounded-full text-xs font-black uppercase tracking-widest border border-slate-200">
         🏗️ Property Market Pakistan
       </div>
-      <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
+      <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         Real Estate ROI Calculator: <br />
         <span className="text-emerald-600 italic">Evaluating Plots, Files, and Rental Portfolios</span>
-      </h1>
+      </h2>
       <p className="text-xl text-slate-500 max-w-4xl mx-auto leading-relaxed text-center">
         Real estate is the primary vehicle for wealth preservation in Pakistan. From the high-rise apartments of Karachi to the developed plots of DHA Lahore and the scenic farmhouses of Islamabad, the market offers diverse opportunities. However, without a proper ROI (Return on Investment) calculation, you might be "parking" your money in a dead asset. This guide helps you calculate Net ROI, factoring in taxes, maintenance, and capital gains.
       </p>
@@ -1174,10 +1174,10 @@ export const PFBlogContent = () => (
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-blue-50 text-blue-700 rounded-full text-xs font-black uppercase tracking-widest border border-blue-100">
         🛡️ Employee Savings Guide
       </div>
-      <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
+      <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         Provident Fund (PF) Pakistan: <br />
         <span className="text-blue-600 italic">Building Your Wealth While You Work</span>
-      </h1>
+      </h2>
       <p className="text-xl text-slate-500 max-w-4xl mx-auto leading-relaxed text-center">
         A Provident Fund (PF) is acts as a safety net for your future. It is a forced savings tool where both you and your employer contribute equally, creating a massive corpus over time thanks to the power of compounding. In Pakistan, PF is governed by the Employee's Provident Funds Act, ensuring your hard-earned money is secured for retirement.
       </p>
@@ -1284,10 +1284,10 @@ export const GratuityBlogContent = () => (
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-indigo-50 text-indigo-700 rounded-full text-xs font-black uppercase tracking-widest border border-indigo-100">
         🎁 End of Service Reward
       </div>
-      <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
+      <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         Gratuity Calculator Pakistan: <br />
         <span className="text-indigo-600 italic">Calculating Your Final Settlement Reward</span>
-      </h1>
+      </h2>
       <p className="text-xl text-slate-500 max-w-4xl mx-auto leading-relaxed text-center">
         Gratuity is a lump sum amount paid by an employer to an employee upon leaving the job. It is a reward for your long-term service and loyalty. In Pakistan, gratuity is a legal right for workers in establishments with 20 or more employees, governed by the West Pakistan Industrial and Commercial Employment (Standing Orders) Ordinance 1968.
       </p>
@@ -1372,10 +1372,10 @@ export const FreelancerBlogContent = () => (
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-indigo-50 text-indigo-700 rounded-full text-xs font-black uppercase tracking-widest border border-indigo-100">
         💻 Digital Economy Pakistan
       </div>
-      <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
+      <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         Freelancer Tax Guide 2026: <br />
         <span className="text-indigo-600 italic">Maximize Your Earnings from Upwork & Fiverr</span>
-      </h1>
+      </h2>
       <p className="text-xl text-slate-500 max-w-4xl mx-auto leading-relaxed text-center">
         Pakistan is a global powerhouse for digital talent. However, the complex world of foreign remittances and FBR compliance often scares freelancers. This guide simplifies the tax regime for IT and ITeS exporters, explaining how to legally slash your tax rate from 1% to 0.25% and build a transparent wealth profile.
       </p>
@@ -1510,10 +1510,10 @@ export const UnitConverterBlogContent = () => (
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-slate-100 text-slate-700 rounded-full text-xs font-black uppercase tracking-widest border border-slate-200">
         📏 Area Measurement Pakistan
       </div>
-      <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
+      <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         Land Unit Converter Guide: <br />
         <span className="text-slate-600 italic">Mastering Marla, Kanal, and Murabba</span>
-      </h1>
+      </h2>
       <p className="text-xl text-slate-500 max-w-4xl mx-auto leading-relaxed text-center">
         Land measurement in Pakistan is a unique blend of traditional systems (Patwari system) and modern metric standards. A common point of confusion is that a "Marla" isn't consistent across the country. This guide demystifies these units, helping you buy property with confidence.
       </p>
@@ -1592,7 +1592,7 @@ export const FBRSlabsPage = ({ isUrdu }: { isUrdu: boolean }) => (
       <button onClick={() => window.history.back()} className="text-emerald-600 font-bold mb-4 flex items-center gap-2 hover:bg-emerald-50 px-4 py-2 rounded-full transition-colors w-fit">
         <span>←</span> Back
       </button>
-      <h1 className="text-4xl font-black text-slate-900">Official Tax Resources</h1>
+      <h2 className="text-4xl font-black text-slate-900">Official Tax Resources</h2>
       <p className="text-slate-500 mt-2">Comprehensive guide to FBR Tax Slabs 2025-26.</p>
     </div>
     <div className="-mt-12">
@@ -1607,7 +1607,7 @@ export const ZakatInfoPage = ({ isUrdu }: { isUrdu: boolean }) => (
       <button onClick={() => window.history.back()} className="text-amber-600 font-bold mb-4 flex items-center gap-2 hover:bg-amber-50 px-4 py-2 rounded-full transition-colors w-fit">
         <span>←</span> Back
       </button>
-      <h1 className="text-4xl font-black text-slate-900">Zakat Encyclopedia</h1>
+      <h2 className="text-4xl font-black text-slate-900">Zakat Encyclopedia</h2>
       <p className="text-slate-500 mt-2">Complete guide to Zakat, Nisab thresholds, and asset valuation methods.</p>
     </div>
     <div className="-mt-12">
