@@ -5,6 +5,7 @@ import CalculatorList from './components/CalculatorList';
 import ToolsDirectory from './components/ToolsDirectory';
 import SEOHead from './components/SEOHead';
 import { Calculator, View } from './types';
+import ScrollToTop from './components/ScrollToTop';
 import {
   IncomeTaxTool, ZakatTool, EMITool, ProfitMarginTool, BMICalcTool,
   InvestmentReturnTool, RetirementTool, PFTool, GratuityTool,
@@ -22,13 +23,12 @@ const App: React.FC = () => {
     // Legacy support for internal component nav if needed, or simple redirects
     if (view === 'home') navigate('/');
     else if (view === 'all-tools') navigate('/all-tools');
+
     else navigate(`/${view}`);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleSelectTool = (calc: Calculator) => {
     navigate(`/${calc.id}`);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -37,6 +37,7 @@ const App: React.FC = () => {
       setIsUrdu={setIsUrdu}
       onNavigate={handleNavigate}
     >
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={
           <>
