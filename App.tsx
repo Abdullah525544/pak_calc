@@ -16,6 +16,58 @@ import {
 import { FBRSlabsPage, ZakatInfoPage, ContactPage, PrivacyPage, TermsPage, DisclaimerPage } from './components/InfoPages';
 import { CALCULATORS } from './constants';
 
+// SEO metadata for each tool
+const TOOL_SEO_META: Record<string, { title: string; description: string }> = {
+  'income-tax': {
+    title: 'Income Tax Calculator 2026 Pakistan | FBR Salary Tax Tool',
+    description: 'Use our free Income Tax Calculator Pakistan 2026 to calculate salary tax based on latest FBR slabs. Fast, accurate, and easy to use.'
+  },
+  'zakat': {
+    title: 'Zakat Calculator Pakistan 2026 | Gold, Cash & Assets',
+    description: 'Calculate your Zakat online with our free Zakat Calculator Pakistan. Based on latest nisab values for gold, cash, and assets.'
+  },
+  'freelancer-tax': {
+    title: 'Freelancer Tax Calculator Pakistan 2026 | Net Income Tool',
+    description: 'Calculate freelancer tax and net income in Pakistan after bank charges and FBR export tax. Simple and accurate online tool.'
+  },
+  'investment-return': {
+    title: 'Investment Calculator Pakistan | Compound Interest Tool',
+    description: 'Use our Investment Return Calculator to estimate savings growth with compound interest. Plan your future with accurate projections.'
+  },
+  'retirement-plan': {
+    title: 'Retirement Calculator Pakistan | Future Savings Planner',
+    description: 'Plan your future with our Retirement Calculator. Estimate how much you need to save for a comfortable retirement in Pakistan.'
+  },
+  'real-estate-roi': {
+    title: 'Property ROI Calculator Pakistan | Real Estate Returns',
+    description: 'Calculate property ROI, rental yield, and FBR taxes with our Real Estate Calculator Pakistan. Ideal for investors and buyers.'
+  },
+  'provident-fund': {
+    title: 'Provident Fund Calculator Pakistan | PF Balance Tool',
+    description: 'Estimate your Provident Fund balance with employer matching and interest using our PF Calculator Pakistan. Fast and accurate results.'
+  },
+  'gratuity': {
+    title: 'Gratuity Calculator Pakistan | End of Service Benefits',
+    description: 'Use our Gratuity Calculator Pakistan to estimate end-of-service benefits based on labor laws. Simple and accurate calculation.'
+  },
+  'loan-emi': {
+    title: 'EMI Calculator Pakistan | Loan & Car Finance Tool',
+    description: 'Calculate monthly loan installments with our EMI Calculator Pakistan. Ideal for car, home, and personal loans.'
+  },
+  'profit-margin': {
+    title: 'Profit Margin Calculator | Business Profit Tool',
+    description: 'Find your business profit and margin percentage instantly with our free Profit Margin Calculator. Simple and accurate.'
+  },
+  'unit-converter': {
+    title: 'Unit Converter Pakistan | Marla, Tola & More',
+    description: 'Convert marla to square feet, tola to grams, and more with our free Unit Converter Pakistan. Fast and accurate conversions.'
+  },
+  'bmi': {
+    title: 'BMI Calculator | Body Mass Index Checker',
+    description: 'Check your Body Mass Index with our free BMI Calculator. Know your health category and ideal weight instantly.'
+  }
+};
+
 const App: React.FC = () => {
   const [isUrdu, setIsUrdu] = useState(false);
   const navigate = useNavigate();
@@ -195,14 +247,15 @@ const App: React.FC = () => {
 const ToolWrapper = ({ id, component, isUrdu, handleNavigate }: { id: string, component: React.ReactNode, isUrdu: boolean, handleNavigate: any }) => {
   const navigate = useNavigate();
   const tool = CALCULATORS.find(c => c.id === id);
+  const seoMeta = TOOL_SEO_META[id];
 
   if (!tool) return null;
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-12 md:py-20 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <SEOHead
-        title={`${tool.name} - PakCalc`}
-        description={tool.description}
+        title={seoMeta?.title || `${tool.name} - PakCalc`}
+        description={seoMeta?.description || tool.description}
         canonicalUrl={`/${id}`}
       />
 
