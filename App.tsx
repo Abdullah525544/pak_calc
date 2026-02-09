@@ -19,40 +19,40 @@ import { CALCULATORS } from './constants';
 // SEO metadata for each tool
 const TOOL_SEO_META: Record<string, { title: string; description: string }> = {
   'income-tax': {
-    title: 'Income Tax Calculator 2026 Pakistan | FBR Salary Tax Tool',
-    description: 'Use our free Income Tax Calculator Pakistan 2026 to calculate salary tax based on latest FBR slabs. Fast, accurate, and easy to use.'
+    title: 'Income Tax Calculator Pakistan 2026 | FBR Tax Slabs Tool',
+    description: 'Estimate your income tax in Pakistan for 2026 using updated FBR tax slabs. Fast, free, and accurate tax calculation.'
   },
   'zakat': {
-    title: 'Zakat Calculator Pakistan 2026 | Gold, Cash & Assets',
-    description: 'Calculate your Zakat online with our free Zakat Calculator Pakistan. Based on latest nisab values for gold, cash, and assets.'
+    title: 'Zakat Calculator Pakistan 2026 | Accurate Zakat Calculation',
+    description: 'Calculate your Zakat in Pakistan for 2026 using our free and accurate Zakat calculator based on current Nisab rates.'
   },
   'freelancer-tax': {
     title: 'Freelancer Tax Calculator Pakistan 2026 | Net Income Tool',
     description: 'Calculate freelancer tax and net income in Pakistan after bank charges and FBR export tax. Simple and accurate online tool.'
   },
   'investment-return': {
-    title: 'Investment Calculator Pakistan | Compound Interest Tool',
-    description: 'Use our Investment Return Calculator to estimate savings growth with compound interest. Plan your future with accurate projections.'
+    title: 'Investment Calculator Pakistan | Returns & Profit Estimator',
+    description: 'Calculate your investment returns in Pakistan with our free investment calculator. Estimate profits, growth, and future value easily.'
   },
   'retirement-plan': {
-    title: 'Retirement Calculator Pakistan | Future Savings Planner',
-    description: 'Plan your future with our Retirement Calculator. Estimate how much you need to save for a comfortable retirement in Pakistan.'
+    title: 'Retirement Calculator Pakistan 2026 | Savings & Pension Planner',
+    description: 'Plan your retirement savings in Pakistan for 2026 with our free retirement calculator. Estimate future funds and pension needs easily.'
   },
   'real-estate-roi': {
     title: 'Property ROI Calculator Pakistan | Real Estate Returns',
     description: 'Calculate property ROI, rental yield, and FBR taxes with our Real Estate Calculator Pakistan. Ideal for investors and buyers.'
   },
   'provident-fund': {
-    title: 'Provident Fund Calculator Pakistan | PF Balance Tool',
-    description: 'Estimate your Provident Fund balance with employer matching and interest using our PF Calculator Pakistan. Fast and accurate results.'
+    title: 'Provident Fund Calculator Pakistan 2026 | PF Deduction & Percentage',
+    description: 'Calculate your Provident Fund deduction and PF percentage in Pakistan for 2026. Free online PF calculator with accurate salary-based results.'
   },
   'gratuity': {
-    title: 'Gratuity Calculator Pakistan | End of Service Benefits',
-    description: 'Use our Gratuity Calculator Pakistan to estimate end-of-service benefits based on labor laws. Simple and accurate calculation.'
+    title: 'Gratuity Calculator Pakistan 2026 | End of Service Benefit Tool',
+    description: 'Use our free gratuity calculator for Pakistan 2026 to estimate your end-of-service benefits based on salary and years of service.'
   },
   'loan-emi': {
-    title: 'EMI Calculator Pakistan | Loan & Car Finance Tool',
-    description: 'Calculate monthly loan installments with our EMI Calculator Pakistan. Ideal for car, home, and personal loans.'
+    title: 'Loan EMI Calculator Pakistan | Monthly Installment Tool',
+    description: 'Calculate your monthly loan EMI in Pakistan with our free online calculator. Get instant installment amounts and repayment details.'
   },
   'profit-margin': {
     title: 'Profit Margin Calculator | Business Profit Tool',

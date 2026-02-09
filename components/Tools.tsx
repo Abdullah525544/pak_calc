@@ -29,13 +29,25 @@ export const IncomeTaxTool = ({ isUrdu }: { isUrdu: boolean }) => {
     <div className="space-y-12">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-white p-8 rounded-[2.5rem] shadow-xl">
-          <h3 className="text-2xl font-bold mb-6">Income Details</h3>
+          <h3 className="text-2xl font-bold mb-6">Income Details (2025-2026)</h3>
           <label className="block text-sm font-medium mb-2">Monthly Gross Salary (PKR)</label>
           <input type="number" value={salary} onChange={e => setSalary(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+          <p className="text-xs text-slate-400 mt-2 ml-1">Based on latest FBR tax slabs for Salaried Individuals.</p>
         </div>
-        <div className="bg-slate-900 text-white p-8 rounded-[2.5rem] shadow-xl text-center">
+        <div className="bg-slate-900 text-white p-8 rounded-[2.5rem] shadow-xl text-center flex flex-col justify-center">
           <p className="text-slate-400 uppercase text-xs font-black mb-2">Monthly Tax Payable</p>
           <h4 className="text-5xl font-black text-emerald-400">Rs. {Math.round(tax / 12).toLocaleString()}</h4>
+
+          <div className="mt-6 pt-6 border-t border-white/10 grid grid-cols-2 gap-4">
+            <div>
+              <p className="text-[10px] text-slate-500 uppercase">Yearly Tax</p>
+              <p className="font-bold">Rs. {Math.round(tax).toLocaleString()}</p>
+            </div>
+            <div>
+              <p className="text-[10px] text-slate-500 uppercase">Net Monthly Income</p>
+              <p className="font-bold">Rs. {Math.round(salary - (tax / 12)).toLocaleString()}</p>
+            </div>
+          </div>
         </div>
       </div>
       <TaxBlogContent />
@@ -45,20 +57,75 @@ export const IncomeTaxTool = ({ isUrdu }: { isUrdu: boolean }) => {
 };
 
 export const ZakatTool = () => {
-  const [assets, setAssets] = useState(500000);
-  const zakat = assets * 0.025;
+  const [cash, setCash] = useState(500000);
+  const [gold, setGold] = useState(0); // grams
+  const [silver, setSilver] = useState(0); // grams
+  const [otherAssets, setOtherAssets] = useState(0);
+  const [liabilities, setLiabilities] = useState(0);
+
+  // 2026 Estimated Rates (User can update if needed, normally fetched or fixed)
+  const [goldRate, setGoldRate] = useState(25000); // per gram approx
+  const [silverRate, setSilverRate] = useState(300); // per gram approx
+
+  const totalAssets = cash + (gold * goldRate) + (silver * silverRate) + otherAssets;
+  const netAssets = Math.max(0, totalAssets - liabilities);
+
+  const nisabGoldValue = 87.48 * goldRate;
+  const nisabSilverValue = 612.36 * silverRate;
+  const nisabThreshold = Math.min(nisabGoldValue, nisabSilverValue); // Usually Silver is used for lower threshold
+
+  const isEligible = netAssets >= nisabThreshold;
+  const zakat = isEligible ? netAssets * 0.025 : 0;
 
   return (
     <div className="space-y-12">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl">
-          <h3 className="text-2xl font-bold mb-6">Asset Valuation</h3>
-          <label className="block text-sm font-medium mb-2">Total Zakatable Assets (PKR)</label>
-          <input type="number" value={assets} onChange={e => setAssets(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+          <h3 className="text-2xl font-bold">Your Assets</h3>
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="text-xs font-bold text-slate-500">Cash in Hand/Bank</label>
+              <input type="number" value={cash} onChange={e => setCash(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-500">Other Assets (Stocks etc)</label>
+              <input type="number" value={otherAssets} onChange={e => setOtherAssets(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="text-xs font-bold text-slate-500">Gold (Grams)</label>
+              <input type="number" value={gold} onChange={e => setGold(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-500">Silver (Grams)</label>
+              <input type="number" value={silver} onChange={e => setSilver(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            </div>
+          </div>
+          <div>
+            <label className="text-xs font-bold text-slate-500">Liabilities / Debts</label>
+            <input type="number" value={liabilities} onChange={e => setLiabilities(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+          </div>
+
+          <div className="pt-6 border-t border-slate-100">
+            <p className="text-xs font-bold text-slate-400 mb-2">Current Rates (Per Gram) - Updates for 2026</p>
+            <div className="grid grid-cols-2 gap-4">
+              <input type="number" value={goldRate} onChange={e => setGoldRate(Number(e.target.value))} className="w-full p-3 bg-slate-50 border rounded-xl text-xs" />
+              <input type="number" value={silverRate} onChange={e => setSilverRate(Number(e.target.value))} className="w-full p-3 bg-slate-50 border rounded-xl text-xs" />
+            </div>
+          </div>
         </div>
-        <div className="bg-emerald-600 text-white p-8 rounded-[2.5rem] shadow-xl text-center">
-          <p className="text-emerald-100 uppercase text-xs font-black mb-2">Total Zakat Due</p>
-          <h4 className="text-5xl font-black">Rs. {Math.round(zakat).toLocaleString()}</h4>
+
+        <div className="bg-emerald-600 text-white p-8 rounded-[2.5rem] shadow-xl text-center flex flex-col justify-center">
+          <p className="text-emerald-100 uppercase text-xs font-black mb-2">Total Net Assets</p>
+          <h4 className="text-3xl font-black mb-8 opacity-80">Rs. {Math.round(netAssets).toLocaleString()}</h4>
+
+          <p className="text-emerald-100 uppercase text-xs font-black mb-2">Zakat Payable (2.5%)</p>
+          <h4 className="text-6xl font-black">Rs. {Math.round(zakat).toLocaleString()}</h4>
+
+          <div className={`mt-8 px-4 py-2 rounded-full text-xs font-bold inline-block mx-auto ${isEligible ? 'bg-white text-emerald-600' : 'bg-red-500 text-white'}`}>
+            {isEligible ? 'You are Sahib-e-Nisab' : 'Below Nisab Threshold'}
+          </div>
         </div>
       </div>
       <ZakatBlogContent />
@@ -385,15 +452,76 @@ export const RealEstateROITool = () => {
 };
 
 export const PFTool = () => {
-  const [salary, setSalary] = useState(100000);
-  const [contribution, setContribution] = useState(10);
-  const pf = (salary * (contribution / 100)) * 2; // Employee + Employer
+  const [basicSalary, setBasicSalary] = useState(100000);
+  const [empContribution, setEmpContribution] = useState(10); // %
+  const [employerContribution, setEmployerContribution] = useState(10); // %
+  const [interestRate, setInterestRate] = useState(12); // %
+  const [years, setYears] = useState(10);
+
+  const monthlyEmpPF = basicSalary * (empContribution / 100);
+  const monthlyEmployerPF = basicSalary * (employerContribution / 100);
+  const totalMonthlyContribution = monthlyEmpPF + monthlyEmployerPF;
+
+  // Simple compound interest calculation for PF balance estimation
+  // This helps users estimate future value, though real PF is more complex
+  let balance = 0;
+  const yearlyContribution = totalMonthlyContribution * 12;
+  for (let i = 0; i < years; i++) {
+    balance = (balance + yearlyContribution) * (1 + interestRate / 100);
+  }
 
   return (
-    <div className="bg-white p-8 rounded-[2.5rem] shadow-xl">
-      <h3 className="text-2xl font-bold mb-6">PF Calculator</h3>
-      <input type="number" value={salary} onChange={e => setSalary(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl mb-4" />
-      <p className="text-xl font-bold">Monthly PF Contribution: Rs. {Math.round(pf).toLocaleString()}</p>
+    <div className="space-y-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+          <h3 className="text-2xl font-bold">PF Configuration</h3>
+          <div>
+            <label className="text-xs font-bold text-slate-500">Monthly Basic Salary (PKR)</label>
+            <input type="number" value={basicSalary} onChange={e => setBasicSalary(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="text-xs font-bold text-slate-500">Your Contribution %</label>
+              <input type="number" value={empContribution} onChange={e => setEmpContribution(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-500">Employer Contribution %</label>
+              <input type="number" value={employerContribution} onChange={e => setEmployerContribution(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="text-xs font-bold text-slate-500">Interest Rate %</label>
+              <input type="number" value={interestRate} onChange={e => setInterestRate(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-500">Duration (Years)</label>
+              <input type="number" value={years} onChange={e => setYears(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-slate-900 text-white p-12 rounded-[2.5rem] shadow-2xl flex flex-col justify-center space-y-8">
+          <div className="text-center">
+            <p className="text-slate-400 text-[10px] font-black tracking-widest uppercase mb-2">Estimated Total Corpus</p>
+            <h4 className="text-5xl font-black text-emerald-400">₨ {Math.round(balance).toLocaleString()}</h4>
+          </div>
+          <div className="space-y-4 pt-8 border-t border-white/10">
+            <div className="flex justify-between items-center text-sm">
+              <span className="text-slate-400">Monthly PF Deduction:</span>
+              <span className="font-bold">₨ {Math.round(monthlyEmpPF).toLocaleString()}</span>
+            </div>
+            <div className="flex justify-between items-center text-sm">
+              <span className="text-slate-400">Employer Monthly Share:</span>
+              <span className="font-bold">₨ {Math.round(monthlyEmployerPF).toLocaleString()}</span>
+            </div>
+            <div className="flex justify-between items-center text-sm">
+              <span className="text-slate-400">Total Monthly Savings:</span>
+              <span className="font-bold text-emerald-400">₨ {Math.round(totalMonthlyContribution).toLocaleString()}</span>
+            </div>
+          </div>
+        </div>
+      </div>
       <PFBlogContent />
       <RelatedTools toolIds={['gratuity', 'retirement-plan', 'income-tax']} />
     </div>
@@ -401,16 +529,40 @@ export const PFTool = () => {
 };
 
 export const GratuityTool = () => {
-  const [salary, setSalary] = useState(100000);
+  const [basicSalary, setBasicSalary] = useState(50000);
   const [years, setYears] = useState(5);
-  const gratuity = (salary * 30 / 26) * years; // Simplified Pak Labor Law calculation
+
+  // Rule: (Basic Salary * Years * 30) / 26
+  // This is a common formula in Pakistan (1 month gross wages for 26 working days per year)
+  const gratuity = (basicSalary * years * 30) / 26;
 
   return (
-    <div className="bg-white p-8 rounded-[2.5rem] shadow-xl">
-      <h3 className="text-2xl font-bold mb-6">Gratuity Calculator</h3>
-      <input type="number" value={salary} onChange={e => setSalary(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl mb-4" />
-      <input type="number" value={years} onChange={e => setYears(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl mb-4" />
-      <p className="text-xl font-bold">Total Gratuity: Rs. {Math.round(gratuity).toLocaleString()}</p>
+    <div className="space-y-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+          <h3 className="text-2xl font-bold">Service Details</h3>
+          <div>
+            <label className="text-xs font-bold text-slate-500">Last Drawn Basic Salary / Gross Wage</label>
+            <input type="number" value={basicSalary} onChange={e => setBasicSalary(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            <p className="text-[10px] text-slate-400 mt-2 ml-2">As per labor laws, this should include applicable allowances.</p>
+          </div>
+          <div>
+            <label className="text-xs font-bold text-slate-500">Total Years of Service</label>
+            <input type="number" value={years} onChange={e => setYears(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+          </div>
+        </div>
+
+        <div className="bg-emerald-700 text-white p-12 rounded-[2.5rem] shadow-2xl flex flex-col justify-center text-center relative overflow-hidden">
+          <div className="absolute left-0 top-0 w-64 h-64 bg-emerald-500 rounded-full blur-[120px] opacity-30 -ml-20 -mt-20"></div>
+          <div className="relative z-10">
+            <p className="text-emerald-200 uppercase text-xs font-black tracking-widest mb-4">Estimated End-of-Service Benefit</p>
+            <h4 className="text-5xl font-black">₨ {Math.round(gratuity).toLocaleString()}</h4>
+            <div className="mt-8 pt-8 border-t border-emerald-600/50">
+              <p className="text-sm text-emerald-100">Formula Used: <br /><span className="font-mono bg-emerald-800/50 px-2 py-1 rounded text-xs mt-1 inline-block">(Last Salary × 30 / 26) × Years</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
       <GratuityBlogContent />
       <RelatedTools toolIds={['provident-fund', 'retirement-plan', 'income-tax']} />
     </div>
