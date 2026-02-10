@@ -10,104 +10,196 @@ export const RetirementBlogContent = () => (
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-blue-50 text-blue-700 rounded-full text-xs font-black uppercase tracking-widest border border-blue-100">
         🌅 Secure Your Legacy in Pakistan
       </div>
-      <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
-        Retirement Calculator Pakistan: <br />
-        <span className="text-blue-600 italic">Financial Freedom for Your Golden Years</span>
-      </h2>
-      Retirement planning tool in Pakistan is often overlooked until it's too late. With inflation rates frequently hitting double digits and a lack of a universal social security net, the burden of a comfortable old age lies solely on your shoulders. This guide explains how to use our retirement savings calculator to outpace inflation and build a corpus that lasts a lifetime.
+      <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
+        Retirement Calculator Pakistan 2026: <br />
+        <span className="text-blue-600 italic">Plan Your Pension & VPS Savings</span>
+      </h1>
+      <p className="max-w-3xl mx-auto text-lg text-slate-600">
+        Calculate exactly how much wealth you need to retire comfortably in Pakistan. Our <strong>Retirement Calculator</strong> accounts for <strong>PKR inflation</strong>, expected life expectancy, and returns from <strong>Voluntary Pension Schemes (VPS)</strong> and Mutual Funds to give you a realistic monthly savings target.
+      </p>
     </header>
 
-    {/* Section 1: The Inflation Challenge */}
-    <section className="space-y-10">
-      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-blue-500 pl-6">The PKR Inflation Challenge</h2>
+    {/* Table of Contents */}
+    <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200">
+      <h3 className="text-lg font-bold mb-4">Table of Contents</h3>
+      <ul className="space-y-2 text-sm text-blue-600 font-medium grid grid-cols-1 md:grid-cols-2">
+        <li><a href="#how-it-works" className="hover:underline">1. How Retirement Planning Works</a></li>
+        <li><a href="#inflation-impact" className="hover:underline">2. The Inflation Effect in Pakistan</a></li>
+        <li><a href="#vps-guide" className="hover:underline">3. Voluntary Pension Schemes (VPS) Guide</a></li>
+        <li><a href="#investment-options" className="hover:underline">4. Where to Invest for Retirement?</a></li>
+        <li><a href="#faqs" className="hover:underline">5. Frequently Asked Questions (FAQs)</a></li>
+      </ul>
+    </div>
+
+    {/* Section: How It Works */}
+    <section id="how-it-works" className="space-y-8">
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-blue-500 pl-6">How to Use the Retirement Calculator</h2>
+      <p>
+        Planning for retirement is a numbers game. In Pakistan, where there is no universal state pension for private sector employees, your "End of Service" benefits like Provident Fund and Gratuity are often not enough. You need a personal wealth corpus. Here is how our calculator helps:
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm">
+          <span className="text-4xl mb-4 block">📅</span>
+          <h4 className="font-bold text-lg mb-2">1. Set Your Timeline</h4>
+          <p className="text-sm text-slate-500">Enter your current age and planned retirement age (usually 60 in Pakistan). The earlier you start, the less you need to save per month.</p>
+        </div>
+        <div className="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm">
+          <span className="text-4xl mb-4 block">💰</span>
+          <h4 className="font-bold text-lg mb-2">2. Define Lifestyle</h4>
+          <p className="text-sm text-slate-500">Input your *current* monthly household expense. We automatically adjust this for inflation to tell you what this lifestyle will cost in the future.</p>
+        </div>
+        <div className="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm">
+          <span className="text-4xl mb-4 block">📈</span>
+          <h4 className="font-bold text-lg mb-2">3. Return Expectations</h4>
+          <p className="text-sm text-slate-500">Set your expected return on investment (e.g., 12-15% for Equity Funds) and the inflation rate (avg 8-10%) to see the "Real Value" gap.</p>
+        </div>
+      </div>
+    </section>
+
+    {/* Section: Inflation Impact */}
+    <section id="inflation-impact" className="space-y-10">
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-blue-500 pl-6">Understanding PKR Inflation</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <p>
-            The biggest enemy of your retirement is not market risk, but <strong>PKR Inflation</strong>. In Pakistan, what costs Rs. 100 today might cost Rs. 1,000 thirty years from now. If your <Link to="/retirement-plan" className="text-emerald-600 hover:underline">future retirement calculator</Link> doesn't account for compounding inflation, your savings will evaporate.
+            The biggest enemy of your retirement is not market risk, but <strong>Hyperinflation</strong>. In Pakistan, the purchasing power of the Rupee erodes significantly over time.
           </p>
+          <ul className="list-disc pl-5 space-y-2 marker:text-blue-500">
+            <li><strong>Rs. 100,000 Today</strong> will only buy <strong>Rs. 38,000</strong> worth of goods in 10 years (at 10% inflation).</li>
+            <li>To maintain a simple Rs. 50,000 lifestyle in 2026, you might need <strong>Rs. 300,000+ per month</strong> by the time you retire in 2045.</li>
+          </ul>
           <p>
-            Our <Link to="/investment-return" className="text-emerald-600 hover:underline">investment calculator</Link> uses a <strong>"Real Rate of Return"</strong> approach. This means we subtract the expected inflation rate from your investment growth to show you the <em>actual</em> purchasing power of your future wealth.
+            Our tool uses a <strong>"Real Rate of Return"</strong> formula. Instead of just showing you a big future number, it calculates the *Corpus* needed to actually sustain you.
           </p>
         </div>
         <div className="bg-slate-900 text-white p-10 rounded-[3rem] shadow-2xl relative overflow-hidden">
-          <h3 className="text-xl font-bold mb-4">The Cost of Waiting:</h3>
-          <p className="text-sm text-slate-400 mb-6">Delaying your savings by 10 years can cut your final retirement kitty by more than 50%!</p>
+          <h3 className="text-xl font-bold mb-4">The Cost of Delay</h3>
+          <p className="text-sm text-slate-400 mb-6">Every year you wait, the required monthly savings grow exponentially:</p>
           <div className="space-y-4">
             <div className="flex justify-between border-b border-white/10 pb-2">
-              <span>Start at 25</span>
-              <span className="text-emerald-400 font-bold">Max Growth</span>
+              <span>Start at Age 25</span>
+              <span className="text-emerald-400 font-bold">Save 5k/mo</span>
             </div>
             <div className="flex justify-between border-b border-white/10 pb-2">
-              <span>Start at 35</span>
-              <span className="text-amber-400 font-bold">Medium Growth</span>
+              <span>Start at Age 35</span>
+              <span className="text-amber-400 font-bold">Save 15k/mo</span>
             </div>
             <div className="flex justify-between border-b border-white/10 pb-2">
-              <span>Start at 45</span>
-              <span className="text-rose-400 font-bold">Limited Growth</span>
+              <span>Start at Age 45</span>
+              <span className="text-rose-400 font-bold">Save 45k/mo</span>
             </div>
           </div>
+          <p className="text-[10px] text-slate-500 mt-4 italic">Assumes 12% return to reach 2 Cr Corpus.</p>
         </div>
       </div>
     </section>
 
-    {/* Section 2: VPS - The Best Tool */}
-    <section className="bg-blue-50 border border-blue-100 p-12 md:p-16 rounded-[4rem]">
-      <h2 className="text-3xl font-bold text-slate-900 text-center mb-10">Pension Calculator Pakistan (VPS)</h2>
+    {/* Section: VPS Guide */}
+    <section id="vps-guide" className="bg-blue-50 border border-blue-100 p-12 md:p-16 rounded-[4rem]">
+      <h2 className="text-3xl font-bold text-slate-900 text-center mb-6">Voluntary Pension Scheme (VPS) & Tax Credits</h2>
+      <p className="text-center max-w-2xl mx-auto mb-10">
+        The Government of Pakistan encourages retirement savings through **Section 63** of the Income Tax Ordinance. Investing in a VPS allows you to lower your tax bill significantly.
+      </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="p-8 bg-white rounded-3xl shadow-sm">
-          <h4 className="font-bold text-blue-900 mb-2">Tax Rebates (Section 63)</h4>
+          <h4 className="font-bold text-blue-900 mb-2">Tax Rebate (Credit)</h4>
           <p className="text-sm text-slate-500 leading-relaxed">
-            By investing in a VPS approved by SECP, you can get a tax credit of up to 20% of your taxable income. This is essentially "free money" from the government to encourage retirement savings.
+            You can claim a tax credit on up to <strong>20% of your taxable income</strong> invested in a VPS. For example, if your income is Rs. 30 Lakh and you invest Rs. 6 Lakh in VPS, your taxable income effectively reduces, lowering your tax slab.
           </p>
         </div>
         <div className="p-8 bg-white rounded-3xl shadow-sm">
-          <h4 className="font-bold text-blue-900 mb-2">Investment Flexibility</h4>
+          <h4 className="font-bold text-blue-900 mb-2">Asset Allocation</h4>
           <p className="text-sm text-slate-500 leading-relaxed">
-            You can choose between Equity (High Risk/High Return), Debt, and Money Market sub-funds based on your age. As you get closer to retirement, you can switch to lower-risk funds automatically.
+            VPS Funds allow you to choose sub-funds:
+            <br />- **Equity Sub-Fund:** Invests in shares (High Risk, High Growth).
+            <br />- **Debt Sub-Fund:** Invests in Sukuks/T-Bills (Medium Risk).
+            <br />- **Money Market:** Invests in Bank Deposits (Low Risk).
           </p>
         </div>
       </div>
     </section>
 
-    {/* Section 3: The 4% Rule in Pakistan */}
-    <section className="space-y-12">
-      <h2 className="text-3xl font-bold text-slate-900 text-center">The 4% Rule: Is it enough for PKR?</h2>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <div className="space-y-6">
-          <p>
-            Globally, the "4% Rule" suggests you can withdraw 4% of your total savings in the first year of retirement (adjusting for inflation thereafter) without ever running out of money.
-          </p>
-          <p>
-            However, in Pakistan's high-yield environment, you might be able to withdraw 6-8% if your money is parked in a stable Shariah-compliant Income Fund or National Savings certificates. <strong>But beware:</strong> Higher withdrawal rates increase the risk of depleting your corpus if the market crashes.
-          </p>
-        </div>
-        <div className="p-8 bg-slate-900 text-white rounded-[3rem] border border-white/10">
-          <h4 className="text-xl font-bold text-blue-400 mb-4 text-center">Retirement Milestone Checklist</h4>
-          <ul className="space-y-4">
-            <li className="flex items-center gap-3">
-              <span className="w-6 h-6 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center text-xs">✓</span>
-              <span>Debt-Free (Home & Car) before retirement.</span>
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="w-6 h-6 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center text-xs">✓</span>
-              <span>Separate Medical Emergency Fund.</span>
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="w-6 h-6 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center text-xs">✓</span>
-              <span>Diversified across Gold, Property, and Mutual Funds.</span>
-            </li>
-          </ul>
-        </div>
+    {/* Section: Investment Options */}
+    <section id="investment-options" className="space-y-8">
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-blue-500 pl-6">Best Retirement Investment Options in Pakistan</h2>
+      <div className="overflow-x-auto">
+        <table className="w-full text-left border-collapse">
+          <thead>
+            <tr className="border-b border-slate-200">
+              <th className="py-4 font-bold text-slate-900">Asset Class</th>
+              <th className="py-4 font-bold text-slate-900">Risk Level</th>
+              <th className="py-4 font-bold text-slate-900">Avg Return (Historic)</th>
+              <th className="py-4 font-bold text-slate-900">Liquidity</th>
+            </tr>
+          </thead>
+          <tbody className="text-sm text-slate-600">
+            <tr className="border-b border-slate-100 hover:bg-slate-50">
+              <td className="py-4 px-2">Mutual Funds (Equity)</td>
+              <td className="py-4 px-2 text-rose-500 font-bold">High</td>
+              <td className="py-4 px-2">15% - 18%</td>
+              <td className="py-4 px-2">High (2 Days)</td>
+            </tr>
+            <tr className="border-b border-slate-100 hover:bg-slate-50">
+              <td className="py-4 px-2">National Savings (Behbood)</td>
+              <td className="py-4 px-2 text-emerald-500 font-bold">Zero</td>
+              <td className="py-4 px-2">12% - 14%</td>
+              <td className="py-4 px-2">Medium</td>
+            </tr>
+            <tr className="border-b border-slate-100 hover:bg-slate-50">
+              <td className="py-4 px-2">Real Estate (Plots)</td>
+              <td className="py-4 px-2 text-amber-500 font-bold">Medium</td>
+              <td className="py-4 px-2">10% - 20%</td>
+              <td className="py-4 px-2">Low (Months)</td>
+            </tr>
+            <tr className="border-b border-slate-100 hover:bg-slate-50">
+              <td className="py-4 px-2">Gold</td>
+              <td className="py-4 px-2 text-amber-500 font-bold">Medium</td>
+              <td className="py-4 px-2">Matches Inflation</td>
+              <td className="py-4 px-2">High</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    {/* FAQ Section with Schema Markup support structure */}
+    <section id="faqs" className="space-y-8 pt-10 border-t border-slate-200">
+      <h2 className="text-3xl font-bold text-slate-900 text-center">Frequently Asked Questions</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {[
+          {
+            q: "What is the official retirement age in Pakistan?",
+            a: "For government employees, the retirement age is 60 years. In the private sector, it usually ranges between 55 to 60 years, depending on company policy."
+          },
+          {
+            q: "How much money do I need to retire in Pakistan?",
+            a: "A general rule is the '25x Rule'. You need a corpus equal to 25 times your annual expenses. If your yearly expense is Rs. 12 Lakh, you need approx Rs. 3 Crore invested in safe assets."
+          },
+          {
+            q: "Is National Savings good for retirement?",
+            a: "Yes, especially the 'Behbood Savings Certificate' which offers higher rates for senior citizens and is tax-exempt. However, it does not offer capital appreciation like stocks or real estate."
+          },
+          {
+            q: "Can I withdraw my Provident Fund before retirement?",
+            a: "Yes, but it is not recommended. Withdrawing early kills the compounding effect. You can typically withdraw 100% of your own contribution and a vested percentage of the employer's contribution upon leaving a job."
+          }
+        ].map((faq, i) => (
+          <div key={i} className="bg-slate-50 p-6 rounded-2xl">
+            <h4 className="font-bold text-slate-900 mb-2">{faq.q}</h4>
+            <p className="text-sm text-slate-600">{faq.a}</p>
+          </div>
+        ))}
       </div>
     </section>
 
     {/* Footer Meta */}
     <footer className="pt-20 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
       <div className="text-[10px] text-slate-400 uppercase font-black tracking-widest">
-        Updated: Jan 2026 | SEVP/HR Standards Pakistan
+        Updated: Feb 2026 | Financial Planning Standards Board
       </div>
       <div className="flex gap-4">
-        <span className="px-3 py-1 bg-blue-100 rounded-full text-[10px] font-bold text-blue-700 italic">how much to save for retirement</span>
+        <span className="px-3 py-1 bg-blue-100 rounded-full text-[10px] font-bold text-blue-700 italic">pension calculator pakistan</span>
+        <span className="px-3 py-1 bg-blue-100 rounded-full text-[10px] font-bold text-blue-700 italic">vps tax benefit</span>
       </div>
     </footer>
   </article>
@@ -128,6 +220,76 @@ export const InvestmentBlogContent = () => (
         In an economy with high inflation, saving cash is equivalent to losing money. True wealth is built by investing in productive assets that outpace the devaluation of the rupee. Our savings growth calculator helps you project your gains across various asset classes, from the stability of National Savings to the high-reward potential of the PSX.
       </p>
     </header>
+
+    {/* Section: User Guide & Benefits */}
+    <section className="space-y-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="space-y-6">
+          <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">About the Investment Return Calculator</h2>
+          <p className="text-slate-600 leading-relaxed">
+            The Investment Return Calculator helps you estimate how your money can grow over time through compound interest. Whether you are saving for a short-term goal or planning long-term investments, this tool shows the potential future value of your savings.
+          </p>
+          <p className="text-slate-600 leading-relaxed">
+            By entering your initial investment, monthly contributions, interest rate, and time period, you can instantly see how compounding works in your favor.
+          </p>
+        </div>
+        <div className="space-y-6">
+          <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">Who Should Use This Tool?</h2>
+          <ul className="space-y-3">
+            {[
+              "Beginners starting their investment journey",
+              "Long-term savers",
+              "Students planning financial goals",
+              "Professionals building wealth",
+              "Anyone interested in financial planning"
+            ].map((item, i) => (
+              <li key={i} className="flex gap-3 items-start">
+                <span className="text-emerald-500 font-bold">✓</span>
+                <span className="text-slate-600">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div className="bg-emerald-50 border border-emerald-100 p-10 rounded-[3rem]">
+        <h2 className="text-3xl font-bold text-slate-900 text-center mb-8">Why Use an Investment Return Calculator</h2>
+        <p className="text-slate-600 text-center mb-8 max-w-2xl mx-auto">
+          Many people invest without knowing how much their money will actually grow. The Investment Calculator gives you a clear projection of your future balance so you can make smarter financial decisions.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {[
+            { t: "Future Value", d: "Estimate total investment growth." },
+            { t: "Compare Rates", d: "See impact of different interest rates." },
+            { t: "Test Scenarios", d: "Try diverse saving strategies." },
+            { t: "Compounding Power", d: "Understand exponential growth." }
+          ].map((item, i) => (
+            <div key={i} className="bg-white p-6 rounded-2xl shadow-sm">
+              <h5 className="font-bold text-slate-900 mb-2">{item.t}</h5>
+              <p className="text-xs text-slate-500">{item.d}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="bg-white border border-slate-200 p-10 rounded-[3rem] shadow-sm">
+        <h2 className="text-3xl font-bold text-slate-900 text-center mb-8">Benefits of Using This Calculator</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            "Shows compound growth over time",
+            "Easy and fast calculations",
+            "Helps with financial goal setting",
+            "Free and simple to use",
+            "Works on mobile and desktop"
+          ].map((benefit, i) => (
+            <div key={i} className="flex items-center gap-3">
+              <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">✓</span>
+              <span className="text-slate-700 font-medium">{benefit}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 
     {/* Section 1: The Magic of Compound Interest */}
     <section className="space-y-10">
@@ -484,6 +646,76 @@ export const TaxBlogContent = () => (
       </p>
     </header>
 
+    {/* Section: User Guide & Benefits */}
+    <section className="space-y-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="space-y-6">
+          <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">About the Income Tax Calculator</h2>
+          <p className="text-slate-600 leading-relaxed">
+            The Income Tax Calculator for Pakistan helps you estimate your annual and monthly tax according to the latest FBR tax slabs. Instead of manually checking tax brackets and calculating percentages, this tool gives you an instant and accurate result based on your salary or annual income.
+          </p>
+          <p className="text-slate-600 leading-relaxed">
+            This calculator is especially useful for salaried individuals who want to understand how much tax they are paying and how it affects their take-home income.
+          </p>
+        </div>
+        <div className="space-y-6">
+          <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">Who Should Use This Tool?</h2>
+          <ul className="space-y-3">
+            {[
+              "Salaried employees",
+              "Job seekers comparing offers",
+              "HR professionals",
+              "Freelancers with taxable income",
+              "Anyone filing tax returns"
+            ].map((item, i) => (
+              <li key={i} className="flex gap-3 items-start">
+                <span className="text-emerald-500 font-bold">✓</span>
+                <span className="text-slate-600">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div className="bg-emerald-50 border border-emerald-100 p-10 rounded-[3rem]">
+        <h2 className="text-3xl font-bold text-slate-900 text-center mb-8">Why Use the Pakistan Income Tax Calculator</h2>
+        <p className="text-slate-600 text-center mb-8 max-w-2xl mx-auto">
+          Many people in Pakistan are confused about tax slabs, deductions, and how their tax is calculated. The Income Tax Calculator Pakistan simplifies this process by automatically applying the correct tax rates.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            { t: "Check Tax Amount", d: "See your exact tax liability." },
+            { t: "Net Salary", d: "Estimate your monthly take-home pay." },
+            { t: "Plan Finances", d: "Better financial planning with accurate data." },
+            { t: "Compare Scenarios", d: "Compare different salary offers." }
+          ].map((item, i) => (
+            <div key={i} className="bg-white p-6 rounded-2xl shadow-sm">
+              <h5 className="font-bold text-slate-900 mb-2">{item.t}</h5>
+              <p className="text-xs text-slate-500">{item.d}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="bg-white border border-slate-200 p-10 rounded-[3rem] shadow-sm">
+        <h2 className="text-3xl font-bold text-slate-900 text-center mb-8">Benefits of Using This Calculator</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            "Uses latest FBR tax slabs",
+            "Instant and accurate results",
+            "No manual calculations required",
+            "Free and easy to use",
+            "Works on all devices"
+          ].map((benefit, i) => (
+            <div key={i} className="flex items-center gap-3">
+              <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">✓</span>
+              <span className="text-slate-700 font-medium">{benefit}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
     {/* Section 1: Understanding the 2025-2026 Tax Regime */}
     <section className="space-y-10">
       <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">Pakistan Tax Slabs 2025-26: What Changed?</h2>
@@ -696,6 +928,75 @@ export const ZakatBlogContent = () => (
         Zakat is not merely a charitable act; it is a fundamental spiritual obligation and the third pillar of Islam. In the context of Pakistan's economy, fulfilling this duty correctly requires a deep understanding of what constitutes "Zakatable Assets," how the nisab calculator Pakistan threshold is determined, and the specific rules set by the State Bank of Pakistan. This guide provides a comprehensive framework to ensure your Zakat is calculated with precision and sincerity.
       </p>
     </header>
+
+    {/* Section: User Guide & Benefits */}
+    <section className="space-y-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="space-y-6">
+          <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-amber-500 pl-6">About the Zakat Calculator</h2>
+          <p className="text-slate-600 leading-relaxed">
+            The Zakat Calculator Pakistan helps Muslims calculate their Zakat obligation according to Islamic principles. It allows you to enter your savings, gold, cash, investments, and other assets to determine the exact amount of Zakat you need to pay.
+          </p>
+          <p className="text-slate-600 leading-relaxed">
+            Instead of doing complex calculations, this tool gives you a clear and accurate result in seconds.
+          </p>
+        </div>
+        <div className="space-y-6">
+          <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-amber-500 pl-6">Who Should Use This Tool?</h2>
+          <ul className="space-y-3">
+            {[
+              "Individuals with savings",
+              "Gold and silver owners",
+              "Business owners",
+              "Freelancers",
+              "Investors"
+            ].map((item, i) => (
+              <li key={i} className="flex gap-3 items-start">
+                <span className="text-amber-500 font-bold">✓</span>
+                <span className="text-slate-600">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div className="bg-amber-50 border border-amber-100 p-10 rounded-[3rem]">
+        <h2 className="text-3xl font-bold text-slate-900 text-center mb-8">Why Use the Pakistan Zakat Calculator</h2>
+        <p className="text-slate-600 text-center mb-8 max-w-2xl mx-auto">
+          Zakat calculations can become complicated when you have different types of assets. The Zakat Calculator simplifies the process by combining all your eligible assets and automatically calculating 2.5% based on the Nisab threshold.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {[
+            { t: "Accurate Calculation", d: " precise Zakat amount." },
+            { t: "No Confusion", d: "Clear guidance on eligible assets." },
+            { t: "Faster Decisions", d: "Quickly determine what you owe." },
+            { t: "Peace of Mind", d: "Fulfill your obligation with confidence." }
+          ].map((item, i) => (
+            <div key={i} className="bg-white p-6 rounded-2xl shadow-sm">
+              <h5 className="font-bold text-slate-900 mb-2">{item.t}</h5>
+              <p className="text-xs text-slate-500">{item.d}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="bg-white border border-slate-200 p-10 rounded-[3rem] shadow-sm">
+        <h2 className="text-3xl font-bold text-slate-900 text-center mb-8">Key Benefits</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            "Based on Islamic Zakat principles",
+            "Simple and easy interface",
+            "Instant calculation",
+            "Free to use",
+            "Works on mobile and desktop"
+          ].map((benefit, i) => (
+            <div key={i} className="flex items-center gap-3">
+              <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xs font-bold">✓</span>
+              <span className="text-slate-700 font-medium">{benefit}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 
     {/* Section 1: The Essence of Zakat */}
     <section className="space-y-10">
@@ -1055,80 +1356,91 @@ export const ProfitMarginBlogContent = () => (
   </article>
 );
 
+
+
 export const RealEstateBlogContent = () => (
   <article className="mt-20 space-y-20 text-slate-700 leading-relaxed border-t border-slate-200 pt-20 max-w-5xl mx-auto px-4 font-sans text-justify">
     {/* Header Section */}
     <header className="text-center space-y-8">
-      <div className="inline-flex items-center gap-2 px-6 py-2 bg-slate-100 text-slate-700 rounded-full text-xs font-black uppercase tracking-widest border border-slate-200">
-        🏗️ Property Market Pakistan
+      <div className="inline-flex items-center gap-2 px-6 py-2 bg-emerald-50 text-emerald-700 rounded-full text-xs font-black uppercase tracking-widest border border-emerald-100">
+        🏠 Property ROI Planner
       </div>
-      <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
-        Property ROI Calculator Pakistan: <br />
-        <span className="text-emerald-600 italic">real estate return calculator results</span>
-      </h2>
-      <p className="text-xl text-slate-500 max-w-4xl mx-auto leading-relaxed text-center">
-        Real estate is the primary vehicle for wealth preservation in Pakistan. From the high-rise apartments of Karachi to the developed plots of DHA Lahore and the scenic farmhouses of Islamabad, the market offers diverse opportunities. Use our property ROI calculator Pakistan to evaluate plots, files, and rental portfolios effectively.
+      <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
+        Real Estate ROI Calculator Pakistan: <br />
+        <span className="text-emerald-600 italic">Files, Plots & Rental Yield</span>
+      </h1>
+      <p className="max-w-3xl mx-auto text-lg text-slate-600">
+        Real Estate is the biggest asset class in Pakistan. But are you making a profit after taxes? Our <strong>Property ROI Calculator</strong> factors in <strong>Stamp Duty, CVT, Withholding Tax (236K/236C)</strong>, and <strong>Capital Gains Tax (CGT)</strong> to show your actual Annualized Return.
       </p>
     </header>
 
-    {/* Section 1: Types of Property Investments */}
-    <section className="space-y-10">
-      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">The Three Modes of Real Estate Investing</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {[
-          { t: "Flipping (Files/Plots)", d: "Buying 'Files' in developing societies (like DHA or Bahria) and selling for a 'Premium' (Own) before possession.", icon: "📄" },
-          { t: "Rental Yield Calculator", d: "Buying constructed houses or apartments to generate monthly cash flow. Typical yields in Pakistan are 3-5% annually.", icon: "🏠" },
-          { t: "Capital Appreciation", d: "Long-term holding of developed land in prime locations. The goal is the 10-year growth curve.", icon: "📈" }
-        ].map((item, i) => (
-          <div key={i} className="p-8 bg-white border border-slate-100 rounded-[3.5rem] shadow-sm hover:shadow-xl transition-all">
-            <div className="text-4xl mb-6">{item.icon}</div>
-            <h4 className="font-bold text-xl text-slate-900 mb-4">{item.t}</h4>
-            <p className="text-sm text-slate-500 leading-relaxed">{item.d}</p>
-          </div>
-        ))}
-      </div>
-    </section>
+    {/* Table of Contents */}
+    <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200">
+      <h3 className="text-lg font-bold mb-4">Table of Contents</h3>
+      <ul className="space-y-2 text-sm text-emerald-600 font-medium grid grid-cols-1 md:grid-cols-2">
+        <li><a href="#roi-formula" className="hover:underline">1. Net ROI Formula (The Truth)</a></li>
+        <li><a href="#taxes-2026" className="hover:underline">2. Buying Taxes 2026 (236K, CVT)</a></li>
+        <li><a href="#selling-taxes" className="hover:underline">3. Selling Taxes (CGT, 236C)</a></li>
+        <li><a href="#yield-vs-growth" className="hover:underline">4. Rental Yield vs Capital Gain</a></li>
+        <li><a href="#faqs" className="hover:underline">5. Real Estate FAQs</a></li>
+      </ul>
+    </div>
 
-    {/* Section 2: Property Profit Calculator Formula */}
-    <section className="bg-slate-900 text-white p-12 md:p-20 rounded-[4rem] shadow-2xl relative overflow-hidden">
+    {/* Section: Formula */}
+    <section id="roi-formula" className="bg-slate-900 text-white p-12 md:p-20 rounded-[4rem] shadow-2xl relative overflow-hidden">
       <div className="absolute left-0 top-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-[100px]"></div>
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div className="space-y-6">
-          <h2 className="text-3xl font-bold text-emerald-400">DHA Investment Calculator: Net ROI</h2>
+          <h2 className="text-3xl font-bold text-emerald-400">The Hidden Costs</h2>
           <p className="text-slate-400">
-            Many investors only look at the "Price Difference." True ROI must account for the <strong>Total Cost of Acquisition</strong>.
+            A plot bought for 1 Crore is not actually 1 Crore. You pay Commission (1%), Stamp Duty (1%), CVT (1%), and Advance Tax (3-12%).
           </p>
           <div className="bg-white/5 p-6 rounded-2xl border border-white/10 italic text-sm text-slate-300">
-            "If you bought a plot for 1 Crore but paid 7 Lakh in taxes/commissions, your cost base is 1.07 Crore. If you sell for 1.2 Crore, your profit is 13 Lakh, not 20 Lakh."
+            "Your Cost Base = Purchase Price + All Taxes + Agent Commission + Transfer Fee."
           </div>
         </div>
         <div className="bg-white/5 p-10 rounded-[3rem] border border-white/10 text-center">
-          <p className="text-xs text-slate-500 uppercase font-black mb-4">The Mathematical Formula</p>
-          <div className="text-2xl font-black mb-4 text-emerald-400">ROI = [(Gain – Cost) / Cost] × 100</div>
-          <p className="text-[10px] text-slate-500 italic">Gain = Sale Price + Total Rent Earned</p>
-          <p className="text-[10px] text-slate-500 italic">Cost = Purchase Price + Taxes + Commission + Maintenance</p>
+          <p className="text-xs text-slate-500 uppercase font-black mb-4">Annualized Return Formula</p>
+          <div className="text-2xl font-black mb-4 text-emerald-400">Rate = [(Final Value / Cost)^(1/Years) - 1]</div>
+          <p className="text-[10px] text-slate-500 italic">This is the CAGR (Compound Annual Growth Rate).</p>
         </div>
       </div>
     </section>
 
-    {/* Section 3: Tax Implications (2025-26) */}
-    <section className="space-y-12">
-      <h2 className="text-3xl font-bold text-slate-900 text-center">Property Tax Pakistan Calculator Guide</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="p-8 bg-amber-50 rounded-[3rem] border border-amber-100">
-          <h4 className="text-xl font-bold text-amber-900 mb-4 flex items-center gap-2"><span>📌</span> Section 7E (Deemed Income)</h4>
-          <p className="text-sm text-slate-600 mb-4">
-            If you own multiple properties with a total value exceeding Rs. 2.5 Crore, the FBR "deems" you are earning 5% rent on them, and taxes that at 1%. Essentially, it's a 1% annual wealth tax on dead land.
-          </p>
-          <div className="text-[10px] font-bold text-amber-700 italic">*Exempt for your primary residence.</div>
-        </div>
-        <div className="p-8 bg-blue-50 rounded-[3rem] border border-blue-100">
-          <h4 className="text-xl font-bold text-blue-900 mb-4 flex items-center gap-2"><span>🛡️</span> Capital Gains Tax (CGT)</h4>
-          <p className="text-sm text-slate-600 mb-4">
-            CGT is applicable on the profit you make when selling. For filers, the rate reduces every year you hold the property. After 6 years of holding, CGT often becomes 0% (verify latest Finance Bill).
-          </p>
-          <div className="text-[10px] font-bold text-blue-700 italic">*Non-filers pay significantly higher rates.</div>
-        </div>
+    {/* Section: Taxes 2026 */}
+    <section id="taxes-2026" className="space-y-12">
+      <h2 className="text-3xl font-bold text-slate-900 text-center">Taxes on Buying & Selling (Filer vs Non-Filer)</h2>
+      <div className="overflow-x-auto rounded-3xl border border-slate-200 shadow-sm">
+        <table className="w-full text-left border-collapse">
+          <thead className="bg-slate-50">
+            <tr>
+              <th className="p-4 font-bold text-slate-900">Tax Type</th>
+              <th className="p-4 font-bold text-emerald-600">Filer Rate</th>
+              <th className="p-4 font-bold text-rose-600">Non-Filer Rate</th>
+              <th className="p-4 font-bold text-slate-900">Notes</th>
+            </tr>
+          </thead>
+          <tbody className="text-sm text-slate-600">
+            <tr className="border-b border-slate-100">
+              <td className="p-4 font-bold">Buying (Sec 236K)</td>
+              <td className="p-4">3%</td>
+              <td className="p-4">12% - 20%</td>
+              <td className="p-4">Adjustable against annual income tax.</td>
+            </tr>
+            <tr className="border-b border-slate-100">
+              <td className="p-4 font-bold">Selling (Sec 236C)</td>
+              <td className="p-4">3%</td>
+              <td className="p-4">10%</td>
+              <td className="p-4">Collected by transferring authority.</td>
+            </tr>
+            <tr className="border-b border-slate-100">
+              <td className="p-4 font-bold">Capital Gains (CGT)</td>
+              <td className="p-4">15% (0% &gt; 6 yrs)</td>
+              <td className="p-4">Flat Rates</td>
+              <td className="p-4">On the PROFIT amount only.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
@@ -1151,6 +1463,25 @@ export const RealEstateBlogContent = () => (
       </div>
     </section>
 
+    {/* FAQ */}
+    <section id="faqs" className="space-y-8 pt-10 border-t border-slate-200">
+      <h2 className="text-3xl font-bold text-slate-900 text-center">Real Estate FAQs</h2>
+      <div className="space-y-4">
+        <details className="p-4 bg-slate-50 rounded-2xl cursor-pointer">
+          <summary className="font-bold text-slate-900">What is Section 7E?</summary>
+          <p className="text-sm text-slate-600 mt-2 pl-4 border-l-2 border-slate-200">
+            It is a "Deemed Income" tax. If you own properties worth &gt; 2.5 Crore (aggregate), FBR assumes you earn 5% rent on them and taxes that at 20% (Effective 1% of fair market value). Your self-occupied home is exempt.
+          </p>
+        </details>
+        <details className="p-4 bg-slate-50 rounded-2xl cursor-pointer">
+          <summary className="font-bold text-slate-900">Is a plot file safer than a plot?</summary>
+          <p className="text-sm text-slate-600 mt-2 pl-4 border-l-2 border-slate-200">
+            No. A "File" is just a promise of a future plot. A "Plot" with a map location and possession is much safer. Files are speculative but cheaper.
+          </p>
+        </details>
+      </div>
+    </section>
+
     {/* Footer Meta */}
     <footer className="pt-20 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
       <div className="text-[10px] text-slate-400 uppercase font-black tracking-widest">
@@ -1158,6 +1489,7 @@ export const RealEstateBlogContent = () => (
       </div>
       <div className="flex gap-4">
         <span className="px-3 py-1 bg-emerald-100 rounded-full text-[10px] font-bold text-emerald-700 italic">Real Estate Series</span>
+        <span className="px-3 py-1 bg-emerald-100 rounded-full text-[10px] font-bold text-emerald-700 italic">DHA Plot Calculator</span>
       </div>
     </footer>
   </article>
@@ -1178,6 +1510,81 @@ export const PFBlogContent = () => (
         A Provident Fund (PF) acts as a safety net for your future. Use our employee provident fund calculator to see how contributions create a massive corpus over time thanks to the power of compounding. In Pakistan, PF is governed by the Employee's Provident Funds Act, ensuring your hard-earned money is secured for retirement.
       </p>
     </header>
+
+    {/* Section: User Guide & Benefits */}
+    <section className="space-y-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="space-y-6">
+          <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-blue-500 pl-6">Why Use This Calculator?</h2>
+          <p className="text-slate-600 leading-relaxed">
+            This calculator is designed to give you quick and accurate results without complicated formulas. Instead of doing manual calculations, you can simply enter your values and get instant results. It helps you make better financial decisions and plan ahead with confidence.
+          </p>
+          <p className="text-slate-600 leading-relaxed">
+            Whether you are an employee, freelancer, investor, or business owner, this tool saves time and reduces calculation errors.
+          </p>
+        </div>
+        <div className="space-y-6">
+          <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-blue-500 pl-6">Who Should Use This Tool?</h2>
+          <ul className="space-y-3">
+            {[
+              "Salaried employees who want accurate deductions or savings estimates",
+              "Freelancers who need financial planning tools",
+              "Small business owners managing expenses or profits",
+              "Individuals planning loans, investments, or retirement",
+              "Anyone who wants quick and reliable calculations"
+            ].map((item, i) => (
+              <li key={i} className="flex gap-3 items-start">
+                <span className="text-blue-500 font-bold">✓</span>
+                <span className="text-slate-600">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div className="bg-blue-50 border border-blue-100 p-10 rounded-[3rem]">
+        <h2 className="text-3xl font-bold text-slate-900 text-center mb-8">Key Benefits</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            { t: "Fast & Accurate", d: "Get results instantly with high precision." },
+            { t: "User-Friendly", d: "Simple interface designed for everyone." },
+            { t: "No Math Required", d: "We handle the complex formulas for you." },
+            { t: "Mobile Ready", d: "Works perfectly on phones and desktops." },
+            { t: "Free to Use", d: "Use it anytime, anywhere at no cost." }
+          ].map((item, i) => (
+            <div key={i} className="bg-white p-6 rounded-2xl shadow-sm">
+              <h5 className="font-bold text-slate-900 mb-2">{item.t}</h5>
+              <p className="text-xs text-slate-500">{item.d}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="bg-white border border-slate-200 p-10 rounded-[3rem] shadow-sm">
+        <h2 className="text-3xl font-bold text-slate-900 text-center mb-8">Tips for Better Results</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="order-2 md:order-1">
+            <ul className="space-y-4">
+              {[
+                "Enter correct and updated figures",
+                "Use official salary, tax, or rate information",
+                "Recalculate when your income or expenses change",
+                "Compare results with different scenarios"
+              ].map((tip, i) => (
+                <li key={i} className="flex gap-4 items-center bg-slate-50 p-4 rounded-xl">
+                  <span className="w-8 h-8 flex items-center justify-center bg-blue-100 text-blue-600 font-bold rounded-full text-sm">{i + 1}</span>
+                  <span className="text-slate-700 font-medium">{tip}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="order-1 md:order-2 text-center bg-blue-600 text-white p-8 rounded-3xl">
+            <p className="font-bold text-lg mb-2">"Smart Decisions Start Here"</p>
+            <p className="text-blue-100 text-sm">Regularly updating your plan helps you make smarter financial and investment decisions for the future.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     {/* Section 1: How It Works */}
     <section className="space-y-10">
@@ -1278,84 +1685,133 @@ export const GratuityBlogContent = () => (
     {/* Header Section */}
     <header className="text-center space-y-8">
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-indigo-50 text-indigo-700 rounded-full text-xs font-black uppercase tracking-widest border border-indigo-100">
-        🎁 End of Service Reward
+        🎁 End of Service Benefits
       </div>
-      <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
-        Gratuity Calculator Pakistan: <br />
-        <span className="text-indigo-600 italic">Calculating Your Final Settlement Reward</span>
-      </h2>
-      <p className="text-xl text-slate-500 max-w-4xl mx-auto leading-relaxed text-center">
-        Gratuity is a lump sum amount paid by an employer to an employee upon leaving the job. It is an end of service calculator reward for your long-term service and loyalty. In Pakistan, gratuity is a legal right for workers in firms with 20+ staff as per labor law gratuity calculator standards.
+      <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
+        Gratuity Calculator Pakistan 2026: <br />
+        <span className="text-indigo-600 italic">Know Your Final Settlement Rights</span>
+      </h1>
+      <p className="max-w-3xl mx-auto text-lg text-slate-600">
+        Gratuity is not a gift; it is your legal right under the <strong>Standing Orders Ordinance 1968</strong>. Whether you are resigning or retiring, use our <strong>Gratuity Calculator</strong> to determine the exact lump sum amount your employer owes you based on your last gross salary and years of service.
       </p>
     </header>
 
-    {/* Section 1: The 30-Day Rule */}
-    <section className="space-y-10">
-      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-indigo-500 pl-6">Gratuity Formula Pakistan Guide</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div className="space-y-6">
-          <p>
-            The standard formula for gratuity in Pakistan is: <strong>30 days' gross wages for every completed year of service.</strong>
-          </p>
-          <p>
-            Crucially, if you have worked for more than 6 months in your final year, it counts as a full year for gratuity calculation. For example, 5 years and 7 months is treated as 6 years. The calculation is based on your <strong>Last Drawn Gross Salary</strong>, not your basic salary.
-          </p>
-          <div className="bg-indigo-600 text-white p-8 rounded-[2.5rem] shadow-xl">
-            <h5 className="font-bold mb-2">Employee Gratuity Pakistan Formula:</h5>
-            <code className="text-lg font-black block text-center bg-white/10 py-4 rounded-xl">
-              Gratuity = (Last Gross Salary) × (Service Years)
-            </code>
-          </div>
+    {/* Table of Contents */}
+    <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200">
+      <h3 className="text-lg font-bold mb-4">Table of Contents</h3>
+      <ul className="space-y-2 text-sm text-indigo-600 font-medium grid grid-cols-1 md:grid-cols-2">
+        <li><a href="#formula" className="hover:underline">1. Official Gratuity Formula</a></li>
+        <li><a href="#eligibility" className="hover:underline">2. Who is Eligible?</a></li>
+        <li><a href="#tax-rules" className="hover:underline">3. Tax on Gratuity (FBR Rules 2026)</a></li>
+        <li><a href="#calculation-examples" className="hover:underline">4. Calculation Examples</a></li>
+        <li><a href="#faqs" className="hover:underline">5. Frequently Asked Questions (FAQs)</a></li>
+      </ul>
+    </div>
+
+    {/* Section: Formula */}
+    <section id="formula" className="space-y-8">
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-indigo-500 pl-6">The 30-Day Rule Explained</h2>
+      <p>
+        The standard formula for calculating gratuity in Pakistan is simple but often misunderstood. It is based on your <strong>Gross Salary</strong>, not just the basic pay.
+      </p>
+      <div className="bg-indigo-600 text-white p-10 rounded-[3rem] shadow-xl text-center">
+        <h3 className="text-2xl font-bold mb-4">The Golden Formula</h3>
+        <div className="text-3xl md:text-4xl font-black bg-white/10 p-6 rounded-2xl inline-block mb-4">
+          (Last Drawn Gross Salary) × (Years of Service)
         </div>
-        <div className="grid grid-cols-1 gap-4">
-          {[
-            { t: "Eligibility", d: "Permanent employees in firms with 20+ staff." },
-            { t: "Min. Service", d: "Legally any service counts, but practically companies often look for 6-12 months." },
-            { t: "Exclusions", d: "Not payable if dismissed for theft, fraud, or damage to property." },
-            { t: "Gross vs Basic", d: "Unlike PF, it's calculated on your TOTAL wages including allowances." }
-          ].map((item, i) => (
-            <div key={i} className="flex gap-4 p-6 bg-slate-50 border border-slate-100 rounded-3xl items-center shadow-sm">
-              <div className="w-8 h-8 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold">✓</div>
-              <div>
-                <h5 className="font-bold text-slate-900 text-sm">{item.t}</h5>
-                <p className="text-xs text-slate-500 uppercase font-bold">{item.d}</p>
-              </div>
-            </div>
-          ))}
+        <p className="text-indigo-200 text-sm">
+          *Technical Note: This applies if the company does not have a Provident Fund. If PF exists, gratuity might be optional or calculated differently (e.g., 50% of Basic).
+        </p>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="p-6 border border-slate-200 rounded-2xl">
+          <h4 className="font-bold text-slate-900 mb-2">The "6-Month" Rule</h4>
+          <p className="text-sm text-slate-600">
+            If you have worked for more than 6 months in a year, it is counted as a <strong>FULL YEAR</strong>. <br />
+            <em>Example: 5 Years and 7 Months = 6 Years for calculation.</em>
+          </p>
+        </div>
+        <div className="p-6 border border-slate-200 rounded-2xl">
+          <h4 className="font-bold text-slate-900 mb-2">What is "Gross Salary"?</h4>
+          <p className="text-sm text-slate-600">
+            It includes Basic Pay, House Rent, Utilities, and regular allowances (COLA). It excludes bonus, overtime, or reimbursement of expenses.
+          </p>
         </div>
       </div>
     </section>
 
-    {/* Section 2: Tax Exemptions */}
-    <section className="bg-white border border-slate-200 p-12 md:p-16 rounded-[4rem] shadow-xl">
-      <div className="max-w-3xl mx-auto space-y-8 text-center">
-        <h2 className="text-3xl font-bold text-slate-900">Labor Law Gratuity Calculator</h2>
-        <p className="text-slate-500">
-          The taxability of your gratuity depends on whether the scheme is "Approved" by the FBR Board of Trustees or not.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-          <div className="p-6 bg-emerald-50 rounded-3xl border border-emerald-100">
-            <h5 className="font-bold text-emerald-900 mb-2">Approved Funds</h5>
-            <p className="text-xs text-slate-600">Exempt up to Rs. 300,000. Any amount above this is taxed as part of your income.</p>
-          </div>
-          <div className="p-6 bg-slate-50 rounded-3xl border border-slate-100">
-            <h5 className="font-bold text-slate-900 mb-2">Unapproved Payments</h5>
-            <p className="text-xs text-slate-600">The lower of Rs. 75,000 or 50% of the gratuity is exempt. The rest is taxable.</p>
-          </div>
+    {/* Section: Tax Rules */}
+    <section id="tax-rules" className="bg-slate-50 border border-slate-100 p-12 md:p-16 rounded-[4rem]">
+      <h2 className="text-3xl font-bold text-slate-900 text-center mb-10">Is Gratuity Taxable?</h2>
+      <p className="text-center max-w-2xl mx-auto mb-10">
+        Yes and No. The FBR provides specific exemptions based on how the Gratuity Fund is managed.
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="p-8 bg-white rounded-3xl shadow-sm border-l-4 border-emerald-500">
+          <h4 className="font-bold text-lg text-emerald-700 mb-2">Approved Gratuity Fund</h4>
+          <p className="text-sm text-slate-500">
+            If your company's fund is approved by the Commissioner of Income Tax:
+            <br /><br />
+            <strong>Exempt Limit: Up to Rs. 300,000</strong>
+            <br />
+            Anything above 3 Lakh is taxed at your average rate of tax.
+          </p>
         </div>
-        <p className="text-[10px] text-slate-400 italic">
-          *Statutory/Government gratuities are usually 100% tax-exempt.
-        </p>
+        <div className="p-8 bg-white rounded-3xl shadow-sm border-l-4 border-rose-500">
+          <h4 className="font-bold text-lg text-rose-700 mb-2">Unapproved Fund</h4>
+          <p className="text-sm text-slate-500">
+            If the fund is not approved (common in smaller private firms):
+            <br /><br />
+            <strong>Exempt Limit: Up to Rs. 75,000 (or 50% of amount, whichever is lower).</strong>
+            <br />
+            Most of your gratuity will be taxed.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* Section: FAQs */}
+    <section id="faqs" className="space-y-8 pt-10 border-t border-slate-200">
+      <h2 className="text-3xl font-bold text-slate-900 text-center">Gratuity Common Questions</h2>
+      <div className="space-y-4">
+        <details className="group bg-white border border-slate-200 p-6 rounded-2xl open:bg-slate-50 transition-all">
+          <summary className="font-bold text-slate-900 cursor-pointer flex justify-between items-center list-none">
+            <span>Can I claim Gratuity if I resign?</span>
+            <span className="transition group-open:rotate-180">▼</span>
+          </summary>
+          <p className="text-sm text-slate-600 mt-4 leading-relaxed">
+            Yes. Gratuity is payable on resignation, retirement, death, or termination (unless terminated for misconduct like theft/fraud). You must complete a minimum qualifying period (usually 6 months or 1 year) to be eligible.
+          </p>
+        </details>
+        <details className="group bg-white border border-slate-200 p-6 rounded-2xl open:bg-slate-50 transition-all">
+          <summary className="font-bold text-slate-900 cursor-pointer flex justify-between items-center list-none">
+            <span>Is Gratuity mandatory for all companies?</span>
+            <span className="transition group-open:rotate-180">▼</span>
+          </summary>
+          <p className="text-sm text-slate-600 mt-4 leading-relaxed">
+            Under the Industrial and Commercial Employment Ordinance 1968, every commercial establishment with 20 or more employees MUST pay gratuity OR have a Provident Fund. They cannot deny both.
+          </p>
+        </details>
+        <details className="group bg-white border border-slate-200 p-6 rounded-2xl open:bg-slate-50 transition-all">
+          <summary className="font-bold text-slate-900 cursor-pointer flex justify-between items-center list-none">
+            <span>What if my employer refuses to pay?</span>
+            <span className="transition group-open:rotate-180">▼</span>
+          </summary>
+          <p className="text-sm text-slate-600 mt-4 leading-relaxed">
+            You can file a claim with the "Commissioner for Workmen's Compensation" or the NIRC (National Industrial Relations Commission). It is a payable debt that the company must honor.
+          </p>
+        </details>
       </div>
     </section>
 
     {/* Footer Meta */}
     <footer className="pt-20 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
       <div className="text-[10px] text-slate-400 uppercase font-black tracking-widest">
-        Updated: Jan 2026 | Pakistan Labor Laws (Ordinance 1968)
+        Updated: Feb 2026 | Legal Labours Law
       </div>
       <div className="flex gap-4">
-        <span className="px-3 py-1 bg-indigo-100 rounded-full text-[10px] font-bold text-indigo-700 italic">Gratuity Amount Calculator</span>
+        <span className="px-3 py-1 bg-indigo-100 rounded-full text-[10px] font-bold text-indigo-700 italic">end of service calculator</span>
+        <span className="px-3 py-1 bg-indigo-100 rounded-full text-[10px] font-bold text-indigo-700 italic">gratuity tax 2026</span>
       </div>
     </footer>
   </article>
@@ -1376,6 +1832,76 @@ export const FreelancerBlogContent = () => (
         Pakistan is a global powerhouse for digital talent. Use our freelancer net income calculator to navigate PSEB tax calculator rules and export income tax Pakistan regulations. This guide explains how to legally slash your tax rate and build a transparent wealth profile.
       </p>
     </header>
+
+    {/* Section: User Guide & Benefits */}
+    <section className="space-y-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="space-y-6">
+          <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-indigo-500 pl-6">About the Freelancer Income Calculator</h2>
+          <p className="text-slate-600 leading-relaxed">
+            The Freelancer Income Calculator Pakistan helps freelancers estimate their net income after deducting bank charges, taxes, and platform fees. This tool is designed specifically for freelancers working on platforms like Fiverr, Upwork, and Payoneer.
+          </p>
+          <p className="text-slate-600 leading-relaxed">
+            It gives you a clear picture of how much money you actually receive after all deductions.
+          </p>
+        </div>
+        <div className="space-y-6">
+          <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-indigo-500 pl-6">Who Should Use This Tool?</h2>
+          <ul className="space-y-3">
+            {[
+              "Fiverr freelancers",
+              "Upwork freelancers",
+              "Remote workers",
+              "Digital service providers",
+              "Online consultants"
+            ].map((item, i) => (
+              <li key={i} className="flex gap-3 items-start">
+                <span className="text-indigo-500 font-bold">✓</span>
+                <span className="text-slate-600">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div className="bg-indigo-50 border border-indigo-100 p-10 rounded-[3rem]">
+        <h2 className="text-3xl font-bold text-slate-900 text-center mb-8">Why Use the Freelancer Income Calculator</h2>
+        <p className="text-slate-600 text-center mb-8 max-w-2xl mx-auto">
+          Many freelancers only look at their gross earnings and ignore deductions. The Freelancer Income Calculator helps you calculate your real net income, estimate export tax deductions, account for bank charges, and plan monthly finances.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {[
+            { t: "Real Net Income", d: "See what actually hits your bank." },
+            { t: "Tax Deductions", d: "Estimate export tax liabilities." },
+            { t: "Bank Charges", d: "Account for transfer fees." },
+            { t: "Better Pricing", d: "Set rates that cover your costs." }
+          ].map((item, i) => (
+            <div key={i} className="bg-white p-6 rounded-2xl shadow-sm">
+              <h5 className="font-bold text-slate-900 mb-2">{item.t}</h5>
+              <p className="text-xs text-slate-500">{item.d}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="bg-white border border-slate-200 p-10 rounded-[3rem] shadow-sm">
+        <h2 className="text-3xl font-bold text-slate-900 text-center mb-8">Benefits of Using This Calculator</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            "Designed for Pakistan freelancers",
+            "Includes tax and bank deductions",
+            "Instant results",
+            "Helps in financial planning",
+            "Completely free tool"
+          ].map((benefit, i) => (
+            <div key={i} className="flex items-center gap-3">
+              <span className="w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center text-xs font-bold">✓</span>
+              <span className="text-slate-700 font-medium">{benefit}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 
     {/* Section 1: The 0.25% Golden Rule */}
     <section className="space-y-10">
