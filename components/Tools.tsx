@@ -143,18 +143,48 @@ export const EMITool = () => {
   const n = years * 12;
   const emi = (loan * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
 
+  const totalPayment = emi * n;
+  const totalInterest = totalPayment - loan;
+
   return (
     <div className="space-y-12">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-4">
           <h3 className="text-2xl font-bold">Loan Details</h3>
-          <input type="number" placeholder="Loan Amount" value={loan} onChange={e => setLoan(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
-          <input type="number" placeholder="Interest Rate %" value={rate} onChange={e => setRate(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
-          <input type="number" placeholder="Tenure (Years)" value={years} onChange={e => setYears(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+          <div>
+            <label className="text-xs font-bold text-slate-500">Loan Amount (PKR)</label>
+            <input type="number" placeholder="Loan Amount" value={loan} onChange={e => setLoan(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="text-xs font-bold text-slate-500">Interest Rate %</label>
+              <input type="number" placeholder="Interest Rate %" value={rate} onChange={e => setRate(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-500">Tenure (Years)</label>
+              <input type="number" placeholder="Tenure (Years)" value={years} onChange={e => setYears(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            </div>
+          </div>
         </div>
-        <div className="bg-slate-900 text-white p-8 rounded-[2.5rem] shadow-xl text-center">
-          <p className="text-slate-400 uppercase text-xs font-black mb-2">Monthly EMI</p>
+
+        <div className="bg-slate-900 text-white p-8 rounded-[2.5rem] shadow-xl text-center flex flex-col justify-center">
+          <p className="text-slate-400 uppercase text-xs font-black mb-2">Monthly Installment (EMI)</p>
           <h4 className="text-5xl font-black text-blue-400">Rs. {Math.round(emi).toLocaleString()}</h4>
+
+          <div className="mt-8 pt-8 border-t border-white/10 space-y-2">
+            <div className="flex justify-between text-sm">
+              <span className="text-slate-400">Principal Amount</span>
+              <span className="font-bold">Rs. {loan.toLocaleString()}</span>
+            </div>
+            <div className="flex justify-between text-sm">
+              <span className="text-slate-400">Total Interest</span>
+              <span className="font-bold text-rose-400">Rs. {Math.round(totalInterest).toLocaleString()}</span>
+            </div>
+            <div className="flex justify-between text-sm pt-2 border-t border-white/5">
+              <span className="text-slate-400">Total Amount Payable</span>
+              <span className="font-bold text-emerald-400">Rs. {Math.round(totalPayment).toLocaleString()}</span>
+            </div>
+          </div>
         </div>
       </div>
       <EMIBlogContent />
@@ -164,22 +194,91 @@ export const EMITool = () => {
 };
 
 export const ProfitMarginTool = () => {
+  const [mode, setMode] = useState<'margin' | 'markup'>('margin');
   const [cost, setCost] = useState(1000);
-  const [revenue, setRevenue] = useState(1500);
+  const [revenue, setRevenue] = useState(1500); // For Margin Mode
+  const [desiredMargin, setDesiredMargin] = useState(30); // For Markup Mode
+
+  // Mode 1: Known Cost & Revenue -> Find Margin
   const profit = revenue - cost;
   const margin = (profit / revenue) * 100;
+  const markup = (profit / cost) * 100;
+
+  // Mode 2: Known Cost & Desired Margin -> Find Revenue
+  // Revenue = Cost / (1 - Margin%)
+  const requiredRevenue = cost / (1 - (desiredMargin / 100));
+  const projectedProfit = requiredRevenue - cost;
 
   return (
     <div className="space-y-12">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-4">
-          <h3 className="text-2xl font-bold">Business Figures</h3>
-          <input type="number" placeholder="Cost" value={cost} onChange={e => setCost(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
-          <input type="number" placeholder="Revenue" value={revenue} onChange={e => setRevenue(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+      <div className="flex justify-center mb-8">
+        <div className="bg-white p-1 rounded-full border border-slate-100 shadow-sm inline-flex">
+          <button
+            onClick={() => setMode('margin')}
+            className={`px-6 py-2 rounded-full text-xs font-bold transition-all ${mode === 'margin' ? 'bg-slate-900 text-white' : 'text-slate-500 hover:bg-slate-50'}`}
+          >
+            Find Margin %
+          </button>
+          <button
+            onClick={() => setMode('markup')}
+            className={`px-6 py-2 rounded-full text-xs font-bold transition-all ${mode === 'markup' ? 'bg-slate-900 text-white' : 'text-slate-500 hover:bg-slate-50'}`}
+          >
+            Find Selling Price
+          </button>
         </div>
-        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl text-center border">
-          <p className="text-slate-400 uppercase text-xs font-black mb-2">Net Profit Margin</p>
-          <h4 className="text-5xl font-black text-emerald-600">{Math.round(margin)}%</h4>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+          <h3 className="text-2xl font-bold">Business Data</h3>
+
+          <div>
+            <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Product Cost</label>
+            <input type="number" value={cost} onChange={e => setCost(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-xl" />
+          </div>
+
+          {mode === 'margin' ? (
+            <div>
+              <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Selling Price</label>
+              <input type="number" value={revenue} onChange={e => setRevenue(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-xl" />
+            </div>
+          ) : (
+            <div>
+              <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Desired Margin %</label>
+              <input type="number" value={desiredMargin} onChange={e => setDesiredMargin(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-xl" />
+              <p className="text-[10px] text-slate-400 mt-2">How much of the final price should be profit?</p>
+            </div>
+          )}
+        </div>
+
+        <div className="bg-slate-900 text-white p-8 rounded-[2.5rem] shadow-xl flex flex-col justify-center text-center">
+          {mode === 'margin' ? (
+            <>
+              <p className="text-slate-400 uppercase text-xs font-black mb-2">Net Profit Margin</p>
+              <h4 className="text-6xl font-black text-emerald-400 mb-6">{margin.toFixed(1)}%</h4>
+
+              <div className="grid grid-cols-2 gap-4 border-t border-white/10 pt-6">
+                <div>
+                  <p className="text-[10px] text-slate-500 uppercase font-black">Profit Amount</p>
+                  <p className="font-bold text-xl">Rs. {Math.round(profit).toLocaleString()}</p>
+                </div>
+                <div>
+                  <p className="text-[10px] text-slate-500 uppercase font-black">Markup %</p>
+                  <p className="font-bold text-xl text-blue-400">{markup.toFixed(1)}%</p>
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              <p className="text-slate-400 uppercase text-xs font-black mb-2">Suggested Selling Price</p>
+              <h4 className="text-5xl font-black text-emerald-400 mb-6">Rs. {Math.round(requiredRevenue).toLocaleString()}</h4>
+
+              <div className="bg-white/10 p-4 rounded-2xl">
+                <p className="text-[10px] text-slate-300 uppercase mb-1">Expected Profit</p>
+                <p className="font-bold text-2xl">Rs. {Math.round(projectedProfit).toLocaleString()}</p>
+              </div>
+            </>
+          )}
         </div>
       </div>
       <ProfitMarginBlogContent />
@@ -193,17 +292,43 @@ export const BMICalcTool = () => {
   const [height, setHeight] = useState(170);
   const bmi = weight / Math.pow(height / 100, 2);
 
+  let category = '';
+  let color = '';
+  let tip = '';
+
+  if (bmi < 18.5) { category = 'Underweight'; color = 'text-blue-500'; tip = 'Focus on nutrient-rich foods to gain healthy weight.'; }
+  else if (bmi < 25) { category = 'Normal Weight'; color = 'text-emerald-500'; tip = 'Great job! Maintain your balanced diet and activity.'; }
+  else if (bmi < 30) { category = 'Overweight'; color = 'text-amber-500'; tip = 'Consider a slight calorie deficit and more daily movement.'; }
+  else { category = 'Obese'; color = 'text-rose-500'; tip = 'Consult a healthcare provider for a personalized plan.'; }
+
   return (
     <div className="space-y-12">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-4">
-          <h3 className="text-2xl font-bold">Health Metrics</h3>
-          <input type="number" placeholder="Weight (kg)" value={weight} onChange={e => setWeight(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
-          <input type="number" placeholder="Height (cm)" value={height} onChange={e => setHeight(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+          <h3 className="text-2xl font-bold">Body Stats</h3>
+          <div>
+            <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Weight (KG)</label>
+            <input type="number" placeholder="Weight (kg)" value={weight} onChange={e => setWeight(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl text-xl font-bold" />
+          </div>
+          <div>
+            <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Height (CM)</label>
+            <input type="number" placeholder="Height (cm)" value={height} onChange={e => setHeight(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl text-xl font-bold" />
+            <p className="text-xs text-slate-400 mt-2 text-right">{Math.floor(height / 30.48)}ft {Math.round((height % 30.48) / 2.54)}in</p>
+          </div>
         </div>
-        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl text-center border">
-          <p className="text-slate-400 uppercase text-xs font-black mb-2">Your BMI Index</p>
-          <h4 className="text-5xl font-black text-rose-600">{bmi.toFixed(1)}</h4>
+
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl border border-slate-100 flex flex-col items-center justify-center text-center relative overflow-hidden">
+          {/* Simple CSS Gauge Background */}
+          <div className="absolute top-0 w-full h-2 bg-gradient-to-r from-blue-400 via-emerald-400 via-amber-400 to-rose-500"></div>
+
+          <p className="text-slate-400 uppercase text-xs font-black mb-4 tracking-widest">Your Result</p>
+          <h4 className={`text-6xl font-black ${color} mb-2`}>{bmi.toFixed(1)}</h4>
+          <p className={`text-xl font-bold ${color} mb-6`}>{category}</p>
+
+          <div className="bg-slate-50 p-6 rounded-3xl w-full">
+            <span className="text-2xl block mb-2">💡</span>
+            <p className="text-sm text-slate-600 font-medium leading-relaxed">{tip}</p>
+          </div>
         </div>
       </div>
       <BMIBlogContent />
@@ -218,96 +343,134 @@ export const InvestmentReturnTool = () => {
   const [rate, setRate] = useState(12);
   const [years, setYears] = useState(10);
   const [compounding, setCompounding] = useState(12); // Monthly default
+  const [adjustInflation, setAdjustInflation] = useState(false);
+  const [inflationRate, setInflationRate] = useState(8);
+
   const [data, setData] = useState<any[]>([]);
   const [result, setResult] = useState<any>(null);
 
   const calculate = () => {
     let total = principal;
-    const ratePerPeriod = (rate / 100) / compounding;
+    let totalInvested = principal;
+    // Effective rate if inflation adjusted: Real Rate = (1 + Nominal) / (1 + Inflation) - 1
+    // Simplified for tool: adjusting the final value or the rate?
+    // Let's adjust the growth rate to be "Real Return" if toggle is on.
+    const effectiveRate = adjustInflation ? ((1 + rate / 100) / (1 + inflationRate / 100) - 1) * 100 : rate;
+
+    const ratePerPeriod = (effectiveRate / 100) / compounding;
     const chartData = [];
 
     for (let i = 0; i <= years; i++) {
       if (i > 0) {
         for (let m = 0; m < compounding; m++) {
           total = (total + (monthly * (12 / compounding))) * (1 + ratePerPeriod);
+          totalInvested += (monthly * (12 / compounding));
         }
       }
       chartData.push({
-        year: `Year ${i}`,
+        year: `Y${i}`,
         value: Math.round(total),
-        invested: principal + (monthly * 12 * i)
+        invested: Math.round(totalInvested)
       });
     }
 
     setData(chartData);
     setResult({
       total,
-      invested: principal + (monthly * 12 * years),
-      returns: total - (principal + (monthly * 12 * years))
+      invested: totalInvested,
+      returns: total - totalInvested
     });
   };
 
-  useEffect(() => calculate(), [principal, monthly, rate, years, compounding]);
+  useEffect(() => calculate(), [principal, monthly, rate, years, compounding, adjustInflation, inflationRate]);
 
   return (
     <div className="space-y-12">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
-          <h3 className="text-2xl font-bold">Investment Plan</h3>
+          <h3 className="text-2xl font-bold text-emerald-900">Investment Strategy</h3>
+
+          <div className="flex items-center justify-between bg-emerald-50 p-4 rounded-2xl border border-emerald-100">
+            <div>
+              <span className="text-sm font-bold text-emerald-900">Adjust for Inflation?</span>
+              <p className="text-[10px] text-emerald-700">See "Real Value" in today's purchasing power</p>
+            </div>
+            <label className="relative inline-flex items-center cursor-pointer">
+              <input type="checkbox" checked={adjustInflation} onChange={e => setAdjustInflation(e.target.checked)} className="sr-only peer" />
+              <div className="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-600"></div>
+            </label>
+          </div>
+
           <div className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-[10px] font-black uppercase text-slate-400 mb-1">Initial (PKR)</label>
-                <input type="number" value={principal} onChange={e => setPrincipal(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+                <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Starting Amount</label>
+                <input type="number" value={principal} onChange={e => setPrincipal(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold" />
               </div>
               <div>
-                <label className="block text-[10px] font-black uppercase text-slate-400 mb-1">Monthly Add (PKR)</label>
-                <input type="number" value={monthly} onChange={e => setMonthly(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+                <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Monthly Contribution</label>
+                <input type="number" value={monthly} onChange={e => setMonthly(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold" />
               </div>
             </div>
+
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-[10px] font-black uppercase text-slate-400 mb-1">Expected %</label>
+                <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Expected Return %</label>
                 <input type="number" value={rate} onChange={e => setRate(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
               </div>
               <div>
-                <label className="block text-[10px] font-black uppercase text-slate-400 mb-1">Years</label>
+                <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Duration (Years)</label>
                 <input type="number" value={years} onChange={e => setYears(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
               </div>
             </div>
-            <div>
-              <label className="block text-[10px] font-black uppercase text-slate-400 mb-1">Compounding Frequency</label>
-              <select value={compounding} onChange={e => setCompounding(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold">
-                <option value={12}>Monthly</option>
-                <option value={4}>Quarterly</option>
-                <option value={1}>Annually</option>
-              </select>
-            </div>
+
+            {adjustInflation && (
+              <div className="animate-in fade-in slide-in-from-top-2">
+                <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Expected Inflation %</label>
+                <input type="number" value={inflationRate} onChange={e => setInflationRate(Number(e.target.value))} className="w-full p-4 bg-rose-50 border border-rose-100 rounded-2xl font-bold text-rose-900" />
+              </div>
+            )}
           </div>
         </div>
-        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl flex flex-col border border-slate-50">
+
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl flex flex-col border border-slate-50 relative overflow-hidden">
           {result && (
-            <div className="mb-8 text-center">
-              <p className="text-slate-400 uppercase text-xs font-black tracking-widest mb-1">Maturity Value</p>
+            <div className="mb-8 text-center relative z-10">
+              <p className="text-slate-400 uppercase text-xs font-black tracking-widest mb-1">
+                {adjustInflation ? "Real Maturity Value (Today's Money)" : "Projected Maturity Value"}
+              </p>
               <h4 className="text-5xl font-black text-emerald-600">₨ {Math.round(result.total).toLocaleString()}</h4>
-              <div className="flex justify-center gap-6 mt-4 text-[10px] font-bold text-slate-400">
-                <span>Invested: ₨ {result.invested.toLocaleString()}</span>
-                <span>Returns: ₨ {Math.round(result.returns).toLocaleString()}</span>
+
+              <div className="flex justify-center gap-2 mt-6">
+                <div className="px-4 py-2 bg-blue-50 rounded-xl border border-blue-100">
+                  <p className="text-[10px] uppercase font-bold text-blue-400">Total Invested</p>
+                  <p className="text-lg font-black text-blue-900">₨ {result.invested.toLocaleString()}</p>
+                </div>
+                <div className="px-4 py-2 bg-emerald-50 rounded-xl border border-emerald-100">
+                  <p className="text-[10px] uppercase font-bold text-emerald-400">Total Profit</p>
+                  <p className="text-lg font-black text-emerald-900">₨ {Math.round(result.returns).toLocaleString()}</p>
+                </div>
               </div>
             </div>
           )}
-          <div className="h-64 w-full">
+
+          <div className="h-48 w-full mt-auto relative z-10">
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={data}>
+                <defs>
+                  <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stopColor="#10b981" stopOpacity={0.3} />
+                    <stop offset="95%" stopColor="#10b981" stopOpacity={0} />
+                  </linearGradient>
+                </defs>
                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
-                <XAxis dataKey="year" hide />
-                <YAxis hide />
                 <Tooltip
-                  contentStyle={{ borderRadius: '20px', border: 'none', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
-                  formatter={(v) => `₨ ${v.toLocaleString()}`}
+                  contentStyle={{ borderRadius: '16px', border: 'none', boxShadow: '0 10px 30px rgba(0,0,0,0.1)', fontSize: '12px' }}
+                  formatter={(v: number) => `₨ ${v.toLocaleString()}`}
+                  labelStyle={{ display: 'none' }}
                 />
-                <Area type="monotone" dataKey="value" stroke="#10b981" fill="#10b981" fillOpacity={0.1} strokeWidth={3} />
-                <Area type="monotone" dataKey="invested" stroke="#3b82f6" fill="#3b82f6" fillOpacity={0.05} strokeWidth={2} strokeDasharray="5 5" />
+                <Area type="monotone" dataKey="value" stroke="#10b981" fillOpacity={1} fill="url(#colorValue)" strokeWidth={3} />
+                <Area type="monotone" dataKey="invested" stroke="#3b82f6" fillOpacity={0} strokeWidth={2} strokeDasharray="4 4" />
               </AreaChart>
             </ResponsiveContainer>
           </div>
@@ -320,56 +483,117 @@ export const InvestmentReturnTool = () => {
 };
 
 export const RetirementTool = () => {
-  const [currentAge, setCurrentAge] = useState(25);
+  const [currentAge, setCurrentAge] = useState(30);
   const [retireAge, setRetireAge] = useState(60);
+  const [lifeExpectancy, setLifeExpectancy] = useState(80);
   const [monthlyExpense, setMonthlyExpense] = useState(100000);
-  const [inflation, setInflation] = useState(10);
-  const [returns, setReturns] = useState(12);
+  const [currentSavings, setCurrentSavings] = useState(500000);
+  const [inflation, setInflation] = useState(10); // High inflation in PK
+  const [preRetireReturn, setPreRetireReturn] = useState(12); // Equity/Mutual Funds
+  const [postRetireReturn, setPostRetireReturn] = useState(10); // Safer debt funds
 
+  // 1. Calculate expense at retirement
   const yearsToRetire = Math.max(0, retireAge - currentAge);
-  const futureExpense = monthlyExpense * Math.pow(1 + inflation / 100, yearsToRetire);
-  const corpusNeeded = futureExpense * 12 * 20;
+  const yearsInRetirement = Math.max(0, lifeExpectancy - retireAge);
+
+  const expenseAtRetirement = monthlyExpense * Math.pow(1 + inflation / 100, yearsToRetire);
+
+  // 2. Calculate Corpus Needed
+  // Corpus = (Annual Expense at Retirement) * ((1 - (1+r)^-n ) / r) 
+  // Where r = real rate of return during retirement (return - inflation)
+  // Real Rate approx = (1+Ret)/ (1+Inf) - 1
+  const realRatePostRetire = ((1 + postRetireReturn / 100) / (1 + inflation / 100)) - 1;
+  const annualExpenseAtStart = expenseAtRetirement * 12;
+
+  // PV of Annuity Due (assuming expense at start of year/month)
+  // If Real Rate is 0 or negative (rare but possible in high inflation), handled carefully
+  let corpusNeeded = 0;
+  if (Math.abs(realRatePostRetire) < 0.0001) {
+    corpusNeeded = annualExpenseAtStart * yearsInRetirement;
+  } else {
+    corpusNeeded = annualExpenseAtStart * ((1 - Math.pow(1 + realRatePostRetire, -yearsInRetirement)) / realRatePostRetire);
+  }
+
+  // 3. Gap Analysis
+  // FV of current savings
+  const fvCurrentSavings = currentSavings * Math.pow(1 + preRetireReturn / 100, yearsToRetire);
+  const shortfall = Math.max(0, corpusNeeded - fvCurrentSavings);
+
+  // 4. Monthly Savings Needed to cover shortfall
+  // PMT formula: P = (FV * r) / ((1+r)^n - 1) * (1+r) if start of period? or end? Let's use standard end.
+  const rMonthly = (preRetireReturn / 100) / 12;
+  const nMonths = yearsToRetire * 12;
+  const monthlySavingsNeeded = shortfall > 0 ? (shortfall * rMonthly) / (Math.pow(1 + rMonthly, nMonths) - 1) : 0;
 
   return (
     <div className="space-y-12">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
-          <h3 className="text-2xl font-bold">Retirement Profile</h3>
-          <div className="grid grid-cols-2 gap-4">
+          <h3 className="text-2xl font-bold text-blue-900">Retirement Plan</h3>
+
+          <div className="grid grid-cols-3 gap-3">
             <div>
-              <label className="text-xs font-bold text-slate-500">Current Age</label>
-              <input type="number" value={currentAge} onChange={e => setCurrentAge(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+              <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Current Age</label>
+              <input type="number" value={currentAge} onChange={e => setCurrentAge(Number(e.target.value))} className="w-full p-3 bg-slate-50 border rounded-xl font-bold" />
             </div>
             <div>
-              <label className="text-xs font-bold text-slate-500">Retire Age</label>
-              <input type="number" value={retireAge} onChange={e => setRetireAge(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+              <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Retire Age</label>
+              <input type="number" value={retireAge} onChange={e => setRetireAge(Number(e.target.value))} className="w-full p-3 bg-slate-50 border rounded-xl font-bold" />
+            </div>
+            <div>
+              <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Life Exp.</label>
+              <input type="number" value={lifeExpectancy} onChange={e => setLifeExpectancy(Number(e.target.value))} className="w-full p-3 bg-slate-50 border rounded-xl font-bold" />
             </div>
           </div>
+
           <div>
-            <label className="text-xs font-bold text-slate-500">Monthly Expense (Today)</label>
-            <input type="number" value={monthlyExpense} onChange={e => setMonthlyExpense(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Current Monthly Expense</label>
+            <input type="number" value={monthlyExpense} onChange={e => setMonthlyExpense(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl text-lg font-bold" />
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className="text-xs font-bold text-slate-500">Inflation %</label>
-              <input type="number" value={inflation} onChange={e => setInflation(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
-            </div>
-            <div>
-              <label className="text-xs font-bold text-slate-500">Return Rate %</label>
-              <input type="number" value={returns} onChange={e => setReturns(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+
+          <div>
+            <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Current Savings (Optional)</label>
+            <input type="number" value={currentSavings} onChange={e => setCurrentSavings(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+          </div>
+
+          <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+            <p className="text-xs font-bold text-slate-400 uppercase mb-3">Assumptions</p>
+            <div className="grid grid-cols-3 gap-2">
+              <div>
+                <span className="text-[10px] text-slate-500 block">Inflation</span>
+                <input type="number" value={inflation} onChange={e => setInflation(Number(e.target.value))} className="w-full p-2 bg-white border rounded-lg text-xs font-bold" />
+              </div>
+              <div>
+                <span className="text-[10px] text-slate-500 block">Pre-Ret %</span>
+                <input type="number" value={preRetireReturn} onChange={e => setPreRetireReturn(Number(e.target.value))} className="w-full p-2 bg-white border rounded-lg text-xs font-bold" />
+              </div>
+              <div>
+                <span className="text-[10px] text-slate-500 block">Post-Ret %</span>
+                <input type="number" value={postRetireReturn} onChange={e => setPostRetireReturn(Number(e.target.value))} className="w-full p-2 bg-white border rounded-lg text-xs font-bold" />
+              </div>
             </div>
           </div>
         </div>
-        <div className="bg-slate-900 text-white p-12 rounded-[2.5rem] shadow-2xl flex flex-col justify-center space-y-8 relative overflow-hidden">
-          <div className="absolute right-0 top-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl"></div>
-          <div className="text-center">
-            <p className="text-slate-400 text-[10px] font-black tracking-widest uppercase mb-2">Future Monthly Expense (at {retireAge})</p>
-            <h4 className="text-4xl font-black text-emerald-400">₨ {Math.round(futureExpense).toLocaleString()}</h4>
-          </div>
-          <div className="p-8 bg-white/5 rounded-3xl border border-white/10 text-center">
-            <p className="text-slate-400 text-[10px] font-black tracking-widest uppercase mb-4">Required Retirement Corpus</p>
-            <h4 className="text-5xl font-black">₨ {Math.round(corpusNeeded / 10000000).toLocaleString()} <span className="text-xl">Cr</span></h4>
-            <p className="text-[9px] text-slate-500 mt-4 italic">Assumes 20 years of post-retirement lifestyle maintenance.</p>
+
+        <div className="bg-blue-900 text-white p-8 rounded-[2.5rem] shadow-2xl flex flex-col justify-center relative overflow-hidden">
+          <div className="absolute right-0 top-0 w-64 h-64 bg-blue-500 rounded-full blur-[100px] opacity-30 -mr-32 -mt-32"></div>
+
+          <div className="relative z-10 text-center space-y-8">
+            <div>
+              <p className="text-blue-200 uppercase text-[10px] font-black tracking-widest mb-2">Total Corpus Needed</p>
+              <h4 className="text-4xl lg:text-5xl font-black text-white">₨ {Math.round(corpusNeeded / 10000000).toFixed(2)} Cr</h4>
+              <p className="text-[10px] text-blue-300 mt-2">
+                To sustain {yearsInRetirement} years with inflation adjusted expenses (Rs. {Math.round(expenseAtRetirement).toLocaleString()}/mo at start)
+              </p>
+            </div>
+
+            <div className="pt-8 border-t border-blue-800">
+              <p className="text-blue-200 uppercase text-[10px] font-black tracking-widest mb-1">Gap & Required Action</p>
+              <div className="flex flex-col items-center">
+                <p className="text-3xl font-black text-emerald-400">Save ₨ {Math.round(monthlySavingsNeeded).toLocaleString()} <span className="text-sm text-emerald-200 font-normal">/ month</span></p>
+                {currentSavings > 0 && <p className="text-[10px] text-blue-400 mt-2">considering your existing {Math.round(currentSavings / 100000).toFixed(1)} Lakh savings</p>}
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -381,69 +605,104 @@ export const RetirementTool = () => {
 
 export const RealEstateROITool = () => {
   const [purchasePrice, setPurchasePrice] = useState(10000000);
-  const [stampDutyRate, setStampDutyRate] = useState(2); // %
-  const [holdingYears, setHoldingYears] = useState(5);
   const [sellingPrice, setSellingPrice] = useState(15000000);
   const [monthlyRent, setMonthlyRent] = useState(45000);
+  const [holdingYears, setHoldingYears] = useState(5);
 
-  const totalCost = purchasePrice * (1 + (stampDutyRate / 100));
-  const gain = sellingPrice - totalCost;
-  const totalRent = monthlyRent * 12 * holdingYears;
-  const totalReturn = gain + totalRent;
-  const annualizedROI = (Math.pow((totalReturn + totalCost) / totalCost, 1 / holdingYears) - 1) * 100;
+  // Expenses
+  const [stampDutyRate, setStampDutyRate] = useState(3); // % (Transfer + Reg)
+  const [annualMaintenance, setAnnualMaintenance] = useState(20000); // PKR per year
+  const [commissionRate, setCommissionRate] = useState(1); // % Agent Fee (Buy + Sell)
+
+  const buyCosts = purchasePrice * (stampDutyRate / 100) + (purchasePrice * commissionRate / 100);
+  const totalCostBasis = purchasePrice + buyCosts;
+
+  const totalRentCollected = monthlyRent * 12 * holdingYears;
+  const totalMaintenance = annualMaintenance * holdingYears;
+  const netRent = totalRentCollected - totalMaintenance;
+
+  const capitalGain = sellingPrice - totalCostBasis - (sellingPrice * commissionRate / 100); // Sell commission
+
+  const totalProfit = capitalGain + netRent;
+  const annualizedROI = (Math.pow((totalProfit + purchasePrice) / purchasePrice, 1 / holdingYears) - 1) * 100;
+  const rentalYield = ((monthlyRent * 12) / purchasePrice) * 100;
 
   return (
     <div className="space-y-12">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
-          <h3 className="text-2xl font-bold">Property Details</h3>
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className="text-xs font-bold text-slate-500">Buy Price (PKR)</label>
-              <input type="number" value={purchasePrice} onChange={e => setPurchasePrice(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+          <h3 className="text-2xl font-bold text-slate-900">Property Deal</h3>
+
+          <div className="space-y-4">
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Purchase Price</label>
+                <input type="number" value={purchasePrice} onChange={e => setPurchasePrice(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold" />
+              </div>
+              <div>
+                <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Expected Sale Price</label>
+                <input type="number" value={sellingPrice} onChange={e => setSellingPrice(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold" />
+              </div>
             </div>
-            <div>
-              <label className="text-xs font-bold text-slate-500">Stamp Duty %</label>
-              <input type="number" value={stampDutyRate} onChange={e => setStampDutyRate(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+
+            <div className="grid grid-cols-3 gap-3">
+              <div className="col-span-1">
+                <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Rent/Mo</label>
+                <input type="number" value={monthlyRent} onChange={e => setMonthlyRent(Number(e.target.value))} className="w-full p-3 bg-slate-50 border rounded-xl" />
+              </div>
+              <div className="col-span-1">
+                <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Years Held</label>
+                <input type="number" value={holdingYears} onChange={e => setHoldingYears(Number(e.target.value))} className="w-full p-3 bg-slate-50 border rounded-xl" />
+              </div>
+              <div className="col-span-1">
+                <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Maint./Yr</label>
+                <input type="number" value={annualMaintenance} onChange={e => setAnnualMaintenance(Number(e.target.value))} className="w-full p-3 bg-slate-50 border rounded-xl" />
+              </div>
             </div>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className="text-xs font-bold text-slate-500">Selling Price (PKR)</label>
-              <input type="number" value={sellingPrice} onChange={e => setSellingPrice(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+
+            <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+              <p className="text-xs font-bold text-slate-400 uppercase mb-3">One-time Costs (%)</p>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <span className="text-[10px] text-slate-500 block">Stamp Duty/Tax</span>
+                  <input type="number" value={stampDutyRate} onChange={e => setStampDutyRate(Number(e.target.value))} className="w-full p-2 bg-white border rounded-lg text-xs font-bold" />
+                </div>
+                <div>
+                  <span className="text-[10px] text-slate-500 block">Agent Comm.</span>
+                  <input type="number" value={commissionRate} onChange={e => setCommissionRate(Number(e.target.value))} className="w-full p-2 bg-white border rounded-lg text-xs font-bold" />
+                </div>
+              </div>
             </div>
-            <div>
-              <label className="text-xs font-bold text-slate-500">Holding Years</label>
-              <input type="number" value={holdingYears} onChange={e => setHoldingYears(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
-            </div>
-          </div>
-          <div>
-            <label className="text-xs font-bold text-slate-500">Monthly Rental Income</label>
-            <input type="number" value={monthlyRent} onChange={e => setMonthlyRent(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
           </div>
         </div>
-        <div className="bg-slate-900 text-white p-12 rounded-[2.5rem] shadow-2xl flex flex-col justify-center space-y-8">
-          <div className="text-center">
-            <p className="text-slate-400 text-[10px] font-black tracking-widest uppercase mb-2">Total Net Gain</p>
-            <h4 className="text-6xl font-black text-emerald-400">₨ {Math.round(totalReturn).toLocaleString()}</h4>
-          </div>
-          <div className="grid grid-cols-2 gap-4 pt-8 border-t border-white/10">
-            <div className="text-center">
-              <p className="text-slate-500 text-[10px] font-black uppercase">Annualized ROI</p>
-              <p className="text-2xl font-black">{annualizedROI.toFixed(1)}%</p>
+
+        <div className="bg-slate-900 text-white p-8 rounded-[2.5rem] shadow-2xl flex flex-col justify-center relative overflow-hidden">
+          <div className="absolute left-0 bottom-0 w-full h-32 bg-gradient-to-t from-black/50 to-transparent"></div>
+
+          <div className="relative z-10 text-center mb-8">
+            <p className="text-slate-400 uppercase text-[10px] font-black tracking-widest mb-2">Total Net Profit</p>
+            <h4 className="text-5xl font-black text-emerald-400">₨ {Math.round(totalProfit).toLocaleString()}</h4>
+            <div className="inline-flex gap-4 mt-2">
+              <span className="text-xs text-slate-400">Yield: <b className="text-white">{rentalYield.toFixed(1)}%</b></span>
+              <span className="text-xs text-slate-400">CAGR: <b className="text-white">{annualizedROI.toFixed(1)}%</b></span>
             </div>
-            <div className="text-center">
-              <p className="text-slate-500 text-[10px] font-black uppercase">Rental Yield</p>
-              <p className="text-2xl font-black text-blue-400">{((monthlyRent * 12 / purchasePrice) * 100).toFixed(1)}%</p>
+          </div>
+
+          <div className="relative z-10 space-y-3 bg-white/5 p-6 rounded-3xl border border-white/10">
+            <div className="flex justify-between text-sm">
+              <span className="text-slate-400">Capital Gain (Net)</span>
+              <span className="font-bold">Rs. {Math.round(capitalGain).toLocaleString()}</span>
+            </div>
+            <div className="flex justify-between text-sm">
+              <span className="text-slate-400">Rental Income (Net)</span>
+              <span className="font-bold">Rs. {Math.round(netRent).toLocaleString()}</span>
+            </div>
+            <div className="flex justify-between text-sm pt-3 border-t border-white/10">
+              <span className="text-rose-300 text-xs">Total Buying Costs</span>
+              <span className="text-rose-300 text-xs">- Rs. {Math.round(buyCosts).toLocaleString()}</span>
             </div>
           </div>
         </div>
-      </div>
-      <div className="p-10 bg-white rounded-[3rem] border border-slate-100 shadow-sm space-y-6">
-        <h4 className="text-2xl font-bold">Property Investment in Pakistan</h4>
-        <p className="text-sm text-slate-500 leading-relaxed">
-          Pakistan's real estate market offers two ways to earn: <strong>Capital Appreciation</strong> (increase in property value) and <strong>Rental Yield</strong>. In 2026, FBR Gain Tax applies on properties held for less than 6 years. Use this tool to see if your property investment is beating inflation (historically 12-15% in Pakistan).
-        </p>
       </div>
       <RealEstateBlogContent />
       <RelatedTools toolIds={['loan-emi', 'zakat', 'investment-return']} />
@@ -462,13 +721,18 @@ export const PFTool = () => {
   const monthlyEmployerPF = basicSalary * (employerContribution / 100);
   const totalMonthlyContribution = monthlyEmpPF + monthlyEmployerPF;
 
-  // Simple compound interest calculation for PF balance estimation
-  // This helps users estimate future value, though real PF is more complex
-  let balance = 0;
+  // Detailed loop to track principal vs interest
+  let totalBalance = 0;
+  let totalPrincipal = 0;
+
   const yearlyContribution = totalMonthlyContribution * 12;
+
   for (let i = 0; i < years; i++) {
-    balance = (balance + yearlyContribution) * (1 + interestRate / 100);
+    totalPrincipal += yearlyContribution;
+    totalBalance = (totalBalance + yearlyContribution) * (1 + interestRate / 100);
   }
+
+  const totalInterest = totalBalance - totalPrincipal;
 
   return (
     <div className="space-y-12">
@@ -476,48 +740,58 @@ export const PFTool = () => {
         <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
           <h3 className="text-2xl font-bold">PF Configuration</h3>
           <div>
-            <label className="text-xs font-bold text-slate-500">Monthly Basic Salary (PKR)</label>
-            <input type="number" value={basicSalary} onChange={e => setBasicSalary(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            <label className="text-xs font-bold text-slate-500 uppercase">Monthly Basic Salary (PKR)</label>
+            <input type="number" value={basicSalary} onChange={e => setBasicSalary(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-xl" />
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="text-xs font-bold text-slate-500">Your Contribution %</label>
+              <label className="text-xs font-bold text-slate-500 uppercase">Your Share %</label>
               <input type="number" value={empContribution} onChange={e => setEmpContribution(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
             </div>
             <div>
-              <label className="text-xs font-bold text-slate-500">Employer Contribution %</label>
+              <label className="text-xs font-bold text-slate-500 uppercase">Employer Share %</label>
               <input type="number" value={employerContribution} onChange={e => setEmployerContribution(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="text-xs font-bold text-slate-500">Interest Rate %</label>
+              <label className="text-xs font-bold text-slate-500 uppercase">Return Rate %</label>
               <input type="number" value={interestRate} onChange={e => setInterestRate(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
             </div>
             <div>
-              <label className="text-xs font-bold text-slate-500">Duration (Years)</label>
+              <label className="text-xs font-bold text-slate-500 uppercase">Years</label>
               <input type="number" value={years} onChange={e => setYears(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
             </div>
           </div>
         </div>
 
-        <div className="bg-slate-900 text-white p-12 rounded-[2.5rem] shadow-2xl flex flex-col justify-center space-y-8">
-          <div className="text-center">
-            <p className="text-slate-400 text-[10px] font-black tracking-widest uppercase mb-2">Estimated Total Corpus</p>
-            <h4 className="text-5xl font-black text-emerald-400">₨ {Math.round(balance).toLocaleString()}</h4>
+        <div className="bg-blue-900 text-white p-8 rounded-[2.5rem] shadow-2xl flex flex-col justify-center relative overflow-hidden">
+          <div className="absolute right-0 top-0 w-64 h-64 bg-blue-500 rounded-full blur-[100px] opacity-30 -mr-32 -mt-32"></div>
+
+          <div className="text-center mb-8 relative z-10">
+            <p className="text-blue-200 uppercase text-xs font-black tracking-widest mb-2">Projected Maturity Amount</p>
+            <h4 className="text-5xl font-black text-emerald-400">Rs. {Math.round(totalBalance).toLocaleString()}</h4>
+            <p className="text-[10px] text-blue-300 mt-2">After {years} years of compounding</p>
           </div>
-          <div className="space-y-4 pt-8 border-t border-white/10">
+
+          <div className="space-y-4 pt-8 border-t border-white/10 relative z-10">
             <div className="flex justify-between items-center text-sm">
-              <span className="text-slate-400">Monthly PF Deduction:</span>
-              <span className="font-bold">₨ {Math.round(monthlyEmpPF).toLocaleString()}</span>
+              <span className="text-blue-200">Total Contributed (Principal)</span>
+              <span className="font-bold">Rs. {Math.round(totalPrincipal).toLocaleString()}</span>
             </div>
             <div className="flex justify-between items-center text-sm">
-              <span className="text-slate-400">Employer Monthly Share:</span>
-              <span className="font-bold">₨ {Math.round(monthlyEmployerPF).toLocaleString()}</span>
+              <span className="text-blue-200">Total Interest Earned</span>
+              <span className="font-bold text-emerald-400">+ Rs. {Math.round(totalInterest).toLocaleString()}</span>
             </div>
-            <div className="flex justify-between items-center text-sm">
-              <span className="text-slate-400">Total Monthly Savings:</span>
-              <span className="font-bold text-emerald-400">₨ {Math.round(totalMonthlyContribution).toLocaleString()}</span>
+
+            {/* Simple Bar Visualization */}
+            <div className="w-full h-3 bg-blue-950 rounded-full mt-4 flex overflow-hidden">
+              <div className="h-full bg-blue-400" style={{ width: `${(totalPrincipal / totalBalance) * 100}%` }}></div>
+              <div className="h-full bg-emerald-400" style={{ width: `${(totalInterest / totalBalance) * 100}%` }}></div>
+            </div>
+            <div className="flex justify-between text-[10px] text-blue-300">
+              <span>P: {Math.round((totalPrincipal / totalBalance) * 100)}%</span>
+              <span>I: {Math.round((totalInterest / totalBalance) * 100)}%</span>
             </div>
           </div>
         </div>
@@ -529,36 +803,68 @@ export const PFTool = () => {
 };
 
 export const GratuityTool = () => {
-  const [basicSalary, setBasicSalary] = useState(50000);
+  const [basicSalary, setBasicSalary] = useState(50000); // Last Drawn GROSS Salary technically
   const [years, setYears] = useState(5);
 
-  // Rule: (Basic Salary * Years * 30) / 26
-  // This is a common formula in Pakistan (1 month gross wages for 26 working days per year)
+  // Rule: (Last Drawn Gross Wages * Years * 30) / 26
+  // Note: Some companies use Basic, but Law says "Wages" which is Gross. We will label it carefully.
   const gratuity = (basicSalary * years * 30) / 26;
+
+  // Tax Exemptions
+  const approvedExemption = Math.min(gratuity, 300000);
+  const unapprovedExemption = Math.min(gratuity, 75000); // Simplification of "Lower of 75k or 50%"
 
   return (
     <div className="space-y-12">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
           <h3 className="text-2xl font-bold">Service Details</h3>
+
+          <div className="p-4 bg-indigo-50 border border-indigo-100 rounded-2xl flex gap-3">
+            <span className="text-2xl">💡</span>
+            <p className="text-xs text-indigo-800 leading-relaxed">
+              <strong>Tip:</strong> According to Pakistan Labor Laws, Gratuity is usually calculated on your <strong>Last Drawn GROSS Salary</strong> (including COLA), not just Basic Salary.
+            </p>
+          </div>
+
           <div>
-            <label className="text-xs font-bold text-slate-500">Last Drawn Basic Salary / Gross Wage</label>
-            <input type="number" value={basicSalary} onChange={e => setBasicSalary(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
-            <p className="text-[10px] text-slate-400 mt-2 ml-2">As per labor laws, this should include applicable allowances.</p>
+            <label className="text-xs font-bold text-slate-500 uppercase">Last Monthly Gross Salary</label>
+            <input
+              type="number"
+              value={basicSalary}
+              onChange={e => setBasicSalary(Number(e.target.value))}
+              className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-xl"
+            />
           </div>
           <div>
-            <label className="text-xs font-bold text-slate-500">Total Years of Service</label>
-            <input type="number" value={years} onChange={e => setYears(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            <label className="text-xs font-bold text-slate-500 uppercase">Total Completed Years</label>
+            <input
+              type="number"
+              value={years}
+              onChange={e => setYears(Number(e.target.value))}
+              className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-xl"
+            />
+            <p className="text-[10px] text-slate-400 mt-2 ml-1">Note: Service of more than 6 months in the last year is counted as a full year.</p>
           </div>
         </div>
 
-        <div className="bg-emerald-700 text-white p-12 rounded-[2.5rem] shadow-2xl flex flex-col justify-center text-center relative overflow-hidden">
-          <div className="absolute left-0 top-0 w-64 h-64 bg-emerald-500 rounded-full blur-[120px] opacity-30 -ml-20 -mt-20"></div>
-          <div className="relative z-10">
-            <p className="text-emerald-200 uppercase text-xs font-black tracking-widest mb-4">Estimated End-of-Service Benefit</p>
-            <h4 className="text-5xl font-black">₨ {Math.round(gratuity).toLocaleString()}</h4>
-            <div className="mt-8 pt-8 border-t border-emerald-600/50">
-              <p className="text-sm text-emerald-100">Formula Used: <br /><span className="font-mono bg-emerald-800/50 px-2 py-1 rounded text-xs mt-1 inline-block">(Last Salary × 30 / 26) × Years</span></p>
+        <div className="bg-indigo-700 text-white p-8 rounded-[2.5rem] shadow-2xl flex flex-col justify-center relative overflow-hidden">
+          <div className="absolute left-0 top-0 w-64 h-64 bg-indigo-500 rounded-full blur-[120px] opacity-50 -ml-20 -mt-20"></div>
+
+          <div className="relative z-10 text-center">
+            <p className="text-indigo-200 uppercase text-xs font-black tracking-widest mb-4">Total Gratuity Payable</p>
+            <h4 className="text-5xl font-black mb-2">Rs. {Math.round(gratuity).toLocaleString()}</h4>
+
+            <div className="mt-8 pt-8 border-t border-indigo-500/50 text-left space-y-3">
+              <p className="text-xs font-black text-indigo-300 uppercase tracking-widest mb-2">Tax Exemption Limits</p>
+              <div className="flex justify-between text-sm">
+                <span className="opacity-80">If Approved Fund:</span>
+                <span className="font-bold">Up to Rs. 300k Exempt</span>
+              </div>
+              <div className="flex justify-between text-sm">
+                <span className="opacity-80">If Unapproved:</span>
+                <span className="font-bold">Up to Rs. 75k Exempt</span>
+              </div>
             </div>
           </div>
         </div>
@@ -570,14 +876,100 @@ export const GratuityTool = () => {
 };
 
 export const FreelancerTool = () => {
-  const [income, setIncome] = useState(1000);
-  const tax = income * 0.01; // 1% export tax for filer
+  const [income, setIncome] = useState(1000); // Monthly Income
+  const [currency, setCurrency] = useState<'PKR' | 'USD'>('USD');
+  const [exchangeRate, setExchangeRate] = useState(278); // Default est.
+  const [isPSEB, setIsPSEB] = useState(true); // PSEB Registered?
+  const [bankFee, setBankFee] = useState(0); // Optional fixed fee
+
+  const grossPKR = currency === 'USD' ? income * exchangeRate : income;
+  const taxRate = isPSEB ? 0.0025 : 0.01; // 0.25% vs 1%
+  const taxAmount = grossPKR * taxRate;
+  const netIncome = grossPKR - taxAmount - bankFee;
+  const annualNet = netIncome * 12;
 
   return (
-    <div className="bg-white p-8 rounded-[2.5rem] shadow-xl">
-      <h3 className="text-2xl font-bold mb-6">Freelancer Income</h3>
-      <input type="number" value={income} onChange={e => setIncome(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl mb-4" />
-      <p className="text-xl font-bold">Estimated Withholding Tax (1%): Rs. {Math.round(tax).toLocaleString()}</p>
+    <div className="space-y-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Input Section */}
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+          <h3 className="text-2xl font-bold">Freelancer Income</h3>
+
+          <div className="space-y-4">
+            <div>
+              <label className="text-xs font-bold text-slate-500 uppercase">Monthly Income</label>
+              <div className="flex gap-4">
+                <div className="relative w-full">
+                  <input
+                    type="number"
+                    value={income}
+                    onChange={e => setIncome(Number(e.target.value))}
+                    className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-lg"
+                  />
+                  <div className="absolute right-2 top-2 p-2 bg-slate-200 rounded-xl text-xs font-bold">{currency}</div>
+                </div>
+                <select
+                  value={currency}
+                  onChange={e => setCurrency(e.target.value as 'PKR' | 'USD')}
+                  className="p-4 bg-slate-100 border rounded-2xl font-bold"
+                >
+                  <option value="PKR">PKR</option>
+                  <option value="USD">USD</option>
+                </select>
+              </div>
+            </div>
+
+            {currency === 'USD' && (
+              <div>
+                <label className="text-xs font-bold text-slate-500 uppercase">Exchange Rate (1 USD = ? PKR)</label>
+                <input
+                  type="number"
+                  value={exchangeRate}
+                  onChange={e => setExchangeRate(Number(e.target.value))}
+                  className="w-full p-4 bg-slate-50 border rounded-2xl"
+                />
+              </div>
+            )}
+
+            <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100 flex items-center justify-between">
+              <div>
+                <label className="text-sm font-bold text-slate-900 block">PSEB Registered?</label>
+                <p className="text-[10px] text-slate-500"> Reduces Tax from 1% to 0.25%</p>
+              </div>
+              <label className="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" checked={isPSEB} onChange={e => setIsPSEB(e.target.checked)} className="sr-only peer" />
+                <div className="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        {/* Result Section */}
+        <div className="bg-indigo-900 text-white p-8 rounded-[2.5rem] shadow-xl flex flex-col justify-center relative overflow-hidden">
+          <div className="absolute right-0 top-0 w-64 h-64 bg-indigo-500 rounded-full blur-[100px] opacity-30 -mr-32 -mt-32"></div>
+
+          <p className="text-indigo-200 uppercase text-xs font-black mb-2 tracking-widest">Estimated Net Monthly Income</p>
+          <h4 className="text-5xl font-black mb-1">Rs. {Math.round(netIncome).toLocaleString()}</h4>
+          <p className="text-xs text-indigo-300 mb-8 opacity-80 pl-1">
+            {currency === 'USD' ? `($${income.toLocaleString()} USD)` : ''}
+          </p>
+
+          <div className="space-y-3 border-t border-white/10 pt-6">
+            <div className="flex justify-between text-sm">
+              <span className="text-indigo-200">Gross Amount (PKR)</span>
+              <span className="font-bold">Rs. {Math.round(grossPKR).toLocaleString()}</span>
+            </div>
+            <div className="flex justify-between text-sm">
+              <span className="text-indigo-200">Tax Deduction ({isPSEB ? '0.25%' : '1.0%'})</span>
+              <span className="font-bold text-rose-300">- Rs. {Math.round(taxAmount).toLocaleString()}</span>
+            </div>
+            <div className="flex justify-between text-sm pt-4 mt-2 border-t border-white/5">
+              <span className="text-indigo-200 uppercase font-black text-[10px] tracking-widest">Yearly Net Projected</span>
+              <span className="font-bold text-emerald-300">Rs. {Math.round(annualNet).toLocaleString()}</span>
+            </div>
+          </div>
+        </div>
+      </div>
       <FreelancerBlogContent />
       <RelatedTools toolIds={['profit-margin', 'income-tax', 'investment-return']} />
     </div>
@@ -585,16 +977,133 @@ export const FreelancerTool = () => {
 };
 
 export const UnitConverterTool = () => {
+  const [activeTab, setActiveTab] = useState<'area' | 'weight'>('area');
+
+  // Area State
   const [marla, setMarla] = useState(1);
-  const sqft = marla * 272.25;
+  const [marlaType, setMarlaType] = useState<225 | 272.25>(225);
+
+  // Weight State
+  const [tola, setTola] = useState(1);
+  const TOLA_TO_GRAM = 11.664;
+
+  // Conversions
+  const totalSqFt = marla * marlaType;
+  const totalSqYards = totalSqFt / 9;
+  const totalKanal = marla / 20;
+
+  const totalGrams = tola * TOLA_TO_GRAM;
+  const totalMasha = tola * 12;
 
   return (
-    <div className="bg-white p-8 rounded-[2.5rem] shadow-xl">
-      <h3 className="text-2xl font-bold mb-6">Unit Converter</h3>
-      <input type="number" value={marla} onChange={e => setMarla(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl mb-4" />
-      <p className="text-xl font-bold">{marla} Marla = {sqft.toLocaleString()} Sq. Ft.</p>
+    <div className="space-y-12">
+      {/* Tabs */}
+      <div className="flex justify-center mb-8">
+        <div className="bg-white p-1 rounded-full border border-slate-100 shadow-sm inline-flex">
+          <button
+            onClick={() => setActiveTab('area')}
+            className={`px-8 py-3 rounded-full text-sm font-bold transition-all ${activeTab === 'area' ? 'bg-slate-900 text-white shadow-lg' : 'text-slate-500 hover:bg-slate-50'}`}
+          >
+            Hasba/Land Area
+          </button>
+          <button
+            onClick={() => setActiveTab('weight')}
+            className={`px-8 py-3 rounded-full text-sm font-bold transition-all ${activeTab === 'weight' ? 'bg-amber-500 text-white shadow-lg' : 'text-slate-500 hover:bg-slate-50'}`}
+          >
+            Gold Weight
+          </button>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+        {activeTab === 'area' ? (
+          <>
+            <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+              <h3 className="text-2xl font-bold">Land Measurement</h3>
+              <div>
+                <label className="text-xs font-bold text-slate-500 uppercase">Input Marla</label>
+                <input
+                  type="number"
+                  value={marla}
+                  onChange={e => setMarla(Number(e.target.value))}
+                  className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-xl"
+                />
+              </div>
+              <div>
+                <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Marla Standard</label>
+                <div className="grid grid-cols-2 gap-4">
+                  <button
+                    onClick={() => setMarlaType(225)}
+                    className={`p-4 rounded-2xl border text-sm font-bold transition-all ${marlaType === 225 ? 'bg-slate-900 text-white border-slate-900' : 'bg-white border-slate-200 text-slate-500'}`}
+                  >
+                    225 Sq.Ft <br /><span className="text-[10px] font-normal opacity-70">(DHA/Bahria)</span>
+                  </button>
+                  <button
+                    onClick={() => setMarlaType(272.25)}
+                    className={`p-4 rounded-2xl border text-sm font-bold transition-all ${marlaType === 272.25 ? 'bg-slate-900 text-white border-slate-900' : 'bg-white border-slate-200 text-slate-500'}`}
+                  >
+                    272.25 Sq.Ft <br /><span className="text-[10px] font-normal opacity-70">(Revenue/Village)</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-slate-900 text-white p-8 rounded-[2.5rem] shadow-xl flex flex-col justify-center">
+              <p className="text-slate-400 uppercase text-xs font-black mb-6 tracking-widest">Converted Area</p>
+
+              <div className="space-y-6">
+                <div className="flex justify-between items-center border-b border-white/10 pb-4">
+                  <span className="text-3xl font-black">{totalSqFt.toLocaleString()}</span>
+                  <span className="text-xs text-slate-400 uppercase font-bold">Square Feet</span>
+                </div>
+                <div className="flex justify-between items-center border-b border-white/10 pb-4">
+                  <span className="text-3xl font-black">{Math.round(totalSqYards).toLocaleString()}</span>
+                  <span className="text-xs text-slate-400 uppercase font-bold">Square Yards (Gaz)</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-3xl font-black text-emerald-400">{totalKanal.toFixed(2)}</span>
+                  <span className="text-xs text-slate-400 uppercase font-bold">Kanal</span>
+                </div>
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+              <h3 className="text-2xl font-bold text-amber-900">Gold Weight</h3>
+              <div>
+                <label className="text-xs font-bold text-slate-500 uppercase">Input Tola</label>
+                <input
+                  type="number"
+                  value={tola}
+                  onChange={e => setTola(Number(e.target.value))}
+                  className="w-full p-4 bg-amber-50 border border-amber-100 rounded-2xl font-bold text-xl text-amber-900 focus:ring-amber-500"
+                />
+              </div>
+              <p className="text-sm text-slate-500">
+                1 Tola = 11.664 Grams (Standard Pakistani Gold Rate Unit)
+              </p>
+            </div>
+
+            <div className="bg-amber-500 text-white p-8 rounded-[2.5rem] shadow-xl flex flex-col justify-center relative overflow-hidden">
+              <div className="absolute right-0 top-0 w-64 h-64 bg-amber-400 rounded-full blur-[80px] opacity-50 -mr-20 -mt-20"></div>
+
+              <div className="relative z-10 space-y-6">
+                <div className="flex justify-between items-center border-b border-amber-400/30 pb-4">
+                  <span className="text-4xl font-black">{totalGrams.toFixed(3)}</span>
+                  <span className="text-xs text-amber-100 uppercase font-bold">Grams</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-4xl font-black">{totalMasha.toFixed(2)}</span>
+                  <span className="text-xs text-amber-100 uppercase font-bold">Masha</span>
+                </div>
+              </div>
+            </div>
+          </>
+        )}
+      </div>
       <UnitConverterBlogContent />
-      <RelatedTools toolIds={['real-estate-roi', 'zakat']} />
+      <RelatedTools toolIds={['real-estate-roi', 'zakat', 'profit-margin']} />
     </div>
   );
 };
