@@ -19,52 +19,52 @@ import { CALCULATORS } from './constants';
 // SEO metadata for each tool
 const TOOL_SEO_META: Record<string, { title: string; description: string }> = {
   'income-tax': {
-    title: 'Income Tax Calculator Pakistan 2026 | FBR Tax Slabs Tool',
-    description: 'Estimate your income tax in Pakistan for 2026 using updated FBR tax slabs. Fast, free, and accurate tax calculation.'
+    title: 'Income Tax Calculator Pakistan 2026 – Calculate Tax in Seconds',
+    description: 'Use our free income tax calculator to estimate your tax in seconds. Updated for Pakistan 2026 rates. Simple, accurate, and easy to use.'
   },
   'zakat': {
-    title: 'Zakat Calculator Pakistan 2026 | Accurate Zakat Calculation',
-    description: 'Calculate your Zakat in Pakistan for 2026 using our free and accurate Zakat calculator based on current Nisab rates.'
+    title: 'Zakat Calculator – Calculate Your Zakat Instantly',
+    description: 'Calculate your Zakat easily with our free online Zakat calculator. Add your assets and get accurate Zakat results in seconds.'
   },
   'freelancer-tax': {
-    title: 'Freelancer Tax Calculator Pakistan 2026 | Net Income Tool',
-    description: 'Calculate freelancer tax and net income in Pakistan after bank charges and FBR export tax. Simple and accurate online tool.'
+    title: 'Freelancer Income Calculator – Estimate Your Earnings',
+    description: 'Calculate your freelance income, taxes, and net profit instantly. Perfect for freelancers, remote workers, and online earners.'
   },
   'investment-return': {
-    title: 'Investment Calculator Pakistan | Returns & Profit Estimator',
-    description: 'Calculate your investment returns in Pakistan with our free investment calculator. Estimate profits, growth, and future value easily.'
+    title: 'Investment Return Calculator – Estimate Your Profit',
+    description: 'Calculate your investment returns easily. Enter your amount, rate, and time to see projected profits instantly.'
   },
   'retirement-plan': {
-    title: 'Retirement Calculator Pakistan 2026 | Savings & Pension Planner',
-    description: 'Plan your retirement savings in Pakistan for 2026 with our free retirement calculator. Estimate future funds and pension needs easily.'
+    title: 'Retirement Planner – Calculate Your Future Savings',
+    description: 'Plan your retirement with our free retirement calculator. Estimate future savings and monthly income in seconds.'
   },
   'real-estate-roi': {
-    title: 'Property ROI Calculator Pakistan | Real Estate Returns',
-    description: 'Calculate property ROI, rental yield, and FBR taxes with our Real Estate Calculator Pakistan. Ideal for investors and buyers.'
+    title: 'Real Estate ROI Calculator – Property Return Tool',
+    description: 'Calculate real estate return on investment instantly. Analyze rental income, costs, and profit with this free ROI calculator.'
   },
   'provident-fund': {
-    title: 'Provident Fund Calculator Pakistan 2026 | PF Deduction & Percentage',
-    description: 'Calculate your Provident Fund deduction and PF percentage in Pakistan for 2026. Free online PF calculator with accurate salary-based results.'
+    title: 'Provident Fund Calculator – PF Savings Estimator',
+    description: 'Estimate your provident fund savings and future balance with our free PF calculator. Fast, accurate, and simple.'
   },
   'gratuity': {
-    title: 'Gratuity Calculator Pakistan 2026 | End of Service Benefit Tool',
-    description: 'Use our free gratuity calculator for Pakistan 2026 to estimate your end-of-service benefits based on salary and years of service.'
+    title: 'Gratuity Calculator – Calculate Employee Gratuity',
+    description: 'Use this free gratuity calculator to estimate employee gratuity based on salary and years of service.'
   },
   'loan-emi': {
-    title: 'Loan EMI Calculator Pakistan | Monthly Installment Tool',
-    description: 'Calculate your monthly loan EMI in Pakistan with our free online calculator. Get instant installment amounts and repayment details.'
+    title: 'Loan EMI Calculator – Monthly Payment Estimator',
+    description: 'Calculate your loan EMI instantly. Enter loan amount, interest rate, and tenure to see monthly payments.'
   },
   'profit-margin': {
-    title: 'Profit Margin Calculator | Business Profit Tool',
-    description: 'Find your business profit and margin percentage instantly with our free Profit Margin Calculator. Simple and accurate.'
+    title: 'Profit Margin Calculator – Calculate Business Profit',
+    description: 'Find your business profit margin in seconds. Enter cost and selling price to calculate profit and margin instantly.'
   },
   'unit-converter': {
-    title: 'Unit Converter Pakistan | Marla, Tola & More',
-    description: 'Convert marla to square feet, tola to grams, and more with our free Unit Converter Pakistan. Fast and accurate conversions.'
+    title: 'Free Unit Converter – Convert Length, Weight & More',
+    description: 'Convert units instantly with our free online converter. Supports length, weight, temperature, and more.'
   },
   'bmi': {
-    title: 'BMI Calculator | Body Mass Index Checker',
-    description: 'Check your Body Mass Index with our free BMI Calculator. Know your health category and ideal weight instantly.'
+    title: 'BMI Calculator – Check Your Body Mass Index',
+    description: 'Calculate your BMI instantly. Enter your height and weight to check your body mass index and health category.'
   }
 };
 
