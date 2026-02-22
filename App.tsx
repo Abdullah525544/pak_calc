@@ -11,7 +11,8 @@ import { Breadcrumbs } from './components/Breadcrumbs';
 import {
   IncomeTaxTool, ZakatTool, EMITool, ProfitMarginTool, BMICalcTool,
   InvestmentReturnTool, RetirementTool, PFTool, GratuityTool,
-  FreelancerTool, UnitConverterTool, RealEstateROITool
+  FreelancerTool, UnitConverterTool, RealEstateROITool,
+  CGPACalculatorTool, GradeCalculatorTool, MarkPercentageTool
 } from './components/Tools';
 import { FBRSlabsPage, ZakatInfoPage, ContactPage, PrivacyPage, TermsPage, DisclaimerPage } from './components/InfoPages';
 import { CALCULATORS } from './constants';
@@ -19,8 +20,8 @@ import { CALCULATORS } from './constants';
 // SEO metadata for each tool
 const TOOL_SEO_META: Record<string, { title: string; description: string }> = {
   'income-tax': {
-    title: 'Income Tax Calculator Pakistan 2026 – Calculate Tax in Seconds',
-    description: 'Use our free income tax calculator to estimate your tax in seconds. Updated for Pakistan 2026 rates. Simple, accurate, and easy to use.'
+    title: 'Income Tax Calculator 2026 Pakistan: Don\'t Pay Extra! (New FBR Slabs)',
+    description: 'Calculate your FBR tax for 2026 in seconds. Accurate, updated with new slabs, and easy to use. Save time and money with PakCalc.'
   },
   'zakat': {
     title: 'Zakat Calculator – Calculate Your Zakat Instantly',
@@ -65,6 +66,18 @@ const TOOL_SEO_META: Record<string, { title: string; description: string }> = {
   'bmi': {
     title: 'BMI Calculator – Check Your Body Mass Index',
     description: 'Calculate your BMI instantly. Enter your height and weight to check your body mass index and health category.'
+  },
+  'cgpa-calc': {
+    title: 'CGPA Calculator Pakistan 2026 – SGPA to CGPA & % Converter',
+    description: 'Calculate your Semester GPA (SGPA) and Cumulative GPA (CGPA) easily. Supports CBSE 9.5 multiplier and HEC standards. 100% free and accurate.'
+  },
+  'grade-calc': {
+    title: 'Grade Calculator – Calculate Final Grades & Weighted Averages',
+    description: 'Find your academic grade based on marks obtained or percentage. Precision-weighted grade calculator for Matric, Inter, and University students.'
+  },
+  'mark-percentage': {
+    title: 'Mark Percentage Calculator 2026 – Score to % Finder (Accurate)',
+    description: 'Convert your marks into percentage instantly. Ideal for students in Pakistan calculating matric, inter, or university merit scores for 2026.'
   }
 };
 
@@ -226,6 +239,30 @@ const App: React.FC = () => {
           <ToolWrapper
             id="unit-converter"
             component={<UnitConverterTool />}
+            isUrdu={isUrdu}
+            handleNavigate={handleNavigate}
+          />
+        } />
+        <Route path="/cgpa-calc" element={
+          <ToolWrapper
+            id="cgpa-calc"
+            component={<CGPACalculatorTool />}
+            isUrdu={isUrdu}
+            handleNavigate={handleNavigate}
+          />
+        } />
+        <Route path="/grade-calc" element={
+          <ToolWrapper
+            id="grade-calc"
+            component={<GradeCalculatorTool />}
+            isUrdu={isUrdu}
+            handleNavigate={handleNavigate}
+          />
+        } />
+        <Route path="/mark-percentage" element={
+          <ToolWrapper
+            id="mark-percentage"
+            component={<MarkPercentageTool />}
             isUrdu={isUrdu}
             handleNavigate={handleNavigate}
           />

@@ -2,49 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pakcalc.site/</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://pakcalc.site/all-tools</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pakcalc.site/slabs</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pakcalc.site/zakat-info</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pakcalc.site/contact</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pakcalc.site/privacy</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-02-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://pakcalc.site/terms</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-02-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://pakcalc.site/disclaimer</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-02-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -62,4 +62,7 @@
   <url><loc>https://pakcalc.site/gratuity</loc><priority>0.7</priority></url>
   <url><loc>https://pakcalc.site/freelancer-tax</loc><priority>0.7</priority></url>
   <url><loc>https://pakcalc.site/unit-converter</loc><priority>0.7</priority></url>
+  <url><loc>https://pakcalc.site/cgpa-calc</loc><priority>0.7</priority></url>
+  <url><loc>https://pakcalc.site/grade-calc</loc><priority>0.7</priority></url>
+  <url><loc>https://pakcalc.site/mark-percentage</loc><priority>0.7</priority></url>
 </urlset>

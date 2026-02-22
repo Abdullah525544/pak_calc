@@ -13,7 +13,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({ title, description, canonicalUrl }) =
 
     return (
         <Helmet>
-            <title>{title} | PakCalc</title>
+            <title>{title}</title>
             <meta name="description" content={description} />
             <link rel="canonical" href={fullCanonicalUrl} />
 

@@ -98,6 +98,30 @@ export const CALCULATORS: Calculator[] = [
     description: 'Check your Body Mass Index for health recommendations.',
     category: Category.EVERYDAY,
     icon: '⚖️'
+  },
+  {
+    id: 'cgpa-calc',
+    name: 'CGPA Calculator',
+    nameUrdu: 'سی جی پی اے کیلکولیٹر',
+    description: 'Calculate your Semester and Cumulative GPA easily.',
+    category: Category.EDUCATION,
+    icon: '🎓'
+  },
+  {
+    id: 'grade-calc',
+    name: 'Grade Calculator',
+    nameUrdu: 'گریڈ کیلکولیٹر',
+    description: 'Calculate your academic grade based on marks obtained.',
+    category: Category.EDUCATION,
+    icon: '📝'
+  },
+  {
+    id: 'mark-percentage',
+    name: 'Mark Percentage',
+    nameUrdu: 'مارکس فیصد کیلکولیٹر',
+    description: 'Convert your marks into percentage instantly.',
+    category: Category.EDUCATION,
+    icon: '📊'
   }
 ];
 
