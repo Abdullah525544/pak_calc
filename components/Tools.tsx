@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip, AreaChart, Area, XAxis, YAxis, CartesianGrid } from 'recharts';
 import { SALARIED_TAX_SLABS } from '../constants';
 import { getFinancialAdvice } from '../services/geminiService';
-import { EMIBlogContent, TaxBlogContent, ZakatBlogContent, ProfitMarginBlogContent, BMIBlogContent, InvestmentBlogContent, RetirementBlogContent, RealEstateBlogContent, PFBlogContent, GratuityBlogContent, FreelancerBlogContent, UnitConverterBlogContent } from './InfoPages';
+import { EMIBlogContent, TaxBlogContent, ZakatBlogContent, ProfitMarginBlogContent, BMIBlogContent, InvestmentBlogContent, RetirementBlogContent, RealEstateBlogContent, PFBlogContent, GratuityBlogContent, FreelancerBlogContent, UnitConverterBlogContent, GradeCalculatorBlogContent, CGPACalculatorBlogContent, MarkPercentageBlogContent, IncomeTaxSEOArticle, ZakatSEOArticle, FreelancerSEOArticle, InvestmentSEOArticle, RetirementSEOArticle, RealEstateSEOArticle, PFSEOArticle, GratuitySEOArticle, EMISEOArticle, ProfitMarginSEOArticle, UnitConverterSEOArticle, BMISEOArticle } from './InfoPages';
 import { RelatedTools } from './RelatedTools';
 
 const COLORS = ['#10b981', '#ef4444', '#f59e0b', '#3b82f6', '#8b5cf6', '#ec4899'];
@@ -51,6 +51,7 @@ export const IncomeTaxTool = ({ isUrdu }: { isUrdu: boolean }) => {
         </div>
       </div>
       <TaxBlogContent />
+      <IncomeTaxSEOArticle />
       <RelatedTools toolIds={['zakat', 'investment-return', 'provident-fund', 'freelancer-tax']} />
     </div>
   );
@@ -129,6 +130,7 @@ export const ZakatTool = () => {
         </div>
       </div>
       <ZakatBlogContent />
+      <ZakatSEOArticle />
       <RelatedTools toolIds={['income-tax', 'investment-return', 'real-estate-roi']} />
     </div>
   );
@@ -188,6 +190,7 @@ export const EMITool = () => {
         </div>
       </div>
       <EMIBlogContent />
+      <EMISEOArticle />
       <RelatedTools toolIds={['real-estate-roi', 'income-tax', 'investment-return']} />
     </div>
   );
@@ -282,6 +285,7 @@ export const ProfitMarginTool = () => {
         </div>
       </div>
       <ProfitMarginBlogContent />
+      <ProfitMarginSEOArticle />
       <RelatedTools toolIds={['freelancer-tax', 'income-tax', 'unit-converter']} />
     </div>
   );
@@ -332,6 +336,7 @@ export const BMICalcTool = () => {
         </div>
       </div>
       <BMIBlogContent />
+      <BMISEOArticle />
       <RelatedTools toolIds={['retirement-plan', 'unit-converter']} />
     </div>
   );
@@ -477,6 +482,7 @@ export const InvestmentReturnTool = () => {
         </div>
       </div>
       <InvestmentBlogContent />
+      <InvestmentSEOArticle />
       <RelatedTools toolIds={['retirement-plan', 'real-estate-roi', 'zakat', 'income-tax']} />
     </div>
   );
@@ -598,6 +604,7 @@ export const RetirementTool = () => {
         </div>
       </div>
       <RetirementBlogContent />
+      <RetirementSEOArticle />
       <RelatedTools toolIds={['investment-return', 'provident-fund', 'gratuity']} />
     </div>
   );
@@ -705,6 +712,7 @@ export const RealEstateROITool = () => {
         </div>
       </div>
       <RealEstateBlogContent />
+      <RealEstateSEOArticle />
       <RelatedTools toolIds={['loan-emi', 'zakat', 'investment-return']} />
     </div>
   );
@@ -797,6 +805,7 @@ export const PFTool = () => {
         </div>
       </div>
       <PFBlogContent />
+      <PFSEOArticle />
       <RelatedTools toolIds={['gratuity', 'retirement-plan', 'income-tax']} />
     </div>
   );
@@ -870,6 +879,7 @@ export const GratuityTool = () => {
         </div>
       </div>
       <GratuityBlogContent />
+      <GratuitySEOArticle />
       <RelatedTools toolIds={['provident-fund', 'retirement-plan', 'income-tax']} />
     </div>
   );
@@ -971,6 +981,7 @@ export const FreelancerTool = () => {
         </div>
       </div>
       <FreelancerBlogContent />
+      <FreelancerSEOArticle />
       <RelatedTools toolIds={['profit-margin', 'income-tax', 'investment-return']} />
     </div>
   );
@@ -1103,7 +1114,188 @@ export const UnitConverterTool = () => {
         )}
       </div>
       <UnitConverterBlogContent />
+      <UnitConverterSEOArticle />
       <RelatedTools toolIds={['real-estate-roi', 'zakat', 'profit-margin']} />
+    </div>
+  );
+};
+
+export const MarkPercentageTool = () => {
+  const [obtained, setObtained] = useState(850);
+  const [total, setTotal] = useState(1100);
+  const percentage = total > 0 ? (obtained / total) * 100 : 0;
+
+  return (
+    <div className="space-y-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+          <h3 className="text-2xl font-bold">Marks Details</h3>
+          <div>
+            <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Obtained Marks</label>
+            <input type="number" value={obtained} onChange={e => setObtained(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-xl" />
+          </div>
+          <div>
+            <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Total Marks</label>
+            <input type="number" value={total} onChange={e => setTotal(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-xl" />
+          </div>
+        </div>
+
+        <div className="bg-emerald-600 text-white p-8 rounded-[2.5rem] shadow-xl flex flex-col justify-center text-center relative overflow-hidden">
+          <div className="absolute right-0 top-0 w-64 h-64 bg-white/10 rounded-full blur-[80px] -mr-32 -mt-32"></div>
+          <p className="text-emerald-100 uppercase text-xs font-black mb-2 tracking-widest">Percentage Score</p>
+          <h4 className="text-7xl font-black mb-4">{percentage.toFixed(2)}%</h4>
+          <div className="w-full bg-black/20 h-3 rounded-full overflow-hidden mb-6">
+            <div className="bg-white h-full transition-all duration-1000" style={{ width: `${Math.min(100, percentage)}%` }}></div>
+          </div>
+          <p className="text-emerald-100 text-sm font-medium">
+            You obtained {obtained} out of {total} marks.
+          </p>
+        </div>
+      </div>
+      <MarkPercentageBlogContent />
+      <RelatedTools toolIds={['grade-calc', 'cgpa-calc', 'unit-converter']} />
+    </div>
+  );
+};
+
+export const GradeCalculatorTool = () => {
+  const [obtained, setObtained] = useState(85);
+  const [total, setTotal] = useState(100);
+  const percentage = total > 0 ? (obtained / total) * 100 : 0;
+
+  let grade = 'F';
+  let color = 'text-rose-500';
+  let status = 'Fail';
+
+  if (percentage >= 80) { grade = 'A+'; color = 'text-emerald-500'; status = 'Exceptional'; }
+  else if (percentage >= 70) { grade = 'A'; color = 'text-emerald-400'; status = 'Excellent'; }
+  else if (percentage >= 60) { grade = 'B'; color = 'text-blue-500'; status = 'Good'; }
+  else if (percentage >= 50) { grade = 'C'; color = 'text-amber-500'; status = 'Average'; }
+  else if (percentage >= 40) { grade = 'D'; color = 'text-orange-500'; status = 'Pass'; }
+
+  return (
+    <div className="space-y-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6 text-slate-800">
+          <h3 className="text-2xl font-bold">Academic Performance</h3>
+          <div>
+            <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Marks Obtained</label>
+            <input type="number" value={obtained} onChange={e => setObtained(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-xl" />
+          </div>
+          <div>
+            <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Total Marks</label>
+            <input type="number" value={total} onChange={e => setTotal(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-xl" />
+          </div>
+        </div>
+
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl border border-slate-100 flex flex-col items-center justify-center text-center relative overflow-hidden">
+          <div className="absolute top-0 w-full h-2 bg-gradient-to-r from-rose-500 via-amber-500 to-emerald-500"></div>
+          <p className="text-slate-400 uppercase text-xs font-black mb-4 tracking-widest">Calculated Grade</p>
+          <h4 className={`text-8xl font-black ${color} mb-2`}>{grade}</h4>
+          <p className={`text-2xl font-bold ${color} mb-6 tracking-tight uppercase`}>{status}</p>
+          <div className="bg-slate-50 px-6 py-3 rounded-2xl border border-slate-100">
+            <p className="text-sm font-bold text-slate-600">Percentage: {percentage.toFixed(2)}%</p>
+          </div>
+        </div>
+      </div>
+      <GradeCalculatorBlogContent />
+      <RelatedTools toolIds={['mark-percentage', 'cgpa-calc', 'unit-converter']} />
+    </div>
+  );
+};
+
+export const CGPACalculatorTool = () => {
+  const [semesters, setSemesters] = useState([{ id: 1, sgpa: 3.5, credits: 18 }]);
+
+  const addSemester = () => {
+    setSemesters([...semesters, { id: Date.now(), sgpa: 0, credits: 0 }]);
+  };
+
+  const removeSemester = (id: number) => {
+    if (semesters.length > 1) {
+      setSemesters(semesters.filter(s => s.id !== id));
+    }
+  };
+
+  const updateSemester = (id: number, field: 'sgpa' | 'credits', value: number) => {
+    setSemesters(semesters.map(s => s.id === id ? { ...s, [field]: value } : s));
+  };
+
+  const totalCredits = semesters.reduce((acc, s) => acc + s.credits, 0);
+  const totalPoints = semesters.reduce((acc, s) => acc + (s.sgpa * s.credits), 0);
+  const cgpa = totalCredits > 0 ? totalPoints / totalCredits : 0;
+
+  return (
+    <div className="space-y-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+          <div className="flex justify-between items-center mb-4">
+            <h3 className="text-2xl font-bold">Semester Details</h3>
+            <button
+              onClick={addSemester}
+              className="px-4 py-2 bg-emerald-600 text-white rounded-xl text-sm font-bold hover:bg-emerald-700 transition-colors shadow-lg"
+            >
+              + Add Semester
+            </button>
+          </div>
+
+          <div className="space-y-4 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
+            {semesters.map((s, index) => (
+              <div key={s.id} className="p-6 bg-slate-50 rounded-[2rem] border border-slate-100 relative animate-in fade-in slide-in-from-right-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="text-[10px] font-black uppercase text-slate-400 mb-1 block">Semester {index + 1} GPA</label>
+                    <input
+                      type="number"
+                      step="0.01"
+                      value={s.sgpa || ''}
+                      onChange={e => updateSemester(s.id, 'sgpa', Number(e.target.value))}
+                      className="w-full p-3 bg-white border rounded-xl font-bold"
+                      placeholder="e.g. 3.5"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-[10px] font-black uppercase text-slate-400 mb-1 block">Credit Hours</label>
+                    <input
+                      type="number"
+                      value={s.credits || ''}
+                      onChange={e => updateSemester(s.id, 'credits', Number(e.target.value))}
+                      className="w-full p-3 bg-white border rounded-xl font-bold"
+                      placeholder="e.g. 18"
+                    />
+                  </div>
+                </div>
+                {semesters.length > 1 && (
+                  <button
+                    onClick={() => removeSemester(s.id)}
+                    className="absolute -top-2 -right-2 w-8 h-8 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center text-lg hover:bg-rose-200 transition-colors shadow-sm"
+                  >
+                    ×
+                  </button>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="bg-slate-900 text-white p-8 rounded-[2.5rem] shadow-2xl flex flex-col justify-center text-center relative overflow-hidden">
+          <div className="absolute left-0 bottom-0 w-full h-32 bg-gradient-to-t from-emerald-500/20 to-transparent"></div>
+          <p className="text-slate-400 uppercase text-xs font-black mb-4 tracking-widest">Cumulative GPA (CGPA)</p>
+          <h4 className="text-8xl font-black text-emerald-400 mb-6 drop-shadow-2xl">{cgpa.toFixed(2)}</h4>
+          <div className="grid grid-cols-2 gap-4 bg-white/5 p-6 rounded-3xl border border-white/10 relative z-10">
+            <div>
+              <p className="text-[10px] text-slate-400 uppercase font-black mb-1">Total Credits</p>
+              <p className="text-2xl font-bold">{totalCredits}</p>
+            </div>
+            <div>
+              <p className="text-[10px] text-slate-400 uppercase font-black mb-1">Total Grade Points</p>
+              <p className="text-2xl font-bold">{totalPoints.toFixed(1)}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <CGPACalculatorBlogContent />
+      <RelatedTools toolIds={['grade-calc', 'mark-percentage', 'retirement-plan']} />
     </div>
   );
 };

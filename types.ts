@@ -3,7 +3,8 @@ export enum Category {
   FINANCIAL = 'Financial Planning',
   PAK_SPECIFIC = 'Pakistan Specific',
   BUSINESS = 'Business Calculators',
-  EVERYDAY = 'Everyday Tools'
+  EVERYDAY = 'Everyday Tools',
+  EDUCATION = 'Education Tools'
 }
 
 export interface Calculator {
