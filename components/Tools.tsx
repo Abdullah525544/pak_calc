@@ -82,7 +82,7 @@ export const ZakatTool = () => {
     <div className="space-y-12">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
-          <h3 className="text-2xl font-bold">Your Assets</h3>
+          <h3 className="text-2xl font-bold">Your Assets for Zakat (Nisab 2026)</h3>
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="text-xs font-bold text-slate-500">Cash in Hand/Bank</label>
@@ -152,7 +152,8 @@ export const EMITool = () => {
     <div className="space-y-12">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-4">
-          <h3 className="text-2xl font-bold">Loan Details</h3>
+          <h3 className="text-2xl font-bold">Loan EMI Calculator Pakistan</h3>
+          <p className="text-xs text-slate-500 mb-4">Calculate your monthly installment for car or bank loans instantly.</p>
           <div>
             <label className="text-xs font-bold text-slate-500">Loan Amount (PKR)</label>
             <input type="number" placeholder="Loan Amount" value={loan} onChange={e => setLoan(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
@@ -746,7 +747,8 @@ export const PFTool = () => {
     <div className="space-y-12">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
-          <h3 className="text-2xl font-bold">PF Configuration</h3>
+          <h3 className="text-2xl font-bold">Provident Fund Calculation in Pakistan</h3>
+          <p className="text-xs text-slate-500 mb-2">Easily find your PF deduction amount and PF percentage in salary.</p>
           <div>
             <label className="text-xs font-bold text-slate-500 uppercase">Monthly Basic Salary (PKR)</label>
             <input type="number" value={basicSalary} onChange={e => setBasicSalary(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-xl" />

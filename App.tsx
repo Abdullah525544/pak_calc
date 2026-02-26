@@ -24,8 +24,8 @@ const TOOL_SEO_META: Record<string, { title: string; description: string }> = {
     description: 'Calculate your FBR tax for 2026 in seconds. Accurate, updated with new slabs, and easy to use. Save time and money with PakCalc.'
   },
   'zakat': {
-    title: 'Zakat Calculator – Calculate Your Zakat Instantly',
-    description: 'Calculate your Zakat easily with our free online Zakat calculator. Add your assets and get accurate Zakat results in seconds.'
+    title: 'Zakat Calculator Pakistan 2026 – Check Zakat Nisab & Amount',
+    description: 'Calculate your Zakat easily with our free online calculator. Check the latest Zakat Nisab for 2026, add your assets, and get accurate results in PKR.'
   },
   'freelancer-tax': {
     title: 'Freelancer Income Calculator – Estimate Your Earnings',
@@ -36,28 +36,28 @@ const TOOL_SEO_META: Record<string, { title: string; description: string }> = {
     description: 'Calculate your investment returns easily. Enter your amount, rate, and time to see projected profits instantly.'
   },
   'retirement-plan': {
-    title: 'Retirement Planner – Calculate Your Future Savings',
-    description: 'Plan your retirement with our free retirement calculator. Estimate future savings and monthly income in seconds.'
+    title: 'Retirement Savings Guide Pakistan 2026 – Free Calculator',
+    description: 'Plan your retirement with our free online calculator. Estimate your savings goal, monthly income, and secure your future in Pakistan.'
   },
   'real-estate-roi': {
     title: 'Real Estate ROI Calculator – Property Return Tool',
     description: 'Calculate real estate return on investment instantly. Analyze rental income, costs, and profit with this free ROI calculator.'
   },
   'provident-fund': {
-    title: 'Provident Fund Calculator – PF Savings Estimator',
-    description: 'Estimate your provident fund savings and future balance with our free PF calculator. Fast, accurate, and simple.'
+    title: 'Provident Fund Calculator Pakistan – How to Calculate PF',
+    description: 'How to calculate Provident Fund in Pakistan? Estimate your PF deduction from salary, interest, and future balance instantly with our free tool.'
   },
   'gratuity': {
-    title: 'Gratuity Calculator – Calculate Employee Gratuity',
-    description: 'Use this free gratuity calculator to estimate employee gratuity based on salary and years of service.'
+    title: 'Gratuity Calculator Pakistan for Private Employees (2026)',
+    description: 'Use our free gratuity calculator for private employees in Pakistan. Quickly calculate end-of-service gratuity amount based on the latest law format.'
   },
   'loan-emi': {
-    title: 'Loan EMI Calculator – Monthly Payment Estimator',
-    description: 'Calculate your loan EMI instantly. Enter loan amount, interest rate, and tenure to see monthly payments.'
+    title: 'Loan EMI Calculator Pakistan – Bank & Car Loan Estimator',
+    description: 'Calculate your loan EMI instantly for banks or car loans. Enter principal amount, interest rate, and tenure for a precise monthly payment plan.'
   },
   'profit-margin': {
-    title: 'Profit Margin Calculator – Calculate Business Profit',
-    description: 'Find your business profit margin in seconds. Enter cost and selling price to calculate profit and margin instantly.'
+    title: 'Profit Margin Calculator – Check Your Business Profit Instantly',
+    description: 'Don\'t guess your profits. Find your exact business profit margin in seconds. Calculate cost, selling price, and markup easily.'
   },
   'unit-converter': {
     title: 'Free Unit Converter – Convert Length, Weight & More',
