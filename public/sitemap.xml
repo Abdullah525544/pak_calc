@@ -2,67 +2,148 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pakcalc.site/</loc>
-    <lastmod>2026-02-22</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://pakcalc.site/all-tools</loc>
-    <lastmod>2026-02-22</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- High-priority tools (most clicks/impressions from GSC) -->
+  <url>
+    <loc>https://pakcalc.site/provident-fund</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pakcalc.site/loan-emi</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pakcalc.site/income-tax</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pakcalc.site/zakat</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pakcalc.site/gratuity</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pakcalc.site/mark-percentage</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Info pages with high impressions -->
   <url>
     <loc>https://pakcalc.site/slabs</loc>
-    <lastmod>2026-02-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pakcalc.site/zakat-info</loc>
-    <lastmod>2026-02-22</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Medium-priority tools -->
+  <url>
+    <loc>https://pakcalc.site/profit-margin</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://pakcalc.site/retirement-plan</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pakcalc.site/unit-converter</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pakcalc.site/investment-return</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pakcalc.site/real-estate-roi</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pakcalc.site/freelancer-tax</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pakcalc.site/bmi</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pakcalc.site/cgpa-calc</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pakcalc.site/grade-calc</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Legal/Info pages -->
+  <url>
     <loc>https://pakcalc.site/contact</loc>
-    <lastmod>2026-02-22</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pakcalc.site/privacy</loc>
-    <lastmod>2026-02-22</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://pakcalc.site/terms</loc>
-    <lastmod>2026-02-22</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://pakcalc.site/disclaimer</loc>
-    <lastmod>2026-02-22</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-
-  <!-- Tools -->
-  <url><loc>https://pakcalc.site/income-tax</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.site/zakat</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.site/loan-emi</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.site/profit-margin</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.site/bmi</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.site/investment-return</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.site/retirement-plan</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.site/real-estate-roi</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.site/provident-fund</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.site/gratuity</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.site/freelancer-tax</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.site/unit-converter</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.site/cgpa-calc</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.site/grade-calc</loc><priority>0.7</priority></url>
-  <url><loc>https://pakcalc.site/mark-percentage</loc><priority>0.7</priority></url>
 </urlset>
