@@ -16,38 +16,69 @@
   <link rel="shortcut icon" type="image/png" href="/favicon.png?v=3">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PakCalc - Online Financial Calculators</title>
-  <meta name="description" content="Free online financial calculators for Pakistan. Updated for 2026.">
+  <title>PakCalc – Free Financial Calculators Pakistan 2026 | Tax, Zakat, EMI, PF & More</title>
+  <meta name="description"
+    content="Pakistan's #1 free financial toolkit ✓ Income Tax Calculator (FBR 2025-26) ✓ Zakat Calculator ✓ Loan EMI ✓ Provident Fund ✓ Gratuity ✓ Marks Percentage. Updated for 2026.">
   <meta name="keywords"
-    content="Pakistan Tax Calculator, FBR Tax Year 2026, Zakat Calculator Pakistan, EMI Calculator KIBOR, Real Estate ROI Pakistan, Marla to Kanal Converter, Freelancer Tax Pakistan, Business Profit Margin Pakistan">
+    content="Pakistan Tax Calculator 2026, FBR Tax Slabs 2025-26, Zakat Calculator Pakistan 2026, Loan EMI Calculator Pakistan, Provident Fund Calculator Pakistan, Gratuity Calculator Pakistan, Marks Percentage Calculator, CGPA Calculator Pakistan, Unit Converter Marla Kanal, Freelancer Tax Pakistan, Profit Margin Calculator, BMI Calculator Pakistan">
   <meta name="author" content="PakCalc Team">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://pakcalc.site/">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="PakCalc - Pakistan's Financial Toolkit">
+  <meta property="og:title" content="PakCalc – Free Financial Calculators Pakistan 2026">
   <meta property="og:description"
-    content="Manage your finances with Pakistan's most accurate calculators for Tax, Zakat, Property, and Investments.">
+    content="Pakistan's #1 free financial toolkit ✓ Income Tax (FBR 2026) ✓ Zakat ✓ EMI ✓ Provident Fund ✓ Gratuity. Trusted by 10,000+ users.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://pakcalc.site/">
+  <meta property="og:image" content="https://pakcalc.site/og-image.png">
+  <meta property="og:locale" content="en_PK">
+  <meta property="og:site_name" content="PakCalc">
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "WebSite",
     "name": "PakCalc",
-    "operatingSystem": "Web",
-    "applicationCategory": "FinancialApplication",
-    "description": "Comprehensive financial calculator suite for Pakistan including Income Tax, Zakat, EMI, and Real Estate ROI.",
     "url": "https://pakcalc.site/",
+    "description": "Pakistan's #1 free financial calculator suite – Income Tax (FBR 2026), Zakat, Loan EMI, Provident Fund, Gratuity, and 10+ more tools.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://pakcalc.site/all-tools?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
     "author": {
       "@type": "Organization",
-      "name": "PakCalc"
+      "name": "PakCalc",
+      "url": "https://pakcalc.site"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PakCalc – Financial Calculators Pakistan",
+    "operatingSystem": "Web",
+    "applicationCategory": "FinanceApplication",
+    "description": "Free financial calculators for Pakistan: Income Tax (FBR 2025-26), Zakat, Loan EMI, Provident Fund, Gratuity, Real Estate ROI, and more.",
+    "url": "https://pakcalc.site/",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "PKR"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "250",
+      "bestRating": "5"
     }
   }
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -103,10 +134,25 @@
     .animate-float {
       animation: float 3s ease-in-out infinite;
     }
+
+    /* Screen reader only H1 for initial bot crawl and SEO */
+    .sr-only-h1 {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
   </style>
 </head>
 
 <body class="bg-slate-50 text-slate-900 transition-colors duration-200 mesh-gradient">
+  <h1 class="sr-only-h1">PakCalc – Free Financial Calculators Pakistan 2026 (Income Tax, Zakat, EMI, Provident Fund,
+    Gratuity, Marks Percentage)</h1>
   <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>

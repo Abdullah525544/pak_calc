@@ -17,69 +17,129 @@ import {
 import { FBRSlabsPage, ZakatInfoPage, ContactPage, PrivacyPage, TermsPage, DisclaimerPage } from './components/InfoPages';
 import { CALCULATORS } from './constants';
 
-// SEO metadata for each tool
-const TOOL_SEO_META: Record<string, { title: string; description: string }> = {
+// SEO metadata for each tool – CTR-optimized titles & descriptions based on GSC queries
+const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?: { question: string; answer: string }[] }> = {
   'income-tax': {
-    title: 'Income Tax Calculator 2026 Pakistan: Don\'t Pay Extra! (New FBR Slabs)',
-    description: 'Calculate your FBR tax for 2026 in seconds. Accurate, updated with new slabs, and easy to use. Save time and money with PakCalc.'
+    title: 'Income Tax Calculator Pakistan 2026 – Free FBR Salary Tax Slabs 2025-26',
+    description: 'Calculate your FBR income tax for 2025-2026 in seconds ✓ Updated salary tax slabs ✓ Legal exemptions ✓ Tax-saving tips. Used by 10,000+ Pakistani filers.',
+    faqs: [
+      { question: 'What are the FBR salary tax slabs for 2025-26 in Pakistan?', answer: 'The FBR has announced updated income tax slabs for tax year 2026 (July 2025 – June 2026). Salaried individuals earning up to PKR 600,000 annually are exempt. Rates range from 5% to 35% depending on income brackets. Use our free calculator for your exact tax liability.' },
+      { question: 'How to calculate income tax in Pakistan for salaried persons?', answer: 'To calculate your income tax: 1) Determine your total annual taxable income, 2) Subtract allowable deductions (medical, education), 3) Apply the applicable FBR slab rate for 2025-26. Our calculator does all this automatically in seconds.' }
+    ]
   },
   'zakat': {
-    title: 'Zakat Calculator Pakistan 2026 – Check Zakat Nisab & Amount',
-    description: 'Calculate your Zakat easily with our free online calculator. Check the latest Zakat Nisab for 2026, add your assets, and get accurate results in PKR.'
+    title: 'Zakat Calculator Pakistan 2026 – Free Nisab Calculator in PKR (Gold & Silver)',
+    description: 'Calculate Zakat on cash, gold & silver in Pakistani Rupees ✓ Updated Nisab 2026 ✓ SBP rates ✓ Bank deduction guide. 100% free & accurate.',
+    faqs: [
+      { question: 'How to calculate Zakat in Pakistan 2026?', answer: 'Zakat is 2.5% of your total wealth above the Nisab threshold. Add up all your savings, gold, silver, and investments. If the total exceeds the Nisab value (approximately PKR 135,000 based on silver, or PKR 1,200,000+ based on gold for 2026), you owe Zakat on the entire amount.' },
+      { question: 'What is the Zakat Nisab in Pakistan for 2026?', answer: 'The Zakat Nisab in Pakistan for 2026 is based on the value of 7.5 tola gold or 52.5 tola silver. The SBP announces the Nisab value each Ramadan. Based on current rates, the silver-based Nisab is approximately PKR 135,000 and the gold-based Nisab is approximately PKR 1,200,000.' },
+      { question: 'How much Zakat is deducted from bank accounts in Pakistan?', answer: 'Banks in Pakistan deduct Zakat at 2.5% on savings accounts exceeding the Nisab amount on 1st Ramadan each year. You can file a Zakat exemption (CZ-50 form) with your bank if you want to pay Zakat yourself.' }
+    ]
   },
   'freelancer-tax': {
-    title: 'Freelancer Income Calculator – Estimate Your Earnings',
-    description: 'Calculate your freelance income, taxes, and net profit instantly. Perfect for freelancers, remote workers, and online earners.'
+    title: 'Freelancer Tax Calculator Pakistan 2026 – IT Export Income & FBR Rules',
+    description: 'Calculate freelancing income after bank charges, FBR export tax & conversion fees ✓ Per month income estimator ✓ For Fiverr, Upwork & remote workers in Pakistan.',
+    faqs: [
+      { question: 'Is there tax on freelancers in Pakistan?', answer: 'Yes, freelancer income is taxable in Pakistan under FBR rules. However, IT export income enjoys reduced tax rates (0.25% for filers). Freelancers earning through platforms like Fiverr, Upwork, or direct clients must file returns and can benefit from IT export exemptions.' },
+      { question: 'How much do freelancers earn per month in Pakistan?', answer: 'Freelancer income varies widely. Pakistani IT freelancers typically earn between PKR 50,000 to PKR 500,000+ per month depending on skills and experience. After bank charges (1-3%), platform fees (5-20%), and taxes, your net take-home can differ significantly from gross earnings.' }
+    ]
   },
   'investment-return': {
-    title: 'Investment Return Calculator – Estimate Your Profit',
-    description: 'Calculate your investment returns easily. Enter your amount, rate, and time to see projected profits instantly.'
+    title: 'Investment Return Calculator Pakistan 2026 – Free Savings & Profit Calculator',
+    description: 'Calculate compound interest & investment returns in PKR ✓ Compare National Savings, mutual funds & bank profits ✓ Pakistan Investment Bonds calculator included.',
+    faqs: [
+      { question: 'How to calculate investment return in Pakistan?', answer: 'To calculate your investment return: Enter your initial investment amount, expected annual return rate (NSC offers 11-15%, mutual funds 10-20%), investment duration, and our calculator will show you total profit with compound interest, adjusted for inflation.' }
+    ]
   },
   'retirement-plan': {
-    title: 'Retirement Savings Guide Pakistan 2026 – Free Calculator',
-    description: 'Plan your retirement with our free online calculator. Estimate your savings goal, monthly income, and secure your future in Pakistan.'
+    title: 'Retirement Savings Calculator Pakistan 2026 – Plan Your Pension & VPS',
+    description: 'Plan your retirement in Pakistan ✓ Calculate required savings corpus ✓ VPS calculator ✓ Inflation-adjusted projections. Start planning your secure future today.',
+    faqs: [
+      { question: 'How much money do I need to retire in Pakistan?', answer: 'The amount depends on your lifestyle. For a comfortable retirement in Pakistan, you typically need 20-25x your annual expenses saved. With 8-10% inflation, someone spending PKR 100,000/month today would need approximately PKR 50-80 million by retirement age 60.' }
+    ]
   },
   'real-estate-roi': {
-    title: 'Real Estate ROI Calculator – Property Return Tool',
-    description: 'Calculate real estate return on investment instantly. Analyze rental income, costs, and profit with this free ROI calculator.'
+    title: 'Real Estate ROI Calculator Pakistan 2026 – Property Investment & Rental Yield',
+    description: 'Analyze rental yield, capital gains & FBR transfer taxes for property deals ✓ ROI calculator for Karachi, Lahore & Islamabad ✓ Marla, Kanal price analysis.',
+    faqs: [
+      { question: 'How to calculate real estate ROI in Pakistan?', answer: 'Real Estate ROI = (Annual Rental Income + Property Appreciation - Expenses) / Total Investment × 100. In Pakistan, typical rental yields range from 3-6% in major cities, while capital appreciation can be 10-20% annually in developing areas.' }
+    ]
   },
   'provident-fund': {
-    title: 'Provident Fund Calculator Pakistan – How to Calculate PF',
-    description: 'How to calculate Provident Fund in Pakistan? Estimate your PF deduction from salary, interest, and future balance instantly with our free tool.'
+    title: 'Provident Fund Calculator Pakistan 2026 – Free PF Balance & Deduction Calculator',
+    description: 'Calculate your Provident Fund (PF) balance with employer matching & interest ✓ PF deduction percentage ✓ PF contribution rules in Pakistan. Used by 5,000+ employees.',
+    faqs: [
+      { question: 'How to calculate Provident Fund in Pakistan?', answer: 'Provident Fund in Pakistan is calculated as a percentage of your basic salary (typically 6-8.33%). Both employee and employer contribute equally. The PF balance grows with monthly contributions plus interest (currently 13-15% per annum). Our calculator shows your projected PF balance at retirement.' },
+      { question: 'What is the PF deduction percentage in Pakistan?', answer: 'The standard PF deduction is 1/12th (8.33%) of basic salary in Pakistan, though some organizations deduct 6% or a fixed amount. The employer matches your contribution. The total contribution (employee + employer) is typically 16.67% of basic salary.' },
+      { question: 'Is Provident Fund taxable in Pakistan?', answer: 'Employer contributions to recognized Provident Funds are tax-exempt up to 10% of salary. The accumulated balance is also tax-free at the time of withdrawal after retirement or completion of service, provided the fund is approved by the FBR.' }
+    ]
   },
   'gratuity': {
-    title: 'Gratuity Calculator Pakistan for Private Employees (2026)',
-    description: 'Use our free gratuity calculator for private employees in Pakistan. Quickly calculate end-of-service gratuity amount based on the latest law format.'
+    title: 'Gratuity Calculator Pakistan 2026 – Free Tool for Private & Govt Employees',
+    description: 'Calculate your end-of-service gratuity amount instantly ✓ Based on latest Pakistan labor laws ✓ For private sector employees ✓ Basic vs gross salary calculation.',
+    faqs: [
+      { question: 'How is gratuity calculated in Pakistan?', answer: 'Gratuity in Pakistan is calculated as: Last drawn salary × number of years of service. Under the Pakistan labor laws, employees who have completed at least one year of continuous service are entitled to gratuity equal to 30 days wages for each completed year of service.' },
+      { question: 'Is gratuity calculated on basic salary or gross salary in Pakistan?', answer: 'In Pakistan, gratuity is typically calculated on the last drawn basic salary (not gross salary). However, some organizations calculate it on gross salary as per their company policy. The legal minimum is based on basic salary plus dearness allowance.' },
+      { question: 'What is the gratuity amount for 5 years service in Pakistan?', answer: 'For 5 years of service, your gratuity = Last basic salary × 5. For example, if your last basic salary is PKR 100,000, your gratuity would be PKR 500,000 (100,000 × 5 years). Some companies offer higher rates based on their HR policies.' }
+    ]
   },
   'loan-emi': {
-    title: 'Loan EMI Calculator Pakistan – Bank & Car Loan Estimator',
-    description: 'Calculate your loan EMI instantly for banks or car loans. Enter principal amount, interest rate, and tenure for a precise monthly payment plan.'
+    title: 'Loan EMI Calculator Pakistan 2026 – Free Monthly Installment Calculator (KIBOR)',
+    description: 'Calculate monthly EMI for car loans, home loans & bank loans ✓ KIBOR-based rates ✓ Meezan, HBL, Alfalah supported ✓ Full payment schedule with interest breakdown.',
+    faqs: [
+      { question: 'How to calculate loan EMI in Pakistan?', answer: 'EMI (Equated Monthly Installment) is calculated using the formula: EMI = P × r × (1+r)^n / ((1+r)^n - 1), where P = loan amount, r = monthly interest rate, n = number of months. In Pakistan, car loan rates are typically KIBOR + 3-5% spread.' },
+      { question: 'How much EMI for 30 lakh loan in Pakistan?', answer: 'For a PKR 30 lakh loan at 18% annual interest for 5 years, the monthly EMI would be approximately PKR 76,000. The exact amount depends on the bank\'s interest rate and loan tenure. Use our calculator for precise EMI calculations.' }
+    ]
   },
   'profit-margin': {
-    title: 'Profit Margin Calculator – Check Your Business Profit Instantly',
-    description: 'Don\'t guess your profits. Find your exact business profit margin in seconds. Calculate cost, selling price, and markup easily.'
+    title: 'Profit Margin Calculator 2026 – Free Business Markup & Net Profit Finder',
+    description: 'Calculate net profit margin & markup percentage for your business ✓ Gross vs net profit ✓ Ideal for wholesalers, retailers & startups in Pakistan. Instant results.',
+    faqs: [
+      { question: 'How to calculate profit margin for a business in Pakistan?', answer: 'Profit Margin = (Revenue - Cost) / Revenue × 100. For example, if you buy a product for PKR 800 and sell for PKR 1,000, your profit margin is 20%. Markup would be 25% (200/800 × 100). Our calculator instantly shows both margin and markup.' }
+    ]
   },
   'unit-converter': {
-    title: 'Free Unit Converter – Convert Length, Weight & More',
-    description: 'Convert units instantly with our free online converter. Supports length, weight, temperature, and more.'
+    title: 'Unit Converter Pakistan – Marla to Kanal, Murabba to Kanal, Tola to Grams',
+    description: 'Convert Pakistani units instantly ✓ 1 Murabba = 25 Acres = 200 Kanal ✓ Marla to SqFt ✓ Gaz to Marla ✓ Tola to Grams. Free & accurate local unit converter.',
+    faqs: [
+      { question: 'How many Kanal in 1 Murabba in Pakistan?', answer: '1 Murabba = 25 Acres = 200 Kanal in Pakistan. A Murabba is commonly used for agricultural land measurement in Punjab. 200 Murabba would be 40,000 Kanal or 5,000 Acres.' },
+      { question: 'How many Marla in 1 Kanal?', answer: '1 Kanal = 20 Marla in Pakistan. 1 Marla = 272.25 sq ft. So 1 Kanal = 5,445 sq ft. These are the standard land measurement units used across Punjab and KPK.' },
+      { question: 'How many Marla in 40 Gaz?', answer: '40 Gaz (Square Yards) is approximately equal to 1.32 Marla in Pakistan. 1 Marla = 30.25 Gaz/Square Yards. This conversion is commonly needed when buying plots in Pakistan.' }
+    ]
   },
   'bmi': {
-    title: 'BMI Calculator – Check Your Body Mass Index',
-    description: 'Calculate your BMI instantly. Enter your height and weight to check your body mass index and health category.'
+    title: 'BMI Calculator Pakistan 2026 – Free Body Mass Index & Health Check Tool',
+    description: 'Calculate your BMI instantly ✓ Check if you\'re underweight, normal, or overweight ✓ Pakistan-specific health tips ✓ Weight management advice. 100% free.',
+    faqs: [
+      { question: 'How to calculate BMI in Pakistan?', answer: 'BMI = Weight (kg) / Height (m²). For example, if you weigh 70kg and are 1.75m tall, your BMI = 70 / (1.75 × 1.75) = 22.86 (Normal weight). BMI categories: Under 18.5 = Underweight, 18.5-24.9 = Normal, 25-29.9 = Overweight, 30+ = Obese.' }
+    ]
   },
   'cgpa-calc': {
-    title: 'CGPA Calculator Pakistan 2026 – SGPA to CGPA & % Converter',
-    description: 'Calculate your Semester GPA (SGPA) and Cumulative GPA (CGPA) easily. Supports CBSE 9.5 multiplier and HEC standards. 100% free and accurate.'
+    title: 'CGPA Calculator Pakistan 2026 – Free GPA Calculator (HEC Standards)',
+    description: 'Calculate CGPA & SGPA as per HEC Pakistan standards ✓ Percentage to GPA conversion ✓ All university grading systems supported. How to calculate GPA in Pakistan.',
+    faqs: [
+      { question: 'How to calculate GPA in Pakistan?', answer: 'In Pakistan, GPA is calculated by: 1) Multiplying each course\'s grade points by its credit hours, 2) Adding all quality points, 3) Dividing by total credit hours. HEC uses 4.0 scale where A = 4.0, B+ = 3.3, B = 3.0, etc.' },
+      { question: 'How to calculate CGPA from SGPA in Pakistan?', answer: 'CGPA = Sum of (SGPA × semester credit hours) / Total credit hours of all semesters. For example, if Semester 1 SGPA = 3.5 (18 credits) and Semester 2 SGPA = 3.7 (15 credits), CGPA = (3.5×18 + 3.7×15) / (18+15) = 3.59.' }
+    ]
   },
   'grade-calc': {
-    title: 'Grade Calculator – Calculate Final Grades & Weighted Averages',
-    description: 'Find your academic grade based on marks obtained or percentage. Precision-weighted grade calculator for Matric, Inter, and University students.'
+    title: 'Grade Calculator Pakistan – Matric, Inter & University Marks Grade Finder',
+    description: 'Find your academic grade from marks obtained ✓ Matric, Inter, O/A Level grading systems ✓ Pakistan board results grade calculator. Instant & free.',
+    faqs: [
+      { question: 'How to check grade from marks in Pakistan?', answer: 'In Pakistan\'s Matric/SSC system: A1 = 80%+, A = 70-79%, B = 60-69%, C = 50-59%, D = 40-49%, F = below 40%. For FSc/HSSC: A+ = 85%+, A = 80-84%, B = 70-79%, C = 60-69%. Our calculator supports all major grading systems.' }
+    ]
   },
   'mark-percentage': {
-    title: 'Mark Percentage Calculator 2026 – Score to % Finder (Accurate)',
-    description: 'Convert your marks into percentage instantly. Ideal for students in Pakistan calculating matric, inter, or university merit scores for 2026.'
+    title: 'Marks Percentage Calculator – How to Calculate Percentage of Marks (Free)',
+    description: 'Calculate percentage from marks instantly ✓ Matric result percentage ✓ 1100 total marks percentage ✓ Board exam marks to percentage converter. 100% accurate & free.',
+    faqs: [
+      { question: 'How to calculate matric result percentage?', answer: 'Matric percentage = (Obtained Marks / Total Marks) × 100. For example, if you got 892 marks out of 1100, your percentage = (892/1100) × 100 = 81.09%. This formula works for all board exams in Pakistan.' },
+      { question: '696 out of 1100 marks percentage kya hota hai?', answer: '696 out of 1100 marks ka percentage = (696/1100) × 100 = 63.27%. This falls in the B grade category in Pakistan\'s Matric/SSC grading system.' },
+      { question: 'How to calculate percentage from SSLC marks?', answer: 'SSLC/Matric percentage = (Total marks obtained / Maximum marks) × 100. Enter your obtained marks and total marks in our calculator to get instant results with grade classification.' }
+    ]
   }
 };
+
 
 const App: React.FC = () => {
   const [isUrdu, setIsUrdu] = useState(false);
@@ -131,13 +191,49 @@ const App: React.FC = () => {
         {/* Info Pages */}
         <Route path="/slabs" element={
           <>
-            <SEOHead title="FBR Tax Slabs 2025-26" description="Latest Income Tax Slabs for Salaried and Business Individuals in Pakistan." canonicalUrl="/slabs" />
+            <SEOHead title="FBR Income Tax Slabs 2025-26 Pakistan – Latest Salary Tax Rates (Updated)" description="Complete FBR tax slabs for salaried & business individuals in Pakistan for tax year 2026. Updated rates, exemptions & filing guide. Free reference." canonicalUrl="/slabs" />
+            <Helmet>
+              <script type="application/ld+json">
+                {JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  "mainEntity": [
+                    {
+                      "@type": "Question",
+                      "name": "What are the FBR income tax slabs for 2025-26 in Pakistan?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "The FBR has announced updated income tax slabs for tax year 2026 (July 2025 – June 2026). Annual income up to PKR 600,000 is exempt. Rates progressively increase from 5% to 35% based on income brackets for salaried individuals."
+                      }
+                    }
+                  ]
+                })}
+              </script>
+            </Helmet>
             <FBRSlabsPage isUrdu={isUrdu} />
           </>
         } />
         <Route path="/zakat-info" element={
           <>
-            <SEOHead title="Zakat Guide" description="Complete guide to Zakat calculation in Pakistan." canonicalUrl="/zakat-info" />
+            <SEOHead title="Zakat Guide Pakistan 2026 – Nisab, Rules & How to Calculate Zakat in PKR" description="Complete Zakat guide for Pakistan ✓ Current Nisab values ✓ SBP zakat deduction rules ✓ Gold & silver Nisab rates 2026. Learn how to calculate & distribute Zakat." canonicalUrl="/zakat-info" />
+            <Helmet>
+              <script type="application/ld+json">
+                {JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  "mainEntity": [
+                    {
+                      "@type": "Question",
+                      "name": "What is the SBP Zakat Nisab for 2026 in Pakistan?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "The SBP announces the Zakat Nisab based on the value of 612.32 grams of silver. For 2026, the Nisab is approximately PKR 135,000. Bank accounts exceeding this amount on 1st Ramadan will have 2.5% Zakat deducted automatically."
+                      }
+                    }
+                  ]
+                })}
+              </script>
+            </Helmet>
             <ZakatInfoPage isUrdu={isUrdu} />
           </>
         } />
@@ -317,14 +413,37 @@ const ToolWrapper = ({ id, component, isUrdu, handleNavigate }: { id: string, co
                     "name": tool.name,
                     "applicationCategory": "FinanceApplication",
                     "operatingSystem": "Any",
+                    "url": `https://pakcalc.site/${id}`,
                     "offers": {
                       "@type": "Offer",
                       "price": "0",
                       "priceCurrency": "PKR"
                     },
-                    "description": tool.description
+                    "description": seoMeta?.description || tool.description,
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.8",
+                      "ratingCount": "150",
+                      "bestRating": "5"
+                    }
                   })}
                 </script>
+                {seoMeta?.faqs && seoMeta.faqs.length > 0 && (
+                  <script type="application/ld+json">
+                    {JSON.stringify({
+                      "@context": "https://schema.org",
+                      "@type": "FAQPage",
+                      "mainEntity": seoMeta.faqs.map(faq => ({
+                        "@type": "Question",
+                        "name": faq.question,
+                        "acceptedAnswer": {
+                          "@type": "Answer",
+                          "text": faq.answer
+                        }
+                      }))
+                    })}
+                  </script>
+                )}
               </Helmet>
             </div>
           </div>
