@@ -16,16 +16,49 @@ import {
 } from './components/Tools';
 import { FBRSlabsPage, ZakatInfoPage, ContactPage, PrivacyPage, TermsPage, DisclaimerPage } from './components/InfoPages';
 import { CALCULATORS } from './constants';
+import { ToolArticle } from './components/ToolArticle';
+import { RelatedTools } from './components/RelatedTools';
+
+const getRelatedTools = (id: string) => {
+  const map: Record<string, string[]> = {
+    'income-tax': ['investment-return', 'real-estate-roi'],
+    'zakat': ['investment-return', 'provident-fund', 'freelancer-tax'],
+    'loan-emi': ['zakat', 'investment-return'],
+    'profit-margin': ['income-tax', 'investment-return'],
+    'bmi': ['loan-emi', 'retirement-plan'],
+    'investment-return': ['provident-fund', 'gratuity'],
+    'retirement-plan': ['real-estate-roi', 'zakat', 'income-tax'],
+    'real-estate-roi': ['income-tax', 'investment-return'],
+    'provident-fund': ['retirement-plan', 'income-tax'],
+    'gratuity': ['retirement-plan', 'income-tax'],
+    'freelancer-tax': ['income-tax', 'unit-converter'],
+    'unit-converter': ['profit-margin', 'income-tax'],
+    'cgpa-calc': ['grade-calc', 'mark-percentage'],
+    'grade-calc': ['cgpa-calc', 'unit-converter'],
+    'mark-percentage': ['cgpa-calc', 'unit-converter']
+  };
+  return map[id] || ['income-tax', 'investment-return'];
+};
 
 // SEO metadata for each tool – CTR-optimized titles & descriptions based on GSC queries
-const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?: { question: string; answer: string }[] }> = {
+const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?: { question: string; answer: string }[]; howTo?: { name: string; description: string; steps: { name: string; text: string }[] } }> = {
   'income-tax': {
     title: 'Income Tax Calculator Pakistan 2026 – Free FBR Salary Tax Slabs 2025-26',
     description: 'Calculate your FBR income tax for 2025-2026 in seconds ✓ Updated salary tax slabs ✓ Legal exemptions ✓ Tax-saving tips. Used by 10,000+ Pakistani filers.',
     faqs: [
       { question: 'What are the FBR salary tax slabs for 2025-26 in Pakistan?', answer: 'The FBR has announced updated income tax slabs for tax year 2026 (July 2025 – June 2026). Salaried individuals earning up to PKR 600,000 annually are exempt. Rates range from 5% to 35% depending on income brackets. Use our free calculator for your exact tax liability.' },
       { question: 'How to calculate income tax in Pakistan for salaried persons?', answer: 'To calculate your income tax: 1) Determine your total annual taxable income, 2) Subtract allowable deductions (medical, education), 3) Apply the applicable FBR slab rate for 2025-26. Our calculator does all this automatically in seconds.' }
-    ]
+    ],
+    howTo: {
+      name: "How to Calculate Income Tax on Salary in Pakistan",
+      description: "A step-by-step guide to calculating your FBR income tax using our free 2025-2026 calculator.",
+      steps: [
+        { name: "Enter Gross Salary", text: "Input the total amount you earn before any deductions include basic salary, allowances, and bonuses." },
+        { name: "Review Projection", text: "The calculator automatically scales your monthly income to an annual figure to match FBR tax brackets." },
+        { name: "Analyze Breakdown", text: "Observe the exact tax slab you fall into and see the precise percentage applied." },
+        { name: "Check Net Salary", text: "View the exact amount deposited into your bank account each month." }
+      ]
+    }
   },
   'zakat': {
     title: 'Zakat Calculator Pakistan 2026 – Free Nisab Calculator in PKR (Gold & Silver)',
@@ -34,7 +67,17 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
       { question: 'How to calculate Zakat in Pakistan 2026?', answer: 'Zakat is 2.5% of your total wealth above the Nisab threshold. Add up all your savings, gold, silver, and investments. If the total exceeds the Nisab value (approximately PKR 135,000 based on silver, or PKR 1,200,000+ based on gold for 2026), you owe Zakat on the entire amount.' },
       { question: 'What is the Zakat Nisab in Pakistan for 2026?', answer: 'The Zakat Nisab in Pakistan for 2026 is based on the value of 7.5 tola gold or 52.5 tola silver. The SBP announces the Nisab value each Ramadan. Based on current rates, the silver-based Nisab is approximately PKR 135,000 and the gold-based Nisab is approximately PKR 1,200,000.' },
       { question: 'How much Zakat is deducted from bank accounts in Pakistan?', answer: 'Banks in Pakistan deduct Zakat at 2.5% on savings accounts exceeding the Nisab amount on 1st Ramadan each year. You can file a Zakat exemption (CZ-50 form) with your bank if you want to pay Zakat yourself.' }
-    ]
+    ],
+    howTo: {
+      name: "How to Calculate Zakat Accurately in Pakistan",
+      description: "Steps to evaluate your net worth and determine your Zakat obligation using current Nisab values.",
+      steps: [
+        { name: "Tally Your Assets", text: "Enter your cash deposits, market value of gold/silver, and business investments." },
+        { name: "Deduct Liabilities", text: "Deduct immediate short-term debts like pending utility bills or loans." },
+        { name: "Compare with Nisab", text: "The calculator compares your net worth against the current gold or silver Nisab threshold." },
+        { name: "Get Exact Amount", text: "If net worth exceeds Nisab, the system automatically computes exactly 2.5%." }
+      ]
+    }
   },
   'freelancer-tax': {
     title: 'Freelancer Tax Calculator Pakistan 2026 – IT Export Income & FBR Rules',
@@ -42,7 +85,17 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     faqs: [
       { question: 'Is there tax on freelancers in Pakistan?', answer: 'Yes, freelancer income is taxable in Pakistan under FBR rules. However, IT export income enjoys reduced tax rates (0.25% for filers). Freelancers earning through platforms like Fiverr, Upwork, or direct clients must file returns and can benefit from IT export exemptions.' },
       { question: 'How much do freelancers earn per month in Pakistan?', answer: 'Freelancer income varies widely. Pakistani IT freelancers typically earn between PKR 50,000 to PKR 500,000+ per month depending on skills and experience. After bank charges (1-3%), platform fees (5-20%), and taxes, your net take-home can differ significantly from gross earnings.' }
-    ]
+    ],
+    howTo: {
+      name: "How to Calculate Freelance Income and IT Export Tax",
+      description: "Estimate your net take-home freelance income after applying platform fees, bank conversion rates, and FBR tax deductions.",
+      steps: [
+        { name: "Input Earnings", text: "Enter the total dollar amount the client paid before deductions." },
+        { name: "Set Fees", text: "Choose your platform's standard commission rate (usually 20%)." },
+        { name: "Factor Spreads", text: "Factor the difference between the dollar rate and bank's buying rate." },
+        { name: "Apply FBR Tax", text: "Select filer status. The calculator deducts the exact IT export tax." }
+      ]
+    }
   },
   'investment-return': {
     title: 'Investment Return Calculator Pakistan 2026 – Free Savings & Profit Calculator',
@@ -444,15 +497,35 @@ const ToolWrapper = ({ id, component, isUrdu, handleNavigate }: { id: string, co
                     })}
                   </script>
                 )}
+                {seoMeta?.howTo && (
+                  <script type="application/ld+json">
+                    {JSON.stringify({
+                      "@context": "https://schema.org",
+                      "@type": "HowTo",
+                      "name": seoMeta.howTo.name,
+                      "description": seoMeta.howTo.description,
+                      "step": seoMeta.howTo.steps.map((step, index) => ({
+                        "@type": "HowToStep",
+                        "position": index + 1,
+                        "name": step.name,
+                        "text": step.text
+                      }))
+                    })}
+                  </script>
+                )}
               </Helmet>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="relative mb-16">
+      <div className="relative mb-8">
         {component}
       </div>
+
+      <ToolArticle id={id} isUrdu={isUrdu} />
+
+      <RelatedTools toolIds={getRelatedTools(id)} />
 
       {/* AI Banner */}
       <div className="mt-16 bg-slate-900 rounded-[2.5rem] p-10 text-white relative overflow-hidden shadow-2xl">

@@ -2710,12 +2710,6 @@ export const IncomeTaxSEOArticle = () => (
       <p>
         For salaried individuals, the employer usually deducts tax at source (Withholding Tax). However, knowing your exact liability helps you verify if the deduction is correct. If you are also managing a small business or have freelance income, you might need to use our <Link to="/freelancer-tax" className="text-emerald-600 hover:underline font-bold">Freelancer Income Calculator</Link> to see how export taxes affect your net earnings. Additionally, if you are planning to save for the future, understanding your tax-free income can help you better utilize the <Link to="/investment-return" className="text-emerald-600 hover:underline font-bold">Investment Return Calculator</Link> for wealth growth.
       </p>
-      <p>
-        Key components of the 2026 tax regime include separate slabs for salaried vs. non-salaried persons. The rates for non-salaried individuals are typically higher. By using our <strong>salary tax calculator Pakistan</strong>, you can accurately plan your monthly budget and avoid end-of-year surprises. Remember, being a "Filer" on the Active Taxpayers List (ATL) provides numerous benefits, including lower withholding rates on bank transactions and property purchases. Use our <Link to="/real-estate-roi" className="text-emerald-600 hover:underline font-bold">Real Estate ROI Calculator</Link> to see how filer status impacts your property investments.
-      </p>
-      <p>
-        To ensure maximum accuracy, our tool is updated in real-time with SBP and FBR notifications. Whether you are calculating tax for a basic salary or including medical and fuel allowances, the <strong>Pakistan income tax calculator</strong> provides a detailed breakdown of your "Take-Home Pay" versus "Gross Salary."
-      </p>
     </div>
 
     <div className="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-200 mt-12">
@@ -2723,20 +2717,17 @@ export const IncomeTaxSEOArticle = () => (
       <div className="space-y-6">
         <div>
           <h4 className="font-bold text-slate-900">What is the tax-free limit in Pakistan for 2026?</h4>
-          <p className="text-sm text-slate-500">The current tax-free limit is Rs. 600,000 per annum for both salaried and non-salaried individuals.</p>
+          <p className="text-sm text-slate-500">The current tax-free limit is Rs. 600,000 per annum for both salaried and non-salaried individuals. This threshold is pivotal for the middle-class workforce to manage their disposable income effectively.</p>
         </div>
         <div>
-          <h4 className="font-bold text-slate-900">How do I calculate monthly tax from annual income?</h4>
-          <p className="text-sm text-slate-500">First, calculate the total tax based on the annual slabs, then divide that amount by 12 to get your monthly tax liability.</p>
-        </div>
-        <div>
-          <h4 className="font-bold text-slate-900">Is medical allowance taxable in Pakistan?</h4>
-          <p className="text-sm text-slate-500">As per current law, medical allowance up to 10% of the basic salary is generally exempt if medical facility is not provided by the employer.</p>
+          <h4 className="font-bold text-slate-900">How to reduce tax liability legally?</h4>
+          <p className="text-sm text-slate-500">You can claim tax credits for investments in voluntary pension schemes (VPS), charitable donations to NPOs, and health insurance. Our tool provides insights into how these deductions impact your net payable tax.</p>
         </div>
       </div>
     </div>
   </section>
 );
+
 
 export const ZakatSEOArticle = () => (
   <section className="mt-16 border-t border-slate-100 pt-16 space-y-8">
@@ -2748,15 +2739,6 @@ export const ZakatSEOArticle = () => (
       <p>
         In Pakistan, the government usually announces the official Nisab for Zakat deduction from bank accounts on the first day of Ramadan. However, personal Zakat calculation on gold and other assets is the responsibility of the individual. The Nisab is based on the value of either 87.48 grams of gold or 612.36 grams of silver. Since the value of silver is much lower, it is the standard most scholars recommend for the majority of people to determine if they are "Sahib-e-Nisab."
       </p>
-      <p>
-        When using our tool, you must list all your "Zakat-able" assets. This includes cash in hand, bank balances, the current market value of gold/silver jewelry, and investments in stocks or mutual funds. If you have significant investments, you can cross-check your portfolio growth with our <Link to="/investment-return" className="text-emerald-600 hover:underline font-bold">Investment Return Calculator</Link>. From your total assets, you are allowed to subtract immediate liabilities like utility bills or short-term debts. Use our <Link to="/loan-emi" className="text-emerald-600 hover:underline font-bold">Loan EMI Calculator</Link> to stay on top of your debt repayments while calculating your net Zakat-able wealth.
-      </p>
-      <p>
-        Proper Zakat management is not just a religious duty but also a way to purify your wealth. Many people in Pakistan use their Zakat toward education or medical aid. If you are an employee planning your end-of-service benefits, you should also consider how your <Link to="/provident-fund" className="text-emerald-600 hover:underline font-bold">Provident Fund</Link> balance might affect your Zakat liability in the future.
-      </p>
-      <p>
-        Our <strong>free Zakat calculator</strong> uses real-time or user-provided gold/silver rates to ensure that your calculations are up to date with the 2026 market values in Karachi, Lahore, and Islamabad markets.
-      </p>
     </div>
 
     <div className="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-200 mt-12">
@@ -2767,17 +2749,14 @@ export const ZakatSEOArticle = () => (
           <p className="text-sm text-slate-500">Zakat is calculated at a fixed rate of 2.5% (or 1/40th) of your total qualifying wealth above the Nisab.</p>
         </div>
         <div>
-          <h4 className="font-bold text-slate-900">Is Zakat payable on personal-use jewelry?</h4>
-          <p className="text-sm text-slate-500">According to most schools of thought, Zakat is payable on gold and silver jewelry if it reaches the Nisab, even if it is for personal use.</p>
-        </div>
-        <div>
-          <h4 className="font-bold text-slate-900">Do I pay Zakat on the plot I purchased for my house?</h4>
-          <p className="text-sm text-slate-500">Zakat is generally not payable on a plot intended for building your own residence. However, it is payable if the plot was bought for trade or investment.</p>
+          <h4 className="font-bold text-slate-900">How to determine the current Nisab value?</h4>
+          <p className="text-sm text-slate-500">The Nisab is calculated based on the current market rates of gold and silver. Our <strong>Zakat Calculator</strong> allows you to input the latest rates in PKR to get an accurate threshold for 2026.</p>
         </div>
       </div>
     </div>
   </section>
 );
+
 
 export const FreelancerSEOArticle = () => (
   <section className="mt-16 border-t border-slate-100 pt-16 space-y-8">

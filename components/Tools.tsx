@@ -4,7 +4,6 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip, AreaChart, A
 import { SALARIED_TAX_SLABS } from '../constants';
 import { getFinancialAdvice } from '../services/geminiService';
 import { EMIBlogContent, TaxBlogContent, ZakatBlogContent, ProfitMarginBlogContent, BMIBlogContent, InvestmentBlogContent, RetirementBlogContent, RealEstateBlogContent, PFBlogContent, GratuityBlogContent, FreelancerBlogContent, UnitConverterBlogContent, GradeCalculatorBlogContent, CGPACalculatorBlogContent, MarkPercentageBlogContent, IncomeTaxSEOArticle, ZakatSEOArticle, FreelancerSEOArticle, InvestmentSEOArticle, RetirementSEOArticle, RealEstateSEOArticle, PFSEOArticle, GratuitySEOArticle, EMISEOArticle, ProfitMarginSEOArticle, UnitConverterSEOArticle, BMISEOArticle } from './InfoPages';
-import { RelatedTools } from './RelatedTools';
 
 const COLORS = ['#10b981', '#ef4444', '#f59e0b', '#3b82f6', '#8b5cf6', '#ec4899'];
 
@@ -52,7 +51,6 @@ export const IncomeTaxTool = ({ isUrdu }: { isUrdu: boolean }) => {
       </div>
       <TaxBlogContent />
       <IncomeTaxSEOArticle />
-      <RelatedTools toolIds={['zakat', 'investment-return', 'provident-fund', 'freelancer-tax']} />
     </div>
   );
 };
@@ -131,7 +129,6 @@ export const ZakatTool = () => {
       </div>
       <ZakatBlogContent />
       <ZakatSEOArticle />
-      <RelatedTools toolIds={['income-tax', 'investment-return', 'real-estate-roi']} />
     </div>
   );
 };
@@ -192,7 +189,6 @@ export const EMITool = () => {
       </div>
       <EMIBlogContent />
       <EMISEOArticle />
-      <RelatedTools toolIds={['real-estate-roi', 'income-tax', 'investment-return']} />
     </div>
   );
 };
@@ -287,7 +283,6 @@ export const ProfitMarginTool = () => {
       </div>
       <ProfitMarginBlogContent />
       <ProfitMarginSEOArticle />
-      <RelatedTools toolIds={['freelancer-tax', 'income-tax', 'unit-converter']} />
     </div>
   );
 };
@@ -338,7 +333,6 @@ export const BMICalcTool = () => {
       </div>
       <BMIBlogContent />
       <BMISEOArticle />
-      <RelatedTools toolIds={['retirement-plan', 'unit-converter']} />
     </div>
   );
 };
@@ -484,7 +478,6 @@ export const InvestmentReturnTool = () => {
       </div>
       <InvestmentBlogContent />
       <InvestmentSEOArticle />
-      <RelatedTools toolIds={['retirement-plan', 'real-estate-roi', 'zakat', 'income-tax']} />
     </div>
   );
 };
@@ -606,7 +599,6 @@ export const RetirementTool = () => {
       </div>
       <RetirementBlogContent />
       <RetirementSEOArticle />
-      <RelatedTools toolIds={['investment-return', 'provident-fund', 'gratuity']} />
     </div>
   );
 };
@@ -714,7 +706,6 @@ export const RealEstateROITool = () => {
       </div>
       <RealEstateBlogContent />
       <RealEstateSEOArticle />
-      <RelatedTools toolIds={['loan-emi', 'zakat', 'investment-return']} />
     </div>
   );
 };
@@ -808,7 +799,6 @@ export const PFTool = () => {
       </div>
       <PFBlogContent />
       <PFSEOArticle />
-      <RelatedTools toolIds={['gratuity', 'retirement-plan', 'income-tax']} />
     </div>
   );
 };
@@ -882,7 +872,6 @@ export const GratuityTool = () => {
       </div>
       <GratuityBlogContent />
       <GratuitySEOArticle />
-      <RelatedTools toolIds={['provident-fund', 'retirement-plan', 'income-tax']} />
     </div>
   );
 };
@@ -984,7 +973,6 @@ export const FreelancerTool = () => {
       </div>
       <FreelancerBlogContent />
       <FreelancerSEOArticle />
-      <RelatedTools toolIds={['profit-margin', 'income-tax', 'investment-return']} />
     </div>
   );
 };
@@ -1117,7 +1105,6 @@ export const UnitConverterTool = () => {
       </div>
       <UnitConverterBlogContent />
       <UnitConverterSEOArticle />
-      <RelatedTools toolIds={['real-estate-roi', 'zakat', 'profit-margin']} />
     </div>
   );
 };
@@ -1155,7 +1142,6 @@ export const MarkPercentageTool = () => {
         </div>
       </div>
       <MarkPercentageBlogContent />
-      <RelatedTools toolIds={['grade-calc', 'cgpa-calc', 'unit-converter']} />
     </div>
   );
 };
@@ -1201,7 +1187,6 @@ export const GradeCalculatorTool = () => {
         </div>
       </div>
       <GradeCalculatorBlogContent />
-      <RelatedTools toolIds={['mark-percentage', 'cgpa-calc', 'unit-converter']} />
     </div>
   );
 };
@@ -1297,7 +1282,6 @@ export const CGPACalculatorTool = () => {
         </div>
       </div>
       <CGPACalculatorBlogContent />
-      <RelatedTools toolIds={['grade-calc', 'mark-percentage', 'retirement-plan']} />
     </div>
   );
 };
