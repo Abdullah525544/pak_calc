@@ -3027,3 +3027,303 @@ export const BMISEOArticle = () => (
     </div>
   </section>
 );
+
+export const ElectricityBillBlogContent = () => (
+  <article className="mt-20 space-y-20 text-slate-700 leading-relaxed border-t border-slate-200 pt-20 max-w-5xl mx-auto px-4 font-sans text-justify">
+    {/* Header Section */}
+    <header className="text-center space-y-8">
+      <div className="inline-flex items-center gap-2 px-6 py-2 bg-yellow-50 text-yellow-700 rounded-full text-xs font-black uppercase tracking-widest border border-yellow-100">
+        🔌 Pakistan Electricity Bill Guide 2025-26
+      </div>
+      <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
+        Electricity Bill Calculator Pakistan 2026: <br />
+        <span className="text-emerald-600 italic">LESCO, MEPCO, IESCO & All DISCOs</span>
+      </h1>
+      <p className="max-w-3xl mx-auto text-lg text-slate-600">
+        Calculate your monthly <strong>bijli ka bill</strong> in seconds. Our free <strong>electricity bill calculator</strong> uses the latest <strong>NEPRA 2025-26 tariff slabs</strong> to instantly estimate your bill for <strong>LESCO</strong>, <strong>MEPCO</strong>, <strong>IESCO</strong>, <strong>FESCO</strong>, <strong>PESCO</strong>, and <strong>K-Electric</strong>. Just enter your units and see a full breakdown — including <strong>GST</strong>, <strong>FPA</strong>, and surcharges.
+      </p>
+    </header>
+
+    {/* Table of Contents */}
+    <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200">
+      <h3 className="text-lg font-bold mb-4">📖 Table of Contents</h3>
+      <ul className="space-y-2 text-sm text-emerald-600 font-medium grid grid-cols-1 md:grid-cols-2">
+        <li><a href="#how-to-calculate" className="hover:underline">1. How to Calculate Electricity Bill</a></li>
+        <li><a href="#nepra-slabs" className="hover:underline">2. NEPRA Tariff Slabs 2025-26</a></li>
+        <li><a href="#protected-vs-unprotected" className="hover:underline">3. Protected vs Non-Protected Consumers</a></li>
+        <li><a href="#disco-comparison" className="hover:underline">4. DISCO-Wise Bill Comparison</a></li>
+        <li><a href="#taxes-surcharges" className="hover:underline">5. Taxes & Surcharges Explained</a></li>
+        <li><a href="#bill-formula" className="hover:underline">6. Bill Calculation Formula</a></li>
+        <li><a href="#tips-reduce" className="hover:underline">7. Tips to Reduce Your Bill</a></li>
+        <li><a href="#faqs" className="hover:underline">8. FAQs</a></li>
+      </ul>
+    </div>
+
+    {/* Section 1: How to Calculate */}
+    <section id="how-to-calculate" className="space-y-8">
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">How to Calculate Your Electricity Bill in Pakistan</h2>
+      <p>
+        Calculating your electricity bill at home is straightforward when you know how the system works. Pakistan's power sector uses a <strong>tiered slab system</strong> — the more units you consume, the higher your per-unit rate becomes. Here is how you can estimate your monthly bill:
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm">
+          <span className="text-4xl mb-4 block">📊</span>
+          <h4 className="font-bold text-lg mb-2">Step 1: Note Your Units</h4>
+          <p className="text-sm text-slate-500">Check your electricity meter or your previous bill. Find the "Units Consumed" value (measured in kWh). This number drives your entire bill calculation.</p>
+        </div>
+        <div className="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm">
+          <span className="text-4xl mb-4 block">🛡️</span>
+          <h4 className="font-bold text-lg mb-2">Step 2: Check Your Status</h4>
+          <p className="text-sm text-slate-500">Are you a Protected or Non-Protected consumer? If your usage stays below 200 units for 6 months straight, you qualify as "Protected" and pay much lower rates.</p>
+        </div>
+        <div className="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm">
+          <span className="text-4xl mb-4 block">💰</span>
+          <h4 className="font-bold text-lg mb-2">Step 3: Add Taxes</h4>
+          <p className="text-sm text-slate-500">After the energy cost, add GST (18%), Electricity Duty (1.5%), Fuel Price Adjustment (FPA), FC Surcharge, and the Rs. 35 TV License Fee.</p>
+        </div>
+      </div>
+    </section>
+
+    {/* Section 2: NEPRA Tariff Slabs Table */}
+    <section id="nepra-slabs" className="space-y-8">
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">NEPRA Electricity Tariff Slabs 2025-26</h2>
+      <p>
+        The <strong>National Electric Power Regulatory Authority (NEPRA)</strong> approved new base tariffs effective July 1, 2025. The average base tariff dropped from Rs. 32.73/kWh to Rs. 31.59/kWh — a relief of Rs. 1.14 per unit. Below you can see the full slab breakdown for <strong>residential domestic consumers</strong>:
+      </p>
+
+      <h3 className="text-xl font-bold mt-8 mb-4 text-emerald-700">Non-Protected Consumer Slabs</h3>
+      <div className="overflow-x-auto rounded-2xl border border-slate-200">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="bg-slate-900 text-white">
+              <th className="p-4 text-left font-bold">Units (kWh)</th>
+              <th className="p-4 text-left font-bold">Rate Per Unit (Rs.)</th>
+              <th className="p-4 text-left font-bold">100 Units Cost</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-slate-100">
+            <tr className="bg-white"><td className="p-4">1 – 100</td><td className="p-4 font-bold text-emerald-600">22.44</td><td className="p-4">Rs. 2,244</td></tr>
+            <tr className="bg-slate-50"><td className="p-4">101 – 200</td><td className="p-4 font-bold text-emerald-600">28.91</td><td className="p-4">Rs. 2,891</td></tr>
+            <tr className="bg-white"><td className="p-4">201 – 300</td><td className="p-4 font-bold text-amber-600">33.10</td><td className="p-4">Rs. 3,310</td></tr>
+            <tr className="bg-slate-50"><td className="p-4">301 – 400</td><td className="p-4 font-bold text-amber-600">37.99</td><td className="p-4">Rs. 3,799</td></tr>
+            <tr className="bg-white"><td className="p-4">401 – 500</td><td className="p-4 font-bold text-rose-500">40.20</td><td className="p-4">Rs. 4,020</td></tr>
+            <tr className="bg-slate-50"><td className="p-4">501 – 600</td><td className="p-4 font-bold text-rose-500">41.62</td><td className="p-4">Rs. 4,162</td></tr>
+            <tr className="bg-white"><td className="p-4">601 – 700</td><td className="p-4 font-bold text-rose-600">42.76</td><td className="p-4">Rs. 4,276</td></tr>
+            <tr className="bg-slate-50"><td className="p-4">700+</td><td className="p-4 font-bold text-rose-700">47.69</td><td className="p-4">Rs. 4,769</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 className="text-xl font-bold mt-8 mb-4 text-emerald-700">Protected Consumer Slabs (Under 200 Units)</h3>
+      <div className="overflow-x-auto rounded-2xl border border-slate-200">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="bg-emerald-700 text-white">
+              <th className="p-4 text-left font-bold">Units (kWh)</th>
+              <th className="p-4 text-left font-bold">Rate Per Unit (Rs.)</th>
+              <th className="p-4 text-left font-bold">Max Cost</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-slate-100">
+            <tr className="bg-white"><td className="p-4">1 – 100</td><td className="p-4 font-bold text-emerald-600">10.54</td><td className="p-4">Rs. 1,054</td></tr>
+            <tr className="bg-emerald-50"><td className="p-4">101 – 200</td><td className="p-4 font-bold text-emerald-600">13.01</td><td className="p-4">Rs. 1,301</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p className="text-xs text-slate-400 italic mt-2">Source: NEPRA Determination, effective July 1, 2025. Rates may vary slightly by DISCO region.</p>
+    </section>
+
+    {/* Section 3: Protected vs Non-Protected */}
+    <section id="protected-vs-unprotected" className="space-y-8">
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">Protected vs Non-Protected Consumers: What's the Difference?</h2>
+      <p>
+        This is the most important concept in Pakistan's electricity billing system. Your status as a <strong>protected</strong> or <strong>non-protected consumer</strong> directly determines how much you pay per unit. Here is a clear comparison:
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="bg-emerald-50 p-8 rounded-3xl border border-emerald-100">
+          <h4 className="font-bold text-emerald-900 text-lg mb-4 flex items-center gap-2"><span>🛡️</span> Protected Consumer</h4>
+          <ul className="space-y-3 text-sm text-emerald-800">
+            <li className="flex gap-2"><span className="text-emerald-600 font-bold">✓</span> Uses less than 200 units for 6 consecutive months</li>
+            <li className="flex gap-2"><span className="text-emerald-600 font-bold">✓</span> Pays Rs. 10.54/unit for first 100 units</li>
+            <li className="flex gap-2"><span className="text-emerald-600 font-bold">✓</span> Maximum bill for 200 units ≈ Rs. 2,355 (before taxes)</li>
+            <li className="flex gap-2"><span className="text-emerald-600 font-bold">✓</span> Lifeline consumers (under 50 units) pay just Rs. 3.95/unit</li>
+          </ul>
+        </div>
+        <div className="bg-rose-50 p-8 rounded-3xl border border-rose-100">
+          <h4 className="font-bold text-rose-900 text-lg mb-4 flex items-center gap-2"><span>⚡</span> Non-Protected Consumer</h4>
+          <ul className="space-y-3 text-sm text-rose-800">
+            <li className="flex gap-2"><span className="text-rose-600 font-bold">✗</span> Uses more than 200 units in any recent month</li>
+            <li className="flex gap-2"><span className="text-rose-600 font-bold">✗</span> Pays Rs. 22.44/unit even for first 100 units</li>
+            <li className="flex gap-2"><span className="text-rose-600 font-bold">✗</span> 300 units costs ≈ Rs. 8,445 (before taxes)</li>
+            <li className="flex gap-2"><span className="text-rose-600 font-bold">✗</span> Crossing 700 units pushes rate to Rs. 47.69/unit</li>
+          </ul>
+        </div>
+      </div>
+      <div className="bg-amber-50 p-6 rounded-3xl border border-amber-100">
+        <p className="text-sm text-amber-800">
+          <strong>⚠️ Warning:</strong> If you cross 200 units even once in 6 months, you lose your "Protected" status and your entire bill shifts to <strong>Non-Protected rates</strong> — which are almost double. Always monitor your usage to stay below this critical threshold.
+        </p>
+      </div>
+    </section>
+
+    {/* Section 4: DISCO Comparison */}
+    <section id="disco-comparison" className="space-y-8">
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">DISCO-Wise Electricity Bill Comparison</h2>
+      <p>
+        Pakistan has 10 Electricity Distribution Companies (DISCOs) operating across different regions. While NEPRA sets the base tariff, each DISCO may have slightly different rates and surcharges. Here are the major DISCOs you can calculate bills for:
+      </p>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        {[
+          { name: 'LESCO', region: 'Lahore Division', emoji: '🏙️' },
+          { name: 'MEPCO', region: 'South Punjab', emoji: '🌾' },
+          { name: 'IESCO', region: 'Islamabad / Rawalpindi', emoji: '🏛️' },
+          { name: 'FESCO', region: 'Faisalabad Division', emoji: '🏭' },
+          { name: 'PESCO', region: 'Peshawar / KPK', emoji: '⛰️' },
+          { name: 'K-Electric', region: 'Karachi', emoji: '🌊' },
+          { name: 'GEPCO', region: 'Gujranwala Division', emoji: '🏘️' },
+          { name: 'HESCO', region: 'Hyderabad / Sindh', emoji: '🌵' },
+          { name: 'SEPCO', region: 'Sukkur / Upper Sindh', emoji: '🏜️' },
+        ].map((disco, i) => (
+          <div key={i} className="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm text-center">
+            <span className="text-2xl block mb-2">{disco.emoji}</span>
+            <h4 className="font-bold text-slate-900">{disco.name}</h4>
+            <p className="text-[10px] text-slate-500 mt-1">{disco.region}</p>
+          </div>
+        ))}
+      </div>
+      <p className="text-sm text-slate-500">
+        Our calculator uses the <strong>NEPRA uniform domestic tariff</strong> which applies to all DISCOs. For commercial or industrial connections, rates vary by DISCO and load type.
+      </p>
+    </section>
+
+    {/* Section 5: Taxes & Surcharges */}
+    <section id="taxes-surcharges" className="space-y-8">
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">Taxes & Surcharges on Your Electricity Bill</h2>
+      <p>
+        Your electricity bill is never just the "energy cost." The government of Pakistan adds multiple taxes and surcharges that can increase your total bill by <strong>30-40%</strong> above the base amount. Here is a breakdown of each charge:
+      </p>
+      <div className="space-y-6">
+        <div className="flex gap-6 items-start p-6 bg-white border border-slate-100 rounded-2xl">
+          <div className="w-12 h-12 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-lg shrink-0">18%</div>
+          <div>
+            <h4 className="font-bold text-slate-900 mb-1">General Sales Tax (GST)</h4>
+            <p className="text-sm text-slate-600">The largest tax on your bill. GST at 18% applies to the total of energy cost, FPA, Electricity Duty, and surcharges. For a Rs. 10,000 base bill, GST alone adds Rs. 1,800.</p>
+          </div>
+        </div>
+        <div className="flex gap-6 items-start p-6 bg-white border border-slate-100 rounded-2xl">
+          <div className="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-lg shrink-0">FPA</div>
+          <div>
+            <h4 className="font-bold text-slate-900 mb-1">Fuel Price Adjustment (FPA)</h4>
+            <p className="text-sm text-slate-600">This changes every month based on global fuel prices. When oil/gas prices rise, your FPA goes up. It can range from Rs. -0.65 (negative/relief) to Rs. +3.50 per unit. NEPRA announces it monthly.</p>
+          </div>
+        </div>
+        <div className="flex gap-6 items-start p-6 bg-white border border-slate-100 rounded-2xl">
+          <div className="w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-lg shrink-0">FC</div>
+          <div>
+            <h4 className="font-bold text-slate-900 mb-1">FC Surcharge (Financing Cost)</h4>
+            <p className="text-sm text-slate-600">This surcharge covers the financial costs of Pakistan's circular debt in the power sector. It adds approximately Rs. 0.43 per unit consumed and appears as a separate line item on your bill.</p>
+          </div>
+        </div>
+        <div className="flex gap-6 items-start p-6 bg-white border border-slate-100 rounded-2xl">
+          <div className="w-12 h-12 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center font-bold text-lg shrink-0">ED</div>
+          <div>
+            <h4 className="font-bold text-slate-900 mb-1">Electricity Duty (1.5%)</h4>
+            <p className="text-sm text-slate-600">A provincial tax charged at 1.5% of the energy cost. This goes to the provincial government for infrastructure and development in your region.</p>
+          </div>
+        </div>
+        <div className="flex gap-6 items-start p-6 bg-white border border-slate-100 rounded-2xl">
+          <div className="w-12 h-12 rounded-2xl bg-slate-100 text-slate-600 flex items-center justify-center font-bold text-lg shrink-0">📺</div>
+          <div>
+            <h4 className="font-bold text-slate-900 mb-1">TV License Fee (Rs. 35)</h4>
+            <p className="text-sm text-slate-600">A fixed monthly charge of Rs. 35 collected by Pakistan Television Corporation (PTV) through electricity bills. This applies to all residential connections regardless of usage.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Section 6: Formula */}
+    <section id="bill-formula" className="bg-slate-900 text-white p-12 md:p-16 rounded-[4rem] relative overflow-hidden">
+      <div className="absolute right-0 top-0 w-64 h-64 bg-emerald-600 rounded-full blur-[120px] opacity-20 -mr-32 -mt-32"></div>
+      <h2 className="text-3xl font-bold text-center mb-8 relative z-10">Electricity Bill Calculation Formula</h2>
+      <div className="max-w-3xl mx-auto space-y-6 relative z-10">
+        <div className="bg-white/10 p-6 rounded-3xl border border-white/10">
+          <p className="text-sm text-emerald-300 font-bold mb-2">Step 1: Energy Cost</p>
+          <p className="text-xl font-bold">Energy Cost = Σ (Units in Slab × Rate per Unit)</p>
+        </div>
+        <div className="bg-white/10 p-6 rounded-3xl border border-white/10">
+          <p className="text-sm text-emerald-300 font-bold mb-2">Step 2: Add Surcharges</p>
+          <p className="text-xl font-bold">Subtotal = Energy Cost + (Units × FPA) + (Units × FC) + Duty</p>
+        </div>
+        <div className="bg-white/10 p-6 rounded-3xl border border-white/10">
+          <p className="text-sm text-emerald-300 font-bold mb-2">Step 3: Apply GST</p>
+          <p className="text-xl font-bold">Total Bill = Subtotal + (Subtotal × 18%) + TV Fee</p>
+        </div>
+      </div>
+      <div className="mt-10 text-center relative z-10">
+        <p className="text-slate-400 text-sm">Example: 300 units (Non-Protected) = Rs. 8,445 + Rs. 840 FPA + Rs. 129 FC + Rs. 127 Duty + Rs. 1,717 GST + Rs. 35 TV = <strong className="text-emerald-400 text-lg">≈ Rs. 11,293</strong></p>
+      </div>
+    </section>
+
+    {/* Section 7: Tips */}
+    <section id="tips-reduce" className="space-y-8">
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">7 Proven Tips to Reduce Your Electricity Bill</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {[
+          { tip: 'Stay Under 200 Units', desc: 'Protected status saves you 50-60% on per-unit rates. Use fans instead of ACs when possible.' },
+          { tip: 'Use Inverter AC & Appliances', desc: 'Inverter technology reduces electricity consumption by 40-60% compared to conventional models.' },
+          { tip: 'Switch to LED Lights', desc: 'LED bulbs use 75% less energy than traditional bulbs. Replace all lights in your home for instant savings.' },
+          { tip: 'Use Off-Peak Hours', desc: 'Run washing machines, irons, and water motors during off-peak hours (11 PM – 5 AM) if your DISCO offers Time-of-Use rates.' },
+          { tip: 'Install Solar Panels', desc: 'Net metering allows you to sell excess solar power back to WAPDA and reduce your monthly bill to near zero.' },
+          { tip: 'Unplug Standby Devices', desc: 'TVs, chargers, and modems consume "phantom power" even when off. Unplug them to save 5-10% on your bill.' },
+        ].map((item, i) => (
+          <div key={i} className="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm">
+            <h4 className="font-bold text-slate-900 mb-2">{i + 1}. {item.tip}</h4>
+            <p className="text-sm text-slate-600">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    {/* Section 8: FAQs */}
+    <section id="faqs" className="space-y-8">
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">Frequently Asked Questions (FAQs)</h2>
+      <div className="space-y-6">
+        <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+          <h4 className="font-bold text-slate-900 mb-2">How do I calculate my electricity bill from units?</h4>
+          <p className="text-sm text-slate-600">Multiply each slab's units by the corresponding rate, then add all slabs together. After the energy cost, add GST (18%), FPA, FC Surcharge, Electricity Duty (1.5%), and the Rs. 35 TV Fee. Our calculator does this automatically.</p>
+        </div>
+        <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+          <h4 className="font-bold text-slate-900 mb-2">What is the per unit rate of electricity in Pakistan 2025?</h4>
+          <p className="text-sm text-slate-600">For non-protected domestic consumers, the base rate starts at Rs. 22.44/unit (1-100 units) and goes up to Rs. 47.69/unit (700+ units). Protected consumers pay much less — starting from Rs. 10.54/unit.</p>
+        </div>
+        <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+          <h4 className="font-bold text-slate-900 mb-2">How much is a 300 unit electricity bill in Pakistan?</h4>
+          <p className="text-sm text-slate-600">A 300-unit bill for a non-protected consumer costs approximately Rs. 8,445 in energy charges. After adding 18% GST, FPA, and other surcharges, the total comes to roughly Rs. 11,000 – Rs. 12,000.</p>
+        </div>
+        <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+          <h4 className="font-bold text-slate-900 mb-2">What is the difference between LESCO, MEPCO, and IESCO?</h4>
+          <p className="text-sm text-slate-600">These are regional Electricity Distribution Companies (DISCOs). LESCO covers Lahore, MEPCO covers South Punjab (Multan), and IESCO covers Islamabad/Rawalpindi. While NEPRA sets the base domestic tariff uniformly, FPA and QTA adjustments can differ slightly.</p>
+        </div>
+        <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+          <h4 className="font-bold text-slate-900 mb-2">Why is my bijli ka bill so high?</h4>
+          <p className="text-sm text-slate-600">Common reasons include: crossing the 200-unit protected limit, high FPA in summer months, using non-inverter ACs, or meter reading errors. Use our calculator to cross-verify your bill against actual units consumed.</p>
+        </div>
+        <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+          <h4 className="font-bold text-slate-900 mb-2">How to become a protected consumer in Pakistan?</h4>
+          <p className="text-sm text-slate-600">You become a "Protected" consumer when your electricity consumption stays below 200 units for 6 consecutive months. Once you cross this limit in any single month, you lose the protected status and move to higher non-protected rates.</p>
+        </div>
+        <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+          <h4 className="font-bold text-slate-900 mb-2">Is FPA same for all DISCOs?</h4>
+          <p className="text-sm text-slate-600">No. Fuel Price Adjustment (FPA) can vary by DISCO because each company has a different fuel mix (hydro, gas, coal, solar). NEPRA announces separate FPA values for each DISCO monthly. However, the difference is usually small (Rs. 0.10 – 0.50).</p>
+        </div>
+        <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+          <h4 className="font-bold text-slate-900 mb-2">Can I check my actual WAPDA bill online?</h4>
+          <p className="text-sm text-slate-600">Yes. Each DISCO has an official online portal where you can enter your Reference Number or Consumer ID to view and download your actual bill. Search "[Your DISCO name] online bill" — for example, "LESCO online bill" or "MEPCO online bill check."</p>
+        </div>
+      </div>
+    </section>
+  </article>
+);
+
+export const ElectricityBillSEOArticle = () => null;
+

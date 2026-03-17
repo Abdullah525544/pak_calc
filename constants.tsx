@@ -122,6 +122,14 @@ export const CALCULATORS: Calculator[] = [
     description: 'Convert your marks into percentage instantly.',
     category: Category.EDUCATION,
     icon: '📊'
+  },
+  {
+    id: 'electricity-bill',
+    name: 'Electricity Bill Calculator',
+    nameUrdu: 'بجلی کا بل کیلکولیٹر',
+    description: 'Calculate your LESCO, MEPCO, IESCO electricity bill with latest NEPRA tariffs.',
+    category: Category.PAK_SPECIFIC,
+    icon: '🔌'
   }
 ];
 

@@ -12,7 +12,8 @@ import {
   IncomeTaxTool, ZakatTool, EMITool, ProfitMarginTool, BMICalcTool,
   InvestmentReturnTool, RetirementTool, PFTool, GratuityTool,
   FreelancerTool, UnitConverterTool, RealEstateROITool,
-  CGPACalculatorTool, GradeCalculatorTool, MarkPercentageTool
+  CGPACalculatorTool, GradeCalculatorTool, MarkPercentageTool,
+  ElectricityBillTool
 } from './components/Tools';
 import { FBRSlabsPage, ZakatInfoPage, ContactPage, PrivacyPage, TermsPage, DisclaimerPage } from './components/InfoPages';
 import { CALCULATORS } from './constants';
@@ -35,7 +36,8 @@ const getRelatedTools = (id: string) => {
     'unit-converter': ['profit-margin', 'income-tax'],
     'cgpa-calc': ['grade-calc', 'mark-percentage'],
     'grade-calc': ['cgpa-calc', 'unit-converter'],
-    'mark-percentage': ['cgpa-calc', 'unit-converter']
+    'mark-percentage': ['cgpa-calc', 'unit-converter'],
+    'electricity-bill': ['income-tax', 'loan-emi', 'zakat']
   };
   return map[id] || ['income-tax', 'investment-return'];
 };
@@ -61,15 +63,15 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     }
   },
   'zakat': {
-    title: 'Zakat Calculator Pakistan 2026 – Free Nisab Calculator in PKR (Gold & Silver)',
-    description: 'Calculate Zakat on cash, gold & silver in Pakistani Rupees ✓ Updated Nisab 2026 ✓ SBP rates ✓ Bank deduction guide. 100% free & accurate.',
+    title: 'Zakat Calculator Pakistan 2026 – SBP Nisab (Gold & Silver PKR)',
+    description: 'Calculate Zakat on cash, gold & silver in Pakistani Rupees ✓ Latest SBP Nisab 2026 ✓ 7.5 Tola Gold vs 52.5 Tola Silver rates ✓ Bank deduction guide. 100% free.',
     faqs: [
       { question: 'How to calculate Zakat in Pakistan 2026?', answer: 'Zakat is 2.5% of your total wealth above the Nisab threshold. Add up all your savings, gold, silver, and investments. If the total exceeds the Nisab value (approximately PKR 135,000 based on silver, or PKR 1,200,000+ based on gold for 2026), you owe Zakat on the entire amount.' },
       { question: 'What is the Zakat Nisab in Pakistan for 2026?', answer: 'The Zakat Nisab in Pakistan for 2026 is based on the value of 7.5 tola gold or 52.5 tola silver. The SBP announces the Nisab value each Ramadan. Based on current rates, the silver-based Nisab is approximately PKR 135,000 and the gold-based Nisab is approximately PKR 1,200,000.' },
       { question: 'How much Zakat is deducted from bank accounts in Pakistan?', answer: 'Banks in Pakistan deduct Zakat at 2.5% on savings accounts exceeding the Nisab amount on 1st Ramadan each year. You can file a Zakat exemption (CZ-50 form) with your bank if you want to pay Zakat yourself.' }
     ],
     howTo: {
-      name: "How to Calculate Zakat Accurately in Pakistan",
+      name: "How to Calculate Zakat Accurately in Pakistan (2.5% Formula)",
       description: "Steps to evaluate your net worth and determine your Zakat obligation using current Nisab values.",
       steps: [
         { name: "Tally Your Assets", text: "Enter your cash deposits, market value of gold/silver, and business investments." },
@@ -152,8 +154,8 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     ]
   },
   'unit-converter': {
-    title: 'Unit Converter Pakistan – Marla to Kanal, Murabba to Kanal, Tola to Grams',
-    description: 'Convert Pakistani units instantly ✓ 1 Murabba = 25 Acres = 200 Kanal ✓ Marla to SqFt ✓ Gaz to Marla ✓ Tola to Grams. Free & accurate local unit converter.',
+    title: 'Unit Converter Pakistan – Marla to Kanal, Murabba to Kanal, Gaz to SqFt',
+    description: 'Convert local Pakistani units instantly ✓ 1 Murabba = 200 Kanal ✓ Marla to Square Feet ✓ Gaz to Kanal ✓ Tola to Grams. Optimized for property & trade in Pakistan.',
     faqs: [
       { question: 'How many Kanal in 1 Murabba in Pakistan?', answer: '1 Murabba = 25 Acres = 200 Kanal in Pakistan. A Murabba is commonly used for agricultural land measurement in Punjab. 200 Murabba would be 40,000 Kanal or 5,000 Acres.' },
       { question: 'How many Marla in 1 Kanal?', answer: '1 Kanal = 20 Marla in Pakistan. 1 Marla = 272.25 sq ft. So 1 Kanal = 5,445 sq ft. These are the standard land measurement units used across Punjab and KPK.' },
@@ -183,13 +185,45 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     ]
   },
   'mark-percentage': {
-    title: 'Marks Percentage Calculator – How to Calculate Percentage of Marks (Free)',
-    description: 'Calculate percentage from marks instantly ✓ Matric result percentage ✓ 1100 total marks percentage ✓ Board exam marks to percentage converter. 100% accurate & free.',
+    title: 'Marks Percentage Calculator Pakistan – Matric (1100) & Board Result %',
+    description: 'Calculate your exam percentage instantly ✓ 1100 total marks percentage (850/1100) ✓ Matric & Inter board results ✓ Quick & 100% accurate. Used by students across Pakistan.',
     faqs: [
       { question: 'How to calculate matric result percentage?', answer: 'Matric percentage = (Obtained Marks / Total Marks) × 100. For example, if you got 892 marks out of 1100, your percentage = (892/1100) × 100 = 81.09%. This formula works for all board exams in Pakistan.' },
       { question: '696 out of 1100 marks percentage kya hota hai?', answer: '696 out of 1100 marks ka percentage = (696/1100) × 100 = 63.27%. This falls in the B grade category in Pakistan\'s Matric/SSC grading system.' },
       { question: 'How to calculate percentage from SSLC marks?', answer: 'SSLC/Matric percentage = (Total marks obtained / Maximum marks) × 100. Enter your obtained marks and total marks in our calculator to get instant results with grade classification.' }
-    ]
+    ],
+    howTo: {
+      name: "How to Calculate Marks Percentage for Pakistan Board Exams",
+      description: "Fastest way to convert your obtained marks into a percentage for Matric, Inter, or University results.",
+      steps: [
+        { name: "Enter Obtained Marks", text: "Type in the total marks you secured in your exams (e.g., 850)." },
+        { name: "Enter Total Marks", text: "Type in the maximum marks possible (e.g., 1100 for Matric, 1100 for Inter)." },
+        { name: "Check Percentage", text: "The calculator instantly displays your percentage up to two decimal places." },
+        { name: "Verify Grade", text: "Review the automatically generated grade based on your calculated percentage." }
+      ]
+    }
+  },
+  'electricity-bill': {
+    title: 'Electricity Bill Calculator Pakistan 2026 – Check Bijli Ka Bill Online (LESCO, MEPCO, IESCO)',
+    description: 'Free electricity bill calculator ✓ Enter units & get instant bill estimate ✓ NEPRA 2025-26 slabs ✓ Protected & Non-Protected rates ✓ GST, FPA, surcharges included. Works for LESCO, MEPCO, IESCO & all DISCOs.',
+    faqs: [
+      { question: 'How to calculate electricity bill from units in Pakistan?', answer: 'Your bill is calculated using a slab system. Each range of units (e.g., 1-100) has a different rate per kWh. After calculating the energy cost, the government adds 18% GST, Electricity Duty (1.5%), FPA, FC Surcharge, and a Rs. 35 TV fee. Our calculator automates this entire process — just enter your units.' },
+      { question: 'What are protected and non-protected consumers?', answer: 'Protected consumers use less than 200 units for 6 consecutive months and pay lower rates (Rs. 10.54/unit for first 100 units). Non-protected consumers pay higher rates starting from Rs. 22.44/unit. Crossing 200 units even once removes your protected status.' },
+      { question: 'How much is a 300 unit electricity bill in Pakistan?', answer: 'A 300-unit bill for a non-protected consumer costs approximately Rs. 8,445 in energy charges. After adding 18% GST, FPA, and surcharges, the total bill comes to roughly Rs. 11,000 – Rs. 12,000 depending on the monthly FPA rate.' },
+      { question: 'What is the per unit rate of electricity in Pakistan 2025?', answer: 'For non-protected domestic consumers, the base rate starts at Rs. 22.44/unit (1-100 units) and increases progressively to Rs. 47.69/unit (700+ units). Protected consumers pay much less — Rs. 10.54/unit for the first 100 units and Rs. 13.01/unit for 101-200 units.' },
+      { question: 'Why is my bijli ka bill so high?', answer: 'Common reasons include: crossing the 200-unit protected threshold, high Fuel Price Adjustment (FPA) during summer months, using non-inverter ACs, meter reading errors, or not being aware of the slab system. Use our calculator to cross-verify your bill against actual units consumed.' },
+      { question: 'Can I check my actual WAPDA bill online?', answer: 'Yes. Each DISCO (LESCO, MEPCO, IESCO, FESCO, PESCO) has an official online portal where you enter your Reference Number or Consumer ID to view and download your actual bill. Our calculator helps you estimate the bill before it arrives.' }
+    ],
+    howTo: {
+      name: "How to Calculate Your Electricity Bill Online in Pakistan",
+      description: "Step-by-step guide to estimate your monthly bijli ka bill using units consumed and the latest NEPRA 2025-26 tariff slabs.",
+      steps: [
+        { name: "Check Units Consumed", text: "Look at your electricity meter or previous bill to find 'Units Consumed' (kWh). This is the primary input for calculating your bill." },
+        { name: "Select Protected or Non-Protected", text: "Choose 'Protected' if your monthly usage has stayed below 200 units for the last 6 months. Otherwise, select 'Non-Protected' for standard rates." },
+        { name: "Enter Units in Calculator", text: "Type your total units consumed into our free calculator. The tool instantly applies the correct NEPRA slab rates and calculates the energy cost." },
+        { name: "Review Full Bill Breakdown", text: "See the complete breakdown including base electricity cost, 18% GST, Fuel Price Adjustment (FPA), FC Surcharge, Electricity Duty, and TV Fee." }
+      ]
+    }
   }
 };
 
@@ -244,7 +278,7 @@ const App: React.FC = () => {
         {/* Info Pages */}
         <Route path="/slabs" element={
           <>
-            <SEOHead title="FBR Income Tax Slabs 2025-26 Pakistan – Latest Salary Tax Rates (Updated)" description="Complete FBR tax slabs for salaried & business individuals in Pakistan for tax year 2026. Updated rates, exemptions & filing guide. Free reference." canonicalUrl="/slabs" />
+            <SEOHead title="FBR Income Tax Slabs 2025-26 – New Salary Tax Chart Pakistan" description="Latest FBR income tax slabs for salaried & business individuals (Tax Year 2026). Check new monthly tax rates, exemptions & filing guide. 100% updated." canonicalUrl="/slabs" />
             <Helmet>
               <script type="application/ld+json">
                 {JSON.stringify({
@@ -266,6 +300,16 @@ const App: React.FC = () => {
             <FBRSlabsPage isUrdu={isUrdu} />
           </>
         } />
+
+        <Route path="/electricity-bill" element={
+          <ToolWrapper
+            id="electricity-bill"
+            isUrdu={isUrdu}
+            component={<ElectricityBillTool isUrdu={isUrdu} />}
+            handleNavigate={handleNavigate}
+          />
+        } />
+
         <Route path="/zakat-info" element={
           <>
             <SEOHead title="Zakat Guide Pakistan 2026 – Nisab, Rules & How to Calculate Zakat in PKR" description="Complete Zakat guide for Pakistan ✓ Current Nisab values ✓ SBP zakat deduction rules ✓ Gold & silver Nisab rates 2026. Learn how to calculate & distribute Zakat." canonicalUrl="/zakat-info" />

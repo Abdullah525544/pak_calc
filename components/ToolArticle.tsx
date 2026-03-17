@@ -209,6 +209,16 @@ const IncomeTaxArticle = ({ isUrdu }: { isUrdu: boolean }) => {
             <HighlightBox title="Why Trust Our FBR Tax Calculator?" icon="🛡️" color="blue">
                 Unlike outdated tools that fail to reflect mid-year mini-budgets, our platform synchronizes with the latest FBR directives. Corporate HR departments, independent freelancers, and salaried professionals across Pakistan rely on our calculator for its unparalleled precision. Stop relying on complicated Excel spreadsheets—secure your financial compliance today.
             </HighlightBox>
+
+            <div className="mt-8 text-center">
+                <p className="text-slate-600 mb-4 font-medium">Want to calculate your exact monthly take-home pay?</p>
+                <button
+                    onClick={() => window.location.href = '/income-tax'}
+                    className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-full transition-all shadow-lg hover:shadow-emerald-200/50"
+                >
+                    Go to Salary Tax Calculator →
+                </button>
+            </div>
         </ArticleWrapper>
     );
 };
@@ -216,9 +226,9 @@ const IncomeTaxArticle = ({ isUrdu }: { isUrdu: boolean }) => {
 const ZakatArticle = ({ isUrdu }: { isUrdu: boolean }) => {
     return (
         <ArticleWrapper>
-            <h2>زکوٰۃ کیلکولیٹر پاکستان 2026: درست نصاب (سونا اور چاندی) اور کٹوتی کے اصول</h2>
+            <h2>زکوٰۃ کیلکولیٹر پاکستان 2026: اسٹیٹ بینک نصاب (سونا اور چاندی)</h2>
             <p>
-                زکوٰۃ اسلام کا ایک اہم رکن ہے، جس کی درست ادائیگی ہر صاحبِ نصاب مسلمان کا بنیادی دینی فریضہ ہے۔ ہمارا جدید <strong>زکوٰۃ کیلکولیٹر پاکستان (2025-2026)</strong> اس حساس عمل کو انتہائی آسان اور مستند بناتا ہے۔ یہ ٹول 100 فیصد حساب کو درست رکھتا ہے اور پاکستان میں سونے اور چاندی کی موجودہ مارکیٹ قیمتوں (PKR) کی بنیاد پر نصاب کا تعین کرتا ہے۔
+                زکوٰۃ اسلام کا ایک اہم رکن ہے، جس کی درست ادائیگی ہر صاحبِ نصاب مسلمان کا بنیادی دینی فریضہ ہے۔ ہمارا جدید <strong>زکوٰۃ کیلکولیٹر پاکستان (2025-2026)</strong> اسٹیٹ بینک آف پاکستان (SBP) کے مقرر کردہ نصاب کے مطابق ڈیزائن کیا گیا ہے۔ یہ ٹول پاکستان میں سونے اور چاندی کی موجودہ مارکیٹ قیمتوں (PKR) کی بنیاد پر نصاب کا خودکار تعین کرتا ہے۔
             </p>
 
             <HighlightBox title="زکوٰۃ کے حساب میں مکمل شفافیت" icon="✨" color="amber">
@@ -235,7 +245,7 @@ const ZakatArticle = ({ isUrdu }: { isUrdu: boolean }) => {
                 </div>
                 <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
                     <span className="text-4xl block mb-2">🏅</span>
-                        <strong className="block text-slate-900">سونا اور چاندی</strong>
+                    <strong className="block text-slate-900">سونا اور چاندی</strong>
                     <span className="text-xs text-slate-500">سونے اور چاندی کے موجودہ مارکیٹ ریٹ پر مالیت۔</span>
                 </div>
                 <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
@@ -1058,6 +1068,28 @@ const MarkPercentageArticle = ({ isUrdu }: { isUrdu: boolean }) => {
             ]} />
 
             <h3>Why Precise Percentages Matter for Merit Calculation</h3>
+            <p>
+                In Pakistan, "Merit" is everything. From medical colleges (MDCAT) to engineering universities like NUST and UET, a difference of even 0.01% can change your future. Our tool ensures you have the exact decimal figure for your aggregate calculations.
+            </p>
+
+            <div className="bg-slate-50 border border-slate-100 p-8 rounded-[2.5rem] my-10">
+                <h4 className="font-bold text-slate-900 mb-4 text-center">Common Total Marks Reference</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <div className="text-center">
+                        <span className="block text-2xl font-black text-blue-600">850</span>
+                        <span className="text-xs text-slate-500 uppercase font-bold">9th / 10th (KPK)</span>
+                    </div>
+                    <div className="text-center">
+                        <span className="block text-2xl font-black text-blue-600">1050</span>
+                        <span className="text-xs text-slate-500 uppercase font-bold">Federal Board</span>
+                    </div>
+                    <div className="text-center">
+                        <span className="block text-2xl font-black text-blue-600">1100</span>
+                        <span className="text-xs text-slate-500 uppercase font-bold">Punjab Boards</span>
+                    </div>
+                </div>
+            </div>
+
             <HighlightBox title="Numerical Merit" icon="⚖️" color="rose">
                 Pakistani admissions infrastructure operates on brutal numerical formulas. Universities deploy "Aggregate Formulas" that heavily weight board exam and MDCAT percentages. In this environment, a 0.2% rounding error can be the difference between admission and rejection.
             </HighlightBox>

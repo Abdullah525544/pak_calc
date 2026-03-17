@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip, AreaChart, Area, XAxis, YAxis, CartesianGrid } from 'recharts';
 import { SALARIED_TAX_SLABS } from '../constants';
 import { getFinancialAdvice } from '../services/geminiService';
-import { EMIBlogContent, TaxBlogContent, ZakatBlogContent, ProfitMarginBlogContent, BMIBlogContent, InvestmentBlogContent, RetirementBlogContent, RealEstateBlogContent, PFBlogContent, GratuityBlogContent, FreelancerBlogContent, UnitConverterBlogContent, GradeCalculatorBlogContent, CGPACalculatorBlogContent, MarkPercentageBlogContent, IncomeTaxSEOArticle, ZakatSEOArticle, FreelancerSEOArticle, InvestmentSEOArticle, RetirementSEOArticle, RealEstateSEOArticle, PFSEOArticle, GratuitySEOArticle, EMISEOArticle, ProfitMarginSEOArticle, UnitConverterSEOArticle, BMISEOArticle } from './InfoPages';
+import { EMIBlogContent, TaxBlogContent, ZakatBlogContent, ProfitMarginBlogContent, BMIBlogContent, InvestmentBlogContent, RetirementBlogContent, RealEstateBlogContent, PFBlogContent, GratuityBlogContent, FreelancerBlogContent, UnitConverterBlogContent, GradeCalculatorBlogContent, CGPACalculatorBlogContent, MarkPercentageBlogContent, IncomeTaxSEOArticle, ZakatSEOArticle, FreelancerSEOArticle, InvestmentSEOArticle, RetirementSEOArticle, RealEstateSEOArticle, PFSEOArticle, GratuitySEOArticle, EMISEOArticle, ProfitMarginSEOArticle, UnitConverterSEOArticle, BMISEOArticle, ElectricityBillBlogContent } from './InfoPages';
 
 const COLORS = ['#10b981', '#ef4444', '#f59e0b', '#3b82f6', '#8b5cf6', '#ec4899'];
 
@@ -1285,3 +1285,123 @@ export const CGPACalculatorTool = () => {
     </div>
   );
 };
+
+export const ElectricityBillTool = ({ isUrdu }: { isUrdu: boolean }) => {
+  const [units, setUnits] = useState(250);
+  const [isProtected, setIsProtected] = useState(false);
+  const [fpa, setFpa] = useState(2.8); // Current estimated FPA in PKR
+
+  // NEPRA Slabs 2025-26 (Approximate)
+  const calculateEnergyCost = (u: number, protectedStatus: boolean) => {
+    if (protectedStatus) {
+      if (u <= 100) return u * 10.54;
+      if (u <= 200) return (100 * 10.54) + ((u - 100) * 13.01);
+      return (100 * 10.54) + (100 * 13.01) + ((u - 200) * 22.44);
+    } else {
+      let cost = 0;
+      if (u <= 100) cost = u * 22.44;
+      else if (u <= 200) cost = (100 * 22.44) + ((u - 100) * 28.91);
+      else if (u <= 300) cost = (100 * 22.44) + (100 * 28.91) + ((u - 200) * 33.10);
+      else if (u <= 400) cost = (100 * 22.44) + (100 * 28.91) + (100 * 33.10) + ((u - 300) * 37.99);
+      else if (u <= 500) cost = (100 * 22.44) + (100 * 28.91) + (100 * 33.10) + (100 * 37.99) + ((u - 400) * 40.20);
+      else if (u <= 600) cost = (100 * 22.44) + (100 * 28.91) + (100 * 33.10) + (100 * 37.99) + (100 * 40.20) + ((u - 500) * 41.62);
+      else if (u <= 700) cost = (100 * 22.44) + (100 * 28.91) + (100 * 33.10) + (100 * 37.99) + (100 * 40.20) + (100 * 41.62) + ((u - 600) * 42.76);
+      else cost = (100 * 22.44) + (100 * 28.91) + (100 * 33.10) + (100 * 37.99) + (100 * 40.20) + (100 * 41.62) + (100 * 42.76) + ((u - 700) * 47.69);
+      return cost;
+    }
+  };
+
+  const energyCost = calculateEnergyCost(units, isProtected);
+  const fuelAdjustment = units * fpa;
+  const duty = energyCost * 0.015; // 1.5% Electricity Duty
+  const fcSurcharge = units * 0.43; // Financing Cost Surcharge
+  const tvFee = 35;
+
+  const totalTaxable = energyCost + fuelAdjustment + duty + fcSurcharge;
+  const gst = totalTaxable * 0.18; // 18% GST
+  const totalBill = totalTaxable + gst + tvFee;
+
+  return (
+    <div className="space-y-12 animate-in fade-in duration-700">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+          <h3 className="text-2xl font-bold">{isUrdu ? 'بجلی کے بل کی تفصیلات' : 'Electricity Bill Details'}</h3>
+
+          <div className="flex p-1 bg-slate-100 rounded-2xl">
+            <button
+              onClick={() => setIsProtected(true)}
+              className={`flex-1 py-3 rounded-xl text-xs font-black transition-all ${isProtected ? 'bg-white shadow-sm text-emerald-600' : 'text-slate-500 hover:text-slate-700'}`}
+            >
+              Protected
+            </button>
+            <button
+              onClick={() => setIsProtected(false)}
+              className={`flex-1 py-3 rounded-xl text-xs font-black transition-all ${!isProtected ? 'bg-slate-900 text-white shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
+            >
+              Non-Protected
+            </button>
+          </div>
+
+          <div>
+            <label className="text-xs font-bold text-slate-500 uppercase mb-2 block tracking-widest">Units Consumed (PKR)</label>
+            <input
+              type="number"
+              value={units}
+              onChange={e => setUnits(Number(e.target.value))}
+              className="w-full p-4 bg-slate-50 border rounded-2xl font-black text-2xl focus:ring-2 focus:ring-emerald-500 outline-none transition-all"
+            />
+            <p className="text-[10px] text-slate-400 mt-3 ml-1">Based on NEPRA 2025-2026 tariff slabs.</p>
+          </div>
+
+          <div className="pt-6 border-t border-slate-100">
+            <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Fuel Price Adjustment (FPA)</label>
+            <input
+              type="number"
+              value={fpa}
+              onChange={e => setFpa(Number(e.target.value))}
+              className="w-full p-3 bg-slate-50 border rounded-xl text-sm"
+              step="0.1"
+            />
+          </div>
+        </div>
+
+        <div className="bg-slate-900 text-white p-8 rounded-[2.5rem] shadow-2xl flex flex-col justify-center relative overflow-hidden group">
+          <div className="absolute right-0 top-0 w-64 h-64 bg-emerald-500 rounded-full blur-[120px] opacity-20 -mr-32 -mt-32 group-hover:opacity-30 transition-opacity"></div>
+
+          <div className="text-center mb-10 relative z-10">
+            <p className="text-slate-400 uppercase text-[10px] font-black tracking-widest mb-2">Estimated Monthly Bill</p>
+            <h4 className="text-6xl lg:text-7xl font-black text-emerald-400 drop-shadow-lg">
+              Rs. {Math.round(totalBill).toLocaleString()}
+            </h4>
+            <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 bg-white/5 rounded-full border border-white/10">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span className="text-[10px] font-bold text-slate-400">Includes all FBR & NEPRA taxes</span>
+            </div>
+          </div>
+
+          <div className="space-y-4 pt-8 border-t border-white/10 relative z-10">
+            <div className="flex justify-between items-center text-sm">
+              <span className="text-slate-400">Electricity Cost</span>
+              <span className="font-bold">Rs. {Math.round(energyCost).toLocaleString()}</span>
+            </div>
+            <div className="flex justify-between items-center text-sm">
+              <span className="text-slate-400">GST (18%)</span>
+              <span className="text-rose-400 font-bold">Rs. {Math.round(gst).toLocaleString()}</span>
+            </div>
+            <div className="flex justify-between items-center text-sm">
+              <span className="text-slate-400">Surcharges & FPA</span>
+              <span className="font-bold">Rs. {Math.round(fuelAdjustment + fcSurcharge + duty).toLocaleString()}</span>
+            </div>
+            <div className="flex justify-between items-center text-sm pt-4 border-t border-white/5">
+              <span className="text-slate-400">TV License Fee</span>
+              <span className="font-bold">Rs. {tvFee}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ElectricityBillBlogContent />
+    </div>
+  );
+};
+
