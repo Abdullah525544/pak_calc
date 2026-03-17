@@ -353,7 +353,7 @@ const App: React.FC = () => {
         <Route path="/zakat" element={
           <ToolWrapper
             id="zakat"
-            component={<ZakatTool />}
+            component={<ZakatTool isUrdu={isUrdu} />}
             isUrdu={isUrdu}
             handleNavigate={handleNavigate}
           />
@@ -425,7 +425,7 @@ const App: React.FC = () => {
         <Route path="/freelancer-tax" element={
           <ToolWrapper
             id="freelancer-tax"
-            component={<FreelancerTool />}
+            component={<FreelancerTool isUrdu={isUrdu} />}
             isUrdu={isUrdu}
             handleNavigate={handleNavigate}
           />

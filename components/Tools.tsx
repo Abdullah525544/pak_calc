@@ -55,14 +55,14 @@ export const IncomeTaxTool = ({ isUrdu }: { isUrdu: boolean }) => {
   );
 };
 
-export const ZakatTool = () => {
+export const ZakatTool = ({ isUrdu }: { isUrdu: boolean }) => {
   const [cash, setCash] = useState(500000);
   const [gold, setGold] = useState(0); // grams
   const [silver, setSilver] = useState(0); // grams
   const [otherAssets, setOtherAssets] = useState(0);
   const [liabilities, setLiabilities] = useState(0);
 
-  // 2026 Estimated Rates (User can update if needed, normally fetched or fixed)
+  // 2026 Estimated Rates
   const [goldRate, setGoldRate] = useState(25000); // per gram approx
   const [silverRate, setSilverRate] = useState(300); // per gram approx
 
@@ -71,64 +71,74 @@ export const ZakatTool = () => {
 
   const nisabGoldValue = 87.48 * goldRate;
   const nisabSilverValue = 612.36 * silverRate;
-  const nisabThreshold = Math.min(nisabGoldValue, nisabSilverValue); // Usually Silver is used for lower threshold
+  const nisabThreshold = Math.min(nisabGoldValue, nisabSilverValue);
 
   const isEligible = netAssets >= nisabThreshold;
   const zakat = isEligible ? netAssets * 0.025 : 0;
 
   return (
-    <div className="space-y-12">
+    <div className={`space-y-12 ${isUrdu ? 'rtl font-urdu' : ''}`}>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
-          <h3 className="text-2xl font-bold">Your Assets for Zakat (Nisab 2026)</h3>
+          <h3 className="text-2xl font-bold">{isUrdu ? 'زکوٰۃ کے لیے آپ کے اثاثے (نصاب 2026)' : 'Your Assets for Zakat (Nisab 2026)'}</h3>
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="text-xs font-bold text-slate-500">Cash in Hand/Bank</label>
+              <label className="text-xs font-bold text-slate-500">{isUrdu ? 'نقد رقم (ہاتھ میں یا بینک)' : 'Cash in Hand/Bank'}</label>
               <input type="number" value={cash} onChange={e => setCash(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
             </div>
             <div>
-              <label className="text-xs font-bold text-slate-500">Other Assets (Stocks etc)</label>
+              <label className="text-xs font-bold text-slate-500">{isUrdu ? 'دیگر اثاثے (شیئرز وغیرہ)' : 'Other Assets (Stocks etc)'}</label>
               <input type="number" value={otherAssets} onChange={e => setOtherAssets(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="text-xs font-bold text-slate-500">Gold (Grams)</label>
+              <label className="text-xs font-bold text-slate-500">{isUrdu ? 'سونا (گرام)' : 'Gold (Grams)'}</label>
               <input type="number" value={gold} onChange={e => setGold(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
             </div>
             <div>
-              <label className="text-xs font-bold text-slate-500">Silver (Grams)</label>
+              <label className="text-xs font-bold text-slate-500">{isUrdu ? 'چاندی (گرام)' : 'Silver (Grams)'}</label>
               <input type="number" value={silver} onChange={e => setSilver(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
             </div>
           </div>
           <div>
-            <label className="text-xs font-bold text-slate-500">Liabilities / Debts</label>
+            <label className="text-xs font-bold text-slate-500">{isUrdu ? 'واجبات / قرضے (منہا کرنے کے لیے)' : 'Liabilities / Debts (to subtract)'}</label>
             <input type="number" value={liabilities} onChange={e => setLiabilities(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
           </div>
 
-          <div className="pt-6 border-t border-slate-100">
-            <p className="text-xs font-bold text-slate-400 mb-2">Current Rates (Per Gram) - Updates for 2026</p>
-            <div className="grid grid-cols-2 gap-4">
-              <input type="number" value={goldRate} onChange={e => setGoldRate(Number(e.target.value))} className="w-full p-3 bg-slate-50 border rounded-xl text-xs" />
-              <input type="number" value={silverRate} onChange={e => setSilverRate(Number(e.target.value))} className="w-full p-3 bg-slate-50 border rounded-xl text-xs" />
+          <div className="pt-4 border-t border-slate-100 grid grid-cols-2 gap-4">
+            <div>
+              <label className="text-[10px] text-slate-400 font-bold uppercase">{isUrdu ? 'سونا فی گرام (PKR)' : 'Gold Rate /g (PKR)'}</label>
+              <input type="number" value={goldRate} onChange={e => setGoldRate(Number(e.target.value))} className="w-full p-2 bg-slate-50 border rounded-xl text-xs" />
+            </div>
+            <div>
+              <label className="text-[10px] text-slate-400 font-bold uppercase">{isUrdu ? 'چاندی فی گرام (PKR)' : 'Silver Rate /g (PKR)'}</label>
+              <input type="number" value={silverRate} onChange={e => setSilverRate(Number(e.target.value))} className="w-full p-2 bg-slate-50 border rounded-xl text-xs" />
             </div>
           </div>
         </div>
 
-        <div className="bg-emerald-600 text-white p-8 rounded-[2.5rem] shadow-xl text-center flex flex-col justify-center">
-          <p className="text-emerald-100 uppercase text-xs font-black mb-2">Total Net Assets</p>
-          <h4 className="text-3xl font-black mb-8 opacity-80">Rs. {Math.round(netAssets).toLocaleString()}</h4>
+        <div className={`p-8 rounded-[2.5rem] shadow-xl text-center flex flex-col justify-center transition-colors ${isEligible ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-500'}`}>
+          <p className="text-slate-400 uppercase text-xs font-black mb-2">{isUrdu ? 'قابلِ ادائیگی زکوٰۃ (2.5%)' : 'Total Zakat Payable (2.5%)'}</p>
+          <h4 className={`text-5xl font-black ${isEligible ? 'text-emerald-400' : 'text-slate-400'}`}>
+            Rs. {Math.round(zakat).toLocaleString()}
+          </h4>
 
-          <p className="text-emerald-100 uppercase text-xs font-black mb-2">Zakat Payable (2.5%)</p>
-          <h4 className="text-6xl font-black">Rs. {Math.round(zakat).toLocaleString()}</h4>
-
-          <div className={`mt-8 px-4 py-2 rounded-full text-xs font-bold inline-block mx-auto ${isEligible ? 'bg-white text-emerald-600' : 'bg-red-500 text-white'}`}>
-            {isEligible ? 'You are Sahib-e-Nisab' : 'Below Nisab Threshold'}
+          <div className="mt-8 space-y-3">
+            <div className="flex justify-between items-center px-4 py-2 bg-white/5 rounded-2xl">
+              <span className="text-xs text-slate-400">{isUrdu ? 'کُل اثاثے' : 'Total Assets'}</span>
+              <span className="font-bold">Rs. {Math.round(totalAssets).toLocaleString()}</span>
+            </div>
+            {!isEligible && (
+              <p className="text-[10px] text-amber-400 italic mt-2">
+                {isUrdu ? '* آپ کے اثاثے نصاب سے کم ہیں۔ زکوٰۃ فرض نہیں ہے۔' : '* Assets are below Nisab threshold. Zakat not applicable.'}
+              </p>
+            )}
           </div>
         </div>
       </div>
       <ZakatBlogContent />
-      <ZakatSEOArticle />
+      <ZakatSEOArticle isUrdu={isUrdu} />
     </div>
   );
 };
@@ -876,7 +886,7 @@ export const GratuityTool = () => {
   );
 };
 
-export const FreelancerTool = () => {
+export const FreelancerTool = ({ isUrdu }: { isUrdu: boolean }) => {
   const [income, setIncome] = useState(1000); // Monthly Income
   const [currency, setCurrency] = useState<'PKR' | 'USD'>('USD');
   const [exchangeRate, setExchangeRate] = useState(278); // Default est.
@@ -890,15 +900,15 @@ export const FreelancerTool = () => {
   const annualNet = netIncome * 12;
 
   return (
-    <div className="space-y-12">
+    <div className={`space-y-12 ${isUrdu ? 'rtl font-urdu' : ''}`}>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Input Section */}
         <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
-          <h3 className="text-2xl font-bold">Freelancer Income</h3>
+          <h3 className="text-2xl font-bold">{isUrdu ? 'فری لانسر انکم' : 'Freelancer Income'}</h3>
 
           <div className="space-y-4">
             <div>
-              <label className="text-xs font-bold text-slate-500 uppercase">Monthly Income</label>
+              <label className="text-xs font-bold text-slate-500 uppercase">{isUrdu ? 'ماہانہ آمدنی' : 'Monthly Income'}</label>
               <div className="flex gap-4">
                 <div className="relative w-full">
                   <input
@@ -907,66 +917,79 @@ export const FreelancerTool = () => {
                     onChange={e => setIncome(Number(e.target.value))}
                     className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-lg"
                   />
-                  <div className="absolute right-2 top-2 p-2 bg-slate-200 rounded-xl text-xs font-bold">{currency}</div>
+                  <div className={`absolute ${isUrdu ? 'left-2' : 'right-2'} top-2 p-2 bg-slate-200 rounded-xl text-xs font-bold`}>{currency}</div>
                 </div>
-                <select
-                  value={currency}
-                  onChange={e => setCurrency(e.target.value as 'PKR' | 'USD')}
-                  className="p-4 bg-slate-100 border rounded-2xl font-bold"
+                <button
+                  onClick={() => setCurrency(currency === 'USD' ? 'PKR' : 'USD')}
+                  className="px-6 bg-slate-900 text-white rounded-2xl font-bold hover:bg-slate-800 transition-colors"
                 >
-                  <option value="PKR">PKR</option>
-                  <option value="USD">USD</option>
-                </select>
+                  {currency === 'USD' ? '→ PKR' : '→ USD'}
+                </button>
               </div>
             </div>
 
             {currency === 'USD' && (
-              <div>
-                <label className="text-xs font-bold text-slate-500 uppercase">Exchange Rate (1 USD = ? PKR)</label>
-                <input
-                  type="number"
-                  value={exchangeRate}
-                  onChange={e => setExchangeRate(Number(e.target.value))}
-                  className="w-full p-4 bg-slate-50 border rounded-2xl"
-                />
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="text-[10px] text-slate-400 font-bold uppercase">{isUrdu ? 'ایکسچینج ریٹ (PKR)' : 'Exchange Rate (PKR)'}</label>
+                  <input
+                    type="number"
+                    value={exchangeRate}
+                    onChange={e => setExchangeRate(Number(e.target.value))}
+                    className="w-full p-4 bg-slate-50 border rounded-2xl"
+                  />
+                </div>
+                <div>
+                  <label className="text-[10px] text-slate-400 font-bold uppercase">{isUrdu ? 'بینک فیس (اگر ہو)' : 'Bank Fee (Optional)'}</label>
+                  <input
+                    type="number"
+                    value={bankFee}
+                    onChange={e => setBankFee(Number(e.target.value))}
+                    className="w-full p-4 bg-slate-50 border rounded-2xl"
+                  />
+                </div>
               </div>
             )}
 
-            <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100 flex items-center justify-between">
-              <div>
-                <label className="text-sm font-bold text-slate-900 block">PSEB Registered?</label>
-                <p className="text-[10px] text-slate-500"> Reduces Tax from 1% to 0.25%</p>
+            <div className="p-4 bg-emerald-50 rounded-3xl border border-emerald-100">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h4 className="font-bold text-emerald-900 text-sm">{isUrdu ? 'PSEB رجسٹریشن' : 'PSEB Registration'}</h4>
+                  <p className="text-[10px] text-emerald-600">{isUrdu ? 'کی کیا آپ PSEB کے ساتھ رجسٹرڈ فری لانسر ہیں؟' : 'Are you a registered IT exporter with PSEB?'}</p>
+                </div>
+                <button
+                  onClick={() => setIsPSEB(!isPSEB)}
+                  className={`w-14 h-8 rounded-full transition-colors relative ${isPSEB ? 'bg-emerald-500' : 'bg-slate-300'}`}
+                >
+                  <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all ${isPSEB ? (isUrdu ? 'left-1' : 'right-1') : (isUrdu ? 'right-1' : 'left-1')}`} />
+                </button>
               </div>
-              <label className="relative inline-flex items-center cursor-pointer">
-                <input type="checkbox" checked={isPSEB} onChange={e => setIsPSEB(e.target.checked)} className="sr-only peer" />
-                <div className="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
-              </label>
             </div>
           </div>
         </div>
 
-        {/* Result Section */}
-        <div className="bg-indigo-900 text-white p-8 rounded-[2.5rem] shadow-xl flex flex-col justify-center relative overflow-hidden">
-          <div className="absolute right-0 top-0 w-64 h-64 bg-indigo-500 rounded-full blur-[100px] opacity-30 -mr-32 -mt-32"></div>
+        {/* Results Section */}
+        <div className="bg-slate-900 text-white p-8 rounded-[4rem] shadow-xl flex flex-col justify-center relative overflow-hidden group">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl -mr-16 -mt-16"></div>
 
-          <p className="text-indigo-200 uppercase text-xs font-black mb-2 tracking-widest">Estimated Net Monthly Income</p>
-          <h4 className="text-5xl font-black mb-1">Rs. {Math.round(netIncome).toLocaleString()}</h4>
-          <p className="text-xs text-indigo-300 mb-8 opacity-80 pl-1">
-            {currency === 'USD' ? `($${income.toLocaleString()} USD)` : ''}
-          </p>
+          <div className="text-center relative z-10">
+            <p className="text-slate-400 uppercase text-[10px] font-black tracking-widest mb-4">
+              {isUrdu ? 'آپ کی خالص ماہانہ آمدنی' : 'Your Net Monthly Take-Home'}
+            </p>
+            <h4 className="text-5xl font-black text-emerald-400 mb-2">Rs. {Math.round(netIncome).toLocaleString()}</h4>
+            <p className="text-slate-500 text-xs">
+              {isUrdu ? `ٹیکس کٹوتی: Rs. ${Math.round(taxAmount).toLocaleString()} (${isPSEB ? '0.25%' : '1%'})` : `Tax Withheld: Rs. ${Math.round(taxAmount).toLocaleString()} (${isPSEB ? '0.25%' : '1%'})`}
+            </p>
+          </div>
 
-          <div className="space-y-3 border-t border-white/10 pt-6">
-            <div className="flex justify-between text-sm">
-              <span className="text-indigo-200">Gross Amount (PKR)</span>
-              <span className="font-bold">Rs. {Math.round(grossPKR).toLocaleString()}</span>
+          <div className="mt-10 grid grid-cols-2 gap-6 relative z-10 border-t border-white/10 pt-8">
+            <div className="text-center">
+              <p className="text-[10px] text-slate-500 uppercase font-bold mb-1">{isUrdu ? 'سالانہ خالص آمدنی' : 'Annual Net Income'}</p>
+              <p className="font-black text-lg">Rs. {Math.round(annualNet).toLocaleString()}</p>
             </div>
-            <div className="flex justify-between text-sm">
-              <span className="text-indigo-200">Tax Deduction ({isPSEB ? '0.25%' : '1.0%'})</span>
-              <span className="font-bold text-rose-300">- Rs. {Math.round(taxAmount).toLocaleString()}</span>
-            </div>
-            <div className="flex justify-between text-sm pt-4 mt-2 border-t border-white/5">
-              <span className="text-indigo-200 uppercase font-black text-[10px] tracking-widest">Yearly Net Projected</span>
-              <span className="font-bold text-emerald-300">Rs. {Math.round(annualNet).toLocaleString()}</span>
+            <div className="text-center">
+              <p className="text-[10px] text-slate-500 uppercase font-bold mb-1">{isUrdu ? 'کُل گراس (PKR)' : 'Gross Amount (PKR)'}</p>
+              <p className="font-black text-lg text-slate-300">Rs. {Math.round(grossPKR).toLocaleString()}</p>
             </div>
           </div>
         </div>

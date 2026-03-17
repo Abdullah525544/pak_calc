@@ -2729,68 +2729,74 @@ export const IncomeTaxSEOArticle = () => (
 );
 
 
-export const ZakatSEOArticle = () => (
-  <section className="mt-16 border-t border-slate-100 pt-16 space-y-8">
-    <h2 className="text-3xl font-black text-slate-900 border-l-8 border-emerald-500 pl-6">Zakat Calculator Pakistan 2026: Calculate Your Nisab Easily</h2>
-    <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-6">
-      <p>
-        The <strong>Zakat Calculator Pakistan 2026</strong> is designed to help Muslims accurately fulfill one of the five pillars of Islam. Calculating Zakat can be complex because it involves various assets including cash, gold, silver, stocks, and business inventory. Our <strong>online Zakat calculator</strong> simplifies this by providing a structured way to input your assets and liabilities, ensuring you pay exactly 2.5% of your wealth once it crosses the Nisab threshold.
-      </p>
-      <p>
-        In Pakistan, the government usually announces the official Nisab for Zakat deduction from bank accounts on the first day of Ramadan. However, personal Zakat calculation on gold and other assets is the responsibility of the individual. The Nisab is based on the value of either 87.48 grams of gold or 612.36 grams of silver. Since the value of silver is much lower, it is the standard most scholars recommend for the majority of people to determine if they are "Sahib-e-Nisab."
-      </p>
-    </div>
+export const ZakatSEOArticle = ({ isUrdu }: { isUrdu?: boolean }) => {
+  if (isUrdu) return null;
+  return (
+    <section className="mt-16 border-t border-slate-100 pt-16 space-y-8">
+      <h2 className="text-3xl font-black text-slate-900 border-l-8 border-emerald-500 pl-6">Zakat Calculator Pakistan 2026: Calculate Your Nisab Easily</h2>
+      <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-6">
+        <p>
+          The <strong>Zakat Calculator Pakistan 2026</strong> is designed to help Muslims accurately fulfill one of the five pillars of Islam. Calculating Zakat can be complex because it involves various assets including cash, gold, silver, stocks, and business inventory. Our <strong>online Zakat calculator</strong> simplifies this by providing a structured way to input your assets and liabilities, ensuring you pay exactly 2.5% of your wealth once it crosses the Nisab threshold.
+        </p>
+        <p>
+          In Pakistan, the government usually announces the official Nisab for Zakat deduction from bank accounts on the first day of Ramadan. However, personal Zakat calculation on gold and other assets is the responsibility of the individual. The Nisab is based on the value of either 87.48 grams of gold or 612.36 grams of silver. Since the value of silver is much lower, it is the standard most scholars recommend for the majority of people to determine if they are "Sahib-e-Nisab."
+        </p>
+      </div>
 
-    <div className="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-200 mt-12">
-      <h3 className="text-2xl font-bold mb-6">Frequently Asked Questions (FAQs)</h3>
-      <div className="space-y-6">
-        <div>
-          <h4 className="font-bold text-slate-900">What is the percentage of Zakat in Islam?</h4>
-          <p className="text-sm text-slate-500">Zakat is calculated at a fixed rate of 2.5% (or 1/40th) of your total qualifying wealth above the Nisab.</p>
-        </div>
-        <div>
-          <h4 className="font-bold text-slate-900">How to determine the current Nisab value?</h4>
-          <p className="text-sm text-slate-500">The Nisab is calculated based on the current market rates of gold and silver. Our <strong>Zakat Calculator</strong> allows you to input the latest rates in PKR to get an accurate threshold for 2026.</p>
+      <div className="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-200 mt-12">
+        <h3 className="text-2xl font-bold mb-6">Frequently Asked Questions (FAQs)</h3>
+        <div className="space-y-6">
+          <div>
+            <h4 className="font-bold text-slate-900">What is the percentage of Zakat in Islam?</h4>
+            <p className="text-sm text-slate-500">Zakat is calculated at a fixed rate of 2.5% (or 1/40th) of your total qualifying wealth above the Nisab.</p>
+          </div>
+          <div>
+            <h4 className="font-bold text-slate-900">How to determine the current Nisab value?</h4>
+            <p className="text-sm text-slate-500">The Nisab is calculated based on the current market rates of gold and silver. Our <strong>Zakat Calculator</strong> allows you to input the latest rates in PKR to get an accurate threshold for 2026.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 
-export const FreelancerSEOArticle = () => (
-  <section className="mt-16 border-t border-slate-100 pt-16 space-y-8">
-    <h2 className="text-3xl font-black text-slate-900 border-l-8 border-emerald-500 pl-6">Freelancer Income Calculator Pakistan: Maximize Your Export Earnings</h2>
-    <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-6">
-      <p>
-        Being a freelancer in Pakistan offers great opportunities but also comes with unique financial challenges. Our <strong>Freelancer Income Calculator Pakistan</strong> is designed specifically for individuals working on platforms like Upwork, Fiverr, and Toptal. It helps you calculate your net income after factoring in platform fees, bank conversion rates, and the FBR's export tax on IT services.
-      </p>
-      <p>
-        For the fiscal year 2025-2026, the tax regime for IT exporters has seen significant updates. As a registered freelancer with PSEB or P@SHA, you can benefit from a very low tax rate on foreign remittances. However, many freelancers are unaware of the documentation required to claim these benefits. Using our <strong>freelance tax calculator Pakistan</strong>, you can estimate your monthly take-home pay in PKR based on current dollar rates.
-      </p>
-      <p>
-        Managing your expenses is crucial for growth. After calculating your monthly earnings, it is wise to reinvest a portion of your profits. You can use our <Link to="/profit-margin" className="text-emerald-600 hover:underline font-bold">Profit Margin Calculator</Link> to determine which of your service packages are most lucrative. Furthermore, if you are looking to scale your freelance business into a small agency, understanding your corporate tax slab via the <Link to="/income-tax" className="text-emerald-600 hover:underline font-bold">Income Tax Calculator</Link> becomes essential.
-      </p>
-      <p>
-        A common pitfall for freelancers is ignoring the "hidden costs" like bank charges and US-PKR exchange rate spreads. By using our tool regularly, you can track which payment method (Direct to Bank, Payoneer, or Wise) gives you the best value for your hard-earned dollars.
-      </p>
-    </div>
+export const FreelancerSEOArticle = ({ isUrdu }: { isUrdu?: boolean }) => {
+  if (isUrdu) return null;
+  return (
+    <section className="mt-16 border-t border-slate-100 pt-16 space-y-8">
+      <h2 className="text-3xl font-black text-slate-900 border-l-8 border-emerald-500 pl-6">Freelancer Income Calculator Pakistan: Maximize Your Export Earnings</h2>
+      <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-6">
+        <p>
+          Being a freelancer in Pakistan offers great opportunities but also comes with unique financial challenges. Our <strong>Freelancer Income Calculator Pakistan</strong> is designed specifically for individuals working on platforms like Upwork, Fiverr, and Toptal. It helps you calculate your net income after factoring in platform fees, bank conversion rates, and the FBR's export tax on IT services.
+        </p>
+        <p>
+          For the fiscal year 2025-2026, the tax regime for IT exporters has seen significant updates. As a registered freelancer with PSEB or P@SHA, you can benefit from a very low tax rate on foreign remittances. However, many freelancers are unaware of the documentation required to claim these benefits. Using our <strong>freelance tax calculator Pakistan</strong>, you can estimate your monthly take-home pay in PKR based on current dollar rates.
+        </p>
+        <p>
+          Managing your expenses is crucial for growth. After calculating your monthly earnings, it is wise to reinvest a portion of your profits. You can use our <Link to="/profit-margin" className="text-emerald-600 hover:underline font-bold">Profit Margin Calculator</Link> to determine which of your service packages are most lucrative. Furthermore, if you are looking to scale your freelance business into a small agency, understanding your corporate tax slab via the <Link to="/income-tax" className="text-emerald-600 hover:underline font-bold">Income Tax Calculator</Link> becomes essential.
+        </p>
+        <p>
+          A common pitfall for freelancers is ignoring the "hidden costs" like bank charges and US-PKR exchange rate spreads. By using our tool regularly, you can track which payment method (Direct to Bank, Payoneer, or Wise) gives you the best value for your hard-earned dollars.
+        </p>
+      </div>
 
-    <div className="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-200 mt-12">
-      <h3 className="text-2xl font-bold mb-6">Frequently Asked Questions (FAQs)</h3>
-      <div className="space-y-6">
-        <div>
-          <h4 className="font-bold text-slate-900">What is the tax rate on IT export earnings in Pakistan?</h4>
-          <p className="text-sm text-slate-500">As of 2026, the tax rate for registered IT exporters is typically 1% on the total export proceeds, provided certain conditions are met.</p>
-        </div>
-        <div>
-          <h4 className="font-bold text-slate-900">Do freelancers need to file FBR returns?</h4>
-          <p className="text-sm text-slate-500">Yes, every individual earning an income in Pakistan, including freelancers, should file their annual returns to maintain Filer status and avoid higher withholding taxes.</p>
+      <div className="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-200 mt-12">
+        <h3 className="text-2xl font-bold mb-6">Frequently Asked Questions (FAQs)</h3>
+        <div className="space-y-6">
+          <div>
+            <h4 className="font-bold text-slate-900">What is the tax rate on IT export earnings in Pakistan?</h4>
+            <p className="text-sm text-slate-500">As of 2026, the tax rate for registered IT exporters is typically 1% on the total export proceeds, provided certain conditions are met.</p>
+          </div>
+          <div>
+            <h4 className="font-bold text-slate-900">Do freelancers need to file FBR returns?</h4>
+            <p className="text-sm text-slate-500">Yes, every individual earning an income in Pakistan, including freelancers, should file their annual returns to maintain Filer status and avoid higher withholding taxes.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export const InvestmentSEOArticle = () => (
   <section className="mt-16 border-t border-slate-100 pt-16 space-y-8">

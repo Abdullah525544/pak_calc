@@ -224,138 +224,277 @@ const IncomeTaxArticle = ({ isUrdu }: { isUrdu: boolean }) => {
 };
 
 const ZakatArticle = ({ isUrdu }: { isUrdu: boolean }) => {
+    if (isUrdu) {
+        return (
+            <ArticleWrapper>
+                <h2>زکوٰۃ کیلکولیٹر پاکستان 2026: اسٹیٹ بینک نصاب (سونا aur چاندی)</h2>
+                <p>
+                    زکوٰۃ اسلام کا ایک اہم رکن ہے، جس کی درست ادائیگی ہر صاحبِ نصاب مسلمان کا بنیادی دینی فریضہ ہے۔ ہمارا جدید <strong>زکوٰۃ کیلکولیٹر پاکستان (2025-2026)</strong> اسٹیٹ بینک آف پاکستان (SBP) کے مقرر کردہ نصاب کے مطابق ڈیزائن کیا گیا ہے۔ یہ ٹول پاکستان میں سونے اور چاندی کی موجودہ مارکیٹ قیمتوں (PKR) کی بنیاد پر نصاب کا خودکار تعین کرتا ہے۔
+                </p>
+
+                <HighlightBox title="زکوٰۃ کے حساب میں مکمل شفافیت" icon="✨" color="amber">
+                    ہم نے اس جدید زکوٰۃ کیلکولیٹر کو اس طرح تیار کیا ہے کہ آپ آسانی سے اپنی کل مالیت جان سکیں۔ آپ کو صرف اپنے اثاثوں (Assets) کی تفصیل دینی ہے، اور ہمارا سسٹم فوری طور پر آپ کے ذمے 2.5 فیصد لاگو ہونے والی زکوٰۃ کا ایک روپیہ بھی چھوڑے بغیر درست حساب لگا لے گا۔
+                </HighlightBox>
+
+                <h3>قابلِ زکوٰۃ اثاثہ جات کی تفصیل</h3>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">
+                    <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
+                        <span className="text-4xl block mb-2">💵</span>
+                        <strong className="block text-slate-900">نقد رقم اور بینک بیلنس</strong>
+                        <span className="text-xs text-slate-500">بینک اکاؤنٹس اور گھر میں موجود تمام نقد رقم۔</span>
+                    </div>
+                    <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
+                        <span className="text-4xl block mb-2">🏅</span>
+                        <strong className="block text-slate-900">سونا اور چاندی</strong>
+                        <span className="text-xs text-slate-500">سونے اور چاندی کے موجودہ مارکیٹ ریٹ پر مالیت۔</span>
+                    </div>
+                    <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
+                        <span className="text-4xl block mb-2">📈</span>
+                        <strong className="block text-slate-900">سرمایہ کاری اور شیئرز</strong>
+                        <span className="text-xs text-slate-500">میوچل فنڈز، سٹاکس، اور پراویڈنٹ فنڈ مالیت۔</span>
+                    </div>
+                    <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
+                        <span className="text-4xl block mb-2">📦</span>
+                        <strong className="block text-slate-900">کاروباری مالِ تجارت</strong>
+                        <span className="text-xs text-slate-500">دکان یا گودام میں موجود اشیاء کی مارکیٹ قیمت۔</span>
+                    </div>
+                </div>
+
+                <h3>نصاب اور اس کی موجودہ شرح (2025-26)</h3>
+                <p>
+                    نصاب وہ کم از کم حد ہے جس پر زکوٰۃ فرض ہوتی ہے، اور یہ مال پورے ایک اسلامی قمری سال تک ملکیت میں رہنا چاہیے۔ اسلامی اصولوں کے تحت نصاب کی دو بنیادی شکلیں ہیں۔
+                </p>
+
+                <StyledTable
+                    headers={['نصاب کا معیار', 'وزن اور وزن کی مقدار', 'اطلاق کیسے ہوتا ہے']}
+                    rows={[
+                        [<strong className="text-amber-600">سونے کا نصاب</strong>, '87.48 گرام (7.5 تولہ)', 'یہ انفرادی طور پر تب لاگو ہوتا ہے جب آپ کے پاس صرف اور صرف سونا ہو (نقدی یا چاندی نہ ہو)۔'],
+                        [<strong className="text-slate-500">چاندی کا نصاب</strong>, '612.36 گرام (52.5 تولہ)', 'علماء کا متفقہ فیصلہ ہے کہ غریبوں کے حق میں چاندی کا نصاب بہتر ہے۔ یہی بینکوں کی یکم رمضان کی کٹوتی کے لیے لاگو ہوتا ہے۔']
+                    ]}
+                />
+
+                <h3>زکوٰۃ کا درست حساب لگانے کے 4 آسان اقدامات</h3>
+                <StepGrid steps={[
+                    { title: "اثاثوں کا حساب کریں", desc: "اپنے تمام بینک اکاؤنٹس کی رقم، سونے/چاندی کی قیمت اور مال تجارت درج کریں۔" },
+                    { title: "واجبات (قرضے) نکالیں", desc: "اگر آپ پر کوئی فوری ادا کرنے والا قرض یا بل باقی ہے، تو اسے منہا کریں۔" },
+                    { title: "نصاب سے موازنہ کریں", desc: "سسٹم خود بخود جانچ لے گا کہ آپ کی مالیت چاندی یا سونے کے نصاب سے زائد ہے یا نہیں۔" },
+                    { title: "درست کٹوتی کی مالیت", desc: "اگر مالیت نصاب سے زائد ہے، تو سسٹم 2.5 فیصد لاگو کر کے درست زکوٰۃ بتا دے گا۔" }
+                ]} />
+
+                <h3>سٹیٹ بینک آف پاکستان (SBP) زکوٰۃ کٹوتی کے قواعد</h3>
+                <p>
+                    زکوٰۃ و عشر آرڈیننس 1980 کے تحت، سٹیٹ بینک آف پاکستان یکم رمضان المبارک کو تمام سیونگ (Savings) اور پرافٹ اینڈ لاس اکاؤنٹس سے 2.5 فیصد کے حساب سے زکوٰۃ خودکار طور پر کاٹ لیتا ہے، بشرطیکہ بیلنس حکومتی مقرر کردہ نصاب کی مالیت سے زیادہ ہو۔
+                </p>
+                <HighlightBox title="زکوٰۃ سے استثنیٰ (CZ-50 فارم)" icon="📜" color="slate">
+                    اگر آپ اپنی زکوٰۃ خو د مستحقین تک پہنچانا چاہتے ہیں، اور بینک کی سرکاری کٹوتی سے بچنا چاہتے ہیں، تو آپ کو مقررہ تاریخ سے قبل اپنے متعلقہ بینک میں قانونی حلف نامہ یعنی "CZ-50 Form" جمع کروانا لازمی ہوتا ہے۔
+                </HighlightBox>
+            </ArticleWrapper>
+        );
+    }
+
     return (
         <ArticleWrapper>
-            <h2>زکوٰۃ کیلکولیٹر پاکستان 2026: اسٹیٹ بینک نصاب (سونا اور چاندی)</h2>
+            <h2>Zakat Calculator Pakistan 2026: SBP Nisab (Gold & Silver)</h2>
             <p>
-                زکوٰۃ اسلام کا ایک اہم رکن ہے، جس کی درست ادائیگی ہر صاحبِ نصاب مسلمان کا بنیادی دینی فریضہ ہے۔ ہمارا جدید <strong>زکوٰۃ کیلکولیٹر پاکستان (2025-2026)</strong> اسٹیٹ بینک آف پاکستان (SBP) کے مقرر کردہ نصاب کے مطابق ڈیزائن کیا گیا ہے۔ یہ ٹول پاکستان میں سونے اور چاندی کی موجودہ مارکیٹ قیمتوں (PKR) کی بنیاد پر نصاب کا خودکار تعین کرتا ہے۔
+                Zakat is one of the five pillars of Islam, and its accurate calculation is a fundamental religious obligation for every Sahab-e-Nisab Muslim. Our advanced <strong>Zakat Calculator Pakistan (2025-2026)</strong> is designed in accordance with the Nisab announced by the State Bank of Pakistan (SBP). The tool automatically determines the Nisab based on current market rates for Gold and Silver in PKR.
             </p>
 
-            <HighlightBox title="زکوٰۃ کے حساب میں مکمل شفافیت" icon="✨" color="amber">
-                ہم نے اس جدید زکوٰۃ کیلکولیٹر کو اس طرح تیار کیا ہے کہ آپ آسانی سے اپنی کل مالیت جان سکیں۔ آپ کو صرف اپنے اثاثوں (Assets) کی تفصیل دینی ہے، اور ہمارا سسٹم فوری طور پر آپ کے ذمے 2.5 فیصد لاگو ہونے والی زکوٰۃ کا ایک روپیہ بھی چھوڑے بغیر درست حساب لگا لے گا۔
+            <HighlightBox title="Total Transparency in Calculation" icon="✨" color="amber">
+                We have built this Zakat calculator to ensure you can easily account for your total wealth. Simply input your asset details, and our system will accurately calculate the 2.5% Zakat due without leaving out a single rupee.
             </HighlightBox>
 
-            <h3>قابلِ زکوٰۃ اثاثہ جات کی تفصیل</h3>
+            <h3>Breakdown of Zakaat-able Assets</h3>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">
                 <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
                     <span className="text-4xl block mb-2">💵</span>
-                    <strong className="block text-slate-900">نقد رقم اور بینک بیلنس</strong>
-                    <span className="text-xs text-slate-500">بینک اکاؤنٹس اور گھر میں موجود تمام نقد رقم۔</span>
+                    <strong className="block text-slate-900">Cash & Bank Balance</strong>
+                    <span className="text-xs text-slate-500">All liquid cash in bank accounts or at home.</span>
                 </div>
                 <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
                     <span className="text-4xl block mb-2">🏅</span>
-                    <strong className="block text-slate-900">سونا اور چاندی</strong>
-                    <span className="text-xs text-slate-500">سونے اور چاندی کے موجودہ مارکیٹ ریٹ پر مالیت۔</span>
+                    <strong className="block text-slate-900">Gold & Silver</strong>
+                    <span className="text-xs text-slate-500">Value of ornaments based on current market rates.</span>
                 </div>
                 <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
                     <span className="text-4xl block mb-2">📈</span>
-                    <strong className="block text-slate-900">سرمایہ کاری اور شیئرز</strong>
-                    <span className="text-xs text-slate-500">میوچل فنڈز، سٹاکس، اور پراویڈنٹ فنڈ مالیت۔</span>
+                    <strong className="block text-slate-900">Investments & Shares</strong>
+                    <span className="text-xs text-slate-500">Mutual funds, stocks, and provident fund values.</span>
                 </div>
                 <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
                     <span className="text-4xl block mb-2">📦</span>
-                    <strong className="block text-slate-900">کاروباری مالِ تجارت</strong>
-                    <span className="text-xs text-slate-500">دکان یا گودام میں موجود اشیاء کی مارکیٹ قیمت۔</span>
+                    <strong className="block text-slate-900">Business Inventory</strong>
+                    <span className="text-xs text-slate-500">Market value of goods present in shop or warehouse.</span>
                 </div>
             </div>
 
-            <h3>نصاب اور اس کی موجودہ شرح (2025-26)</h3>
+            <h3>Nisab Thresholds 2025-2026</h3>
             <p>
-                نصاب وہ کم از کم حد ہے جس پر زکوٰۃ فرض ہوتی ہے، اور یہ مال پورے ایک اسلامی قمری سال تک ملکیت میں رہنا چاہیے۔ اسلامی اصولوں کے تحت نصاب کی دو بنیادی شکلیں ہیں۔
+                Nisab is the minimum threshold of wealth that makes Zakat mandatory. This wealth must remain in your possession for one full lunar year. There are two primary standards for Nisab.
             </p>
 
             <StyledTable
-                headers={['نصاب کا معیار', 'وزن اور وزن کی مقدار', 'اطلاق کیسے ہوتا ہے']}
+                headers={['Nisab Criterion', 'Weight Requirement', 'How it applies']}
                 rows={[
-                    [<strong className="text-amber-600">سونے کا نصاب</strong>, '87.48 گرام (7.5 تولہ)', 'یہ انفرادی طور پر تب لاگو ہوتا ہے جب آپ کے پاس صرف اور صرف سونا ہو (نقدی یا چاندی نہ ہو)۔'],
-                    [<strong className="text-slate-500">چاندی کا نصاب</strong>, '612.36 گرام (52.5 تولہ)', 'علماء کا متفقہ فیصلہ ہے کہ غریبوں کے حق میں چاندی کا نصاب بہتر ہے۔ یہی بینکوں کی یکم رمضان کی کٹوتی کے لیے لاگو ہوتا ہے۔']
+                    [<strong className="text-amber-600">Gold Nisab</strong>, '87.48 Grams (7.5 Tola)', 'Applies if you only possess gold without any cash or silver.'],
+                    [<strong className="text-slate-500">Silver Nisab</strong>, '612.36 Grams (52.5 Tola)', 'Scholars recommend silver nisab for the benefit of the poor; used by banks for 1st Ramadan deduction.']
                 ]}
             />
 
-            <h3>زکوٰۃ کا درست حساب لگانے کے 4 آسان اقدامات</h3>
+            <h3>4 Easy Steps to Calculate Your Zakat</h3>
             <StepGrid steps={[
-                { title: "اثاثوں کا حساب کریں", desc: "اپنے تمام بینک اکاؤنٹس کی رقم، سونے/چاندی کی قیمت اور مال تجارت درج کریں۔" },
-                { title: "واجبات (قرضے) نکالیں", desc: "اگر آپ پر کوئی فوری ادا کرنے والا قرض یا بل باقی ہے، تو اسے منہا کریں۔" },
-                { title: "نصاب سے موازنہ کریں", desc: "سسٹم خود بخود جانچ لے گا کہ آپ کی مالیت چاندی یا سونے کے نصاب سے زائد ہے یا نہیں۔" },
-                { title: "درست کٹوتی کی مالیت", desc: "اگر مالیت نصاب سے زائد ہے، تو سسٹم 2.5 فیصد لاگو کر کے درست زکوٰۃ بتا دے گا۔" }
+                { title: "List Your Assets", desc: "Enter all cash, gold/silver values, and business merchandise." },
+                { title: "Subtract Liabilities", desc: "Deduct any immediate debts or bills you owe to others." },
+                { title: "Compare with Nisab", desc: "The system checks if your net wealth exceeds the silver or gold threshold." },
+                { title: "Get Your Zakat Due", desc: "If applicable, the system applies the 2.5% rate to show the exact amount." }
             ]} />
 
-            <h3>سٹیٹ بینک آف پاکستان (SBP) زکوٰۃ کٹوتی کے قواعد</h3>
+            <h3>SBP Zakat Deduction Rules (Banks)</h3>
             <p>
-                زکوٰۃ و عشر آرڈیننس 1980 کے تحت، سٹیٹ بینک آف پاکستان یکم رمضان المبارک کو تمام سیونگ (Savings) اور پرافٹ اینڈ لاس اکاؤنٹس سے 2.5 فیصد کے حساب سے زکوٰۃ خودکار طور پر کاٹ لیتا ہے، بشرطیکہ بیلنس حکومتی مقرر کردہ نصاب کی مالیت سے زیادہ ہو۔
+                Under the Zakat & Ushr Ordinance 1980, the State Bank of Pakistan deducts 2.5% Zakat from Savings and PLS accounts on the 1st of Ramadan, provided the balance exceeds the notified Nisab amount.
             </p>
-            <HighlightBox title="زکوٰۃ سے استثنیٰ (CZ-50 فارم)" icon="📜" color="slate">
-                اگر آپ اپنی زکوٰۃ خو د مستحقین تک پہنچانا چاہتے ہیں، اور بینک کی سرکاری کٹوتی سے بچنا چاہتے ہیں، تو آپ کو مقررہ تاریخ سے قبل اپنے متعلقہ بینک میں قانونی حلف نامہ یعنی "CZ-50 Form" جمع کروانا لازمی ہوتا ہے۔
+            <HighlightBox title="Zakat Exemption (CZ-50 Form)" icon="📜" color="slate">
+                If you wish to distribute Zakat yourself and avoid bank deduction, you must submit a "CZ-50 Form" (affidavit) to your bank before the specified deadline.
             </HighlightBox>
         </ArticleWrapper>
     );
 }
 
 const FreelancerTaxArticle = ({ isUrdu }: { isUrdu: boolean }) => {
+    if (isUrdu) {
+        return (
+            <ArticleWrapper>
+                <h2>فری لانسر انکم اور ٹیکس کیلکولیٹر پاکستان 2026: آئی ٹی ایکسپورٹ ٹیکس قوانین</h2>
+                <p>
+                    پاکستان عالمی سطح پر فری لانسنگ کے حوالے سے تیزی سے ابھرتی ہوئی مارکیٹ ہے۔ چاہے آپ Upwork، Fiverr کے ذریعے کما رہے ہوں یا بیرونِ ملک سے براہِ راست ادائیگی لے رہے ہوں، اصل اور خالص (Net) آمدنی کا اندازہ لگانا انتہائی پیچیدہ ہوتا ہے۔ ہمارا خاص <strong>فری لانسر ٹیکس اور انکم کیلکولیٹر پاکستان</strong> آپ کی کُل ڈالرز کی آمدنی کو روپے کے تبادلے، پلیٹ فارمز کی فیسوں اور لازمی ایف بی آر ٹیکس کٹوتی سے گزار کر آپ کو درست ہاتھ آنے والی رقم بتاتا ہے۔
+                </p>
+
+                <HighlightBox title="خالص آمدنی کا بالکل درست حساب" icon="💻" color="amber">
+                    عام ٹیکس کیلکولیٹرز میں یہ خامی ہوتی ہے کہ وہ فری لانسرز کے مخصوص کام اور فیسوں کو یکسر نظرانداز کر دیتے ہیں۔ وہ نہ تو پلیٹ فارم فیس کاٹتے ہیں اور نہ ہی بینک کی ڈالر خریدنے میں استعمال ہونے والے ایکسچینج ریٹ کو سمجھتے ہیں۔ ہمارا جدید ٹول ڈالر ملنے سے لے کر، بینک کے ذریعے آپ کے اکاؤنٹ میں پاکستانی روپے (PKR) کی منتقلی تک، تمام مرحلوں کی درست کیلکولیشن کرتا ہے۔
+                </HighlightBox>
+
+                <h3>ہماری فری لانس ایپ کس طرح حساب لگاتی ہے؟</h3>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">
+                    <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
+                        <span className="text-3xl">💱</span>
+                        <div>
+                            <strong className="block text-slate-900 mb-1">کرنسی اور ایکسچینج ریٹ</strong>
+                            <span className="text-xs text-slate-500">انٹربینک (Interbank) ڈالر ریٹ کو بنیاد بنا کر روپے کی قیمت نکالنا۔</span>
+                        </div>
+                    </div>
+                    <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
+                        <span className="text-3xl">🛡️</span>
+                        <div>
+                            <strong className="block text-slate-900 mb-1">پلیٹ فارم کی کٹوتی</strong>
+                            <span className="text-xs text-slate-500">کلائنٹ سے ملنے والی رقم میں سے 20% کمیشن (Fiverr/Upwork فیس) کی خودکار کٹوتی۔</span>
+                        </div>
+                    </div>
+                    <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
+                        <span className="text-3xl">🏦</span>
+                        <div>
+                            <strong className="block text-slate-900 mb-1">مقامی بینک چارجز</strong>
+                            <span className="text-xs text-slate-500">پاکستانی بینکوں (مثلاً HBL، Meezan) کے منافع یا کٹوتی کا حساب۔</span>
+                        </div>
+                    </div>
+                    <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
+                        <span className="text-3xl">📄</span>
+                        <div>
+                            <strong className="block text-slate-900 mb-1">ایف بی آر (FBR) ایکسپورٹ ٹیکس</strong>
+                            <span className="text-xs text-slate-500">آپ کے فائلر سٹیٹس کے مطابق 0.25% یا 1% ود ہولڈنگ ٹیکس کی کٹوتی۔</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>حساب کتاب کرنے کے 4 آسان اقدامات</h3>
+                <StepGrid steps={[
+                    { title: "ڈالر آمدنی لکھیں", desc: "وہ کُل رقم درج کریں جو آپ کے کلائنٹ نے کسی بھی فیس کی کٹوتی سے پہلے ادا کی۔" },
+                    { title: "مارکیٹ پلیس کی فیس سیٹ کریں", desc: "اس پلیٹ فارم کا نام یا خودکار فیس شامل کریں جو کم از کم 20 فیصد تک ہوتی ہے۔" },
+                    { title: "بینک کٹوتی کا حساب", desc: "ڈالر کے اصل انٹربینک ریٹ اور مقامی بینک کے خریدنے کے ریٹ میں فرق شامل کریں۔" },
+                    { title: "FBR کا ٹیکس درج کریں", desc: "اپنے فائلر ہونے کی حیثیت بتائیں۔ کیلکولیٹر خودکار قانون کے مطابق آئی ٹی استثنیٰ لگائے گا۔" }
+                ]} />
+
+                <h3>فری لانسرز اور آئی ٹی پروفیشنلز کے لیے FBR کے نئے قوانین (2025-2026)</h3>
+                <p>
+                    وفاقی حکومت (FBR) پاکستان میں آئی ٹی سروسز اور ایکسپورٹس کی شاندار حوصلہ افزائی کے لیے سہولتیں فراہم کرتی ہے۔ اگر فری لانسر قانونی بینکنگ چینلز کے ذریعے اپنی رقم "زرمبادلہ" (Foreign Inward Remittance) کی صورت میں لاتے ہیں، تو ان کے لیے نارمل تنخواہ دار طبقے کے انکم ٹیکس قوانین لاگو نہیں ہوتے۔
+                </p>
+
+                <StyledTable
+                    headers={['ٹیکس فائلر ہونے کی حیثیت', 'آئی ٹی ٹیکس کی شرح (Withholding Tax)', 'قانون اور شرائط']}
+                    rows={[
+                        [<strong className="text-emerald-600">PSEB رجسٹرڈ فائلر</strong>, 'بیرونی زرمبادلہ پر فقط 0.25%', 'یہ سب سے کم شرح ہے۔ آپ کو پاکستان سافٹ ویئر ایکسپورٹ بورڈ کے ساتھ رجسٹرڈ ہونا ضروری ہے۔'],
+                        [<strong className="text-amber-500">عام ایکٹو فائلر (Non-PSEB)</strong>, 'بیرونی زرمبادلہ پر 1.00%', 'آپ کا نام FBR کی ایکٹو فائلر لسٹ میں شامل ہونا لازمی ہے۔ زیادہ تر فری لانسرز اسی کے اہل ہیں۔'],
+                        [<strong className="text-rose-500">نان فائلر (Non-Filer)</strong>, 'غیر معمولی کٹوتی / پورا انکم ٹیکس قانون', 'حکومت اب نان فائلرز پر بھاری ٹیکس کٹوتیاں کر رہی ہے۔ ان کے لیے کسی بھی آئی ٹی ٹیکس کی چھوٹ کی اجازت نہیں ہے۔']
+                    ]}
+                />
+            </ArticleWrapper>
+        );
+    }
+
     return (
         <ArticleWrapper>
-            <h2>فری لانسر انکم اور ٹیکس کیلکولیٹر پاکستان 2026: آئی ٹی ایکسپورٹ ٹیکس قوانین</h2>
+            <h2>Freelancer Tax Calculator Pakistan 2026: IT Export Laws</h2>
             <p>
-                پاکستان عالمی سطح پر فری لانسنگ کے حوالے سے تیزی سے ابھرتی ہوئی مارکیٹ ہے۔ چاہے آپ Upwork، Fiverr کے ذریعے کما رہے ہوں یا بیرونِ ملک سے براہِ راست ادائیگی لے رہے ہوں، اصل اور خالص (Net) آمدنی کا اندازہ لگانا انتہائی پیچیدہ ہوتا ہے۔ ہمارا خاص <strong>فری لانسر ٹیکس اور انکم کیلکولیٹر پاکستان</strong> آپ کی کُل ڈالرز کی آمدنی کو روپے کے تبادلے، پلیٹ فارمز کی فیسوں اور لازمی ایف بی آر ٹیکس کٹوتی سے گزار کر آپ کو درست ہاتھ آنے والی رقم بتاتا ہے۔
+                Pakistan is emerging as a global hub for freelancing. Whether you are earning through Upwork, Fiverr, or direct international clients, estimating your actual "net" take-home pay can be complex. Our specialized <strong>Freelancer Tax & Income Calculator Pakistan</strong> processes your gross dollar earnings through exchange rates, platform fees, and mandatory FBR tax deductions to give you an exact figure.
             </p>
 
-            <HighlightBox title="خالص آمدنی کا بالکل درست حساب" icon="💻" color="amber">
-                عام ٹیکس کیلکولیٹرز میں یہ خامی ہوتی ہے کہ وہ فری لانسرز کے مخصوص کام اور فیسوں کو یکسر نظرانداز کر دیتے ہیں۔ وہ نہ تو پلیٹ فارم فیس کاٹتے ہیں اور نہ ہی بینک کی ڈالر خریدنے میں استعمال ہونے والے ایکسچینج ریٹ کو سمجھتے ہیں۔ ہمارا جدید ٹول ڈالر ملنے سے لے کر، بینک کے ذریعے آپ کے اکاؤنٹ میں پاکستانی روپے (PKR) کی منتقلی تک، تمام مرحلوں کی درست کیلکولیشن کرتا ہے۔
+            <HighlightBox title="Precision in Net Earnings" icon="💻" color="amber">
+                Generic tax calculators often fail to account for the specific nuances of freelancing. They don't deduct platform commissions or consider the spread between interbank rates and what local banks offer. Our tool models the entire journey from your client's payment to PKR in your local account.
             </HighlightBox>
 
-            <h3>ہماری فری لانس ایپ کس طرح حساب لگاتی ہے؟</h3>
+            <h3>How Our Freelancer App Calculates Your Income</h3>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">
                 <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
                     <span className="text-3xl">💱</span>
                     <div>
-                        <strong className="block text-slate-900 mb-1">کرنسی اور ایکسچینج ریٹ</strong>
-                        <span className="text-xs text-slate-500">انٹربینک (Interbank) ڈالر ریٹ کو بنیاد بنا کر روپے کی قیمت نکالنا۔</span>
+                        <strong className="block text-slate-900 mb-1">Exchange Rates</strong>
+                        <span className="text-xs text-slate-500">Converting USD to PKR using realistic local bank buying rates.</span>
                     </div>
                 </div>
                 <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
                     <span className="text-3xl">🛡️</span>
                     <div>
-                        <strong className="block text-slate-900 mb-1">پلیٹ فارم کی کٹوتی</strong>
-                        <span className="text-xs text-slate-500">کلائنٹ سے ملنے والی رقم میں سے 20% کمیشن (Fiverr/Upwork فیس) کی خودکار کٹوتی۔</span>
+                        <strong className="block text-slate-900 mb-1">Platform Commissions</strong>
+                        <span className="text-xs text-slate-500">Automatic 20% deduction for Fiverr/Upwork service fees.</span>
                     </div>
                 </div>
                 <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
                     <span className="text-3xl">🏦</span>
                     <div>
-                        <strong className="block text-slate-900 mb-1">مقامی بینک چارجز</strong>
-                        <span className="text-xs text-slate-500">پاکستانی بینکوں (مثلاً HBL، Meezan) کے منافع یا کٹوتی کا حساب۔</span>
+                        <strong className="block text-slate-900 mb-1">Local Bank Charges</strong>
+                        <span className="text-xs text-slate-500">Factoring in fixed arrival fees and tax on remittance.</span>
                     </div>
                 </div>
                 <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
                     <span className="text-3xl">📄</span>
                     <div>
-                        <strong className="block text-slate-900 mb-1">ایف بی آر (FBR) ایکسپورٹ ٹیکس</strong>
-                        <span className="text-xs text-slate-500">آپ کے فائلر سٹیٹس کے مطابق 0.25% یا 1% ود ہولڈنگ ٹیکس کی کٹوتی۔</span>
+                        <strong className="block text-slate-900 mb-1">FBR Export Tax</strong>
+                        <span className="text-xs text-slate-500">Applying 0.25% or 1% withholding tax based on filer status.</span>
                     </div>
                 </div>
             </div>
 
-            <h3>حساب کتاب کرنے کے 4 آسان اقدامات</h3>
+            <h3>4 Easy Steps to Your Net Income</h3>
             <StepGrid steps={[
-                { title: "ڈالر آمدنی لکھیں", desc: "وہ کُل رقم درج کریں جو آپ کے کلائنٹ نے کسی بھی فیس کی کٹوتی سے پہلے ادا کی۔" },
-                { title: "مارکیٹ پلیس کی فیس سیٹ کریں", desc: "اس پلیٹ فارم کا نام یا خودکار فیس شامل کریں جو کم از کم 20 فیصد تک ہوتی ہے۔" },
-                { title: "بینک کٹوتی کا حساب", desc: "ڈالر کے اصل انٹربینک ریٹ اور مقامی بینک کے خریدنے کے ریٹ میں فرق شامل کریں۔" },
-                { title: "FBR کا ٹیکس درج کریں", desc: "اپنے فائلر ہونے کی حیثیت بتائیں۔ کیلکولیٹر خودکار قانون کے مطابق آئی ٹی استثنیٰ لگائے گا۔" }
+                { title: "Enter Gross USD", desc: "Input the total payment from your client before any deduction." },
+                { title: "Select Platform", desc: "Set the percentage fee your marketplace charges (usually 20%)." },
+                { title: "Bank Rate Adjustment", desc: "Input the difference between current interbank and buying rates." },
+                { title: "Set FBR Status", desc: "Define if you are PSEB registered or a simple active filer." }
             ]} />
 
-            <h3>فری لانسرز اور آئی ٹی پروفیشنلز کے لیے FBR کے نئے قوانین (2025-2026)</h3>
+            <h3>FBR IT Export Policies for Freelancers (2025-2026)</h3>
             <p>
-                وفاقی حکومت (FBR) پاکستان میں آئی ٹی سروسز اور ایکسپورٹس کی شاندار حوصلہ افزائی کے لیے سہولتیں فراہم کرتی ہے۔ اگر فری لانسر قانونی بینکنگ چینلز کے ذریعے اپنی رقم "زرمبادلہ" (Foreign Inward Remittance) کی صورت میں لاتے ہیں، تو ان کے لیے نارمل تنخواہ دار طبقے کے انکم ٹیکس قوانین لاگو نہیں ہوتے۔
+                The government of Pakistan encourages IT exports by offering reduced tax rates. If freelancers bring in foreign exchange through legal banking channels, they avoid the standard heavy income tax brackets applied to salaried individuals.
             </p>
 
             <StyledTable
-                headers={['ٹیکس فائلر ہونے کی حیثیت', 'آئی ٹی ٹیکس کی شرح (Withholding Tax)', 'قانون اور شرائط']}
+                headers={['Registration Status', 'Withholding Tax Rate', 'Conditions']}
                 rows={[
-                    [<strong className="text-emerald-600">PSEB رجسٹرڈ فائلر</strong>, 'بیرونی زرمبادلہ پر فقط 0.25%', 'یہ سب سے کم شرح ہے۔ آپ کو پاکستان سافٹ ویئر ایکسپورٹ بورڈ کے ساتھ رجسٹرڈ ہونا ضروری ہے۔'],
-                    [<strong className="text-amber-500">عام ایکٹو فائلر (Non-PSEB)</strong>, 'بیرونی زرمبادلہ پر 1.00%', 'آپ کا نام FBR کی ایکٹو فائلر لسٹ میں شامل ہونا لازمی ہے۔ زیادہ تر فری لانسرز اسی کے اہل ہیں۔'],
-                    [<strong className="text-rose-500">نان فائلر (Non-Filer)</strong>, 'غیر معمولی کٹوتی / پورا انکم ٹیکس قانون', 'حکومت اب نان فائلرز پر بھاری ٹیکس کٹوتیاں کر رہی ہے۔ ان کے لیے کسی بھی آئی ٹی ٹیکس کی چھوٹ کی اجازت نہیں ہے۔']
+                    [<strong className="text-emerald-600">PSEB Registered</strong>, '0.25% on Foreign Remittance', 'Requires valid registration with Pakistan Software Export Board.'],
+                    [<strong className="text-amber-500">Active Filer (Non-PSEB)</strong>, '1.00% on Foreign Remittance', 'Applicable to most freelancers registered as active tax filers.'],
+                    [<strong className="text-rose-500">Non-Filer Status</strong>, 'Full Income Tax Brackets', 'No exemptions; subject to standard and heavy tax rates.']
                 ]}
             />
         </ArticleWrapper>
