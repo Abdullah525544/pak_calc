@@ -185,21 +185,23 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     ]
   },
   'mark-percentage': {
-    title: 'Marks Percentage Calculator Pakistan – Matric (1100) & Board Result %',
-    description: 'Calculate your exam percentage instantly ✓ 1100 total marks percentage (850/1100) ✓ Matric & Inter board results ✓ Quick & 100% accurate. Used by students across Pakistan.',
+    title: 'Marks Percentage Calculator Pakistan – 1100 & 550 Board Result %',
+    description: 'Calculate your exam percentage instantly ✓ 1100 total marks percentage (Matric/Inter) ✓ 850/1100 marks percentage ✓ Board results calculator ✓ 100% accurate for students across Pakistan.',
     faqs: [
-      { question: 'How to calculate matric result percentage?', answer: 'Matric percentage = (Obtained Marks / Total Marks) × 100. For example, if you got 892 marks out of 1100, your percentage = (892/1100) × 100 = 81.09%. This formula works for all board exams in Pakistan.' },
-      { question: '696 out of 1100 marks percentage kya hota hai?', answer: '696 out of 1100 marks ka percentage = (696/1100) × 100 = 63.27%. This falls in the B grade category in Pakistan\'s Matric/SSC grading system.' },
-      { question: 'How to calculate percentage from SSLC marks?', answer: 'SSLC/Matric percentage = (Total marks obtained / Maximum marks) × 100. Enter your obtained marks and total marks in our calculator to get instant results with grade classification.' }
+      { question: 'How to calculate marks percentage out of 1100?', answer: 'To calculate percentage out of 1100: Divide your obtained marks by 1100 and multiply by 100. Formula: (Obtained Marks / 1100) × 100. For example, if you got 935 marks, your percentage is (935/1100) × 100 = 85%.' },
+      { question: 'What is the percentage of 850 out of 1100 marks?', answer: '850 out of 1100 marks percentage = (850 / 1100) × 100 = 77.27%. This is usually considered an A grade in Pakistan board exams.' },
+      { question: 'How to calculate 9th and 10th class result percentage?', answer: 'Add your 9th and 10th class marks to get the total obtained marks (usually out of 1100 or 1200). Use our calculator to enter these values and get your final Matric result percentage instantly.' },
+      { question: 'What is 550 out of 1100 marks in percentage?', answer: '550 out of 1100 is exactly 50%. Formula: (550 / 1100) × 100 = 50%.' },
+      { question: 'How to calculate percentage from total marks of 1200?', answer: 'If your total marks are 1200, divide your obtained marks by 1200 and multiply by 100. Our calculator lets you change the total marks field to 1200 for exact results.' }
     ],
     howTo: {
-      name: "How to Calculate Marks Percentage for Pakistan Board Exams",
-      description: "Fastest way to convert your obtained marks into a percentage for Matric, Inter, or University results.",
+      name: "How to Calculate Marks Percentage for Pakistan Board Exams (Matric/Inter)",
+      description: "Quick guide to converting your exam marks into a percentage for BISE Lahore, MEPCO, IESCO, and other boards.",
       steps: [
-        { name: "Enter Obtained Marks", text: "Type in the total marks you secured in your exams (e.g., 850)." },
-        { name: "Enter Total Marks", text: "Type in the maximum marks possible (e.g., 1100 for Matric, 1100 for Inter)." },
-        { name: "Check Percentage", text: "The calculator instantly displays your percentage up to two decimal places." },
-        { name: "Verify Grade", text: "Review the automatically generated grade based on your calculated percentage." }
+        { name: "Enter Secured Marks", text: "Enter the total marks you obtained in your result (e.g., 940)." },
+        { name: "Enter Maximum Marks", text: "Enter the total marks possible (usually 1100 for Matric/Inter or 1200)." },
+        { name: "Get Instant Result", text: "Click calculate to see your percentage up to two decimal points instantly." },
+        { name: "See Your Grade", text: "The calculator will also show your grade classification based on Pakistan's board criteria." }
       ]
     }
   },
