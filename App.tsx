@@ -63,8 +63,8 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     }
   },
   'zakat': {
-    title: 'Zakat Calculator Pakistan 2026 – SBP Nisab (Gold & Silver PKR)',
-    description: 'Calculate Zakat on cash, gold & silver in Pakistani Rupees ✓ Latest SBP Nisab 2026 ✓ 7.5 Tola Gold vs 52.5 Tola Silver rates ✓ Bank deduction guide. 100% free.',
+    title: 'Zakat Calculator Pakistan 2026 | Accurate Nisab Rules',
+    description: 'Fulfil your religious duty accurately. Calculate your Zakat for Ramadan 2025-26 using the latest Pakistani gold and silver Nisab rates. Calculate yours free!',
     faqs: [
       { question: 'How to calculate Zakat in Pakistan 2026?', answer: 'Zakat is 2.5% of your total wealth above the Nisab threshold. Add up all your savings, gold, silver, and investments. If the total exceeds the Nisab value (approximately PKR 135,000 based on silver, or PKR 1,200,000+ based on gold for 2026), you owe Zakat on the entire amount.' },
       { question: 'What is the Zakat Nisab in Pakistan for 2026?', answer: 'The Zakat Nisab in Pakistan for 2026 is based on the value of 7.5 tola gold or 52.5 tola silver. The SBP announces the Nisab value each Ramadan. Based on current rates, the silver-based Nisab is approximately PKR 135,000 and the gold-based Nisab is approximately PKR 1,200,000.' },
@@ -100,8 +100,8 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     }
   },
   'investment-return': {
-    title: 'Investment Return Calculator Pakistan 2026 – Free Savings & Profit Calculator',
-    description: 'Calculate compound interest & investment returns in PKR ✓ Compare National Savings, mutual funds & bank profits ✓ Pakistan Investment Bonds calculator included.',
+    title: 'ROI & Investment Return Calculator Pakistan (2025)',
+    description: 'Track profits on mutual funds, National Savings, or real estate. Use our free 2025-26 ROI and Investment Return Calculator tailored for Pakistani investors. Try it!',
     faqs: [
       { question: 'How to calculate investment return in Pakistan?', answer: 'To calculate your investment return: Enter your initial investment amount, expected annual return rate (NSC offers 11-15%, mutual funds 10-20%), investment duration, and our calculator will show you total profit with compound interest, adjusted for inflation.' }
     ]
@@ -130,8 +130,8 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     ]
   },
   'gratuity': {
-    title: 'Gratuity Calculator Pakistan 2026 – Free Tool for Private & Govt Employees',
-    description: 'Calculate your end-of-service gratuity amount instantly ✓ Based on latest Pakistan labor laws ✓ For private sector employees ✓ Basic vs gross salary calculation.',
+    title: 'Gratuity Calculator Pakistan 2025 | As Per Labor Law',
+    description: 'Resigning or retiring? Calculate your exact end-of-service payout using the official Gratuity Calculator Pakistan 2025. Know your legal rights before leaving.',
     faqs: [
       { question: 'How is gratuity calculated in Pakistan?', answer: 'Gratuity in Pakistan is calculated as: Last drawn salary × number of years of service. Under the Pakistan labor laws, employees who have completed at least one year of continuous service are entitled to gratuity equal to 30 days wages for each completed year of service.' },
       { question: 'Is gratuity calculated on basic salary or gross salary in Pakistan?', answer: 'In Pakistan, gratuity is typically calculated on the last drawn basic salary (not gross salary). However, some organizations calculate it on gross salary as per their company policy. The legal minimum is based on basic salary plus dearness allowance.' },
@@ -154,8 +154,8 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     ]
   },
   'unit-converter': {
-    title: 'Unit Converter Pakistan – Marla to Kanal, Murabba to Kanal, Gaz to SqFt',
-    description: 'Convert local Pakistani units instantly ✓ 1 Murabba = 200 Kanal ✓ Marla to Square Feet ✓ Gaz to Kanal ✓ Tola to Grams. Optimized for property & trade in Pakistan.',
+    title: 'Pakistani Land Unit Converter 2025-26 | Murabba to Kanal',
+    description: 'Quickly convert Pakistani land units like Murabba to Kanal, Marla, and Acres. Use our free, accurate 2025-26 calculator for your property deals. Try it now!',
     faqs: [
       { question: 'How many Kanal in 1 Murabba in Pakistan?', answer: '1 Murabba = 25 Acres = 200 Kanal in Pakistan. A Murabba is commonly used for agricultural land measurement in Punjab. 200 Murabba would be 40,000 Kanal or 5,000 Acres.' },
       { question: 'How many Marla in 1 Kanal?', answer: '1 Kanal = 20 Marla in Pakistan. 1 Marla = 272.25 sq ft. So 1 Kanal = 5,445 sq ft. These are the standard land measurement units used across Punjab and KPK.' },
@@ -185,8 +185,8 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     ]
   },
   'mark-percentage': {
-    title: 'Marks Percentage Calculator Pakistan – 1100 & 550 Board Result %',
-    description: 'Calculate your exam percentage instantly ✓ 1100 total marks percentage (Matric/Inter) ✓ 850/1100 marks percentage ✓ Board results calculator ✓ 100% accurate for students across Pakistan.',
+    title: 'Marks Percentage Calculator | Find SSC/HSSC Grades Fast',
+    description: 'Check your exact board result percentage instantly. Use our free marks percentage calculator for Metric, Inter, and University grades in Pakistan. Calculate now!',
     faqs: [
       { question: 'How to calculate marks percentage out of 1100?', answer: 'To calculate percentage out of 1100: Divide your obtained marks by 1100 and multiply by 100. Formula: (Obtained Marks / 1100) × 100. For example, if you got 935 marks, your percentage is (935/1100) × 100 = 85%.' },
       { question: 'What is the percentage of 850 out of 1100 marks?', answer: '850 out of 1100 marks percentage = (850 / 1100) × 100 = 77.27%. This is usually considered an A grade in Pakistan board exams.' },
@@ -280,7 +280,7 @@ const App: React.FC = () => {
         {/* Info Pages */}
         <Route path="/slabs" element={
           <>
-            <SEOHead title="FBR Income Tax Slabs 2025-26 – New Salary Tax Chart Pakistan" description="Latest FBR income tax slabs for salaried & business individuals (Tax Year 2026). Check new monthly tax rates, exemptions & filing guide. 100% updated." canonicalUrl="/slabs" />
+            <SEOHead title="FBR Salary Tax Slabs 2025-26 | Latest Pakistan Rates" description="Avoid FBR penalties. View the official 2025-26 FBR salary tax slabs for Pakistan. See exactly how much income tax will be deducted from your salary. Check now!" canonicalUrl="/slabs" />
             <Helmet>
               <script type="application/ld+json">
                 {JSON.stringify({
@@ -314,7 +314,7 @@ const App: React.FC = () => {
 
         <Route path="/zakat-info" element={
           <>
-            <SEOHead title="Zakat Guide Pakistan 2026 – Nisab, Rules & How to Calculate Zakat in PKR" description="Complete Zakat guide for Pakistan ✓ Current Nisab values ✓ SBP zakat deduction rules ✓ Gold & silver Nisab rates 2026. Learn how to calculate & distribute Zakat." canonicalUrl="/zakat-info" />
+            <SEOHead title="Zakat Nisab Rules 2025-26: Complete Guide for Pakistan" description="Completely confused about Nisab? Read our easy 2025-26 guide to Zakat rules in Pakistan. Learn exactly who pays, what is eligible, and current gold rates." canonicalUrl="/zakat-info" />
             <Helmet>
               <script type="application/ld+json">
                 {JSON.stringify({

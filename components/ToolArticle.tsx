@@ -296,6 +296,10 @@ const ZakatArticle = ({ isUrdu }: { isUrdu: boolean }) => {
     return (
         <ArticleWrapper>
             <h2>Zakat Calculator Pakistan 2026: SBP Nisab (Gold & Silver)</h2>
+            <div className="bg-amber-50 p-6 rounded-2xl border border-amber-100 my-6 shadow-sm">
+                <h3 className="text-xl font-bold text-amber-900 mt-0 mb-2">Current Nisab Thresholds for Pakistan (Ramadan 2025-26)</h3>
+                <p className="text-amber-800 m-0 text-sm">To calculate your Zakat accurately, you must first determine if your wealth meets the Nisab threshold. Currently, the Nisab is equivalent to the market value of either 87.48 grams (7.5 Tola) of gold or 612.36 grams (52.5 Tola) of silver. Our calculator automatically applies the 2.5% Zakat rate to your eligible assets minus your liabilities, ensuring you fulfill your Islamic obligations with complete peace of mind this Ramadan.</p>
+            </div>
             <p>
                 Zakat is one of the five pillars of Islam, and its accurate calculation is a fundamental religious obligation for every Sahab-e-Nisab Muslim. Our advanced <strong>Zakat Calculator Pakistan (2025-2026)</strong> is designed in accordance with the Nisab announced by the State Bank of Pakistan (SBP). The tool automatically determines the Nisab based on current market rates for Gold and Silver in PKR.
             </p>
@@ -507,6 +511,10 @@ const InvestmentReturnArticle = ({ isUrdu }: { isUrdu: boolean }) => {
     return (
         <ArticleWrapper>
             <h2>Investment Return Calculator Pakistan 2026: Compound Interest & Profits</h2>
+            <div className="bg-emerald-50 p-6 rounded-2xl border border-emerald-100 my-6 shadow-sm">
+                <h3 className="text-xl font-bold text-emerald-900 mt-0 mb-2">Calculating Accurate ROI in Pakistan</h3>
+                <p className="text-emerald-800 m-0 text-sm">Whether you are investing in Al Meezan Mutual Funds, National Savings Schemes (Qaumi Bachat), or buying real estate in DHA, calculating your true Return on Investment (ROI) is essential. Our calculator helps you navigate local market yields by factoring in your initial investment amount against your current value. Simply input your PKR figures to instantly see your annualized growth rate and total net profit.</p>
+            </div>
             <p>
                 In an economy facing fluctuating inflation rates, parking your money in a zero-interest checking account steadily destroys your purchasing power. Intelligent investors utilize our <strong>Investment Return Calculator Pakistan</strong> to project compounding profits across mutual funds, National Savings Certificates (NSC), and fixed bank deposits. By analyzing future value, this robust tool empowers you to build formidable wealth over time.
             </p>
@@ -759,6 +767,10 @@ const GratuityArticle = ({ isUrdu }: { isUrdu: boolean }) => {
     return (
         <ArticleWrapper>
             <h2>Gratuity Calculator Pakistan 2026: End of Service Benefit Rules</h2>
+            <div className="bg-blue-50 p-6 rounded-2xl border border-blue-100 my-6 shadow-sm">
+                <h3 className="text-xl font-bold text-blue-900 mt-0 mb-2">Understanding Gratuity Rules in Pakistan</h3>
+                <p className="text-blue-800 m-0 text-sm">Under the پاکستانی Commercial and Industrial Employment (Standing Orders) Ordinance, 1968, eligible employees are entitled to gratuity upon resignation, retirement, or termination. The standard rule dictates you receive 30 days of wages for every completed year of service, calculated based on your final basic salary. If you have worked for more than 6 months in your final year, it counts as a full year. Use the calculator above to ensure your HR department provides an accurate final settlement.</p>
+            </div>
             <p>
                 Leaving a company after years of dedicated service entitles you to a mandatory statutory payout. In Pakistan, gratuity serves as a highly vital severance benefit designed to cushion an employee's transition between jobs or into retirement. Our <strong>Gratuity Calculator Pakistan</strong> empowers private-sector employees to forcefully demand their exact legal entitlements by computing the precise payout commanded under current Pakistani labor laws.
             </p>
@@ -947,6 +959,10 @@ const UnitConverterArticle = ({ isUrdu }: { isUrdu: boolean }) => {
     return (
         <ArticleWrapper>
             <h2>Unit Converter Pakistan: Localized Area & Weight Measurements</h2>
+            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 my-6 shadow-sm">
+                <h3 className="text-xl font-bold text-slate-900 mt-0 mb-2">Understanding Pakistani Land Measurements (2025-26)</h3>
+                <p className="text-slate-700 m-0 text-sm">In Pakistan's real estate sector, traditional land units are still the standard. Whether you are dealing in agricultural land or residential plots, knowing the exact conversions is crucial. For quick reference: 1 Murabba equals exactly 25 Acres or 200 Kanals. Consequently, 1 Kanal equals 20 Marlas. Our calculator above uses these standard Pakistani revenue department metrics to ensure your property transactions and area calculations are 100% accurate.</p>
+            </div>
             <p>
                 Pakistan utilizes a unique, hybrid system of both imperial and traditional localized measurements. Our <strong>Unit Converter Pakistan</strong> effortlessly bridges this gap, providing flawless instant conversions customized specifically for Pakistani geographical standards.
             </p>
@@ -1174,6 +1190,10 @@ const MarkPercentageArticle = ({ isUrdu }: { isUrdu: boolean }) => {
     return (
         <ArticleWrapper>
             <h2>Marks Percentage Calculator Pakistan: Exam Ratio Finder</h2>
+            <div className="bg-blue-50 p-6 rounded-2xl border border-blue-100 my-6 shadow-sm">
+                <h3 className="text-xl font-bold text-blue-900 mt-0 mb-2">How to Calculate Your BISE Exam Percentage</h3>
+                <p className="text-blue-800 m-0 text-sm">Whether you are waiting for your Matric (SSC) or Intermediate (HSSC) results from any Punjab, Sindh, or Federal board, knowing your exact percentage is crucial for university admissions. The formula is simple: divide your Obtained Marks by the Total Marks, and multiply by 100. Instead of doing manual math during the stress of result day, simply enter your numbers above to instantly find out if you secured an A+ grade.</p>
+            </div>
             <p>
                 A tiny fraction of a percentage frequently determines whether you secure admission into a top-tier medical college (MDCAT) or engineering university (NUST/UET). Our <strong>Marks Percentage Calculator</strong> provides mathematically infallible conversion of raw scores.
             </p>
