@@ -13,7 +13,7 @@ export const CALCULATORS: Calculator[] = [
   },
   {
     id: 'zakat',
-    name: 'Zakat Calculator',
+    name: 'Zakat Calculator Pakistan (Updated Nisab Rates 2025-26)',
     nameUrdu: 'زکوٰۃ کیلکولیٹر',
     description: 'Calculate your Zakat obligation based on Islamic principles.',
     category: Category.PAK_SPECIFIC,
@@ -29,7 +29,7 @@ export const CALCULATORS: Calculator[] = [
   },
   {
     id: 'investment-return',
-    name: 'Investment Return',
+    name: 'ROI & Investment Return Calculator (PKR)',
     nameUrdu: 'سرمایہ کاری کا منافع',
     description: 'Predict growth of your savings with compounding interest.',
     category: Category.FINANCIAL,
@@ -61,7 +61,7 @@ export const CALCULATORS: Calculator[] = [
   },
   {
     id: 'gratuity',
-    name: 'Gratuity Calculator',
+    name: 'Gratuity Calculator Pakistan (As Per Official Labor Laws 2025)',
     nameUrdu: 'گریجویٹی کیلکولیٹر',
     description: 'Calculate end-of-service benefits based on Pakistan labor laws.',
     category: Category.PAK_SPECIFIC,
@@ -85,7 +85,7 @@ export const CALCULATORS: Calculator[] = [
   },
   {
     id: 'unit-converter',
-    name: 'Unit Converter',
+    name: 'Pakistani Land Measurement & Unit Converter 2025-26',
     nameUrdu: 'یونٹ کنورٹر',
     description: 'Convert Marla to SqFt, Tola to Grams, and more.',
     category: Category.EVERYDAY,
@@ -117,7 +117,7 @@ export const CALCULATORS: Calculator[] = [
   },
   {
     id: 'mark-percentage',
-    name: 'Mark Percentage',
+    name: 'Student Marks Percentage Calculator (SSC, HSSC & Uni)',
     nameUrdu: 'مارکس فیصد کیلکولیٹر',
     description: 'Convert your marks into percentage instantly.',
     category: Category.EDUCATION,

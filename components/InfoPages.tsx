@@ -754,10 +754,14 @@ export const TaxBlogContent = () => (
     </section>
 
     {/* Section 2: Detailed Slab Breakdown Table */}
-    <section className="bg-white border border-slate-200 rounded-[3rem] shadow-xl overflow-hidden">
+    <section className="bg-white border border-slate-200 rounded-[3rem] shadow-xl overflow-hidden mt-12">
       <div className="p-10 bg-slate-50 border-b border-slate-200">
         <h3 className="text-2xl font-bold text-slate-900 text-center">FBR Tax Calculator 2026 Slabs</h3>
         <p className="text-center text-slate-500 mt-2">Applicable for the tax period starting July 1, 2025.</p>
+        <div className="mt-6 p-6 bg-white rounded-2xl border border-slate-200 shadow-sm text-center">
+          <h4 className="font-bold text-slate-900 mb-2">How to Read the 2025-26 FBR Salary Tax Slabs</h4>
+          <p className="text-sm text-slate-600">The Federal Board of Revenue (FBR) has updated the income tax brackets for salaried individuals for the current fiscal year. If your annual salary exceeds Rs. 600,000 (Rs. 50,000 per month), you fall into the taxable bracket. Before filing your returns by September, use the table below to find your exact tax slab. Remember, your employer calculates your monthly withholding tax based directly on these official brackets, so knowing your slab helps you verify your take-home pay is correct.</p>
+        </div>
       </div>
       <div className="overflow-x-auto">
         <table className="w-full text-left text-sm">
@@ -928,6 +932,11 @@ export const ZakatBlogContent = () => (
         Zakat is not merely a charitable act; it is a fundamental spiritual obligation and the third pillar of Islam. In the context of Pakistan's economy, fulfilling this duty correctly requires a deep understanding of what constitutes "Zakatable Assets," how the nisab calculator Pakistan threshold is determined, and the specific rules set by the State Bank of Pakistan. This guide provides a comprehensive framework to ensure your Zakat is calculated with precision and sincerity.
       </p>
     </header>
+
+    <div className="bg-amber-50 p-6 rounded-3xl border border-amber-200 shadow-sm mb-12">
+      <h3 className="font-bold text-amber-900 mb-2">What Constitutes Zakatable Wealth?</h3>
+      <p className="text-sm text-amber-800 leading-relaxed">In Pakistan, calculating Zakat is not just about the cash in your bank account. According to Islamic jurisprudence, Zakatable wealth includes gold and silver jewelry, cash on hand and in bank accounts, business inventory, and investments like mutual funds, provided they meet the Nisab threshold and have been held for one full lunar year (Hawl). Note that personal use items like your primary house, car, and household furniture are entirely exempt from Zakat calculations.</p>
+    </div>
 
     {/* Section: User Guide & Benefits */}
     <section className="space-y-12">
@@ -2114,8 +2123,11 @@ export const FBRSlabsPage = ({ isUrdu }: { isUrdu: boolean }) => (
       <button onClick={() => window.history.back()} className="text-emerald-600 font-bold mb-4 flex items-center gap-2 hover:bg-emerald-50 px-4 py-2 rounded-full transition-colors w-fit">
         <span>←</span> Back
       </button>
-      <h2 className="text-4xl font-black text-slate-900">Official Tax Resources</h2>
+      <h1 className="text-4xl font-black text-slate-900">Official FBR Salary Tax Slabs Pakistan (2025-2026)</h1>
       <p className="text-slate-500 mt-2">Comprehensive guide to FBR Tax Slabs 2025-26.</p>
+    </div>
+    <div className="bg-rose-50 border-l-4 border-rose-500 p-4 mb-8 rounded-r-lg shadow-sm">
+      <p className="text-rose-800 font-bold">Alert: These are the official revised FBR tax slabs applicable for the tax year ending June 30, 2025, and filing in 2026.</p>
     </div>
     <div className="-mt-12">
       <TaxBlogContent />
@@ -2129,7 +2141,7 @@ export const ZakatInfoPage = ({ isUrdu }: { isUrdu: boolean }) => (
       <button onClick={() => window.history.back()} className="text-amber-600 font-bold mb-4 flex items-center gap-2 hover:bg-amber-50 px-4 py-2 rounded-full transition-colors w-fit">
         <span>←</span> Back
       </button>
-      <h2 className="text-4xl font-black text-slate-900">Zakat Encyclopedia</h2>
+      <h1 className="text-4xl font-black text-slate-900">The Complete Guide to Zakat & Nisab Rules in Pakistan (2025-26)</h1>
       <p className="text-slate-500 mt-2">Complete guide to Zakat, Nisab thresholds, and asset valuation methods.</p>
     </div>
     <div className="-mt-12">
