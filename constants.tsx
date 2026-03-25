@@ -9,7 +9,7 @@ export const CALCULATORS: Calculator[] = [
     nameUrdu: 'انکم ٹیکس کیلکولیٹر',
     description: 'Calculate FBR tax for 2025-2026 based on latest slabs.',
     category: Category.PAK_SPECIFIC,
-    icon: '🏢'
+    icon: ''
   },
   {
     id: 'zakat',
@@ -17,7 +17,7 @@ export const CALCULATORS: Calculator[] = [
     nameUrdu: 'زکوٰۃ کیلکولیٹر',
     description: 'Calculate your Zakat obligation based on Islamic principles.',
     category: Category.PAK_SPECIFIC,
-    icon: '🕌'
+    icon: ''
   },
   {
     id: 'freelancer-tax',
@@ -25,7 +25,7 @@ export const CALCULATORS: Calculator[] = [
     nameUrdu: 'فری لانسر انکم',
     description: 'Calculate net income after bank charges and FBR export tax.',
     category: Category.BUSINESS,
-    icon: '💻'
+    icon: ''
   },
   {
     id: 'investment-return',
@@ -33,7 +33,7 @@ export const CALCULATORS: Calculator[] = [
     nameUrdu: 'سرمایہ کاری کا منافع',
     description: 'Predict growth of your savings with compounding interest.',
     category: Category.FINANCIAL,
-    icon: '📈'
+    icon: ''
   },
   {
     id: 'retirement-plan',
@@ -41,7 +41,7 @@ export const CALCULATORS: Calculator[] = [
     nameUrdu: 'ریٹائرمنٹ کی منصوبہ بندی',
     description: 'Calculate how much you need to save for a comfortable retirement.',
     category: Category.FINANCIAL,
-    icon: '🌅'
+    icon: ''
   },
   {
     id: 'real-estate-roi',
@@ -49,7 +49,7 @@ export const CALCULATORS: Calculator[] = [
     nameUrdu: 'ریئل اسٹیٹ منافع',
     description: 'Calculate property gains, rental yield, and FBR transfer taxes.',
     category: Category.FINANCIAL,
-    icon: '🏠'
+    icon: ''
   },
   {
     id: 'provident-fund',
@@ -57,7 +57,7 @@ export const CALCULATORS: Calculator[] = [
     nameUrdu: 'پروویڈنٹ فنڈ',
     description: 'Estimate your PF balance with employer matching and interest.',
     category: Category.PAK_SPECIFIC,
-    icon: '🏦'
+    icon: ''
   },
   {
     id: 'gratuity',
@@ -65,7 +65,7 @@ export const CALCULATORS: Calculator[] = [
     nameUrdu: 'گریجویٹی کیلکولیٹر',
     description: 'Calculate end-of-service benefits based on Pakistan labor laws.',
     category: Category.PAK_SPECIFIC,
-    icon: '📜'
+    icon: ''
   },
   {
     id: 'loan-emi',
@@ -73,7 +73,7 @@ export const CALCULATORS: Calculator[] = [
     nameUrdu: 'قرض کی قسط کا کیلکولیٹر',
     description: 'Calculate monthly installments for personal or car loans.',
     category: Category.FINANCIAL,
-    icon: '💰'
+    icon: ''
   },
   {
     id: 'profit-margin',
@@ -81,7 +81,7 @@ export const CALCULATORS: Calculator[] = [
     nameUrdu: 'منافع کا مارجن',
     description: 'Find net profit and margin percentages for your business.',
     category: Category.BUSINESS,
-    icon: '📊'
+    icon: ''
   },
   {
     id: 'unit-converter',
@@ -89,7 +89,7 @@ export const CALCULATORS: Calculator[] = [
     nameUrdu: 'یونٹ کنورٹر',
     description: 'Convert Marla to SqFt, Tola to Grams, and more.',
     category: Category.EVERYDAY,
-    icon: '📏'
+    icon: ''
   },
   {
     id: 'bmi',
@@ -97,7 +97,7 @@ export const CALCULATORS: Calculator[] = [
     nameUrdu: 'بی ایم آئی کیلکولیٹر',
     description: 'Check your Body Mass Index for health recommendations.',
     category: Category.EVERYDAY,
-    icon: '⚖️'
+    icon: ''
   },
   {
     id: 'cgpa-calc',
@@ -105,7 +105,7 @@ export const CALCULATORS: Calculator[] = [
     nameUrdu: 'سی جی پی اے کیلکولیٹر',
     description: 'Calculate your Semester and Cumulative GPA easily.',
     category: Category.EDUCATION,
-    icon: '🎓'
+    icon: ''
   },
   {
     id: 'grade-calc',
@@ -113,7 +113,7 @@ export const CALCULATORS: Calculator[] = [
     nameUrdu: 'گریڈ کیلکولیٹر',
     description: 'Calculate your academic grade based on marks obtained.',
     category: Category.EDUCATION,
-    icon: '📝'
+    icon: ''
   },
   {
     id: 'mark-percentage',
@@ -121,7 +121,7 @@ export const CALCULATORS: Calculator[] = [
     nameUrdu: 'مارکس فیصد کیلکولیٹر',
     description: 'Convert your marks into percentage instantly.',
     category: Category.EDUCATION,
-    icon: '📊'
+    icon: ''
   },
   {
     id: 'electricity-bill',
@@ -129,7 +129,7 @@ export const CALCULATORS: Calculator[] = [
     nameUrdu: 'بجلی کا بل کیلکولیٹر',
     description: 'Calculate your LESCO, MEPCO, IESCO electricity bill with latest NEPRA tariffs.',
     category: Category.PAK_SPECIFIC,
-    icon: '🔌'
+    icon: ''
   }
 ];
 

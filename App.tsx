@@ -45,8 +45,8 @@ const getRelatedTools = (id: string) => {
 // SEO metadata for each tool – CTR-optimized titles & descriptions based on GSC queries
 const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?: { question: string; answer: string }[]; howTo?: { name: string; description: string; steps: { name: string; text: string }[] } }> = {
   'income-tax': {
-    title: 'Income Tax Calculator Pakistan 2026 – Free FBR Salary Tax Slabs 2025-26',
-    description: 'Calculate your FBR income tax for 2025-2026 in seconds ✓ Updated salary tax slabs ✓ Legal exemptions ✓ Tax-saving tips. Used by 10,000+ Pakistani filers.',
+    title: 'Income Tax Calculator Pakistan 2026 - Free FBR Salary Tax Slabs 2025-26',
+    description: 'Calculate your FBR income tax for 2025-2026 in seconds. Updated salary tax slabs, legal exemptions and tax-saving tips. Used by 10,000+ Pakistani filers.',
     faqs: [
       { question: 'What are the FBR salary tax slabs for 2025-26 in Pakistan?', answer: 'The FBR has announced updated income tax slabs for tax year 2026 (July 2025 – June 2026). Salaried individuals earning up to PKR 600,000 annually are exempt. Rates range from 5% to 35% depending on income brackets. Use our free calculator for your exact tax liability.' },
       { question: 'How to calculate income tax in Pakistan for salaried persons?', answer: 'To calculate your income tax: 1) Determine your total annual taxable income, 2) Subtract allowable deductions (medical, education), 3) Apply the applicable FBR slab rate for 2025-26. Our calculator does all this automatically in seconds.' }
@@ -82,8 +82,8 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     }
   },
   'freelancer-tax': {
-    title: 'Freelancer Tax Calculator Pakistan 2026 – IT Export Income & FBR Rules',
-    description: 'Calculate freelancing income after bank charges, FBR export tax & conversion fees ✓ Per month income estimator ✓ For Fiverr, Upwork & remote workers in Pakistan.',
+    title: 'Freelancer Tax Calculator Pakistan 2026 - IT Export Income and FBR Rules',
+    description: 'Calculate freelancing income after bank charges, FBR export tax and conversion fees. Per month income estimator for Fiverr, Upwork and remote workers in Pakistan.',
     faqs: [
       { question: 'Is there tax on freelancers in Pakistan?', answer: 'Yes, freelancer income is taxable in Pakistan under FBR rules. However, IT export income enjoys reduced tax rates (0.25% for filers). Freelancers earning through platforms like Fiverr, Upwork, or direct clients must file returns and can benefit from IT export exemptions.' },
       { question: 'How much do freelancers earn per month in Pakistan?', answer: 'Freelancer income varies widely. Pakistani IT freelancers typically earn between PKR 50,000 to PKR 500,000+ per month depending on skills and experience. After bank charges (1-3%), platform fees (5-20%), and taxes, your net take-home can differ significantly from gross earnings.' }
@@ -107,22 +107,22 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     ]
   },
   'retirement-plan': {
-    title: 'Retirement Savings Calculator Pakistan 2026 – Plan Your Pension & VPS',
-    description: 'Plan your retirement in Pakistan ✓ Calculate required savings corpus ✓ VPS calculator ✓ Inflation-adjusted projections. Start planning your secure future today.',
+    title: 'Retirement Savings Calculator Pakistan 2026 - Plan Your Pension & VPS',
+    description: 'Plan your retirement in Pakistan. Calculate required savings corpus, VPS calculator and inflation-adjusted projections. Start planning your secure future today.',
     faqs: [
       { question: 'How much money do I need to retire in Pakistan?', answer: 'The amount depends on your lifestyle. For a comfortable retirement in Pakistan, you typically need 20-25x your annual expenses saved. With 8-10% inflation, someone spending PKR 100,000/month today would need approximately PKR 50-80 million by retirement age 60.' }
     ]
   },
   'real-estate-roi': {
-    title: 'Real Estate ROI Calculator Pakistan 2026 – Property Investment & Rental Yield',
-    description: 'Analyze rental yield, capital gains & FBR transfer taxes for property deals ✓ ROI calculator for Karachi, Lahore & Islamabad ✓ Marla, Kanal price analysis.',
+    title: 'Real Estate ROI Calculator Pakistan 2026 - Property Investment & Rental Yield',
+    description: 'Analyze rental yield, capital gains and FBR transfer taxes for property deals. ROI calculator for Karachi, Lahore and Islamabad with Marla and Kanal price analysis.',
     faqs: [
       { question: 'How to calculate real estate ROI in Pakistan?', answer: 'Real Estate ROI = (Annual Rental Income + Property Appreciation - Expenses) / Total Investment × 100. In Pakistan, typical rental yields range from 3-6% in major cities, while capital appreciation can be 10-20% annually in developing areas.' }
     ]
   },
   'provident-fund': {
-    title: 'Provident Fund Calculator Pakistan 2026 – Free PF Balance & Deduction Calculator',
-    description: 'Calculate your Provident Fund (PF) balance with employer matching & interest ✓ PF deduction percentage ✓ PF contribution rules in Pakistan. Used by 5,000+ employees.',
+    title: 'Provident Fund Calculator Pakistan 2026 - Free PF Balance & Deduction Calculator',
+    description: 'Calculate your Provident Fund (PF) balance with employer matching and interest. PF deduction percentage and contribution rules in Pakistan. Used by 5,000+ employees.',
     faqs: [
       { question: 'How to calculate Provident Fund in Pakistan?', answer: 'Provident Fund in Pakistan is calculated as a percentage of your basic salary (typically 6-8.33%). Both employee and employer contribute equally. The PF balance grows with monthly contributions plus interest (currently 13-15% per annum). Our calculator shows your projected PF balance at retirement.' },
       { question: 'What is the PF deduction percentage in Pakistan?', answer: 'The standard PF deduction is 1/12th (8.33%) of basic salary in Pakistan, though some organizations deduct 6% or a fixed amount. The employer matches your contribution. The total contribution (employee + employer) is typically 16.67% of basic salary.' },
@@ -139,16 +139,16 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     ]
   },
   'loan-emi': {
-    title: 'Loan EMI Calculator Pakistan 2026 – Free Monthly Installment Calculator (KIBOR)',
-    description: 'Calculate monthly EMI for car loans, home loans & bank loans ✓ KIBOR-based rates ✓ Meezan, HBL, Alfalah supported ✓ Full payment schedule with interest breakdown.',
+    title: 'Loan EMI Calculator Pakistan 2026 - Free Monthly Installment Calculator (KIBOR)',
+    description: 'Calculate monthly EMI for car loans, home loans and bank loans. KIBOR-based rates for Meezan, HBL and Alfalah supported. Full payment schedule with interest breakdown.',
     faqs: [
       { question: 'How to calculate loan EMI in Pakistan?', answer: 'EMI (Equated Monthly Installment) is calculated using the formula: EMI = P × r × (1+r)^n / ((1+r)^n - 1), where P = loan amount, r = monthly interest rate, n = number of months. In Pakistan, car loan rates are typically KIBOR + 3-5% spread.' },
       { question: 'How much EMI for 30 lakh loan in Pakistan?', answer: 'For a PKR 30 lakh loan at 18% annual interest for 5 years, the monthly EMI would be approximately PKR 76,000. The exact amount depends on the bank\'s interest rate and loan tenure. Use our calculator for precise EMI calculations.' }
     ]
   },
   'profit-margin': {
-    title: 'Profit Margin Calculator 2026 – Free Business Markup & Net Profit Finder',
-    description: 'Calculate net profit margin & markup percentage for your business ✓ Gross vs net profit ✓ Ideal for wholesalers, retailers & startups in Pakistan. Instant results.',
+    title: 'Profit Margin Calculator 2026 - Free Business Markup & Net Profit Finder',
+    description: 'Calculate net profit margin and markup percentage for your business. Gross vs net profit comparisons ideal for wholesalers, retailers and startups in Pakistan. Instant results.',
     faqs: [
       { question: 'How to calculate profit margin for a business in Pakistan?', answer: 'Profit Margin = (Revenue - Cost) / Revenue × 100. For example, if you buy a product for PKR 800 and sell for PKR 1,000, your profit margin is 20%. Markup would be 25% (200/800 × 100). Our calculator instantly shows both margin and markup.' }
     ]
@@ -163,23 +163,23 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     ]
   },
   'bmi': {
-    title: 'BMI Calculator Pakistan 2026 – Free Body Mass Index & Health Check Tool',
-    description: 'Calculate your BMI instantly ✓ Check if you\'re underweight, normal, or overweight ✓ Pakistan-specific health tips ✓ Weight management advice. 100% free.',
+    title: 'BMI Calculator Pakistan 2026 - Free Body Mass Index & Health Check Tool',
+    description: 'Calculate your BMI instantly. Check if you are underweight, normal, or overweight with Pakistan-specific health tips and weight management advice. 100% free.',
     faqs: [
       { question: 'How to calculate BMI in Pakistan?', answer: 'BMI = Weight (kg) / Height (m²). For example, if you weigh 70kg and are 1.75m tall, your BMI = 70 / (1.75 × 1.75) = 22.86 (Normal weight). BMI categories: Under 18.5 = Underweight, 18.5-24.9 = Normal, 25-29.9 = Overweight, 30+ = Obese.' }
     ]
   },
   'cgpa-calc': {
-    title: 'CGPA Calculator Pakistan 2026 – Free GPA Calculator (HEC Standards)',
-    description: 'Calculate CGPA & SGPA as per HEC Pakistan standards ✓ Percentage to GPA conversion ✓ All university grading systems supported. How to calculate GPA in Pakistan.',
+    title: 'CGPA Calculator Pakistan 2026 - Free GPA Calculator (HEC Standards)',
+    description: 'Calculate CGPA and SGPA as per HEC Pakistan standards. Percentage to GPA conversion for all university grading systems supported. How to calculate GPA in Pakistan.',
     faqs: [
       { question: 'How to calculate GPA in Pakistan?', answer: 'In Pakistan, GPA is calculated by: 1) Multiplying each course\'s grade points by its credit hours, 2) Adding all quality points, 3) Dividing by total credit hours. HEC uses 4.0 scale where A = 4.0, B+ = 3.3, B = 3.0, etc.' },
       { question: 'How to calculate CGPA from SGPA in Pakistan?', answer: 'CGPA = Sum of (SGPA × semester credit hours) / Total credit hours of all semesters. For example, if Semester 1 SGPA = 3.5 (18 credits) and Semester 2 SGPA = 3.7 (15 credits), CGPA = (3.5×18 + 3.7×15) / (18+15) = 3.59.' }
     ]
   },
   'grade-calc': {
-    title: 'Grade Calculator Pakistan – Matric, Inter & University Marks Grade Finder',
-    description: 'Find your academic grade from marks obtained ✓ Matric, Inter, O/A Level grading systems ✓ Pakistan board results grade calculator. Instant & free.',
+    title: 'Grade Calculator Pakistan - Matric, Inter & University Marks Grade Finder',
+    description: 'Find your academic grade from marks obtained. Matric, Inter, O/A Level grading systems and Pakistan board results grade calculator. Instant and free.',
     faqs: [
       { question: 'How to check grade from marks in Pakistan?', answer: 'In Pakistan\'s Matric/SSC system: A1 = 80%+, A = 70-79%, B = 60-69%, C = 50-59%, D = 40-49%, F = below 40%. For FSc/HSSC: A+ = 85%+, A = 80-84%, B = 70-79%, C = 60-69%. Our calculator supports all major grading systems.' }
     ]
@@ -206,24 +206,22 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     }
   },
   'electricity-bill': {
-    title: 'Electricity Bill Calculator Pakistan 2026 – Check Bijli Ka Bill Online (LESCO, MEPCO, IESCO)',
-    description: 'Free electricity bill calculator ✓ Enter units & get instant bill estimate ✓ NEPRA 2025-26 slabs ✓ Protected & Non-Protected rates ✓ GST, FPA, surcharges included. Works for LESCO, MEPCO, IESCO & all DISCOs.',
+    title: 'WAPDA Unit Calculator Pakistan 2026 | Watts to Units & Online Bill Check',
+    description: 'Calculate electricity bill in Pakistan instantly. Use our WAPDA unit calculator, check IESCO/FESCO bill online, convert watts to units, and find the latest per unit rate.',
     faqs: [
-      { question: 'How to calculate electricity bill from units in Pakistan?', answer: 'Your bill is calculated using a slab system. Each range of units (e.g., 1-100) has a different rate per kWh. After calculating the energy cost, the government adds 18% GST, Electricity Duty (1.5%), FPA, FC Surcharge, and a Rs. 35 TV fee. Our calculator automates this entire process — just enter your units.' },
-      { question: 'What are protected and non-protected consumers?', answer: 'Protected consumers use less than 200 units for 6 consecutive months and pay lower rates (Rs. 10.54/unit for first 100 units). Non-protected consumers pay higher rates starting from Rs. 22.44/unit. Crossing 200 units even once removes your protected status.' },
-      { question: 'How much is a 300 unit electricity bill in Pakistan?', answer: 'A 300-unit bill for a non-protected consumer costs approximately Rs. 8,445 in energy charges. After adding 18% GST, FPA, and surcharges, the total bill comes to roughly Rs. 11,000 – Rs. 12,000 depending on the monthly FPA rate.' },
-      { question: 'What is the per unit rate of electricity in Pakistan 2025?', answer: 'For non-protected domestic consumers, the base rate starts at Rs. 22.44/unit (1-100 units) and increases progressively to Rs. 47.69/unit (700+ units). Protected consumers pay much less — Rs. 10.54/unit for the first 100 units and Rs. 13.01/unit for 101-200 units.' },
-      { question: 'Why is my bijli ka bill so high?', answer: 'Common reasons include: crossing the 200-unit protected threshold, high Fuel Price Adjustment (FPA) during summer months, using non-inverter ACs, meter reading errors, or not being aware of the slab system. Use our calculator to cross-verify your bill against actual units consumed.' },
-      { question: 'Can I check my actual WAPDA bill online?', answer: 'Yes. Each DISCO (LESCO, MEPCO, IESCO, FESCO, PESCO) has an official online portal where you enter your Reference Number or Consumer ID to view and download your actual bill. Our calculator helps you estimate the bill before it arrives.' }
+      { question: 'How to calculate electricity bill in Pakistan?', answer: 'To calculate your bill of electricity in Pakistan, use the WAPDA unit calculator. Simply enter your consumed units. The tool evaluates the electricity bill calculation formula in Pakistan by applying the appropriate NEPRA slab, adding the Fuel Price Adjustment (FPA), 18% GST, and other surcharges.' },
+      { question: 'What is the WAPDA unit price in Pakistan for commercial and residential?', answer: 'WAPDA per unit price varies. For residential protected consumers, it starts very low (Rs. 10.54/unit). Non-protected residential starts at Rs. 22.44/unit. WAPDA commercial unit price is typically much higher and mostly a flat rate ranging from Rs. 39 to Rs. 50+ per unit depending on the exact load and tariff category (like A-2).' },
+      { question: 'How do I use a Watts to Units calculator?', answer: 'The watt to unit formula is simple: Units (kWh) = (Watts × Hours Used × Days) / 1000. For example, a 1000-watt AC running for 8 hours a day for 30 days will consume 240 units.' },
+      { question: 'How can I check my electricity bill online (IESCO, FESCO, MEPCO)?', answer: 'You can check your light or power bill online via the official portal of your respective DISCO. For an IESCO online bill check, visit the IESCO portal with your 14-digit reference number. The same process applies for a FESCO online bill calculator or MEPCO bill tracking. Our tool helps you accurately predict that bill before it arrives.' }
     ],
     howTo: {
-      name: "How to Calculate Your Electricity Bill Online in Pakistan",
-      description: "Step-by-step guide to estimate your monthly bijli ka bill using units consumed and the latest NEPRA 2025-26 tariff slabs.",
+      name: "How to Calculate Bill of Electricity in Pakistan",
+      description: "A step-by-step guide to calculating your electricity bill using our online WAPDA unit calculator.",
       steps: [
-        { name: "Check Units Consumed", text: "Look at your electricity meter or previous bill to find 'Units Consumed' (kWh). This is the primary input for calculating your bill." },
-        { name: "Select Protected or Non-Protected", text: "Choose 'Protected' if your monthly usage has stayed below 200 units for the last 6 months. Otherwise, select 'Non-Protected' for standard rates." },
-        { name: "Enter Units in Calculator", text: "Type your total units consumed into our free calculator. The tool instantly applies the correct NEPRA slab rates and calculates the energy cost." },
-        { name: "Review Full Bill Breakdown", text: "See the complete breakdown including base electricity cost, 18% GST, Fuel Price Adjustment (FPA), FC Surcharge, Electricity Duty, and TV Fee." }
+        { name: "Convert Watts to Units (Optional)", text: "If you don't know your units, use our watts to units calculator feature by entering your appliances' wattage and usage hours." },
+        { name: "Select Your Connection Type", text: "Choose between a Residential or Commercial WAPDA connection, as the commercial unit price is different." },
+        { name: "Enter Consumed Units", text: "Input your total consumed units into the online bill calculator." },
+        { name: "Review the Bill Breakdown", text: "The calculator instantly applies the exact WAPDA per unit rate, FPA, and GST to give you your final estimated bill amount." }
       ]
     }
   }
@@ -585,7 +583,7 @@ const ToolWrapper = ({ id, component, isUrdu, handleNavigate }: { id: string, co
           <div className="flex justify-end">
             <div className="bg-white/10 p-6 rounded-3xl border border-white/10 backdrop-blur-md w-full max-w-sm">
               <div className="flex gap-4 mb-4">
-                <div className="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center shrink-0 text-xl">✨</div>
+                <div className="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center shrink-0 text-xl">AI</div>
                 <p className="text-sm font-medium italic text-slate-200">"Every calculation matters. Use our localized tools to optimize your savings."</p>
               </div>
             </div>
