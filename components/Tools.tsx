@@ -1,4 +1,4 @@
-
+﻿
 import React, { useState, useEffect } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip, AreaChart, Area, XAxis, YAxis, CartesianGrid } from 'recharts';
 import { SALARIED_TAX_SLABS } from '../constants';
@@ -80,58 +80,58 @@ export const ZakatTool = ({ isUrdu }: { isUrdu: boolean }) => {
     <div className={`space-y-12 ${isUrdu ? 'rtl font-urdu' : ''}`}>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
-          <h3 className="text-2xl font-bold">{isUrdu ? 'زکوٰۃ کے لیے آپ کے اثاثے (نصاب 2026)' : 'Your Assets for Zakat (Nisab 2026)'}</h3>
+          <h3 className="text-2xl font-bold">{isUrdu ? 'Ø²Ú©ÙˆÙ°Ûƒ Ú©Û’ Ù„ÛŒÛ’ Ø¢Ù¾ Ú©Û’ Ø§Ø«Ø§Ø«Û’ (Ù†ØµØ§Ø¨ 2026)' : 'Your Assets for Zakat (Nisab 2026)'}</h3>
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="text-xs font-bold text-slate-500">{isUrdu ? 'نقد رقم (ہاتھ میں یا بینک)' : 'Cash in Hand/Bank'}</label>
+              <label className="text-xs font-bold text-slate-500">{isUrdu ? 'Ù†Ù‚Ø¯ Ø±Ù‚Ù… (ÛØ§ØªÚ¾ Ù…ÛŒÚº ÛŒØ§ Ø¨ÛŒÙ†Ú©)' : 'Cash in Hand/Bank'}</label>
               <input type="number" value={cash} onChange={e => setCash(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
             </div>
             <div>
-              <label className="text-xs font-bold text-slate-500">{isUrdu ? 'دیگر اثاثے (شیئرز وغیرہ)' : 'Other Assets (Stocks etc)'}</label>
+              <label className="text-xs font-bold text-slate-500">{isUrdu ? 'Ø¯ÛŒÚ¯Ø± Ø§Ø«Ø§Ø«Û’ (Ø´ÛŒØ¦Ø±Ø² ÙˆØºÛŒØ±Û)' : 'Other Assets (Stocks etc)'}</label>
               <input type="number" value={otherAssets} onChange={e => setOtherAssets(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="text-xs font-bold text-slate-500">{isUrdu ? 'سونا (گرام)' : 'Gold (Grams)'}</label>
+              <label className="text-xs font-bold text-slate-500">{isUrdu ? 'Ø³ÙˆÙ†Ø§ (Ú¯Ø±Ø§Ù…)' : 'Gold (Grams)'}</label>
               <input type="number" value={gold} onChange={e => setGold(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
             </div>
             <div>
-              <label className="text-xs font-bold text-slate-500">{isUrdu ? 'چاندی (گرام)' : 'Silver (Grams)'}</label>
+              <label className="text-xs font-bold text-slate-500">{isUrdu ? 'Ú†Ø§Ù†Ø¯ÛŒ (Ú¯Ø±Ø§Ù…)' : 'Silver (Grams)'}</label>
               <input type="number" value={silver} onChange={e => setSilver(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
             </div>
           </div>
           <div>
-            <label className="text-xs font-bold text-slate-500">{isUrdu ? 'واجبات / قرضے (منہا کرنے کے لیے)' : 'Liabilities / Debts (to subtract)'}</label>
+            <label className="text-xs font-bold text-slate-500">{isUrdu ? 'ÙˆØ§Ø¬Ø¨Ø§Øª / Ù‚Ø±Ø¶Û’ (Ù…Ù†ÛØ§ Ú©Ø±Ù†Û’ Ú©Û’ Ù„ÛŒÛ’)' : 'Liabilities / Debts (to subtract)'}</label>
             <input type="number" value={liabilities} onChange={e => setLiabilities(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
           </div>
 
           <div className="pt-4 border-t border-slate-100 grid grid-cols-2 gap-4">
             <div>
-              <label className="text-[10px] text-slate-400 font-bold uppercase">{isUrdu ? 'سونا فی گرام (PKR)' : 'Gold Rate /g (PKR)'}</label>
+              <label className="text-[10px] text-slate-400 font-bold uppercase">{isUrdu ? 'Ø³ÙˆÙ†Ø§ ÙÛŒ Ú¯Ø±Ø§Ù… (PKR)' : 'Gold Rate /g (PKR)'}</label>
               <input type="number" value={goldRate} onChange={e => setGoldRate(Number(e.target.value))} className="w-full p-2 bg-slate-50 border rounded-xl text-xs" />
             </div>
             <div>
-              <label className="text-[10px] text-slate-400 font-bold uppercase">{isUrdu ? 'چاندی فی گرام (PKR)' : 'Silver Rate /g (PKR)'}</label>
+              <label className="text-[10px] text-slate-400 font-bold uppercase">{isUrdu ? 'Ú†Ø§Ù†Ø¯ÛŒ ÙÛŒ Ú¯Ø±Ø§Ù… (PKR)' : 'Silver Rate /g (PKR)'}</label>
               <input type="number" value={silverRate} onChange={e => setSilverRate(Number(e.target.value))} className="w-full p-2 bg-slate-50 border rounded-xl text-xs" />
             </div>
           </div>
         </div>
 
         <div className={`p-8 rounded-[2.5rem] shadow-xl text-center flex flex-col justify-center transition-colors ${isEligible ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-500'}`}>
-          <p className="text-slate-400 uppercase text-xs font-black mb-2">{isUrdu ? 'قابلِ ادائیگی زکوٰۃ (2.5%)' : 'Total Zakat Payable (2.5%)'}</p>
+          <p className="text-slate-400 uppercase text-xs font-black mb-2">{isUrdu ? 'Ù‚Ø§Ø¨Ù„Ù Ø§Ø¯Ø§Ø¦ÛŒÚ¯ÛŒ Ø²Ú©ÙˆÙ°Ûƒ (2.5%)' : 'Total Zakat Payable (2.5%)'}</p>
           <h4 className={`text-5xl font-black ${isEligible ? 'text-emerald-400' : 'text-slate-400'}`}>
             Rs. {Math.round(zakat).toLocaleString()}
           </h4>
 
           <div className="mt-8 space-y-3">
             <div className="flex justify-between items-center px-4 py-2 bg-white/5 rounded-2xl">
-              <span className="text-xs text-slate-400">{isUrdu ? 'کُل اثاثے' : 'Total Assets'}</span>
+              <span className="text-xs text-slate-400">{isUrdu ? 'Ú©ÙÙ„ Ø§Ø«Ø§Ø«Û’' : 'Total Assets'}</span>
               <span className="font-bold">Rs. {Math.round(totalAssets).toLocaleString()}</span>
             </div>
             {!isEligible && (
               <p className="text-[10px] text-amber-400 italic mt-2">
-                {isUrdu ? '* آپ کے اثاثے نصاب سے کم ہیں۔ زکوٰۃ فرض نہیں ہے۔' : '* Assets are below Nisab threshold. Zakat not applicable.'}
+                {isUrdu ? '* Ø¢Ù¾ Ú©Û’ Ø§Ø«Ø§Ø«Û’ Ù†ØµØ§Ø¨ Ø³Û’ Ú©Ù… ÛÛŒÚºÛ” Ø²Ú©ÙˆÙ°Ûƒ ÙØ±Ø¶ Ù†ÛÛŒÚº ÛÛ’Û”' : '* Assets are below Nisab threshold. Zakat not applicable.'}
               </p>
             )}
           </div>
@@ -336,7 +336,7 @@ export const BMICalcTool = () => {
           <p className={`text-xl font-bold ${color} mb-6`}>{category}</p>
 
           <div className="bg-slate-50 p-6 rounded-3xl w-full">
-            <span className="text-2xl block mb-2">💡</span>
+            <span className="text-2xl block mb-2">ðŸ’¡</span>
             <p className="text-sm text-slate-600 font-medium leading-relaxed">{tip}</p>
           </div>
         </div>
@@ -449,16 +449,16 @@ export const InvestmentReturnTool = () => {
               <p className="text-slate-400 uppercase text-xs font-black tracking-widest mb-1">
                 {adjustInflation ? "Real Maturity Value (Today's Money)" : "Projected Maturity Value"}
               </p>
-              <h4 className="text-5xl font-black text-emerald-600">₨ {Math.round(result.total).toLocaleString()}</h4>
+              <h4 className="text-5xl font-black text-emerald-600">â‚¨ {Math.round(result.total).toLocaleString()}</h4>
 
               <div className="flex justify-center gap-2 mt-6">
                 <div className="px-4 py-2 bg-blue-50 rounded-xl border border-blue-100">
                   <p className="text-[10px] uppercase font-bold text-blue-400">Total Invested</p>
-                  <p className="text-lg font-black text-blue-900">₨ {result.invested.toLocaleString()}</p>
+                  <p className="text-lg font-black text-blue-900">â‚¨ {result.invested.toLocaleString()}</p>
                 </div>
                 <div className="px-4 py-2 bg-emerald-50 rounded-xl border border-emerald-100">
                   <p className="text-[10px] uppercase font-bold text-emerald-400">Total Profit</p>
-                  <p className="text-lg font-black text-emerald-900">₨ {Math.round(result.returns).toLocaleString()}</p>
+                  <p className="text-lg font-black text-emerald-900">â‚¨ {Math.round(result.returns).toLocaleString()}</p>
                 </div>
               </div>
             </div>
@@ -476,7 +476,7 @@ export const InvestmentReturnTool = () => {
                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
                 <Tooltip
                   contentStyle={{ borderRadius: '16px', border: 'none', boxShadow: '0 10px 30px rgba(0,0,0,0.1)', fontSize: '12px' }}
-                  formatter={(v: number) => `₨ ${v.toLocaleString()}`}
+                  formatter={(v: number) => `â‚¨ ${v.toLocaleString()}`}
                   labelStyle={{ display: 'none' }}
                 />
                 <Area type="monotone" dataKey="value" stroke="#10b981" fillOpacity={1} fill="url(#colorValue)" strokeWidth={3} />
@@ -591,7 +591,7 @@ export const RetirementTool = () => {
           <div className="relative z-10 text-center space-y-8">
             <div>
               <p className="text-blue-200 uppercase text-[10px] font-black tracking-widest mb-2">Total Corpus Needed</p>
-              <h4 className="text-4xl lg:text-5xl font-black text-white">₨ {Math.round(corpusNeeded / 10000000).toFixed(2)} Cr</h4>
+              <h4 className="text-4xl lg:text-5xl font-black text-white">â‚¨ {Math.round(corpusNeeded / 10000000).toFixed(2)} Cr</h4>
               <p className="text-[10px] text-blue-300 mt-2">
                 To sustain {yearsInRetirement} years with inflation adjusted expenses (Rs. {Math.round(expenseAtRetirement).toLocaleString()}/mo at start)
               </p>
@@ -600,7 +600,7 @@ export const RetirementTool = () => {
             <div className="pt-8 border-t border-blue-800">
               <p className="text-blue-200 uppercase text-[10px] font-black tracking-widest mb-1">Gap & Required Action</p>
               <div className="flex flex-col items-center">
-                <p className="text-3xl font-black text-emerald-400">Save ₨ {Math.round(monthlySavingsNeeded).toLocaleString()} <span className="text-sm text-emerald-200 font-normal">/ month</span></p>
+                <p className="text-3xl font-black text-emerald-400">Save â‚¨ {Math.round(monthlySavingsNeeded).toLocaleString()} <span className="text-sm text-emerald-200 font-normal">/ month</span></p>
                 {currentSavings > 0 && <p className="text-[10px] text-blue-400 mt-2">considering your existing {Math.round(currentSavings / 100000).toFixed(1)} Lakh savings</p>}
               </div>
             </div>
@@ -691,7 +691,7 @@ export const RealEstateROITool = () => {
 
           <div className="relative z-10 text-center mb-8">
             <p className="text-slate-400 uppercase text-[10px] font-black tracking-widest mb-2">Total Net Profit</p>
-            <h4 className="text-5xl font-black text-emerald-400">₨ {Math.round(totalProfit).toLocaleString()}</h4>
+            <h4 className="text-5xl font-black text-emerald-400">â‚¨ {Math.round(totalProfit).toLocaleString()}</h4>
             <div className="inline-flex gap-4 mt-2">
               <span className="text-xs text-slate-400">Yield: <b className="text-white">{rentalYield.toFixed(1)}%</b></span>
               <span className="text-xs text-slate-400">CAGR: <b className="text-white">{annualizedROI.toFixed(1)}%</b></span>
@@ -832,7 +832,7 @@ export const GratuityTool = () => {
           <h3 className="text-2xl font-bold">Service Details</h3>
 
           <div className="p-4 bg-indigo-50 border border-indigo-100 rounded-2xl flex gap-3">
-            <span className="text-2xl">💡</span>
+            <span className="text-2xl">ðŸ’¡</span>
             <p className="text-xs text-indigo-800 leading-relaxed">
               <strong>Tip:</strong> According to Pakistan Labor Laws, Gratuity is usually calculated on your <strong>Last Drawn GROSS Salary</strong> (including COLA), not just Basic Salary.
             </p>
@@ -904,11 +904,11 @@ export const FreelancerTool = ({ isUrdu }: { isUrdu: boolean }) => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Input Section */}
         <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
-          <h3 className="text-2xl font-bold">{isUrdu ? 'فری لانسر انکم' : 'Freelancer Income'}</h3>
+          <h3 className="text-2xl font-bold">{isUrdu ? 'ÙØ±ÛŒ Ù„Ø§Ù†Ø³Ø± Ø§Ù†Ú©Ù…' : 'Freelancer Income'}</h3>
 
           <div className="space-y-4">
             <div>
-              <label className="text-xs font-bold text-slate-500 uppercase">{isUrdu ? 'ماہانہ آمدنی' : 'Monthly Income'}</label>
+              <label className="text-xs font-bold text-slate-500 uppercase">{isUrdu ? 'Ù…Ø§ÛØ§Ù†Û Ø¢Ù…Ø¯Ù†ÛŒ' : 'Monthly Income'}</label>
               <div className="flex gap-4">
                 <div className="relative w-full">
                   <input
@@ -923,7 +923,7 @@ export const FreelancerTool = ({ isUrdu }: { isUrdu: boolean }) => {
                   onClick={() => setCurrency(currency === 'USD' ? 'PKR' : 'USD')}
                   className="px-6 bg-slate-900 text-white rounded-2xl font-bold hover:bg-slate-800 transition-colors"
                 >
-                  {currency === 'USD' ? '→ PKR' : '→ USD'}
+                  {currency === 'USD' ? 'â†’ PKR' : 'â†’ USD'}
                 </button>
               </div>
             </div>
@@ -931,7 +931,7 @@ export const FreelancerTool = ({ isUrdu }: { isUrdu: boolean }) => {
             {currency === 'USD' && (
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="text-[10px] text-slate-400 font-bold uppercase">{isUrdu ? 'ایکسچینج ریٹ (PKR)' : 'Exchange Rate (PKR)'}</label>
+                  <label className="text-[10px] text-slate-400 font-bold uppercase">{isUrdu ? 'Ø§ÛŒÚ©Ø³Ú†ÛŒÙ†Ø¬ Ø±ÛŒÙ¹ (PKR)' : 'Exchange Rate (PKR)'}</label>
                   <input
                     type="number"
                     value={exchangeRate}
@@ -940,7 +940,7 @@ export const FreelancerTool = ({ isUrdu }: { isUrdu: boolean }) => {
                   />
                 </div>
                 <div>
-                  <label className="text-[10px] text-slate-400 font-bold uppercase">{isUrdu ? 'بینک فیس (اگر ہو)' : 'Bank Fee (Optional)'}</label>
+                  <label className="text-[10px] text-slate-400 font-bold uppercase">{isUrdu ? 'Ø¨ÛŒÙ†Ú© ÙÛŒØ³ (Ø§Ú¯Ø± ÛÙˆ)' : 'Bank Fee (Optional)'}</label>
                   <input
                     type="number"
                     value={bankFee}
@@ -954,8 +954,8 @@ export const FreelancerTool = ({ isUrdu }: { isUrdu: boolean }) => {
             <div className="p-4 bg-emerald-50 rounded-3xl border border-emerald-100">
               <div className="flex items-center justify-between">
                 <div>
-                  <h4 className="font-bold text-emerald-900 text-sm">{isUrdu ? 'PSEB رجسٹریشن' : 'PSEB Registration'}</h4>
-                  <p className="text-[10px] text-emerald-600">{isUrdu ? 'کی کیا آپ PSEB کے ساتھ رجسٹرڈ فری لانسر ہیں؟' : 'Are you a registered IT exporter with PSEB?'}</p>
+                  <h4 className="font-bold text-emerald-900 text-sm">{isUrdu ? 'PSEB Ø±Ø¬Ø³Ù¹Ø±ÛŒØ´Ù†' : 'PSEB Registration'}</h4>
+                  <p className="text-[10px] text-emerald-600">{isUrdu ? 'Ú©ÛŒ Ú©ÛŒØ§ Ø¢Ù¾ PSEB Ú©Û’ Ø³Ø§ØªÚ¾ Ø±Ø¬Ø³Ù¹Ø±Úˆ ÙØ±ÛŒ Ù„Ø§Ù†Ø³Ø± ÛÛŒÚºØŸ' : 'Are you a registered IT exporter with PSEB?'}</p>
                 </div>
                 <button
                   onClick={() => setIsPSEB(!isPSEB)}
@@ -974,21 +974,21 @@ export const FreelancerTool = ({ isUrdu }: { isUrdu: boolean }) => {
 
           <div className="text-center relative z-10">
             <p className="text-slate-400 uppercase text-[10px] font-black tracking-widest mb-4">
-              {isUrdu ? 'آپ کی خالص ماہانہ آمدنی' : 'Your Net Monthly Take-Home'}
+              {isUrdu ? 'Ø¢Ù¾ Ú©ÛŒ Ø®Ø§Ù„Øµ Ù…Ø§ÛØ§Ù†Û Ø¢Ù…Ø¯Ù†ÛŒ' : 'Your Net Monthly Take-Home'}
             </p>
             <h4 className="text-5xl font-black text-emerald-400 mb-2">Rs. {Math.round(netIncome).toLocaleString()}</h4>
             <p className="text-slate-500 text-xs">
-              {isUrdu ? `ٹیکس کٹوتی: Rs. ${Math.round(taxAmount).toLocaleString()} (${isPSEB ? '0.25%' : '1%'})` : `Tax Withheld: Rs. ${Math.round(taxAmount).toLocaleString()} (${isPSEB ? '0.25%' : '1%'})`}
+              {isUrdu ? `Ù¹ÛŒÚ©Ø³ Ú©Ù¹ÙˆØªÛŒ: Rs. ${Math.round(taxAmount).toLocaleString()} (${isPSEB ? '0.25%' : '1%'})` : `Tax Withheld: Rs. ${Math.round(taxAmount).toLocaleString()} (${isPSEB ? '0.25%' : '1%'})`}
             </p>
           </div>
 
           <div className="mt-10 grid grid-cols-2 gap-6 relative z-10 border-t border-white/10 pt-8">
             <div className="text-center">
-              <p className="text-[10px] text-slate-500 uppercase font-bold mb-1">{isUrdu ? 'سالانہ خالص آمدنی' : 'Annual Net Income'}</p>
+              <p className="text-[10px] text-slate-500 uppercase font-bold mb-1">{isUrdu ? 'Ø³Ø§Ù„Ø§Ù†Û Ø®Ø§Ù„Øµ Ø¢Ù…Ø¯Ù†ÛŒ' : 'Annual Net Income'}</p>
               <p className="font-black text-lg">Rs. {Math.round(annualNet).toLocaleString()}</p>
             </div>
             <div className="text-center">
-              <p className="text-[10px] text-slate-500 uppercase font-bold mb-1">{isUrdu ? 'کُل گراس (PKR)' : 'Gross Amount (PKR)'}</p>
+              <p className="text-[10px] text-slate-500 uppercase font-bold mb-1">{isUrdu ? 'Ú©ÙÙ„ Ú¯Ø±Ø§Ø³ (PKR)' : 'Gross Amount (PKR)'}</p>
               <p className="font-black text-lg text-slate-300">Rs. {Math.round(grossPKR).toLocaleString()}</p>
             </div>
           </div>
@@ -1280,7 +1280,7 @@ export const CGPACalculatorTool = () => {
                     onClick={() => removeSemester(s.id)}
                     className="absolute -top-2 -right-2 w-8 h-8 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center text-lg hover:bg-rose-200 transition-colors shadow-sm"
                   >
-                    ×
+                    Ã—
                   </button>
                 )}
               </div>
@@ -1310,16 +1310,28 @@ export const CGPACalculatorTool = () => {
 };
 
 export const ElectricityBillTool = ({ isUrdu }: { isUrdu: boolean }) => {
+  const [activeTab, setActiveTab] = useState<'bill' | 'watts'>('bill');
   const [units, setUnits] = useState(250);
-  const [isProtected, setIsProtected] = useState(false);
-  const [fpa, setFpa] = useState(2.8); // Current estimated FPA in PKR
+  const [consumerType, setConsumerType] = useState<'residential-non-protected' | 'residential-protected' | 'commercial'>('residential-non-protected');
+  const [fpa, setFpa] = useState(2.8);
+  const [disco, setDisco] = useState('LESCO');
 
-  // NEPRA Slabs 2025-26 (Approximate)
-  const calculateEnergyCost = (u: number, protectedStatus: boolean) => {
-    if (protectedStatus) {
+  // Watts to Units state
+  const [wattage, setWattage] = useState(1500);
+  const [hoursPerDay, setHoursPerDay] = useState(8);
+  const [daysPerMonth, setDaysPerMonth] = useState(30);
+  const wattsUnits = (wattage * hoursPerDay * daysPerMonth) / 1000;
+
+  // NEPRA Slabs 2025-26
+  const calculateEnergyCost = (u: number, type: string) => {
+    if (type === 'residential-protected') {
       if (u <= 100) return u * 10.54;
       if (u <= 200) return (100 * 10.54) + ((u - 100) * 13.01);
       return (100 * 10.54) + (100 * 13.01) + ((u - 200) * 22.44);
+    } else if (type === 'commercial') {
+      if (u <= 100) return u * 30.10;
+      if (u <= 300) return (100 * 30.10) + ((u - 100) * 39.52);
+      return (100 * 30.10) + (200 * 39.52) + ((u - 300) * 48.77);
     } else {
       let cost = 0;
       if (u <= 100) cost = u * 22.44;
@@ -1334,97 +1346,265 @@ export const ElectricityBillTool = ({ isUrdu }: { isUrdu: boolean }) => {
     }
   };
 
-  const energyCost = calculateEnergyCost(units, isProtected);
+  const energyCost = calculateEnergyCost(units, consumerType);
   const fuelAdjustment = units * fpa;
-  const duty = energyCost * 0.015; // 1.5% Electricity Duty
-  const fcSurcharge = units * 0.43; // Financing Cost Surcharge
-  const tvFee = 35;
-
+  const duty = energyCost * 0.015;
+  const fcSurcharge = units * 0.43;
+  const tvFee = consumerType === 'commercial' ? 0 : 35;
   const totalTaxable = energyCost + fuelAdjustment + duty + fcSurcharge;
-  const gst = totalTaxable * 0.18; // 18% GST
+  const gst = totalTaxable * 0.18;
   const totalBill = totalTaxable + gst + tvFee;
+  const perUnitEffective = units > 0 ? totalBill / units : 0;
+
+  const discos = ['LESCO', 'MEPCO', 'IESCO', 'FESCO', 'PESCO', 'K-Electric', 'GEPCO', 'HESCO', 'SEPCO'];
 
   return (
     <div className="space-y-12 animate-in fade-in duration-700">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
-          <h3 className="text-2xl font-bold">{isUrdu ? 'بجلی کے بل کی تفصیلات' : 'Electricity Bill Details'}</h3>
 
-          <div className="flex p-1 bg-slate-100 rounded-2xl">
-            <button
-              onClick={() => setIsProtected(true)}
-              className={`flex-1 py-3 rounded-xl text-xs font-black transition-all ${isProtected ? 'bg-white shadow-sm text-emerald-600' : 'text-slate-500 hover:text-slate-700'}`}
-            >
-              Protected
-            </button>
-            <button
-              onClick={() => setIsProtected(false)}
-              className={`flex-1 py-3 rounded-xl text-xs font-black transition-all ${!isProtected ? 'bg-slate-900 text-white shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
-            >
-              Non-Protected
-            </button>
-          </div>
-
-          <div>
-            <label className="text-xs font-bold text-slate-500 uppercase mb-2 block tracking-widest">Units Consumed (PKR)</label>
-            <input
-              type="number"
-              value={units}
-              onChange={e => setUnits(Number(e.target.value))}
-              className="w-full p-4 bg-slate-50 border rounded-2xl font-black text-2xl focus:ring-2 focus:ring-emerald-500 outline-none transition-all"
-            />
-            <p className="text-[10px] text-slate-400 mt-3 ml-1">Based on NEPRA 2025-2026 tariff slabs.</p>
-          </div>
-
-          <div className="pt-6 border-t border-slate-100">
-            <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Fuel Price Adjustment (FPA)</label>
-            <input
-              type="number"
-              value={fpa}
-              onChange={e => setFpa(Number(e.target.value))}
-              className="w-full p-3 bg-slate-50 border rounded-xl text-sm"
-              step="0.1"
-            />
-          </div>
-        </div>
-
-        <div className="bg-slate-900 text-white p-8 rounded-[2.5rem] shadow-2xl flex flex-col justify-center relative overflow-hidden group">
-          <div className="absolute right-0 top-0 w-64 h-64 bg-emerald-500 rounded-full blur-[120px] opacity-20 -mr-32 -mt-32 group-hover:opacity-30 transition-opacity"></div>
-
-          <div className="text-center mb-10 relative z-10">
-            <p className="text-slate-400 uppercase text-[10px] font-black tracking-widest mb-2">Estimated Monthly Bill</p>
-            <h4 className="text-6xl lg:text-7xl font-black text-emerald-400 drop-shadow-lg">
-              Rs. {Math.round(totalBill).toLocaleString()}
-            </h4>
-            <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 bg-white/5 rounded-full border border-white/10">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span className="text-[10px] font-bold text-slate-400">Includes all FBR & NEPRA taxes</span>
-            </div>
-          </div>
-
-          <div className="space-y-4 pt-8 border-t border-white/10 relative z-10">
-            <div className="flex justify-between items-center text-sm">
-              <span className="text-slate-400">Electricity Cost</span>
-              <span className="font-bold">Rs. {Math.round(energyCost).toLocaleString()}</span>
-            </div>
-            <div className="flex justify-between items-center text-sm">
-              <span className="text-slate-400">GST (18%)</span>
-              <span className="text-rose-400 font-bold">Rs. {Math.round(gst).toLocaleString()}</span>
-            </div>
-            <div className="flex justify-between items-center text-sm">
-              <span className="text-slate-400">Surcharges & FPA</span>
-              <span className="font-bold">Rs. {Math.round(fuelAdjustment + fcSurcharge + duty).toLocaleString()}</span>
-            </div>
-            <div className="flex justify-between items-center text-sm pt-4 border-t border-white/5">
-              <span className="text-slate-400">TV License Fee</span>
-              <span className="font-bold">Rs. {tvFee}</span>
-            </div>
-          </div>
+      {/* Tab Toggle */}
+      <div className="flex justify-center">
+        <div className="bg-white p-1 rounded-full border border-slate-100 shadow-sm inline-flex">
+          <button
+            onClick={() => setActiveTab('bill')}
+            className={`px-6 py-3 rounded-full text-sm font-bold transition-all ${activeTab === 'bill' ? 'bg-slate-900 text-white shadow-lg' : 'text-slate-500 hover:bg-slate-50'}`}
+          >
+            Bill Calculator
+          </button>
+          <button
+            onClick={() => setActiveTab('watts')}
+            className={`px-6 py-3 rounded-full text-sm font-bold transition-all ${activeTab === 'watts' ? 'bg-amber-500 text-white shadow-lg' : 'text-slate-500 hover:bg-slate-50'}`}
+          >
+            Watts to Units
+          </button>
         </div>
       </div>
+
+      {activeTab === 'bill' ? (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+
+          {/* Input Panel */}
+          <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+            <h3 className="text-2xl font-bold">{isUrdu ? 'Ø¨Ø¬Ù„ÛŒ Ú©Û’ Ø¨Ù„ Ú©ÛŒ ØªÙØµÛŒÙ„Ø§Øª' : 'WAPDA Unit Calculator'}</h3>
+
+            {/* DISCO Selector */}
+            <div>
+              <label className="text-xs font-bold text-slate-500 uppercase mb-2 block tracking-widest">Distribution Company (DISCO)</label>
+              <div className="flex flex-wrap gap-2">
+                {discos.map(d => (
+                  <button
+                    key={d}
+                    onClick={() => setDisco(d)}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all border ${disco === d ? 'bg-slate-900 text-white border-slate-900' : 'bg-white border-slate-200 text-slate-500 hover:border-slate-400'}`}
+                  >
+                    {d}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Consumer Type */}
+            <div>
+              <label className="text-xs font-bold text-slate-500 uppercase mb-2 block tracking-widest">Consumer Type</label>
+              <div className="grid grid-cols-3 gap-2">
+                <button
+                  onClick={() => setConsumerType('residential-protected')}
+                  className={`py-2 px-2 rounded-xl text-xs font-bold transition-all border ${consumerType === 'residential-protected' ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-white border-slate-200 text-slate-600 hover:border-slate-400'}`}
+                >
+                  Protected
+                </button>
+                <button
+                  onClick={() => setConsumerType('residential-non-protected')}
+                  className={`py-2 px-2 rounded-xl text-xs font-bold transition-all border ${consumerType === 'residential-non-protected' ? 'bg-slate-900 text-white border-slate-900' : 'bg-white border-slate-200 text-slate-600 hover:border-slate-400'}`}
+                >
+                  Residential
+                </button>
+                <button
+                  onClick={() => setConsumerType('commercial')}
+                  className={`py-2 px-2 rounded-xl text-xs font-bold transition-all border ${consumerType === 'commercial' ? 'bg-blue-600 text-white border-blue-600' : 'bg-white border-slate-200 text-slate-600 hover:border-slate-400'}`}
+                >
+                  Commercial
+                </button>
+              </div>
+              {consumerType === 'residential-protected' && (
+                <p className="text-[10px] text-emerald-600 mt-2 ml-1">Protected = under 200 units for the last 6 consecutive months.</p>
+              )}
+              {consumerType === 'commercial' && (
+                <p className="text-[10px] text-blue-600 mt-2 ml-1">Commercial A-2 tariff applies. Higher per unit rate, no protected category.</p>
+              )}
+            </div>
+
+            {/* Units Input */}
+            <div>
+              <label className="text-xs font-bold text-slate-500 uppercase mb-2 block tracking-widest">Units Consumed (kWh)</label>
+              <input
+                type="number"
+                value={units}
+                onChange={e => setUnits(Number(e.target.value))}
+                className="w-full p-4 bg-slate-50 border rounded-2xl font-black text-2xl focus:ring-2 focus:ring-emerald-500 outline-none transition-all"
+              />
+              <p className="text-[10px] text-slate-400 mt-2 ml-1">
+                Based on NEPRA 2025-2026 tariff. Don't know your units?{' '}
+                <button onClick={() => setActiveTab('watts')} className="text-amber-600 font-bold underline">Use Watts to Units tab.</button>
+              </p>
+            </div>
+
+            {/* FPA */}
+            <div className="pt-4 border-t border-slate-100">
+              <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Fuel Price Adjustment â€” FPA (Rs./unit)</label>
+              <input
+                type="number"
+                value={fpa}
+                onChange={e => setFpa(Number(e.target.value))}
+                className="w-full p-3 bg-slate-50 border rounded-xl text-sm"
+                step="0.1"
+              />
+              <p className="text-[10px] text-slate-400 mt-1 ml-1">NEPRA announces FPA monthly. Adjust to match your DISCO's current rate.</p>
+            </div>
+          </div>
+
+          {/* Results Panel */}
+          <div className="bg-slate-900 text-white p-8 rounded-[2.5rem] shadow-2xl flex flex-col justify-center relative overflow-hidden group">
+            <div className="absolute right-0 top-0 w-64 h-64 bg-emerald-500 rounded-full blur-[120px] opacity-20 -mr-32 -mt-32 group-hover:opacity-30 transition-opacity"></div>
+
+            <div className="text-center mb-8 relative z-10">
+              <p className="text-slate-400 uppercase text-[10px] font-black tracking-widest mb-1">Estimated Monthly Bill â€” {disco}</p>
+              <h4 className="text-6xl lg:text-7xl font-black text-emerald-400 drop-shadow-lg">
+                Rs. {Math.round(totalBill).toLocaleString()}
+              </h4>
+              <div className="mt-3 inline-flex items-center gap-2 px-3 py-1 bg-white/5 rounded-full border border-white/10">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span className="text-[10px] font-bold text-slate-400">Effective rate: Rs. {perUnitEffective.toFixed(2)} / unit (all-in)</span>
+              </div>
+            </div>
+
+            <div className="space-y-3 pt-6 border-t border-white/10 relative z-10">
+              <div className="flex justify-between items-center text-sm">
+                <span className="text-slate-400">Energy Cost ({units} units)</span>
+                <span className="font-bold">Rs. {Math.round(energyCost).toLocaleString()}</span>
+              </div>
+              <div className="flex justify-between items-center text-sm">
+                <span className="text-slate-400">Fuel Price Adj. (FPA)</span>
+                <span className="font-bold">Rs. {Math.round(fuelAdjustment).toLocaleString()}</span>
+              </div>
+              <div className="flex justify-between items-center text-sm">
+                <span className="text-slate-400">FC Surcharge + Duty</span>
+                <span className="font-bold">Rs. {Math.round(fcSurcharge + duty).toLocaleString()}</span>
+              </div>
+              <div className="flex justify-between items-center text-sm">
+                <span className="text-rose-400">GST (18%)</span>
+                <span className="text-rose-400 font-bold">Rs. {Math.round(gst).toLocaleString()}</span>
+              </div>
+              {tvFee > 0 && (
+                <div className="flex justify-between items-center text-sm pt-3 border-t border-white/10">
+                  <span className="text-slate-400">TV License Fee</span>
+                  <span className="font-bold">Rs. {tvFee}</span>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+      ) : (
+
+        /* Watts to Units Calculator */
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+            <h3 className="text-2xl font-bold">Watts to Units Calculator</h3>
+            <p className="text-sm text-slate-500">Formula: <strong>Units = (Watts x Hours/Day x Days) / 1000</strong></p>
+
+            <div>
+              <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Appliance Wattage (W)</label>
+              <input
+                type="number"
+                value={wattage}
+                onChange={e => setWattage(Number(e.target.value))}
+                className="w-full p-4 bg-amber-50 border border-amber-100 rounded-2xl font-black text-2xl text-amber-900 focus:ring-2 focus:ring-amber-400 outline-none"
+                placeholder="e.g. 1500 for AC"
+              />
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Hours Per Day</label>
+                <input
+                  type="number"
+                  value={hoursPerDay}
+                  onChange={e => setHoursPerDay(Number(e.target.value))}
+                  className="w-full p-4 bg-slate-50 border rounded-2xl font-bold"
+                  max={24}
+                />
+              </div>
+              <div>
+                <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Days Per Month</label>
+                <input
+                  type="number"
+                  value={daysPerMonth}
+                  onChange={e => setDaysPerMonth(Number(e.target.value))}
+                  className="w-full p-4 bg-slate-50 border rounded-2xl font-bold"
+                  max={31}
+                />
+              </div>
+            </div>
+
+            <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+              <p className="text-xs text-slate-400 mb-2 font-bold uppercase">Common Appliances â€” Click to Select</p>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { name: '1.5T Inverter AC', w: 1200 },
+                  { name: '1.5T Non-Inverter', w: 1850 },
+                  { name: 'Small Fridge', w: 150 },
+                  { name: 'LED TV 42"', w: 90 },
+                  { name: 'Water Motor', w: 750 },
+                  { name: 'Iron', w: 1100 },
+                ].map(a => (
+                  <button
+                    key={a.name}
+                    onClick={() => setWattage(a.w)}
+                    className="px-3 py-1 bg-white border border-slate-200 rounded-xl text-xs font-medium hover:border-amber-400 hover:bg-amber-50 transition-all"
+                  >
+                    {a.name} ({a.w}W)
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Watts Result */}
+          <div className="bg-amber-500 text-white p-8 rounded-[2.5rem] shadow-2xl flex flex-col justify-center relative overflow-hidden">
+            <div className="absolute right-0 top-0 w-48 h-48 bg-amber-400 rounded-full blur-[80px] opacity-50 -mr-24 -mt-24"></div>
+
+            <div className="relative z-10 text-center mb-8">
+              <p className="text-amber-100 uppercase text-[10px] font-black tracking-widest mb-2">Monthly Units Consumed</p>
+              <h4 className="text-7xl font-black drop-shadow-lg">{wattsUnits.toFixed(1)}</h4>
+              <p className="text-amber-200 text-sm mt-2">kWh / Units per Month</p>
+            </div>
+
+            <div className="relative z-10 space-y-3 pt-5 border-t border-amber-400/40">
+              <div className="flex justify-between text-sm">
+                <span className="text-amber-100">Formula used:</span>
+                <span className="font-bold">({wattage}W x {hoursPerDay}h x {daysPerMonth}d) / 1000</span>
+              </div>
+              <div className="flex justify-between text-sm">
+                <span className="text-amber-100">WAPDA per unit (est.)</span>
+                <span className="font-bold">Rs. 22.44 â€“ Rs. 47.69</span>
+              </div>
+              <div className="flex justify-between text-sm pt-3 border-t border-amber-400/30">
+                <span className="text-amber-100 font-bold">Approx. Bill (Non-Prot.)</span>
+                <span className="font-black text-xl">Rs. {Math.round(calculateEnergyCost(wattsUnits, 'residential-non-protected') * 1.25).toLocaleString()}</span>
+              </div>
+            </div>
+
+            <button
+              onClick={() => { setUnits(Math.round(wattsUnits)); setActiveTab('bill'); }}
+              className="relative z-10 mt-6 w-full py-3 bg-white/20 hover:bg-white/30 border border-white/30 rounded-2xl text-sm font-bold transition-all"
+            >
+              Calculate Full Bill for {Math.round(wattsUnits)} Units
+            </button>
+          </div>
+        </div>
+      )}
 
       <ElectricityBillBlogContent />
     </div>
   );
 };
-

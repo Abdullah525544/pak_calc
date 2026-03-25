@@ -1,4 +1,4 @@
-
+﻿
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SALARIED_TAX_SLABS, NISAB_GOLD_GRAMS, NISAB_SILVER_GRAMS } from '../constants';
@@ -8,7 +8,7 @@ export const RetirementBlogContent = () => (
     {/* Header Section */}
     <header className="text-center space-y-8">
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-blue-50 text-blue-700 rounded-full text-xs font-black uppercase tracking-widest border border-blue-100">
-        🌅 Secure Your Legacy in Pakistan
+        Secure Your Legacy in Pakistan
       </div>
       <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         Retirement Calculator Pakistan 2026: <br />
@@ -39,17 +39,17 @@ export const RetirementBlogContent = () => (
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm">
-          <span className="text-4xl mb-4 block">📅</span>
+          <span className="text-4xl mb-4 block">Timeline</span>
           <h4 className="font-bold text-lg mb-2">1. Set Your Timeline</h4>
           <p className="text-sm text-slate-500">Enter your current age and planned retirement age (usually 60 in Pakistan). The earlier you start, the less you need to save per month.</p>
         </div>
         <div className="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm">
-          <span className="text-4xl mb-4 block">💰</span>
+          <span className="text-4xl mb-4 block">Lifestyle</span>
           <h4 className="font-bold text-lg mb-2">2. Define Lifestyle</h4>
           <p className="text-sm text-slate-500">Input your *current* monthly household expense. We automatically adjust this for inflation to tell you what this lifestyle will cost in the future.</p>
         </div>
         <div className="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm">
-          <span className="text-4xl mb-4 block">📈</span>
+          <span className="text-4xl mb-4 block">Growth</span>
           <h4 className="font-bold text-lg mb-2">3. Return Expectations</h4>
           <p className="text-sm text-slate-500">Set your expected return on investment (e.g., 12-15% for Equity Funds) and the inflation rate (avg 8-10%) to see the "Real Value" gap.</p>
         </div>
@@ -210,7 +210,7 @@ export const InvestmentBlogContent = () => (
     {/* Header Section */}
     <header className="text-center space-y-8">
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-emerald-50 text-emerald-700 rounded-full text-xs font-black uppercase tracking-widest border border-emerald-100">
-        💸 Wealth Creation
+        Wealth Creation
       </div>
       <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         Investment Calculator Pakistan: <br />
@@ -244,7 +244,7 @@ export const InvestmentBlogContent = () => (
               "Anyone interested in financial planning"
             ].map((item, i) => (
               <li key={i} className="flex gap-3 items-start">
-                <span className="text-emerald-500 font-bold">✓</span>
+                <span className="text-emerald-500 font-bold">*</span>
                 <span className="text-slate-600">{item}</span>
               </li>
             ))}
@@ -283,7 +283,7 @@ export const InvestmentBlogContent = () => (
             "Works on mobile and desktop"
           ].map((benefit, i) => (
             <div key={i} className="flex items-center gap-3">
-              <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">✓</span>
+              <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">*</span>
               <span className="text-slate-700 font-medium">{benefit}</span>
             </div>
           ))}
@@ -314,7 +314,7 @@ export const InvestmentBlogContent = () => (
             { t: "Capital Gains", d: "The increase in the value of the asset itself (e.g. Stock price going up)." }
           ].map((item, i) => (
             <div key={i} className="flex gap-4 p-6 bg-slate-50 border border-slate-100 rounded-3xl items-center shadow-sm">
-              <div className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">✓</div>
+              <div className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">*</div>
               <div>
                 <h5 className="font-bold text-slate-900 text-sm">{item.t}</h5>
                 <p className="text-xs text-slate-500 uppercase font-bold">{item.d}</p>
@@ -330,10 +330,10 @@ export const InvestmentBlogContent = () => (
       <h3 className="text-3xl font-bold text-slate-900 text-center">Comparing Mutual Fund Calculator Pakistan Top Picks</h3>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {[
-          { title: "National Savings (NSC)", ret: "13-15% p.a", risk: "Low Risk", desc: "Government-backed. Safest option but lower returns than equity.", icon: "🇵🇰" },
-          { title: "Mutual Funds (AMCs)", ret: "18-22% p.a (Cash Funds)", risk: "Med Risk", desc: "Professionally managed. Great for monthly savings (SIP).", icon: "📊" },
-          { title: "Stock Exchange (PSX)", ret: "25%+ (Selected Pairs)", risk: "High Risk", desc: "Direct ownership in Blue Chip companies like Meezan or Systems.", icon: "📈" },
-          { title: "Real Estate (Files)", ret: "Varies (High Peaks)", risk: "Med Risk", desc: "Capitalizing on the growth of housing societies.", icon: "🏡" }
+          { title: "National Savings (NSC)", ret: "13-15% p.a", risk: "Low Risk", desc: "Government-backed. Safest option but lower returns than equity.", icon: "PK" },
+          { title: "Mutual Funds (AMCs)", ret: "18-22% p.a (Cash Funds)", risk: "Med Risk", desc: "Professionally managed. Great for monthly savings (SIP).", icon: "Chart" },
+          { title: "Stock Exchange (PSX)", ret: "25%+ (Selected Pairs)", risk: "High Risk", desc: "Direct ownership in Blue Chip companies like Meezan or Systems.", icon: "Growth" },
+          { title: "Real Estate (Files)", ret: "Varies (High Peaks)", risk: "Med Risk", desc: "Capitalizing on the growth of housing societies.", icon: "Home" }
         ].map((item, i) => (
           <div key={i} className="p-8 bg-white border border-slate-100 rounded-[3rem] shadow-sm hover:shadow-xl transition-all">
             <div className="text-3xl mb-4">{item.icon}</div>
@@ -393,7 +393,7 @@ export const BMIBlogContent = () => (
     {/* Header Section */}
     <header className="text-center space-y-8">
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-rose-50 text-rose-700 rounded-full text-xs font-black uppercase tracking-widest border border-rose-100">
-        🏃‍♂️ Health & Wellness Pakistan
+        Health & Wellness Pakistan
       </div>
       <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         BMI Calculator & Guide: <br />
@@ -410,7 +410,7 @@ export const BMIBlogContent = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <p>
-            Body Mass Index (BMI) is a simple height-to-weight ratio used to classify adults into underweight, healthy weight, overweight, and obese categories. It is calculated by dividing your weight in kilograms by the square of your height in meters (kg/m²).
+            Body Mass Index (BMI) is a simple height-to-weight ratio used to classify adults into underweight, healthy weight, overweight, and obese categories. It is calculated by dividing your weight in kilograms by the square of your height in meters (kg/mÂ²).
           </p>
           <p>
             While it doesn't directly measure body fat, research has shown that BMI correlates significantly with direct measures of body fatness. It serves as a cost-effective and easy-to-perform method of screening for weight categories that may lead to health problems.
@@ -419,7 +419,7 @@ export const BMIBlogContent = () => (
         <div className="bg-slate-900 text-white p-10 rounded-[3rem] shadow-2xl relative overflow-hidden">
           <h3 className="text-2xl font-bold mb-4 text-rose-400">The Metric Formula:</h3>
           <div className="bg-white/5 p-6 rounded-2xl border border-white/10 font-mono text-2xl text-center mb-6">
-            BMI = Weight (kg) / [Height (m)]²
+            BMI = Weight (kg) / [Height (m)]Â²
           </div>
           <p className="text-xs text-slate-400 italic text-center">Standard measurement used by the World Health Organization (WHO).</p>
         </div>
@@ -433,11 +433,11 @@ export const BMIBlogContent = () => (
         <div className="grid grid-cols-1 gap-4">
           {[
             { l: 'Severe Thinness', r: '< 16.0', c: 'bg-blue-100 text-blue-800' },
-            { l: 'Moderate Thinness', r: '16.0 – 17.0', c: 'bg-blue-50 text-blue-700' },
-            { l: 'Normal Weight', r: '18.5 – 24.9', c: 'bg-emerald-100 text-emerald-800' },
-            { l: 'Overweight', r: '25.0 – 29.9', c: 'bg-amber-100 text-amber-800' },
-            { l: 'Obese Class I', r: '30.0 – 34.9', c: 'bg-rose-100 text-rose-800' },
-            { l: 'Obese Class II', r: '35.0 – 39.9', c: 'bg-rose-200 text-rose-900' },
+            { l: 'Moderate Thinness', r: '16.0 â€“ 17.0', c: 'bg-blue-50 text-blue-700' },
+            { l: 'Normal Weight', r: '18.5 â€“ 24.9', c: 'bg-emerald-100 text-emerald-800' },
+            { l: 'Overweight', r: '25.0 â€“ 29.9', c: 'bg-amber-100 text-amber-800' },
+            { l: 'Obese Class I', r: '30.0 â€“ 34.9', c: 'bg-rose-100 text-rose-800' },
+            { l: 'Obese Class II', r: '35.0 â€“ 39.9', c: 'bg-rose-200 text-rose-900' },
             { l: 'Obese Class III', r: '> 40.0', c: 'bg-rose-300 text-rose-950' },
           ].map((row, i) => (
             <div key={i} className={`flex justify-between items-center px-8 py-4 rounded-2xl border border-transparent shadow-sm ${row.c}`}>
@@ -508,14 +508,14 @@ export const EMIBlogContent = () => (
     {/* Header Section */}
     <header className="text-center space-y-8">
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-blue-50 text-blue-700 rounded-full text-xs font-black uppercase tracking-widest border border-blue-100">
-        🏦 Banking & Home Finance Pakistan
+        Banking & Home Finance Pakistan
       </div>
       <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         EMI Calculator Pakistan: <br />
         <span className="text-blue-600 italic">Loan Calculator Pakistan: KIBOR & Markups</span>
       </h2>
       <p className="text-xl text-slate-500 max-w-4xl mx-auto leading-relaxed text-center">
-        Taking a loan is one of the most significant financial commitments a Pakistani household or business can make. Whether you are applying for a Car Loan Calculator Pakistan, Home Loan EMI Calculator, or Personal Loan, the jargon—KIBOR, reducing balance, processing fees, and insurance—can be overwhelming. This guide demystifies the monthly installment calculator system and helps you plan your borrowing with absolute clarity.
+        Taking a loan is one of the most significant financial commitments a Pakistani household or business can make. Whether you are applying for a Car Loan Calculator Pakistan, Home Loan EMI Calculator, or Personal Loan, the jargonâ€”KIBOR, reducing balance, processing fees, and insuranceâ€”can be overwhelming. This guide demystifies the monthly installment calculator system and helps you plan your borrowing with absolute clarity.
       </p>
     </header>
 
@@ -572,12 +572,12 @@ export const EMIBlogContent = () => (
         <div className="p-8 bg-slate-50 border border-slate-100 rounded-[3rem]">
           <h4 className="text-xl font-bold text-slate-900 mb-4">Reducing Balance (Standard)</h4>
           <p className="text-sm text-slate-500 mb-4">Interest is calculated only on the remaining loan amount. This is the global standard used by banks like Meezan, HBL, and Alfalah.</p>
-          <div className="text-emerald-600 font-bold text-sm">✓ More Transparent | ✓ Cheaper in the long run</div>
+          <div className="text-emerald-600 font-bold text-sm">* More Transparent | * Cheaper in the long run</div>
         </div>
         <div className="p-8 bg-rose-50 border border-rose-100 rounded-[3rem]">
           <h4 className="text-xl font-bold text-slate-900 mb-4">Flat Rate (Beware)</h4>
           <p className="text-sm text-slate-500 mb-4">Interest is calculated on the original amount for the entire duration. This makes the "Effective Interest Rate" almost double the advertised rate.</p>
-          <div className="text-rose-600 font-bold text-sm">✗ Often used by private lenders | ✗ Highly Expensive</div>
+          <div className="text-rose-600 font-bold text-sm">X Often used by private lenders | X Highly Expensive</div>
         </div>
       </div>
     </section>
@@ -635,7 +635,7 @@ export const TaxBlogContent = () => (
     {/* Header Section */}
     <header className="text-center space-y-8">
       <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-xs font-black uppercase tracking-widest border border-emerald-100">
-        🏛️ FBR Tax Year 2025-2026
+        FBR Tax Year 2025-2026
       </div>
       <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         Income Tax Calculator Pakistan: <br />
@@ -669,7 +669,7 @@ export const TaxBlogContent = () => (
               "Anyone filing tax returns"
             ].map((item, i) => (
               <li key={i} className="flex gap-3 items-start">
-                <span className="text-emerald-500 font-bold">✓</span>
+                <span className="text-emerald-500 font-bold">*</span>
                 <span className="text-slate-600">{item}</span>
               </li>
             ))}
@@ -708,7 +708,7 @@ export const TaxBlogContent = () => (
             "Works on all devices"
           ].map((benefit, i) => (
             <div key={i} className="flex items-center gap-3">
-              <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">✓</span>
+              <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">*</span>
               <span className="text-slate-700 font-medium">{benefit}</span>
             </div>
           ))}
@@ -774,10 +774,10 @@ export const TaxBlogContent = () => (
           </thead>
           <tbody className="divide-y divide-slate-100 italic">
             <tr><td className="p-6 font-medium">Up to Rs. 600,000</td><td className="p-6">Rs. 0</td><td className="p-6">0%</td></tr>
-            <tr className="bg-slate-50/50"><td className="p-6 font-medium">Rs. 600,001 – 1,200,000</td><td className="p-6">Rs. 0</td><td className="p-6">5% over 600k</td></tr>
-            <tr><td className="p-6 font-medium">Rs. 1,200,001 – 2,200,000</td><td className="p-6">Rs. 30,000</td><td className="p-6">15% over 1.2M</td></tr>
-            <tr className="bg-slate-50/50"><td className="p-6 font-medium">Rs. 2,200,001 – 3,200,000</td><td className="p-6">Rs. 180,000</td><td className="p-6">25% over 2.2M</td></tr>
-            <tr><td className="p-6 font-medium">Rs. 3,200,001 – 4,100,000</td><td className="p-6">Rs. 430,000</td><td className="p-6">30% over 3.2M</td></tr>
+            <tr className="bg-slate-50/50"><td className="p-6 font-medium">Rs. 600,001 â€“ 1,200,000</td><td className="p-6">Rs. 0</td><td className="p-6">5% over 600k</td></tr>
+            <tr><td className="p-6 font-medium">Rs. 1,200,001 â€“ 2,200,000</td><td className="p-6">Rs. 30,000</td><td className="p-6">15% over 1.2M</td></tr>
+            <tr className="bg-slate-50/50"><td className="p-6 font-medium">Rs. 2,200,001 â€“ 3,200,000</td><td className="p-6">Rs. 180,000</td><td className="p-6">25% over 2.2M</td></tr>
+            <tr><td className="p-6 font-medium">Rs. 3,200,001 â€“ 4,100,000</td><td className="p-6">Rs. 430,000</td><td className="p-6">30% over 3.2M</td></tr>
             <tr className="bg-slate-50/50"><td className="p-6 font-medium">Above Rs. 4,100,000</td><td className="p-6">Rs. 700,000</td><td className="p-6">35% over 4.1M</td></tr>
           </tbody>
         </table>
@@ -792,7 +792,7 @@ export const TaxBlogContent = () => (
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="p-8 bg-white border border-slate-100 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all group">
-          <div className="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">🏢</div>
+          <div className="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">Donation</div>
           <h4 className="font-bold text-xl text-slate-900 mb-3">Charitable Donations (Section 61)</h4>
           <p className="text-sm text-slate-500 leading-relaxed mb-4">
             You can claim a tax credit for donations made to non-profit organizations approved under the Law. This includes entities like Shaukat Khanum, Edhi Foundation, and Indus Hospital.
@@ -800,7 +800,7 @@ export const TaxBlogContent = () => (
           <span className="text-[10px] font-black uppercase text-emerald-600 tracking-widest">Max 30% of Taxable Income</span>
         </div>
         <div className="p-8 bg-white border border-slate-100 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all group">
-          <div className="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">🎓</div>
+          <div className="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">Education</div>
           <h4 className="font-bold text-xl text-slate-900 mb-3">Education Expenses (Section 60D)</h4>
           <p className="text-sm text-slate-500 leading-relaxed mb-4">
             If your annual taxable income is less than Rs. 1.5 million, you can deduct the tuition fees paid for your children from your taxable income.
@@ -808,7 +808,7 @@ export const TaxBlogContent = () => (
           <span className="text-[10px] font-black uppercase text-blue-600 tracking-widest">Proof of payment required</span>
         </div>
         <div className="p-8 bg-white border border-slate-100 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all group">
-          <div className="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">🛡️</div>
+          <div className="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">Shield</div>
           <h4 className="font-bold text-xl text-slate-900 mb-3">Investment in Shares/Insurance (Section 62)</h4>
           <p className="text-sm text-slate-500 leading-relaxed mb-4">
             Investing in new shares, life insurance, or mutual funds can earn you significant tax credits. This encourages long-term savings while reducing your immediate tax burden.
@@ -855,7 +855,7 @@ export const TaxBlogContent = () => (
           <div className="space-y-4">
             {['Annual Salary Certificate (provided by HR)', 'Bank Statement (July to June)', 'Utility Bills (on your name)', 'Evidence of Investments/Charity', 'Vehicle registration details'].map((item, i) => (
               <div key={i} className="flex items-center gap-3 py-3 border-b border-slate-50 last:border-0">
-                <div className="w-5 h-5 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 text-[10px]">✓</div>
+                <div className="w-5 h-5 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 text-[10px]">*</div>
                 <span className="text-sm text-slate-600">{item}</span>
               </div>
             ))}
@@ -922,7 +922,7 @@ export const ZakatBlogContent = () => (
     {/* Header Section */}
     <header className="text-center space-y-8">
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-amber-50 text-amber-700 rounded-full text-xs font-black uppercase tracking-widest border border-amber-100">
-        🌙 Third Pillar of Islam
+        Islamic Core Values
       </div>
       <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         Zakat Calculator Pakistan: <br />
@@ -961,7 +961,7 @@ export const ZakatBlogContent = () => (
               "Investors"
             ].map((item, i) => (
               <li key={i} className="flex gap-3 items-start">
-                <span className="text-amber-500 font-bold">✓</span>
+                <span className="text-amber-500 font-bold">*</span>
                 <span className="text-slate-600">{item}</span>
               </li>
             ))}
@@ -999,7 +999,7 @@ export const ZakatBlogContent = () => (
             "Works on mobile and desktop"
           ].map((benefit, i) => (
             <div key={i} className="flex items-center gap-3">
-              <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xs font-bold">✓</span>
+              <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xs font-bold">*</span>
               <span className="text-slate-700 font-medium">{benefit}</span>
             </div>
           ))}
@@ -1007,7 +1007,7 @@ export const ZakatBlogContent = () => (
       </div>
     </section>
 
-    {/* Section 1: The Essence of Zakat */}
+    {/* Section 1: What is Zakat */}
     <section className="space-y-10">
       <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-amber-500 pl-6">What is Zakat and Who Must Pay It?</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
@@ -1021,19 +1021,19 @@ export const ZakatBlogContent = () => (
           <h3 className="text-2xl font-bold mb-4">The Eligibility Criteria:</h3>
           <ul className="space-y-4">
             <li className="flex items-start gap-3">
-              <span className="bg-white/20 p-1 rounded-full text-[10px]">✓</span>
+              <span className="bg-white/20 p-1 rounded-full text-[10px]">*</span>
               <span>Muslim & Mature (Baligh)</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="bg-white/20 p-1 rounded-full text-[10px]">✓</span>
+              <span className="bg-white/20 p-1 rounded-full text-[10px]">*</span>
               <span>Ownership of Assets (Milk-e-Taam)</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="bg-white/20 p-1 rounded-full text-[10px]">✓</span>
+              <span className="bg-white/20 p-1 rounded-full text-[10px]">*</span>
               <span>Wealth above Nisab</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="bg-white/20 p-1 rounded-full text-[10px]">✓</span>
+              <span className="bg-white/20 p-1 rounded-full text-[10px]">*</span>
               <span>Possession for one Lunar Year (Hawl)</span>
             </li>
           </ul>
@@ -1052,14 +1052,14 @@ export const ZakatBlogContent = () => (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-8 bg-white/5 border border-white/10 rounded-[2.5rem] hover:bg-white/10 transition-colors">
             <h4 className="text-xl font-bold text-amber-500 mb-4 flex items-center gap-2">
-              <span>🏆</span> Gold Standard
+              <span>Gold</span> Gold Standard
             </h4>
             <p className="text-3xl font-black mb-2">87.48 Grams</p>
             <p className="text-slate-500 text-sm">Equivalent to 7.5 Tolas. If your only asset is Gold, use this higher threshold.</p>
           </div>
           <div className="p-8 bg-white/5 border border-white/10 rounded-[2.5rem] hover:bg-white/10 transition-colors border-amber-500/50">
             <h4 className="text-xl font-bold text-slate-300 mb-4 flex items-center gap-2">
-              <span>🥈</span> Silver Standard
+              <span>Silver</span> Silver Standard
             </h4>
             <p className="text-3xl font-black mb-2">612.36 Grams</p>
             <p className="text-slate-500 text-sm">Equivalent to 52.5 Tolas. Scholars recommend using this for cash, stocks, and mixed assets to benefit more poor people.</p>
@@ -1081,7 +1081,7 @@ export const ZakatBlogContent = () => (
           { t: "Stocks & Shares", d: "The current market value of your share portfolio or the net asset value of Mutual Funds.", status: "Zakatable", color: "emerald" },
           { t: "Business Inventory", d: "The cost/market value of goods meant for resale. Raw materials are also included.", status: "Zakatable", color: "emerald" },
           { t: "Rental Income", d: "The accumulated rent money you have in hand on your Zakat date.", status: "Zakatable", color: "emerald" },
-          { t: "Personal Assets", d: "Your primary residence, personal vehicle, and furniture are NOT subject to Zakat.", status: "Exempt", color: "slate" },
+          { t: "Personal Assets", d: "Your primary residence, personal vehicle, and household furniture are NOT subject to Zakat.", status: "Exempt", color: "slate" },
         ].map((item, i) => (
           <div key={i} className={`p-8 rounded-[2.5rem] border ${item.status === 'Zakatable' ? 'bg-emerald-50 border-emerald-100' : 'bg-slate-50 border-slate-100'} shadow-sm`}>
             <div className="flex justify-between items-start mb-4">
@@ -1130,7 +1130,7 @@ export const ZakatBlogContent = () => (
         </div>
         <div className="p-8 bg-white border border-amber-200 rounded-3xl text-center">
           <p className="text-sm font-medium text-slate-500 mb-2">Mathematical Formula:</p>
-          <code className="text-2xl font-black text-amber-600">Zakat = (Net Zakatable Assets) × 0.025</code>
+          <h4 className="text-xl font-bold text-slate-900">Subtract Liabilities</h4>
         </div>
       </div>
     </section>
@@ -1145,9 +1145,9 @@ export const ZakatBlogContent = () => (
             Zakat on property depends on your <strong>Intention (Niyyah)</strong> at the time of purchase:
           </p>
           <ul className="space-y-3 text-sm text-slate-500">
-            <li>• <strong>Buy to Sell (Trading):</strong> If you bought a plot solely for profit when price rises, you pay 2.5% on its <strong>Market Value</strong> every year.</li>
-            <li>• <strong>Buy to Build (Personal):</strong> No Zakat on the plot or the building.</li>
-            <li>• <strong>Buy for Rent:</strong> No Zakat on the building value. You only pay on the rental income accumulated at year-end.</li>
+            <li>* <strong>Buy to Sell (Trading):</strong> If you bought a plot solely for profit when price rises, you pay 2.5% on its <strong>Market Value</strong> every year.</li>
+            <li>* <strong>Buy to Build (Personal):</strong> No Zakat on the plot or the building.</li>
+            <li>* <strong>Buy for Rent:</strong> No Zakat on the building value. You only pay on the rental income accumulated at year-end.</li>
           </ul>
         </div>
         <div className="space-y-6">
@@ -1219,7 +1219,7 @@ export const ProfitMarginBlogContent = () => (
     {/* Header Section */}
     <header className="text-center space-y-8">
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-emerald-50 text-emerald-700 rounded-full text-xs font-black uppercase tracking-widest border border-emerald-100">
-        🚀 Business Intelligence
+        Business Intelligence
       </div>
       <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         Profit Margin Calculator: <br />
@@ -1235,9 +1235,9 @@ export const ProfitMarginBlogContent = () => (
       <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">The Three Pillars of Profitability</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {[
-          { t: "Gross Profit Margin", d: "Revenue minus Cost of Goods Sold (COGS). It shows how efficient your production or sourcing is.", icon: "📦" },
-          { t: "Operating Margin", d: "Gross Profit minus operating expenses (Rent, Salaries, Utilities). It shows your 'Business Health'.", icon: "⚙️" },
-          { t: "Net Profit Margin", d: "The final 'Bottom Line'. What's left after Taxes, Interest, and ALL expenses.", icon: "💰" }
+          { t: "Gross Profit Margin", d: "Revenue minus Cost of Goods Sold (COGS). It shows how efficient your production or sourcing is.", icon: "Stock" },
+          { t: "Operating Margin", d: "Gross Profit minus operating expenses (Rent, Salaries, Utilities). It shows your 'Business Health'.", icon: "Settings" },
+          { t: "Net Profit Margin", d: "The final 'Bottom Line'. What's left after Taxes, Interest, and ALL expenses.", icon: "Profit" }
         ].map((item, i) => (
           <div key={i} className="p-8 bg-white border border-slate-100 rounded-[3rem] shadow-sm hover:shadow-xl transition-all">
             <div className="text-4xl mb-6">{item.icon}</div>
@@ -1270,8 +1270,8 @@ export const ProfitMarginBlogContent = () => (
         </div>
         <div className="bg-white/5 p-10 rounded-[3rem] border border-white/10 text-center">
           <p className="text-sm text-slate-400 mb-4 uppercase tracking-widest font-bold">Calculation Rule</p>
-          <div className="text-3xl font-black text-white mb-4">Margin = <br /> (Revenue – Cost) / Revenue</div>
-          <p className="text-xs text-slate-500 italic">Multiplying by 100 gives you the Percentage.</p>
+          <div className="text-3xl font-black text-white mb-4">Margin = <br /> (Revenue â€“ Cost) / Revenue</div>
+          <p className="text-[10px] text-slate-500 italic">Multiplying by 100 gives you the Percentage.</p>
         </div>
       </div>
     </section>
@@ -1291,22 +1291,22 @@ export const ProfitMarginBlogContent = () => (
           <tbody className="divide-y divide-slate-100">
             <tr className="bg-white hover:bg-slate-50 transition-colors shadow-sm">
               <td className="p-6 font-bold rounded-l-3xl">Software/IT Services</td>
-              <td className="p-6 text-emerald-600 font-bold">20% – 45%</td>
+              <td className="p-6 text-emerald-600 font-bold">20% â€“ 45%</td>
               <td className="p-6 rounded-r-3xl"><span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full font-black text-[9px]">LOW ASSETS</span></td>
             </tr>
             <tr className="bg-white hover:bg-slate-50 transition-colors shadow-sm">
               <td className="p-6 font-bold rounded-l-3xl">Retail (Grocery/FMCG)</td>
-              <td className="p-6 text-amber-600 font-bold">2% – 5%</td>
+              <td className="p-6 text-amber-600 font-bold">2% â€“ 5%</td>
               <td className="p-6 rounded-r-3xl"><span className="px-3 py-1 bg-rose-100 text-rose-700 rounded-full font-black text-[9px]">HIGH VOLUME</span></td>
             </tr>
             <tr className="bg-white hover:bg-slate-50 transition-colors shadow-sm">
               <td className="p-6 font-bold rounded-l-3xl">Restaurants/Cafes</td>
-              <td className="p-6 text-emerald-600 font-bold">10% – 15%</td>
+              <td className="p-6 text-emerald-600 font-bold">10% â€“ 15%</td>
               <td className="p-6 rounded-r-3xl"><span className="px-3 py-1 bg-amber-100 text-amber-700 rounded-full font-black text-[9px]">HIGH EXPENDITURE</span></td>
             </tr>
             <tr className="bg-white hover:bg-slate-50 transition-colors shadow-sm">
               <td className="p-6 font-bold rounded-l-3xl">Manufacturing (Textile)</td>
-              <td className="p-6 text-blue-600 font-bold">8% – 12%</td>
+              <td className="p-6 text-blue-600 font-bold">8% â€“ 12%</td>
               <td className="p-6 rounded-r-3xl"><span className="px-3 py-1 bg-slate-100 text-slate-700 rounded-full font-black text-[9px]">ENERGY DEPENDENT</span></td>
             </tr>
           </tbody>
@@ -1326,7 +1326,7 @@ export const ProfitMarginBlogContent = () => (
           { t: "Inventory Turnover", d: "Stock sitting on shelf is dead cash. Fast turnover improves cash flow and margin." },
         ].map((item, i) => (
           <div key={i} className="flex gap-4 items-start bg-white p-6 rounded-2xl shadow-sm">
-            <div className="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold shrink-0">✓</div>
+            <div className="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold shrink-0">*</div>
             <div>
               <h5 className="font-bold text-slate-900 text-sm mb-1">{item.t}</h5>
               <p className="text-xs text-slate-500 leading-relaxed text-justify">{item.d}</p>
@@ -1372,7 +1372,7 @@ export const RealEstateBlogContent = () => (
     {/* Header Section */}
     <header className="text-center space-y-8">
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-emerald-50 text-emerald-700 rounded-full text-xs font-black uppercase tracking-widest border border-emerald-100">
-        🏠 Property ROI Planner
+        Property ROI Planner
       </div>
       <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         Real Estate ROI Calculator Pakistan: <br />
@@ -1509,7 +1509,7 @@ export const PFBlogContent = () => (
     {/* Header Section */}
     <header className="text-center space-y-8">
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-blue-50 text-blue-700 rounded-full text-xs font-black uppercase tracking-widest border border-blue-100">
-        🛡️ Employee Savings Guide
+        Employee Savings Guide
       </div>
       <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         Provident Fund Calculator Pakistan: <br />
@@ -1543,7 +1543,7 @@ export const PFBlogContent = () => (
               "Anyone who wants quick and reliable calculations"
             ].map((item, i) => (
               <li key={i} className="flex gap-3 items-start">
-                <span className="text-blue-500 font-bold">✓</span>
+                <span className="text-blue-500 font-bold">*</span>
                 <span className="text-slate-600">{item}</span>
               </li>
             ))}
@@ -1620,7 +1620,7 @@ export const PFBlogContent = () => (
             </div>
             <div className="p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-2xl flex justify-between items-center">
               <span className="text-sm">Total Monthly Growth</span>
-              <span className="text-xl font-black text-emerald-400">PF balance calculator stats</span>
+              <span className="text-xl font-black text-emerald-400">Total Calculation</span>
             </div>
           </div>
         </div>
@@ -1694,7 +1694,7 @@ export const GratuityBlogContent = () => (
     {/* Header Section */}
     <header className="text-center space-y-8">
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-indigo-50 text-indigo-700 rounded-full text-xs font-black uppercase tracking-widest border border-indigo-100">
-        🎁 End of Service Benefits
+        End of Service Benefits
       </div>
       <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         Gratuity Calculator Pakistan 2026: <br />
@@ -1726,7 +1726,7 @@ export const GratuityBlogContent = () => (
       <div className="bg-indigo-600 text-white p-10 rounded-[3rem] shadow-xl text-center">
         <h3 className="text-2xl font-bold mb-4">The Golden Formula</h3>
         <div className="text-3xl md:text-4xl font-black bg-white/10 p-6 rounded-2xl inline-block mb-4">
-          (Last Drawn Gross Salary) × (Years of Service)
+          (Last Drawn Gross Salary) * (Years of Service)
         </div>
         <p className="text-indigo-200 text-sm">
           *Technical Note: This applies if the company does not have a Provident Fund. If PF exists, gratuity might be optional or calculated differently (e.g., 50% of Basic).
@@ -1786,7 +1786,7 @@ export const GratuityBlogContent = () => (
         <details className="group bg-white border border-slate-200 p-6 rounded-2xl open:bg-slate-50 transition-all">
           <summary className="font-bold text-slate-900 cursor-pointer flex justify-between items-center list-none">
             <span>Can I claim Gratuity if I resign?</span>
-            <span className="transition group-open:rotate-180">▼</span>
+            <span>Can I claim Gratuity if I resign?</span>
           </summary>
           <p className="text-sm text-slate-600 mt-4 leading-relaxed">
             Yes. Gratuity is payable on resignation, retirement, death, or termination (unless terminated for misconduct like theft/fraud). You must complete a minimum qualifying period (usually 6 months or 1 year) to be eligible.
@@ -1795,7 +1795,7 @@ export const GratuityBlogContent = () => (
         <details className="group bg-white border border-slate-200 p-6 rounded-2xl open:bg-slate-50 transition-all">
           <summary className="font-bold text-slate-900 cursor-pointer flex justify-between items-center list-none">
             <span>Is Gratuity mandatory for all companies?</span>
-            <span className="transition group-open:rotate-180">▼</span>
+            <span>Is Gratuity mandatory for all companies?</span>
           </summary>
           <p className="text-sm text-slate-600 mt-4 leading-relaxed">
             Under the Industrial and Commercial Employment Ordinance 1968, every commercial establishment with 20 or more employees MUST pay gratuity OR have a Provident Fund. They cannot deny both.
@@ -1804,7 +1804,7 @@ export const GratuityBlogContent = () => (
         <details className="group bg-white border border-slate-200 p-6 rounded-2xl open:bg-slate-50 transition-all">
           <summary className="font-bold text-slate-900 cursor-pointer flex justify-between items-center list-none">
             <span>What if my employer refuses to pay?</span>
-            <span className="transition group-open:rotate-180">▼</span>
+            <span>What if my employer refuses to pay?</span>
           </summary>
           <p className="text-sm text-slate-600 mt-4 leading-relaxed">
             You can file a claim with the "Commissioner for Workmen's Compensation" or the NIRC (National Industrial Relations Commission). It is a payable debt that the company must honor.
@@ -1831,7 +1831,7 @@ export const FreelancerBlogContent = () => (
     {/* Header Section */}
     <header className="text-center space-y-8">
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-indigo-50 text-indigo-700 rounded-full text-xs font-black uppercase tracking-widest border border-indigo-100">
-        💻 Digital Economy Pakistan
+        Digital Economy Pakistan
       </div>
       <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         Freelancer Tax Pakistan Guide: <br />
@@ -1865,7 +1865,7 @@ export const FreelancerBlogContent = () => (
               "Online consultants"
             ].map((item, i) => (
               <li key={i} className="flex gap-3 items-start">
-                <span className="text-indigo-500 font-bold">✓</span>
+                <span className="text-indigo-500 font-bold">*</span>
                 <span className="text-slate-600">{item}</span>
               </li>
             ))}
@@ -1904,7 +1904,7 @@ export const FreelancerBlogContent = () => (
             "Completely free tool"
           ].map((benefit, i) => (
             <div key={i} className="flex items-center gap-3">
-              <span className="w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center text-xs font-bold">✓</span>
+              <span className="w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center text-xs font-bold">*</span>
               <span className="text-slate-700 font-medium">{benefit}</span>
             </div>
           ))}
@@ -1970,11 +1970,11 @@ export const FreelancerBlogContent = () => (
           <h4 className="text-xl font-bold text-indigo-400 mb-6">Global Platforms</h4>
           <ul className="space-y-4">
             <li className="flex gap-4 items-start">
-              <span className="text-emerald-400">✓</span>
+              <span className="text-emerald-400">*</span>
               <p className="text-sm"><strong>Payoneer:</strong> Most reliable for direct Upwork/Fiverr withdrawals. Directly links to JazzCash for instant PKR.</p>
             </li>
             <li className="flex gap-4 items-start">
-              <span className="text-emerald-400">✓</span>
+              <span className="text-emerald-400">*</span>
               <p className="text-sm"><strong>Wise (TransferWise):</strong> Best exchange rates but registration is currently limited for new Pakistani users.</p>
             </li>
           </ul>
@@ -1983,11 +1983,11 @@ export const FreelancerBlogContent = () => (
           <h4 className="text-xl font-bold text-white mb-6">Local Fintech Innovation</h4>
           <ul className="space-y-4">
             <li className="flex gap-4 items-start">
-              <span className="text-indigo-200">✓</span>
+              <span className="text-indigo-200">*</span>
               <p className="text-sm"><strong>SadaBiz:</strong> Powered by SadaPay. Allows you to send invoices to direct clients and receive USD via Apple/Google Pay.</p>
             </li>
             <li className="flex gap-4 items-start">
-              <span className="text-indigo-200">✓</span>
+              <span className="text-indigo-200">*</span>
               <p className="text-sm"><strong>Nayapay:</strong> Great for local transactions and managing your USD debit card for hosting/tools expenses.</p>
             </li>
           </ul>
@@ -2039,7 +2039,7 @@ export const UnitConverterBlogContent = () => (
     {/* Header Section */}
     <header className="text-center space-y-8">
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-slate-100 text-slate-700 rounded-full text-xs font-black uppercase tracking-widest border border-slate-200">
-        📏 Area Measurement Pakistan
+        Area Measurement Pakistan
       </div>
       <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         Unit Converter Pakistan: <br />
@@ -2121,7 +2121,7 @@ export const FBRSlabsPage = ({ isUrdu }: { isUrdu: boolean }) => (
   <div className="max-w-4xl mx-auto py-20 px-4">
     <div className="mb-8 border-b pb-8">
       <button onClick={() => window.history.back()} className="text-emerald-600 font-bold mb-4 flex items-center gap-2 hover:bg-emerald-50 px-4 py-2 rounded-full transition-colors w-fit">
-        <span>←</span> Back
+        <span>Back</span> Back
       </button>
       <h1 className="text-4xl font-black text-slate-900">Official FBR Salary Tax Slabs Pakistan (2025-2026)</h1>
       <p className="text-slate-500 mt-2">Comprehensive guide to FBR Tax Slabs 2025-26.</p>
@@ -2139,7 +2139,7 @@ export const ZakatInfoPage = ({ isUrdu }: { isUrdu: boolean }) => (
   <div className="max-w-4xl mx-auto py-20 px-4">
     <div className="mb-8 border-b pb-8">
       <button onClick={() => window.history.back()} className="text-amber-600 font-bold mb-4 flex items-center gap-2 hover:bg-amber-50 px-4 py-2 rounded-full transition-colors w-fit">
-        <span>←</span> Back
+        <span>Back</span> Back
       </button>
       <h1 className="text-4xl font-black text-slate-900">The Complete Guide to Zakat & Nisab Rules in Pakistan (2025-26)</h1>
       <p className="text-slate-500 mt-2">Complete guide to Zakat, Nisab thresholds, and asset valuation methods.</p>
@@ -2273,7 +2273,7 @@ export const GradeCalculatorBlogContent = () => (
   <article className="mt-20 space-y-20 text-slate-700 leading-relaxed border-t border-slate-200 pt-20 max-w-5xl mx-auto px-4 font-sans text-justify">
     <header className="text-center space-y-8">
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-indigo-50 text-indigo-700 rounded-full text-xs font-black uppercase tracking-widest border border-indigo-100">
-        📝 Academic Excellence
+        Academic Excellence
       </div>
       <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         Grade Calculator: <br />
@@ -2362,19 +2362,19 @@ export const GradeCalculatorBlogContent = () => (
       <h2 className="text-3xl font-bold text-center mb-12">Key Features of Our Tool</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
         <div className="bg-white/10 p-8 rounded-3xl border border-white/10 backdrop-blur-sm">
-          <h5 className="font-bold text-emerald-400 mb-2">✓ Advanced Algorithms</h5>
+          <h5 className="font-bold text-emerald-400 mb-2">âœ“ Advanced Algorithms</h5>
           <p className="text-sm text-slate-300">Uses professional <strong>weighted grade calculator</strong> logic to ensure your GPA and percentages are 100% correct.</p>
         </div>
         <div className="bg-white/10 p-8 rounded-3xl border border-white/10 backdrop-blur-sm">
-          <h5 className="font-bold text-emerald-400 mb-2">✓ Dynamic Interface</h5>
+          <h5 className="font-bold text-emerald-400 mb-2">âœ“ Dynamic Interface</h5>
           <p className="text-sm text-slate-300">An <strong>easy-to-use interface</strong> that works seamlessly on mobile, tablets, and desktops. Calculate on the go!</p>
         </div>
         <div className="bg-white/10 p-8 rounded-3xl border border-white/10 backdrop-blur-sm">
-          <h5 className="font-bold text-emerald-400 mb-2">✓ Multi-Scale Support</h5>
+          <h5 className="font-bold text-emerald-400 mb-2">âœ“ Multi-Scale Support</h5>
           <p className="text-sm text-slate-300">Supports various grading scales used by standard boards like CBSE, IB, and HEC Pakistan.</p>
         </div>
         <div className="bg-white/10 p-8 rounded-3xl border border-white/10 backdrop-blur-sm">
-          <h5 className="font-bold text-emerald-400 mb-2">✓ 100% Free Access</h5>
+          <h5 className="font-bold text-emerald-400 mb-2">âœ“ 100% Free Access</h5>
           <p className="text-sm text-slate-300">Our <strong>free grades calculator</strong> requires no subscription or login. Use it anytime, anywhere.</p>
         </div>
       </div>
@@ -2427,7 +2427,7 @@ export const CGPACalculatorBlogContent = () => (
   <article className="mt-20 space-y-20 text-slate-700 leading-relaxed border-t border-slate-200 pt-20 max-w-5xl mx-auto px-4 font-sans text-justify">
     <header className="text-center space-y-8">
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-emerald-50 text-emerald-700 rounded-full text-xs font-black uppercase tracking-widest border border-emerald-100">
-        🎓 Professional GPA Planning
+        Professional GPA Planning
       </div>
       <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         CGPA Calculator: <br />
@@ -2467,14 +2467,14 @@ export const CGPACalculatorBlogContent = () => (
       <div className="p-8 bg-slate-900 text-white rounded-[2.5rem] shadow-xl text-center space-y-4">
         <h4 className="text-emerald-400 font-black uppercase text-xs tracking-widest leading-relaxed">Core CGPA Formula</h4>
         <div className="text-2xl md:text-3xl font-mono py-4 border-y border-white/10">
-          CGPA = ∑ (SGPA × Semester Credits) / Total Credits
+          CGPA = Sum (SGPA * Semester Credits) / Total Credits
         </div>
         <p className="text-xs text-slate-400">
           By multiplying each semester's GPA by its respective credits, we give more weight to semesters with heavier course loads, ensuring a fair arithmetic representation.
         </p>
       </div>
       <p className="pt-4">
-        For many boards (like CBSE), the <strong>CGPA to percentage</strong> calculation is even simpler: <strong>Overall Percentage = CGPA × 9.5</strong>. Our <strong>CBSE CGPA calculator</strong> mode follows this exact multiplier to ensure alignment with official academic transcripts.
+        For many boards (like CBSE), the <strong>CGPA to percentage</strong> calculation is even simpler: <strong>Overall Percentage = CGPA * 9.5</strong>. Our <strong>CBSE CGPA calculator</strong> mode follows this exact multiplier to ensure alignment with official academic transcripts.
       </p>
     </section>
 
@@ -2580,7 +2580,7 @@ export const MarkPercentageBlogContent = () => (
   <article className="mt-20 space-y-20 text-slate-700 leading-relaxed border-t border-slate-200 pt-20 max-w-5xl mx-auto px-4 font-sans text-justify">
     <header className="text-center space-y-8">
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-blue-50 text-blue-700 rounded-full text-xs font-black uppercase tracking-widest border border-blue-100">
-        📊 Precision Analytics
+        Precision Analytics
       </div>
       <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
         Mark Percentage Calculator: <br />
@@ -2610,10 +2610,10 @@ export const MarkPercentageBlogContent = () => (
       <div className="p-10 bg-blue-600 text-white rounded-[3rem] shadow-2xl space-y-6">
         <h4 className="font-black text-center uppercase tracking-widest text-xs opacity-80">The Fundamental Marks Formula</h4>
         <div className="text-3xl md:text-4xl font-black text-center py-6 bg-white/10 rounded-2xl border border-white/20">
-          (Obtained / Total) × 100 = %
+          (Obtained / Total) * 100 = %
         </div>
         <p className="text-sm text-center font-medium opacity-90 italic">
-          Example: If you scored 85 out of 100, the calculation is (85/100) × 100 = 85%.
+          Example: If you scored 85 out of 100, the calculation is (85/100) * 100 = 85%.
         </p>
       </div>
       <p>
@@ -2647,14 +2647,14 @@ export const MarkPercentageBlogContent = () => (
           <h4 className="font-bold text-blue-900">Example 1: Board Result</h4>
           <p className="text-sm">Total Obtained: 980</p>
           <p className="text-sm">Grand Total (Matric): 1100</p>
-          <p className="text-sm font-black text-blue-600">Percentage: (980/1100) × 100 = 89.09%</p>
+          <p className="text-sm font-black text-blue-600">Percentage: (980/1100) * 100 = 89.09%</p>
         </div>
         <div className="p-8 bg-slate-50 rounded-3xl border border-slate-100 space-y-4">
           <h4 className="font-bold text-blue-900">Example 2: Class Average</h4>
           <p className="text-sm text-slate-500 italic mb-2">Useful for teachers calculating class performance.</p>
           <p className="text-sm">Sum of all student scores: 4500</p>
           <p className="text-sm">Sum of all possible marks: 6000</p>
-          <p className="text-sm font-black text-blue-600">Class Performance: (4500/6000) × 100 = 75%</p>
+          <p className="text-sm font-black text-blue-600">Class Performance: (4500/6000) * 100 = 75%</p>
         </div>
       </div>
     </section>
@@ -2688,7 +2688,7 @@ export const MarkPercentageBlogContent = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="p-8 bg-blue-50 rounded-[2.5rem] border border-blue-100">
           <h4 className="font-bold text-lg mb-4 text-blue-900">Merit Calculations</h4>
-          <p className="text-sm text-slate-600 leading-relaxed">Most engineering and medical colleges (UET, FAST, PMC) use an aggregate formula: (Matric % × 0.1) + (Inter % × 0.4) + (Entry Test % × 0.5). Knowing your exact percentage is critical for these sums.</p>
+          <p className="text-sm text-slate-600 leading-relaxed">Most engineering and medical colleges (UET, FAST, PMC) use an aggregate formula: (Matric % * 0.1) + (Inter % * 0.4) + (Entry Test % * 0.5). Knowing your exact percentage is critical for these sums.</p>
         </div>
         <div className="p-8 bg-blue-50 rounded-[2.5rem] border border-blue-100">
           <h4 className="font-bold text-lg mb-4 text-blue-900">Accuracy & Integrity</h4>
@@ -3048,251 +3048,262 @@ export const BMISEOArticle = () => (
 
 export const ElectricityBillBlogContent = () => (
   <article className="mt-20 space-y-20 text-slate-700 leading-relaxed border-t border-slate-200 pt-20 max-w-5xl mx-auto px-4 font-sans text-justify">
-    {/* Header Section */}
+    {/* Header */}
     <header className="text-center space-y-8">
       <div className="inline-flex items-center gap-2 px-6 py-2 bg-yellow-50 text-yellow-700 rounded-full text-xs font-black uppercase tracking-widest border border-yellow-100">
-        🔌 Pakistan Electricity Bill Guide 2025-26
+        Power WAPDA Unit & Bill Guide 2025-26
       </div>
-      <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
-        Electricity Bill Calculator Pakistan 2026: <br />
-        <span className="text-emerald-600 italic">LESCO, MEPCO, IESCO & All DISCOs</span>
-      </h1>
+      <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight">
+        WAPDA Unit Calculator Pakistan 2026:<br />
+        <span className="text-emerald-600 italic">Watts to Units, Per Unit Rates & Online Bill Check</span>
+      </h2>
       <p className="max-w-3xl mx-auto text-lg text-slate-600">
-        Calculate your monthly <strong>bijli ka bill</strong> in seconds. Our free <strong>electricity bill calculator</strong> uses the latest <strong>NEPRA 2025-26 tariff slabs</strong> to instantly estimate your bill for <strong>LESCO</strong>, <strong>MEPCO</strong>, <strong>IESCO</strong>, <strong>FESCO</strong>, <strong>PESCO</strong>, and <strong>K-Electric</strong>. Just enter your units and see a full breakdown — including <strong>GST</strong>, <strong>FPA</strong>, and surcharges.
+        Your complete guide for <strong>electricity bill calculation in Pakistan</strong>. Use our free <strong>online bill calculator</strong> to estimate your <strong>WAPDA bill</strong> for <strong>LESCO</strong>, <strong>IESCO</strong>, <strong>FESCO</strong>, <strong>MEPCO</strong> and all DISCOs. Includes the <strong>watts to units formula</strong>, the <strong>wapda per unit rate</strong> for residential and commercial consumers, and step-by-step calculation formulas.
       </p>
     </header>
 
     {/* Table of Contents */}
     <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200">
-      <h3 className="text-lg font-bold mb-4">📖 Table of Contents</h3>
+      <h3 className="text-lg font-bold mb-4">Table of Contents</h3>
       <ul className="space-y-2 text-sm text-emerald-600 font-medium grid grid-cols-1 md:grid-cols-2">
-        <li><a href="#how-to-calculate" className="hover:underline">1. How to Calculate Electricity Bill</a></li>
-        <li><a href="#nepra-slabs" className="hover:underline">2. NEPRA Tariff Slabs 2025-26</a></li>
-        <li><a href="#protected-vs-unprotected" className="hover:underline">3. Protected vs Non-Protected Consumers</a></li>
-        <li><a href="#disco-comparison" className="hover:underline">4. DISCO-Wise Bill Comparison</a></li>
-        <li><a href="#taxes-surcharges" className="hover:underline">5. Taxes & Surcharges Explained</a></li>
-        <li><a href="#bill-formula" className="hover:underline">6. Bill Calculation Formula</a></li>
-        <li><a href="#tips-reduce" className="hover:underline">7. Tips to Reduce Your Bill</a></li>
-        <li><a href="#faqs" className="hover:underline">8. FAQs</a></li>
+        <li><a href="#how-to-calculate" className="hover:underline">1. How to Calculate Electricity Bill in Pakistan</a></li>
+        <li><a href="#watts-to-units" className="hover:underline">2. Watts to Units Calculator (Formula)</a></li>
+        <li><a href="#wapda-unit-rate" className="hover:underline">3. WAPDA Per Unit Rate 2025-26</a></li>
+        <li><a href="#commercial-rate" className="hover:underline">4. Commercial Unit Price vs Residential</a></li>
+        <li><a href="#nepra-slabs" className="hover:underline">5. NEPRA Tariff Slabs Table</a></li>
+        <li><a href="#protected-vs-unprotected" className="hover:underline">6. Protected vs Non-Protected</a></li>
+        <li><a href="#online-bill-check" className="hover:underline">7. How to Check Bill Online (IESCO/FESCO)</a></li>
+        <li><a href="#taxes-surcharges" className="hover:underline">8. Taxes & Surcharges Explained</a></li>
+        <li><a href="#bill-formula" className="hover:underline">9. Bill Calculation Formula</a></li>
+        <li><a href="#faqs" className="hover:underline">10. FAQs</a></li>
       </ul>
     </div>
 
     {/* Section 1: How to Calculate */}
     <section id="how-to-calculate" className="space-y-8">
-      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">How to Calculate Your Electricity Bill in Pakistan</h2>
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">How to Calculate Electricity Bill in Pakistan</h2>
       <p>
-        Calculating your electricity bill at home is straightforward when you know how the system works. Pakistan's power sector uses a <strong>tiered slab system</strong> — the more units you consume, the higher your per-unit rate becomes. Here is how you can estimate your monthly bill:
+        The <strong>electric bill calculation in Pakistan</strong> follows a tiered slab system set by NEPRA (National Electric Power Regulatory Authority). This means the more units you consume, the higher your per-unit rate. To <strong>calculate your electricity bill</strong>, you need to know three things: your units consumed, your consumer category (Protected, Residential, or Commercial), and the current FPA (Fuel Price Adjustment) rate.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm">
-          <span className="text-4xl mb-4 block">📊</span>
-          <h4 className="font-bold text-lg mb-2">Step 1: Note Your Units</h4>
-          <p className="text-sm text-slate-500">Check your electricity meter or your previous bill. Find the "Units Consumed" value (measured in kWh). This number drives your entire bill calculation.</p>
-        </div>
-        <div className="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm">
-          <span className="text-4xl mb-4 block">🛡️</span>
-          <h4 className="font-bold text-lg mb-2">Step 2: Check Your Status</h4>
-          <p className="text-sm text-slate-500">Are you a Protected or Non-Protected consumer? If your usage stays below 200 units for 6 months straight, you qualify as "Protected" and pay much lower rates.</p>
-        </div>
-        <div className="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm">
-          <span className="text-4xl mb-4 block">💰</span>
-          <h4 className="font-bold text-lg mb-2">Step 3: Add Taxes</h4>
-          <p className="text-sm text-slate-500">After the energy cost, add GST (18%), Electricity Duty (1.5%), Fuel Price Adjustment (FPA), FC Surcharge, and the Rs. 35 TV License Fee.</p>
-        </div>
+        {[
+          { icon: 'Stats', title: 'Step 1: Find Your Units', desc: 'Check your meter or previous bill for "Units Consumed" (kWh). This is the primary driver of your bill.' },
+          { icon: 'Shield', title: 'Step 2: Know Your Status', desc: 'Are you Protected (under 200 units for 6 months) or Non-Protected? Or Commercial? Your status determines your per-unit WAPDA rate.' },
+          { icon: 'Money', title: 'Step 3: Add Taxes', desc: 'Add GST (18%), FPA, FC Surcharge (Rs. 0.43/unit), Electricity Duty (1.5%), and TV Fee (Rs. 35) to get your total.' },
+        ].map((s, i) => (
+          <div key={i} className="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm">
+            <span className="text-4xl mb-4 block">{s.icon}</span>
+            <h4 className="font-bold text-lg mb-2">{s.title}</h4>
+            <p className="text-sm text-slate-500">{s.desc}</p>
+          </div>
+        ))}
       </div>
     </section>
 
-    {/* Section 2: NEPRA Tariff Slabs Table */}
-    <section id="nepra-slabs" className="space-y-8">
-      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">NEPRA Electricity Tariff Slabs 2025-26</h2>
+    {/* Section 2: Watts to Units */}
+    <section id="watts-to-units" className="space-y-8">
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-amber-500 pl-6">Watts to Units Calculator: The Watt to Unit Formula</h2>
       <p>
-        The <strong>National Electric Power Regulatory Authority (NEPRA)</strong> approved new base tariffs effective July 1, 2025. The average base tariff dropped from Rs. 32.73/kWh to Rs. 31.59/kWh — a relief of Rs. 1.14 per unit. Below you can see the full slab breakdown for <strong>residential domestic consumers</strong>:
+        Many people don't know their exact unit consumption they only know the wattage of their appliances. This is where a <strong>watts to units calculator</strong> is essential. In Pakistan, one "unit" of electricity is equal to 1 kilowatt-hour (kWh). The <strong>watt to unit formula</strong> is:
       </p>
-
-      <h3 className="text-xl font-bold mt-8 mb-4 text-emerald-700">Non-Protected Consumer Slabs</h3>
+      <div className="p-10 bg-amber-500 text-white rounded-[3rem] shadow-2xl text-center space-y-4">
+        <p className="text-xs font-black uppercase tracking-widest opacity-80">The Watt to Unit Formula</p>
+        <div className="text-2xl md:text-3xl font-black py-6 bg-white/10 rounded-2xl border border-white/20">
+          Units (kWh) = (Watts * Hours/Day * Days) / 1000
+        </div>
+        <p className="text-sm opacity-90 italic">Example: A 1500W AC running 8 hours/day for 30 days = (1500 * 8 * 30) / 1000 = <strong>360 units</strong></p>
+      </div>
       <div className="overflow-x-auto rounded-2xl border border-slate-200">
         <table className="w-full text-sm">
           <thead>
-            <tr className="bg-slate-900 text-white">
-              <th className="p-4 text-left font-bold">Units (kWh)</th>
-              <th className="p-4 text-left font-bold">Rate Per Unit (Rs.)</th>
-              <th className="p-4 text-left font-bold">100 Units Cost</th>
+            <tr className="bg-amber-500 text-white">
+              <th className="p-4 text-left font-bold">Appliance</th>
+              <th className="p-4 text-left font-bold">Wattage</th>
+              <th className="p-4 text-left font-bold">8 hrs/day * 30 days</th>
+              <th className="p-4 text-left font-bold">Monthly Units</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-slate-100">
-            <tr className="bg-white"><td className="p-4">1 – 100</td><td className="p-4 font-bold text-emerald-600">22.44</td><td className="p-4">Rs. 2,244</td></tr>
-            <tr className="bg-slate-50"><td className="p-4">101 – 200</td><td className="p-4 font-bold text-emerald-600">28.91</td><td className="p-4">Rs. 2,891</td></tr>
-            <tr className="bg-white"><td className="p-4">201 – 300</td><td className="p-4 font-bold text-amber-600">33.10</td><td className="p-4">Rs. 3,310</td></tr>
-            <tr className="bg-slate-50"><td className="p-4">301 – 400</td><td className="p-4 font-bold text-amber-600">37.99</td><td className="p-4">Rs. 3,799</td></tr>
-            <tr className="bg-white"><td className="p-4">401 – 500</td><td className="p-4 font-bold text-rose-500">40.20</td><td className="p-4">Rs. 4,020</td></tr>
-            <tr className="bg-slate-50"><td className="p-4">501 – 600</td><td className="p-4 font-bold text-rose-500">41.62</td><td className="p-4">Rs. 4,162</td></tr>
-            <tr className="bg-white"><td className="p-4">601 – 700</td><td className="p-4 font-bold text-rose-600">42.76</td><td className="p-4">Rs. 4,276</td></tr>
+            <tr className="bg-white"><td className="p-4">1.5T Inverter AC</td><td className="p-4">1,200W</td><td className="p-4">8h * 30d</td><td className="p-4 font-bold text-amber-600">288 units</td></tr>
+            <tr className="bg-slate-50"><td className="p-4">1.5T Non-Inverter AC</td><td className="p-4">1,850W</td><td className="p-4">8h * 30d</td><td className="p-4 font-bold text-rose-600">444 units</td></tr>
+            <tr className="bg-white"><td className="p-4">Refrigerator (small)</td><td className="p-4">150W</td><td className="p-4">24h * 30d</td><td className="p-4 font-bold text-emerald-600">108 units</td></tr>
+            <tr className="bg-slate-50"><td className="p-4">LED Bulb (10W)</td><td className="p-4">10W</td><td className="p-4">5h * 30d</td><td className="p-4 font-bold text-emerald-600">1.5 units</td></tr>
+            <tr className="bg-white"><td className="p-4">Water Motor (1HP)</td><td className="p-4">750W</td><td className="p-4">2h * 30d</td><td className="p-4 font-bold text-amber-600">45 units</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p className="text-sm text-slate-500">Tip: Use our <strong>Watts to Units tab</strong> above to calculate the monthly units for any combination of appliances, then feed that number into the Bill Calculator for an accurate estimate.</p>
+    </section>
+
+    {/* Section 3: WAPDA Per Unit Rate */}
+    <section id="wapda-unit-rate" className="space-y-8">
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">WAPDA Per Unit Rate 2025-26 (NEPRA Approved)</h2>
+      <p>
+        The <strong>WAPDA unit price in Pakistan</strong> was revised effective July 1, 2025 under the NEPRA Annual Tariff Determination. The average base tariff decreased slightly from Rs. 32.73/kWh to Rs. 31.59/kWh for non-protected domestic consumers. Below are the <strong>WAPDA unit rate</strong> slabs for 2025-26:
+      </p>
+      <h3 className="text-xl font-bold mt-8 mb-4 text-slate-900">Non-Protected Domestic Consumer Slabs</h3>
+      <div className="overflow-x-auto rounded-2xl border border-slate-200">
+        <table className="w-full text-sm">
+          <thead><tr className="bg-slate-900 text-white"><th className="p-4 text-left">Units (kWh)</th><th className="p-4 text-left">WAPDA Unit Price (Rs.)</th><th className="p-4 text-left">Cost for this Slab (100 units)</th></tr></thead>
+          <tbody className="divide-y divide-slate-100">
+            <tr className="bg-white"><td className="p-4">1-100</td><td className="p-4 font-bold text-emerald-600">22.44</td><td className="p-4">Rs. 2,244</td></tr>
+            <tr className="bg-slate-50"><td className="p-4">101-200</td><td className="p-4 font-bold text-emerald-600">28.91</td><td className="p-4">Rs. 2,891</td></tr>
+            <tr className="bg-white"><td className="p-4">201-300</td><td className="p-4 font-bold text-amber-600">33.10</td><td className="p-4">Rs. 3,310</td></tr>
+            <tr className="bg-slate-50"><td className="p-4">301-400</td><td className="p-4 font-bold text-amber-600">37.99</td><td className="p-4">Rs. 3,799</td></tr>
+            <tr className="bg-white"><td className="p-4">401-500</td><td className="p-4 font-bold text-rose-500">40.20</td><td className="p-4">Rs. 4,020</td></tr>
+            <tr className="bg-slate-50"><td className="p-4">501-600</td><td className="p-4 font-bold text-rose-500">41.62</td><td className="p-4">Rs. 4,162</td></tr>
+            <tr className="bg-white"><td className="p-4">601-700</td><td className="p-4 font-bold text-rose-600">42.76</td><td className="p-4">Rs. 4,276</td></tr>
             <tr className="bg-slate-50"><td className="p-4">700+</td><td className="p-4 font-bold text-rose-700">47.69</td><td className="p-4">Rs. 4,769</td></tr>
           </tbody>
         </table>
       </div>
-
-      <h3 className="text-xl font-bold mt-8 mb-4 text-emerald-700">Protected Consumer Slabs (Under 200 Units)</h3>
+      <h3 className="text-xl font-bold mt-8 mb-4 text-emerald-700">Protected Consumer Slabs (Under 200 units for 6 months)</h3>
       <div className="overflow-x-auto rounded-2xl border border-slate-200">
         <table className="w-full text-sm">
-          <thead>
-            <tr className="bg-emerald-700 text-white">
-              <th className="p-4 text-left font-bold">Units (kWh)</th>
-              <th className="p-4 text-left font-bold">Rate Per Unit (Rs.)</th>
-              <th className="p-4 text-left font-bold">Max Cost</th>
-            </tr>
-          </thead>
+          <thead><tr className="bg-emerald-700 text-white"><th className="p-4 text-left">Units</th><th className="p-4 text-left">WAPDA Unit Price (Rs.)</th></tr></thead>
           <tbody className="divide-y divide-slate-100">
-            <tr className="bg-white"><td className="p-4">1 – 100</td><td className="p-4 font-bold text-emerald-600">10.54</td><td className="p-4">Rs. 1,054</td></tr>
-            <tr className="bg-emerald-50"><td className="p-4">101 – 200</td><td className="p-4 font-bold text-emerald-600">13.01</td><td className="p-4">Rs. 1,301</td></tr>
+            <tr className="bg-white"><td className="p-4">1-100</td><td className="p-4 font-bold text-emerald-600">10.54</td></tr>
+            <tr className="bg-emerald-50"><td className="p-4">101-200</td><td className="p-4 font-bold text-emerald-600">13.01</td></tr>
           </tbody>
         </table>
       </div>
-      <p className="text-xs text-slate-400 italic mt-2">Source: NEPRA Determination, effective July 1, 2025. Rates may vary slightly by DISCO region.</p>
+      <p className="text-xs text-slate-400 italic">Source: NEPRA Determination, effective July 2025. All DISCOs (LESCO, MEPCO, IESCO, FESCO, PESCO, K-Electric) follow the same base tariff.</p>
     </section>
 
-    {/* Section 3: Protected vs Non-Protected */}
-    <section id="protected-vs-unprotected" className="space-y-8">
-      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">Protected vs Non-Protected Consumers: What's the Difference?</h2>
+    {/* Section 4: Commercial Unit Price */}
+    <section id="commercial-rate" className="space-y-8">
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-blue-500 pl-6">WAPDA Commercial Unit Price vs Residential</h2>
       <p>
-        This is the most important concept in Pakistan's electricity billing system. Your status as a <strong>protected</strong> or <strong>non-protected consumer</strong> directly determines how much you pay per unit. Here is a clear comparison:
+        The <strong>WAPDA commercial unit price</strong> is significantly higher than the residential rate. Commercial consumers fall under the <strong>A-2 tariff category</strong> which has different slabs with no "protected" option. If you own a shop, office, or business in Pakistan, here's how the <strong>commercial unit price in Pakistan</strong> compares:
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="bg-emerald-50 p-8 rounded-3xl border border-emerald-100">
-          <h4 className="font-bold text-emerald-900 text-lg mb-4 flex items-center gap-2"><span>🛡️</span> Protected Consumer</h4>
-          <ul className="space-y-3 text-sm text-emerald-800">
-            <li className="flex gap-2"><span className="text-emerald-600 font-bold">✓</span> Uses less than 200 units for 6 consecutive months</li>
-            <li className="flex gap-2"><span className="text-emerald-600 font-bold">✓</span> Pays Rs. 10.54/unit for first 100 units</li>
-            <li className="flex gap-2"><span className="text-emerald-600 font-bold">✓</span> Maximum bill for 200 units ≈ Rs. 2,355 (before taxes)</li>
-            <li className="flex gap-2"><span className="text-emerald-600 font-bold">✓</span> Lifeline consumers (under 50 units) pay just Rs. 3.95/unit</li>
+        <div className="bg-blue-50 p-8 rounded-3xl border border-blue-100">
+          <h4 className="font-bold text-blue-900 text-lg mb-4 flex items-center gap-2">Business Commercial (A-2)</h4>
+          <ul className="space-y-3 text-sm text-blue-800">
+            <li className="flex gap-2"><span className="font-bold"></span> 1-100 units: Rs. 30.10/unit</li>
+            <li className="flex gap-2"><span className="font-bold"></span> 101-300 units: Rs. 39.52/unit</li>
+            <li className="flex gap-2"><span className="font-bold"></span> 300+ units: Rs. 48.77/unit</li>
+            <li className="flex gap-2 pt-3 border-t border-blue-200"><span className="font-bold text-blue-700">{'->'}</span> No TV fee; no protected category</li>
           </ul>
         </div>
-        <div className="bg-rose-50 p-8 rounded-3xl border border-rose-100">
-          <h4 className="font-bold text-rose-900 text-lg mb-4 flex items-center gap-2"><span>⚡</span> Non-Protected Consumer</h4>
-          <ul className="space-y-3 text-sm text-rose-800">
-            <li className="flex gap-2"><span className="text-rose-600 font-bold">✗</span> Uses more than 200 units in any recent month</li>
-            <li className="flex gap-2"><span className="text-rose-600 font-bold">✗</span> Pays Rs. 22.44/unit even for first 100 units</li>
-            <li className="flex gap-2"><span className="text-rose-600 font-bold">✗</span> 300 units costs ≈ Rs. 8,445 (before taxes)</li>
-            <li className="flex gap-2"><span className="text-rose-600 font-bold">✗</span> Crossing 700 units pushes rate to Rs. 47.69/unit</li>
+        <div className="bg-emerald-50 p-8 rounded-3xl border border-emerald-100">
+          <h4 className="font-bold text-emerald-900 text-lg mb-4 flex items-center gap-2">Residential House (B-1)</h4>
+          <ul className="space-y-3 text-sm text-emerald-800">
+            <li className="flex gap-2"><span className="font-bold"></span> 1-100 units: Rs. 22.44/unit (Non-Protected)</li>
+            <li className="flex gap-2"><span className="font-bold"></span> 1-100 units: Rs. 10.54/unit (Protected)</li>
+            <li className="flex gap-2"><span className="font-bold"></span> Can qualify for protected status</li>
+            <li className="flex gap-2 pt-3 border-t border-emerald-200"><span className="font-bold text-emerald-700">{'->'}</span> Rs. 35/month TV license fee</li>
           </ul>
         </div>
       </div>
-      <div className="bg-amber-50 p-6 rounded-3xl border border-amber-100">
-        <p className="text-sm text-amber-800">
-          <strong>⚠️ Warning:</strong> If you cross 200 units even once in 6 months, you lose your "Protected" status and your entire bill shifts to <strong>Non-Protected rates</strong> — which are almost double. Always monitor your usage to stay below this critical threshold.
-        </p>
+      <div className="bg-blue-900 text-white p-6 rounded-3xl">
+        <p className="text-sm"><strong>Warning:</strong> A commercial consumer using 300 units pays approximately <strong>Rs. 9,000+</strong> in energy charges (before taxes) vs only Rs. 5,139 for a non-protected residential consumer and vs just Rs. 2,355 for a protected residential consumer. Knowing your category when using the <strong>WAPDA unit calculator</strong> is critical.</p>
       </div>
     </section>
 
-    {/* Section 4: DISCO Comparison */}
-    <section id="disco-comparison" className="space-y-8">
-      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">DISCO-Wise Electricity Bill Comparison</h2>
+    {/* Section 5: Protected vs Non-Protected */}
+    <section id="protected-vs-unprotected" className="space-y-8">
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">Protected vs Non-Protected Consumers</h2>
+      <p>This is the single most impactful factor in your Pakistan electricity bill. Your category determines whether you pay a very low WAPDA per unit price or the full standard rate.</p>
+      <div className="bg-amber-50 p-6 rounded-3xl border border-amber-200">
+        <p className="text-sm text-amber-900"><strong>âš ï¸ Warning:</strong> If you exceed 200 units in <em>any single month</em> over the last 6 months, you lose Protected status. Your <em>entire</em> bill is then recalculated at non-protected rates â€” potentially doubling your cost, even for the first 100 units.</p>
+      </div>
+    </section>
+
+    {/* Section 6: Online Bill Check */}
+    <section id="online-bill-check" className="space-y-8">
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">How to Check My Electricity Bill Online (IESCO, FESCO, MEPCO)</h2>
       <p>
-        Pakistan has 10 Electricity Distribution Companies (DISCOs) operating across different regions. While NEPRA sets the base tariff, each DISCO may have slightly different rates and surcharges. Here are the major DISCOs you can calculate bills for:
+        Many people search for "<strong>how to check my electricity bill online</strong>" or "<strong>iesco wapda bill online check</strong>". Here's a quick guide for each major DISCO. You will need your 14-digit <strong>Reference Number</strong> (printed on your old bill):
       </p>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {[
-          { name: 'LESCO', region: 'Lahore Division', emoji: '🏙️' },
-          { name: 'MEPCO', region: 'South Punjab', emoji: '🌾' },
-          { name: 'IESCO', region: 'Islamabad / Rawalpindi', emoji: '🏛️' },
-          { name: 'FESCO', region: 'Faisalabad Division', emoji: '🏭' },
-          { name: 'PESCO', region: 'Peshawar / KPK', emoji: '⛰️' },
-          { name: 'K-Electric', region: 'Karachi', emoji: '🌊' },
-          { name: 'GEPCO', region: 'Gujranwala Division', emoji: '🏘️' },
-          { name: 'HESCO', region: 'Hyderabad / Sindh', emoji: '🌵' },
-          { name: 'SEPCO', region: 'Sukkur / Upper Sindh', emoji: '🏜️' },
-        ].map((disco, i) => (
-          <div key={i} className="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm text-center">
-            <span className="text-2xl block mb-2">{disco.emoji}</span>
-            <h4 className="font-bold text-slate-900">{disco.name}</h4>
-            <p className="text-[10px] text-slate-500 mt-1">{disco.region}</p>
+          { name: 'IESCO Online Bill', url: 'iesco.com.pk', region: 'Islamabad & Rawalpindi', note: 'Visit IESCO website â†’ My Consumer Services â†’ Enter Reference No.' },
+          { name: 'FESCO Online Bill Calculator', url: 'fesco.com.pk', region: 'Faisalabad Division', note: 'Visit FESCO portal â†’ Online Bill â†’ Enter 14-digit reference number.' },
+          { name: 'MEPCO Online Bill', url: 'mepco.com.pk', region: 'South Punjab (Multan)', note: 'Visit MEPCO website â†’ Bill Inquiry â†’ Consumer Reference Number.' },
+          { name: 'LESCO Online Bill', url: 'lesco.gov.pk', region: 'Lahore Division', note: 'Visit LESCO â†’ Customer Services â†’ Online Bill Inquiry.' },
+          { name: 'K-Electric Bill', url: 'ke.com.pk', region: 'Karachi', note: 'K-Electric has its own portal. Search "K-Electric bill online" and use your 13-digit Consumer No.' },
+          { name: 'PESCO Online Bill', url: 'pesco.gov.pk', region: 'KPK / Peshawar', note: 'Visit PESCO website â†’ Online Services â†’ Bill Inquiry with Reference No.' },
+        ].map((d, i) => (
+          <div key={i} className="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm">
+            <h4 className="font-bold text-slate-900 mb-1">{d.name}</h4>
+            <p className="text-xs text-slate-400 mb-2">{d.region}</p>
+            <p className="text-sm text-slate-600">{d.note}</p>
           </div>
         ))}
       </div>
-      <p className="text-sm text-slate-500">
-        Our calculator uses the <strong>NEPRA uniform domestic tariff</strong> which applies to all DISCOs. For commercial or industrial connections, rates vary by DISCO and load type.
-      </p>
+      <div className="bg-emerald-50 border border-emerald-100 p-6 rounded-3xl">
+        <p className="text-sm text-emerald-800"><strong>ðŸ’¡ Tip:</strong> Our <strong>online bill calculator</strong> helps you <em>predict</em> your bill before it arrives. Use it to verify your DISCO's actual bill and catch any billing errors or meter reading mistakes.</p>
+      </div>
     </section>
 
-    {/* Section 5: Taxes & Surcharges */}
+    {/* Section 7: Bill Formula */}
     <section id="taxes-surcharges" className="space-y-8">
       <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">Taxes & Surcharges on Your Electricity Bill</h2>
-      <p>
-        Your electricity bill is never just the "energy cost." The government of Pakistan adds multiple taxes and surcharges that can increase your total bill by <strong>30-40%</strong> above the base amount. Here is a breakdown of each charge:
-      </p>
-      <div className="space-y-6">
-        <div className="flex gap-6 items-start p-6 bg-white border border-slate-100 rounded-2xl">
-          <div className="w-12 h-12 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-lg shrink-0">18%</div>
-          <div>
-            <h4 className="font-bold text-slate-900 mb-1">General Sales Tax (GST)</h4>
-            <p className="text-sm text-slate-600">The largest tax on your bill. GST at 18% applies to the total of energy cost, FPA, Electricity Duty, and surcharges. For a Rs. 10,000 base bill, GST alone adds Rs. 1,800.</p>
+      <p>Understanding these charges is key to the <strong>electricity bill calculation formula in Pakistan</strong>:</p>
+      <div className="space-y-4">
+        {[
+          { label: 'GST', value: '18%', desc: 'General Sales Tax â€” the largest tax. Applied to energy cost + FPA + FC + Duty. On a Rs. 10,000 base, this is Rs. 1,800 extra.' },
+          { label: 'FPA', value: 'Variable', desc: 'Fuel Price Adjustment â€” changes monthly based on global fuel prices. Can be negative (relief) or positive (Rs. 0â€“3.5/unit typically).' },
+          { label: 'FC', value: 'Rs. 0.43/unit', desc: 'Financing Cost Surcharge â€” covers Pakistan\'s circular debt financing costs.' },
+          { label: 'ED', value: '1.5%', desc: 'Electricity Duty â€” provincial tax on energy cost.' },
+          { label: 'ðŸ“º', value: 'Rs. 35', desc: 'PTV License Fee â€” fixed monthly charge on all residential connections.' },
+        ].map((item, i) => (
+          <div key={i} className="flex gap-6 items-start p-5 bg-white border border-slate-100 rounded-2xl">
+            <div className="w-14 text-center shrink-0 font-bold text-sm bg-slate-100 rounded-xl p-2">{item.label}</div>
+            <div>
+              <p className="font-bold text-sm text-slate-900">{item.value}</p>
+              <p className="text-sm text-slate-500 mt-1">{item.desc}</p>
+            </div>
           </div>
-        </div>
-        <div className="flex gap-6 items-start p-6 bg-white border border-slate-100 rounded-2xl">
-          <div className="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-lg shrink-0">FPA</div>
-          <div>
-            <h4 className="font-bold text-slate-900 mb-1">Fuel Price Adjustment (FPA)</h4>
-            <p className="text-sm text-slate-600">This changes every month based on global fuel prices. When oil/gas prices rise, your FPA goes up. It can range from Rs. -0.65 (negative/relief) to Rs. +3.50 per unit. NEPRA announces it monthly.</p>
-          </div>
-        </div>
-        <div className="flex gap-6 items-start p-6 bg-white border border-slate-100 rounded-2xl">
-          <div className="w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-lg shrink-0">FC</div>
-          <div>
-            <h4 className="font-bold text-slate-900 mb-1">FC Surcharge (Financing Cost)</h4>
-            <p className="text-sm text-slate-600">This surcharge covers the financial costs of Pakistan's circular debt in the power sector. It adds approximately Rs. 0.43 per unit consumed and appears as a separate line item on your bill.</p>
-          </div>
-        </div>
-        <div className="flex gap-6 items-start p-6 bg-white border border-slate-100 rounded-2xl">
-          <div className="w-12 h-12 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center font-bold text-lg shrink-0">ED</div>
-          <div>
-            <h4 className="font-bold text-slate-900 mb-1">Electricity Duty (1.5%)</h4>
-            <p className="text-sm text-slate-600">A provincial tax charged at 1.5% of the energy cost. This goes to the provincial government for infrastructure and development in your region.</p>
-          </div>
-        </div>
-        <div className="flex gap-6 items-start p-6 bg-white border border-slate-100 rounded-2xl">
-          <div className="w-12 h-12 rounded-2xl bg-slate-100 text-slate-600 flex items-center justify-center font-bold text-lg shrink-0">📺</div>
-          <div>
-            <h4 className="font-bold text-slate-900 mb-1">TV License Fee (Rs. 35)</h4>
-            <p className="text-sm text-slate-600">A fixed monthly charge of Rs. 35 collected by Pakistan Television Corporation (PTV) through electricity bills. This applies to all residential connections regardless of usage.</p>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
 
-    {/* Section 6: Formula */}
+    {/* Section 8: Formula */}
     <section id="bill-formula" className="bg-slate-900 text-white p-12 md:p-16 rounded-[4rem] relative overflow-hidden">
       <div className="absolute right-0 top-0 w-64 h-64 bg-emerald-600 rounded-full blur-[120px] opacity-20 -mr-32 -mt-32"></div>
-      <h2 className="text-3xl font-bold text-center mb-8 relative z-10">Electricity Bill Calculation Formula</h2>
-      <div className="max-w-3xl mx-auto space-y-6 relative z-10">
-        <div className="bg-white/10 p-6 rounded-3xl border border-white/10">
-          <p className="text-sm text-emerald-300 font-bold mb-2">Step 1: Energy Cost</p>
-          <p className="text-xl font-bold">Energy Cost = Σ (Units in Slab × Rate per Unit)</p>
-        </div>
-        <div className="bg-white/10 p-6 rounded-3xl border border-white/10">
-          <p className="text-sm text-emerald-300 font-bold mb-2">Step 2: Add Surcharges</p>
-          <p className="text-xl font-bold">Subtotal = Energy Cost + (Units × FPA) + (Units × FC) + Duty</p>
-        </div>
-        <div className="bg-white/10 p-6 rounded-3xl border border-white/10">
-          <p className="text-sm text-emerald-300 font-bold mb-2">Step 3: Apply GST</p>
-          <p className="text-xl font-bold">Total Bill = Subtotal + (Subtotal × 18%) + TV Fee</p>
-        </div>
+      <h2 className="text-3xl font-bold text-center mb-8 relative z-10">Electricity Bill Calculation Formula in Pakistan</h2>
+      <div className="max-w-3xl mx-auto space-y-4 relative z-10">
+        <div className="bg-white/10 p-5 rounded-3xl border border-white/10"><p className="text-xs text-emerald-300 font-bold mb-1">Step 1</p><p className="font-bold">Energy Cost = Î£ (Units in each slab Ã— WAPDA rate for that slab)</p></div>
+        <div className="bg-white/10 p-5 rounded-3xl border border-white/10"><p className="text-xs text-emerald-300 font-bold mb-1">Step 2</p><p className="font-bold">Subtotal = Energy Cost + (Units Ã— FPA) + (Units Ã— 0.43) + (Energy Cost Ã— 1.5%)</p></div>
+        <div className="bg-white/10 p-5 rounded-3xl border border-white/10"><p className="text-xs text-emerald-300 font-bold mb-1">Step 3</p><p className="font-bold">Total Bill = Subtotal + (Subtotal Ã— 18% GST) + Rs. 35 TV Fee</p></div>
       </div>
-      <div className="mt-10 text-center relative z-10">
-        <p className="text-slate-400 text-sm">Example: 300 units (Non-Protected) = Rs. 8,445 + Rs. 840 FPA + Rs. 129 FC + Rs. 127 Duty + Rs. 1,717 GST + Rs. 35 TV = <strong className="text-emerald-400 text-lg">≈ Rs. 11,293</strong></p>
+      <div className="mt-8 text-center relative z-10 text-slate-400 text-sm">
+        Example: 300 units (Non-Protected | FPA=2.8) â†’ Energy: Rs. 8,445 + FPA: Rs. 840 + FC: Rs. 129 + Duty: Rs. 127 + GST: Rs. 1,717 + TV: Rs. 35 = <strong className="text-emerald-400 text-lg">â‰ˆ Rs. 11,293</strong>
       </div>
     </section>
 
-    {/* Section 7: Tips */}
-    <section id="tips-reduce" className="space-y-8">
-      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">7 Proven Tips to Reduce Your Electricity Bill</h2>
+    {/* Section 9: FAQs */}
+    <section id="faqs" className="space-y-6">
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">Frequently Asked Questions</h2>
+      {[
+        { q: 'How to calculate electricity bill in Pakistan?', a: 'To calculate electricity bill in Pakistan, find your units consumed, apply the NEPRA slab rates (Protected: starts Rs. 10.54/unit; Non-Protected: starts Rs. 22.44/unit; Commercial: starts Rs. 30.10/unit), then add FPA, FC Surcharge, 1.5% Electricity Duty, 18% GST, and Rs. 35 TV fee.' },
+        { q: 'What is the WAPDA unit price in Pakistan 2025-26?', a: 'The WAPDA per unit price for non-protected residential consumers starts at Rs. 22.44/unit (1-100 units) and goes up to Rs. 47.69/unit (700+ units). Protected consumers pay Rs. 10.54â€“13.01/unit. Commercial consumers pay Rs. 30.10â€“48.77/unit.' },
+        { q: 'What is the watt to unit formula in Pakistan?', a: 'Units (kWh) = (Watts Ã— Hours Used Per Day Ã— Days in Month) Ã· 1000. Example: 1000W appliance running 5 hours/day for 30 days = (1000 Ã— 5 Ã— 30) / 1000 = 150 units.' },
+        { q: 'How do I check my electricity bill online (IESCO, FESCO, MEPCO)?', a: 'Visit your DISCO\'s official website (e.g., iesco.com.pk for IESCO, fesco.com.pk for FESCO). Enter your 14-digit Reference Number in the online bill inquiry section. Our calculator helps you estimate the bill in advance.' },
+        { q: 'How to check my electricity bill online without reference number?', a: 'You need either your Reference Number or your Consumer ID (CNIC) in some DISCO portals. If you lost your old bill, contact your DISCO\'s helpline or visit their nearest customer service center.' },
+        { q: 'Why is my bijli ka bill so high?', a: 'Common reasons: crossing 200 units and losing Protected status, high FPA in summer, using non-inverter ACs, phantom power consumption from standby devices, or meter reading errors. Use our WAPDA unit calculator to cross-verify.' },
+        { q: 'What is the WAPDA commercial unit price?', a: 'Commercial (A-2) consumers pay Rs. 30.10/unit for 1-100 units, Rs. 39.52/unit for 101-300 units, and Rs. 48.77/unit for above 300 units. This is significantly higher than residential rates and there is no protected category for commercial.' },
+      ].map((faq, i) => (
+        <div key={i} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+          <h4 className="font-bold text-slate-900 mb-2">{faq.q}</h4>
+          <p className="text-sm text-slate-600">{faq.a}</p>
+        </div>
+      ))}
+    </section>
+
+    {/* Tips */}
+    <section className="space-y-8">
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">7 Proven Ways to Reduce Your Electricity Bill</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {[
-          { tip: 'Stay Under 200 Units', desc: 'Protected status saves you 50-60% on per-unit rates. Use fans instead of ACs when possible.' },
-          { tip: 'Use Inverter AC & Appliances', desc: 'Inverter technology reduces electricity consumption by 40-60% compared to conventional models.' },
-          { tip: 'Switch to LED Lights', desc: 'LED bulbs use 75% less energy than traditional bulbs. Replace all lights in your home for instant savings.' },
-          { tip: 'Use Off-Peak Hours', desc: 'Run washing machines, irons, and water motors during off-peak hours (11 PM – 5 AM) if your DISCO offers Time-of-Use rates.' },
-          { tip: 'Install Solar Panels', desc: 'Net metering allows you to sell excess solar power back to WAPDA and reduce your monthly bill to near zero.' },
-          { tip: 'Unplug Standby Devices', desc: 'TVs, chargers, and modems consume "phantom power" even when off. Unplug them to save 5-10% on your bill.' },
+          { tip: 'Stay Under 200 Units', desc: 'Protected status saves 50-60% on per-unit rates. This is the single biggest money-saver.' },
+          { tip: 'Switch to Inverter AC', desc: 'Inverter ACs use 40-60% less power. Use our watts to units calculator to see the savings.' },
+          { tip: 'Install Solar Panels', desc: 'Net metering lets you sell surplus solar energy back to WAPDA, potentially zeroing your bill.' },
+          { tip: 'Use Off-Peak Hours', desc: 'Run heavy appliances like washing machines and irons during late night hours (11 PMâ€“5 AM).' },
+          { tip: 'Replace Lights with LED', desc: 'LED lights use 80% less energy than incandescent bulbs. Use the watts formula to calculate savings.' },
+          { tip: 'Unplug Standby Devices', desc: 'TVs, chargers, WiFi routers in standby consume "phantom power" â€” up to 10% of your total bill.' },
         ].map((item, i) => (
           <div key={i} className="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm">
             <h4 className="font-bold text-slate-900 mb-2">{i + 1}. {item.tip}</h4>
@@ -3301,47 +3312,7 @@ export const ElectricityBillBlogContent = () => (
         ))}
       </div>
     </section>
-
-    {/* Section 8: FAQs */}
-    <section id="faqs" className="space-y-8">
-      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">Frequently Asked Questions (FAQs)</h2>
-      <div className="space-y-6">
-        <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-          <h4 className="font-bold text-slate-900 mb-2">How do I calculate my electricity bill from units?</h4>
-          <p className="text-sm text-slate-600">Multiply each slab's units by the corresponding rate, then add all slabs together. After the energy cost, add GST (18%), FPA, FC Surcharge, Electricity Duty (1.5%), and the Rs. 35 TV Fee. Our calculator does this automatically.</p>
-        </div>
-        <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-          <h4 className="font-bold text-slate-900 mb-2">What is the per unit rate of electricity in Pakistan 2025?</h4>
-          <p className="text-sm text-slate-600">For non-protected domestic consumers, the base rate starts at Rs. 22.44/unit (1-100 units) and goes up to Rs. 47.69/unit (700+ units). Protected consumers pay much less — starting from Rs. 10.54/unit.</p>
-        </div>
-        <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-          <h4 className="font-bold text-slate-900 mb-2">How much is a 300 unit electricity bill in Pakistan?</h4>
-          <p className="text-sm text-slate-600">A 300-unit bill for a non-protected consumer costs approximately Rs. 8,445 in energy charges. After adding 18% GST, FPA, and other surcharges, the total comes to roughly Rs. 11,000 – Rs. 12,000.</p>
-        </div>
-        <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-          <h4 className="font-bold text-slate-900 mb-2">What is the difference between LESCO, MEPCO, and IESCO?</h4>
-          <p className="text-sm text-slate-600">These are regional Electricity Distribution Companies (DISCOs). LESCO covers Lahore, MEPCO covers South Punjab (Multan), and IESCO covers Islamabad/Rawalpindi. While NEPRA sets the base domestic tariff uniformly, FPA and QTA adjustments can differ slightly.</p>
-        </div>
-        <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-          <h4 className="font-bold text-slate-900 mb-2">Why is my bijli ka bill so high?</h4>
-          <p className="text-sm text-slate-600">Common reasons include: crossing the 200-unit protected limit, high FPA in summer months, using non-inverter ACs, or meter reading errors. Use our calculator to cross-verify your bill against actual units consumed.</p>
-        </div>
-        <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-          <h4 className="font-bold text-slate-900 mb-2">How to become a protected consumer in Pakistan?</h4>
-          <p className="text-sm text-slate-600">You become a "Protected" consumer when your electricity consumption stays below 200 units for 6 consecutive months. Once you cross this limit in any single month, you lose the protected status and move to higher non-protected rates.</p>
-        </div>
-        <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-          <h4 className="font-bold text-slate-900 mb-2">Is FPA same for all DISCOs?</h4>
-          <p className="text-sm text-slate-600">No. Fuel Price Adjustment (FPA) can vary by DISCO because each company has a different fuel mix (hydro, gas, coal, solar). NEPRA announces separate FPA values for each DISCO monthly. However, the difference is usually small (Rs. 0.10 – 0.50).</p>
-        </div>
-        <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-          <h4 className="font-bold text-slate-900 mb-2">Can I check my actual WAPDA bill online?</h4>
-          <p className="text-sm text-slate-600">Yes. Each DISCO has an official online portal where you can enter your Reference Number or Consumer ID to view and download your actual bill. Search "[Your DISCO name] online bill" — for example, "LESCO online bill" or "MEPCO online bill check."</p>
-        </div>
-      </div>
-    </section>
   </article>
 );
 
-export const ElectricityBillSEOArticle = () => null;
-
+export const ElectricityBillSEOArticle2 = () => null;
