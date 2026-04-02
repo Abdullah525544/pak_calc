@@ -1,147 +1,73 @@
-  
- i m p o r t   R e a c t   f r o m   ' r e a c t ' ;  
- i m p o r t   {   C a t e g o r y ,   C a l c u l a t o r   }   f r o m   ' . / t y p e s ' ;  
-  
- e x p o r t   c o n s t   C A L C U L A T O R S :   C a l c u l a t o r [ ]   =   [  
-     {  
-         i d :   ' i n c o m e - t a x ' ,  
-         n a m e :   ' I n c o m e   T a x   C a l c u l a t o r ' ,  
-         n a m e U r d u :   ' ÿß ŸÜ ⁄© ŸÖ   Ÿπ €å ⁄© ÿ≥   ⁄© €å ŸÑ ⁄© Ÿà ŸÑ €å Ÿπ ÿ± ' ,  
-         d e s c r i p t i o n :   ' C a l c u l a t e   F B R   t a x   f o r   2 0 2 5 - 2 0 2 6   b a s e d   o n   l a t e s t   s l a b s . ' ,  
-         c a t e g o r y :   C a t e g o r y . P A K _ S P E C I F I C ,  
-         i c o n :   ' üìà '  
-     } ,  
-     {  
-         i d :   ' z a k a t ' ,  
-         n a m e :   ' Z a k a t   C a l c u l a t o r   P a k i s t a n   ( U p d a t e d   N i s a b   R a t e s   2 0 2 5 - 2 6 ) ' ,  
-         n a m e U r d u :   ' ÿ≤ ⁄© Ÿà Ÿ∞ €É   ⁄© €å ŸÑ ⁄© Ÿà ŸÑ €å Ÿπ ÿ± ' ,  
-         d e s c r i p t i o n :   ' C a l c u l a t e   y o u r   Z a k a t   o b l i g a t i o n   b a s e d   o n   I s l a m i c   p r i n c i p l e s . ' ,  
-         c a t e g o r y :   C a t e g o r y . P A K _ S P E C I F I C ,  
-         i c o n :   ' üïå '  
-     } ,  
-     {  
-         i d :   ' f r e e l a n c e r - t a x ' ,  
-         n a m e :   ' F r e e l a n c e r   I n c o m e ' ,  
-         n a m e U r d u :   ' ŸÅ ÿ± €å   ŸÑ ÿß ŸÜ ÿ≥ ÿ±   ÿß ŸÜ ⁄© ŸÖ ' ,  
-         d e s c r i p t i o n :   ' C a l c u l a t e   n e t   i n c o m e   a f t e r   b a n k   c h a r g e s   a n d   F B R   e x p o r t   t a x . ' ,  
-         c a t e g o r y :   C a t e g o r y . B U S I N E S S ,  
-         i c o n :   ' üíª '  
-     } ,  
-     {  
-         i d :   ' i n v e s t m e n t - r e t u r n ' ,  
-         n a m e :   ' R O I   &   I n v e s t m e n t   R e t u r n   C a l c u l a t o r   ( P K R ) ' ,  
-         n a m e U r d u :   ' ÿ≥ ÿ± ŸÖ ÿß €å €Å   ⁄© ÿß ÿ± €å   ⁄© ÿß   ŸÖ ŸÜ ÿß ŸÅ ÿπ ' ,  
-         d e s c r i p t i o n :   ' P r e d i c t   g r o w t h   o f   y o u r   s a v i n g s   w i t h   c o m p o u n d i n g   i n t e r e s t . ' ,  
-         c a t e g o r y :   C a t e g o r y . F I N A N C I A L ,  
-         i c o n :   ' üí∞ '  
-     } ,  
-     {  
-         i d :   ' r e t i r e m e n t - p l a n ' ,  
-         n a m e :   ' R e t i r e m e n t   P l a n n e r ' ,  
-         n a m e U r d u :   ' ÿ± €å Ÿπ ÿß ÿ¶ ÿ± ŸÖ ŸÜ Ÿπ   ⁄© €å   ŸÖ ŸÜ ÿµ Ÿà ÿ® €Å   ÿ® ŸÜ ÿØ €å ' ,  
-         d e s c r i p t i o n :   ' C a l c u l a t e   h o w   m u c h   y o u   n e e d   t o   s a v e   f o r   a   c o m f o r t a b l e   r e t i r e m e n t . ' ,  
-         c a t e g o r y :   C a t e g o r y . F I N A N C I A L ,  
-         i c o n :   ' üèñ Ô∏è '  
-     } ,  
-     {  
-         i d :   ' r e a l - e s t a t e - r o i ' ,  
-         n a m e :   ' R e a l   E s t a t e   R O I ' ,  
-         n a m e U r d u :   ' ÿ± €å ÿ¶ ŸÑ   ÿß ÿ≥ Ÿπ €å Ÿπ   ŸÖ ŸÜ ÿß ŸÅ ÿπ ' ,  
-         d e s c r i p t i o n :   ' C a l c u l a t e   p r o p e r t y   g a i n s ,   r e n t a l   y i e l d ,   a n d   F B R   t r a n s f e r   t a x e s . ' ,  
-         c a t e g o r y :   C a t e g o r y . F I N A N C I A L ,  
-         i c o n :   ' üè† '  
-     } ,  
-     {  
-         i d :   ' p r o v i d e n t - f u n d ' ,  
-         n a m e :   ' P r o v i d e n t   F u n d   ( P F ) ' ,  
-         n a m e U r d u :   ' Ÿæ ÿ± Ÿà Ÿà €å ⁄à ŸÜ Ÿπ   ŸÅ ŸÜ ⁄à ' ,  
-         d e s c r i p t i o n :   ' E s t i m a t e   y o u r   P F   b a l a n c e   w i t h   e m p l o y e r   m a t c h i n g   a n d   i n t e r e s t . ' ,  
-         c a t e g o r y :   C a t e g o r y . P A K _ S P E C I F I C ,  
-         i c o n :   ' üè¶ '  
-     } ,  
-     {  
-         i d :   ' g r a t u i t y ' ,  
-         n a m e :   ' G r a t u i t y   C a l c u l a t o r   P a k i s t a n   ( A s   P e r   O f f i c i a l   L a b o r   L a w s   2 0 2 5 ) ' ,  
-         n a m e U r d u :   ' ⁄Ø ÿ± €å ÿ¨ Ÿà €å Ÿπ €å   ⁄© €å ŸÑ ⁄© Ÿà ŸÑ €å Ÿπ ÿ± ' ,  
-         d e s c r i p t i o n :   ' C a l c u l a t e   e n d - o f - s e r v i c e   b e n e f i t s   b a s e d   o n   P a k i s t a n   l a b o r   l a w s . ' ,  
-         c a t e g o r y :   C a t e g o r y . P A K _ S P E C I F I C ,  
-         i c o n :   ' üéÅ '  
-     } ,  
-     {  
-         i d :   ' l o a n - e m i ' ,  
-         n a m e :   ' L o a n   E M I   C a l c u l a t o r ' ,  
-         n a m e U r d u :   ' ŸÇ ÿ± ÿ∂   ⁄© €å   ŸÇ ÿ≥ ÿ∑   ⁄© ÿß   ⁄© €å ŸÑ ⁄© Ÿà ŸÑ €å Ÿπ ÿ± ' ,  
-         d e s c r i p t i o n :   ' C a l c u l a t e   m o n t h l y   i n s t a l l m e n t s   f o r   p e r s o n a l   o r   c a r   l o a n s . ' ,  
-         c a t e g o r y :   C a t e g o r y . F I N A N C I A L ,  
-         i c o n :   ' üöó '  
-     } ,  
-     {  
-         i d :   ' p r o f i t - m a r g i n ' ,  
-         n a m e :   ' P r o f i t   M a r g i n ' ,  
-         n a m e U r d u :   ' ŸÖ ŸÜ ÿß ŸÅ ÿπ   ⁄© ÿß   ŸÖ ÿß ÿ± ÿ¨ ŸÜ ' ,  
-         d e s c r i p t i o n :   ' F i n d   n e t   p r o f i t   a n d   m a r g i n   p e r c e n t a g e s   f o r   y o u r   b u s i n e s s . ' ,  
-         c a t e g o r y :   C a t e g o r y . B U S I N E S S ,  
-         i c o n :   ' üìä '  
-     } ,  
-     {  
-         i d :   ' u n i t - c o n v e r t e r ' ,  
-         n a m e :   ' P a k i s t a n i   L a n d   M e a s u r e m e n t   &   U n i t   C o n v e r t e r   2 0 2 5 - 2 6 ' ,  
-         n a m e U r d u :   ' €å Ÿà ŸÜ Ÿπ   ⁄© ŸÜ Ÿà ÿ± Ÿπ ÿ± ' ,  
-         d e s c r i p t i o n :   ' C o n v e r t   M a r l a   t o   S q F t ,   T o l a   t o   G r a m s ,   a n d   m o r e . ' ,  
-         c a t e g o r y :   C a t e g o r y . E V E R Y D A Y ,  
-         i c o n :   ' üìè '  
-     } ,  
-     {  
-         i d :   ' b m i ' ,  
-         n a m e :   ' B M I   C a l c u l a t o r ' ,  
-         n a m e U r d u :   ' ÿ® €å   ÿß €å ŸÖ   ÿ¢ ÿ¶ €å   ⁄© €å ŸÑ ⁄© Ÿà ŸÑ €å Ÿπ ÿ± ' ,  
-         d e s c r i p t i o n :   ' C h e c k   y o u r   B o d y   M a s s   I n d e x   f o r   h e a l t h   r e c o m m e n d a t i o n s . ' ,  
-         c a t e g o r y :   C a t e g o r y . E V E R Y D A Y ,  
-         i c o n :   ' ‚öñ Ô∏è '  
-     } ,  
-     {  
-         i d :   ' c g p a - c a l c ' ,  
-         n a m e :   ' C G P A   C a l c u l a t o r ' ,  
-         n a m e U r d u :   ' ÿ≥ €å   ÿ¨ €å   Ÿæ €å   ÿß €í   ⁄© €å ŸÑ ⁄© Ÿà ŸÑ €å Ÿπ ÿ± ' ,  
-         d e s c r i p t i o n :   ' C a l c u l a t e   y o u r   S e m e s t e r   a n d   C u m u l a t i v e   G P A   e a s i l y . ' ,  
-         c a t e g o r y :   C a t e g o r y . E D U C A T I O N ,  
-         i c o n :   ' üéì '  
-     } ,  
-     {  
-         i d :   ' g r a d e - c a l c ' ,  
-         n a m e :   ' G r a d e   C a l c u l a t o r ' ,  
-         n a m e U r d u :   ' ⁄Ø ÿ± €å ⁄à   ⁄© €å ŸÑ ⁄© Ÿà ŸÑ €å Ÿπ ÿ± ' ,  
-         d e s c r i p t i o n :   ' C a l c u l a t e   y o u r   a c a d e m i c   g r a d e   b a s e d   o n   m a r k s   o b t a i n e d . ' ,  
-         c a t e g o r y :   C a t e g o r y . E D U C A T I O N ,  
-         i c o n :   ' üìù '  
-     } ,  
-     {  
-         i d :   ' m a r k - p e r c e n t a g e ' ,  
-         n a m e :   ' S t u d e n t   M a r k s   P e r c e n t a g e   C a l c u l a t o r   ( S S C ,   H S S C   &   U n i ) ' ,  
-         n a m e U r d u :   ' ŸÖ ÿß ÿ± ⁄© ÿ≥   ŸÅ €å ÿµ ÿØ   ⁄© €å ŸÑ ⁄© Ÿà ŸÑ €å Ÿπ ÿ± ' ,  
-         d e s c r i p t i o n :   ' C o n v e r t   y o u r   m a r k s   i n t o   p e r c e n t a g e   i n s t a n t l y . ' ,  
-         c a t e g o r y :   C a t e g o r y . E D U C A T I O N ,  
-         i c o n :   ' üéØ '  
-     } ,  
-     {  
-         i d :   ' e l e c t r i c i t y - b i l l ' ,  
-         n a m e :   ' E l e c t r i c i t y   B i l l   C a l c u l a t o r ' ,  
-         n a m e U r d u :   ' ÿ® ÿ¨ ŸÑ €å   ⁄© ÿß   ÿ® ŸÑ   ⁄© €å ŸÑ ⁄© Ÿà ŸÑ €å Ÿπ ÿ± ' ,  
-         d e s c r i p t i o n :   ' C a l c u l a t e   y o u r   L E S C O ,   M E P C O ,   I E S C O   e l e c t r i c i t y   b i l l   w i t h   l a t e s t   N E P R A   t a r i f f s . ' ,  
-         c a t e g o r y :   C a t e g o r y . P A K _ S P E C I F I C ,  
-         i c o n :   ' ‚ö° '  
-     }  
- ] ;  
-  
- e x p o r t   c o n s t   S A L A R I E D _ T A X _ S L A B S   =   [  
-     {   t h r e s h o l d :   6 0 0 0 0 0 ,   r a t e :   0 ,   f i x e d :   0   } ,  
-     {   t h r e s h o l d :   1 2 0 0 0 0 0 ,   r a t e :   5 ,   f i x e d :   0   } ,  
-     {   t h r e s h o l d :   2 2 0 0 0 0 0 ,   r a t e :   1 5 ,   f i x e d :   3 0 0 0 0   } ,  
-     {   t h r e s h o l d :   3 2 0 0 0 0 0 ,   r a t e :   2 5 ,   f i x e d :   1 8 0 0 0 0   } ,  
-     {   t h r e s h o l d :   4 1 0 0 0 0 0 ,   r a t e :   3 0 ,   f i x e d :   4 3 0 0 0 0   } ,  
-     {   t h r e s h o l d :   I n f i n i t y ,   r a t e :   3 5 ,   f i x e d :   7 0 0 0 0 0   }  
- ] ;  
-  
- e x p o r t   c o n s t   N I S A B _ G O L D _ G R A M S   =   8 7 . 4 8 ;  
- e x p o r t   c o n s t   N I S A B _ S I L V E R _ G R A M S   =   6 1 2 . 3 6 ;  
- 
+                            
+import { Category, Calculator } from './types';  
+export const CALCULATORS: Calculator[] = [     
+    id: 'income-tax',                                    
+    nameUrdu: 'ÿ Ü⁄ Ö Ÿ å⁄ ≥ ⁄ åŸ ©Ÿ Ñ€ πÿ    
+    description: 'Calculate FBR tax for 2025-2026 based on latest slabs.',                                      
+    icon: 'ì   
+  },     
+    id: 'zakat',                                                                      
+    nameUrdu: 'ÿ ©Ÿ ∞€  ©€ Ñ⁄ àŸ åŸ ±',                                                                                  
+    category: Category.PAK_SPECIFIC,            üå'      
+  {                           
+    name: 'Freelancer Income',                Åÿ å Ÿ ßŸ ≥ÿ  ßŸ ©Ÿ    
+    description: 'Calculate net income after bank charges and FBR export tax.',                                  
+    icon: 'í   
+  },     
+    id: 'investment-return',                                                       
+    nameUrdu: 'ÿ ±Ÿ ß€ Å ⁄ ßÿ å ⁄ ß Ÿ Üÿ Åÿ    
+    description: 'Predict growth of your savings with compounding interest.',                                   
+    icon: 'í   
+  },     
+    id: 'retirement-plan',                                 
+    nameUrdu: 'ÿ åŸ ßÿ ±Ÿ ÜŸ  ©€  ÖŸ µŸ ®€  ®Ÿ Ø€    
+    description: 'Calculate how much you need to save for a comfortable retirement.',                                   
+    icon: 'è ∏   
+  },     
+    id: 'real-estate-roi',                              
+    nameUrdu: 'ÿ åÿ Ñ ÿ ≥Ÿ åŸ  ÖŸ ßŸ π',                                                                                     
+    category: Category.FINANCIAL,            ü†'      
+  {                           
+    name: 'Provident Fund (PF)',                æÿ àŸ å⁄ ÜŸ  ÅŸ à',                                                                                   
+    category: Category.PAK_SPECIFIC,            ü¶'      
+  {                     
+    name: 'Gratuity Calculator Pakistan (As Per Official Labor Laws 2025)',                Øÿ åÿ à€ π€  ©€ Ñ⁄ àŸ åŸ ±',                                                                                     
+    category: Category.PAK_SPECIFIC,            üÅ'      
+  {                     
+    name: 'Loan EMI Calculator',                Çÿ ∂ ⁄ å Ÿ ≥ÿ  ©ÿ  ©€ Ñ⁄ àŸ åŸ ±',                                                                               
+    category: Category.FINANCIAL,            üó'      
+  {                          
+    name: 'Profit Margin',                ÖŸ ßŸ π ⁄ ß Ÿ ßÿ ¨Ÿ    
+    description: 'Find net profit and margin percentages for your business.',                                  
+    icon: 'ì   
+  },     
+    id: 'unit-converter',                                                                  
+    nameUrdu: '€ àŸ π ⁄ ÜŸ ±Ÿ ±',                                                                     
+    category: Category.EVERYDAY,            üè'      
+  {                
+    name: 'BMI Calculator',                ®€  ß€ Ö ÿ ¶€  ©€ Ñ⁄ àŸ åŸ ±',                                                                            
+    category: Category.EVERYDAY,            ö ∏   
+  },     
+    id: 'cgpa-calc',                              
+    nameUrdu: 'ÿ å ÿ å Ÿ å ÿ í ⁄ åŸ ©Ÿ Ñ€ πÿ    
+    description: 'Calculate your Semester and Cumulative GPA easily.',                                   
+    icon: 'é   
+  },     
+    id: 'grade-calc',                               
+    nameUrdu: '⁄ ±€ à ⁄ åŸ ©Ÿ Ñ€ πÿ    
+    description: 'Calculate your academic grade based on marks obtained.',                                   
+    icon: 'ì   
+  },     
+    id: 'mark-percentage',                                                                    
+    nameUrdu: 'Ÿ ßÿ ©ÿ  Å€ µÿ  ©€ Ñ⁄ àŸ åŸ ±',                                                                   
+    category: Category.EDUCATION,            üØ'      
+  {                             
+    name: 'Electricity Bill Calculator',                ®ÿ Ñ€  ©ÿ  ®Ÿ  ©€ Ñ⁄ àŸ åŸ ±',                                                                                                    
+    category: Category.PAK_SPECIFIC,            ö   
+  }    
+                                     
+  { threshold: 600000, rate: 0, fixed: 0 },                                              
+  { threshold: 2200000, rate: 15, fixed: 30000 },                                                    
+  { threshold: 4100000, rate: 30, fixed: 430000 },                                                    
+];  
+export const NISAB_GOLD_GRAMS = 87.48;                                           
