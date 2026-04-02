@@ -1,597 +1,299 @@
-import React, { useState } from 'react';
-import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import Layout from './components/Layout';
-import CalculatorList from './components/CalculatorList';
-import ToolsDirectory from './components/ToolsDirectory';
-import SEOHead from './components/SEOHead';
-import { Calculator, View } from './types';
-import ScrollToTop from './components/ScrollToTop';
-import { Breadcrumbs } from './components/Breadcrumbs';
-import {
-  IncomeTaxTool, ZakatTool, EMITool, ProfitMarginTool, BMICalcTool,
-  InvestmentReturnTool, RetirementTool, PFTool, GratuityTool,
-  FreelancerTool, UnitConverterTool, RealEstateROITool,
-  CGPACalculatorTool, GradeCalculatorTool, MarkPercentageTool,
-  ElectricityBillTool
-} from './components/Tools';
-import { FBRSlabsPage, ZakatInfoPage, ContactPage, PrivacyPage, TermsPage, DisclaimerPage } from './components/InfoPages';
-import { CALCULATORS } from './constants';
-import { ToolArticle } from './components/ToolArticle';
-import { RelatedTools } from './components/RelatedTools';
-
-const getRelatedTools = (id: string) => {
-  const map: Record<string, string[]> = {
-    'income-tax': ['investment-return', 'real-estate-roi'],
-    'zakat': ['investment-return', 'provident-fund', 'freelancer-tax'],
-    'loan-emi': ['zakat', 'investment-return'],
-    'profit-margin': ['income-tax', 'investment-return'],
-    'bmi': ['loan-emi', 'retirement-plan'],
-    'investment-return': ['provident-fund', 'gratuity'],
-    'retirement-plan': ['real-estate-roi', 'zakat', 'income-tax'],
-    'real-estate-roi': ['income-tax', 'investment-return'],
-    'provident-fund': ['retirement-plan', 'income-tax'],
-    'gratuity': ['retirement-plan', 'income-tax'],
-    'freelancer-tax': ['income-tax', 'unit-converter'],
-    'unit-converter': ['profit-margin', 'income-tax'],
-    'cgpa-calc': ['grade-calc', 'mark-percentage'],
-    'grade-calc': ['cgpa-calc', 'unit-converter'],
-    'mark-percentage': ['cgpa-calc', 'unit-converter'],
-    'electricity-bill': ['income-tax', 'loan-emi', 'zakat']
-  };
-  return map[id] || ['income-tax', 'investment-return'];
-};
-
-// SEO metadata for each tool â€“ CTR-optimized titles & descriptions based on GSC queries
-const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?: { question: string; answer: string }[]; howTo?: { name: string; description: string; steps: { name: string; text: string }[] } }> = {
-  'income-tax': {
-    title: 'Income Tax Calculator Pakistan 2026 - Free FBR Salary Tax Slabs 2025-26',
-    description: 'Calculate your FBR income tax for 2025-2026 in seconds. Updated salary tax slabs, legal exemptions and tax-saving tips. Used by 10,000+ Pakistani filers.',
-    faqs: [
-      { question: 'What are the FBR salary tax slabs for 2025-26 in Pakistan?', answer: 'The FBR has announced updated income tax slabs for tax year 2026 (July 2025 â€“ June 2026). Salaried individuals earning up to PKR 600,000 annually are exempt. Rates range from 5% to 35% depending on income brackets. Use our free calculator for your exact tax liability.' },
-      { question: 'How to calculate income tax in Pakistan for salaried persons?', answer: 'To calculate your income tax: 1) Determine your total annual taxable income, 2) Subtract allowable deductions (medical, education), 3) Apply the applicable FBR slab rate for 2025-26. Our calculator does all this automatically in seconds.' }
-    ],
-    howTo: {
-      name: "How to Calculate Income Tax on Salary in Pakistan",
-      description: "A step-by-step guide to calculating your FBR income tax using our free 2025-2026 calculator.",
-      steps: [
-        { name: "Enter Gross Salary", text: "Input the total amount you earn before any deductions include basic salary, allowances, and bonuses." },
-        { name: "Review Projection", text: "The calculator automatically scales your monthly income to an annual figure to match FBR tax brackets." },
-        { name: "Analyze Breakdown", text: "Observe the exact tax slab you fall into and see the precise percentage applied." },
-        { name: "Check Net Salary", text: "View the exact amount deposited into your bank account each month." }
-      ]
-    }
-  },
-  'zakat': {
-    title: 'Zakat Calculator Pakistan 2026 | Accurate Nisab Rules',
-    description: 'Fulfil your religious duty accurately. Calculate your Zakat for Ramadan 2025-26 using the latest Pakistani gold and silver Nisab rates. Calculate yours free!',
-    faqs: [
-      { question: 'How to calculate Zakat in Pakistan 2026?', answer: 'Zakat is 2.5% of your total wealth above the Nisab threshold. Add up all your savings, gold, silver, and investments. If the total exceeds the Nisab value (approximately PKR 135,000 based on silver, or PKR 1,200,000+ based on gold for 2026), you owe Zakat on the entire amount.' },
-      { question: 'What is the Zakat Nisab in Pakistan for 2026?', answer: 'The Zakat Nisab in Pakistan for 2026 is based on the value of 7.5 tola gold or 52.5 tola silver. The SBP announces the Nisab value each Ramadan. Based on current rates, the silver-based Nisab is approximately PKR 135,000 and the gold-based Nisab is approximately PKR 1,200,000.' },
-      { question: 'How much Zakat is deducted from bank accounts in Pakistan?', answer: 'Banks in Pakistan deduct Zakat at 2.5% on savings accounts exceeding the Nisab amount on 1st Ramadan each year. You can file a Zakat exemption (CZ-50 form) with your bank if you want to pay Zakat yourself.' }
-    ],
-    howTo: {
-      name: "How to Calculate Zakat Accurately in Pakistan (2.5% Formula)",
-      description: "Steps to evaluate your net worth and determine your Zakat obligation using current Nisab values.",
-      steps: [
-        { name: "Tally Your Assets", text: "Enter your cash deposits, market value of gold/silver, and business investments." },
-        { name: "Deduct Liabilities", text: "Deduct immediate short-term debts like pending utility bills or loans." },
-        { name: "Compare with Nisab", text: "The calculator compares your net worth against the current gold or silver Nisab threshold." },
-        { name: "Get Exact Amount", text: "If net worth exceeds Nisab, the system automatically computes exactly 2.5%." }
-      ]
-    }
-  },
-  'freelancer-tax': {
-    title: 'Freelancer Tax Calculator Pakistan 2026 - IT Export Income and FBR Rules',
-    description: 'Calculate freelancing income after bank charges, FBR export tax and conversion fees. Per month income estimator for Fiverr, Upwork and remote workers in Pakistan.',
-    faqs: [
-      { question: 'Is there tax on freelancers in Pakistan?', answer: 'Yes, freelancer income is taxable in Pakistan under FBR rules. However, IT export income enjoys reduced tax rates (0.25% for filers). Freelancers earning through platforms like Fiverr, Upwork, or direct clients must file returns and can benefit from IT export exemptions.' },
-      { question: 'How much do freelancers earn per month in Pakistan?', answer: 'Freelancer income varies widely. Pakistani IT freelancers typically earn between PKR 50,000 to PKR 500,000+ per month depending on skills and experience. After bank charges (1-3%), platform fees (5-20%), and taxes, your net take-home can differ significantly from gross earnings.' }
-    ],
-    howTo: {
-      name: "How to Calculate Freelance Income and IT Export Tax",
-      description: "Estimate your net take-home freelance income after applying platform fees, bank conversion rates, and FBR tax deductions.",
-      steps: [
-        { name: "Input Earnings", text: "Enter the total dollar amount the client paid before deductions." },
-        { name: "Set Fees", text: "Choose your platform's standard commission rate (usually 20%)." },
-        { name: "Factor Spreads", text: "Factor the difference between the dollar rate and bank's buying rate." },
-        { name: "Apply FBR Tax", text: "Select filer status. The calculator deducts the exact IT export tax." }
-      ]
-    }
-  },
-  'investment-return': {
-    title: 'ROI & Investment Return Calculator Pakistan (2025)',
-    description: 'Track profits on mutual funds, National Savings, or real estate. Use our free 2025-26 ROI and Investment Return Calculator tailored for Pakistani investors. Try it!',
-    faqs: [
-      { question: 'How to calculate investment return in Pakistan?', answer: 'To calculate your investment return: Enter your initial investment amount, expected annual return rate (NSC offers 11-15%, mutual funds 10-20%), investment duration, and our calculator will show you total profit with compound interest, adjusted for inflation.' }
-    ]
-  },
-  'retirement-plan': {
-    title: 'Retirement Savings Calculator Pakistan 2026 - Plan Your Pension & VPS',
-    description: 'Plan your retirement in Pakistan. Calculate required savings corpus, VPS calculator and inflation-adjusted projections. Start planning your secure future today.',
-    faqs: [
-      { question: 'How much money do I need to retire in Pakistan?', answer: 'The amount depends on your lifestyle. For a comfortable retirement in Pakistan, you typically need 20-25x your annual expenses saved. With 8-10% inflation, someone spending PKR 100,000/month today would need approximately PKR 50-80 million by retirement age 60.' }
-    ]
-  },
-  'real-estate-roi': {
-    title: 'Real Estate ROI Calculator Pakistan 2026 - Property Investment & Rental Yield',
-    description: 'Analyze rental yield, capital gains and FBR transfer taxes for property deals. ROI calculator for Karachi, Lahore and Islamabad with Marla and Kanal price analysis.',
-    faqs: [
-      { question: 'How to calculate real estate ROI in Pakistan?', answer: 'Real Estate ROI = (Annual Rental Income + Property Appreciation - Expenses) / Total Investment Ã— 100. In Pakistan, typical rental yields range from 3-6% in major cities, while capital appreciation can be 10-20% annually in developing areas.' }
-    ]
-  },
-  'provident-fund': {
-    title: 'Provident Fund Calculator Pakistan 2026 - Free PF Balance & Deduction Calculator',
-    description: 'Calculate your Provident Fund (PF) balance with employer matching and interest. PF deduction percentage and contribution rules in Pakistan. Used by 5,000+ employees.',
-    faqs: [
-      { question: 'How to calculate Provident Fund in Pakistan?', answer: 'Provident Fund in Pakistan is calculated as a percentage of your basic salary (typically 6-8.33%). Both employee and employer contribute equally. The PF balance grows with monthly contributions plus interest (currently 13-15% per annum). Our calculator shows your projected PF balance at retirement.' },
-      { question: 'What is the PF deduction percentage in Pakistan?', answer: 'The standard PF deduction is 1/12th (8.33%) of basic salary in Pakistan, though some organizations deduct 6% or a fixed amount. The employer matches your contribution. The total contribution (employee + employer) is typically 16.67% of basic salary.' },
-      { question: 'Is Provident Fund taxable in Pakistan?', answer: 'Employer contributions to recognized Provident Funds are tax-exempt up to 10% of salary. The accumulated balance is also tax-free at the time of withdrawal after retirement or completion of service, provided the fund is approved by the FBR.' }
-    ]
-  },
-  'gratuity': {
-    title: 'Gratuity Calculator Pakistan 2025 | As Per Labor Law',
-    description: 'Resigning or retiring? Calculate your exact end-of-service payout using the official Gratuity Calculator Pakistan 2025. Know your legal rights before leaving.',
-    faqs: [
-      { question: 'How is gratuity calculated in Pakistan?', answer: 'Gratuity in Pakistan is calculated as: Last drawn salary Ã— number of years of service. Under the Pakistan labor laws, employees who have completed at least one year of continuous service are entitled to gratuity equal to 30 days wages for each completed year of service.' },
-      { question: 'Is gratuity calculated on basic salary or gross salary in Pakistan?', answer: 'In Pakistan, gratuity is typically calculated on the last drawn basic salary (not gross salary). However, some organizations calculate it on gross salary as per their company policy. The legal minimum is based on basic salary plus dearness allowance.' },
-      { question: 'What is the gratuity amount for 5 years service in Pakistan?', answer: 'For 5 years of service, your gratuity = Last basic salary Ã— 5. For example, if your last basic salary is PKR 100,000, your gratuity would be PKR 500,000 (100,000 Ã— 5 years). Some companies offer higher rates based on their HR policies.' }
-    ]
-  },
-  'loan-emi': {
-    title: 'Loan EMI Calculator Pakistan 2026 - Free Monthly Installment Calculator (KIBOR)',
-    description: 'Calculate monthly EMI for car loans, home loans and bank loans. KIBOR-based rates for Meezan, HBL and Alfalah supported. Full payment schedule with interest breakdown.',
-    faqs: [
-      { question: 'How to calculate loan EMI in Pakistan?', answer: 'EMI (Equated Monthly Installment) is calculated using the formula: EMI = P Ã— r Ã— (1+r)^n / ((1+r)^n - 1), where P = loan amount, r = monthly interest rate, n = number of months. In Pakistan, car loan rates are typically KIBOR + 3-5% spread.' },
-      { question: 'How much EMI for 30 lakh loan in Pakistan?', answer: 'For a PKR 30 lakh loan at 18% annual interest for 5 years, the monthly EMI would be approximately PKR 76,000. The exact amount depends on the bank\'s interest rate and loan tenure. Use our calculator for precise EMI calculations.' }
-    ]
-  },
-  'profit-margin': {
-    title: 'Profit Margin Calculator 2026 - Free Business Markup & Net Profit Finder',
-    description: 'Calculate net profit margin and markup percentage for your business. Gross vs net profit comparisons ideal for wholesalers, retailers and startups in Pakistan. Instant results.',
-    faqs: [
-      { question: 'How to calculate profit margin for a business in Pakistan?', answer: 'Profit Margin = (Revenue - Cost) / Revenue Ã— 100. For example, if you buy a product for PKR 800 and sell for PKR 1,000, your profit margin is 20%. Markup would be 25% (200/800 Ã— 100). Our calculator instantly shows both margin and markup.' }
-    ]
-  },
-  'unit-converter': {
-    title: 'Pakistani Land Unit Converter 2025-26 | Murabba to Kanal',
-    description: 'Quickly convert Pakistani land units like Murabba to Kanal, Marla, and Acres. Use our free, accurate 2025-26 calculator for your property deals. Try it now!',
-    faqs: [
-      { question: 'How many Kanal in 1 Murabba in Pakistan?', answer: '1 Murabba = 25 Acres = 200 Kanal in Pakistan. A Murabba is commonly used for agricultural land measurement in Punjab. 200 Murabba would be 40,000 Kanal or 5,000 Acres.' },
-      { question: 'How many Marla in 1 Kanal?', answer: '1 Kanal = 20 Marla in Pakistan. 1 Marla = 272.25 sq ft. So 1 Kanal = 5,445 sq ft. These are the standard land measurement units used across Punjab and KPK.' },
-      { question: 'How many Marla in 40 Gaz?', answer: '40 Gaz (Square Yards) is approximately equal to 1.32 Marla in Pakistan. 1 Marla = 30.25 Gaz/Square Yards. This conversion is commonly needed when buying plots in Pakistan.' }
-    ]
-  },
-  'bmi': {
-    title: 'BMI Calculator Pakistan 2026 - Free Body Mass Index & Health Check Tool',
-    description: 'Calculate your BMI instantly. Check if you are underweight, normal, or overweight with Pakistan-specific health tips and weight management advice. 100% free.',
-    faqs: [
-      { question: 'How to calculate BMI in Pakistan?', answer: 'BMI = Weight (kg) / Height (mÂ²). For example, if you weigh 70kg and are 1.75m tall, your BMI = 70 / (1.75 Ã— 1.75) = 22.86 (Normal weight). BMI categories: Under 18.5 = Underweight, 18.5-24.9 = Normal, 25-29.9 = Overweight, 30+ = Obese.' }
-    ]
-  },
-  'cgpa-calc': {
-    title: 'CGPA Calculator Pakistan 2026 - Free GPA Calculator (HEC Standards)',
-    description: 'Calculate CGPA and SGPA as per HEC Pakistan standards. Percentage to GPA conversion for all university grading systems supported. How to calculate GPA in Pakistan.',
-    faqs: [
-      { question: 'How to calculate GPA in Pakistan?', answer: 'In Pakistan, GPA is calculated by: 1) Multiplying each course\'s grade points by its credit hours, 2) Adding all quality points, 3) Dividing by total credit hours. HEC uses 4.0 scale where A = 4.0, B+ = 3.3, B = 3.0, etc.' },
-      { question: 'How to calculate CGPA from SGPA in Pakistan?', answer: 'CGPA = Sum of (SGPA Ã— semester credit hours) / Total credit hours of all semesters. For example, if Semester 1 SGPA = 3.5 (18 credits) and Semester 2 SGPA = 3.7 (15 credits), CGPA = (3.5Ã—18 + 3.7Ã—15) / (18+15) = 3.59.' }
-    ]
-  },
-  'grade-calc': {
-    title: 'Grade Calculator Pakistan - Matric, Inter & University Marks Grade Finder',
-    description: 'Find your academic grade from marks obtained. Matric, Inter, O/A Level grading systems and Pakistan board results grade calculator. Instant and free.',
-    faqs: [
-      { question: 'How to check grade from marks in Pakistan?', answer: 'In Pakistan\'s Matric/SSC system: A1 = 80%+, A = 70-79%, B = 60-69%, C = 50-59%, D = 40-49%, F = below 40%. For FSc/HSSC: A+ = 85%+, A = 80-84%, B = 70-79%, C = 60-69%. Our calculator supports all major grading systems.' }
-    ]
-  },
-  'mark-percentage': {
-    title: 'Marks Percentage Calculator | Find SSC/HSSC Grades Fast',
-    description: 'Check your exact board result percentage instantly. Use our free marks percentage calculator for Metric, Inter, and University grades in Pakistan. Calculate now!',
-    faqs: [
-      { question: 'How to calculate marks percentage out of 1100?', answer: 'To calculate percentage out of 1100: Divide your obtained marks by 1100 and multiply by 100. Formula: (Obtained Marks / 1100) Ã— 100. For example, if you got 935 marks, your percentage is (935/1100) Ã— 100 = 85%.' },
-      { question: 'What is the percentage of 850 out of 1100 marks?', answer: '850 out of 1100 marks percentage = (850 / 1100) Ã— 100 = 77.27%. This is usually considered an A grade in Pakistan board exams.' },
-      { question: 'How to calculate 9th and 10th class result percentage?', answer: 'Add your 9th and 10th class marks to get the total obtained marks (usually out of 1100 or 1200). Use our calculator to enter these values and get your final Matric result percentage instantly.' },
-      { question: 'What is 550 out of 1100 marks in percentage?', answer: '550 out of 1100 is exactly 50%. Formula: (550 / 1100) Ã— 100 = 50%.' },
-      { question: 'How to calculate percentage from total marks of 1200?', answer: 'If your total marks are 1200, divide your obtained marks by 1200 and multiply by 100. Our calculator lets you change the total marks field to 1200 for exact results.' }
-    ],
-    howTo: {
-      name: "How to Calculate Marks Percentage for Pakistan Board Exams (Matric/Inter)",
-      description: "Quick guide to converting your exam marks into a percentage for BISE Lahore, MEPCO, IESCO, and other boards.",
-      steps: [
-        { name: "Enter Secured Marks", text: "Enter the total marks you obtained in your result (e.g., 940)." },
-        { name: "Enter Maximum Marks", text: "Enter the total marks possible (usually 1100 for Matric/Inter or 1200)." },
-        { name: "Get Instant Result", text: "Click calculate to see your percentage up to two decimal points instantly." },
-        { name: "See Your Grade", text: "The calculator will also show your grade classification based on Pakistan's board criteria." }
-      ]
-    }
-  },
-  'electricity-bill': {
-    title: 'WAPDA Unit Calculator Pakistan 2026 | Watts to Units & Online Bill Check',
-    description: 'Calculate electricity bill in Pakistan instantly. Use our WAPDA unit calculator, check IESCO/FESCO bill online, convert watts to units, and find the latest per unit rate.',
-    faqs: [
-      { question: 'How to calculate electricity bill in Pakistan?', answer: 'To calculate your bill of electricity in Pakistan, use the WAPDA unit calculator. Simply enter your consumed units. The tool evaluates the electricity bill calculation formula in Pakistan by applying the appropriate NEPRA slab, adding the Fuel Price Adjustment (FPA), 18% GST, and other surcharges.' },
-      { question: 'What is the WAPDA unit price in Pakistan for commercial and residential?', answer: 'WAPDA per unit price varies. For residential protected consumers, it starts very low (Rs. 10.54/unit). Non-protected residential starts at Rs. 22.44/unit. WAPDA commercial unit price is typically much higher and mostly a flat rate ranging from Rs. 39 to Rs. 50+ per unit depending on the exact load and tariff category (like A-2).' },
-      { question: 'How do I use a Watts to Units calculator?', answer: 'The watt to unit formula is simple: Units (kWh) = (Watts Ã— Hours Used Ã— Days) / 1000. For example, a 1000-watt AC running for 8 hours a day for 30 days will consume 240 units.' },
-      { question: 'How can I check my electricity bill online (IESCO, FESCO, MEPCO)?', answer: 'You can check your light or power bill online via the official portal of your respective DISCO. For an IESCO online bill check, visit the IESCO portal with your 14-digit reference number. The same process applies for a FESCO online bill calculator or MEPCO bill tracking. Our tool helps you accurately predict that bill before it arrives.' }
-    ],
-    howTo: {
-      name: "How to Calculate Bill of Electricity in Pakistan",
-      description: "A step-by-step guide to calculating your electricity bill using our online WAPDA unit calculator.",
-      steps: [
-        { name: "Convert Watts to Units (Optional)", text: "If you don't know your units, use our watts to units calculator feature by entering your appliances' wattage and usage hours." },
-        { name: "Select Your Connection Type", text: "Choose between a Residential or Commercial WAPDA connection, as the commercial unit price is different." },
-        { name: "Enter Consumed Units", text: "Input your total consumed units into the online bill calculator." },
-        { name: "Review the Bill Breakdown", text: "The calculator instantly applies the exact WAPDA per unit rate, FPA, and GST to give you your final estimated bill amount." }
-      ]
-    }
-  }
-};
-
-
-const App: React.FC = () => {
-  const [isUrdu, setIsUrdu] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  const handleNavigate = (view: View) => {
-    // Legacy support for internal component nav if needed, or simple redirects
-    if (view === 'home') navigate('/');
-    else if (view === 'all-tools') navigate('/all-tools');
-
-    else navigate(`/${view}`);
-  };
-
-  const handleSelectTool = (calc: Calculator) => {
-    navigate(`/${calc.id}`);
-  };
-
-  return (
-    <Layout
-      isUrdu={isUrdu}
-      setIsUrdu={setIsUrdu}
-      onNavigate={handleNavigate}
-    >
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={
-          <>
-            <SEOHead
-              title="PakCalc - Pakistan's #1 Financial Tools Suite"
-              description="Free financial calculators for Income Tax (FBR 2025), Zakat, Loan EMI, and Business profit margins. Tailored for Pakistan."
-              canonicalUrl="/"
-            />
-            <CalculatorList isUrdu={isUrdu} onSelect={handleSelectTool} onNavigate={handleNavigate} />
-          </>
-        } />
-
-        <Route path="/all-tools" element={
-          <>
-            <SEOHead
-              title="All Financial Tools - PakCalc"
-              description="Browse our complete collection of financial calculators for Pakistani users."
-              canonicalUrl="/all-tools"
-            />
-            <ToolsDirectory isUrdu={isUrdu} onSelect={handleSelectTool} />
-          </>
-        } />
-
-        {/* Info Pages */}
-        <Route path="/slabs" element={
-          <>
-            <SEOHead title="FBR Salary Tax Slabs 2025-26 | Latest Pakistan Rates" description="Avoid FBR penalties. View the official 2025-26 FBR salary tax slabs for Pakistan. See exactly how much income tax will be deducted from your salary. Check now!" canonicalUrl="/slabs" />
-            <Helmet>
-              <script type="application/ld+json">
-                {JSON.stringify({
-                  "@context": "https://schema.org",
-                  "@type": "FAQPage",
-                  "mainEntity": [
-                    {
-                      "@type": "Question",
-                      "name": "What are the FBR income tax slabs for 2025-26 in Pakistan?",
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "The FBR has announced updated income tax slabs for tax year 2026 (July 2025 â€“ June 2026). Annual income up to PKR 600,000 is exempt. Rates progressively increase from 5% to 35% based on income brackets for salaried individuals."
-                      }
-                    }
-                  ]
-                })}
-              </script>
-            </Helmet>
-            <FBRSlabsPage isUrdu={isUrdu} />
-          </>
-        } />
-
-        <Route path="/electricity-bill" element={
-          <ToolWrapper
-            id="electricity-bill"
-            isUrdu={isUrdu}
-            component={<ElectricityBillTool isUrdu={isUrdu} />}
-            handleNavigate={handleNavigate}
-          />
-        } />
-
-        <Route path="/zakat-info" element={
-          <>
-            <SEOHead title="Zakat Nisab Rules 2025-26: Complete Guide for Pakistan" description="Completely confused about Nisab? Read our easy 2025-26 guide to Zakat rules in Pakistan. Learn exactly who pays, what is eligible, and current gold rates." canonicalUrl="/zakat-info" />
-            <Helmet>
-              <script type="application/ld+json">
-                {JSON.stringify({
-                  "@context": "https://schema.org",
-                  "@type": "FAQPage",
-                  "mainEntity": [
-                    {
-                      "@type": "Question",
-                      "name": "What is the SBP Zakat Nisab for 2026 in Pakistan?",
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "The SBP announces the Zakat Nisab based on the value of 612.32 grams of silver. For 2026, the Nisab is approximately PKR 135,000. Bank accounts exceeding this amount on 1st Ramadan will have 2.5% Zakat deducted automatically."
-                      }
-                    }
-                  ]
-                })}
-              </script>
-            </Helmet>
-            <ZakatInfoPage isUrdu={isUrdu} />
-          </>
-        } />
-        <Route path="/contact" element={<><SEOHead title="Contact Us" description="Get in touch with PakCalc team." canonicalUrl="/contact" /><ContactPage isUrdu={isUrdu} /></>} />
-        <Route path="/privacy" element={<><SEOHead title="Privacy Policy" description="Privacy Policy for PakCalc." canonicalUrl="/privacy" /><PrivacyPage /></>} />
-        <Route path="/terms" element={<><SEOHead title="Terms of Service" description="Terms of Service for PakCalc." canonicalUrl="/terms" /><TermsPage /></>} />
-        <Route path="/disclaimer" element={<><SEOHead title="Disclaimer" description="Financial disclaimer for PakCalc." canonicalUrl="/disclaimer" /><DisclaimerPage /></>} />
-
-        {/* Individual Tools */}
-        <Route path="/income-tax" element={
-          <ToolWrapper
-            id="income-tax"
-            component={<IncomeTaxTool isUrdu={isUrdu} />}
-            isUrdu={isUrdu}
-            handleNavigate={handleNavigate}
-          />
-        } />
-        <Route path="/zakat" element={
-          <ToolWrapper
-            id="zakat"
-            component={<ZakatTool isUrdu={isUrdu} />}
-            isUrdu={isUrdu}
-            handleNavigate={handleNavigate}
-          />
-        } />
-        <Route path="/loan-emi" element={
-          <ToolWrapper
-            id="loan-emi"
-            component={<EMITool />}
-            isUrdu={isUrdu}
-            handleNavigate={handleNavigate}
-          />
-        } />
-        <Route path="/profit-margin" element={
-          <ToolWrapper
-            id="profit-margin"
-            component={<ProfitMarginTool />}
-            isUrdu={isUrdu}
-            handleNavigate={handleNavigate}
-          />
-        } />
-        <Route path="/bmi" element={
-          <ToolWrapper
-            id="bmi"
-            component={<BMICalcTool />}
-            isUrdu={isUrdu}
-            handleNavigate={handleNavigate}
-          />
-        } />
-        <Route path="/investment-return" element={
-          <ToolWrapper
-            id="investment-return"
-            component={<InvestmentReturnTool />}
-            isUrdu={isUrdu}
-            handleNavigate={handleNavigate}
-          />
-        } />
-        <Route path="/retirement-plan" element={
-          <ToolWrapper
-            id="retirement-plan"
-            component={<RetirementTool />}
-            isUrdu={isUrdu}
-            handleNavigate={handleNavigate}
-          />
-        } />
-        <Route path="/real-estate-roi" element={
-          <ToolWrapper
-            id="real-estate-roi"
-            component={<RealEstateROITool />}
-            isUrdu={isUrdu}
-            handleNavigate={handleNavigate}
-          />
-        } />
-        <Route path="/provident-fund" element={
-          <ToolWrapper
-            id="provident-fund"
-            component={<PFTool />}
-            isUrdu={isUrdu}
-            handleNavigate={handleNavigate}
-          />
-        } />
-        <Route path="/gratuity" element={
-          <ToolWrapper
-            id="gratuity"
-            component={<GratuityTool />}
-            isUrdu={isUrdu}
-            handleNavigate={handleNavigate}
-          />
-        } />
-        <Route path="/freelancer-tax" element={
-          <ToolWrapper
-            id="freelancer-tax"
-            component={<FreelancerTool isUrdu={isUrdu} />}
-            isUrdu={isUrdu}
-            handleNavigate={handleNavigate}
-          />
-        } />
-        <Route path="/unit-converter" element={
-          <ToolWrapper
-            id="unit-converter"
-            component={<UnitConverterTool />}
-            isUrdu={isUrdu}
-            handleNavigate={handleNavigate}
-          />
-        } />
-        <Route path="/cgpa-calc" element={
-          <ToolWrapper
-            id="cgpa-calc"
-            component={<CGPACalculatorTool />}
-            isUrdu={isUrdu}
-            handleNavigate={handleNavigate}
-          />
-        } />
-        <Route path="/grade-calc" element={
-          <ToolWrapper
-            id="grade-calc"
-            component={<GradeCalculatorTool />}
-            isUrdu={isUrdu}
-            handleNavigate={handleNavigate}
-          />
-        } />
-        <Route path="/mark-percentage" element={
-          <ToolWrapper
-            id="mark-percentage"
-            component={<MarkPercentageTool />}
-            isUrdu={isUrdu}
-            handleNavigate={handleNavigate}
-          />
-        } />
-
-        {/* Fallback */}
-        <Route path="*" element={
-          <div className="flex flex-col items-center justify-center min-h-[50vh]">
-            <h1 className="text-4xl font-bold text-slate-800 mb-4">404 - Page Not Found</h1>
-            <button onClick={() => navigate('/')} className="text-emerald-600 font-bold hover:underline">Go Home</button>
-          </div>
-        } />
-      </Routes>
-    </Layout>
-  );
-};
-
-// Helper component to wrap tools with common layout and SEO
-const ToolWrapper = ({ id, component, isUrdu, handleNavigate }: { id: string, component: React.ReactNode, isUrdu: boolean, handleNavigate: any }) => {
-  const navigate = useNavigate();
-  const tool = CALCULATORS.find(c => c.id === id);
-  const seoMeta = TOOL_SEO_META[id];
-
-  if (!tool) return null;
-
-  return (
-    <div className="max-w-6xl mx-auto px-4 py-12 md:py-20 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <SEOHead
-        title={seoMeta?.title || `${tool.name} - PakCalc`}
-        description={seoMeta?.description || tool.description}
-        canonicalUrl={`/${id}`}
-      />
-
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
-        <div className="space-y-4 w-full">
-          <Breadcrumbs />
-          <div className="flex items-center gap-4">
-            <div className="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center text-3xl">
-              {tool.icon}
-            </div>
-            <div>
-              <h1 className={`text-4xl font-black text-slate-900 tracking-tight ${isUrdu ? 'urdu' : ''}`}>
-                {isUrdu ? tool.nameUrdu : tool.name}
-              </h1>
-              <p className="text-slate-500 font-medium">Free Financial Utility Tool</p>
-
-              <Helmet>
-                <script type="application/ld+json">
-                  {JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "SoftwareApplication",
-                    "name": tool.name,
-                    "applicationCategory": "FinanceApplication",
-                    "operatingSystem": "Any",
-                    "url": `https://pakcalc.site/${id}`,
-                    "offers": {
-                      "@type": "Offer",
-                      "price": "0",
-                      "priceCurrency": "PKR"
-                    },
-                    "description": seoMeta?.description || tool.description,
-                    "aggregateRating": {
-                      "@type": "AggregateRating",
-                      "ratingValue": "4.8",
-                      "ratingCount": "150",
-                      "bestRating": "5"
-                    }
-                  })}
-                </script>
-                {seoMeta?.faqs && seoMeta.faqs.length > 0 && (
-                  <script type="application/ld+json">
-                    {JSON.stringify({
-                      "@context": "https://schema.org",
-                      "@type": "FAQPage",
-                      "mainEntity": seoMeta.faqs.map(faq => ({
-                        "@type": "Question",
-                        "name": faq.question,
-                        "acceptedAnswer": {
-                          "@type": "Answer",
-                          "text": faq.answer
-                        }
-                      }))
-                    })}
-                  </script>
-                )}
-                {seoMeta?.howTo && (
-                  <script type="application/ld+json">
-                    {JSON.stringify({
-                      "@context": "https://schema.org",
-                      "@type": "HowTo",
-                      "name": seoMeta.howTo.name,
-                      "description": seoMeta.howTo.description,
-                      "step": seoMeta.howTo.steps.map((step, index) => ({
-                        "@type": "HowToStep",
-                        "position": index + 1,
-                        "name": step.name,
-                        "text": step.text
-                      }))
-                    })}
-                  </script>
-                )}
-              </Helmet>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="relative mb-8">
-        {component}
-      </div>
-
-      <ToolArticle id={id} isUrdu={isUrdu} />
-
-      <RelatedTools toolIds={getRelatedTools(id)} />
-
-      {/* AI Banner */}
-      <div className="mt-16 bg-slate-900 rounded-[2.5rem] p-10 text-white relative overflow-hidden shadow-2xl">
-        <div className="absolute right-0 top-0 w-64 h-64 bg-emerald-600 rounded-full blur-[100px] opacity-20 -mr-32 -mt-32"></div>
-        <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div>
-            <div className="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4 border border-emerald-500/30">AI-Powered Analysis</div>
-            <h4 className="text-3xl font-black mb-4 leading-tight">Need expert financial advice?</h4>
-            <p className="text-slate-400 leading-relaxed">Our AI assistant analyzes your results in real-time to provide localized strategies for efficiency and growth in Pakistan.</p>
-          </div>
-          <div className="flex justify-end">
-            <div className="bg-white/10 p-6 rounded-3xl border border-white/10 backdrop-blur-md w-full max-w-sm">
-              <div className="flex gap-4 mb-4">
-                <div className="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center shrink-0 text-xl">AI</div>
-                <p className="text-sm font-medium italic text-slate-200">"Every calculation matters. Use our localized tools to optimize your savings."</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default App;
+import React, { useState } from 'react';                                                                             
+import { Helmet } from 'react-helmet-async';                                           
+import CalculatorList from './components/CalculatorList';                                                           
+import SEOHead from './components/SEOHead';                                             
+import ScrollToTop from './components/ScrollToTop';                                                         
+import {                                                                     
+  InvestmentReturnTool, RetirementTool, PFTool, GratuityTool,                                                         
+  CGPACalculatorTool, GradeCalculatorTool, MarkPercentageTool,                       
+} from './components/Tools';                                                                                                                            
+import { CALCULATORS } from './constants';                                                         
+import { RelatedTools } from './components/RelatedTools';  
+const getRelatedTools = (id: string) => {                                           
+    'income-tax': ['investment-return', 'real-estate-roi'],                                                                         
+    'loan-emi': ['zakat', 'investment-return'],                                                           
+    'bmi': ['loan-emi', 'retirement-plan'],                                                          
+    'retirement-plan': ['real-estate-roi', 'zakat', 'income-tax'],                                                             
+    'provident-fund': ['retirement-plan', 'income-tax'],                                                    
+    'freelancer-tax': ['income-tax', 'unit-converter'],                                                        
+    'cgpa-calc': ['grade-calc', 'mark-percentage'],                                                    
+    'mark-percentage': ['cgpa-calc', 'unit-converter'],                                                             
+  };                                                          
+};  
+// SEO metadata for each tool â“ CTR-optimized titles & descriptions based on GSC queries                                                                               €                                                €                                                                                         
+  'income-tax': {                                                                        
+    description: 'Calculate Salary Tax based on latest FBR Tax Slabs 2025-26. Step-by-step guide on how to become a Filer in Pakistan. [100% Accurate & Free]',             
+      { question: 'What are the FBR salary tax slabs for 2025-26 in Pakistanâ”', answer: 'The FBR has announced updated income tax slabs for tax year 2026 (July 2025 â“ June 2026). Salaried individuals earning up to PKR 600,000 annually are exempt. Rates range from 5% to 35% depending on income brackets. Use our free calculator for your exact tax liability.' },                                                                                €                                                                                                                                                                                                                                                              
+    ],              
+      name: "How to Calculate Income Tax on Salary in Pakistan",                                                                                                                    
+      steps: [                                                                                                                                                       
+        { name: "Review Projection", text: "The calculator automatically scales your monthly income to an annual figure to match FBR tax brackets." },                                                                                                                                  
+        { name: "Check Net Salary", text: "View the exact amount deposited into your bank account each month." }         
+    }      
+  'zakat': {                                                                         
+    description: 'Calculate Zakat on Gold, Cash, & Salary. [Standard 2.5%] based on Official Nisab rates by State Bank of Pakistan (SBP) & Ministry of Religious Affairs. 100% free!',             
+      { question: 'How to calculate Zakat in Pakistan 2026â”', answer: 'Zakat is 2.5% of your total wealth above the Nisab threshold. Add up all your savings, gold, silver, and investments. If the total exceeds the Nisab value (approximately PKR 135,000 based on silver, or PKR 1,200,000+ based on gold for 2026), you owe Zakat on the entire amount.' },                                                                €                                                                                                                                                                                                                                                                                                       
+      { question: 'How much Zakat is deducted from bank accounts in Pakistanâ”', answer: 'Banks in Pakistan deduct Zakat at 2.5% on savings accounts exceeding the Nisab amount on 1st Ramadan each year. You can file a Zakat exemption (CZ-50 form) with your bank if you want to pay Zakat yourself.' }        
+    howTo: {                                                                             
+      description: "Steps to evaluate your net worth and determine your Zakat obligation using current Nisab values.",                
+        { name: "Tally Your Assets", text: "Enter your cash deposits, market value of gold/silver, and business investments." },                                                                                                                         
+        { name: "Compare with Nisab", text: "The calculator compares your net worth against the current gold or silver Nisab threshold." },                                                                                                                           
+      ]       
+  },                       
+    title: 'Freelancer Tax Calculator Pakistan 2026 - IT Export Income and FBR Rules',                                                                                                                                                                                        
+    faqs: [                                                           €                                                                                                                                                                                                                                                                                                 
+      { question: 'How much do freelancers earn per month in Pakistanâ”', answer: 'Freelancer income varies widely. Pakistani IT freelancers typically earn between PKR 50,000 to PKR 500,000+ per month depending on skills and experience. After bank charges (1-3%), platform fees (5-20%), and taxes, your net take-home can differ significantly from gross earnings.' }        
+    howTo: {                                                                    
+      description: "Estimate your net take-home freelance income after applying platform fees, bank conversion rates, and FBR tax deductions.",                
+        { name: "Input Earnings", text: "Enter the total dollar amount the client paid before deductions." },                                                                                                       
+        { name: "Factor Spreads", text: "Factor the difference between the dollar rate and bank's buying rate." },                                                                                                                 
+      ]       
+  },                          
+    title: 'ROI & Investment Return Calculator Pakistan (2025)',                                                                                                                                                                                          
+    faqs: [                                                                  €                                                                                                                                                                                                                                                                                    
+    ]      
+  'retirement-plan': {                                                                                     
+    description: 'Plan your retirement in Pakistan. Calculate required savings corpus, VPS calculator and inflation-adjusted projections. Start planning your secure future today.',             
+      { question: 'How much money do I need to retire in Pakistanâ”', answer: 'The amount depends on your lifestyle. For a comfortable retirement in Pakistan, you typically need 20-25x your annual expenses saved. With 8-10% inflation, someone spending PKR 100,000/month today would need approximately PKR 50-80 million by retirement age 60.' }       
+  },                        
+    title: 'Real Estate ROI Calculator Pakistan 2026 - Property Investment & Rental Yield',                                                                                                                                                                                          
+    faqs: [                                                                €                                                                                                            — 100. In Pakistan, typical rental yields range from 3-6% in major cities, while capital appreciation can be 10-20% annually in developing areas.' }       
+  },                       
+    title: 'Provident Fund Calculator Pakistan 2026 - Free PF Balance & Deduction Calculator',                                                                                                                                                                                           
+    faqs: [                                                               €                                                                                                                                                                                                                                                                                                                             
+      { question: 'What is the PF deduction percentage in Pakistanâ”', answer: 'The standard PF deduction is 1/12th (8.33%) of basic salary in Pakistan, though some organizations deduct 6% or a fixed amount. The employer matches your contribution. The total contribution (employee + employer) is typically 16.67% of basic salary.' },                                                         €                                                                                                                                                                                                                                                                 
+    ]      
+  'gratuity': {                                                                    
+    description: 'Resigning or retiringâ” Calculate your exact end-of-service payout using the official Gratuity Calculator Pakistan 2025. Know your legal rights before leaving.',             
+      { question: 'How is gratuity calculated in Pakistanâ”', answer: 'Gratuity in Pakistan is calculated as: Last drawn salary Ã                                                                                                                                                                                                                          
+      { question: 'Is gratuity calculated on basic salary or gross salary in Pakistanâ”', answer: 'In Pakistan, gratuity is typically calculated on the last drawn basic salary (not gross salary). However, some organizations calculate it on gross salary as per their company policy. The legal minimum is based on basic salary plus dearness allowance.' },                                                                               €                                                                       — 5. For example, if your last basic salary is PKR 100,000, your gratuity would be PKR 500,000 (100,000 Ã                                                                             
+    ]      
+  'loan-emi': {                                                                                    
+    description: 'Calculate monthly EMI for car/home loans. KIBOR-based rates for Meezan Bank, HBL, Bank Alfalah. [Updated 2026] Monthly installment tracker.',             
+      { question: 'How to calculate loan EMI in Pakistanâ”', answer: 'EMI (Equated Monthly Installment) is calculated using the formula: EMI = P Ã    — (1+r)^n / ((1+r)^n - 1), where P = loan amount, r = monthly interest rate, n = number of months. In Pakistan, car loan rates are typically KIBOR + 3-5% spread.' },                                                             €                                                                                                                                                                                                                                                      
+    ]      
+  'profit-margin': {                                                                                        
+    description: 'Calculate net profit margin and markup percentage for your business. Gross vs net profit comparisons ideal for wholesalers, retailers and startups in Pakistan. Instant results.',             
+      { question: 'How to calculate profit margin for a business in Pakistanâ”', answer: 'Profit Margin = (Revenue - Cost) / Revenue Ã                                                                                                                                     — 100). Our calculator instantly shows both margin and markup.' }       
+  },                       
+    title: '1 Murabba to Kanal (200 Kanal) | Land Unit Converter Pakistan',                                                                                                                                                                                   
+    faqs: [                                                           €                                                                                                                                                                                         
+      { question: 'How many Marla in 1 Kanalâ”', answer: '1 Kanal = 20 Marla in Pakistan. 1 Marla = 272.25 sq ft. So 1 Kanal = 5,445 sq ft. These are the standard land measurement units used across Punjab and KPK.' },                                            €                                                                                                                                                                                            
+    ]      
+  'bmi': {                                                                                       
+    description: 'Calculate your BMI instantly. Check if you are underweight, normal, or overweight with Pakistan-specific health tips and weight management advice. 100% free.',             
+      { question: 'How to calculate BMI in Pakistanâ”', answer: 'BMI = Weight (kg) / Height (mÂ                                                                             — 1.75) = 22.86 (Normal weight). BMI categories: Under 18.5 = Underweight, 18.5-24.9 = Normal, 25-29.9 = Overweight, 30+ = Obese.' }       
+  },                  
+    title: 'CGPA Calculator Pakistan 2026 - Free GPA Calculator (HEC Standards)',                                                                                                                                                                                         
+    faqs: [                                                    €                                                                                                                                                                                                                                               
+      { question: 'How to calculate CGPA from SGPA in Pakistanâ”', answer: 'CGPA = Sum of (SGPA Ã                                                                                                                                                                      —18 + 3.7Ã                          
+    ]      
+  'grade-calc': {                                                                                         
+    description: 'Find your academic grade from marks obtained. Matric, Inter, O/A Level grading systems and Pakistan board results grade calculator. Instant and free.',             
+      { question: 'How to check grade from marks in Pakistanâ”', answer: 'In Pakistan\'s Matric/SSC system: A1 = 80%+, A = 70-79%, B = 60-69%, C = 50-59%, D = 40-49%, F = below 40%. For FSc/HSSC: A+ = 85%+, A = 80-84%, B = 70-79%, C = 60-69%. Our calculator supports all major grading systems.' }       
+  },                        
+    title: 'Marks Percentage Calculator | Find SSC/HSSC Grades Fast',                                                                                                                                                                                       
+    faqs: [                                                                 €                                                                                                                                           — 100. For example, if you got 935 marks, your percentage is (935/1100) Ã                 
+      { question: 'What is the percentage of 850 out of 1100 marksâ”', answer: '850 out of 1100 marks percentage = (850 / 1100) Ã                                                                                   
+      { question: 'How to calculate 9th and 10th class result percentageâ”', answer: 'Add your 9th and 10th class marks to get the total obtained marks (usually out of 1100 or 1200). Use our calculator to enter these values and get your final Matric result percentage instantly.' },                                                               €                                                                   — 100 = 50%.' },                                                                        €                                                                                                                                                                                      
+    ],              
+      name: "How to Calculate Marks Percentage for Pakistan Board Exams (Matric/Inter)",                                                                                                                                    
+      steps: [                                                                                                                  
+        { name: "Enter Maximum Marks", text: "Enter the total marks possible (usually 1100 for Matric/Inter or 1200)." },                                                                                                                             
+        { name: "See Your Grade", text: "The calculator will also show your grade classification based on Pakistan's board criteria." }         
+    }      
+  'electricity-bill': {                                                                                        
+    description: 'Calculate electricity bill in Pakistan instantly. Use our WAPDA unit calculator, check IESCO/FESCO bill online, convert watts to units, and find the latest per unit rate.',             
+      { question: 'How to calculate electricity bill in Pakistanâ”', answer: 'To calculate your bill of electricity in Pakistan, use the WAPDA unit calculator. Simply enter your consumed units. The tool evaluates the electricity bill calculation formula in Pakistan by applying the appropriate NEPRA slab, adding the Fuel Price Adjustment (FPA), 18% GST, and other surcharges.' },                                                                                           €                                                                                                                                                                                                                                                                                                                                                            
+      { question: 'How do I use a Watts to Units calculatorâ”', answer: 'The watt to unit formula is simple: Units (kWh) = (Watts Ã             — Days) / 1000. For example, a 1000-watt AC running for 8 hours a day for 30 days will consume 240 units.' },                                                                                    €                                                                                                                                                                                                                                                                                                                                                                   
+    ],              
+      name: "How to Calculate Bill of Electricity in Pakistan",                                                                                                                         
+      steps: [                                                                                                                                                                                               
+        { name: "Select Your Connection Type", text: "Choose between a Residential or Commercial WAPDA connection, as the commercial unit price is different." },                                                                                                                     
+        { name: "Review the Bill Breakdown", text: "The calculator instantly applies the exact WAPDA per unit rate, FPA, and GST to give you your final estimated bill amount." }         
+    }     
+};  
+                               
+  const [isUrdu, setIsUrdu] = useState(false);                                   
+  const location = useLocation();  
+  const handleNavigate = (view: View) => {                                                                                 
+    if (view === 'home') navigate('/');                                                            
+                                
+  };  
+  const handleSelectTool = (calc: Calculator) => {                              
+  };  
+  return (             
+      isUrdu={isUrdu}                             
+      onNavigate={handleNavigate}       
+      <ScrollToTop />                
+        <Route path="/" element={              
+            <SEOHead                                                                     
+              description="Free financial calculators for Income Tax (FBR 2025), Zakat, Loan EMI, and Business profit margins. Tailored for Pakistan."                                
+            />                                                                                                        
+          </>              
+                                            
+          <>                      
+              title="All Financial Tools - PakCalc"                                                                                                          
+              canonicalUrl="/all-tools"                
+            <ToolsDirectory isUrdu={isUrdu} onSelect={handleSelectTool} />               
+        } />  
+        {/* Info Pages */}                                        
+          <>                                                                                                                                                                                                                                                                                                                 
+            <Helmet>                                                   
+                {JSON.stringify({                                                     
+                  "@type": "FAQPage",                                   
+                    {                                            
+                      "name": "What are the FBR income tax slabs for 2025-26 in Pakistanâ”",                                           
+                        "@type": "Answer",                                                                                                              €                                                                                                                                                         
+                      }                       
+                  ]                     
+              </script>                       
+            <FBRSlabsPage isUrdu={isUrdu} />               
+        } />  
+        <Route path="/electricity-bill" element={                        
+            id="electricity-bill"                             
+            component={<ElectricityBillTool isUrdu={isUrdu} />}                                             
+          />              
+                                             
+          <>                                                                                                                                 €                                                                                                                                                           
+            <Helmet>                                                   
+                {JSON.stringify({                                                     
+                  "@type": "FAQPage",                                   
+                    {                                            
+                      "name": "What is the SBP Zakat Nisab for 2026 in Pakistanâ”",                                           
+                        "@type": "Answer",                                                                                                                                                                                                                                                                     
+                      }                       
+                  ]                     
+              </script>                       
+            <ZakatInfoPage isUrdu={isUrdu} />               
+        } />                                                                                                                                                                                      
+        <Route path="/privacy" element={<><SEOHead title="Privacy Policy" description="Privacy Policy for PakCalc." canonicalUrl="/privacy" /><PrivacyPage /></>} />                                                                                                                                                                    
+        <Route path="/disclaimer" element={<><SEOHead title="Disclaimer" description="Financial disclaimer for PakCalc." canonicalUrl="/disclaimer" /><DisclaimerPage /></>} />  
+        {/* Individual Tools */}                                             
+          <ToolWrapper                             
+            component={<IncomeTaxTool isUrdu={isUrdu} />}                             
+            handleNavigate={handleNavigate}              
+        } />                                        
+          <ToolWrapper                        
+            component={<ZakatTool isUrdu={isUrdu} />}                             
+            handleNavigate={handleNavigate}              
+        } />                                           
+          <ToolWrapper                           
+            component={<EMITool />}                             
+            handleNavigate={handleNavigate}              
+        } />                                                
+          <ToolWrapper                                
+            component={<ProfitMarginTool />}                             
+            handleNavigate={handleNavigate}              
+        } />                                      
+          <ToolWrapper                      
+            component={<BMICalcTool />}                             
+            handleNavigate={handleNavigate}              
+        } />                                                    
+          <ToolWrapper                                    
+            component={<InvestmentReturnTool />}                             
+            handleNavigate={handleNavigate}              
+        } />                                                  
+          <ToolWrapper                                  
+            component={<RetirementTool />}                             
+            handleNavigate={handleNavigate}              
+        } />                                                  
+          <ToolWrapper                                  
+            component={<RealEstateROITool />}                             
+            handleNavigate={handleNavigate}              
+        } />                                                 
+          <ToolWrapper                                 
+            component={<PFTool />}                             
+            handleNavigate={handleNavigate}              
+        } />                                           
+          <ToolWrapper                           
+            component={<GratuityTool />}                             
+            handleNavigate={handleNavigate}              
+        } />                                                 
+          <ToolWrapper                                 
+            component={<FreelancerTool isUrdu={isUrdu} />}                             
+            handleNavigate={handleNavigate}              
+        } />                                                 
+          <ToolWrapper                                 
+            component={<UnitConverterTool />}                             
+            handleNavigate={handleNavigate}              
+        } />                                            
+          <ToolWrapper                            
+            component={<CGPACalculatorTool />}                             
+            handleNavigate={handleNavigate}              
+        } />                                             
+          <ToolWrapper                             
+            component={<GradeCalculatorTool />}                             
+            handleNavigate={handleNavigate}              
+        } />                                                  
+          <ToolWrapper                                  
+            component={<MarkPercentageTool />}                             
+            handleNavigate={handleNavigate}              
+        } />  
+        {/* Fallback */}                                   
+          <div className="flex flex-col items-center justify-center min-h-[50vh]">                                                                                              
+            <button onClick={() => navigate('/')} className="text-emerald-600 font-bold hover:underline">Go Home</button>                  
+        } />                 
+    </Layout>      
+};  
+// Helper component to wrap tools with common layout and SEO                                                                                                                                                        
+  const navigate = useNavigate();                                                    
+  const seoMeta = TOOL_SEO_META[id];  
+  if (!tool) return null;  
+  return (                                                                                                                    
+      <SEOHead                       €                                     
+        description={seoMetaâ”.description || tool.description}                                 
+      />  
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">                                            
+          <Breadcrumbs />                                                     
+            <div className="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center text-3xl">                           
+            </div>                   
+              <h1 className={`text-4xl font-black text-slate-900 tracking-tight ${isUrdu â” 'urdu' : ''}`}>                         €                             
+              </h1>                                                                                         
+                        
+                <script type="application/ld+json">                                     
+                    "@context": "https://schema.org",                                                     
+                    "name": tool.name,                                                                  
+                    "operatingSystem": "Any",                                                          
+                    "offers": {                                         
+                      "price": "0",                                              
+                    },                                           €                                   
+                    "aggregateRating": {                                                   
+                      "ratingValue": "4.8",                                             
+                      "bestRating": "5"                       
+                  })}                           
+                {seoMetaâ”.faqs && seoMeta.faqs.length > 0 && (                                                       
+                    {JSON.stringify({                                                         
+                      "@type": "FAQPage",                                                                
+                        "@type": "Question",                                               
+                        "acceptedAnswer": {                                              
+                          "text": faq.answer                           
+                      }))                         
+                  </script>                    
+                {seoMetaâ”.howTo && (                                                       
+                    {JSON.stringify({                                                         
+                      "@type": "HowTo",                                                   
+                      "description": seoMeta.howTo.description,                                                                           
+                        "@type": "HowToStep",                                                
+                        "name": step.name,                                           
+                      }))                         
+                  </script>                    
+              </Helmet>                    
+          </div>                
+      </div>  
+      <div className="relative mb-8">                     
+      </div>  
+      <ToolArticle id={id} isUrdu={isUrdu} />  
+      <RelatedTools toolIds={getRelatedTools(id)} />  
+      {/* AI Banner */}                                                                                                                 
+        <div className="absolute right-0 top-0 w-64 h-64 bg-emerald-600 rounded-full blur-[100px] opacity-20 -mr-32 -mt-32"></div>                                                                                            
+          <div>                                                                                                                                                                                                                 
+            <h4 className="text-3xl font-black mb-4 leading-tight">Need expert financial adviceâ”</h4>                                                                                                                                                                                          
+          </div>                                              
+            <div className="bg-white/10 p-6 rounded-3xl border border-white/10 backdrop-blur-md w-full max-w-sm">                                                 
+                <div className="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center shrink-0 text-xl">AI</div>                                                                                                                                                             
+              </div>                    
+          </div>                
+      </div>            
+  );    
+                     

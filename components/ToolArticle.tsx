@@ -1,1261 +1,625 @@
-import React from 'react';
-
-interface ToolArticleProps {
-    id: string;
-    isUrdu: boolean;
-}
-
-export const ToolArticle: React.FC<ToolArticleProps> = ({ id, isUrdu }) => {
-    // We use a switch statement to render the highly-optimized SEO article per tool
-    switch (id) {
-        case 'income-tax':
-            return <IncomeTaxArticle isUrdu={isUrdu} />;
-        case 'zakat':
-            return <ZakatArticle isUrdu={isUrdu} />;
-        case 'freelancer-tax':
-            return <FreelancerTaxArticle isUrdu={isUrdu} />;
-        case 'investment-return':
-            return <InvestmentReturnArticle isUrdu={isUrdu} />;
-        case 'retirement-plan':
-            return <RetirementPlanArticle isUrdu={isUrdu} />;
-        case 'real-estate-roi':
-            return <RealEstateROIArticle isUrdu={isUrdu} />;
-        case 'provident-fund':
-            return <ProvidentFundArticle isUrdu={isUrdu} />;
-        case 'gratuity':
-            return <GratuityArticle isUrdu={isUrdu} />;
-        case 'loan-emi':
-            return <LoanEMIArticle isUrdu={isUrdu} />;
-        case 'profit-margin':
-            return <ProfitMarginArticle isUrdu={isUrdu} />;
-        case 'unit-converter':
-            return <UnitConverterArticle isUrdu={isUrdu} />;
-        case 'bmi':
-            return <BMIArticle isUrdu={isUrdu} />;
-        case 'cgpa-calc':
-            return <CGPAArticle isUrdu={isUrdu} />;
-        case 'grade-calc':
-            return <GradeArticle isUrdu={isUrdu} />;
-        case 'mark-percentage':
-            return <MarkPercentageArticle isUrdu={isUrdu} />;
-        default:
-            return null;
-    }
-};
-
-const ArticleWrapper = ({ children }: { children: React.ReactNode }) => (
-    <article className="w-full mt-12 p-8 md:p-12 bg-white/70 backdrop-blur-xl border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[2.5rem] relative overflow-hidden group">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 rounded-full blur-[80px] -mr-32 -mt-32 transition-opacity group-hover:opacity-100 opacity-50 z-0"></div>
-        <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-500/5 rounded-full blur-[60px] -ml-24 -mb-24 transition-opacity group-hover:opacity-100 opacity-50 z-0"></div>
-        <div className="relative z-10 prose prose-lg prose-slate max-w-none prose-headings:font-black prose-headings:tracking-tight prose-h2:text-3xl prose-h2:mb-6 prose-h2:text-slate-900 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-p:text-slate-600 prose-p:leading-relaxed prose-li:text-slate-600 prose-strong:text-emerald-700 prose-a:text-emerald-600 hover:prose-a:text-emerald-700">
-            {children}
-        </div>
-    </article>
-);
-
-const HighlightBox = ({ title, children, icon, color = 'emerald' }: any) => {
-    const colorMap: any = {
-        emerald: 'bg-emerald-50 border-emerald-100 text-emerald-900',
-        blue: 'bg-blue-50 border-blue-100 text-blue-900',
-        amber: 'bg-amber-50 border-amber-100 text-amber-900',
-        rose: 'bg-rose-50 border-rose-100 text-rose-900',
-        slate: 'bg-slate-50 border-slate-100 text-slate-900'
-    };
-    return (
-        <div className={`p-6 rounded-3xl border mb-8 ${colorMap[color]} shadow-sm`}>
-            {title && <h4 className="font-bold text-lg mb-3 flex items-center gap-2"><span>{icon}</span> {title}</h4>}
-            <div className="text-sm leading-relaxed opacity-90">{children}</div>
-        </div>
-    );
-};
-
-const StepGrid = ({ steps }: { steps: { title: string, desc: string }[] }) => (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8 not-prose">
-        {steps.map((step, i) => (
-            <div key={i} className="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm relative overflow-hidden group hover:border-emerald-200 transition-colors">
-                <div className="absolute top-0 right-0 w-16 h-16 bg-slate-50 rounded-bl-full flex items-start justify-end p-4 text-2xl font-black text-slate-200 group-hover:bg-emerald-50 group-hover:text-emerald-200 transition-colors">
-                    {i + 1}
-                </div>
-                <h4 className="font-bold text-slate-900 mb-2">{step.title}</h4>
-                <p className="text-sm text-slate-500 m-0">{step.desc}</p>
-            </div>
-        ))}
-    </div>
-);
-
-const StyledTable = ({ headers, rows }: { headers: string[], rows: (string | React.ReactNode)[][] }) => (
-    <div className="overflow-x-auto my-8 bg-white rounded-3xl border border-slate-100 shadow-sm not-prose">
-        <table className="w-full text-sm text-left m-0">
-            <thead className="bg-slate-50 border-b border-slate-100 text-slate-500">
-                <tr>
-                    {headers.map((h, i) => <th key={i} className="p-4 font-bold">{h}</th>)}
-                </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-50">
-                {rows.map((row, i) => (
-                    <tr key={i} className="hover:bg-slate-50/50 transition-colors">
-                        {row.map((cell, j) => <td key={j} className="p-4 text-slate-700">{cell}</td>)}
-                    </tr>
-                ))}
-            </tbody>
-        </table>
-    </div>
-);
-
-const IncomeTaxArticle = ({ isUrdu }: { isUrdu: boolean }) => {
-    if (isUrdu) {
-        return (
-            <ArticleWrapper>
-                <h2>Ø§Ù†Ú©Ù… Ù¹ÛŒÚ©Ø³ Ú©ÛŒÙ„Ú©ÙˆÙ„ÛŒÙ¹Ø± 2026: ØªØ§Ø²Û ØªØ±ÛŒÙ† Ø§ÛŒÙ Ø¨ÛŒ Ø¢Ø± Ø³Ù„ÛŒØ¨Ø³ Ú©Û’ Ù…Ø·Ø§Ø¨Ù‚</h2>
-                <p>
-                    Ù¾Ø§Ú©Ø³ØªØ§Ù† Ù…ÛŒÚº ØªÙ†Ø®ÙˆØ§Û Ø¯Ø§Ø± Ø§ÙˆØ± Ú©Ø§Ø±ÙˆØ¨Ø§Ø±ÛŒ Ø§ÙØ±Ø§Ø¯ Ú©Û’ Ù„ÛŒÛ’ Ø§Ù†Ú©Ù… Ù¹ÛŒÚ©Ø³ Ú©Ø§ Ø­Ø³Ø§Ø¨ Ú©ØªØ§Ø¨ Ú©Ø±Ù†Ø§ Ø§ÛŒÚ© Ù¾ÛŒÚ†ÛŒØ¯Û Ø¹Ù…Ù„ ÛÙˆ Ø³Ú©ØªØ§ ÛÛ’Û”
-                    ÛÙ…Ø§Ø±Ø§ <strong>Ø§Ù†Ú©Ù… Ù¹ÛŒÚ©Ø³ Ú©ÛŒÙ„Ú©ÙˆÙ„ÛŒÙ¹Ø± 2025-2026</strong> Ø¢Ù¾ Ú©Ùˆ Ø§Ø³ Ù¾Ø±ÛŒØ´Ø§Ù†ÛŒ Ø³Û’ Ø¨Ú†Ø§ØªØ§ ÛÛ’Û”
-                    Ø§ÛŒÙ Ø¨ÛŒ Ø¢Ø± (ÙÛŒÚˆØ±Ù„ Ø¨ÙˆØ±Úˆ Ø¢Ù Ø±ÛŒÙˆÙ†ÛŒÙˆ) Ú©Û’ ØªØ§Ø²Û ØªØ±ÛŒÙ† Ù‚ÙˆØ§Ù†ÛŒÙ† Ø§ÙˆØ± Ù¹ÛŒÚ©Ø³ Ø³Ù„ÛŒØ¨Ø³ Ú©Û’ Ø¹ÛŒÙ† Ù…Ø·Ø§Ø¨Ù‚ØŒ
-                    ÛŒÛ Ù¹ÙˆÙ„ Ú†Ù†Ø¯ Ø³ÛŒÚ©Ù†ÚˆØ² Ù…ÛŒÚº Ø¢Ù¾ Ú©ÛŒ Ù…Ø§ÛØ§Ù†Û Ø§ÙˆØ± Ø³Ø§Ù„Ø§Ù†Û Ú©Ù¹ÙˆØªÛŒ Ú©Ùˆ Ø¸Ø§ÛØ± Ú©Ø± Ø¯ÛŒØªØ§ ÛÛ’Û”
-                </p>
-                <p>
-                    Ú†Ø§ÛÛ’ Ø¢Ù¾ ØªÙ†Ø®ÙˆØ§Û Ø¯Ø§Ø± Ø·Ø¨Ù‚Û’ (Salaried) Ø³Û’ ØªØ¹Ù„Ù‚ Ø±Ú©Ú¾ØªÛ’ ÛÙˆÚº ÛŒØ§ Ø¢Ù¾ Ú©Ø§ Ø§Ù¾Ù†Ø§ Ú©Ø§Ø±ÙˆØ¨Ø§Ø± (Non-Salaried) ÛÙˆØŒ
-                    Ø¢Ù¾ Ú©Ùˆ ØµØ±Ù Ø§Ù¾Ù†ÛŒ Ù…Ø§ÛØ§Ù†Û Ø¢Ù…Ø¯Ù†ÛŒ Ø¯Ø±Ø¬ Ú©Ø±Ù†ÛŒ ÛÛ’Û” Ú©ÛŒÙ„Ú©ÙˆÙ„ÛŒÙ¹Ø± Ø®ÙˆØ¯ Ø¨Ø®ÙˆØ¯ Ù¹ÛŒÚ©Ø³ Ú©ÛŒ Ú†Ú¾ÙˆÙ¹ Ø§ÙˆØ± Ù„Ø§Ú¯Ùˆ Ø³Ù„ÛŒØ¨ Ú©Ùˆ Ù…Ø¯Ù†Ø¸Ø± Ø±Ú©Ú¾ØªÛ’ ÛÙˆØ¦Û’ Ø¯Ø±Ø³Øª Ù†ØªÛŒØ¬Û ÙØ±Ø§ÛÙ… Ú©Ø±Û’ Ú¯Ø§Û”
-                </p>
-                <h3>ÛŒÛ Ú©ÛŒÙ„Ú©ÙˆÙ„ÛŒÙ¹Ø± Ú©ÛŒØ³Û’ Ú©Ø§Ù… Ú©Ø±ØªØ§ ÛÛ’ØŸ</h3>
-                <p>
-                    ÛÙ… Ù†Û’ Ø§Ø³ Ù¹ÙˆÙ„ Ú©Ùˆ Ø§Ù†ØªÛØ§Ø¦ÛŒ Ø³Ø§Ø¯Û Ø§ÙˆØ± Ø§Ø³ØªØ¹Ù…Ø§Ù„ Ù…ÛŒÚº Ø¢Ø³Ø§Ù† Ø¨Ù†Ø§ÛŒØ§ ÛÛ’Û”
-                    Ø¢Ù¾ Ø§Ù¾Ù†ÛŒ Ù…Ø§ÛØ§Ù†Û Ø¢Ù…Ø¯Ù†ÛŒ Ø¯Ø±Ø¬ Ú©Ø±ØªÛ’ ÛÛŒÚºØŒ Ø§ÙˆØ± ÛÙ…Ø§Ø±Ø§ Ø¬Ø¯ÛŒØ¯ Ø§Ù„Ú¯ÙˆØ±ØªÚ¾Ù… Ø¯Ø±Ø¬ Ø°ÛŒÙ„ Ø§Ù‚Ø¯Ø§Ù…Ø§Øª Ú©Ø±ØªØ§ ÛÛ’:
-                </p>
-                <ul>
-                    <li><strong>Ø¢Ù…Ø¯Ù†ÛŒ Ú©Ø§ Ø­Ø³Ø§Ø¨:</strong> Ø¢Ù¾ Ú©ÛŒ Ù…Ø§ÛØ§Ù†Û Ø¢Ù…Ø¯Ù†ÛŒ Ú©Ùˆ Ø³Ø§Ù„Ø§Ù†Û Ø¢Ù…Ø¯Ù†ÛŒ Ù…ÛŒÚº ØªØ¨Ø¯ÛŒÙ„ Ú©Ø± Ú©Û’ Ù…Ú©Ù…Ù„ Ø¬Ø§Ø¦Ø²Û Ù„ÛŒØªØ§ ÛÛ’Û”</li>
-                    <li><strong>Ù¹ÛŒÚ©Ø³ Ø³Ù„ÛŒØ¨ Ú©Ø§ Ø§Ø·Ù„Ø§Ù‚:</strong> Ø§ÛŒÙ Ø¨ÛŒ Ø¢Ø± Ú©Û’ Ø³Ø§Ù„ 2025-26 Ú©Û’ Ú†Ú¾ Ù…Ø®ØªÙ„Ù Ù¹ÛŒÚ©Ø³ Ø³Ù„ÛŒØ¨Ø³ Ù…ÛŒÚº Ø¢Ù¾ Ú©ÛŒ Ø¢Ù…Ø¯Ù†ÛŒ Ú©Û’ Ù…Ø·Ø§Ø¨Ù‚ Ø±ÛŒÙ¹ Ù„Ú¯Ø§ØªØ§ ÛÛ’Û”</li>
-                    <li><strong>Ø§Ø³ØªØ«Ù†ÛŒÙ° (Exemptions):</strong> Ø­Ú©ÙˆÙ…Øª Ú©ÛŒ Ø·Ø±Ù Ø³Û’ Ø¯ÛŒ Ú¯Ø¦ÛŒ 600,000 Ø±ÙˆÙ¾Û’ Ø³Ø§Ù„Ø§Ù†Û Ú©ÛŒ Ø§Ø¨ØªØ¯Ø§Ø¦ÛŒ Ú†Ú¾ÙˆÙ¹ Ù…Ù†ÛØ§ Ú©Ø± Ú©Û’ Ù‚Ø§Ø¨Ù„Ù Ù¹ÛŒÚ©Ø³ Ø¢Ù…Ø¯Ù†ÛŒ Ù†Ú©Ø§Ù„ØªØ§ ÛÛ’Û”</li>
-                </ul>
-                <h3>Ø³Ø§Ù„ 2025-26 Ú©Û’ Ù„ÛŒÛ’ Ø§ÛŒÙ Ø¨ÛŒ Ø¢Ø± Ú©Û’ Ù†Ø¦Û’ Ø³Ù„ÛŒØ¨Ø³</h3>
-                <p>
-                    Ø§ÛŒÙ Ø¨ÛŒ Ø¢Ø± ÛØ± Ø³Ø§Ù„ ÙÙ†Ø§Ù†Ø³ Ø¨Ù„ Ú©Û’ Ø°Ø±ÛŒØ¹Û’ Ù†Ø¦Û’ Ù¹ÛŒÚ©Ø³ Ø³Ù„ÛŒØ¨ Ù…ØªØ¹Ø§Ø±Ù Ú©Ø±ÙˆØ§ØªØ§ ÛÛ’Û”
-                    ØªØ§Ø²Û ØªØ±ÛŒÙ† Ù‚ÙˆØ§Ù†ÛŒÙ† Ú©Û’ ØªØ­ØªØŒ Ø§Ú¯Ø± Ø¢Ù¾ Ú©ÛŒ Ø³Ø§Ù„Ø§Ù†Û Ø¢Ù…Ø¯Ù†ÛŒ 6 Ù„Ø§Ú©Ú¾ Ø±ÙˆÙ¾Û’ (ÛŒØ¹Ù†ÛŒ 50 ÛØ²Ø§Ø± Ø±ÙˆÙ¾Û’ Ù…Ø§ÛØ§Ù†Û) ØªÚ© ÛÛ’ØŒ ØªÙˆ Ø¢Ù¾ Ú©Ùˆ Ú©ÙˆØ¦ÛŒ Ù¹ÛŒÚ©Ø³ Ø§Ø¯Ø§ Ù†ÛÛŒÚº Ú©Ø±Ù†Ø§Û”
-                    Ø§Ø³ Ø³Û’ Ø²ÛŒØ§Ø¯Û Ø¢Ù…Ø¯Ù†ÛŒ Ù¾Ø± 5 ÙÛŒØµØ¯ Ø³Û’ Ù„Û’ Ú©Ø± 35 ÙÛŒØµØ¯ ØªÚ© Ù¹ÛŒÚ©Ø³ Ú©ÛŒ Ø´Ø±Ø­ Ù„Ø§Ú¯Ùˆ ÛÙˆØªÛŒ ÛÛ’Û”
-                    ÛÙ…Ø§Ø±Ø§ Ù†Ø¸Ø§Ù… Ø±ÙˆØ²Ø§Ù†Û Ú©ÛŒ Ø¨Ù†ÛŒØ§Ø¯ Ù¾Ø± Ø§Ù¾ ÚˆÛŒÙ¹ ÛÙˆØªØ§ ÛÛ’ØŒ Ù„ÛÙ°Ø°Ø§ Ø¢Ù¾ Ú©Ùˆ Ú©ÙˆØ¦ÛŒ Ù¾Ø±Ø§Ù†Ø§ Ø§ÙˆØ± ØºÙ„Ø· Ù†ØªÛŒØ¬Û Ù†ÛÛŒÚº Ù…Ù„Û’ Ú¯Ø§Û”
-                </p>
-                <h3>Ø§Ù†Ú©Ù… Ù¹ÛŒÚ©Ø³ Ú©ÛŒÙ„Ú©ÙˆÙ„ÛŒÙ¹Ø± Ø§Ø³ØªØ¹Ù…Ø§Ù„ Ú©Ø±Ù†Û’ Ú©Û’ 5 Ø¨Ú‘Û’ ÙÙˆØ§Ø¦Ø¯</h3>
-                <ol>
-                    <li><strong>ÙˆÙ‚Øª Ú©ÛŒ Ø¨Ú†Øª:</strong> Ø·ÙˆÛŒÙ„ Ú©Ø§ØºØ°ÛŒ Ø­Ø³Ø§Ø¨ Ú©ØªØ§Ø¨ Ø³Û’ Ú†Ú¾Ù¹Ú©Ø§Ø±Ø§Û”</li>
-                    <li><strong>Ø³Ùˆ ÙÛŒØµØ¯ Ø¯Ø±Ø³ØªÚ¯ÛŒ:</strong> Ø§Ù†Ø³Ø§Ù†ÛŒ ØºÙ„Ø·ÛŒ Ú©Ø§ Ú©ÙˆØ¦ÛŒ Ø§Ù…Ú©Ø§Ù† Ù†ÛÛŒÚºÛ”</li>
-                    <li><strong>Ø¨Ø¬Ù¹ Ú©ÛŒ Ù…Ù†ØµÙˆØ¨Û Ø¨Ù†Ø¯ÛŒ:</strong> Ù¹ÛŒÚ©Ø³ Ú©Ù¹ÙˆØªÛŒ Ú©Ø§ Ù¾ÛÙ„Û’ Ø³Û’ Ø¹Ù„Ù… ÛÙˆÙ†Û’ Ø³Û’ Ø¢Ù¾ Ø§Ù¾Ù†Û’ Ù…Ø§ÛØ§Ù†Û Ø§Ø®Ø±Ø§Ø¬Ø§Øª Ø¨ÛØªØ± Ù¾Ù„Ø§Ù† Ú©Ø± Ø³Ú©ØªÛ’ ÛÛŒÚºÛ”</li>
-                    <li><strong>Ù…ÙˆØ¨Ø§Ø¦Ù„ ÙØ±ÛŒÙ†ÚˆÙ„ÛŒ:</strong> Ø§Ù¾Ù†Û’ ÙÙˆÙ† Ù¾Ø± Ú©ÛÛŒÚº Ø¨Ú¾ÛŒ Ø§Ø³ØªØ¹Ù…Ø§Ù„ Ú©Ø±ÛŒÚºÛ”</li>
-                    <li><strong>Ø¨Ø§Ù„Ú©Ù„ Ù…ÙØª:</strong> Ø§Ø³ Ø³Ø±ÙˆØ³ Ú©Ø§ Ú©ÙˆØ¦ÛŒ Ù¾ÙˆØ´ÛŒØ¯Û Ú†Ø§Ø±Ø¬ Ù†ÛÛŒÚº ÛÛ’Û”</li>
-                </ol>
-                <p>
-                    Ø¢Ø¬ ÛÛŒ Ø§Ù¾Ù†ÛŒ Ø¢Ù…Ø¯Ù†ÛŒ Ú©ÛŒ Ø¯Ø±Ø³ØªÚ¯ÛŒ Ú©Û’ Ø³Ø§ØªÚ¾ Ø¬Ø§Ù†Ú† Ù¾Ú‘ØªØ§Ù„ Ú©Ø±ÛŒÚº Ø§ÙˆØ± Ø§ÛŒÙ Ø¨ÛŒ Ø¢Ø± Ú©Û’ Ù‚ÙˆØ§Ø¹Ø¯ Ú©Û’ Ù…Ø·Ø§Ø¨Ù‚ Ø§Ù¾Ù†Û’ Ù¹ÛŒÚ©Ø³ Ú©ÛŒ Ø´ÙØ§Ù Ø§Ø¯Ø§Ø¦ÛŒÚ¯ÛŒ Ú©Ùˆ ÛŒÙ‚ÛŒÙ†ÛŒ Ø¨Ù†Ø§Ø¦ÛŒÚºÛ”
-                </p>
-            </ArticleWrapper>
-        );
-    }
-
-    return (
-        <ArticleWrapper>
-            <h2>Income Tax Calculator Pakistan 2026: Accurate FBR Tax Slabs</h2>
-            <p>
-                Navigating the complex landscape of taxation in Pakistan can daunt even the most experienced professionals. You need a reliable, fast, and 100% accurate tool to calculate your exact tax liabilities. Our <strong>Income Tax Calculator Pakistan 2025-2026</strong> empowers salaried and non-salaried individuals to determine their monthly and annual income tax instantly. We base all calculations directly on the latest Federal Board of Revenue (FBR) finance acts and official tax slabs.
-            </p>
-
-            <HighlightBox title="Zero Manual Math Required" icon="âœ…" color="emerald">
-                By inputting your monthly salary, our sophisticated algorithm instantly breaks down your take-home pay, monthly tax deduction, and annual tax liability. Our system automatically processes the 600,000 PKR basic exemption limit and applies the progressive marginal tax rates.
-            </HighlightBox>
-
-            <h3>How Our Income Tax Calculator Maximizes Your Financial Planning</h3>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8 not-prose">
-                <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 flex items-start gap-4">
-                    <span className="text-2xl">ğŸ“Š</span>
-                    <div><strong className="block text-slate-900 mb-1">Real-Time Projections</strong><span className="text-sm text-slate-600">Instantly view how much the government deducts from your paycheck.</span></div>
-                </div>
-                <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 flex items-start gap-4">
-                    <span className="text-2xl">ğŸ”„</span>
-                    <div><strong className="block text-slate-900 mb-1">Updated FBR Slabs</strong><span className="text-sm text-slate-600">We continually update our database whenever the FBR announces new tax slab adjustments.</span></div>
-                </div>
-                <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 flex items-start gap-4">
-                    <span className="text-2xl">ğŸ“±</span>
-                    <div><strong className="block text-slate-900 mb-1">Mobile-Optimized</strong><span className="text-sm text-slate-600">Calculate your taxes on the go with zero lag.</span></div>
-                </div>
-                <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 flex items-start gap-4">
-                    <span className="text-2xl">ğŸ“ˆ</span>
-                    <div><strong className="block text-slate-900 mb-1">Interactive Vitals</strong><span className="text-sm text-slate-600">Understand your gross versus net income instantly.</span></div>
-                </div>
-            </div>
-
-            <h3>Step-by-Step Guide to Calculating Your Income Tax</h3>
-            <StepGrid steps={[
-                { title: "Enter Gross Salary", desc: "Input the total amount you earn before any deductions include basic salary, allowances, and bonuses." },
-                { title: "Review Projection", desc: "The calculator automatically scales your monthly income to an annual figure to match FBR tax brackets." },
-                { title: "Analyze Breakdown", desc: "Observe the exact tax slab you fall into and see the precise percentage applied." },
-                { title: "Check Net Salary", desc: "View the exact amount deposited into your bank account each month." }
-            ]} />
-
-            <h3>Latest FBR Income Tax Rules for Salaried Persons (2025-2026)</h3>
-            <p>
-                The Federal Board of Revenue enforces specific progressive tax rates for the fiscal year 2025-26. If your annual salary falls below PKR 600,000 (PKR 50,000 monthly), you remain entirely exempt from income tax. Active filers must submit their annual tax returns to claim this legitimacy.
-            </p>
-
-            <StyledTable
-                headers={['Taxable Income (PKR)', 'Rate of Tax']}
-                rows={[
-                    ['Up to 600,000', <span className="text-emerald-600 font-bold">0% (Exempt)</span>],
-                    ['600,001 to 1,200,000', '5% of the amount exceeding 600,000'],
-                    ['1,200,001 to 2,200,000', 'Rs. 30,000 + 15% of the amount exceeding 1,200,000'],
-                    ['2,200,001 to 3,200,000', 'Rs. 180,000 + 25% of the amount exceeding 2,200,000'],
-                    ['3,200,001 to 4,100,000', 'Rs. 430,000 + 30% of the amount exceeding 3,200,000'],
-                    ['Above 4,100,000', 'Rs. 700,000 + 35% of the amount exceeding 4,100,000']
-                ]}
-            />
-
-            <HighlightBox title="Why Trust Our FBR Tax Calculator?" icon="ğŸ›¡ï¸" color="blue">
-                Unlike outdated tools that fail to reflect mid-year mini-budgets, our platform synchronizes with the latest FBR directives. Corporate HR departments, independent freelancers, and salaried professionals across Pakistan rely on our calculator for its unparalleled precision. Stop relying on complicated Excel spreadsheetsâ€”secure your financial compliance today.
-            </HighlightBox>
-
-            <div className="mt-8 text-center">
-                <p className="text-slate-600 mb-4 font-medium">Want to calculate your exact monthly take-home pay?</p>
-                <button
-                    onClick={() => window.location.href = '/income-tax'}
-                    className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-full transition-all shadow-lg hover:shadow-emerald-200/50"
-                >
-                    Go to Salary Tax Calculator â†’
-                </button>
-            </div>
-        </ArticleWrapper>
-    );
-};
-
-const ZakatArticle = ({ isUrdu }: { isUrdu: boolean }) => {
-    if (isUrdu) {
-        return (
-            <ArticleWrapper>
-                <h2>Ø²Ú©ÙˆÙ°Ûƒ Ú©ÛŒÙ„Ú©ÙˆÙ„ÛŒÙ¹Ø± Ù¾Ø§Ú©Ø³ØªØ§Ù† 2026: Ø§Ø³Ù¹ÛŒÙ¹ Ø¨ÛŒÙ†Ú© Ù†ØµØ§Ø¨ (Ø³ÙˆÙ†Ø§ aur Ú†Ø§Ù†Ø¯ÛŒ)</h2>
-                <p>
-                    Ø²Ú©ÙˆÙ°Ûƒ Ø§Ø³Ù„Ø§Ù… Ú©Ø§ Ø§ÛŒÚ© Ø§ÛÙ… Ø±Ú©Ù† ÛÛ’ØŒ Ø¬Ø³ Ú©ÛŒ Ø¯Ø±Ø³Øª Ø§Ø¯Ø§Ø¦ÛŒÚ¯ÛŒ ÛØ± ØµØ§Ø­Ø¨Ù Ù†ØµØ§Ø¨ Ù…Ø³Ù„Ù…Ø§Ù† Ú©Ø§ Ø¨Ù†ÛŒØ§Ø¯ÛŒ Ø¯ÛŒÙ†ÛŒ ÙØ±ÛŒØ¶Û ÛÛ’Û” ÛÙ…Ø§Ø±Ø§ Ø¬Ø¯ÛŒØ¯ <strong>Ø²Ú©ÙˆÙ°Ûƒ Ú©ÛŒÙ„Ú©ÙˆÙ„ÛŒÙ¹Ø± Ù¾Ø§Ú©Ø³ØªØ§Ù† (2025-2026)</strong> Ø§Ø³Ù¹ÛŒÙ¹ Ø¨ÛŒÙ†Ú© Ø¢Ù Ù¾Ø§Ú©Ø³ØªØ§Ù† (SBP) Ú©Û’ Ù…Ù‚Ø±Ø± Ú©Ø±Ø¯Û Ù†ØµØ§Ø¨ Ú©Û’ Ù…Ø·Ø§Ø¨Ù‚ ÚˆÛŒØ²Ø§Ø¦Ù† Ú©ÛŒØ§ Ú¯ÛŒØ§ ÛÛ’Û” ÛŒÛ Ù¹ÙˆÙ„ Ù¾Ø§Ú©Ø³ØªØ§Ù† Ù…ÛŒÚº Ø³ÙˆÙ†Û’ Ø§ÙˆØ± Ú†Ø§Ù†Ø¯ÛŒ Ú©ÛŒ Ù…ÙˆØ¬ÙˆØ¯Û Ù…Ø§Ø±Ú©ÛŒÙ¹ Ù‚ÛŒÙ…ØªÙˆÚº (PKR) Ú©ÛŒ Ø¨Ù†ÛŒØ§Ø¯ Ù¾Ø± Ù†ØµØ§Ø¨ Ú©Ø§ Ø®ÙˆØ¯Ú©Ø§Ø± ØªØ¹ÛŒÙ† Ú©Ø±ØªØ§ ÛÛ’Û”
-                </p>
-
-                <HighlightBox title="Ø²Ú©ÙˆÙ°Ûƒ Ú©Û’ Ø­Ø³Ø§Ø¨ Ù…ÛŒÚº Ù…Ú©Ù…Ù„ Ø´ÙØ§ÙÛŒØª" icon="âœ¨" color="amber">
-                    ÛÙ… Ù†Û’ Ø§Ø³ Ø¬Ø¯ÛŒØ¯ Ø²Ú©ÙˆÙ°Ûƒ Ú©ÛŒÙ„Ú©ÙˆÙ„ÛŒÙ¹Ø± Ú©Ùˆ Ø§Ø³ Ø·Ø±Ø­ ØªÛŒØ§Ø± Ú©ÛŒØ§ ÛÛ’ Ú©Û Ø¢Ù¾ Ø¢Ø³Ø§Ù†ÛŒ Ø³Û’ Ø§Ù¾Ù†ÛŒ Ú©Ù„ Ù…Ø§Ù„ÛŒØª Ø¬Ø§Ù† Ø³Ú©ÛŒÚºÛ” Ø¢Ù¾ Ú©Ùˆ ØµØ±Ù Ø§Ù¾Ù†Û’ Ø§Ø«Ø§Ø«ÙˆÚº (Assets) Ú©ÛŒ ØªÙØµÛŒÙ„ Ø¯ÛŒÙ†ÛŒ ÛÛ’ØŒ Ø§ÙˆØ± ÛÙ…Ø§Ø±Ø§ Ø³Ø³Ù¹Ù… ÙÙˆØ±ÛŒ Ø·ÙˆØ± Ù¾Ø± Ø¢Ù¾ Ú©Û’ Ø°Ù…Û’ 2.5 ÙÛŒØµØ¯ Ù„Ø§Ú¯Ùˆ ÛÙˆÙ†Û’ ÙˆØ§Ù„ÛŒ Ø²Ú©ÙˆÙ°Ûƒ Ú©Ø§ Ø§ÛŒÚ© Ø±ÙˆÙ¾ÛŒÛ Ø¨Ú¾ÛŒ Ú†Ú¾ÙˆÚ‘Û’ Ø¨ØºÛŒØ± Ø¯Ø±Ø³Øª Ø­Ø³Ø§Ø¨ Ù„Ú¯Ø§ Ù„Û’ Ú¯Ø§Û”
-                </HighlightBox>
-
-                <h3>Ù‚Ø§Ø¨Ù„Ù Ø²Ú©ÙˆÙ°Ûƒ Ø§Ø«Ø§Ø«Û Ø¬Ø§Øª Ú©ÛŒ ØªÙØµÛŒÙ„</h3>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">
-                    <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
-                        <span className="text-4xl block mb-2">ğŸ’µ</span>
-                        <strong className="block text-slate-900">Ù†Ù‚Ø¯ Ø±Ù‚Ù… Ø§ÙˆØ± Ø¨ÛŒÙ†Ú© Ø¨ÛŒÙ„Ù†Ø³</strong>
-                        <span className="text-xs text-slate-500">Ø¨ÛŒÙ†Ú© Ø§Ú©Ø§Ø¤Ù†Ù¹Ø³ Ø§ÙˆØ± Ú¯Ú¾Ø± Ù…ÛŒÚº Ù…ÙˆØ¬ÙˆØ¯ ØªÙ…Ø§Ù… Ù†Ù‚Ø¯ Ø±Ù‚Ù…Û”</span>
-                    </div>
-                    <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
-                        <span className="text-4xl block mb-2">ğŸ…</span>
-                        <strong className="block text-slate-900">Ø³ÙˆÙ†Ø§ Ø§ÙˆØ± Ú†Ø§Ù†Ø¯ÛŒ</strong>
-                        <span className="text-xs text-slate-500">Ø³ÙˆÙ†Û’ Ø§ÙˆØ± Ú†Ø§Ù†Ø¯ÛŒ Ú©Û’ Ù…ÙˆØ¬ÙˆØ¯Û Ù…Ø§Ø±Ú©ÛŒÙ¹ Ø±ÛŒÙ¹ Ù¾Ø± Ù…Ø§Ù„ÛŒØªÛ”</span>
-                    </div>
-                    <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
-                        <span className="text-4xl block mb-2">ğŸ“ˆ</span>
-                        <strong className="block text-slate-900">Ø³Ø±Ù…Ø§ÛŒÛ Ú©Ø§Ø±ÛŒ Ø§ÙˆØ± Ø´ÛŒØ¦Ø±Ø²</strong>
-                        <span className="text-xs text-slate-500">Ù…ÛŒÙˆÚ†Ù„ ÙÙ†ÚˆØ²ØŒ Ø³Ù¹Ø§Ú©Ø³ØŒ Ø§ÙˆØ± Ù¾Ø±Ø§ÙˆÛŒÚˆÙ†Ù¹ ÙÙ†Úˆ Ù…Ø§Ù„ÛŒØªÛ”</span>
-                    </div>
-                    <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
-                        <span className="text-4xl block mb-2">ğŸ“¦</span>
-                        <strong className="block text-slate-900">Ú©Ø§Ø±ÙˆØ¨Ø§Ø±ÛŒ Ù…Ø§Ù„Ù ØªØ¬Ø§Ø±Øª</strong>
-                        <span className="text-xs text-slate-500">Ø¯Ú©Ø§Ù† ÛŒØ§ Ú¯ÙˆØ¯Ø§Ù… Ù…ÛŒÚº Ù…ÙˆØ¬ÙˆØ¯ Ø§Ø´ÛŒØ§Ø¡ Ú©ÛŒ Ù…Ø§Ø±Ú©ÛŒÙ¹ Ù‚ÛŒÙ…ØªÛ”</span>
-                    </div>
-                </div>
-
-                <h3>Ù†ØµØ§Ø¨ Ø§ÙˆØ± Ø§Ø³ Ú©ÛŒ Ù…ÙˆØ¬ÙˆØ¯Û Ø´Ø±Ø­ (2025-26)</h3>
-                <p>
-                    Ù†ØµØ§Ø¨ ÙˆÛ Ú©Ù… Ø§Ø² Ú©Ù… Ø­Ø¯ ÛÛ’ Ø¬Ø³ Ù¾Ø± Ø²Ú©ÙˆÙ°Ûƒ ÙØ±Ø¶ ÛÙˆØªÛŒ ÛÛ’ØŒ Ø§ÙˆØ± ÛŒÛ Ù…Ø§Ù„ Ù¾ÙˆØ±Û’ Ø§ÛŒÚ© Ø§Ø³Ù„Ø§Ù…ÛŒ Ù‚Ù…Ø±ÛŒ Ø³Ø§Ù„ ØªÚ© Ù…Ù„Ú©ÛŒØª Ù…ÛŒÚº Ø±ÛÙ†Ø§ Ú†Ø§ÛÛŒÛ’Û” Ø§Ø³Ù„Ø§Ù…ÛŒ Ø§ØµÙˆÙ„ÙˆÚº Ú©Û’ ØªØ­Øª Ù†ØµØ§Ø¨ Ú©ÛŒ Ø¯Ùˆ Ø¨Ù†ÛŒØ§Ø¯ÛŒ Ø´Ú©Ù„ÛŒÚº ÛÛŒÚºÛ”
-                </p>
-
-                <StyledTable
-                    headers={['Ù†ØµØ§Ø¨ Ú©Ø§ Ù…Ø¹ÛŒØ§Ø±', 'ÙˆØ²Ù† Ø§ÙˆØ± ÙˆØ²Ù† Ú©ÛŒ Ù…Ù‚Ø¯Ø§Ø±', 'Ø§Ø·Ù„Ø§Ù‚ Ú©ÛŒØ³Û’ ÛÙˆØªØ§ ÛÛ’']}
-                    rows={[
-                        [<strong className="text-amber-600">Ø³ÙˆÙ†Û’ Ú©Ø§ Ù†ØµØ§Ø¨</strong>, '87.48 Ú¯Ø±Ø§Ù… (7.5 ØªÙˆÙ„Û)', 'ÛŒÛ Ø§Ù†ÙØ±Ø§Ø¯ÛŒ Ø·ÙˆØ± Ù¾Ø± ØªØ¨ Ù„Ø§Ú¯Ùˆ ÛÙˆØªØ§ ÛÛ’ Ø¬Ø¨ Ø¢Ù¾ Ú©Û’ Ù¾Ø§Ø³ ØµØ±Ù Ø§ÙˆØ± ØµØ±Ù Ø³ÙˆÙ†Ø§ ÛÙˆ (Ù†Ù‚Ø¯ÛŒ ÛŒØ§ Ú†Ø§Ù†Ø¯ÛŒ Ù†Û ÛÙˆ)Û”'],
-                        [<strong className="text-slate-500">Ú†Ø§Ù†Ø¯ÛŒ Ú©Ø§ Ù†ØµØ§Ø¨</strong>, '612.36 Ú¯Ø±Ø§Ù… (52.5 ØªÙˆÙ„Û)', 'Ø¹Ù„Ù…Ø§Ø¡ Ú©Ø§ Ù…ØªÙÙ‚Û ÙÛŒØµÙ„Û ÛÛ’ Ú©Û ØºØ±ÛŒØ¨ÙˆÚº Ú©Û’ Ø­Ù‚ Ù…ÛŒÚº Ú†Ø§Ù†Ø¯ÛŒ Ú©Ø§ Ù†ØµØ§Ø¨ Ø¨ÛØªØ± ÛÛ’Û” ÛŒÛÛŒ Ø¨ÛŒÙ†Ú©ÙˆÚº Ú©ÛŒ ÛŒÚ©Ù… Ø±Ù…Ø¶Ø§Ù† Ú©ÛŒ Ú©Ù¹ÙˆØªÛŒ Ú©Û’ Ù„ÛŒÛ’ Ù„Ø§Ú¯Ùˆ ÛÙˆØªØ§ ÛÛ’Û”']
-                    ]}
-                />
-
-                <h3>Ø²Ú©ÙˆÙ°Ûƒ Ú©Ø§ Ø¯Ø±Ø³Øª Ø­Ø³Ø§Ø¨ Ù„Ú¯Ø§Ù†Û’ Ú©Û’ 4 Ø¢Ø³Ø§Ù† Ø§Ù‚Ø¯Ø§Ù…Ø§Øª</h3>
-                <StepGrid steps={[
-                    { title: "Ø§Ø«Ø§Ø«ÙˆÚº Ú©Ø§ Ø­Ø³Ø§Ø¨ Ú©Ø±ÛŒÚº", desc: "Ø§Ù¾Ù†Û’ ØªÙ…Ø§Ù… Ø¨ÛŒÙ†Ú© Ø§Ú©Ø§Ø¤Ù†Ù¹Ø³ Ú©ÛŒ Ø±Ù‚Ù…ØŒ Ø³ÙˆÙ†Û’/Ú†Ø§Ù†Ø¯ÛŒ Ú©ÛŒ Ù‚ÛŒÙ…Øª Ø§ÙˆØ± Ù…Ø§Ù„ ØªØ¬Ø§Ø±Øª Ø¯Ø±Ø¬ Ú©Ø±ÛŒÚºÛ”" },
-                    { title: "ÙˆØ§Ø¬Ø¨Ø§Øª (Ù‚Ø±Ø¶Û’) Ù†Ú©Ø§Ù„ÛŒÚº", desc: "Ø§Ú¯Ø± Ø¢Ù¾ Ù¾Ø± Ú©ÙˆØ¦ÛŒ ÙÙˆØ±ÛŒ Ø§Ø¯Ø§ Ú©Ø±Ù†Û’ ÙˆØ§Ù„Ø§ Ù‚Ø±Ø¶ ÛŒØ§ Ø¨Ù„ Ø¨Ø§Ù‚ÛŒ ÛÛ’ØŒ ØªÙˆ Ø§Ø³Û’ Ù…Ù†ÛØ§ Ú©Ø±ÛŒÚºÛ”" },
-                    { title: "Ù†ØµØ§Ø¨ Ø³Û’ Ù…ÙˆØ§Ø²Ù†Û Ú©Ø±ÛŒÚº", desc: "Ø³Ø³Ù¹Ù… Ø®ÙˆØ¯ Ø¨Ø®ÙˆØ¯ Ø¬Ø§Ù†Ú† Ù„Û’ Ú¯Ø§ Ú©Û Ø¢Ù¾ Ú©ÛŒ Ù…Ø§Ù„ÛŒØª Ú†Ø§Ù†Ø¯ÛŒ ÛŒØ§ Ø³ÙˆÙ†Û’ Ú©Û’ Ù†ØµØ§Ø¨ Ø³Û’ Ø²Ø§Ø¦Ø¯ ÛÛ’ ÛŒØ§ Ù†ÛÛŒÚºÛ”" },
-                    { title: "Ø¯Ø±Ø³Øª Ú©Ù¹ÙˆØªÛŒ Ú©ÛŒ Ù…Ø§Ù„ÛŒØª", desc: "Ø§Ú¯Ø± Ù…Ø§Ù„ÛŒØª Ù†ØµØ§Ø¨ Ø³Û’ Ø²Ø§Ø¦Ø¯ ÛÛ’ØŒ ØªÙˆ Ø³Ø³Ù¹Ù… 2.5 ÙÛŒØµØ¯ Ù„Ø§Ú¯Ùˆ Ú©Ø± Ú©Û’ Ø¯Ø±Ø³Øª Ø²Ú©ÙˆÙ°Ûƒ Ø¨ØªØ§ Ø¯Û’ Ú¯Ø§Û”" }
-                ]} />
-
-                <h3>Ø³Ù¹ÛŒÙ¹ Ø¨ÛŒÙ†Ú© Ø¢Ù Ù¾Ø§Ú©Ø³ØªØ§Ù† (SBP) Ø²Ú©ÙˆÙ°Ûƒ Ú©Ù¹ÙˆØªÛŒ Ú©Û’ Ù‚ÙˆØ§Ø¹Ø¯</h3>
-                <p>
-                    Ø²Ú©ÙˆÙ°Ûƒ Ùˆ Ø¹Ø´Ø± Ø¢Ø±ÚˆÛŒÙ†Ù†Ø³ 1980 Ú©Û’ ØªØ­ØªØŒ Ø³Ù¹ÛŒÙ¹ Ø¨ÛŒÙ†Ú© Ø¢Ù Ù¾Ø§Ú©Ø³ØªØ§Ù† ÛŒÚ©Ù… Ø±Ù…Ø¶Ø§Ù† Ø§Ù„Ù…Ø¨Ø§Ø±Ú© Ú©Ùˆ ØªÙ…Ø§Ù… Ø³ÛŒÙˆÙ†Ú¯ (Savings) Ø§ÙˆØ± Ù¾Ø±Ø§ÙÙ¹ Ø§ÛŒÙ†Úˆ Ù„Ø§Ø³ Ø§Ú©Ø§Ø¤Ù†Ù¹Ø³ Ø³Û’ 2.5 ÙÛŒØµØ¯ Ú©Û’ Ø­Ø³Ø§Ø¨ Ø³Û’ Ø²Ú©ÙˆÙ°Ûƒ Ø®ÙˆØ¯Ú©Ø§Ø± Ø·ÙˆØ± Ù¾Ø± Ú©Ø§Ù¹ Ù„ÛŒØªØ§ ÛÛ’ØŒ Ø¨Ø´Ø±Ø·ÛŒÚ©Û Ø¨ÛŒÙ„Ù†Ø³ Ø­Ú©ÙˆÙ…ØªÛŒ Ù…Ù‚Ø±Ø± Ú©Ø±Ø¯Û Ù†ØµØ§Ø¨ Ú©ÛŒ Ù…Ø§Ù„ÛŒØª Ø³Û’ Ø²ÛŒØ§Ø¯Û ÛÙˆÛ”
-                </p>
-                <HighlightBox title="Ø²Ú©ÙˆÙ°Ûƒ Ø³Û’ Ø§Ø³ØªØ«Ù†ÛŒÙ° (CZ-50 ÙØ§Ø±Ù…)" icon="ğŸ“œ" color="slate">
-                    Ø§Ú¯Ø± Ø¢Ù¾ Ø§Ù¾Ù†ÛŒ Ø²Ú©ÙˆÙ°Ûƒ Ø®Ùˆ Ø¯ Ù…Ø³ØªØ­Ù‚ÛŒÙ† ØªÚ© Ù¾ÛÙ†Ú†Ø§Ù†Ø§ Ú†Ø§ÛØªÛ’ ÛÛŒÚºØŒ Ø§ÙˆØ± Ø¨ÛŒÙ†Ú© Ú©ÛŒ Ø³Ø±Ú©Ø§Ø±ÛŒ Ú©Ù¹ÙˆØªÛŒ Ø³Û’ Ø¨Ú†Ù†Ø§ Ú†Ø§ÛØªÛ’ ÛÛŒÚºØŒ ØªÙˆ Ø¢Ù¾ Ú©Ùˆ Ù…Ù‚Ø±Ø±Û ØªØ§Ø±ÛŒØ® Ø³Û’ Ù‚Ø¨Ù„ Ø§Ù¾Ù†Û’ Ù…ØªØ¹Ù„Ù‚Û Ø¨ÛŒÙ†Ú© Ù…ÛŒÚº Ù‚Ø§Ù†ÙˆÙ†ÛŒ Ø­Ù„Ù Ù†Ø§Ù…Û ÛŒØ¹Ù†ÛŒ "CZ-50 Form" Ø¬Ù…Ø¹ Ú©Ø±ÙˆØ§Ù†Ø§ Ù„Ø§Ø²Ù…ÛŒ ÛÙˆØªØ§ ÛÛ’Û”
-                </HighlightBox>
-            </ArticleWrapper>
-        );
-    }
-
-    return (
-        <ArticleWrapper>
-            <h2>Zakat Calculator Pakistan 2026: SBP Nisab (Gold & Silver)</h2>
-            <div className="bg-amber-50 p-6 rounded-2xl border border-amber-100 my-6 shadow-sm">
-                <h3 className="text-xl font-bold text-amber-900 mt-0 mb-2">Current Nisab Thresholds for Pakistan (Ramadan 2025-26)</h3>
-                <p className="text-amber-800 m-0 text-sm">To calculate your Zakat accurately, you must first determine if your wealth meets the Nisab threshold. Currently, the Nisab is equivalent to the market value of either 87.48 grams (7.5 Tola) of gold or 612.36 grams (52.5 Tola) of silver. Our calculator automatically applies the 2.5% Zakat rate to your eligible assets minus your liabilities, ensuring you fulfill your Islamic obligations with complete peace of mind this Ramadan.</p>
-            </div>
-            <p>
-                Zakat is one of the five pillars of Islam, and its accurate calculation is a fundamental religious obligation for every Sahab-e-Nisab Muslim. Our advanced <strong>Zakat Calculator Pakistan (2025-2026)</strong> is designed in accordance with the Nisab announced by the State Bank of Pakistan (SBP). The tool automatically determines the Nisab based on current market rates for Gold and Silver in PKR.
-            </p>
-
-            <HighlightBox title="Total Transparency in Calculation" icon="âœ¨" color="amber">
-                We have built this Zakat calculator to ensure you can easily account for your total wealth. Simply input your asset details, and our system will accurately calculate the 2.5% Zakat due without leaving out a single rupee.
-            </HighlightBox>
-
-            <h3>Breakdown of Zakaat-able Assets</h3>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
-                    <span className="text-4xl block mb-2">ğŸ’µ</span>
-                    <strong className="block text-slate-900">Cash & Bank Balance</strong>
-                    <span className="text-xs text-slate-500">All liquid cash in bank accounts or at home.</span>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
-                    <span className="text-4xl block mb-2">ğŸ…</span>
-                    <strong className="block text-slate-900">Gold & Silver</strong>
-                    <span className="text-xs text-slate-500">Value of ornaments based on current market rates.</span>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
-                    <span className="text-4xl block mb-2">ğŸ“ˆ</span>
-                    <strong className="block text-slate-900">Investments & Shares</strong>
-                    <span className="text-xs text-slate-500">Mutual funds, stocks, and provident fund values.</span>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
-                    <span className="text-4xl block mb-2">ğŸ“¦</span>
-                    <strong className="block text-slate-900">Business Inventory</strong>
-                    <span className="text-xs text-slate-500">Market value of goods present in shop or warehouse.</span>
-                </div>
-            </div>
-
-            <h3>Nisab Thresholds 2025-2026</h3>
-            <p>
-                Nisab is the minimum threshold of wealth that makes Zakat mandatory. This wealth must remain in your possession for one full lunar year. There are two primary standards for Nisab.
-            </p>
-
-            <StyledTable
-                headers={['Nisab Criterion', 'Weight Requirement', 'How it applies']}
-                rows={[
-                    [<strong className="text-amber-600">Gold Nisab</strong>, '87.48 Grams (7.5 Tola)', 'Applies if you only possess gold without any cash or silver.'],
-                    [<strong className="text-slate-500">Silver Nisab</strong>, '612.36 Grams (52.5 Tola)', 'Scholars recommend silver nisab for the benefit of the poor; used by banks for 1st Ramadan deduction.']
-                ]}
-            />
-
-            <h3>4 Easy Steps to Calculate Your Zakat</h3>
-            <StepGrid steps={[
-                { title: "List Your Assets", desc: "Enter all cash, gold/silver values, and business merchandise." },
-                { title: "Subtract Liabilities", desc: "Deduct any immediate debts or bills you owe to others." },
-                { title: "Compare with Nisab", desc: "The system checks if your net wealth exceeds the silver or gold threshold." },
-                { title: "Get Your Zakat Due", desc: "If applicable, the system applies the 2.5% rate to show the exact amount." }
-            ]} />
-
-            <h3>SBP Zakat Deduction Rules (Banks)</h3>
-            <p>
-                Under the Zakat & Ushr Ordinance 1980, the State Bank of Pakistan deducts 2.5% Zakat from Savings and PLS accounts on the 1st of Ramadan, provided the balance exceeds the notified Nisab amount.
-            </p>
-            <HighlightBox title="Zakat Exemption (CZ-50 Form)" icon="ğŸ“œ" color="slate">
-                If you wish to distribute Zakat yourself and avoid bank deduction, you must submit a "CZ-50 Form" (affidavit) to your bank before the specified deadline.
-            </HighlightBox>
-        </ArticleWrapper>
-    );
-}
-
-const FreelancerTaxArticle = ({ isUrdu }: { isUrdu: boolean }) => {
-    if (isUrdu) {
-        return (
-            <ArticleWrapper>
-                <h2>ÙØ±ÛŒ Ù„Ø§Ù†Ø³Ø± Ø§Ù†Ú©Ù… Ø§ÙˆØ± Ù¹ÛŒÚ©Ø³ Ú©ÛŒÙ„Ú©ÙˆÙ„ÛŒÙ¹Ø± Ù¾Ø§Ú©Ø³ØªØ§Ù† 2026: Ø¢Ø¦ÛŒ Ù¹ÛŒ Ø§ÛŒÚ©Ø³Ù¾ÙˆØ±Ù¹ Ù¹ÛŒÚ©Ø³ Ù‚ÙˆØ§Ù†ÛŒÙ†</h2>
-                <p>
-                    Ù¾Ø§Ú©Ø³ØªØ§Ù† Ø¹Ø§Ù„Ù…ÛŒ Ø³Ø·Ø­ Ù¾Ø± ÙØ±ÛŒ Ù„Ø§Ù†Ø³Ù†Ú¯ Ú©Û’ Ø­ÙˆØ§Ù„Û’ Ø³Û’ ØªÛŒØ²ÛŒ Ø³Û’ Ø§Ø¨Ú¾Ø±ØªÛŒ ÛÙˆØ¦ÛŒ Ù…Ø§Ø±Ú©ÛŒÙ¹ ÛÛ’Û” Ú†Ø§ÛÛ’ Ø¢Ù¾ UpworkØŒ Fiverr Ú©Û’ Ø°Ø±ÛŒØ¹Û’ Ú©Ù…Ø§ Ø±ÛÛ’ ÛÙˆÚº ÛŒØ§ Ø¨ÛŒØ±ÙˆÙ†Ù Ù…Ù„Ú© Ø³Û’ Ø¨Ø±Ø§ÛÙ Ø±Ø§Ø³Øª Ø§Ø¯Ø§Ø¦ÛŒÚ¯ÛŒ Ù„Û’ Ø±ÛÛ’ ÛÙˆÚºØŒ Ø§ØµÙ„ Ø§ÙˆØ± Ø®Ø§Ù„Øµ (Net) Ø¢Ù…Ø¯Ù†ÛŒ Ú©Ø§ Ø§Ù†Ø¯Ø§Ø²Û Ù„Ú¯Ø§Ù†Ø§ Ø§Ù†ØªÛØ§Ø¦ÛŒ Ù¾ÛŒÚ†ÛŒØ¯Û ÛÙˆØªØ§ ÛÛ’Û” ÛÙ…Ø§Ø±Ø§ Ø®Ø§Øµ <strong>ÙØ±ÛŒ Ù„Ø§Ù†Ø³Ø± Ù¹ÛŒÚ©Ø³ Ø§ÙˆØ± Ø§Ù†Ú©Ù… Ú©ÛŒÙ„Ú©ÙˆÙ„ÛŒÙ¹Ø± Ù¾Ø§Ú©Ø³ØªØ§Ù†</strong> Ø¢Ù¾ Ú©ÛŒ Ú©ÙÙ„ ÚˆØ§Ù„Ø±Ø² Ú©ÛŒ Ø¢Ù…Ø¯Ù†ÛŒ Ú©Ùˆ Ø±ÙˆÙ¾Û’ Ú©Û’ ØªØ¨Ø§Ø¯Ù„Û’ØŒ Ù¾Ù„ÛŒÙ¹ ÙØ§Ø±Ù…Ø² Ú©ÛŒ ÙÛŒØ³ÙˆÚº Ø§ÙˆØ± Ù„Ø§Ø²Ù…ÛŒ Ø§ÛŒÙ Ø¨ÛŒ Ø¢Ø± Ù¹ÛŒÚ©Ø³ Ú©Ù¹ÙˆØªÛŒ Ø³Û’ Ú¯Ø²Ø§Ø± Ú©Ø± Ø¢Ù¾ Ú©Ùˆ Ø¯Ø±Ø³Øª ÛØ§ØªÚ¾ Ø¢Ù†Û’ ÙˆØ§Ù„ÛŒ Ø±Ù‚Ù… Ø¨ØªØ§ØªØ§ ÛÛ’Û”
-                </p>
-
-                <HighlightBox title="Ø®Ø§Ù„Øµ Ø¢Ù…Ø¯Ù†ÛŒ Ú©Ø§ Ø¨Ø§Ù„Ú©Ù„ Ø¯Ø±Ø³Øª Ø­Ø³Ø§Ø¨" icon="ğŸ’»" color="amber">
-                    Ø¹Ø§Ù… Ù¹ÛŒÚ©Ø³ Ú©ÛŒÙ„Ú©ÙˆÙ„ÛŒÙ¹Ø±Ø² Ù…ÛŒÚº ÛŒÛ Ø®Ø§Ù…ÛŒ ÛÙˆØªÛŒ ÛÛ’ Ú©Û ÙˆÛ ÙØ±ÛŒ Ù„Ø§Ù†Ø³Ø±Ø² Ú©Û’ Ù…Ø®ØµÙˆØµ Ú©Ø§Ù… Ø§ÙˆØ± ÙÛŒØ³ÙˆÚº Ú©Ùˆ ÛŒÚ©Ø³Ø± Ù†Ø¸Ø±Ø§Ù†Ø¯Ø§Ø² Ú©Ø± Ø¯ÛŒØªÛ’ ÛÛŒÚºÛ” ÙˆÛ Ù†Û ØªÙˆ Ù¾Ù„ÛŒÙ¹ ÙØ§Ø±Ù… ÙÛŒØ³ Ú©Ø§Ù¹ØªÛ’ ÛÛŒÚº Ø§ÙˆØ± Ù†Û ÛÛŒ Ø¨ÛŒÙ†Ú© Ú©ÛŒ ÚˆØ§Ù„Ø± Ø®Ø±ÛŒØ¯Ù†Û’ Ù…ÛŒÚº Ø§Ø³ØªØ¹Ù…Ø§Ù„ ÛÙˆÙ†Û’ ÙˆØ§Ù„Û’ Ø§ÛŒÚ©Ø³Ú†ÛŒÙ†Ø¬ Ø±ÛŒÙ¹ Ú©Ùˆ Ø³Ù…Ø¬Ú¾ØªÛ’ ÛÛŒÚºÛ” ÛÙ…Ø§Ø±Ø§ Ø¬Ø¯ÛŒØ¯ Ù¹ÙˆÙ„ ÚˆØ§Ù„Ø± Ù…Ù„Ù†Û’ Ø³Û’ Ù„Û’ Ú©Ø±ØŒ Ø¨ÛŒÙ†Ú© Ú©Û’ Ø°Ø±ÛŒØ¹Û’ Ø¢Ù¾ Ú©Û’ Ø§Ú©Ø§Ø¤Ù†Ù¹ Ù…ÛŒÚº Ù¾Ø§Ú©Ø³ØªØ§Ù†ÛŒ Ø±ÙˆÙ¾Û’ (PKR) Ú©ÛŒ Ù…Ù†ØªÙ‚Ù„ÛŒ ØªÚ©ØŒ ØªÙ…Ø§Ù… Ù…Ø±Ø­Ù„ÙˆÚº Ú©ÛŒ Ø¯Ø±Ø³Øª Ú©ÛŒÙ„Ú©ÙˆÙ„ÛŒØ´Ù† Ú©Ø±ØªØ§ ÛÛ’Û”
-                </HighlightBox>
-
-                <h3>ÛÙ…Ø§Ø±ÛŒ ÙØ±ÛŒ Ù„Ø§Ù†Ø³ Ø§ÛŒÙ¾ Ú©Ø³ Ø·Ø±Ø­ Ø­Ø³Ø§Ø¨ Ù„Ú¯Ø§ØªÛŒ ÛÛ’ØŸ</h3>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">
-                    <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                        <span className="text-3xl">ğŸ’±</span>
-                        <div>
-                            <strong className="block text-slate-900 mb-1">Ú©Ø±Ù†Ø³ÛŒ Ø§ÙˆØ± Ø§ÛŒÚ©Ø³Ú†ÛŒÙ†Ø¬ Ø±ÛŒÙ¹</strong>
-                            <span className="text-xs text-slate-500">Ø§Ù†Ù¹Ø±Ø¨ÛŒÙ†Ú© (Interbank) ÚˆØ§Ù„Ø± Ø±ÛŒÙ¹ Ú©Ùˆ Ø¨Ù†ÛŒØ§Ø¯ Ø¨Ù†Ø§ Ú©Ø± Ø±ÙˆÙ¾Û’ Ú©ÛŒ Ù‚ÛŒÙ…Øª Ù†Ú©Ø§Ù„Ù†Ø§Û”</span>
-                        </div>
-                    </div>
-                    <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                        <span className="text-3xl">ğŸ›¡ï¸</span>
-                        <div>
-                            <strong className="block text-slate-900 mb-1">Ù¾Ù„ÛŒÙ¹ ÙØ§Ø±Ù… Ú©ÛŒ Ú©Ù¹ÙˆØªÛŒ</strong>
-                            <span className="text-xs text-slate-500">Ú©Ù„Ø§Ø¦Ù†Ù¹ Ø³Û’ Ù…Ù„Ù†Û’ ÙˆØ§Ù„ÛŒ Ø±Ù‚Ù… Ù…ÛŒÚº Ø³Û’ 20% Ú©Ù…ÛŒØ´Ù† (Fiverr/Upwork ÙÛŒØ³) Ú©ÛŒ Ø®ÙˆØ¯Ú©Ø§Ø± Ú©Ù¹ÙˆØªÛŒÛ”</span>
-                        </div>
-                    </div>
-                    <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                        <span className="text-3xl">ğŸ¦</span>
-                        <div>
-                            <strong className="block text-slate-900 mb-1">Ù…Ù‚Ø§Ù…ÛŒ Ø¨ÛŒÙ†Ú© Ú†Ø§Ø±Ø¬Ø²</strong>
-                            <span className="text-xs text-slate-500">Ù¾Ø§Ú©Ø³ØªØ§Ù†ÛŒ Ø¨ÛŒÙ†Ú©ÙˆÚº (Ù…Ø«Ù„Ø§Ù‹ HBLØŒ Meezan) Ú©Û’ Ù…Ù†Ø§ÙØ¹ ÛŒØ§ Ú©Ù¹ÙˆØªÛŒ Ú©Ø§ Ø­Ø³Ø§Ø¨Û”</span>
-                        </div>
-                    </div>
-                    <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                        <span className="text-3xl">ğŸ“„</span>
-                        <div>
-                            <strong className="block text-slate-900 mb-1">Ø§ÛŒÙ Ø¨ÛŒ Ø¢Ø± (FBR) Ø§ÛŒÚ©Ø³Ù¾ÙˆØ±Ù¹ Ù¹ÛŒÚ©Ø³</strong>
-                            <span className="text-xs text-slate-500">Ø¢Ù¾ Ú©Û’ ÙØ§Ø¦Ù„Ø± Ø³Ù¹ÛŒÙ¹Ø³ Ú©Û’ Ù…Ø·Ø§Ø¨Ù‚ 0.25% ÛŒØ§ 1% ÙˆØ¯ ÛÙˆÙ„ÚˆÙ†Ú¯ Ù¹ÛŒÚ©Ø³ Ú©ÛŒ Ú©Ù¹ÙˆØªÛŒÛ”</span>
-                        </div>
-                    </div>
-                </div>
-
-                <h3>Ø­Ø³Ø§Ø¨ Ú©ØªØ§Ø¨ Ú©Ø±Ù†Û’ Ú©Û’ 4 Ø¢Ø³Ø§Ù† Ø§Ù‚Ø¯Ø§Ù…Ø§Øª</h3>
-                <StepGrid steps={[
-                    { title: "ÚˆØ§Ù„Ø± Ø¢Ù…Ø¯Ù†ÛŒ Ù„Ú©Ú¾ÛŒÚº", desc: "ÙˆÛ Ú©ÙÙ„ Ø±Ù‚Ù… Ø¯Ø±Ø¬ Ú©Ø±ÛŒÚº Ø¬Ùˆ Ø¢Ù¾ Ú©Û’ Ú©Ù„Ø§Ø¦Ù†Ù¹ Ù†Û’ Ú©Ø³ÛŒ Ø¨Ú¾ÛŒ ÙÛŒØ³ Ú©ÛŒ Ú©Ù¹ÙˆØªÛŒ Ø³Û’ Ù¾ÛÙ„Û’ Ø§Ø¯Ø§ Ú©ÛŒÛ”" },
-                    { title: "Ù…Ø§Ø±Ú©ÛŒÙ¹ Ù¾Ù„ÛŒØ³ Ú©ÛŒ ÙÛŒØ³ Ø³ÛŒÙ¹ Ú©Ø±ÛŒÚº", desc: "Ø§Ø³ Ù¾Ù„ÛŒÙ¹ ÙØ§Ø±Ù… Ú©Ø§ Ù†Ø§Ù… ÛŒØ§ Ø®ÙˆØ¯Ú©Ø§Ø± ÙÛŒØ³ Ø´Ø§Ù…Ù„ Ú©Ø±ÛŒÚº Ø¬Ùˆ Ú©Ù… Ø§Ø² Ú©Ù… 20 ÙÛŒØµØ¯ ØªÚ© ÛÙˆØªÛŒ ÛÛ’Û”" },
-                    { title: "Ø¨ÛŒÙ†Ú© Ú©Ù¹ÙˆØªÛŒ Ú©Ø§ Ø­Ø³Ø§Ø¨", desc: "ÚˆØ§Ù„Ø± Ú©Û’ Ø§ØµÙ„ Ø§Ù†Ù¹Ø±Ø¨ÛŒÙ†Ú© Ø±ÛŒÙ¹ Ø§ÙˆØ± Ù…Ù‚Ø§Ù…ÛŒ Ø¨ÛŒÙ†Ú© Ú©Û’ Ø®Ø±ÛŒØ¯Ù†Û’ Ú©Û’ Ø±ÛŒÙ¹ Ù…ÛŒÚº ÙØ±Ù‚ Ø´Ø§Ù…Ù„ Ú©Ø±ÛŒÚºÛ”" },
-                    { title: "FBR Ú©Ø§ Ù¹ÛŒÚ©Ø³ Ø¯Ø±Ø¬ Ú©Ø±ÛŒÚº", desc: "Ø§Ù¾Ù†Û’ ÙØ§Ø¦Ù„Ø± ÛÙˆÙ†Û’ Ú©ÛŒ Ø­ÛŒØ«ÛŒØª Ø¨ØªØ§Ø¦ÛŒÚºÛ” Ú©ÛŒÙ„Ú©ÙˆÙ„ÛŒÙ¹Ø± Ø®ÙˆØ¯Ú©Ø§Ø± Ù‚Ø§Ù†ÙˆÙ† Ú©Û’ Ù…Ø·Ø§Ø¨Ù‚ Ø¢Ø¦ÛŒ Ù¹ÛŒ Ø§Ø³ØªØ«Ù†ÛŒÙ° Ù„Ú¯Ø§Ø¦Û’ Ú¯Ø§Û”" }
-                ]} />
-
-                <h3>ÙØ±ÛŒ Ù„Ø§Ù†Ø³Ø±Ø² Ø§ÙˆØ± Ø¢Ø¦ÛŒ Ù¹ÛŒ Ù¾Ø±ÙˆÙÛŒØ´Ù†Ù„Ø² Ú©Û’ Ù„ÛŒÛ’ FBR Ú©Û’ Ù†Ø¦Û’ Ù‚ÙˆØ§Ù†ÛŒÙ† (2025-2026)</h3>
-                <p>
-                    ÙˆÙØ§Ù‚ÛŒ Ø­Ú©ÙˆÙ…Øª (FBR) Ù¾Ø§Ú©Ø³ØªØ§Ù† Ù…ÛŒÚº Ø¢Ø¦ÛŒ Ù¹ÛŒ Ø³Ø±ÙˆØ³Ø² Ø§ÙˆØ± Ø§ÛŒÚ©Ø³Ù¾ÙˆØ±Ù¹Ø³ Ú©ÛŒ Ø´Ø§Ù†Ø¯Ø§Ø± Ø­ÙˆØµÙ„Û Ø§ÙØ²Ø§Ø¦ÛŒ Ú©Û’ Ù„ÛŒÛ’ Ø³ÛÙˆÙ„ØªÛŒÚº ÙØ±Ø§ÛÙ… Ú©Ø±ØªÛŒ ÛÛ’Û” Ø§Ú¯Ø± ÙØ±ÛŒ Ù„Ø§Ù†Ø³Ø± Ù‚Ø§Ù†ÙˆÙ†ÛŒ Ø¨ÛŒÙ†Ú©Ù†Ú¯ Ú†ÛŒÙ†Ù„Ø² Ú©Û’ Ø°Ø±ÛŒØ¹Û’ Ø§Ù¾Ù†ÛŒ Ø±Ù‚Ù… "Ø²Ø±Ù…Ø¨Ø§Ø¯Ù„Û" (Foreign Inward Remittance) Ú©ÛŒ ØµÙˆØ±Øª Ù…ÛŒÚº Ù„Ø§ØªÛ’ ÛÛŒÚºØŒ ØªÙˆ Ø§Ù† Ú©Û’ Ù„ÛŒÛ’ Ù†Ø§Ø±Ù…Ù„ ØªÙ†Ø®ÙˆØ§Û Ø¯Ø§Ø± Ø·Ø¨Ù‚Û’ Ú©Û’ Ø§Ù†Ú©Ù… Ù¹ÛŒÚ©Ø³ Ù‚ÙˆØ§Ù†ÛŒÙ† Ù„Ø§Ú¯Ùˆ Ù†ÛÛŒÚº ÛÙˆØªÛ’Û”
-                </p>
-
-                <StyledTable
-                    headers={['Ù¹ÛŒÚ©Ø³ ÙØ§Ø¦Ù„Ø± ÛÙˆÙ†Û’ Ú©ÛŒ Ø­ÛŒØ«ÛŒØª', 'Ø¢Ø¦ÛŒ Ù¹ÛŒ Ù¹ÛŒÚ©Ø³ Ú©ÛŒ Ø´Ø±Ø­ (Withholding Tax)', 'Ù‚Ø§Ù†ÙˆÙ† Ø§ÙˆØ± Ø´Ø±Ø§Ø¦Ø·']}
-                    rows={[
-                        [<strong className="text-emerald-600">PSEB Ø±Ø¬Ø³Ù¹Ø±Úˆ ÙØ§Ø¦Ù„Ø±</strong>, 'Ø¨ÛŒØ±ÙˆÙ†ÛŒ Ø²Ø±Ù…Ø¨Ø§Ø¯Ù„Û Ù¾Ø± ÙÙ‚Ø· 0.25%', 'ÛŒÛ Ø³Ø¨ Ø³Û’ Ú©Ù… Ø´Ø±Ø­ ÛÛ’Û” Ø¢Ù¾ Ú©Ùˆ Ù¾Ø§Ú©Ø³ØªØ§Ù† Ø³Ø§ÙÙ¹ ÙˆÛŒØ¦Ø± Ø§ÛŒÚ©Ø³Ù¾ÙˆØ±Ù¹ Ø¨ÙˆØ±Úˆ Ú©Û’ Ø³Ø§ØªÚ¾ Ø±Ø¬Ø³Ù¹Ø±Úˆ ÛÙˆÙ†Ø§ Ø¶Ø±ÙˆØ±ÛŒ ÛÛ’Û”'],
-                        [<strong className="text-amber-500">Ø¹Ø§Ù… Ø§ÛŒÚ©Ù¹Ùˆ ÙØ§Ø¦Ù„Ø± (Non-PSEB)</strong>, 'Ø¨ÛŒØ±ÙˆÙ†ÛŒ Ø²Ø±Ù…Ø¨Ø§Ø¯Ù„Û Ù¾Ø± 1.00%', 'Ø¢Ù¾ Ú©Ø§ Ù†Ø§Ù… FBR Ú©ÛŒ Ø§ÛŒÚ©Ù¹Ùˆ ÙØ§Ø¦Ù„Ø± Ù„Ø³Ù¹ Ù…ÛŒÚº Ø´Ø§Ù…Ù„ ÛÙˆÙ†Ø§ Ù„Ø§Ø²Ù…ÛŒ ÛÛ’Û” Ø²ÛŒØ§Ø¯Û ØªØ± ÙØ±ÛŒ Ù„Ø§Ù†Ø³Ø±Ø² Ø§Ø³ÛŒ Ú©Û’ Ø§ÛÙ„ ÛÛŒÚºÛ”'],
-                        [<strong className="text-rose-500">Ù†Ø§Ù† ÙØ§Ø¦Ù„Ø± (Non-Filer)</strong>, 'ØºÛŒØ± Ù…Ø¹Ù…ÙˆÙ„ÛŒ Ú©Ù¹ÙˆØªÛŒ / Ù¾ÙˆØ±Ø§ Ø§Ù†Ú©Ù… Ù¹ÛŒÚ©Ø³ Ù‚Ø§Ù†ÙˆÙ†', 'Ø­Ú©ÙˆÙ…Øª Ø§Ø¨ Ù†Ø§Ù† ÙØ§Ø¦Ù„Ø±Ø² Ù¾Ø± Ø¨Ú¾Ø§Ø±ÛŒ Ù¹ÛŒÚ©Ø³ Ú©Ù¹ÙˆØªÛŒØ§Úº Ú©Ø± Ø±ÛÛŒ ÛÛ’Û” Ø§Ù† Ú©Û’ Ù„ÛŒÛ’ Ú©Ø³ÛŒ Ø¨Ú¾ÛŒ Ø¢Ø¦ÛŒ Ù¹ÛŒ Ù¹ÛŒÚ©Ø³ Ú©ÛŒ Ú†Ú¾ÙˆÙ¹ Ú©ÛŒ Ø§Ø¬Ø§Ø²Øª Ù†ÛÛŒÚº ÛÛ’Û”']
-                    ]}
-                />
-            </ArticleWrapper>
-        );
-    }
-
-    return (
-        <ArticleWrapper>
-            <h2>Freelancer Tax Calculator Pakistan 2026: IT Export Laws</h2>
-            <p>
-                Pakistan is emerging as a global hub for freelancing. Whether you are earning through Upwork, Fiverr, or direct international clients, estimating your actual "net" take-home pay can be complex. Our specialized <strong>Freelancer Tax & Income Calculator Pakistan</strong> processes your gross dollar earnings through exchange rates, platform fees, and mandatory FBR tax deductions to give you an exact figure.
-            </p>
-
-            <HighlightBox title="Precision in Net Earnings" icon="ğŸ’»" color="amber">
-                Generic tax calculators often fail to account for the specific nuances of freelancing. They don't deduct platform commissions or consider the spread between interbank rates and what local banks offer. Our tool models the entire journey from your client's payment to PKR in your local account.
-            </HighlightBox>
-
-            <h3>How Our Freelancer App Calculates Your Income</h3>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">ğŸ’±</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">Exchange Rates</strong>
-                        <span className="text-xs text-slate-500">Converting USD to PKR using realistic local bank buying rates.</span>
-                    </div>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">ğŸ›¡ï¸</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">Platform Commissions</strong>
-                        <span className="text-xs text-slate-500">Automatic 20% deduction for Fiverr/Upwork service fees.</span>
-                    </div>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">ğŸ¦</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">Local Bank Charges</strong>
-                        <span className="text-xs text-slate-500">Factoring in fixed arrival fees and tax on remittance.</span>
-                    </div>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">ğŸ“„</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">FBR Export Tax</strong>
-                        <span className="text-xs text-slate-500">Applying 0.25% or 1% withholding tax based on filer status.</span>
-                    </div>
-                </div>
-            </div>
-
-            <h3>4 Easy Steps to Your Net Income</h3>
-            <StepGrid steps={[
-                { title: "Enter Gross USD", desc: "Input the total payment from your client before any deduction." },
-                { title: "Select Platform", desc: "Set the percentage fee your marketplace charges (usually 20%)." },
-                { title: "Bank Rate Adjustment", desc: "Input the difference between current interbank and buying rates." },
-                { title: "Set FBR Status", desc: "Define if you are PSEB registered or a simple active filer." }
-            ]} />
-
-            <h3>FBR IT Export Policies for Freelancers (2025-2026)</h3>
-            <p>
-                The government of Pakistan encourages IT exports by offering reduced tax rates. If freelancers bring in foreign exchange through legal banking channels, they avoid the standard heavy income tax brackets applied to salaried individuals.
-            </p>
-
-            <StyledTable
-                headers={['Registration Status', 'Withholding Tax Rate', 'Conditions']}
-                rows={[
-                    [<strong className="text-emerald-600">PSEB Registered</strong>, '0.25% on Foreign Remittance', 'Requires valid registration with Pakistan Software Export Board.'],
-                    [<strong className="text-amber-500">Active Filer (Non-PSEB)</strong>, '1.00% on Foreign Remittance', 'Applicable to most freelancers registered as active tax filers.'],
-                    [<strong className="text-rose-500">Non-Filer Status</strong>, 'Full Income Tax Brackets', 'No exemptions; subject to standard and heavy tax rates.']
-                ]}
-            />
-        </ArticleWrapper>
-    );
-};
-
-const InvestmentReturnArticle = ({ isUrdu }: { isUrdu: boolean }) => {
-    if (isUrdu) return null;
-
-    return (
-        <ArticleWrapper>
-            <h2>Investment Return Calculator Pakistan 2026: Compound Interest & Profits</h2>
-            <div className="bg-emerald-50 p-6 rounded-2xl border border-emerald-100 my-6 shadow-sm">
-                <h3 className="text-xl font-bold text-emerald-900 mt-0 mb-2">Calculating Accurate ROI in Pakistan</h3>
-                <p className="text-emerald-800 m-0 text-sm">Whether you are investing in Al Meezan Mutual Funds, National Savings Schemes (Qaumi Bachat), or buying real estate in DHA, calculating your true Return on Investment (ROI) is essential. Our calculator helps you navigate local market yields by factoring in your initial investment amount against your current value. Simply input your PKR figures to instantly see your annualized growth rate and total net profit.</p>
-            </div>
-            <p>
-                In an economy facing fluctuating inflation rates, parking your money in a zero-interest checking account steadily destroys your purchasing power. Intelligent investors utilize our <strong>Investment Return Calculator Pakistan</strong> to project compounding profits across mutual funds, National Savings Certificates (NSC), and fixed bank deposits. By analyzing future value, this robust tool empowers you to build formidable wealth over time.
-            </p>
-
-            <HighlightBox title="The Power of Compounding" icon="ğŸ“ˆ" color="emerald">
-                Albert Einstein famously called compound interest the eighth wonder of the world. In the context of Pakistan's economic landscape, compounding is not just wealth generationâ€”it constitutes survival against currency devaluation. By reinvesting your annual dividends instead of consuming them, your profit base expands exponentially.
-            </HighlightBox>
-
-            <h3>How Our Investment Calculator Accelerates Your Wealth</h3>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">âš™ï¸</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">Growth Engine</strong>
-                        <span className="text-xs text-slate-500">Models how reinvested profits generate exponential returns.</span>
-                    </div>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">ğŸ“Š</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">Adjustable Rates</strong>
-                        <span className="text-xs text-slate-500">Insert exact percentages based on KIBOR or mutual fund yields.</span>
-                    </div>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">ğŸ›¡ï¸</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">Inflation Adjustments</strong>
-                        <span className="text-xs text-slate-500">Weigh nominal returns against Pakistan's average inflation rate.</span>
-                    </div>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">ğŸ‘ï¸</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">Visual Trajectory</strong>
-                        <span className="text-xs text-slate-500">Instantly view baseline capital versus accumulated profit.</span>
-                    </div>
-                </div>
-            </div>
-
-            <h3>Step-by-Step Guide to Calculating Investment ROI</h3>
-            <StepGrid steps={[
-                { title: "Set Principal", desc: "Enter the initial lump-sum amount (in PKR) to invest." },
-                { title: "Determine Rate", desc: "Input the expected APY (e.g., 14% for government bonds)." },
-                { title: "Select Tenure", desc: "Choose exactly how many years you intend to lock the investment." },
-                { title: "Analyze Results", desc: "The engine instantly reveals your total maturity amount and pure profit." }
-            ]} />
-
-            <h3>Top Investment Vehicles in Pakistan for 2025-26</h3>
-            <p>
-                To formulate a highly profitable portfolio, Pakistani investors generally diversify across three primary asset classes.
-            </p>
-
-            <StyledTable
-                headers={['Asset Class', 'Expected Yield (APY)', 'Risk Level', 'Liquidity']}
-                rows={[
-                    [<strong className="text-emerald-700">National Savings (CDNS)</strong>, '12% - 16%', <span className="text-emerald-600 font-bold">Zero Risk</span>, 'Moderate'],
-                    [<strong className="text-blue-700">Mutual Funds (AMCs)</strong>, '15% - 22%', <span className="text-amber-500 font-bold">Low-Medium</span>, 'Extremely High'],
-                    [<strong className="text-slate-700">Term Deposit Receipts</strong>, '10% - 15%', <span className="text-emerald-600 font-bold">Zero Risk</span>, 'Low (Locked in)']
-                ]}
-            />
-
-            <HighlightBox title="Start Today" icon="â³" color="blue">
-                Our Investment Return Calculator mathematically proves that starting a 5,000 PKR monthly SIP (Systematic Investment Plan) at age 25 yields drastically higher wealth at age 60 than starting a 20,000 PKR SIP at age 45. Stop hesitating. Calculate your projected returns today.
-            </HighlightBox>
-        </ArticleWrapper>
-    );
-}
-
-const RetirementPlanArticle = ({ isUrdu }: { isUrdu: boolean }) => {
-    if (isUrdu) return null;
-
-    return (
-        <ArticleWrapper>
-            <h2>Retirement Savings Calculator Pakistan 2026: Plan Your Pension Corpus</h2>
-            <p>
-                Retiring with absolute financial dignity in Pakistan requires aggressive, meticulous early planning. With the absence of universal state-funded pensions for private sector employees, you possess sole responsibility for your old-age survival. Our authoritative <strong>Retirement Savings Calculator Pakistan</strong> scientifically projects the exact monolithic capital corpus you must accumulate to maintain your current lifestyle.
-            </p>
-
-            <HighlightBox title="Combating Hyperinflation" icon="ğŸ”¥" color="rose">
-                The mathematics of retirement rely heavily on the "Safe Withdrawal Rate" (SWR). In stable economies, experts rely on the 4% rule. In Pakistan, high inflation heavily taxes purchasing power. If your monthly household expenses equal PKR 150,000 today, an average 9% inflation rate dictates that in 20 years, executing the exact same lifestyle will cost nearly PKR 840,000 per month.
-            </HighlightBox>
-
-            <h3>How Our Retirement Planner Safeguards Your Future</h3>
-            <p>
-                We completely architected this tool around the volatile realities of Pakistan's economy. Generic calculators assume a stable 2% inflation rateâ€”an assumption that will financially ruin a Pakistani retiree. Our calculator integrates realistic domestic inflation rates and expected portfolio returns to deliver a foolproof accumulation target.
-            </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">
-                <div className="bg-slate-50 p-5 rounded-3xl border border-slate-100 flex items-center gap-4">
-                    <span className="text-3xl px-2">ğŸ“‰</span>
-                    <div><strong className="block text-slate-900">Inflation-Adjusted Projections</strong></div>
-                </div>
-                <div className="bg-slate-50 p-5 rounded-3xl border border-slate-100 flex items-center gap-4">
-                    <span className="text-3xl px-2">â³</span>
-                    <div><strong className="block text-slate-900">Life Expectancy Modeling</strong></div>
-                </div>
-                <div className="bg-slate-50 p-5 rounded-3xl border border-slate-100 flex items-center gap-4">
-                    <span className="text-3xl px-2">ğŸ¯</span>
-                    <div><strong className="block text-slate-900">Exact Monthly Savings Target</strong></div>
-                </div>
-                <div className="bg-slate-50 p-5 rounded-3xl border border-slate-100 flex items-center gap-4">
-                    <span className="text-3xl px-2">ğŸ’°</span>
-                    <div><strong className="block text-slate-900">Pre & Post Retirement Rates</strong></div>
-                </div>
-            </div>
-
-            <h3>Step-by-Step Guide to Calculating Your Retirement Corpus</h3>
-            <StepGrid steps={[
-                { title: "Input Ages", desc: "Enter your present age and the specific age at which you intend to cease active labor (typically 60)." },
-                { title: "Define Expenses", desc: "Enter your current, comfortable monthly expenditure in PKR." },
-                { title: "Estimate Inflation", desc: "Input the average expected inflation rate over the long term (e.g., 8-10%) and expected return." },
-                { title: "Analyze Corpus", desc: "The calculator reveals the total multi-million rupee fund you need upon retirement day." }
-            ]} />
-
-            <h3>Leveraging VPS and FBR Tax Credits</h3>
-            <p>
-                Intelligent Pakistanis accelerate their retirement corpus by capitalizing on government tax loopholes. The Federal Board of Revenue offers massive tax rebates under Section 62 and 63 of the Income Tax Ordinance for contributing to a Voluntary Pension Scheme (VPS) managed by licensed Asset Management Companies.
-            </p>
-
-            <HighlightBox title="Tax Optimization Strategy" icon="ğŸ’¡" color="blue">
-                By investing up to 20% of your taxable income into a registered VPS, you directly reduce your upfront FBR tax liability. Your injected capital compounds tax-free for decades. Upon retirement, you can withdraw up to 50% of the massive accumulated fund completely tax-free. Use our calculator to determine the exact end-goal, then deploy a VPS to drastically shorten the timeframe to achieve it.
-            </HighlightBox>
-        </ArticleWrapper>
-    );
-}
-
-const RealEstateROIArticle = ({ isUrdu }: { isUrdu: boolean }) => {
-    if (isUrdu) return null;
-
-    return (
-        <ArticleWrapper>
-            <h2>Real Estate ROI Calculator Pakistan 2026: Property Investment Yield</h2>
-            <p>
-                Real estate remains the most sought-after asset class in Pakistan, drawing billions of rupees in local and expatriate investments annually. However, raw capital appreciation alone does not measure a property's true profitability. Our <strong>Real Estate ROI Calculator Pakistan</strong> mathematically dismembers your property investments, enabling you to calculate exact rental yields, annualized capital gains, and net return on investment (ROI) after FBR (Federal Board of Revenue) transfer taxes and maintenance costs.
-            </p>
-
-            <HighlightBox title="Data-Driven Reality" icon="ğŸ " color="blue">
-                Whether you target commercial plazas in DHA Lahore, residential plots in Bahria Town Rawalpindi, or high-rise apartments in Karachi, estimating your authentic returns is notoriously difficult. Developers often advertise grossly inflated ROI figures. We built this calculator to strip away the marketing hype and present the unvarnished financial truth.
-            </HighlightBox>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">ğŸ—ï¸</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">Total Expense Integration</strong>
-                        <span className="text-xs text-slate-500">Factors in acquisition costs including stamp duties, CVT, and agent commissions.</span>
-                    </div>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">ğŸ’°</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">Rental Yield Engine</strong>
-                        <span className="text-xs text-slate-500">Discover pure cash flow potential comparing Gross vs Net Rental Yield.</span>
-                    </div>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">ğŸ“ˆ</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">Capital Gains Projection</strong>
-                        <span className="text-xs text-slate-500">Model annualized appreciation rates based on historical localized data.</span>
-                    </div>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">ğŸ“„</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">FBR CGT Analysis</strong>
-                        <span className="text-xs text-slate-500">Understand how holding periods dictate your Capital Gain Tax liability.</span>
-                    </div>
-                </div>
-            </div>
-
-            <h3>Step-by-Step Guide to Calculating Property ROI</h3>
-            <StepGrid steps={[
-                { title: "Determine Acquisition Cost", desc: "Input the base property price plus all immediate transfer and registry expenses." },
-                { title: "Estimate Rental Income", desc: "Input the gross rent you expect to collect from tenants every month." },
-                { title: "Account for Maintenance", desc: "Input society fees, property taxes, and expected repair budgets." },
-                { title: "Set Target Sale Price", desc: "Estimate the future selling price after your planned holding period." }
-            ]} />
-
-            <h3>Latest FBR Taxes on Real Estate in Pakistan (2025-26)</h3>
-            <HighlightBox title="Filer vs Non-Filer Gap" icon="âš–ï¸" color="rose">
-                The FBR heavily penalizes non-filers in property transactions, often charging upwards of 10% compared to 3% for active filers. Additionally, Capital Gains Tax (CGT) operates on a sliding scaleâ€”selling within the first year incurs a steep 15% CGT, while holding beyond six years can lead to total exemption.
-            </HighlightBox>
-
-            <HighlightBox title="Professional Standard" icon="ğŸ›¡ï¸" color="slate">
-                Amateur investors ignore the debilitating effects of inflation and compounded taxation. Our calculator enforces a professional institutional standard, ensuring you protect your capital and execute highly profitable acquisitions.
-            </HighlightBox>
-        </ArticleWrapper>
-    );
-}
-
-const ProvidentFundArticle = ({ isUrdu }: { isUrdu: boolean }) => {
-    if (isUrdu) return null;
-
-    return (
-        <ArticleWrapper>
-            <h2>Provident Fund Calculator Pakistan 2026: Employee PF Balance & Rules</h2>
-            <p>
-                For millions of corporate professionals across Pakistan, the Provident Fund (PF) serves as the primary, and often sole, vehicle for retirement wealth accumulation. Understanding the exact growth trajectory of this fund is critically important. Our <strong>Provident Fund Calculator Pakistan</strong> precisely projects your final accumulated PF balance, thoroughly factoring in employer matching, your monthly deductions, and the compounded annual interest rate applied to your account.
-            </p>
-
-            <HighlightBox title="Take Control of Your Data" icon="ğŸ“Š" color="emerald">
-                Human Resource (HR) departments rarely provide proactive visibility into your developing PF balance. We engineered this calculator to deliver total transparency regarding your monthly paycheck deductions and the ultimate maturity value of your fund.
-            </HighlightBox>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8 not-prose">
-                <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 flex items-start gap-4">
-                    <span className="text-2xl">âš™ï¸</span>
-                    <div><strong className="block text-slate-900 mb-1">Accurate Simulation</strong><span className="text-sm text-slate-600">Enter basic salary to instantly see standard monthly deduction fractions.</span></div>
-                </div>
-                <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 flex items-start gap-4">
-                    <span className="text-2xl">ğŸ¤</span>
-                    <div><strong className="block text-slate-900 mb-1">Employer Matching</strong><span className="text-sm text-slate-600">Automatically integrates the mandatory matching contribution provided by your firm.</span></div>
-                </div>
-                <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 flex items-start gap-4">
-                    <span className="text-2xl">ğŸ”„</span>
-                    <div><strong className="block text-slate-900 mb-1">Dynamic Interest</strong><span className="text-sm text-slate-600">Input rates (12-15%) to model exponential capital growth over decades.</span></div>
-                </div>
-                <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 flex items-start gap-4">
-                    <span className="text-2xl">ğŸ¯</span>
-                    <div><strong className="block text-slate-900 mb-1">Wealth Projection</strong><span className="text-sm text-slate-600">Visualize how early career contributions compound over 30 years.</span></div>
-                </div>
-            </div>
-
-            <h3>Step-by-Step Guide to Calculating Your PF Balance</h3>
-            <StepGrid steps={[
-                { title: "Input Base Salary", desc: "Enter strictly 'Basic Salary' as PF only applies to the basic component." },
-                { title: "Set Deduction Rate", desc: "The standard rate is usually 8.33% or 10%. Select your company's model." },
-                { title: "Add Existing Balance", desc: "If you have an accumulated PF amount, enter the opening balance." },
-                { title: "Define Tenure", desc: "Input the number of years remaining until retirement or resignation." }
-            ]} />
-
-            <h3>Provident Fund Rules and Taxation in Pakistan (2025-26)</h3>
-            <HighlightBox title="FBR Tax Relief" icon="âš–ï¸" color="blue">
-                For a Recognized Provident Fund, employer contributions remain exempt up to 10% of basic salary or PKR 150,000 annually. Crucially, when you withdraw the accumulated balance upon retirement, the entire lump sum is 100% tax-free under current FBR statutes.
-            </HighlightBox>
-
-            <HighlightBox title="Verify Your Savings" icon="ğŸ›¡ï¸" color="slate">
-                Relying entirely on annual HR slips risks exposing you to internal corporate miscalculations. Use this tool to match your employer's contributions and verify the integrity of your hard-earned corporate savings.
-            </HighlightBox>
-        </ArticleWrapper>
-    );
-}
-
-const GratuityArticle = ({ isUrdu }: { isUrdu: boolean }) => {
-    if (isUrdu) return null;
-
-    return (
-        <ArticleWrapper>
-            <h2>Gratuity Calculator Pakistan 2026: End of Service Benefit Rules</h2>
-            <div className="bg-blue-50 p-6 rounded-2xl border border-blue-100 my-6 shadow-sm">
-                <h3 className="text-xl font-bold text-blue-900 mt-0 mb-2">Understanding Gratuity Rules in Pakistan</h3>
-                <p className="text-blue-800 m-0 text-sm">Under the Ù¾Ø§Ú©Ø³ØªØ§Ù†ÛŒ Commercial and Industrial Employment (Standing Orders) Ordinance, 1968, eligible employees are entitled to gratuity upon resignation, retirement, or termination. The standard rule dictates you receive 30 days of wages for every completed year of service, calculated based on your final basic salary. If you have worked for more than 6 months in your final year, it counts as a full year. Use the calculator above to ensure your HR department provides an accurate final settlement.</p>
-            </div>
-            <p>
-                Leaving a company after years of dedicated service entitles you to a mandatory statutory payout. In Pakistan, gratuity serves as a highly vital severance benefit designed to cushion an employee's transition between jobs or into retirement. Our <strong>Gratuity Calculator Pakistan</strong> empowers private-sector employees to forcefully demand their exact legal entitlements by computing the precise payout commanded under current Pakistani labor laws.
-            </p>
-
-            <HighlightBox title="Arm Yourself with Truth" icon="ğŸ“œ" color="amber">
-                Employers systematically exploit employee ignorance regarding end-of-service benefits. We built this calculator to arm you with immediate, irrefutable mathematical truth based on the Industrial and Commercial Employment Ordinance, 1968.
-            </HighlightBox>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
-                    <span className="text-4xl block mb-2">âš–ï¸</span>
-                    <strong className="block text-slate-900">Wage Isolation</strong>
-                    <span className="text-xs text-slate-500">Correctly isolates 'last drawn basic wage' from gross allowances.</span>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
-                    <span className="text-4xl block mb-2">ğŸ“…</span>
-                    <strong className="block text-slate-900">Tenure Benchmarking</strong>
-                    <span className="text-xs text-slate-500">Addresses the 'six-month rounding rule' embedded in labor law.</span>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
-                    <span className="text-4xl block mb-2">âš¡</span>
-                    <strong className="block text-slate-900">Instant Statutory Computation</strong>
-                    <span className="text-xs text-slate-500">Determine what your employer legally owes you in seconds.</span>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
-                    <span className="text-4xl block mb-2">ğŸ›¡ï¸</span>
-                    <strong className="block text-slate-900">Labor Law Compliance</strong>
-                    <span className="text-xs text-slate-500">Ensures your HR department cannot shortchange your payout.</span>
-                </div>
-            </div>
-
-            <h3>Step-by-Step Guide to Calculating Final Gratuity</h3>
-            <StepGrid steps={[
-                { title: "Locate Basic Salary", desc: "Review your payslip. Ignore 'Gross Salary'â€”find the 'Basic Salary' field." },
-                { title: "Count Total Tenure", desc: "If you worked 4 years and 7 months, it counts as 5 complete years." },
-                { title: "View Entitlement", desc: "The calculator applies the 30-day wage formula for every year of service." }
-            ]} />
-
-            <h3>How Pakistan Labor Laws Calculate Gratuity (2025-26)</h3>
-            <p>
-                The calculation is rigid: you receive <strong>30 days of wages for every completed year of service, or any part thereof exceeding six months</strong>. Many organizations unlawfully attempt to calculate gratuity based on 15 days. Our calculator prevents this wage theft by enforcing the strict 30-day formula.
-            </p>
-
-            <HighlightBox title="FBR Tax Exemptions" icon="ğŸ’¡" color="blue">
-                If your employer operates an FBR-Approved Gratuity Fund, your payout is exempt from income tax up to PKR 300,000. For unapproved funds, the exemption drops drastically to PKR 75,000 or 50% of the amount.
-            </HighlightBox>
-        </ArticleWrapper>
-    );
-}
-
-const LoanEMIArticle = ({ isUrdu }: { isUrdu: boolean }) => {
-    if (isUrdu) return null;
-
-    return (
-        <ArticleWrapper>
-            <h2>Loan EMI Calculator Pakistan 2026: Auto & Home Finance (KIBOR)</h2>
-            <p>
-                Committing to a long-term bank loan without ruthlessly calculating the exact amortization schedule is a direct path to financial ruin. In Pakistan's high-interest-rate environment, fluctuating KIBOR rates drastically influence your monthly budget. Our <strong>Loan EMI Calculator Pakistan</strong> executes critical mathematical modeling, delivering the exact Equated Monthly Installment (EMI) you must pay across auto loans, home mortgages, and personal cash finance schemes.
-            </p>
-
-            <HighlightBox title="Preventing Bank Exploitation" icon="ğŸ¦" color="rose">
-                Bank marketing campaigns aggressively advertise flat markups but obscure the true total interest burden. We engineered this tool to instantly rip the veil off banking rhetoric. By calculating both the monthly cash flow requirement and the catastrophic total interest accumulative, we empower you to negotiate from a position of hardened data.
-            </HighlightBox>
-
-            <h3>Core Metrics Revealed</h3>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
-                    <span className="text-4xl block mb-2">ğŸ§®</span>
-                    <strong className="block text-slate-900">Precision Installments</strong>
-                    <span className="text-xs text-slate-500">100% accurate EMI figures based on standard amortization formulas.</span>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
-                    <span className="text-4xl block mb-2">ğŸ“ˆ</span>
-                    <strong className="block text-slate-900">KIBOR + Spread</strong>
-                    <span className="text-xs text-slate-500">Factor the variable KIBOR plus specific bank profit spreads.</span>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
-                    <span className="text-4xl block mb-2">ğŸ’¸</span>
-                    <strong className="block text-slate-900">Total Interest Extracted</strong>
-                    <span className="text-xs text-slate-500">Visually exposes how much extra money the bank takes.</span>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
-                    <span className="text-4xl block mb-2">ğŸ“Š</span>
-                    <strong className="block text-slate-900">Amortization Truth</strong>
-                    <span className="text-xs text-slate-500">Understand what attacks principal versus feeding interest.</span>
-                </div>
-            </div>
-
-            <h3>Step-by-Step Guide to Calculating Your Monthly Payment</h3>
-            <StepGrid steps={[
-                { title: "Set Principal", desc: "Enter the exact PKR value you intend to borrow from the financial institution." },
-                { title: "Input Annual Markup", desc: "Input total interest. If auto loan is KIBOR (12%) + Spread (4%), input 16%." },
-                { title: "Select Tenure", desc: "Input the duration in years (e.g., auto loans up to 5 yrs, home 20 yrs)." },
-                { title: "Analyze Outputs", desc: "Instantly produce your EMI, total interest payable, and total comprehensive repayment." }
-            ]} />
-
-            <h3>Understanding KIBOR and Variable Rate Loans in Pakistan</h3>
-            <p>
-                The vast majority of consumer loans in Pakistan operate on floating interest rates pegged strictly to the KIBOR. When the State Bank of Pakistan hikes the baseline policy rate to combat inflation, KIBOR forcefully follows. Consequently, your seemingly affordable auto loan can rapidly balloon into an unsustainable financial nightmare.
-            </p>
-            <p>
-                When banks offer "fixed-rate" loans, they typically bake in an extensive premium to transfer the inflation risk onto your shoulders. Our EMI calculator demonstrates exactly how a mere 2% hike in the KIBOR rate dramatically alters your monthly cash outflow on a 5-million PKR loan.
-            </p>
-
-            <StyledTable
-                headers={['Loan Metric', 'Impact on You', 'Strategy']}
-                rows={[
-                    [<strong className="text-slate-800">Longer Tenure (e.g., 7 Years)</strong>, 'Lower monthly EMI, but catastrophic total interest paid to the bank.', 'Avoid unless cash flow is critically strained.'],
-                    [<strong className="text-slate-800">Larger Down Payment</strong>, 'Drastically reduces principal balance subject to high KIBOR multiplication.', 'Highly recommended in Pakistanâ€™s high-interest environment.'],
-                    [<strong className="text-slate-800">Fixed vs. Variable Rate</strong>, 'Fixed rates offer predictability but are priced higher upfront.', 'Prefer fixed if SBP rates are at historic lows.']
-                ]}
-            />
-        </ArticleWrapper>
-    );
-}
-
-const ProfitMarginArticle = ({ isUrdu }: { isUrdu: boolean }) => {
-    if (isUrdu) return null;
-
-    return (
-        <ArticleWrapper>
-            <h2>Profit Margin Calculator Pakistan 2026: Markup & Gross Margin Finder</h2>
-            <p>
-                In the fiercely competitive Pakistani retail and wholesale markets, pricing your inventory correctly makes the difference between dominating your sector and filing for bankruptcy. Our dynamic <strong>Profit Margin Calculator</strong> empowers entrepreneurs, dropshippers, and retail merchants to instantly lock in their exact Gross Profit Margin, Net ROI, and Product Markup percentages.
-            </p>
-
-            <HighlightBox title="Scaling Your Business" icon="ğŸš€" color="emerald">
-                Countless startups in Pakistan fail rapidly because founders confuse "markup" with "profit margin." A 50% markup does absolutely not equate to a 50% profit margin. We built this calculator to surgically correct these fatal mathematical errors, ensuring your sales revenue comfortably eclipses your COGS.
-            </HighlightBox>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">â±ï¸</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">Instant Computation</strong>
-                        <span className="text-xs text-slate-500">Discover your exact gross profit margin percentage in seconds.</span>
-                    </div>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">ğŸ’¡</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">Markup vs. Margin</strong>
-                        <span className="text-xs text-slate-500">Prevents disasters by visually separating these two critical metrics.</span>
-                    </div>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">ğŸ”</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">Price Discovery</strong>
-                        <span className="text-xs text-slate-500">Input your target margin and get the exact retail price you must charge.</span>
-                    </div>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">ğŸ“‰</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">Sales Strategy</strong>
-                        <span className="text-xs text-slate-500">Model bulk discounts and flash sales without sacrificing net profit.</span>
-                    </div>
-                </div>
-            </div>
-
-            <h3>Step-by-Step Guide to Calculating Business Profitability</h3>
-            <StepGrid steps={[
-                { title: "Determine COGS", desc: "Enter the total cost to produce or acquire a single unit, including shipping and duties." },
-                { title: "Input Selling Price", desc: "Enter the final retail price you plan to charge the end consumer in Pakistan." },
-                { title: "Analyze Margin & Markup", desc: "The system displays Profit Margin (Profit Ã· Revenue) and Markup (Profit Ã· Cost)." },
-                { title: "Reverse Engineer Pricing", desc: "Input your cost and target margin to find the exact retail price for your tags." }
-            ]} />
-
-            <h3>The Fatal Difference Between Margin and Markup </h3>
-            <HighlightBox title="Mathematical Reality" icon="âš ï¸" color="rose">
-                <strong>Markup</strong> tracks added value on top of cost. If you buy for 1,000 and sell for 1,500, markup is 50%. However, your <strong>Profit Margin</strong> tracks profit as a percentage of revenueâ€”in this case, only 33.3%. Confusing the two can lead to destructive discounting that wipes out your capital.
-            </HighlightBox>
-
-            <HighlightBox title="Guarantee Success" icon="ğŸ›¡ï¸" color="slate">
-                Whether you run a Shopify store or a physical general store, pricing integrity dictates survival. Establish ironclad pricing floors and protect your cash flow today.
-            </HighlightBox>
-        </ArticleWrapper>
-    );
-}
-
-const UnitConverterArticle = ({ isUrdu }: { isUrdu: boolean }) => {
-    if (isUrdu) return null;
-
-    return (
-        <ArticleWrapper>
-            <h2>Unit Converter Pakistan: Localized Area & Weight Measurements</h2>
-            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 my-6 shadow-sm">
-                <h3 className="text-xl font-bold text-slate-900 mt-0 mb-2">Understanding Pakistani Land Measurements (2025-26)</h3>
-                <p className="text-slate-700 m-0 text-sm">In Pakistan's real estate sector, traditional land units are still the standard. Whether you are dealing in agricultural land or residential plots, knowing the exact conversions is crucial. For quick reference: 1 Murabba equals exactly 25 Acres or 200 Kanals. Consequently, 1 Kanal equals 20 Marlas. Our calculator above uses these standard Pakistani revenue department metrics to ensure your property transactions and area calculations are 100% accurate.</p>
-            </div>
-            <p>
-                Pakistan utilizes a unique, hybrid system of both imperial and traditional localized measurements. Our <strong>Unit Converter Pakistan</strong> effortlessly bridges this gap, providing flawless instant conversions customized specifically for Pakistani geographical standards.
-            </p>
-
-            <HighlightBox title="Outperforming Generic Tools" icon="ğŸ“" color="blue">
-                Generic international unit converters completely omit Pakistani-specific units like Tolas, Murabbas, and Kanals. They fail to understand localized variations, such as the Lahore vs. Islamabad Marla. We built this tool to integrate exact parameters legally enforced by Pakistani land registries.
-            </HighlightBox>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">ğŸ¡</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">Land Units</strong>
-                        <span className="text-xs text-slate-500">Convert between Marla, Kanal, Murabba, Acre, and Gaz (Sq Yard).</span>
-                    </div>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">ğŸ…</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">Metals Weight</strong>
-                        <span className="text-xs text-slate-500">Pinpoint Gold/Silver conversions from Tolas/Mashas into Grams.</span>
-                    </div>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">âš¡</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">Instant Output</strong>
-                        <span className="text-xs text-slate-500">Enter one value and view equivalents across five metrics simultaneously.</span>
-                    </div>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">âš–ï¸</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">High Precision</strong>
-                        <span className="text-xs text-slate-500">Absolute mathematical rigor to prevent rounding errors in large transactions.</span>
-                    </div>
-                </div>
-            </div>
-
-            <h3>Step-by-Step Guide to Using the Unit Converter</h3>
-            <StepGrid steps={[
-                { title: "Select Category", desc: "Choose between 'Area' for property, 'Land' for agriculture, or 'Weight' for bullion." },
-                { title: "Input Base Value", desc: "Type the numerical amount you possess (e.g., 5.5 for five and a half Marlas)." },
-                { title: "Observe Conversion", desc: "The engine immediately populates all corresponding output fields with zero delay." }
-            ]} />
-
-            <h3>Understanding Key Pakistani Measurements (2025 Standard)</h3>
-            <HighlightBox title="The Marla Conundrum" icon="ğŸ—ï¸" color="amber">
-                Navigating the property market requires caution. Rural Punjab uses 272.25 sq ft per Marla, while societies like DHA and Bahria Town use exactly 225 sq ft. Our calculator navigates both standards.
-            </HighlightBox>
-
-            <HighlightBox title="Gold Bullion Metrics" icon="âœ¨" color="slate">
-                Gold in Pakistan is traded in 'Tola' (11.6638 grams). When jewellers quote prices per 10 grams, use our calculator to locate the precise Tola equivalent and avoid fractional weight errors.
-            </HighlightBox>
-        </ArticleWrapper>
-    );
-}
-
-const BMIArticle = ({ isUrdu }: { isUrdu: boolean }) => {
-    if (isUrdu) return null;
-
-    return (
-        <ArticleWrapper>
-            <h2>BMI Calculator Pakistan 2026: Adult Body Mass Index Checker</h2>
-            <p>
-                Maintaining a healthy weight remains essential to combat lifestyle illnesses like diabetes and hypertension. Our <strong>BMI Calculator Pakistan</strong> delivers an immediate assessment based on WHO and local Asian demographic standards.
-            </p>
-
-            <HighlightBox title="Protecting Long-Term Health" icon="ğŸ¥" color="emerald">
-                This clinical-grade calculator instantly processes your biometrics, bypassing complex manual division. We've optimized it for the South Asian body type, which faces clinical risk factors at slightly lower BMI points.
-            </HighlightBox>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8 not-prose">
-                <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 flex items-start gap-4">
-                    <span className="text-2xl">ğŸ“‰</span>
-                    <div><strong className="block text-slate-900 mb-1">Risk Stratification</strong><span className="text-sm text-slate-600">Instantly discover if you fall into Underweight, Normal, or Obese categories.</span></div>
-                </div>
-                <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 flex items-start gap-4">
-                    <span className="text-2xl">ğŸ”„</span>
-                    <div><strong className="block text-slate-900 mb-1">Dual Input Systems</strong><span className="text-sm text-slate-600">Seamlessly use Metric (kg/m) or Imperial (lbs/ft) systems.</span></div>
-                </div>
-            </div>
-
-            <h3>Step-by-Step Guide to Calculating Your BMI</h3>
-            <StepGrid steps={[
-                { title: "Select Variables", desc: "Choose whether you want to calculate via cm/kg or feet/lbs." },
-                { title: "Measure Height", desc: "Stand barefoot against a wall. Measure your height precisely." },
-                { title: "Input Weight", desc: "Weigh yourself in the morning for best accuracy and enter it." },
-                { title: "Review Results", desc: "Click calculate to see your index numeral and clinical health category." }
-            ]} />
-
-            <h3>The WHO BMI Classifications</h3>
-            <StyledTable
-                headers={['Category', 'BMI Range', 'Risk Assessment']}
-                rows={[
-                    [<strong className="text-blue-600">Underweight</strong>, '< 18.5', 'Possible malnutrition or deficiency.'],
-                    [<strong className="text-emerald-600">Normal</strong>, '18.5 - 24.9', 'Optimal fat-to-muscle ratio.'],
-                    [<strong className="text-amber-600">Overweight</strong>, '25.0 - 29.9', 'High risk for Type-2 Diabetes in Pakistan.'],
-                    [<strong className="text-rose-600">Obese</strong>, '> 30.0', 'Demand immediate medical/lifestyle intervention.']
-                ]}
-            />
-
-            <HighlightBox title="Baseline Screening" icon="ğŸ›¡ï¸" color="slate">
-                While BMI doesn't distinguish between muscle and fat, it remains the most effective baseline tool for 95% of the population to monitor long-term health survivability.
-            </HighlightBox>
-        </ArticleWrapper>
-    );
-}
-
-const CGPAArticle = ({ isUrdu }: { isUrdu: boolean }) => {
-    if (isUrdu) return null;
-
-    return (
-        <ArticleWrapper>
-            <h2>CGPA Calculator Pakistan: HEC Standard Semester GPA Tool</h2>
-            <p>
-                Navigating the intense academic rigor of Pakistani universities requires aggressive tracking of your Cumulative Grade Point Average (CGPA). Our <strong>HEC Standard CGPA Calculator</strong> instantly computes your semester gradients, ensuring you dominate your academic trajectory.
-            </p>
-
-            <HighlightBox title="Guarantee Grade Accuracy" icon="ğŸ“" color="blue">
-                Different universities (NUST, FAST, LUMS, PU) employ slightly varying GPA matrices, but they uniformly adhere to the overarching 4.0 grading scale mandated by the HEC. We built this tool specifically to streamline the chaotic process of calculating complex weighted averages.
-            </HighlightBox>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">ğŸ“Š</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">Multi-Semester</strong>
-                        <span className="text-xs text-slate-500">Seamlessly input multiple terms to calculate a unified, cumulative output.</span>
-                    </div>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">âš–ï¸</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">Credit-Hour Weighting</strong>
-                        <span className="text-xs text-slate-500">Heavily weights core subjects while diminishing minor labs.</span>
-                    </div>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">ğŸ”„</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">SGPA vs CGPA</strong>
-                        <span className="text-xs text-slate-500">Differentiate vividly between semester and overarching averages.</span>
-                    </div>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">ğŸ¯</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">Target GPA Modelling</strong>
-                        <span className="text-xs text-slate-500">Reverse-engineer what you must score to hit graduation thresholds.</span>
-                    </div>
-                </div>
-            </div>
-
-            <h3>Step-by-Step Guide to Calculating Your CGPA</h3>
-            <StepGrid steps={[
-                { title: "Add Semester Blocks", desc: "Click to inject a new semester block for every respective term completed." },
-                { title: "Enter SGPA", desc: "Input the exact GPA you earned during that specific semester." },
-                { title: "Input Credit Hours", desc: "Enter the combined number of credit hours you successfully passed." },
-                { title: "Calculate Totals", desc: "The engine merges the data and outputs your precise current standing out of 4.0." }
-            ]} />
-
-            <h3>How HEC Calculates Grades in Pakistan (2025-26)</h3>
-            <HighlightBox title="Weighting Mechanism" icon="ğŸ’¡" color="emerald">
-                The formula is strict: <strong>CGPA = Total Quality Points Ã· Total Credit Hours Attempted</strong>. Quality points are generated by multiplying grade value (A=4.0, B=3.0) by the course's credit hours. A 4-credit course heavily manipulates your GPA compared to a 1-credit lab.
-            </HighlightBox>
-
-            <HighlightBox title="Mandatory Tracking" icon="ğŸ›¡ï¸" color="slate">
-                University portals frequently delay updates or contain entry errors. Preemptively run your anticipated marks through our calculator to identify discrepancies and appeal grading errors before the deadline.
-            </HighlightBox>
-        </ArticleWrapper>
-    );
-}
-
-const GradeArticle = ({ isUrdu }: { isUrdu: boolean }) => {
-    if (isUrdu) return null;
-
-    return (
-        <ArticleWrapper>
-            <h2>Grade Calculator Pakistan: Board Exam Marks to Grade Converter</h2>
-            <p>
-                Our <strong>Grade Calculator Pakistan</strong> decisively eliminates stress during board results, instantly converting numerical marks from any BISE board format into standardized A+, A, B, or C letter gradings.
-            </p>
-
-            <HighlightBox title="Empowering Students" icon="âœ¨" color="amber">
-                Pakistani universities and international scholarship boards demand alphabetical classifications. We developed this rapid-fire calculator to process numerical inputs adhering to BISE (Lahore, Federal, Karachi, etc.) standardized metrics.
-            </HighlightBox>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8 not-prose">
-                <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 flex items-start gap-4">
-                    <span className="text-2xl">âš¡</span>
-                    <div><strong className="block text-slate-900 mb-1">Instant Classification</strong><span className="text-sm text-slate-600">Transform numerical strings into a recognizable final letter grade.</span></div>
-                </div>
-                <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 flex items-start gap-4">
-                    <span className="text-2xl">ğŸ“ˆ</span>
-                    <div><strong className="block text-slate-900 mb-1">Universal Compatibility</strong><span className="text-sm text-slate-600">Works across Matric (SSC) and Intermediate (HSSC) scaling matrices.</span></div>
-                </div>
-            </div>
-
-            <h3>Step-by-Step Guide to Calculating Your Letter Grade</h3>
-            <StepGrid steps={[
-                { title: "Locate Total Marks", desc: "Confirm the maximum marks available (usually 1100, 1050, or 850)." },
-                { title: "Find Obtained Marks", desc: "Verify the combined total of marks secured across all core subjects." },
-                { title: "Execute Calculation", desc: "The system filters your percentage against the official nationwide grading tier." }
-            ]} />
-
-            <h3>The Official Board Grading Scale in Pakistan</h3>
-            <StyledTable
-                headers={['Percentage Range', 'Letter Grade', 'Performance Assessment']}
-                rows={[
-                    [<strong className="text-emerald-700">80% or Above</strong>, <span className="text-emerald-600 font-bold">A+ (A-One)</span>, 'Outstanding'],
-                    [<strong className="text-blue-700">70% to 79.9%</strong>, <span className="text-blue-600 font-bold">A</span>, 'Excellent'],
-                    [<strong className="text-amber-700">60% to 69.9%</strong>, <span className="text-amber-600 font-bold">B</span>, 'Very Good'],
-                    [<strong className="text-slate-700">50% to 59.9%</strong>, <span className="text-slate-600 font-bold">C</span>, 'Good'],
-                    [<strong className="text-rose-700">Below 40%</strong>, <span className="text-rose-600 font-bold">F</span>, 'Fail']
-                ]}
-            />
-        </ArticleWrapper>
-    );
-}
-
-const MarkPercentageArticle = ({ isUrdu }: { isUrdu: boolean }) => {
-    if (isUrdu) return null;
-
-    return (
-        <ArticleWrapper>
-            <h2>Marks Percentage Calculator Pakistan: Exam Ratio Finder</h2>
-            <div className="bg-blue-50 p-6 rounded-2xl border border-blue-100 my-6 shadow-sm">
-                <h3 className="text-xl font-bold text-blue-900 mt-0 mb-2">How to Calculate Your BISE Exam Percentage</h3>
-                <p className="text-blue-800 m-0 text-sm">Whether you are waiting for your Matric (SSC) or Intermediate (HSSC) results from any Punjab, Sindh, or Federal board, knowing your exact percentage is crucial for university admissions. The formula is simple: divide your Obtained Marks by the Total Marks, and multiply by 100. Instead of doing manual math during the stress of result day, simply enter your numbers above to instantly find out if you secured an A+ grade.</p>
-            </div>
-            <p>
-                A tiny fraction of a percentage frequently determines whether you secure admission into a top-tier medical college (MDCAT) or engineering university (NUST/UET). Our <strong>Marks Percentage Calculator</strong> provides mathematically infallible conversion of raw scores.
-            </p>
-
-            <HighlightBox title="Academic Strategy" icon="ğŸ¯" color="blue">
-                During high-pressure result days, manual calculation leads to errors. We engineered this high-speed, mobile-optimized tool to act as your primary numerical verifier for everything from 20-mark quizzes to 1100-mark board exams.
-            </HighlightBox>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">ğŸ”¢</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">Fractional Accuracy</strong>
-                        <span className="text-xs text-slate-500">Calculate up to two critical decimal points (e.g., 88.45%).</span>
-                    </div>
-                </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
-                    <span className="text-3xl">ğŸ› ï¸</span>
-                    <div>
-                        <strong className="block text-slate-900 mb-1">Absolute Flexibility</strong>
-                        <span className="text-xs text-slate-500">No hardcoded limitsâ€”works for any quiz or comprehensive exam.</span>
-                    </div>
-                </div>
-            </div>
-
-            <h3>Step-by-Step Guide to Calculating Raw Percentage</h3>
-            <StepGrid steps={[
-                { title: "Determine Maximum", desc: "Enter the highest number of marks available for the exam or syllabus." },
-                { title: "Input Accumulated Marks", desc: "Type in the precise number of marks you actively achieved." },
-                { title: "Analyze Ratio", desc: "The system instantly outputs the percentage by solving the core equation." }
-            ]} />
-
-            <h3>Why Precise Percentages Matter for Merit Calculation</h3>
-            <p>
-                In Pakistan, "Merit" is everything. From medical colleges (MDCAT) to engineering universities like NUST and UET, a difference of even 0.01% can change your future. Our tool ensures you have the exact decimal figure for your aggregate calculations.
-            </p>
-
-            <div className="bg-slate-50 border border-slate-100 p-8 rounded-[2.5rem] my-10">
-                <h4 className="font-bold text-slate-900 mb-4 text-center">Common Total Marks Reference</h4>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                    <div className="text-center">
-                        <span className="block text-2xl font-black text-blue-600">850</span>
-                        <span className="text-xs text-slate-500 uppercase font-bold">9th / 10th (KPK)</span>
-                    </div>
-                    <div className="text-center">
-                        <span className="block text-2xl font-black text-blue-600">1050</span>
-                        <span className="text-xs text-slate-500 uppercase font-bold">Federal Board</span>
-                    </div>
-                    <div className="text-center">
-                        <span className="block text-2xl font-black text-blue-600">1100</span>
-                        <span className="text-xs text-slate-500 uppercase font-bold">Punjab Boards</span>
-                    </div>
-                </div>
-            </div>
-
-            <HighlightBox title="Numerical Merit" icon="âš–ï¸" color="rose">
-                Pakistani admissions infrastructure operates on brutal numerical formulas. Universities deploy "Aggregate Formulas" that heavily weight board exam and MDCAT percentages. In this environment, a 0.2% rounding error can be the difference between admission and rejection.
-            </HighlightBox>
-
-            <HighlightBox title="Secure Your Future" icon="ğŸ›¡ï¸" color="slate">
-                Rely entirely on our specialized Marks Percentage Calculator to extract the exact, unrounded decimal figure you need to execute your university admission strategy and secure your academic progression.
-            </HighlightBox>
-        </ArticleWrapper>
-    );
-}
+import React from 'react';  
+interface ToolArticleProps {                 
+    isUrdu: boolean;   
+                                                                              
+    // We use a switch statement to render the highly-optimized SEO article per tool                   
+        case 'income-tax':                                                          
+        case 'zakat':                                                      
+        case 'freelancer-tax':                                                              
+        case 'investment-return':                                                                 
+        case 'retirement-plan':                                                               
+        case 'real-estate-roi':                                                              
+        case 'provident-fund':                                                              
+        case 'gratuity':                                                         
+        case 'loan-emi':                                                        
+        case 'profit-margin':                                                             
+        case 'unit-converter':                                                              
+        case 'bmi':                                                    
+        case 'cgpa-calc':                                                     
+        case 'grade-calc':                                                      
+        case 'mark-percentage':                                                               
+        default:                          
+    }    
+                                                                           
+    <article className="w-full mt-12 p-8 md:p-12 bg-white/70 backdrop-blur-xl border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[2.5rem] relative overflow-hidden group">                                                                                                                                                                                    
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-500/5 rounded-full blur-[60px] -ml-24 -mb-24 transition-opacity group-hover:opacity-100 opacity-50 z-0"></div>                                                                                                                                                                                                                                                                                                                                                                                                          
+            {children}                
+    </article>    
+                                                                               
+    const colorMap: any = {                                                                       
+        blue: 'bg-blue-50 border-blue-100 text-blue-900',                                                               
+        rose: 'bg-rose-50 border-rose-100 text-rose-900',                                                              
+    };              
+        <div className={`p-6 rounded-3xl border mb-8 ${colorMap[color]} shadow-sm`}>                                                                                                                        
+            <div className="text-sm leading-relaxed opacity-90">{children}</div>                
+    );    
+                                                                                 
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8 not-prose">                                   
+            <div key={i} className="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm relative overflow-hidden group hover:border-emerald-200 transition-colors">                                                                                                                                                                                                                                             
+                    {i + 1}                        
+                <h4 className="font-bold text-slate-900 mb-2">{step.title}</h4>                                                                           
+            </div>             
+    </div>    
+                                                                                                           
+    <div className="overflow-x-auto my-8 bg-white rounded-3xl border border-slate-100 shadow-sm not-prose">                                                          
+            <thead className="bg-slate-50 border-b border-slate-100 text-slate-500">                      
+                    {headers.map((h, i) => <th key={i} className="p-4 font-bold">{h}</th>)}                       
+            </thead>                                                          
+                {rows.map((row, i) => (                                                                                     
+                        {row.map((cell, j) => <td key={j} className="p-4 text-slate-700">{cell}</td>)}                           
+                ))}                      
+        </table>            
+);  
+const IncomeTaxArticle = ({ isUrdu }: { isUrdu: boolean }) => {                   
+        return (                              
+                <h2>Ø †Ú … Ù ŒÚ ³ Ú ŒÙ ©Ù „Û ¹Ø        ªØ ²Û  ªØ ŒÙ  §Û  Ø Œ Ø ± Ø „Û ¨Ø  ©Û  …Ø §Ø ‚</h2>                     
+                    Ù §Ú ³Ø §Ù  …Û º Ø †Ø ˆØ  Ø §Ø  §Ù ± Ú §Ø ˆØ §Ø Œ Ø Ø §Ø  ©Û  „Û ’ Ø †Ú … Ù ŒÚ ³ Ú § Ø ³Ø ¨ Ú ªØ ¨ Ú ±Ù § Ø ŒÚ  ¾Û †Û ¯Û  ¹Ù „ Û ˆ Ø ©Ø § Û ’Û  
+                    Û …Ø ±Ø          §Ù ©Ù  ¹Û ©Ø  ©Û „Ú ˆÙ ŒÙ ± 2025-2026</strong> Ø ¾ Ú ˆ Ø ³ Ù ±Û ´Ø †Û  ³Û  ¨Ú §Ø § Û ’Û  
+                    Ø ŒÙ  ¨Û  ¢Ø   Û ˆØ „ Ø ˆØ ˆ Ø  Ø ŒÙ †Û ˆ) Ú ’ Ø §Ø  Ø ±Û † Ù ˆØ †Û † Ø ˆØ  ¹Û ©Ø  ³Ù ŒØ ³ Ú ’ Ø ŒÙ  …Ø §Ø ‚Ø  
+                    Û  Ù ˆÙ  †Ù ¯ Ø ŒÚ †Ú ² Ù ŒÚ  ¢Ù  ©Û  …Ø Ø †Û  §Ù ± Ø §Ù §Ù  Ú ¹Ù ªÛ  ©Ù  ¸Ø Ø  ©Ø  ¯Û ªØ  Û ”                      
+                <p>                     †Ø Û  ¢Ù  ªÙ ®Ù §Û  ¯Ø ± Ø ¨Ù ’ (Salaried) Ø ’ Ø ¹Ù ‚ Ø ©Ú ªÛ  Ù º Û § Ø ¾ Ú § Ø ¾Ù § Ú §Ø ˆØ §Ø                 Ù Œ                     ¢Ù  ©Ù  µØ  Ø ¾Ù Œ Ù §Û §Ù  Ø …Ø †Û  ¯Ø ¬ Ú ±Ù Œ Û ’Û  ©Û „Ú ˆÙ ŒÙ ± Ø ˆØ  ¨Ø ˆØ  ¹Û ©Ø  ©Û  †Ú ˆÙ  §Ù ± Ù §Ú ˆ Ø „Û ¨ Ú ˆ Ù ¯Ù ¸Ø  ±Ú ¾Ø ’ Û ˆØ ’ Ø ±Ø ª Ù ªÛ ¬Û  Ø §Û … Ú ±Û  ¯Ø ”                      
+                <h3>Û  Ú ŒÙ ©Ù „Û ¹Ø  ©Û ³Û  ©Ø … Ú ±Ø § Û ’Ø       
+                <p>                     Ù  †Û  §Ø  ¹Ù „ Ú ˆ Ø †Ø Ø ¦Û  ³Ø ¯Û  §Ù ± Ø ³Ø ¹Ù §Ù  …Û º Ø ³Ø † Ø †Ø ŒØ  Û ”                     ¢Ù  §Ù †Û  …Ø Ø †Û  ¢Ù ¯Ù Œ Ø ±Ø  ©Ø ªÛ  Û ºØ  §Ù ± Û …Ø ±Ø  ¬Ø ŒØ  §Ù ¯Ù ±Ø ¾Ù  ¯Ø ¬ Ø ŒÙ  §Ù ¯Ø …Ø ª Ú ±Ø § Û ’:                      
+                <ul>                                 ¢Ù ¯Ù Œ Ú § Ø ³Ø ¨:</strong> Ø ¾ Ú Œ Ù §Û §Ù  Ø …Ø †Û  ©Ù  ³Ø „Ø †Û  ¢Ù ¯Ù Œ Ù ŒÚ  ªØ ¯Û „ Ú ± Ú ’ Ù ©Ù „ Ø §Ø ²Û  „Û ªØ  Û ”</li>                                 ¹Û ©Ø  ³Ù ŒØ  ©Ø  §Ø „Ø ‚:</strong> Ø ŒÙ  ¨Û  ¢Ø  ©Û  ³Ø „ 2025-26 Ú ’ Ú ¾ Ù ®Ø „Ù  ¹Û ©Ø  ³Ù ŒØ ³ Ù ŒÚ  ¢Ù  ©Û  ¢Ù ¯Ù Œ Ú ’ Ù ·Ø ¨Ù  ±Û ¹ Ù ¯Ø ªØ  Û ”</li>                                 §Ø ªØ †Û ° (Exemptions):</strong> Ø ©Ù …Ø  ©Û  ·Ø  Ø ’ Ø Œ Ú ¦Û          ±Ù ¾Û  ³Ø „Ø †Û  ©Û  §Ø ªØ §Ø Œ Ú ¾Ù ¹ Ù †Û § Ú ± Ú ’ Ù §Ø „Ù  ¹Û ©Ø  ¢Ù ¯Ù Œ Ù ©Ø „Ø § Û ’Û       
+                </ul>                     ³Ø „ 2025-26 Ú ’ Ù ŒÛ  §Û  Ø Œ Ø ± Ú ’ Ù ¦Û  ³Ù ŒØ ³</h3>                     
+                    Ø ŒÙ  ¨Û  ¢Ø  Ø  ³Ø „ Ù †Ø †Ø  ¨Ù  ©Û  °Ø ŒØ ’ Ù ¦Û  ¹Û ©Ø  ³Ù ŒØ  …Ø ¹Ø ±Ù  ©Ø ˆØ ªØ  Û ”                     ªØ ²Û  ªØ ŒÙ  ‚Ù §Ù ŒÙ  ©Û  ªØ ªØ  §Ú ± Ø ¾ Ú Œ Ø §Ù §Ù  Ø …Ø †Û    „Ø ©Ú  ±Ù ¾Û   ŒØ †Û     Ø §Ø  ±Ù ¾Û  …Ø Ø †Û   ªÚ  Û Œ Ø ˆ Ø ¾ Ú ˆ Ú ˆØ Œ Ù ŒÚ ³ Ø ¯Ø  †Û ŒÚ  ©Ø †Ø ”                     §Ø  ³Û  ²Û §Ø  Ø …Ø †Û  ¾Ø    Û µØ  ³Û  „Û  ©Ø     Û µØ  ªÚ  ¹Û ©Ø  ©Û  ´Ø ­ Ù §Ú ˆ Û ˆØ Œ Û ’Û  
+                    Û …Ø ±Ø  †Ø §Ù  ±Ù ²Ø †Û  ©Û  ¨Ù ŒØ ¯ Ù ± Ø ¾ Ú ŒÙ  Ù ªØ  Û Œ Ù Ù °Ø  ¢Ù  ©Ù  ©Ù ¦Û  ¾Ø §Ù § Ø ˆØ  ºÙ · Ù ªÛ ¬Û  †Û ŒÚ  …Ù ’ Ú §Û  
+                </p>                     §Ù ©Ù  ¹Û ©Ø  ©Û „Ú ˆÙ ŒÙ ± Ø ³Ø ¹Ù §Ù  ©Ø †Û  ©Û    ¨Ú ’ Ù ˆØ ¦Ø       
+                <ol>                                 ˆÙ ª Ú Œ Ø †Ø            ·Ù ŒÙ  ©Ø ºØ Œ Ø ³Ø ¨ Ú ªØ ¨ Ø ’ Ú ¾Ù ©Ø ±Ø ”</li>                                 ³Ù  Û µØ  ¯Ø ³Ø ¯Û            §Ù ³Ø †Û  ºÙ ·Û  ©Ø  ©Ù ¦Û  §Ù ©Ø † Ù Û ºÛ       
+                    <li><strong>Ø ¬Ù  ©Û  …Ù µÙ ¨Û  ¨Ù ¯Û            ¹Û ©Ø  ©Ù ˆØ Œ Ú § Ù Ù ’ Ø ’ Ø „Ù  Ù †Û  ³Û  ¢Ù  §Ù †Û  …Ø Ø †Û  §Ø ±Ø ¬Ø ª Ø Ø ± Ù „Ø † Ú ± Ø ©Ø ’ Û ŒÚ ”</li>                                 …Ù ¨Ø ¦Ù  Ø ŒÙ ˆÙ Œ:</strong> Ø ¾Ù ’ Ù ˆÙ  ¾Ø  ©Û ŒÚ  ¨Ú Œ Ø ³Ø ¹Ù §Ù  ©Ø ŒÚ ”</li>                                 ¨Ø „Ú „ Ù Ø            §Ø  ³Ø ˆØ  ©Ø  ©Ù ¦Û  ¾Ù ´Û ¯Û  †Ø ±Ø  †Û ŒÚ  Û ”</li>                       
+                <p>                     ¢Ø  Û  §Ù †Û  ¢Ù ¯Ù Œ Ú Œ Ø ±Ø ªÚ Œ Ú ’ Ø §Ø ¾ Ø §Ù † Ù ‘Ø §Ù  ©Ø ŒÚ  §Ù ± Ø ŒÙ  ¨Û  ¢Ø  ©Û  ‚Ù §Ø ¯ Ú ’ Ù ·Ø ¨Ù  §Ù †Û  ¹Û ©Ø  ©Û  ´Ù §Ù  §Ø §Ø ŒÚ Œ Ú ˆ Û ‚Û †Û  ¨Ù §Ø ŒÚ ”                      
+            </ArticleWrapper>            
+    }  
+    return (                          
+            <h2>Income Tax Calculator Pakistan 2026: Accurate FBR Tax Slabs</h2>                 
+                Navigating the complex landscape of taxation in Pakistan can daunt even the most experienced professionals. You need a reliable, fast, and 100% accurate tool to calculate your exact tax liabilities. Our <strong>Income Tax Calculator Pakistan 2025-2026</strong> empowers salaried and non-salaried individuals to determine their monthly and annual income tax instantly. We base all calculations directly on the latest Federal Board of Revenue (FBR) finance acts and official tax slabs.                  
+                                                                   œ                    
+                By inputting your monthly salary, our sophisticated algorithm instantly breaks down your take-home pay, monthly tax deduction, and annual tax liability. Our system automatically processes the 600,000 PKR basic exemption limit and applies the progressive marginal tax rates.                             
+                                                                                      
+                                                                                    
+                <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 flex items-start gap-4">                                                ŸŠ</span>                                                                                                                                                                                                                               
+                </div>                                                                                                              
+                    <span className="text-2xl">ğ”         
+                    <div><strong className="block text-slate-900 mb-1">Updated FBR Slabs</strong><span className="text-sm text-slate-600">We continually update our database whenever the FBR announces new tax slab adjustments.</span></div>                        
+                <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 flex items-start gap-4">                                                Ÿ±</span>                                                                                                                                                                                                     
+                </div>                                                                                                              
+                    <span className="text-2xl">ğ“         
+                    <div><strong className="block text-slate-900 mb-1">Interactive Vitals</strong><span className="text-sm text-slate-600">Understand your gross versus net income instantly.</span></div>                        
+            </div>  
+            <h3>Step-by-Step Guide to Calculating Your Income Tax</h3>                                
+                { title: "Enter Gross Salary", desc: "Input the total amount you earn before any deductions include basic salary, allowances, and bonuses." },                                                                                                                                                                 
+                { title: "Analyze Breakdown", desc: "Observe the exact tax slab you fall into and see the precise percentage applied." },                                                                                                                           
+            ]} />  
+            <h3>Latest FBR Income Tax Rules for Salaried Persons (2025-2026)</h3>                 
+                The Federal Board of Revenue enforces specific progressive tax rates for the fiscal year 2025-26. If your annual salary falls below PKR 600,000 (PKR 50,000 monthly), you remain entirely exempt from income tax. Active filers must submit their annual tax returns to claim this legitimacy.                  
+                          
+                headers={['Taxable Income (PKR)', 'Rate of Tax']}                         
+                    ['Up to 600,000', <span className="text-emerald-600 font-bold">0% (Exempt)</span>],                                                                                     
+                    ['1,200,001 to 2,200,000', 'Rs. 30,000 + 15% of the amount exceeding 1,200,000'],                                                                                                        
+                    ['3,200,001 to 4,100,000', 'Rs. 430,000 + 30% of the amount exceeding 3,200,000'],                                                                                                
+                ]}                
+                                                                  €         Ÿ¡ï" color="blue">                                                                                                                                                                                                                                                                                                                                                €                                         
+            </HighlightBox>  
+            <div className="mt-8 text-center">                                                                                                                  €      
+                <button                                                                          
+                    className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-full transition-all shadow-lg hover:shadow-emerald-200/50"                   
+                    Go to Salary Tax Calculator â’                           
+            </div>                           
+    );    
+                                                             
+    if (isUrdu) {                  
+            <ArticleWrapper>                     ²Ú ˆÙ ƒ Ú ŒÙ ©Ù „Û ¹Ø  ¾Ø ©Ø ªØ † 2026: Ø ³Ù ŒÙ  ¨Û †Ú  †Ø §Ø   ³Ù †Ø      †Ø †Ø Œ)</h2>                     
+                    Ø ©Ù °Û  §Ø „Ø … Ú § Ø ŒÚ  §Û … Ø ©Ù  Û Œ Ø ³ Ú Œ Ø ±Ø ª Ø ¯Ø ¦Û ¯Û  Ø  µØ ­Ø  Ù µØ ¨ Ù ³Ù …Ø † Ú § Ø †Û §Ø Œ Ø ŒÙ Œ Ù ±Û ¶Û  Û ” Û …Ø ±Ø  ¬Ø ŒØ          ²Ú ˆÙ ƒ Ú ŒÙ ©Ù „Û ¹Ø  ¾Ø ©Ø ªØ † (2025-2026)</strong> Ø ³Ù ŒÙ  ¨Û †Ú  ¢Ù  ¾Ø ©Ø ªØ † (SBP) Ú ’ Ù ‚Ø ± Ú ±Ø  Ù µØ ¨ Ú ’ Ù ·Ø ¨Ù  ˆÛ ²Ø ¦Ù  ©Û § Ú ŒØ  Û ” Û  Ù ˆÙ  ¾Ø ©Ø ªØ † Ù ŒÚ  ³Ù †Û  §Ù ± Ú §Ù ¯Û  ©Û  …Ù ¬Ù ¯Û  …Ø ±Ú ŒÙ  ‚Û …Ø ˆÚ        ©Û  ¨Ù ŒØ ¯ Ù ± Ù µØ ¨ Ú § Ø ˆØ ©Ø ± Ø ¹Û † Ú ±Ø § Û ’Û  
+                </p>  
+                <HighlightBox title="Ø ©Ù °Û  ©Û  ­Ø §Ø  …Û º Ù ©Ù „ Ø Ø Û ª" icon="â¨" color="amber">                     Ù  †Û  §Ø  ¬Ø ŒØ  ²Ú ˆÙ ƒ Ú ŒÙ ©Ù „Û ¹Ø  ©Ù  §Ø  ·Ø ­ Ø ŒØ ± Ú ŒØ  Û  ©Û  ¢Ù  ¢Ø §Ù Œ Ø ’ Ø ¾Ù Œ Ú „ Ù §Ù ŒØ  ¬Ø † Ø ©Û ºÛ  ¢Ù  ©Ù  µØ  Ø ¾Ù ’ Ø «Ø «Ù º (Assets) Ú Œ Ø Ø ŒÙ  ¯Û †Û  Û Œ Ø ˆØ  Ù §Ø § Ø ³Ù … Ù ˆØ Œ Ø ˆØ  ¾Ø  ¢Ù  ©Û  °Ù ’ 2.5 Ù ŒØ ¯ Ù §Ú ˆ Û ˆÙ ’ Ù §Ù Œ Ø ©Ù °Û  ©Ø  §Û © Ø ˆÙ ŒÛ  ¨Ú Œ Ú ¾Ù ‘Û  ¨Ø ŒØ  ¯Ø ³Ø  ­Ø §Ø  „Ú § Ù ’ Ú §Û  
+                </HighlightBox>  
+                <h3>Ù §Ø „Ù  ²Ú ˆÙ ƒ Ø «Ø «Û  ¬Ø ª Ú Œ Ø Ø ŒÙ       
+                                                                                        
+                    <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">                                                               Ÿµ</span>                                                                  †Ù ¯ Ø ‚Ù  §Ù ± Ø ŒÙ © Ø ŒÙ †Ø           
+                        <span className="text-xs text-slate-500">Ø ŒÙ © Ø ©Ø ¤Ù ¹Ø  §Ù ± Ú ¾Ø  …Û º Ù ˆØ ˆØ  ªÙ §Ù  †Ù ¯ Ø ‚Ù ”</span>                            
+                    <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">                                                               Ÿ…</span>                                                                  ³Ù †Ø  §Ù ± Ú §Ù ¯Û           
+                        <span className="text-xs text-slate-500">Ø ˆÙ ’ Ø ˆØ  †Ø †Ø Œ Ú ’ Ù ˆØ ˆØ  Ù §Ø ©Û ¹ Ø ŒÙ  ¾Ø  …Ø „Û ªÛ         
+                    </div>                                                                                                              
+                        <span className="text-4xl block mb-2">ğ“         
+                        <strong className="block text-slate-900">Ø ±Ù §Û  Ú §Ø Œ Ø ˆØ  ´Û ¦Ø ²</strong>                                                                  …Û ˆÚ „ Ù †Ú ²Ø  ³Ù §Ú ³Ø  §Ù ± Ù ±Ø ˆÛ ˆÙ ¹ Ù †Ú  …Ø „Û ªÛ         
+                    </div>                                                                                                              
+                        <span className="text-4xl block mb-2">ğ“         
+                        <strong className="block text-slate-900">Ú §Ø ˆØ §Ø Œ Ù §Ù  Ø ¬Ø ±Ø           
+                        <span className="text-xs text-slate-500">Ø ©Ø † Û § Ú ˆØ §Ù  …Û º Ù ˆØ ˆØ  §Ø ŒØ ¡ Ú Œ Ù §Ø ©Û ¹ Ù ŒÙ ªÛ         
+                    </div>                        
+                     †Ø §Ø  §Ù ± Ø ³ Ú Œ Ù ˆØ ˆØ  Ø ±Ø                 
+                <p>                     †Ø §Ø  ˆÛ  ©Ù  §Ø  ©Ù  ­Ø  Û  ¬Ø  ¾Ø  ²Ú ˆÙ ƒ Ù ±Ø  Ù ªÛ  Û Œ Ø ˆØ  ŒÛ  …Ø „ Ù ˆØ ’ Ø ŒÚ  §Ø „Ø …Û  ‚Ù ±Û  ³Ø „ Ø © Ù „Ú ŒØ  …Û º Ø Ù § Ú §Û ŒÛ ” Ø ³Ù §Ù Œ Ø µÙ „Ù º Ú ’ Ø ­Ø  †Ø §Ø  ©Û  ¯Ù  ¨Ù ŒØ ¯Û  ´Ú „Û º Û ŒÚ ”                      
+                              
+                    headers={['Ù µØ ¨ Ú § Ù ¹Û §Ø     ˆØ † Ø ˆØ  ˆØ † Ú Œ Ù ‚Ø §Ø     §Ø „Ø ‚ Ú ŒØ ’ Û ˆØ § Û ’']}                             
+                        [<strong className="text-amber-600">Ø ˆÙ ’ Ú § Ù µØ ¨</strong>, '87.48 Ú ±Ø … (7.5 Ø ˆÙ )', 'Û  Ø †Ù ±Ø ¯Û  ·Ù ± Ù ± Ø ¨ Ù §Ú ˆ Û ˆØ § Û ’ Ø ¨ Ø ¾ Ú ’ Ù §Ø  µØ  Ø ˆØ  µØ  Ø ˆÙ § Û ˆ (Ù ‚Ø Œ Û § Ú §Ù ¯Û  †Û  Ù  ”'],                                                             †Ø †Ø Œ Ú § Ù µØ ¨</strong>, '612.36 Ú ±Ø … (52.5 Ø ˆÙ )', 'Ø „Ù §Ø  ©Ø  …Ø Ù  Ù ŒØ „Û  Û  ©Û  ºØ ŒØ ˆÚ  ©Û  ­Ù  …Û º Ú §Ù ¯Û  ©Ø  †Ø §Ø  ¨Û ªØ  Û ” Û Û  ¨Û †Ú ˆÚ  ©Û  ŒÚ … Ø …Ø §Ù  ©Û  ©Ù ˆØ Œ Ú ’ Ù ŒÛ  „Ø ¯Ù  Ù ªØ  Û ”']                        
+                />  
+                <h3>Ø ©Ù °Û  ©Ø  ¯Ø ³Ø  ­Ø §Ø  „Ú §Ù ’ Ú ’ 4 Ø ³Ø † Ø ‚Ø §Ù §Ø       
+                <StepGrid steps={[                               §Ø §Ø ˆÚ  ©Ø  ­Ø §Ø  ©Ø ŒÚ           §Ù †Û  ªÙ §Ù  ¨Û †Ú  §Ú §Ø †Ù ³ Ú Œ Ø ‚Ù Œ Ø ˆÙ ’/Ú §Ù ¯Û  ©Û  ‚Û …Ø  §Ù ± Ù §Ù  ªØ §Ø ª Ø ±Ø  ©Ø ŒÚ ”" },                               ˆØ ¬Ø §Ø   ‚Ø ¶Û   †Ú §Ù ŒÚ           §Ú ± Ø ¾ Ù ± Ú ˆØ Œ Ù ˆØ Œ Ø ¯Ø  ©Ø †Û  ˆØ „Ø  ‚Ø ¶ Û § Ø „ Ø §Ù Œ Û ’Ø  ªÙ  §Ø ’ Ù †Û § Ú ±Û ºÛ      
+                    { title: "Ù µØ ¨ Ø ’ Ù ˆØ ²Ù  Ú ±Û º", desc: "Ø ³Ù … Ø ˆØ  ¨Ø ˆØ  ¬Ø †Ú  „Û  ¯Ø  ©Û  ¢Ù  ©Û  …Ø „Û ª Ú §Ù ¯Û  ŒØ  ³Ù †Û  ©Û  †Ø §Ø  ³Û  ²Ø ¦Ø  Û  ŒØ  †Û ŒÚ ”" },                               ¯Ø ³Ø  ©Ù ˆØ Œ Ú Œ Ù §Ù ŒØ           §Ú ± Ù §Ù ŒØ  †Ø §Ø  ³Û  ²Ø ¦Ø  Û Œ Ø ˆ Ø ³Ù … 2.5 Ù ŒØ ¯ Ù §Ú ˆ Ú ± Ú ’ Ø ±Ø ª Ø ©Ù °Û  ¨Ø § Ø ’ Ú §Û     
+                ]} />  
+                <h3>Ø ¹Û ¹ Ø ŒÙ © Ø  Ù §Ú ³Ø §Ù        ²Ú ˆÙ ƒ Ú ¹Ù ªÛ  ©Û  ‚Ù §Ø ¯</h3>                     
+                    Ø ©Ù °Û  ˆ Ø ´Ø  ¢Ø ˆÛ †Ù ³ 1980 Ú ’ Ø ­Ø Œ Ø ¹Û ¹ Ø ŒÙ © Ø  Ù §Ú ³Ø §Ù  ŒÚ … Ø …Ø §Ù  §Ù …Ø §Ø © Ú ˆ Ø …Ø … Ø ŒÙ †Ú            §Ù ± Ù ±Ø Ù  §Û †Ú  „Ø ³ Ø ©Ø ¤Ù ¹Ø  ³Û      Û µØ  ©Û  ­Ø §Ø  ³Û  ²Ú ˆÙ ƒ Ø ˆØ ©Ø ± Ø ˆØ  ¾Ø  ©Ø ¹ Ù ŒØ § Û ’Ø  ¨Ø ±Ø ŒÚ  Ø ŒÙ †Ø  ­Ú ˆÙ ªÛ  …Ù ±Ø  ©Ø ¯Û  †Ø §Ø  ©Û  …Ø „Û ª Ø ’ Ø ŒØ ¯Û  Ù ”                      
+                <HighlightBox title="Ø ©Ù °Û  ³Û  §Ø ªØ †Û ° (CZ-50 Ù §Ø …)" icon="ğ“                  
+                    Ø ¯Ø  ¢Ù  §Ù †Û  ²Ú ˆÙ ƒ Ø ˆ Ø  …Ø ªØ ‚Û † Ø © Ù Ù †Ø †Ø  †Ø Ø ’ Û ŒÚ Œ Ø ˆØ  ¨Û †Ú  ©Û  ³Ø ©Ø ±Û  ©Ù ˆØ Œ Ø ’ Ø †Ù § Ú §Û ªÛ  Û ºØ  ªÙ  ¢Ù  ©Ù  …Ù ±Ø  Ø §Ø ŒØ  ³Û  ‚Ø „ Ø ¾Ù ’ Ù ªØ „Ù  Ø ŒÙ © Ù ŒÚ  ‚Ø †Ù †Û  ­Ù  Ù §Ù  Û ¹Ù Œ "CZ-50 Form" Ø …Ø  ©Ø ˆØ †Ø  „Ø ²Ù Œ Û ˆØ § Û ’Û  
+                </HighlightBox>                               
+        );       
+              
+        <ArticleWrapper>                                                                                
+            <div className="bg-amber-50 p-6 rounded-2xl border border-amber-100 my-6 shadow-sm">                                                                                                                                         
+                <p className="text-amber-800 m-0 text-sm">To calculate your Zakat accurately, you must first determine if your wealth meets the Nisab threshold. Currently, the Nisab is equivalent to the market value of either 87.48 grams (7.5 Tola) of gold or 612.36 grams (52.5 Tola) of silver. Our calculator automatically applies the 2.5% Zakat rate to your eligible assets minus your liabilities, ensuring you fulfill your Islamic obligations with complete peace of mind this Ramadan.</p>                    
+            <p>                                                                                                                                                                                                                                                                                                                                                                                                                                 
+            </p>  
+            <HighlightBox title="Total Transparency in Calculation" icon="â¨" color="amber">                                                                                                                                                                                                                                              
+            </HighlightBox>  
+            <h3>Breakdown of Zakaat-able Assets</h3>  
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">                                                                                                          
+                    <span className="text-4xl block mb-2">ğ’         
+                    <strong className="block text-slate-900">Cash & Bank Balance</strong>                                                                                                                  
+                </div>                                                                                                          
+                    <span className="text-4xl block mb-2">ğ         
+                    <strong className="block text-slate-900">Gold & Silver</strong>                                                                                                                       
+                </div>                                                                                                          
+                    <span className="text-4xl block mb-2">ğ“         
+                    <strong className="block text-slate-900">Investments & Shares</strong>                                                                                                                      
+                </div>                                                                                                          
+                    <span className="text-4xl block mb-2">ğ“         
+                    <strong className="block text-slate-900">Business Inventory</strong>                                                                                                                         
+                </div>                    
+                                                 
+            <p>                                                                                                                                                                                                     
+            </p>  
+            <StyledTable                                                                                       
+                rows={[                                                                                                                                                                         
+                    [<strong className="text-slate-500">Silver Nisab</strong>, '612.36 Grams (52.5 Tola)', 'Scholars recommend silver nisab for the benefit of the poor; used by banks for 1st Ramadan deduction.']                    
+            />  
+            <h3>4 Easy Steps to Calculate Your Zakat</h3>                                
+                { title: "List Your Assets", desc: "Enter all cash, gold/silver values, and business merchandise." },                                                                                                                    
+                { title: "Compare with Nisab", desc: "The system checks if your net wealth exceeds the silver or gold threshold." },                                                                                                                                    
+            ]} />  
+            <h3>SBP Zakat Deduction Rules (Banks)</h3>                 
+                Under the Zakat & Ushr Ordinance 1980, the State Bank of Pakistan deducts 2.5% Zakat from Savings and PLS accounts on the 1st of Ramadan, provided the balance exceeds the notified Nisab amount.                  
+            <HighlightBox title="Zakat Exemption (CZ-50 Form)" icon="ğ“                  
+                If you wish to distribute Zakat yourself and avoid bank deduction, you must submit a "CZ-50 Form" (affidavit) to your bank before the specified deadline.                             
+        </ArticleWrapper>        
+}  
+const FreelancerTaxArticle = ({ isUrdu }: { isUrdu: boolean }) => {                   
+        return (                              
+                <h2>Ù ±Û  „Ø †Ø ± Ø †Ú … Ø ˆØ  ¹Û ©Ø  ©Û „Ú ˆÙ ŒÙ ± Ù §Ú ³Ø §Ù        ¢Ø Œ Ù Œ Ø ŒÚ ³Ù ˆØ ¹ Ù ŒÚ ³ Ù ˆØ †Û †</h2>                     
+                    Ù §Ú ³Ø §Ù  ¹Ø „Ù Œ Ø ·Ø  ¾Ø  Ø Œ Ù §Ù ³Ù ¯ Ú ’ Ø ˆØ „Û  ³Û  ªÛ ²Û  ³Û  §Ø ¾Ø ªÛ  Ù ¦Û  …Ø ±Ú ŒÙ  Û ” Ú §Û ’ Ø ¾ UpworkØ         ©Û  °Ø ŒØ ’ Ú …Ø  ±Û ’ Û ˆÚ  ŒØ  ¨Û ±Ù †Ù  …Ù © Ø ’ Ø ±Ø Ù  ±Ø ³Ø  §Ø §Ø ŒÚ Œ Ù ’ Ø Û  Ù ºØ  §Ø „ Ø ˆØ  ®Ø „Ø        ¢Ù ¯Ù Œ Ú § Ø †Ø §Ø  Ù ¯Ø †Ø  §Ù ªÛ §Ø Œ Ù ŒÚ ŒØ  Û ˆØ § Û ’Û  Ù §Ø § Ø §Ø          Ø Œ Ù §Ù ³Ø  ¹Û ©Ø  §Ù ± Ø †Ú … Ú ŒÙ ©Ù „Û ¹Ø  ¾Ø ©Ø ªØ †</strong> Ø ¾ Ú Œ Ú Ù  ˆØ „Ø ² Ú Œ Ø …Ø †Û  ©Ù  ±Ù ¾Û  ©Û  ªØ §Ø „Û Œ Ù „Û ¹ Ù §Ø …Ø  ©Û  Û ³Ù º Ø ˆØ  „Ø ²Ù Œ Ø ŒÙ  ¨Û  ¢Ø  ¹Û ©Ø  ©Ù ˆØ Œ Ø ’ Ú ²Ø ± Ú ± Ø ¾ Ú ˆ Ø ±Ø ª Û §Ø ¾ Ø †Û  ˆØ „Û  ±Ù … Ø ªØ ªØ  Û ”                      
+                                      ®Ø „Ø  ¢Ù ¯Ù Œ Ú § Ø §Ù ©Ù  ¯Ø ³Ø  ­Ø §Ø         Ÿ»" color="amber">                     ¹Ø … Ù ŒÚ ³ Ú ŒÙ ©Ù „Û ¹Ø ² Ù ŒÚ  ŒÛ  ®Ø …Û  Ù ªÛ  Û  ©Û  ˆÛ  Ø Œ Ù §Ù ³Ø ² Ú ’ Ù ®Ø ˆØ  ©Ø … Ø ˆØ  Û ³Ù º Ú ˆ Û ©Ø ± Ù ¸Ø §Ù ¯Ø ² Ú ± Ø ŒØ ’ Û ŒÚ ” Ù  Ù  Ø ˆ Ù „Û ¹ Ù §Ø … Ù ŒØ  ©Ø ¹Ø ’ Û ŒÚ  §Ù ± Ù  Û Œ Ø ŒÙ © Ú Œ Ú §Ù ± Ø ±Û ¯Ù ’ Ù ŒÚ  §Ø ªØ …Ø „ Û ˆÙ ’ Ù §Ù ’ Ø ŒÚ ³Ú ŒÙ ¬ Ø ŒÙ  ©Ù  ³Ù ¬Ú ªÛ  Û ºÛ  Ù §Ø § Ø ¯Û ¯ Ù ˆÙ  ˆØ „Ø  …Ù †Û  ³Û  „Û  ©Ø Œ Ø ŒÙ © Ú ’ Ø ±Û ¹Û  ¢Ù  ©Û  §Ú §Ø †Ù  …Û º Ù §Ú ³Ø §Ù Œ Ø ˆÙ ’ (PKR) Ú Œ Ù †Ø ‚Ù Œ Ø ©Ø  ªÙ §Ù  …Ø ­Ù ˆÚ  ©Û  ¯Ø ³Ø  ©Û „Ú ˆÙ ŒØ † Ú ±Ø § Û ’Û  
+                </HighlightBox>  
+                <h3>Û …Ø ±Û  Ø Œ Ù §Ù ³ Ø ŒÙ  ©Ø  ·Ø ­ Ø ³Ø ¨ Ù ¯Ø ªÛ  Û Ÿ</h3>  
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">                                                                                                                         
+                        <span className="text-3xl">ğ’         
+                        <div>                                                                           ©Ø †Ø Œ Ø ˆØ  §Û ©Ø †Û †Ø  ±Û ¹</strong>                                                                      §Ù ¹Ø ¨Û †Ú              ˆØ „Ø  ±Û ¹ Ú ˆ Ø †Û §Ø  ¨Ù § Ú ± Ø ˆÙ ’ Ú Œ Ù ŒÙ ª Ù ©Ø „Ù §Û         
+                        </div>                            
+                    <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">                                                    Ÿ¡ï</span>                               
+                            <strong className="block text-slate-900 mb-1">Ù „Û ¹ Ù §Ø … Ú Œ Ú ¹Ù ªÛ           
+                            <span className="text-xs text-slate-500">Ú „Ø ¦Ù ¹ Ø ’ Ù „Ù ’ Ù §Ù Œ Ø ‚Ù  …Û º Ø ’ 20% Ú …Û ´Ù                 Û ³) Ú Œ Ø ˆØ ©Ø ± Ú ¹Ù ªÛ ”</span>                                
+                    </div>                                                                                                                         
+                        <span className="text-3xl">ğ         
+                        <div>                                                                           …Ù §Ù Œ Ø ŒÙ © Ú §Ø ¬Ø           
+                            <span className="text-xs text-slate-500">Ù §Ú ³Ø §Ù Œ Ø ŒÙ ©Ù º (Ù «Ù §Ù     Œ Meezan) Ú ’ Ù †Ø Ø  ŒØ  ©Ù ˆØ Œ Ú § Ø ³Ø ¨Û         
+                        </div>                            
+                    <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">                                                    Ÿ„</span>                               
+                            <strong className="block text-slate-900 mb-1">Ø ŒÙ  ¨Û  ¢Ø        §Û ©Ø ¾Ù ±Ù  ¹Û ©Ø           
+                            <span className="text-xs text-slate-500">Ø ¾ Ú ’ Ù §Ø „Ø  ³Ù ŒÙ ³ Ú ’ Ù ·Ø ¨Ù        ŒØ     ˆØ  Ù „Ú †Ú  ¹Û ©Ø  ©Û  ©Ù ˆØ ŒÛ         
+                        </div>                            
+                </div>  
+                <h3>Ø ³Ø ¨ Ú ªØ ¨ Ú ±Ù ’ Ú ’ 4 Ø ³Ø † Ø ‚Ø §Ù §Ø       
+                <StepGrid steps={[                               ˆØ „Ø  ¢Ù ¯Ù Œ Ù ©Ú ŒÚ           ˆÛ  ©Ù „ Ø ‚Ù  ¯Ø ¬ Ú ±Û º Ø ˆ Ø ¾ Ú ’ Ú „Ø ¦Ù ¹ Ù ’ Ú ³Û  ¨Ú Œ Ù ŒØ  ©Û  ©Ù ˆØ Œ Ø ’ Ù Ù ’ Ø ¯Ø  ©Û ”" },                               …Ø ±Ú ŒÙ  ¾Ù ŒØ  ©Û  Û ³ Ø ŒÙ  ©Ø ŒÚ           §Ø  ¾Ù ŒÙ  Ø ±Ù  ©Ø  †Ø … Û § Ø ˆØ ©Ø ± Ù ŒØ  ´Ø …Ù  ©Ø ŒÚ  ¬Ù  ©Ù  §Ø  ©Ù     Û µØ  ªÚ  Ù ªÛ  Û ”" },                               ¨Û †Ú  ©Ù ˆØ Œ Ú § Ø ³Ø ¨", desc: "Ú §Ù ± Ú ’ Ø µÙ  §Ù ¹Ø ¨Û †Ú  ±Û ¹ Ø ˆØ  …Ù §Ù Œ Ø ŒÙ © Ú ’ Ø ±Û ¯Ù ’ Ú ’ Ø ŒÙ  …Û º Ù ±Ù  ´Ø …Ù  ©Ø ŒÚ ”" },                                   ©Ø  ¹Û ©Ø  ¯Ø ¬ Ú ±Û º", desc: "Ø ¾Ù ’ Ù §Ø „Ø  Ù †Û  ©Û  ­Û «Û ª Ø ªØ ¦Û ºÛ  ©Û „Ú ˆÙ ŒÙ ± Ø ˆØ ©Ø ± Ù §Ù ˆÙ  ©Û  …Ø §Ø ‚ Ø ¦Û  ¹Û  §Ø ªØ †Û ° Ù ¯Ø ¦Û  ¯Ø ”" }                       
+                     Ø Œ Ù §Ù ³Ø ² Ø ˆØ  ¢Ø Œ Ù Œ Ù ±Ù Û ´Ù „Ø  ©Û  „Û ’ FBR Ú ’ Ù ¦Û  ‚Ù §Ù ŒÙ                   
+                <p>                     ˆÙ §Ù Œ Ø ©Ù …Ø        ¾Ø ©Ø ªØ † Ù ŒÚ  ¢Ø Œ Ù Œ Ø ±Ù ³Ø  §Ù ± Ø ŒÚ ³Ù ˆØ ¹Ø  ©Û  ´Ø †Ø §Ø  ­Ù µÙ  Ø Ø §Ø Œ Ú ’ Ù ŒÛ  ³Û ˆÙ ªÛ º Ù ±Ø Ù  ©Ø ªÛ  Û ” Ø ¯Ø  Ø Œ Ù §Ù ³Ø  ‚Ø †Ù †Û  ¨Û †Ú †Ú  †Û †Ù ² Ú ’ Ø ±Û ¹Û  §Ù †Û  ±Ù … "Ø ±Ù ¨Ø ¯Ù " (Foreign Inward Remittance) Ú Œ Ø ˆØ ª Ù ŒÚ  „Ø ªÛ  Û ºØ  ªÙ  §Ù  ©Û  „Û ’ Ù §Ø …Ù  ªÙ ®Ù §Û  ¯Ø ± Ø ¨Ù ’ Ú ’ Ø †Ú … Ù ŒÚ ³ Ù ˆØ †Û † Ù §Ú ˆ Ù Û º Û ˆØ ’Û  
+                </p>  
+                <StyledTable                                ¹Û ©Ø  Ø ¦Ù ± Û ˆÙ ’ Ú Œ Ø ŒØ ŒØ     ¢Ø Œ Ù Œ Ù ŒÚ ³ Ú Œ Ø ±Ø                       ‚Ø †Ù † Ø ˆØ  ´Ø §Ø ·']}                             
+                        [<strong className="text-emerald-600">PSEB Ø ¬Ø ¹Ø ˆ Ù §Ø „Ø             ¨Û ±Ù †Û  ²Ø …Ø §Ø „Û  ¾Ø  Ù · 0.25%', 'Û  Ø ¨ Ø ’ Ú … Ø ±Ø  Û ” Ø ¾ Ú ˆ Ù §Ú ³Ø §Ù  ³Ø Ù  ˆÛ ¦Ø  §Û ©Ø ¾Ù ±Ù  ¨Ù ±Ú  ©Û  ³Ø ªÚ  ±Ø ³Ù ±Ú  Ù †Ø  ¶Ø ˆØ Œ Û ’Û     
+                        [<strong className="text-amber-500">Ø §Ù  §Û ©Ù ˆ Ù §Ø „Ø                        ¨Û ±Ù †Û  ²Ø …Ø §Ø „Û  ¾Ø           ¢Ù  ©Ø  †Ø … FBR Ú Œ Ø ŒÚ ¹Ù  Ø ¦Ù ± Ù ³Ù  …Û º Ø §Ù „ Û ˆÙ § Ù §Ø …Û  Û ” Ø ŒØ ¯Û  ªØ  Ø Œ Ù §Ù ³Ø ² Ø ³Û  ©Û  §Û „ Û ŒÚ ”'],                                                            †Ø † Ù §Ø „Ø                         ºÛ ± Ù ¹Ù ˆÙ Œ Ú ¹Ù ªÛ    ¾Ù ±Ø  §Ù ©Ù  ¹Û ©Ø  ‚Ø †Ù †', 'Ø ©Ù …Ø  §Ø  †Ø † Ù §Ø „Ø ² Ù ± Ø ¾Ø ±Û  ¹Û ©Ø  ©Ù ˆØ ŒØ º Ú ± Ø Û  Û ” Ø † Ú ’ Ù ŒÛ  ©Ø Œ Ø ¾Û  ¢Ø Œ Ù Œ Ù ŒÚ ³ Ú Œ Ú ¾Ù ¹ Ú Œ Ø ¬Ø ²Ø  †Û ŒÚ  Û ”']                        
+                />                               
+        );       
+              
+        <ArticleWrapper>                                                                              
+            <p>                                                                                                                                                                                                                                                                                                                                                                                                                                          
+            </p>  
+            <HighlightBox title="Precision in Net Earnings" icon="ğ’                  
+                Generic tax calculators often fail to account for the specific nuances of freelancing. They don't deduct platform commissions or consider the spread between interbank rates and what local banks offer. Our tool models the entire journey from your client's payment to PKR in your local account.                             
+                                                                    
+                                                                                    
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">                                                Ÿ±</span>                           
+                        <strong className="block text-slate-900 mb-1">Exchange Rates</strong>                                                                                                                                        
+                    </div>                        
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">                                                Ÿ¡ï</span>                           
+                        <strong className="block text-slate-900 mb-1">Platform Commissions</strong>                                                                                                                                 
+                    </div>                        
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">                                                Ÿ¦</span>                           
+                        <strong className="block text-slate-900 mb-1">Local Bank Charges</strong>                                                                                                                                
+                    </div>                        
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">                                                Ÿ„</span>                           
+                        <strong className="block text-slate-900 mb-1">FBR Export Tax</strong>                                                                                                                                     
+                    </div>                        
+            </div>  
+            <h3>4 Easy Steps to Your Net Income</h3>                                
+                { title: "Enter Gross USD", desc: "Input the total payment from your client before any deduction." },                                                                                                                       
+                { title: "Bank Rate Adjustment", desc: "Input the difference between current interbank and buying rates." },                                                                                                                  
+            ]} />  
+            <h3>FBR IT Export Policies for Freelancers (2025-2026)</h3>                 
+                The government of Pakistan encourages IT exports by offering reduced tax rates. If freelancers bring in foreign exchange through legal banking channels, they avoid the standard heavy income tax brackets applied to salaried individuals.                  
+                          
+                headers={['Registration Status', 'Withholding Tax Rate', 'Conditions']}                         
+                    [<strong className="text-emerald-600">PSEB Registered</strong>, '0.25% on Foreign Remittance', 'Requires valid registration with Pakistan Software Export Board.'],                                                                                                                                                                                              
+                    [<strong className="text-rose-500">Non-Filer Status</strong>, 'Full Income Tax Brackets', 'No exemptions; subject to standard and heavy tax rates.']                    
+            />                           
+    );    
+                                                                        
+    if (isUrdu) return null;  
+    return (                          
+            <h2>Investment Return Calculator Pakistan 2026: Compound Interest & Profits</h2>                                                                                                      
+                <h3 className="text-xl font-bold text-emerald-900 mt-0 mb-2">Calculating Accurate ROI in Pakistan</h3>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+            </div>                 
+                In an economy facing fluctuating inflation rates, parking your money in a zero-interest checking account steadily destroys your purchasing power. Intelligent investors utilize our <strong>Investment Return Calculator Pakistan</strong> to project compounding profits across mutual funds, National Savings Certificates (NSC), and fixed bank deposits. By analyzing future value, this robust tool empowers you to build formidable wealth over time.                  
+                                                                  Ÿˆ" color="emerald">                                                                                                                                                                                             €                                                                                                                                                               
+            </HighlightBox>  
+            <h3>How Our Investment Calculator Accelerates Your Wealth</h3>  
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">                                                                                                                     
+                    <span className="text-3xl">â™ï</span>                           
+                        <strong className="block text-slate-900 mb-1">Growth Engine</strong>                                                                                                                                     
+                    </div>                        
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">                                                ŸŠ</span>                           
+                        <strong className="block text-slate-900 mb-1">Adjustable Rates</strong>                                                                                                                                        
+                    </div>                        
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">                                                Ÿ¡ï</span>                           
+                        <strong className="block text-slate-900 mb-1">Inflation Adjustments</strong>                                                                                                                                          
+                    </div>                        
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">                                                Ÿï</span>                           
+                        <strong className="block text-slate-900 mb-1">Visual Trajectory</strong>                                                                                                                                    
+                    </div>                        
+            </div>  
+            <h3>Step-by-Step Guide to Calculating Investment ROI</h3>                                
+                { title: "Set Principal", desc: "Enter the initial lump-sum amount (in PKR) to invest." },                                                                                                                
+                { title: "Select Tenure", desc: "Choose exactly how many years you intend to lock the investment." },                                                                                                                                
+            ]} />  
+            <h3>Top Investment Vehicles in Pakistan for 2025-26</h3>                 
+                To formulate a highly profitable portfolio, Pakistani investors generally diversify across three primary asset classes.                  
+                          
+                headers={['Asset Class', 'Expected Yield (APY)', 'Risk Level', 'Liquidity']}                         
+                    [<strong className="text-emerald-700">National Savings (CDNS)</strong>, '12% - 16%', <span className="text-emerald-600 font-bold">Zero Risk</span>, 'Moderate'],                                                                                                                                                                                    
+                    [<strong className="text-slate-700">Term Deposit Receipts</strong>, '10% - 15%', <span className="text-emerald-600 font-bold">Zero Risk</span>, 'Low (Locked in)']                    
+            />  
+            <HighlightBox title="Start Today" icon="â³" color="blue">                                                                                                                                                                                                                                                                                                   
+            </HighlightBox>                           
+    );   
+                                                                      
+    if (isUrdu) return null;  
+    return (                          
+            <h2>Retirement Savings Calculator Pakistan 2026: Plan Your Pension Corpus</h2>                 
+                Retiring with absolute financial dignity in Pakistan requires aggressive, meticulous early planning. With the absence of universal state-funded pensions for private sector employees, you possess sole responsibility for your old-age survival. Our authoritative <strong>Retirement Savings Calculator Pakistan</strong> scientifically projects the exact monolithic capital corpus you must accumulate to maintain your current lifestyle.                  
+                                                                  Ÿ¥" color="rose">                                                                                                                                                                                                                                                                                                                                                                                                              
+            </HighlightBox>  
+            <h3>How Our Retirement Planner Safeguards Your Future</h3>                 
+                We completely architected this tool around the volatile realities of Pakistan's economy. Generic calculators assume a stable 2% inflation rateâ”an assumption that will financially ruin a Pakistani retiree. Our calculator integrates realistic domestic inflation rates and expected portfolio returns to deliver a foolproof accumulation target.                  
+                                                                                    
+                <div className="bg-slate-50 p-5 rounded-3xl border border-slate-100 flex items-center gap-4">                                                     Ÿ‰</span>                                                                                                                 
+                </div>                                                                                                               
+                    <span className="text-3xl px-2">â³</span>                                                                                                           
+                </div>                                                                                                               
+                    <span className="text-3xl px-2">ğ         
+                    <div><strong className="block text-slate-900">Exact Monthly Savings Target</strong></div>                        
+                <div className="bg-slate-50 p-5 rounded-3xl border border-slate-100 flex items-center gap-4">                                                     Ÿ°</span>                                                                                                              
+                </div>                    
+                                                                               
+            <StepGrid steps={[                                                                                                                                                         
+                { title: "Define Expenses", desc: "Enter your current, comfortable monthly expenditure in PKR." },                                                                                                                                                           
+                { title: "Analyze Corpus", desc: "The calculator reveals the total multi-million rupee fund you need upon retirement day." }                   
+                                                         
+            <p>                                                                                                                                                                                                                                                                                                                                         
+            </p>  
+            <HighlightBox title="Tax Optimization Strategy" icon="ğ’                 
+                By investing up to 20% of your taxable income into a registered VPS, you directly reduce your upfront FBR tax liability. Your injected capital compounds tax-free for decades. Upon retirement, you can withdraw up to 50% of the massive accumulated fund completely tax-free. Use our calculator to determine the exact end-goal, then deploy a VPS to drastically shorten the timeframe to achieve it.                             
+        </ArticleWrapper>        
+}  
+const RealEstateROIArticle = ({ isUrdu }: { isUrdu: boolean }) => {                              
+              
+        <ArticleWrapper>                                                                                          
+            <p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            </p>  
+            <HighlightBox title="Data-Driven Reality" icon="ğ                 
+                Whether you target commercial plazas in DHA Lahore, residential plots in Bahria Town Rawalpindi, or high-rise apartments in Karachi, estimating your authentic returns is notoriously difficult. Developers often advertise grossly inflated ROI figures. We built this calculator to strip away the marketing hype and present the unvarnished financial truth.                             
+                                                                                    
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">                                                Ÿ—ï</span>                           
+                        <strong className="block text-slate-900 mb-1">Total Expense Integration</strong>                                                                                                                                                          
+                    </div>                        
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">                                                Ÿ°</span>                           
+                        <strong className="block text-slate-900 mb-1">Rental Yield Engine</strong>                                                                                                                                                
+                    </div>                        
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">                                                Ÿˆ</span>                           
+                        <strong className="block text-slate-900 mb-1">Capital Gains Projection</strong>                                                                                                                                                 
+                    </div>                        
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">                                                Ÿ„</span>                           
+                        <strong className="block text-slate-900 mb-1">FBR CGT Analysis</strong>                                                                                                                                                 
+                    </div>                        
+            </div>  
+            <h3>Step-by-Step Guide to Calculating Property ROI</h3>                                
+                { title: "Determine Acquisition Cost", desc: "Input the base property price plus all immediate transfer and registry expenses." },                                                                                                                                    
+                { title: "Account for Maintenance", desc: "Input society fees, property taxes, and expected repair budgets." },                                                                                                                                  
+            ]} />  
+            <h3>Latest FBR Taxes on Real Estate in Pakistan (2025-26)</h3>                                                                š ¸                 
+                The FBR heavily penalizes non-filers in property transactions, often charging upwards of 10% compared to 3% for active filers. Additionally, Capital Gains Tax (CGT) operates on a sliding scaleâ”selling within the first year incurs a steep 15% CGT, while holding beyond six years can lead to total exemption.                             
+                                                               Ÿ¡ï" color="slate">                                                                                                                                                                                                                                                      
+            </HighlightBox>                           
+    );   
+                                                                     
+    if (isUrdu) return null;  
+    return (                          
+            <h2>Provident Fund Calculator Pakistan 2026: Employee PF Balance & Rules</h2>                 
+                For millions of corporate professionals across Pakistan, the Provident Fund (PF) serves as the primary, and often sole, vehicle for retirement wealth accumulation. Understanding the exact growth trajectory of this fund is critically important. Our <strong>Provident Fund Calculator Pakistan</strong> precisely projects your final accumulated PF balance, thoroughly factoring in employer matching, your monthly deductions, and the compounded annual interest rate applied to your account.                  
+                                                                   ŸŠ" color="emerald">                                                                                                                                                                                                                                                                           
+            </HighlightBox>  
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8 not-prose">                                                                                                              
+                    <span className="text-2xl">â™ï</span>                                                                                                                                                                                                                                    
+                </div>                                                                                                              
+                    <span className="text-2xl">ğ¤         
+                    <div><strong className="block text-slate-900 mb-1">Employer Matching</strong><span className="text-sm text-slate-600">Automatically integrates the mandatory matching contribution provided by your firm.</span></div>                        
+                <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 flex items-start gap-4">                                                Ÿ„</span>                                                                                                                                                                                                                              
+                </div>                                                                                                              
+                    <span className="text-2xl">ğ         
+                    <div><strong className="block text-slate-900 mb-1">Wealth Projection</strong><span className="text-sm text-slate-600">Visualize how early career contributions compound over 30 years.</span></div>                        
+            </div>  
+            <h3>Step-by-Step Guide to Calculating Your PF Balance</h3>                                
+                { title: "Input Base Salary", desc: "Enter strictly 'Basic Salary' as PF only applies to the basic component." },                                                                                                                                   
+                { title: "Add Existing Balance", desc: "If you have an accumulated PF amount, enter the opening balance." },                                                                                                                          
+            ]} />  
+            <h3>Provident Fund Rules and Taxation in Pakistan (2025-26)</h3>                                                        š ¸                 
+                For a Recognized Provident Fund, employer contributions remain exempt up to 10% of basic salary or PKR 150,000 annually. Crucially, when you withdraw the accumulated balance upon retirement, the entire lump sum is 100% tax-free under current FBR statutes.                             
+                                                             Ÿ¡ï" color="slate">                                                                                                                                                                                                                                    
+            </HighlightBox>                           
+    );   
+                                                                
+    if (isUrdu) return null;  
+    return (                          
+            <h2>Gratuity Calculator Pakistan 2026: End of Service Benefit Rules</h2>                                                                                                
+                <h3 className="text-xl font-bold text-blue-900 mt-0 mb-2">Understanding Gratuity Rules in Pakistan</h3>                                                                    ¾Ø ©Ø ªØ †Û                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+            </div>                 
+                Leaving a company after years of dedicated service entitles you to a mandatory statutory payout. In Pakistan, gratuity serves as a highly vital severance benefit designed to cushion an employee's transition between jobs or into retirement. Our <strong>Gratuity Calculator Pakistan</strong> empowers private-sector employees to forcefully demand their exact legal entitlements by computing the precise payout commanded under current Pakistani labor laws.                  
+                                                                 Ÿœ" color="amber">                                                                                                                                                                                                                                                              
+            </HighlightBox>  
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">                                                                                                          
+                    <span className="text-4xl block mb-2">â–ï</span>                                                                                      
+                    <span className="text-xs text-slate-500">Correctly isolates 'last drawn basic wage' from gross allowances.</span>                        
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">                                                           Ÿ…</span>                                                                                           
+                    <span className="text-xs text-slate-500">Addresses the 'six-month rounding rule' embedded in labor law.</span>                        
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">                                                           š         
+                    <strong className="block text-slate-900">Instant Statutory Computation</strong>                                                                                                                               
+                </div>                                                                                                          
+                    <span className="text-4xl block mb-2">ğ› ¸         
+                    <strong className="block text-slate-900">Labor Law Compliance</strong>                                                                                                                                
+                </div>                    
+                                                                       
+            <StepGrid steps={[                                                                                                  €                                    
+                { title: "Count Total Tenure", desc: "If you worked 4 years and 7 months, it counts as 5 complete years." },                                                                                                                                  
+            ]} />  
+            <h3>How Pakistan Labor Laws Calculate Gratuity (2025-26)</h3>                 
+                The calculation is rigid: you receive <strong>30 days of wages for every completed year of service, or any part thereof exceeding six months</strong>. Many organizations unlawfully attempt to calculate gratuity based on 15 days. Our calculator prevents this wage theft by enforcing the strict 30-day formula.                  
+                                                            Ÿ¡" color="blue">                                                                                                                                                                                                                             
+            </HighlightBox>                           
+    );   
+                                                               
+    if (isUrdu) return null;  
+    return (                          
+            <h2>Loan EMI Calculator Pakistan 2026: Auto & Home Finance (KIBOR)</h2>                 
+                Committing to a long-term bank loan without ruthlessly calculating the exact amortization schedule is a direct path to financial ruin. In Pakistan's high-interest-rate environment, fluctuating KIBOR rates drastically influence your monthly budget. Our <strong>Loan EMI Calculator Pakistan</strong> executes critical mathematical modeling, delivering the exact Equated Monthly Installment (EMI) you must pay across auto loans, home mortgages, and personal cash finance schemes.                  
+                                                                      Ÿ¦" color="rose">                                                                                                                                                                                                                                                                                                                                                                        
+            </HighlightBox>  
+            <h3>Core Metrics Revealed</h3>  
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">                                                                                                          
+                    <span className="text-4xl block mb-2">ğ§         
+                    <strong className="block text-slate-900">Precision Installments</strong>                                                                                                                                        
+                </div>                                                                                                          
+                    <span className="text-4xl block mb-2">ğ“         
+                    <strong className="block text-slate-900">KIBOR + Spread</strong>                                                                                                                                  
+                </div>                                                                                                          
+                    <span className="text-4xl block mb-2">ğ’         
+                    <strong className="block text-slate-900">Total Interest Extracted</strong>                                                                                                                           
+                </div>                                                                                                          
+                    <span className="text-4xl block mb-2">ğ“         
+                    <strong className="block text-slate-900">Amortization Truth</strong>                                                                                                                                
+                </div>                    
+                                                                             
+            <StepGrid steps={[                                                                                                                                     
+                { title: "Input Annual Markup", desc: "Input total interest. If auto loan is KIBOR (12%) + Spread (4%), input 16%." },                                                                                                                               
+                { title: "Analyze Outputs", desc: "Instantly produce your EMI, total interest payable, and total comprehensive repayment." }                   
+                                                                              
+            <p>                                                                                                                                                                                                                                                                                                                                                                 
+            </p>                 
+                When banks offer "fixed-rate" loans, they typically bake in an extensive premium to transfer the inflation risk onto your shoulders. Our EMI calculator demonstrates exactly how a mere 2% hike in the KIBOR rate dramatically alters your monthly cash outflow on a 5-million PKR loan.                  
+                          
+                headers={['Loan Metric', 'Impact on You', 'Strategy']}                         
+                    [<strong className="text-slate-800">Longer Tenure (e.g., 7 Years)</strong>, 'Lower monthly EMI, but catastrophic total interest paid to the bank.', 'Avoid unless cash flow is critically strained.'],                                                                                                                                                                                                     €                                 
+                    [<strong className="text-slate-800">Fixed vs. Variable Rate</strong>, 'Fixed rates offer predictability but are priced higher upfront.', 'Prefer fixed if SBP rates are at historic lows.']                    
+            />                           
+    );   
+                                                                    
+    if (isUrdu) return null;  
+    return (                          
+            <h2>Profit Margin Calculator Pakistan 2026: Markup & Gross Margin Finder</h2>                 
+                In the fiercely competitive Pakistani retail and wholesale markets, pricing your inventory correctly makes the difference between dominating your sector and filing for bankruptcy. Our dynamic <strong>Profit Margin Calculator</strong> empowers entrepreneurs, dropshippers, and retail merchants to instantly lock in their exact Gross Profit Margin, Net ROI, and Product Markup percentages.                  
+                                                               Ÿ€" color="emerald">                                                                                                                                                                                                                                                                                                                                 
+            </HighlightBox>  
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">                                                                                                                     
+                    <span className="text-3xl">â±ï</span>                           
+                        <strong className="block text-slate-900 mb-1">Instant Computation</strong>                                                                                                                                        
+                    </div>                        
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">                                                Ÿ¡</span>                           
+                        <strong className="block text-slate-900 mb-1">Markup vs. Margin</strong>                                                                                                                                               
+                    </div>                        
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">                                                Ÿ</span>                           
+                        <strong className="block text-slate-900 mb-1">Price Discovery</strong>                                                                                                                                                  
+                    </div>                        
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">                                                Ÿ‰</span>                           
+                        <strong className="block text-slate-900 mb-1">Sales Strategy</strong>                                                                                                                                              
+                    </div>                        
+            </div>  
+            <h3>Step-by-Step Guide to Calculating Business Profitability</h3>                                
+                { title: "Determine COGS", desc: "Enter the total cost to produce or acquire a single unit, including shipping and duties." },                                                                                                                                          
+                { title: "Analyze Margin & Markup", desc: "The system displays Profit Margin (Profit Ã                              · Cost)." },                                                                                                                                                
+            ]} />  
+            <h3>The Fatal Difference Between Margin and Markup </h3>                                                              š ¸                 
+                <strong>Markup</strong> tracks added value on top of cost. If you buy for 1,000 and sell for 1,500, markup is 50%. However, your <strong>Profit Margin</strong> tracks profit as a percentage of revenueâ”in this case, only 33.3%. Confusing the two can lead to destructive discounting that wipes out your capital.                             
+                                                           Ÿ¡ï" color="slate">                                                                                                                                                                                       
+            </HighlightBox>                           
+    );   
+                                                                     
+    if (isUrdu) return null;  
+    return (                          
+            <h2>Unit Converter Pakistan: Localized Area & Weight Measurements</h2>                                                                                                  
+                <h3 className="text-xl font-bold text-slate-900 mt-0 mb-2">Understanding Pakistani Land Measurements (2025-26)</h3>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+            </div>                 
+                Pakistan utilizes a unique, hybrid system of both imperial and traditional localized measurements. Our <strong>Unit Converter Pakistan</strong> effortlessly bridges this gap, providing flawless instant conversions customized specifically for Pakistani geographical standards.                  
+                                                                     Ÿ" color="blue">                                                                                                                                                                                                                                                                                                                        
+            </HighlightBox>  
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">                                                                                                                     
+                    <span className="text-3xl">ğ         
+                    <div>                                                                                           
+                        <span className="text-xs text-slate-500">Convert between Marla, Kanal, Murabba, Acre, and Gaz (Sq Yard).</span>                            
+                </div>                                                                                                                     
+                    <span className="text-3xl">ğ         
+                    <div>                                                                                              
+                        <span className="text-xs text-slate-500">Pinpoint Gold/Silver conversions from Tolas/Mashas into Grams.</span>                            
+                </div>                                                                                                                     
+                    <span className="text-3xl">â¡</span>                           
+                        <strong className="block text-slate-900 mb-1">Instant Output</strong>                                                                                                                                                  
+                    </div>                        
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">                                                š ¸         
+                    <div>                                                                                               
+                        <span className="text-xs text-slate-500">Absolute mathematical rigor to prevent rounding errors in large transactions.</span>                            
+                </div>                    
+                                                                     
+            <StepGrid steps={[                                                                                                                                             
+                { title: "Input Base Value", desc: "Type the numerical amount you possess (e.g., 5.5 for five and a half Marlas)." },                                                                                                                                            
+            ]} />  
+            <h3>Understanding Key Pakistani Measurements (2025 Standard)</h3>                                                             Ÿ—ï" color="amber">                                                                                                                                                                                                                     
+            </HighlightBox>  
+            <HighlightBox title="Gold Bullion Metrics" icon="â¨" color="slate">                                                                                                                                                                                                              
+            </HighlightBox>                           
+    );   
+                                                           
+    if (isUrdu) return null;  
+    return (                          
+            <h2>BMI Calculator Pakistan 2026: Adult Body Mass Index Checker</h2>                 
+                Maintaining a healthy weight remains essential to combat lifestyle illnesses like diabetes and hypertension. Our <strong>BMI Calculator Pakistan</strong> delivers an immediate assessment based on WHO and local Asian demographic standards.                  
+                                                                     Ÿ¥" color="emerald">                                                                                                                                                                                                                                          
+            </HighlightBox>  
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8 not-prose">                                                                                                              
+                    <span className="text-2xl">ğ“         
+                    <div><strong className="block text-slate-900 mb-1">Risk Stratification</strong><span className="text-sm text-slate-600">Instantly discover if you fall into Underweight, Normal, or Obese categories.</span></div>                        
+                <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 flex items-start gap-4">                                                Ÿ„</span>                                                                                                                                                                                                                    
+                </div>                    
+                                                                 
+            <StepGrid steps={[                                                                                                                     
+                { title: "Measure Height", desc: "Stand barefoot against a wall. Measure your height precisely." },                                                                                                                   
+                { title: "Review Results", desc: "Click calculate to see your index numeral and clinical health category." }                   
+                                                  
+            <StyledTable                                                                        
+                rows={[                                                                                                                                 
+                    [<strong className="text-emerald-600">Normal</strong>, '18.5 - 24.9', 'Optimal fat-to-muscle ratio.'],                                                                                                                                            
+                    [<strong className="text-rose-600">Obese</strong>, '> 30.0', 'Demand immediate medical/lifestyle intervention.']                    
+            />  
+            <HighlightBox title="Baseline Screening" icon="ğ› ¸                  
+                While BMI doesn't distinguish between muscle and fat, it remains the most effective baseline tool for 95% of the population to monitor long-term health survivability.                             
+        </ArticleWrapper>        
+}  
+const CGPAArticle = ({ isUrdu }: { isUrdu: boolean }) => {                              
+              
+        <ArticleWrapper>                                                                               
+            <p>                                                                                                                                                                                                                                                                                                           
+            </p>  
+            <HighlightBox title="Guarantee Grade Accuracy" icon="ğ                 
+                Different universities (NUST, FAST, LUMS, PU) employ slightly varying GPA matrices, but they uniformly adhere to the overarching 4.0 grading scale mandated by the HEC. We built this tool specifically to streamline the chaotic process of calculating complex weighted averages.                             
+                                                                                    
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">                                                ŸŠ</span>                           
+                        <strong className="block text-slate-900 mb-1">Multi-Semester</strong>                                                                                                                                                    
+                    </div>                        
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">                                                š ¸         
+                    <div>                                                                                                      
+                        <span className="text-xs text-slate-500">Heavily weights core subjects while diminishing minor labs.</span>                            
+                </div>                                                                                                                     
+                    <span className="text-3xl">ğ”         
+                    <div>                                                                                             
+                        <span className="text-xs text-slate-500">Differentiate vividly between semester and overarching averages.</span>                            
+                </div>                                                                                                                     
+                    <span className="text-3xl">ğ         
+                    <div>                                                                                                     
+                        <span className="text-xs text-slate-500">Reverse-engineer what you must score to hit graduation thresholds.</span>                            
+                </div>                    
+                                                                  
+            <StepGrid steps={[                                                                                                                                      
+                { title: "Enter SGPA", desc: "Input the exact GPA you earned during that specific semester." },                                                                                                                              
+                { title: "Calculate Totals", desc: "The engine merges the data and outputs your precise current standing out of 4.0." }                   
+                                                                      
+            <HighlightBox title="Weighting Mechanism" icon="ğ’                    
+                The formula is strict: <strong>CGPA = Total Quality Points Ã                                                                                                                                                                                                                         
+            </HighlightBox>  
+            <HighlightBox title="Mandatory Tracking" icon="ğ› ¸                  
+                University portals frequently delay updates or contain entry errors. Preemptively run your anticipated marks through our calculator to identify discrepancies and appeal grading errors before the deadline.                             
+        </ArticleWrapper>        
+}  
+const GradeArticle = ({ isUrdu }: { isUrdu: boolean }) => {                              
+              
+        <ArticleWrapper>                                                                                     
+            <p>                                                                                                                                                                                                                                     
+            </p>  
+            <HighlightBox title="Empowering Students" icon="â¨" color="amber">                                                                                                                                                                                                                                                              
+            </HighlightBox>  
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8 not-prose">                                                                                                              
+                    <span className="text-2xl">â¡</span>                                                                                                                                                                                                                                 
+                </div>                                                                                                              
+                    <span className="text-2xl">ğ“         
+                    <div><strong className="block text-slate-900 mb-1">Universal Compatibility</strong><span className="text-sm text-slate-600">Works across Matric (SSC) and Intermediate (HSSC) scaling matrices.</span></div>                        
+            </div>  
+            <h3>Step-by-Step Guide to Calculating Your Letter Grade</h3>                                
+                { title: "Locate Total Marks", desc: "Confirm the maximum marks available (usually 1100, 1050, or 850)." },                                                                                                                                 
+                { title: "Execute Calculation", desc: "The system filters your percentage against the official nationwide grading tier." }                   
+                                                                   
+            <StyledTable                                                                                          
+                rows={[                                                                                                                                                                  
+                    [<strong className="text-blue-700">70% to 79.9%</strong>, <span className="text-blue-600 font-bold">A</span>, 'Excellent'],                                                                                                                                                   
+                    [<strong className="text-slate-700">50% to 59.9%</strong>, <span className="text-slate-600 font-bold">C</span>, 'Good'],                                                                                                                                        
+                ]}                
+        </ArticleWrapper>        
+}  
+const MarkPercentageArticle = ({ isUrdu }: { isUrdu: boolean }) => {                              
+              
+        <ArticleWrapper>                                                                              
+            <div className="bg-blue-50 p-6 rounded-2xl border border-blue-100 my-6 shadow-sm">                                                                                                                           
+                <p className="text-blue-800 m-0 text-sm">Whether you are waiting for your Matric (SSC) or Intermediate (HSSC) results from any Punjab, Sindh, or Federal board, knowing your exact percentage is crucial for university admissions. The formula is simple: divide your Obtained Marks by the Total Marks, and multiply by 100. Instead of doing manual math during the stress of result day, simply enter your numbers above to instantly find out if you secured an A+ grade.</p>                    
+            <p>                                                                                                                                                                                                                                                                                                
+            </p>  
+            <HighlightBox title="Academic Strategy" icon="ğ                 
+                During high-pressure result days, manual calculation leads to errors. We engineered this high-speed, mobile-optimized tool to act as your primary numerical verifier for everything from 20-mark quizzes to 1100-mark board exams.                             
+                                                                                    
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">                                                Ÿ¢</span>                           
+                        <strong className="block text-slate-900 mb-1">Fractional Accuracy</strong>                                                                                                                                     
+                    </div>                        
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">                                                Ÿ ï</span>                           
+                        <strong className="block text-slate-900 mb-1">Absolute Flexibility</strong>                                                                                     €                                                  
+                    </div>                        
+            </div>  
+            <h3>Step-by-Step Guide to Calculating Raw Percentage</h3>                                
+                { title: "Determine Maximum", desc: "Enter the highest number of marks available for the exam or syllabus." },                                                                                                                           
+                { title: "Analyze Ratio", desc: "The system instantly outputs the percentage by solving the core equation." }                   
+                                                                           
+            <p>                                                                                                                                                                                                                                                                          
+            </p>  
+            <div className="bg-slate-50 border border-slate-100 p-8 rounded-[2.5rem] my-10">                                                                                                             
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">                                                   
+                        <span className="block text-2xl font-black text-blue-600">850</span>                                                                                                              
+                    </div>                                                   
+                        <span className="block text-2xl font-black text-blue-600">1050</span>                                                                                                           
+                    </div>                                                   
+                        <span className="block text-2xl font-black text-blue-600">1100</span>                                                                                                           
+                    </div>                        
+            </div>  
+            <HighlightBox title="Numerical Merit" icon="â–ï" color="rose">                                                                                                                                                                                                                                                                                             
+            </HighlightBox>  
+            <HighlightBox title="Secure Your Future" icon="ğ› ¸                  
+                Rely entirely on our specialized Marks Percentage Calculator to extract the exact, unrounded decimal figure you need to execute your university admission strategy and secure your academic progression.                             
+        </ArticleWrapper>        
+} 
