@@ -583,7 +583,7 @@ const ToolWrapper = ({ id, component, isUrdu, handleNavigate }: { id: string, co
           <div className="flex justify-end">
             <div className="bg-white/10 p-6 rounded-3xl border border-white/10 backdrop-blur-md w-full max-w-sm">
               <div className="flex gap-4 mb-4">
-                <div className="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center shrink-0 text-xl">AI</div>
+                <div className="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center shrink-0 text-xl">🤖</div>
                 <p className="text-sm font-medium italic text-slate-200">"Every calculation matters. Use our localized tools to optimize your savings."</p>
               </div>
             </div>

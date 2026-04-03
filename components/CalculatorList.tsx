@@ -139,10 +139,10 @@ const CalculatorList: React.FC<CalculatorListProps> = ({ onSelect, onNavigate, i
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {[
-                { icon: 'Shield', t: 'Bank-Grade Accuracy', d: 'Validated calculations.' },
-                { icon: 'Privacy', t: 'Privacy Absolute', d: 'Zero server-side storage.' },
-                { icon: 'Values', t: 'Shariah Compliant', d: 'Fatwa-verified logic.' },
-                { icon: 'Power', t: 'Real-time Updates', d: 'FBR slabs 2025-26.' }
+                { icon: '🛡️', t: 'Bank-Grade Accuracy', d: 'Validated calculations.' },
+                { icon: '🔒', t: 'Privacy Absolute', d: 'Zero server-side storage.' },
+                { icon: '⚖️', t: 'Shariah Compliant', d: 'Fatwa-verified logic.' },
+                { icon: '⚡', t: 'Real-time Updates', d: 'FBR slabs 2025-26.' }
               ].map((feat, i) => (
                 <div key={i} className="flex gap-4 group">
                   <div className="w-12 h-12 bg-white shadow-lg rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
@@ -208,7 +208,7 @@ const CalculatorList: React.FC<CalculatorListProps> = ({ onSelect, onNavigate, i
                   </span>
                   <div className="relative z-10 space-y-6">
                     <div className={`w-14 h-14 bg-${item.color}-600 rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg`}>
-                      {i === 0 ? 'Tool' : i === 1 ? 'Write' : 'Chart'}
+                      {i === 0 ? '🎯' : i === 1 ? '✍️' : '📋'}
                     </div>
                     <h4 className="text-2xl font-bold text-slate-900">{item.title}</h4>
                     <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
