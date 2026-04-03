@@ -1,15 +1,29 @@
- 
-import { GoogleGenAI } from "@google/genai"; 
-export async function getFinancialAdvice(calculatorType: string, data: any) {        
-    // Correct initialization using named parameter and process.env.API_KEY directly.                                                                 
-    const prompt = `                                                                                
-      User is using the ${calculatorType} tool.                                                               
-                                                                                 
-      Focus on tax savings, investment tips, or financial planning relevant to Pakistan.                                        
-    `; 
-    const response = await ai.models.generateContent({                                       
-      contents: prompt,        
-                                                                     
-    return response.text;                    
-    console.error("AI Advice error:", error);                                                        ßÿ  àŸ ™ ÿ í ÿ ¶€  Öÿ àÿ Å ÿ ßÿ Ñ ⁄ ±Ÿ ß Ÿ Ö⁄ Ü Ÿ Å€ ∫€   
-  }  
+
+import { GoogleGenAI } from "@google/genai";
+
+export async function getFinancialAdvice(calculatorType: string, data: any) {
+  try {
+    // Correct initialization using named parameter and process.env.API_KEY directly.
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    const prompt = `
+      You are PakCalc AI, a financial expert specialized in Pakistan's economy.
+      User is using the ${calculatorType} tool.
+      Here is their calculation data: ${JSON.stringify(data)}.
+      
+      Provide a concise 3-4 sentence financial advice in English and Urdu.
+      Focus on tax savings, investment tips, or financial planning relevant to Pakistan.
+      Use a helpful, professional tone.
+    `;
+
+    const response = await ai.models.generateContent({
+      model: 'gemini-3-flash-preview',
+      contents: prompt,
+    });
+
+    // Accessing .text property directly as per the latest SDK spec.
+    return response.text;
+  } catch (error) {
+    console.error("AI Advice error:", error);
+    return "Unable to fetch AI advice at the moment. / ÿßÿ≥ ŸàŸÇÿ™ ÿß€í ÿ¢ÿ¶€å ŸÖÿ¥Ÿàÿ±€Å ÿ≠ÿßÿµŸÑ ⁄©ÿ±ŸÜÿß ŸÖŸÖ⁄©ŸÜ ŸÜ€Å€å⁄∫€î";
+  }
+}

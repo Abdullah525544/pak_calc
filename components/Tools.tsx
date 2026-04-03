@@ -1,426 +1,1610 @@
-� ipr ec,{uett,uefet}fo rat;                                                                  
-mot{SLRE_A_LB  rm'.cntns;                                
-mot{EIlgotn,Txlgotn,Zktlgotn,PoiMriBoCnet MBoCnet netetlgotn,RtrmnBoCnet elsaelgotn,PBoCnet rtiylgotn,FelneBoCnet ntovreBoCnet rdCluaoBoCnet GAacltrlgotn,MrPretgBoCnet noeaSOril,ZktEAtce reacrEAtce netetEAtce eieetEAtce elsaeEAtce FEAtce rtiyEAtce MSOril,PoiMriSOril,UiCnetrEAtce MSOril,Eetiiyillgotn  rm'/noae' 
-os OOS=[#091,'e44' #5eb,'38f' #bc6,'e49'; / . Eitn olcmoet) epr os noeaTo  {iUd :{iUd:boen} >{                        
- os nulaay=slr  2        
-                            cntnxSa  AAIDTXSASi+1;                  �              };  i sa){                                         �           tx=sa.ie  (nulaay-peTrsod  sa.ae/10)         
-  dvcasae"pc--2>                               
-    dvcasae"gwiep8rudd[.rm hdwx"                                               <ae lsNm=boktx-mfn-eimm-"MnhyGosSlr PR<lbl                                                                             
-     pcasae"etx etsae40m- l1>ae nlts B a lb o aaidIdvdas<p        
-    dvcasae"gsae90tx-ht - one-25e]sao-ltx-etrfe lxcljsiycne"                                                       <4casae"et5lfn-lc eteead40>s Mt.on(a  2.ooaetig)<h>      <i lsNm=m- t6bre- odrwie1 rdgi-os2gp4>         
-       pcasae"et[0x etsae50uprae>eryTx/>                                         
-      /i>         
-       pcasae"et[0x etsae50uprae>e otl noe/>                                                 
-      /i>             <dv       
-   Txlgotn >               
-  /i>   } 
-xotcntZktol=( sru}  sru ola )=                         cnt[od eGl]=uett() /gas                          
- os ohrses eOhrses  sSae0;                                          cnt[odae eGlRt]=uett(50) /prga prx                                    
-                                           
- os eAst  ahmx0 oaAst  iblte) 
- os iaGlVle=8.8*glRt;                        
- os iaTrsod=Mt.i(iaGlVle iaSleVle;  cntiEiil  eAst =nsbhehl;                                 
-  dvcasae{saey1 {sru� rlfn-ru  '`>                               
-    dvcasae"gwiep8rudd[.rm hdwx pc--"                           � � كڒٌ � � � ؒ( ب22)  Yu sesfrZkt(ia 06'<h>                                <i>                                     � �   � � � ۺۧ،   �                 
-       ipttp=nme"vle{ah nhne{ >stahNme(.agtvle) lsNm=wfl - gsae5 odrrudd2l >                <i>                                     � � � ا  ، � ، )  OhrAst Sok t)}/ae>                                                                                          <dv         
-     dvcasae"rdgi-os2gp4>         
-       lblcasae"etx otbl etsae50>iUd �' ٧( ؅':'od(rm)}/ae>                                                                                   <dv                 <ae lsNm=tx-sfn-odtx-lt-0"{sru� ڧ � � �                       <nu ye"ubr au=sle}oCag=e= eSle(ubretre.au)}casae"-ulp4b-lt-0bre one-x"/          
-     /i>        
-      lblcasae"etx otbl etsae50>iUd �' ب    ؒ( ۧڱ     �                         
-      ipttp=nme"vle{iblte}oCag=e= eLaiiisNme(.agtvle) lsNm=wfl - gsae5 odrrudd2l >                                                         <i>                                            � � � � ا                            <nu ye"ubr au=glRt}oCag=e= eGlRt(ubretre.au)}casae"-ulp2b-lt-0bre one-ltx-s >                <i>                                            � � ،ٌڱ  PR':'ivrRt g(K)}/ae>                                                                                      
-      /i>             <dv 
-    dvcasae{p8rudd[.rm hdwx etcne lxfe-o utf-etrtasto-oos$iEiil �'gsae90tx-ht':'gsae10tx-lt-0'`>                                         � � � ا ڌڄة �                            <4casae{tx-x otbak$iEiil �'eteead40  tx-lt-0'`>                                <h>      <i lsNm=m- pc--"                                                 
-       sa lsNm=tx-stx-lt-0"{sru� ڄث �                     <pncasae"otbl"R.{ahrudttlses.ooaetig)<sa>                {iEiil &(                                           {sru� *ؾڒث � ا � � � � ڈ   � ی � ':' sesaeblwNsbtrsod aa o plcbe'          
-      }             <dv       
-   Zktlgotn >                     
-  /i>   } 
-xotcntEIol=( >{                        cnt[ae eRt]=uett(5;                                    
- os   er  2                                                        cntttlneet=ttlamn  on 
- eun(                    <i lsNm=gi rdcl- ggi-os2gp8>                                      
-     h lsNm=tx-x otbl"La M acltrPksa<h>                                                                    <i>                                             
-      ipttp=nme"paeodr"onAon"vle{on nhne{ >stonNme(.agtvle) lsNm=wfl - gsae5 odrrudd2l >              <i lsNm=gi rdcl- a-"                 <ae lsNm=tx-sfn-odtx-lt-0"Itrs ae%/ae>                                                                                                  <dv                 <ae lsNm=tx-sfn-odtx-lt-0"Tnr Yas<lbl                                                                                                   <dv         
-    /i>     <i lsNm=b-lt-0 etwiep8rudd[.rm hdwx etcne lxfe-o utf-etr>                                                    
-     h lsNm=tx-x otbaktx-le40>s Mt.on(m)tLclSrn(}/4 
-     dvcasae"t8p- odrtbre-ht/0saey2>                                     <pncasae"etsae40>rnia mut/pn                                       
-      /i>                                     <pncasae"etsae40>oa neet/pn                                                               <dv                                                    <pncasae"etsae40>oa mutPybe/pn                                                                <dv         
-    /i>          <MBoCnet/               <dv   
-; epr os rftagnol=( >{                                   cnt[ot eCs]=uett(00;                                   cnt[eieMri,steieMri]=uett(0;/ o akpMd 
- /Md :KonCs  eeu >Fn agn                  cntmri  poi  eeu)*10                                                  
- /Rvne=Cs  1-Mri%                                 cntpoetdrft=rqieRvne-cs;  rtr                  
-   dvcasae"lxjsiycne b8>                                                 
-     bto                              casae{p- y2ruddfl etx otbl rniinal$md = mri'� b-lt-0 etwie  tx-lt-0 oe:gsae5'`             Fn agn%          
-     bto                              casae{p- y2ruddfl etx otbl rniinal$md = mru'� b-lt-0 etwie  tx-lt-0 oe:gsae5'`             Fn eln rc               <dv       
-                               
-    dvcasae"gwiep8rudd[.rm hdwx pc--"                                                <ae lsNm=tx-sfn-odtx-lt-0 pecs b2bok>rdc ot/ae>                                                                                          <dv 
-     md = mri'�                  <ae lsNm=tx-sfn-odtx-lt-0 pecs b2bok>eln rc<lbl                                                                                         
-      /i>        
-      dv                                                                <nu ye"ubr au=dsrdagn nhne{ >steieMri(ubretre.au)}casae"-ulp4b-lt-0bre one-x otbl etx"/                                                     �         <dv       
-    /i>     <i lsNm=b-lt-0 etwiep8rudd[.rm hdwx lxfe-o utf-etrtx-etr>                 
-      >                                                  
-       h lsNm=tx-x otbaktx-mrl-0 b6>mri.oie()%/4 
-       dvcasae"rdgi-os2gp4bre- odrwie1 t6>           
-         pcasae"et[0x etsae50upraefn-lc"Poi mut/>                                                         <dv                     < lsNm=tx-1p]tx-lt-0 pecs otbak>akp%/>                                             
-        /i>                 <>        
-      >                                                     
-       h lsNm=tx-x otbaktx-mrl-0 b6>s Mt.on(eurdeeu)tLclSrn(}/4 
-       dvcasae"gwie1 - one-x"                                               
-        pcasae"otbl et2l>s Mt.on(rjcePoi)tLclSrn(}/>                 <>           <dv       
-   PoiMriBoCnet/                 
-  /i>   } 
-xotcntBIacol=( >{                      
- os hih,stegt  sSae10;                         
-            ltclr=';        
-                                                                     es f(m  5  aeoy='omlWih' oo  tx-mrl-0' i  Getjb ananyu aacdde n ciiy'                                                                           es  aeoy='bs' oo  tx-oe50;tp='osl  elhaepoie o  esnlzdpa.;}  rtr                  
-   dvcasae"rdgi-os1l:rdcl- a-"                                            <3casae"et2lfn-od>oySas/3               <ae lsNm=tx-sfn-odtx-lt-0 pecs b2bok>egt(G<lbl                                                                                                    
-     /i>        
-      lblcasae"etx otbl etsae50upraem- lc"Hih C)/ae>                                                                                                          < lsNm=tx-stx-lt-0 t2tx-ih"{ahforhih  04)f Mt.on(hih  04)/25)i<p         
-    /i>     <i lsNm=b-ht - one-25e]sao-lbre odrsae10fe lxcliescne utf-etrtx-etrrltv vrlwhde"                             <i lsNm=aslt o- -ulh2b-rdett- rmbu-0 i-mrl-0 i-me-0 ors-0"<dv 
-     pcasae"etsae40upraetx-sfn-lc b4takn-iet>orRsl<p                                                < lsNm=`etx otbl {oo}m-`>ctgr}/>      <i lsNm=b-lt-0p6rudd3lwfl"                          �/pn                                                  <dv        
-   /i>                <MSOril >       )  
-                      
- os picpl ePicpl  sSae100)                          cnt[ae eRt]=uett(2;                     
- os cmonig eCmonig  sSae1) /Mnhydfut                                  cnt[nltoRt,stnltoRt]=uett() 
- os dt,staa  sSaeay](];                                           ltttl=picpl                  
-  /Efciert fifainajse:Ra ae=(  oia)/(  nlto)-1                                  
-  /Ltsajs h rwhrt ob Ra eun ftgl so.                     �                                 
-                                  cntcataa=[;   fr(e   ;i< er;i+           
-    o ltm=0   opudn;m+                                                ttlnetd+ mnhy*(2/cmonig)         }                ya:`$i`                      ivse:Mt.on(oaIvse)     
-   
-  eDt(hrDt)            ttl                
-   eun:ttl-ttlnetd    
- ;  uefet( >cluae) picpl otl,rt,yas opudn,ajsIfain nltoRt];  rtr                  
-   dvcasae"rdgi-os1l:rdcl- a-"                                            <3casae"et2lfn-odtx-mrl-0"Ivsmn taey/3 
-     dvcasae"lxiescne utf-ewe geead5 - one-x odrbre-mrl-0"                 <pncasae"ets otbl eteead90>dutfrIfain�/pn                                                      
-      /i>                                                <nu ye"hcbx hce=ajsIfain nhne{ >stdutnlto(.agtcekd}casae"rol er >                                                                                                                                                                                                  <lbl         
-                   
-      dvcasae"rdgi-os2gp4>          
-        lblcasae"et[0x otbakupraetx-lt-0 b1>trigAon<lbl                                                                                        
-       /i>          
-        lblcasae"et[0x otbakupraetx-lt-0 b1>otl otiuin/ae>                                                                                             <dv          
-                                  <i>                                                         
-        ipttp=nme"vle{ae nhne{ >staeNme(.agtvle) lsNm=wfl - gsae5 odrrudd2l >                  <i>                                                                 <nu ye"ubr au=yas nhne{ >ster(ubretre.au)}casae"-ulp4b-lt-0bre one-x"/           
-      /i>       {dutnlto &(                                            <ae lsNm=tx-1p]fn-lc pecs etsae40m-"Epce nlto <lbl                                                                                                                  <dv        
-     /i>                                                                              {eut&                                
-       pcasae"etsae40upraetx-sfn-lc rcigwds b1>                                                    
-       />                                                                                             
-        dvcasae"x4p- gbu-0ruddx odrbre-le10>                                                 
-         pcasae"etl otbaktx-le90>s {eutivse.ooaetig)<p            
-        dvcasae"x4p- geead5 one-lbre odreead10>                                                           < lsNm=tx-gfn-lc eteead90>s {ahrudrsl.eun)tLclSrn(}/>                   <dv          
-     }      <i lsNm=h4 -ulm-uorltv -0>                                      <rahr aa{aa>                     <ierrdeti=clrau"x=0 1""x=0 2""                                        
-          so fst"5"soClr"1b8"soOaiy{}/                           <df>                                             
-        Totp                                                                   
-         omte=(:nme)= R. {.ooaetig)`                          
-        >                                                                 
-        Ae ye"oooe aae=ivse"srk=#b26 ilpct=0 toeit=2 toeahra=44 >                    <RsosvCnanr         
-    /i>          <netetlgotn >                  <dv   
-; epr os eieetol=( >{                          
- os rtrAe eRtrAe  sSae6)                                cnt[otlEpne eMnhyxes]=uett(000;                                
- os ifain eIfain  sSae1) /Hg nlto nP                                           
- os psRtrRtr,stoteieeun  sSae1) /Sfrdb ud 
- /1 aclt xes trtrmn                               
- os erIRtrmn  ahmx0 iexetny-rtrAe;  cntepneteieet=mnhyxes  ahpw1+ifain/10 erTRtr) 
- /2 aclt opsNee                                     / hr   elrt frtr uigrtrmn rtr  nlto)                        cntraRtPsRtr  (  oteieeun/10  1+ifain/10)-1                             
-                                  / fRa aei  rngtv rr u osbei ihifain,hnldcrfly            
- f(ahasraRtPsRtr)<000){                                }es                                                                
-  
- /3 a nlss               cntfCretaig  urnSvns*Mt.o(  rRtrRtr  0,yasoeie;                                 
-                         
- /PTfrua   F  )/(1r^  )*(+)i tr fpro� red�Ltsuesadr n.                          cntnots=yasoeie*1;                                                          
-        <i lsNm=saey1"                                    <i lsNm=b-ht - one-25e]sao-lsaey6>                                        
-                                <i>                                                     
-       ipttp=nme"vle{urnAe nhne{ >sturnAeNme(.agtvle) lsNm=wfl - gsae5 odrruddx otbl"/          
-      dv                                                     
-       ipttp=nme"vle{eieg}oCag=e= eRtrAeNme(.agtvle) lsNm=wfl - gsae5 odrruddx otbl"/          
-      dv                                                            <nu ye"ubr au=lfEpcac}oCag=e= eLfEpcac(ubretre.au)}casae"-ulp3b-lt-0bre one-lfn-od >               <dv 
-     dv                                                                 <nu ye"ubr au=mnhyxes}oCag=e= eMnhyxes(ubretre.au)}casae"-ulp4b-lt-0bre one-x etl otbl"/         
-        
-      lblcasae"et[0x otbakupraetx-lt-0 b1>urn aig Otoa)/ae>                                                                                           <dv 
-     dvcasae"- gsae5 one-x odrbre-lt-0"                                              
-      dvcasae"rdgi-os3gp2>          
-        sa lsNm=tx-1p]tx-lt-0 lc"Ifain/pn                                                                                          
-       /i>          
-        sa lsNm=tx-1p]tx-lt-0 lc"PeRt%/pn                                                                                                
-       /i>          
-        sa lsNm=tx-1p]tx-lt-0 lc"Ps-e <sa>                                                                                                        <dv          
-     /i>                                                                            
-     dvcasae"bouergt0tp0w6 -4b-le50ruddfl lr[0p]oaiy3 m-2-t3"<dv 
-     dvcasae"eaiez1 etcne pc--"                 < lsNm=tx-le20upraetx-1p]fn-lc rcigwds b2>oa opsNee<p                                                                    
-       pcasae"et[0x etbu-0 t2>                                                                                     <p          
-                              
-       pcasae"etbu-0 pecs et[0x otbaktakn-ietm-"Gp&Rqie cin/>                                      < lsNm=tx-x otbaktx-mrl-0"Sv s {ahrudmnhyaigNee)tLclSrn(}<pncasae"ets eteead20fn-oml> ot<sa>/>                                                                                         
-       /i>               <dv        
-   /i>                
-   RtrmnSOril >       )  
-                      cnt[ucaerc,stucaerc]=uett(0000;                               
- os mnhyet eMnhyet  sSae400;                                     cnt[tmDtRt,sttmDtRt]=uett() /%(rnfr+Rg                                           
- os cmisoRt,stomsinae  sSae1;/  gn e By+Sl)  cntbyot  ucaerc  sapuyae/10  prhsPie*cmisoRt  0)                          
-                               
- os oaMitnne=anaMitnne*hliger;                                                                                                             
- os nulzdO  Mt.o(ttlrft+prhsPie  ucaerc,1/hliger)-1  0;                                 
-        <i lsNm=saey1"                                    <i lsNm=b-ht - one-25e]sao-lsaey6>                                                                  <i lsNm=gi rdcl- a-"                   <ae lsNm=tx-1p]fn-lc pecs etsae40m-"Prhs rc<lbl                                                                                            
-       /i>          
-        lblcasae"et[0x otbakupraetx-lt-0 b1>xetdSl rc<lbl                                                                                           
-       /i>                                     
-       dvcasae"o-pn1>                                                    
-        ipttp=nme"vle{otlRn}oCag=e= eMnhyetNme(.agtvle) lsNm=wfl - gsae5 odrruddx"/           
-       dvcasae"o-pn1>                                                              <nu ye"ubr au=hliger}oCag=e= eHliger(ubretre.au)}casae"-ulp3b-lt-0bre one-l >                  <i lsNm=clsa-"                                                              <nu ye"ubr au=anaMitnne nhne{ >stnulaneac(ubretre.au)}casae"-ulp3b-lt-0bre one-l >                 <dv 
-      dvcasae"- gsae5 one-x odrbre-lt-0"                                                          <i lsNm=gi rdcl- a-"                     <pncasae"et[0x etsae50bok>tm uyTx/pn                                                                                               
-        /i>           
-         sa lsNm=tx-1p]tx-lt-0 lc"AetCm./pn                                                                                                
-        /i>                 <dv         
-    /i>     <i lsNm=b-lt-0 etwiep8rudd[.rm hdw2lfe lxcljsiycne eaieoefo-idn>                                                                                         
-      pcasae"etsae40upraetx-1p]fn-lc rcigwds b2>oa e rft/>                                                           
-      dvcasae"niefe a- t2>                                                                      <pncasae"etx etsae40>AR bcasae"etwie>anaieRItFxd1}<b<sa>               <dv 
-     dvcasae"eaiez1 pc-- gwie5p6rudd3lbre odrwie1"                              
-       sa lsNm=tx-lt-0"CptlGi Nt<sa>                                                
-      /i>                                     <pncasae"etsae40>etlIcm Nt<sa>                                              
-      /i>                                                    <pncasae"etrs-0 etx"TtlByn ot<sa>                                                            <dv         
-    /i>          <elsaelgotn >                  <dv   
-; epr os Fol=( >{                             
- os epotiuin eEpotiuin  sSae1) /%                                        cnt[neetae eItrsRt]=uett(2;/                                                        cntmnhymlyrF=bscaay*(mlyrotiuin/10;                                                              ltttlaac  ;             
-                              
-                  
-  oaPicpl+ eryotiuin                                          
-  
- os oaItrs  oaBlne-ttlrnia;  rtr                  
-   dvcasae"rdgi-os1l:rdcl- a-"                                            <3casae"et2lfn-od>rvdn udCluaini aitn/3                                                              
-     dv                                                       
-      ipttp=nme"vle{aiSlr}oCag=e= eBscaayNme(.agtvle) lsNm=wfl - gsae5 odrrudd2lfn-odtx-l >              <i lsNm=gi rdcl- a-"                 <ae lsNm=tx-sfn-odtx-lt-0 pecs"Yu hr <lbl                                                                                        
-      /i>         
-       lblcasae"etx otbl etsae50uprae>mlyrSae%/ae>                                                                                                   <dv         
-     dvcasae"rdgi-os2gp4>         
-       lblcasae"etx otbl etsae50uprae>eunRt <lbl                                                                                     
-      /i>         
-       lblcasae"etx otbl etsae50uprae>er<lbl                                                                              
-      /i>             <dv 
-    dvcasae"gbu-0 etwiep8rudd[.rm hdw2lfe lxcljsiycne eaieoefo-idn>                                                                 
-                                    < lsNm=tx-le20upraetx-sfn-lc rcigwds b2>rjce auiyAon<p                                                                  < lsNm=tx-1p]tx-le30m-"Atr{er}yaso opudn<p         
-                                         
-      dvcasae"lxjsiybteniescne ets"                                          
-       sa lsNm=fn-od>s Mt.on(oaPicpl.ooaetig)<sa>                <i lsNm=fe utf-ewe tm-etrtx-m>                                             <pncasae"otbl eteead40> s Mt.on(oaItrs)tLclSrn(}/pn          
-                             <i lsNm=wfl - gbu-5 one-ulm- lxoefo-idn>                                                            
-       dvcasae"-ulb-mrl-0"sye{ it:`{ttlneet/ttlaac)*10% }<dv          
-      dvcasae"lxjsiybtentx-1p]tx-le30>                                                 <pnI Mt.on(ttlneet/ttlaac)*10}<sa>               <dv        
-   /i>            
-   PSOril >       )  
-                  
- os bscaay eBscaay  sSae500;/ atDanGOSSlr ehial                     
-                           
- /Nt:Sm opne s ai,btLwsy Wgs hc sGos ewl ae tcrfly                                       cntapoeEepin=Mt.i(rtiy 000;                                                  
-        <i lsNm=saey1"                                    <i lsNm=b-ht - one-25e]sao-lsaey6>                                 
-                                                     <pncasae"et2l>�    
-      pcasae"etx etidg-0 edn-eae"                                                                                                
-      />                        <ae lsNm=tx-sfn-odtx-lt-0 pecs"Ls otl rs aay/ae>                 tp=nme"                 
-       nhne{ >staiSlr(ubretre.au)}                                           
-      >              <i>                                                    
-      ipt              
-       au=yas                                
-       lsNm=wfl - gsae5 odrrudd2lfn-odtx-l        
-      pcasae"et[0x etsae40m- l1>oe evc fmr hn6mnh ntels eri one safl er<p         
-    /i>     <i lsNm=b-nio70tx-ht - one-25e]sao-x lxfe-o utf-etrrltv vrlwhde"                                                                  
-                           
-      pcasae"etidg-0 pecs etx otbaktakn-ietm-"TtlGaut aal<p                                                                                                         < lsNm=tx-sfn-lc etidg-0 pecs rcigwds b2>a xmto iis/>                                       <pncasae"pct-0>fApoe ud<sa>                                            <dv                               
-        sa lsNm=oaiy8"I nprvd<sa>                                    
-       /i>               <dv        
-   /i>               
-   GautSOril >       )  
-                                    cnt[noe eIcm]=uett(00;/ otl noe                                 
- os ecagRt,stxhneae  sSae28;/ eal s.                                �  cnt[ake,stake]=uett() /Otoa ie e 
- os rsPR=crec = UD �icm  xhneae:icm;                             
- os aAon  rsPR*txae                            cntanaNt=ntnoe*1;  rtr                      �             
-   dvcasae"rdgi-os1l:rdcl- a-"                    <i lsNm=b-ht - one-25e]sao-lsaey6>                             ،٧ � ٩                                          <i>                                          � � ؆ � ٌ  MnhyIcm'<lbl                      
-        dvcasae"eaiewfl"             
-          ye"ubr                  
-          nhne{ >stnoeNme(.agtvle)                                                        /                           �                                               
-        /i>            
-         nlc=( >sturnycrec = UD �'K':'S'}                                                           
-                              �� K':'      
-        /utn           
-      /i>       {urny=='S'&                             
-        dv                                                 ۩ ۆ �  PR':'xhneRt PR'<lbl             
-          ye"ubr                     
-          nhne{ >stxhneaeNme(.agtvle)                                               /            
-        dv                                                 ۆ �  خ ر                            <nu                            vle{ake}                                              casae"-ulp4b-lt-0bre one-x"                   <dv           
-      }       <i lsNm=p4b-mrl-0rudd3lbre odreead10>                                 
-        dv                                       �    س ۴                         < lsNm=tx-1p]tx-mrl-0"{sru� ڌ �    � ت � ٱ �     ڳ ع � �                            
-        /i>            
-         nlc=( >stsSB!sSB}                                            �                   
-                                                                  �                                
-        /utn           
-      /i>             <dv 
-    / eut eto /                                                                      
-     dvcasae"bouetp0rgt0w3 -2b-mrl-0/0ruddfl lr3l-r1 m-6>/i>      <i lsNm=tx-etrrltv -0>                                                        {sru� ؾڌا   ۧ   ؆                        <p                                                                   < lsNm=tx-lt-0 etx"              ۩ � ، s {ahrudtxmut.ooaetig) $iPE �'.5':'%}`:`a ihed s {ahrudtxmut.ooaetig) $iPE �'.5':'%}`         
-     /i>      <i lsNm=m-0gi rdcl- a- eaiez1 odrtbre-ht/0p-"                             < lsNm=tx-1p]tx-lt-0 pecs otbl b1>iUd �' ٧   ٵ؅ �                      < lsNm=fn-lc etl"R.{ahrudanaNt.ooaetig)<p          
-      dvcasae"etcne"                                             � � � �                  
-       pcasae"otbaktx-gtx-lt-0"R.{ahrudgosK)tLclSrn(}/>               <dv        
-   /i>                
-   FelneSOril >       )  
-                      cnt[ciea,stciea]=uett<ae'|'egt>'ra) 
- /Ae tt                     
- os mraye eMraye  sSae25|222>25;  / egtSae                     cntTL_OGA  164 
- /Cnesos                     cntttlqad  oaSF  ;                                        cntttlah  oa*1;  rtr                  
-   / as*}                             <i lsNm=b-ht - one-ulbre odrsae10sao-miln-lx>         
-      nlc=( >stciea(ae'}                                                                                           
-                         <bto>         
-      nlc=( >stciea(wih'}                                                                                            
-                       <bto>           <dv 
-   dvcasae"rdgi-os1l:rdcl- a- nmt-nfd-nsiei-rmbto- uain50>               �       <                                                <3casae"et2lfn-od>adMaueet/3                   <ae lsNm=tx-sfn-odtx-lt-0 pecs"IptMra/ae>                     tp=nme"                
-         nhne{ >stal(ubretre.au)}                                             
-        >                  <i>                                                        
-        dvcasae"rdgi-os2gp4>             
-          nlc=( >stalTp(2)                                                                                                               >                                                                <bto>             
-          nlc=( >stalTp(7.5}                                                                                                                >                                                                    <bto>                   <dv          
-                                                         
-       pcasae"etsae40upraetx-sfn-lc b6takn-iet>ovre ra/>        <i lsNm=saey6>                                                 
-         sa lsNm=tx-x otbak>ttlqttLclSrn(}/pn                                                          <dv                                                           <pncasae"et3lfn-lc"{ahrudttlqad)tLclSrn(}/pn                                                     
-        /i>                                  
-         sa lsNm=tx-x otbaktx-mrl-0"{oaKnltFxd2}/pn                                                       <dv           
-      /i>       
-             
-      dvcasae"gwiep8rudd[.rm hdwx pc--"                                         
-       dv                                                 
-        ipt                
-         au=tl}                                 
-         lsNm=wfl - gabr5 odrbre-me-0 one-x otbl etx etabr90fcsrn-me-0"                 <dv                           
-         oa=1.6 rm Sadr aitn odRt nt          
-      /i>       <i lsNm=b-me-0 etwiep8rudd[.rm hdwx lxfe-o utf-etrrltv vrlwhde"                                                                                                         <i lsNm=fe utf-ewe tm-etrbre- odrabr403 b4>                                                     <pncasae"etx etabr10upraefn-od>rm<sa>                    <i lsNm=fe utf-ewe tm-etr>                                                     <pncasae"etx etabr10upraefn-od>ah<sa>                   <dv          
-     /      
-   /i>                           
-   dvcasae"gsae5 - one-25e]bre odrsae20m-2>                                                     
-    dvcasae"rdgi-os1m:rdcl- a-"                       
-      ted                              
-        t lsNm=tx-etp- otbl etsae40upraetakn-iettx-1p]>rmUi<t>                                                                      <hcasae"etrgtp- otbl etsae40upraetakn-iettx-1p]>au<t>          
-      /ha>                             
-       t>t lsNm=p-"1Mrba/d<dcasae"y2>aa<t>t lsNm=p- etrgtfn-od>0 aa<t>/r                                                                         
-       t>t lsNm=p-"1Knl/d<dcasae"y2>al<t>t lsNm=p- etrgtfn-od>0Mra/d<t>                                                                                   <toy          
-     dvcasae"gwiep6rudd3lbre odrsae10fe lxcljsiycne"                                             "nPksa,ln esrmnsvr yrgo.Ubnaeslk H/araue25S.tprMra hl ua ilgsueteRvnesadr f222 qF.         
-     /i>           <dv 
-   UiCnetrlgotn >                 
-  /i>   } 
-xotcntMrPretgTo  )=                          
- os ttl eTtl  sSae10)                �                      
-  dvcasae"pc--2>                               
-    dvcasae"gwiep8rudd[.rm hdwx pc--"                                      <i>                                                      
-      ipttp=nme"vle{band nhne{ >stbandNme(.agtvle) lsNm=wfl - gsae5 odrrudd2lfn-odtx-l >              <i>                                                           <nu ye"ubr au=ttl nhne{ >stoa(ubretre.au)}casae"-ulp4b-lt-0bre one-x otbl etx"/         
-    /i>     <i lsNm=b-mrl-0 etwiep8rudd[.rm hdwx lxfe-o utf-etrtx-etrrltv vrlwhde"                                                                 < lsNm=tx-mrl-0 pecs etx otbakm- rcigwds"Pretg cr<p                                         
-     dvcasae"-ulb-lc/0h3ruddfl vrlwhde b6>                                                                  
-     /i>                                      Yuotie otie}oto ttl ak.            <dv       
-   MrPretgBoCnet/      
- ;                        
- os otie,stband  sSae8)                      
- os ecnae=ttl>0� otie  oa)*10:0 
- e rd  F;                 ltsau  Fi' 
- f(ecnae> 0  rd  A' oo  tx-mrl-0' tts='xetoa'                                                   es f(ecnae> 0  rd  B;clr='etbu-0' tts='od;}                                              
- lei pretg =4){gae='' oo  tx-rne50;sau  Ps'  
- eun(                    <i lsNm=gi rdcl- ggi-os2gp8>                                                   <3casae"et2lfn-od>cdmcPromne/3               <ae lsNm=tx-sfn-odtx-lt-0 pecs b2bok>ak band/ae>                                                                                              <dv               <ae lsNm=tx-sfn-odtx-lt-0 pecs b2bok>oa ak<lbl                                                                                      
-     /i>                                                                                             
-     dvcasae"bouetp0wfl - ggain-orfo-oe50vaabr50t-mrl-0"<dv                                                        
-     h lsNm=`et8lfn-lc {oo}m-`>gae<h>                                                 
-     dvcasae"gsae5 x6p- one-x odrbre-lt-0"                                                   
-     /i>           <dv                   
-  /i>   } 
-xotcntCPCluaoTo  )=                                           
-               
-  eSmses[.smses  d aenw) ga ,ceis  ];                         
-  f(eetr.egh>1                                }                                              
-  eSmsessmsesmps= .d==i �{..,[il] au   );                                        
- os oaPit  eetr.eue(c,s >ac+(.ga*sceis,0;                �                       
-  dvcasae"pc--2>                               
-    dvcasae"gwiep8rudd[.rm hdwx pc--"                                  
-      h lsNm=tx-x otbl"Smse eal<h>          
-       nlc=adeetr                                                                             >                     <bto>                                                             {eetr.a(s ne)=                                                                                    <i lsNm=gi rdcl- a-"                       <ae lsNm=tx-1p]fn-lc pecs etsae40m- lc"Smse idx+1 P<lbl              
-           ye"ubr                             vle{.ga| '                                              
-           lsNm=wfl - gwiebre one-lfn-od                       
-          >                      <i>                                                                      <nu                              vle{.rdt |'}                                               
-           lsNm=wfl - gwiebre one-lfn-od                                 /             
-        /i>                               <utn                                       casae"boue-o- rgt2w8h8b-oe10tx-oe60ruddfl lxiescne utf-etrtx-ghvrb-oe20tasto-oossao-m                     À          <bto>                 <dv              <dv        
-                                                                          
-     dvcasae"bouelf- otm0wfl -2b-rdett- rmeead502 otasaet>/i>                                                          
-     h lsNm=tx-x otbaktx-mrl-0 b6do-hdw2l>cp.oie()<h>                                                                <i>                                                  
-       pcasae"et2lfn-od>ttlrdt}/>                <i>                                                            < lsNm=tx-x otbl"{oaPit.oie()<p          
-     /i>           <dv                     <dv   
-; epr os lcrctBlTo  {iUd :{iUd:boen} >{                                    
- os uis eUis  sSae20;                                                                             cnt[p,stp]=uett(.)                        
-             
- os wtae eWtae  sSae10)                           
- os dyProt,staseMnh  sSae3)                                                
- os acltEegCs  u ubr ye tig >{                      
-   f( =10 eunu*1.4                                    rtr 10*1.4  10*1.1  (  0)*2.4;                    
-   f( =10 eunu*3.0                                    rtr 10*3.0  20*3.2  (  0)*4.7;          ltcs  ;                   
-   lei u< 0)cs  10*2.4  (  0)*2.1;                                              es f( =40 ot=(0  24)+(0  89)+(0  31)+(u-30  79)                                                           
-   lei u< 0)cs  10*2.4  10*2.1  10*3.0  10*3.9  10*4.0  (  0)*4.2;                                                                              es ot=(0  24)+(0  89)+(0  31)+(0  79)+(0  02)+(0  16)+(0  27)+(u-70  76)          
-     
-                                 cntfeAjsmn  nt  p;                   cntfSrhre=uis*04;                       �      cntttlaal  nryot+feAjsmn  uy+fSrhre                  
- os oaBl  oaTxbe+gt+tFe                   �            
-                                                           
-  dvcasae"pc--2aiaei aei uain70>    {*TbTgl /                           <i lsNm=b-ht - one-ulbre odrsae10sao-miln-lx>         
-      nlc=( >stciea(bl'}                                                                                           
-                         <bto>         
-      nlc=( >stciea(wts)                                                                                            
-                   
-     /utn        
-   /i>    {ciea = bl'�                                                             
-               
-     dvcasae"gwiep8rudd[.rm hdwx pc--"                            � � � � � � ٵ ت  WPAUi acltr}/3 
-      / IC eetr*}         
-       lblcasae"etx otbl etsae50upraem- lc rcigwds"Dsrbto opn DSO<lbl                           
-        dso.a( >(             
-          e=d                                   casae{p- y15ruddx etx otbl rniinalbre {ic =  �'gsae90tx-ht odrsae90  b-ht odrsae20tx-lt-0 oe:odrsae40}}          
-          d                       )}                 <dv 
-      / osmrTp /                 <ae lsNm=tx-sfn-odtx-lt-0 pecs b2boktakn-iet>osmrTp<lbl                            
-        bto                                      
-         lsNm=`y2p- one-ltx-sfn-odtasto-l odr$cnueTp = rsdnilpoetd �'geead60tx-ht odreead60  b-ht odrsae20tx-lt-0 oe:odrsae40}}         
-         rtce                      <utn                                                 casae{p- x2ruddx etx otbl rniinalbre {osmrye=='eieta-o-rtce'� b-lt-0 etwiebre-lt-0':'gwiebre-lt-0 etsae60hvrbre-lt-0'`                   Rsdnil             
-        bto                                          casae{p- x2ruddx etx otbl rniinalbre {osmrye=='omril �'gbu-0 etwiebre-le60  b-ht odrsae20tx-lt-0 oe:odrsae40}}         
-         omril             
-       /i>                                       < lsNm=tx-1p]tx-mrl-0 t2m-"Poetd=udr20uisfrtels  osctv ots<p         
-       cnueTp = cmeca'&                                                                           
-       }                                 <i>                                                                  
-       ipt               
-        au=uis                                 
-        lsNm=wfl - gsae5 odrrudd2lfn-lc et2lfcsrn- ou:igeead50otienn rniinal         
-       pcasae"et[0x etsae40m- l1>                                   �   
-        bto nlc=( >stciea(wts) lsNm=tx-me-0 otbl neln"UeWtst nt a./utn          
-      /i>       {*FA*}                                      <ae lsNm=tx-sfn-odtx-lt-0 pecs b2bok>ulPieAjsmn �FA(s/nt<lbl           
-        ye"ubr                       oCag=e= eFaNme(.agtvle)                                       
-        tp"."                < lsNm=tx-1p]tx-lt-0 t1m-"NPAanucsFAmnhy dutt ac orDSOscretrt./>               <dv 
-     / eut ae /                                                                               <i lsNm=aslt ih- o- -4h6 geead50ruddfl lr[2p]oaiy2 m-2-t3 ru-oe:pct-0tasto-pct"<dv 
-      dvcasae"etcne b8rltv -0>                                                                    
-       h lsNm=tx-x gtx-x otbaktx-mrl-0 rpsao-g>                                      <h>                                                                       <pncasae"- - one-ulb-mrl-0 nmt-us"<sa>                                                                        
-       /i>                                                            <i lsNm=fe utf-ewe tm-etrtx-m>                                          
-        sa lsNm=fn-od>s Mt.on(nryot.ooaetig)<sa>                  <i lsNm=fe utf-ewe tm-etrtx-m>                                       
-        sa lsNm=fn-od>s Mt.on(uldutet.ooaetig)<sa>                  <i lsNm=fe utf-ewe tm-etrtx-m>                                      
-        sa lsNm=fn-od>s Mt.on(cucag  uy.ooaetig)<sa>                  <i lsNm=fe utf-ewe tm-etrtx-m>                                         <pncasae"etrs-0 otbl"R.{ahrudgt.ooaetig)<sa>                  {ve   &(                                                     
-         sa lsNm=tx-lt-0"T ies e<sa>                                         <dv         
-      /i>             <dv 
-      
-    *Wtst nt acltr*                                                            
-     dvcasae"gwiep8rudd[.rm hdwx pc--"                                              < lsNm=tx-mtx-lt-0"Frua srn>nt  WtsxHusDyxDy)/10<srn>/>       <i>                                                                  <nu                        vle{atg}                                          casae"-ulp4b-me-0bre odrabr10rudd2lfn-lc et2ltx-me-0 ou:ig2fcsrn-me-0 uln-oe                        
-       >                                     
-       dv                                                        
-        ipt                
-         au=huseDy                                     
-         lsNm=wfl - gsae5 odrrudd2lfn-od              
-        >                  <i>                                                        
-        ipt                
-         au=dyProt}                                     
-         lsNm=wfl - gsae5 odrrudd2lfn-od              
-        >                 <dv 
-      dvcasae"- gsae5 one-x odrbre-lt-0"                                                �                  <i lsNm=fe lxwa a-"          
-          ae 15 netrA' :10 ,                             
-          ae SalFig' :10}                         
-          ae WtrMtr,w 5 ,                               ]mpa=                         ky{.ae                                     casae"x3p- gwiebre odrsae20ruddx etx otmdu oe:odrabr40hvrb-me-0tasto-l"          
-          anm}(awW                       )}                 <dv         
-                     <i lsNm=b-me-0 etwiep8rudd[.rm hdw2lfe lxcljsiycne eaieoefo-idn>                                                                  
-                                      < lsNm=tx-me-0 pecs et[0x otbaktakn-ietm-"MnhyUisCnue<p                                                       < lsNm=tx-me-0 ets t2>W  nt e ot<p          
-                                            
-       dvcasae"lxjsiybtentx-m>                                   
-        sa lsNm=fn-od>{atg}  huseDyhx{aseMnhd  00/pn           
-       dvcasae"lxjsiybtentx-m>                                       
-        sa lsNm=fn-od>s 24 �R.4.9/pn           
-       dvcasae"lxjsiybtentx-mp- odrtbre-me-0/0>                                                      <pncasae"otbaktx-l>s Mt.on(acltEegCs(atUis rsdnilnnpoetd)*12)tLclSrn(}/pn           
-      /i>       <utn                                             
-       lsNm=rltv -0m- -ulp- gwie2 oe:gwie3 odrbre-ht/0rudd2ltx-mfn-odtasto-l"       
-       aclt ulBl o Mt.on(atUis}Uis           
-     /i>           ) 
-   Eetiiyillgotn >       )  
+﻿
+import React, { useState, useEffect } from 'react';
+import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip, AreaChart, Area, XAxis, YAxis, CartesianGrid } from 'recharts';
+import { SALARIED_TAX_SLABS } from '../constants';
+import { getFinancialAdvice } from '../services/geminiService';
+import { EMIBlogContent, TaxBlogContent, ZakatBlogContent, ProfitMarginBlogContent, BMIBlogContent, InvestmentBlogContent, RetirementBlogContent, RealEstateBlogContent, PFBlogContent, GratuityBlogContent, FreelancerBlogContent, UnitConverterBlogContent, GradeCalculatorBlogContent, CGPACalculatorBlogContent, MarkPercentageBlogContent, IncomeTaxSEOArticle, ZakatSEOArticle, FreelancerSEOArticle, InvestmentSEOArticle, RetirementSEOArticle, RealEstateSEOArticle, PFSEOArticle, GratuitySEOArticle, EMISEOArticle, ProfitMarginSEOArticle, UnitConverterSEOArticle, BMISEOArticle, ElectricityBillBlogContent } from './InfoPages';
+
+const COLORS = ['#10b981', '#ef4444', '#f59e0b', '#3b82f6', '#8b5cf6', '#ec4899'];
+
+// ... (Existing Tool components)
+
+export const IncomeTaxTool = ({ isUrdu }: { isUrdu: boolean }) => {
+  const [salary, setSalary] = useState(100000);
+  const annualSalary = salary * 12;
+  let tax = 0;
+
+  const slab = SALARIED_TAX_SLABS.find((s, i) => {
+    const nextSlab = SALARIED_TAX_SLABS[i + 1];
+    return annualSalary <= (nextSlab?.threshold || Infinity);
+  });
+
+  if (slab) {
+    const prevThreshold = SALARIED_TAX_SLABS[SALARIED_TAX_SLABS.indexOf(slab) - 1]?.threshold || 0;
+    tax = slab.fixed + ((annualSalary - prevThreshold) * (slab.rate / 100));
+  }
+
+  return (
+    <div className="space-y-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl">
+          <h3 className="text-2xl font-bold mb-6">Income Details (2025-2026)</h3>
+          <label className="block text-sm font-medium mb-2">Monthly Gross Salary (PKR)</label>
+          <input type="number" value={salary} onChange={e => setSalary(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+          <p className="text-xs text-slate-400 mt-2 ml-1">Based on latest FBR tax slabs for Salaried Individuals.</p>
+        </div>
+        <div className="bg-slate-900 text-white p-8 rounded-[2.5rem] shadow-xl text-center flex flex-col justify-center">
+          <p className="text-slate-400 uppercase text-xs font-black mb-2">Monthly Tax Payable</p>
+          <h4 className="text-5xl font-black text-emerald-400">Rs. {Math.round(tax / 12).toLocaleString()}</h4>
+
+          <div className="mt-6 pt-6 border-t border-white/10 grid grid-cols-2 gap-4">
+            <div>
+              <p className="text-[10px] text-slate-500 uppercase">Yearly Tax</p>
+              <p className="font-bold">Rs. {Math.round(tax).toLocaleString()}</p>
+            </div>
+            <div>
+              <p className="text-[10px] text-slate-500 uppercase">Net Monthly Income</p>
+              <p className="font-bold">Rs. {Math.round(salary - (tax / 12)).toLocaleString()}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <TaxBlogContent />
+      <IncomeTaxSEOArticle />
+    </div>
+  );
+};
+
+export const ZakatTool = ({ isUrdu }: { isUrdu: boolean }) => {
+  const [cash, setCash] = useState(500000);
+  const [gold, setGold] = useState(0); // grams
+  const [silver, setSilver] = useState(0); // grams
+  const [otherAssets, setOtherAssets] = useState(0);
+  const [liabilities, setLiabilities] = useState(0);
+
+  // 2026 Estimated Rates
+  const [goldRate, setGoldRate] = useState(25000); // per gram approx
+  const [silverRate, setSilverRate] = useState(300); // per gram approx
+
+  const totalAssets = cash + (gold * goldRate) + (silver * silverRate) + otherAssets;
+  const netAssets = Math.max(0, totalAssets - liabilities);
+
+  const nisabGoldValue = 87.48 * goldRate;
+  const nisabSilverValue = 612.36 * silverRate;
+  const nisabThreshold = Math.min(nisabGoldValue, nisabSilverValue);
+
+  const isEligible = netAssets >= nisabThreshold;
+  const zakat = isEligible ? netAssets * 0.025 : 0;
+
+  return (
+    <div className={`space-y-12 ${isUrdu ? 'rtl font-urdu' : ''}`}>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+          <h3 className="text-2xl font-bold">{isUrdu ? 'Ø²Ú©ÙˆÙ°Ûƒ Ú©Û’ Ù„ÛŒÛ’ Ø¢Ù¾ Ú©Û’ Ø§Ø«Ø§Ø«Û’ (Ù†ØµØ§Ø¨ 2026)' : 'Your Assets for Zakat (Nisab 2026)'}</h3>
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="text-xs font-bold text-slate-500">{isUrdu ? 'Ù†Ù‚Ø¯ Ø±Ù‚Ù… (ÛØ§ØªÚ¾ Ù…ÛŒÚº ÛŒØ§ Ø¨ÛŒÙ†Ú©)' : 'Cash in Hand/Bank'}</label>
+              <input type="number" value={cash} onChange={e => setCash(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-500">{isUrdu ? 'Ø¯ÛŒÚ¯Ø± Ø§Ø«Ø§Ø«Û’ (Ø´ÛŒØ¦Ø±Ø² ÙˆØºÛŒØ±Û)' : 'Other Assets (Stocks etc)'}</label>
+              <input type="number" value={otherAssets} onChange={e => setOtherAssets(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="text-xs font-bold text-slate-500">{isUrdu ? 'Ø³ÙˆÙ†Ø§ (Ú¯Ø±Ø§Ù…)' : 'Gold (Grams)'}</label>
+              <input type="number" value={gold} onChange={e => setGold(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-500">{isUrdu ? 'Ú†Ø§Ù†Ø¯ÛŒ (Ú¯Ø±Ø§Ù…)' : 'Silver (Grams)'}</label>
+              <input type="number" value={silver} onChange={e => setSilver(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            </div>
+          </div>
+          <div>
+            <label className="text-xs font-bold text-slate-500">{isUrdu ? 'ÙˆØ§Ø¬Ø¨Ø§Øª / Ù‚Ø±Ø¶Û’ (Ù…Ù†ÛØ§ Ú©Ø±Ù†Û’ Ú©Û’ Ù„ÛŒÛ’)' : 'Liabilities / Debts (to subtract)'}</label>
+            <input type="number" value={liabilities} onChange={e => setLiabilities(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+          </div>
+
+          <div className="pt-4 border-t border-slate-100 grid grid-cols-2 gap-4">
+            <div>
+              <label className="text-[10px] text-slate-400 font-bold uppercase">{isUrdu ? 'Ø³ÙˆÙ†Ø§ ÙÛŒ Ú¯Ø±Ø§Ù… (PKR)' : 'Gold Rate /g (PKR)'}</label>
+              <input type="number" value={goldRate} onChange={e => setGoldRate(Number(e.target.value))} className="w-full p-2 bg-slate-50 border rounded-xl text-xs" />
+            </div>
+            <div>
+              <label className="text-[10px] text-slate-400 font-bold uppercase">{isUrdu ? 'Ú†Ø§Ù†Ø¯ÛŒ ÙÛŒ Ú¯Ø±Ø§Ù… (PKR)' : 'Silver Rate /g (PKR)'}</label>
+              <input type="number" value={silverRate} onChange={e => setSilverRate(Number(e.target.value))} className="w-full p-2 bg-slate-50 border rounded-xl text-xs" />
+            </div>
+          </div>
+        </div>
+
+        <div className={`p-8 rounded-[2.5rem] shadow-xl text-center flex flex-col justify-center transition-colors ${isEligible ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-500'}`}>
+          <p className="text-slate-400 uppercase text-xs font-black mb-2">{isUrdu ? 'Ù‚Ø§Ø¨Ù„Ù Ø§Ø¯Ø§Ø¦ÛŒÚ¯ÛŒ Ø²Ú©ÙˆÙ°Ûƒ (2.5%)' : 'Total Zakat Payable (2.5%)'}</p>
+          <h4 className={`text-5xl font-black ${isEligible ? 'text-emerald-400' : 'text-slate-400'}`}>
+            Rs. {Math.round(zakat).toLocaleString()}
+          </h4>
+
+          <div className="mt-8 space-y-3">
+            <div className="flex justify-between items-center px-4 py-2 bg-white/5 rounded-2xl">
+              <span className="text-xs text-slate-400">{isUrdu ? 'Ú©ÙÙ„ Ø§Ø«Ø§Ø«Û’' : 'Total Assets'}</span>
+              <span className="font-bold">Rs. {Math.round(totalAssets).toLocaleString()}</span>
+            </div>
+            {!isEligible && (
+              <p className="text-[10px] text-amber-400 italic mt-2">
+                {isUrdu ? '* Ø¢Ù¾ Ú©Û’ Ø§Ø«Ø§Ø«Û’ Ù†ØµØ§Ø¨ Ø³Û’ Ú©Ù… ÛÛŒÚºÛ” Ø²Ú©ÙˆÙ°Ûƒ ÙØ±Ø¶ Ù†ÛÛŒÚº ÛÛ’Û”' : '* Assets are below Nisab threshold. Zakat not applicable.'}
+              </p>
+            )}
+          </div>
+        </div>
+      </div>
+      <ZakatBlogContent />
+      <ZakatSEOArticle isUrdu={isUrdu} />
+    </div>
+  );
+};
+
+export const EMITool = () => {
+  const [loan, setLoan] = useState(1000000);
+  const [rate, setRate] = useState(15);
+  const [years, setYears] = useState(5);
+
+  const r = rate / 12 / 100;
+  const n = years * 12;
+  const emi = (loan * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+
+  const totalPayment = emi * n;
+  const totalInterest = totalPayment - loan;
+
+  return (
+    <div className="space-y-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-4">
+          <h3 className="text-2xl font-bold">Loan EMI Calculator Pakistan</h3>
+          <p className="text-xs text-slate-500 mb-4">Calculate your monthly installment for car or bank loans instantly.</p>
+          <div>
+            <label className="text-xs font-bold text-slate-500">Loan Amount (PKR)</label>
+            <input type="number" placeholder="Loan Amount" value={loan} onChange={e => setLoan(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="text-xs font-bold text-slate-500">Interest Rate %</label>
+              <input type="number" placeholder="Interest Rate %" value={rate} onChange={e => setRate(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-500">Tenure (Years)</label>
+              <input type="number" placeholder="Tenure (Years)" value={years} onChange={e => setYears(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-slate-900 text-white p-8 rounded-[2.5rem] shadow-xl text-center flex flex-col justify-center">
+          <p className="text-slate-400 uppercase text-xs font-black mb-2">Monthly Installment (EMI)</p>
+          <h4 className="text-5xl font-black text-blue-400">Rs. {Math.round(emi).toLocaleString()}</h4>
+
+          <div className="mt-8 pt-8 border-t border-white/10 space-y-2">
+            <div className="flex justify-between text-sm">
+              <span className="text-slate-400">Principal Amount</span>
+              <span className="font-bold">Rs. {loan.toLocaleString()}</span>
+            </div>
+            <div className="flex justify-between text-sm">
+              <span className="text-slate-400">Total Interest</span>
+              <span className="font-bold text-rose-400">Rs. {Math.round(totalInterest).toLocaleString()}</span>
+            </div>
+            <div className="flex justify-between text-sm pt-2 border-t border-white/5">
+              <span className="text-slate-400">Total Amount Payable</span>
+              <span className="font-bold text-emerald-400">Rs. {Math.round(totalPayment).toLocaleString()}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <EMIBlogContent />
+      <EMISEOArticle />
+    </div>
+  );
+};
+
+export const ProfitMarginTool = () => {
+  const [mode, setMode] = useState<'margin' | 'markup'>('margin');
+  const [cost, setCost] = useState(1000);
+  const [revenue, setRevenue] = useState(1500); // For Margin Mode
+  const [desiredMargin, setDesiredMargin] = useState(30); // For Markup Mode
+
+  // Mode 1: Known Cost & Revenue -> Find Margin
+  const profit = revenue - cost;
+  const margin = (profit / revenue) * 100;
+  const markup = (profit / cost) * 100;
+
+  // Mode 2: Known Cost & Desired Margin -> Find Revenue
+  // Revenue = Cost / (1 - Margin%)
+  const requiredRevenue = cost / (1 - (desiredMargin / 100));
+  const projectedProfit = requiredRevenue - cost;
+
+  return (
+    <div className="space-y-12">
+      <div className="flex justify-center mb-8">
+        <div className="bg-white p-1 rounded-full border border-slate-100 shadow-sm inline-flex">
+          <button
+            onClick={() => setMode('margin')}
+            className={`px-6 py-2 rounded-full text-xs font-bold transition-all ${mode === 'margin' ? 'bg-slate-900 text-white' : 'text-slate-500 hover:bg-slate-50'}`}
+          >
+            Find Margin %
+          </button>
+          <button
+            onClick={() => setMode('markup')}
+            className={`px-6 py-2 rounded-full text-xs font-bold transition-all ${mode === 'markup' ? 'bg-slate-900 text-white' : 'text-slate-500 hover:bg-slate-50'}`}
+          >
+            Find Selling Price
+          </button>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+          <h3 className="text-2xl font-bold">Business Data</h3>
+
+          <div>
+            <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Product Cost</label>
+            <input type="number" value={cost} onChange={e => setCost(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-xl" />
+          </div>
+
+          {mode === 'margin' ? (
+            <div>
+              <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Selling Price</label>
+              <input type="number" value={revenue} onChange={e => setRevenue(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-xl" />
+            </div>
+          ) : (
+            <div>
+              <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Desired Margin %</label>
+              <input type="number" value={desiredMargin} onChange={e => setDesiredMargin(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-xl" />
+              <p className="text-[10px] text-slate-400 mt-2">How much of the final price should be profit?</p>
+            </div>
+          )}
+        </div>
+
+        <div className="bg-slate-900 text-white p-8 rounded-[2.5rem] shadow-xl flex flex-col justify-center text-center">
+          {mode === 'margin' ? (
+            <>
+              <p className="text-slate-400 uppercase text-xs font-black mb-2">Net Profit Margin</p>
+              <h4 className="text-6xl font-black text-emerald-400 mb-6">{margin.toFixed(1)}%</h4>
+
+              <div className="grid grid-cols-2 gap-4 border-t border-white/10 pt-6">
+                <div>
+                  <p className="text-[10px] text-slate-500 uppercase font-black">Profit Amount</p>
+                  <p className="font-bold text-xl">Rs. {Math.round(profit).toLocaleString()}</p>
+                </div>
+                <div>
+                  <p className="text-[10px] text-slate-500 uppercase font-black">Markup %</p>
+                  <p className="font-bold text-xl text-blue-400">{markup.toFixed(1)}%</p>
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              <p className="text-slate-400 uppercase text-xs font-black mb-2">Suggested Selling Price</p>
+              <h4 className="text-5xl font-black text-emerald-400 mb-6">Rs. {Math.round(requiredRevenue).toLocaleString()}</h4>
+
+              <div className="bg-white/10 p-4 rounded-2xl">
+                <p className="text-[10px] text-slate-300 uppercase mb-1">Expected Profit</p>
+                <p className="font-bold text-2xl">Rs. {Math.round(projectedProfit).toLocaleString()}</p>
+              </div>
+            </>
+          )}
+        </div>
+      </div>
+      <ProfitMarginBlogContent />
+      <ProfitMarginSEOArticle />
+    </div>
+  );
+};
+
+export const BMICalcTool = () => {
+  const [weight, setWeight] = useState(70);
+  const [height, setHeight] = useState(170);
+  const bmi = weight / Math.pow(height / 100, 2);
+
+  let category = '';
+  let color = '';
+  let tip = '';
+
+  if (bmi < 18.5) { category = 'Underweight'; color = 'text-blue-500'; tip = 'Focus on nutrient-rich foods to gain healthy weight.'; }
+  else if (bmi < 25) { category = 'Normal Weight'; color = 'text-emerald-500'; tip = 'Great job! Maintain your balanced diet and activity.'; }
+  else if (bmi < 30) { category = 'Overweight'; color = 'text-amber-500'; tip = 'Consider a slight calorie deficit and more daily movement.'; }
+  else { category = 'Obese'; color = 'text-rose-500'; tip = 'Consult a healthcare provider for a personalized plan.'; }
+
+  return (
+    <div className="space-y-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+          <h3 className="text-2xl font-bold">Body Stats</h3>
+          <div>
+            <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Weight (KG)</label>
+            <input type="number" placeholder="Weight (kg)" value={weight} onChange={e => setWeight(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl text-xl font-bold" />
+          </div>
+          <div>
+            <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Height (CM)</label>
+            <input type="number" placeholder="Height (cm)" value={height} onChange={e => setHeight(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl text-xl font-bold" />
+            <p className="text-xs text-slate-400 mt-2 text-right">{Math.floor(height / 30.48)}ft {Math.round((height % 30.48) / 2.54)}in</p>
+          </div>
+        </div>
+
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl border border-slate-100 flex flex-col items-center justify-center text-center relative overflow-hidden">
+          {/* Simple CSS Gauge Background */}
+          <div className="absolute top-0 w-full h-2 bg-gradient-to-r from-blue-400 via-emerald-400 via-amber-400 to-rose-500"></div>
+
+          <p className="text-slate-400 uppercase text-xs font-black mb-4 tracking-widest">Your Result</p>
+          <h4 className={`text-6xl font-black ${color} mb-2`}>{bmi.toFixed(1)}</h4>
+          <p className={`text-xl font-bold ${color} mb-6`}>{category}</p>
+
+          <div className="bg-slate-50 p-6 rounded-3xl w-full">
+            <span className="text-2xl block mb-2">ðŸ’¡</span>
+            <p className="text-sm text-slate-600 font-medium leading-relaxed">{tip}</p>
+          </div>
+        </div>
+      </div>
+      <BMIBlogContent />
+      <BMISEOArticle />
+    </div>
+  );
+};
+
+export const InvestmentReturnTool = () => {
+  const [principal, setPrincipal] = useState(100000);
+  const [monthly, setMonthly] = useState(5000);
+  const [rate, setRate] = useState(12);
+  const [years, setYears] = useState(10);
+  const [compounding, setCompounding] = useState(12); // Monthly default
+  const [adjustInflation, setAdjustInflation] = useState(false);
+  const [inflationRate, setInflationRate] = useState(8);
+
+  const [data, setData] = useState<any[]>([]);
+  const [result, setResult] = useState<any>(null);
+
+  const calculate = () => {
+    let total = principal;
+    let totalInvested = principal;
+    // Effective rate if inflation adjusted: Real Rate = (1 + Nominal) / (1 + Inflation) - 1
+    // Simplified for tool: adjusting the final value or the rate?
+    // Let's adjust the growth rate to be "Real Return" if toggle is on.
+    const effectiveRate = adjustInflation ? ((1 + rate / 100) / (1 + inflationRate / 100) - 1) * 100 : rate;
+
+    const ratePerPeriod = (effectiveRate / 100) / compounding;
+    const chartData = [];
+
+    for (let i = 0; i <= years; i++) {
+      if (i > 0) {
+        for (let m = 0; m < compounding; m++) {
+          total = (total + (monthly * (12 / compounding))) * (1 + ratePerPeriod);
+          totalInvested += (monthly * (12 / compounding));
+        }
+      }
+      chartData.push({
+        year: `Y${i}`,
+        value: Math.round(total),
+        invested: Math.round(totalInvested)
+      });
+    }
+
+    setData(chartData);
+    setResult({
+      total,
+      invested: totalInvested,
+      returns: total - totalInvested
+    });
+  };
+
+  useEffect(() => calculate(), [principal, monthly, rate, years, compounding, adjustInflation, inflationRate]);
+
+  return (
+    <div className="space-y-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+          <h3 className="text-2xl font-bold text-emerald-900">Investment Strategy</h3>
+
+          <div className="flex items-center justify-between bg-emerald-50 p-4 rounded-2xl border border-emerald-100">
+            <div>
+              <span className="text-sm font-bold text-emerald-900">Adjust for Inflation?</span>
+              <p className="text-[10px] text-emerald-700">See "Real Value" in today's purchasing power</p>
+            </div>
+            <label className="relative inline-flex items-center cursor-pointer">
+              <input type="checkbox" checked={adjustInflation} onChange={e => setAdjustInflation(e.target.checked)} className="sr-only peer" />
+              <div className="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-600"></div>
+            </label>
+          </div>
+
+          <div className="space-y-4">
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Starting Amount</label>
+                <input type="number" value={principal} onChange={e => setPrincipal(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold" />
+              </div>
+              <div>
+                <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Monthly Contribution</label>
+                <input type="number" value={monthly} onChange={e => setMonthly(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold" />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Expected Return %</label>
+                <input type="number" value={rate} onChange={e => setRate(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+              </div>
+              <div>
+                <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Duration (Years)</label>
+                <input type="number" value={years} onChange={e => setYears(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+              </div>
+            </div>
+
+            {adjustInflation && (
+              <div className="animate-in fade-in slide-in-from-top-2">
+                <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Expected Inflation %</label>
+                <input type="number" value={inflationRate} onChange={e => setInflationRate(Number(e.target.value))} className="w-full p-4 bg-rose-50 border border-rose-100 rounded-2xl font-bold text-rose-900" />
+              </div>
+            )}
+          </div>
+        </div>
+
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl flex flex-col border border-slate-50 relative overflow-hidden">
+          {result && (
+            <div className="mb-8 text-center relative z-10">
+              <p className="text-slate-400 uppercase text-xs font-black tracking-widest mb-1">
+                {adjustInflation ? "Real Maturity Value (Today's Money)" : "Projected Maturity Value"}
+              </p>
+              <h4 className="text-5xl font-black text-emerald-600">â‚¨ {Math.round(result.total).toLocaleString()}</h4>
+
+              <div className="flex justify-center gap-2 mt-6">
+                <div className="px-4 py-2 bg-blue-50 rounded-xl border border-blue-100">
+                  <p className="text-[10px] uppercase font-bold text-blue-400">Total Invested</p>
+                  <p className="text-lg font-black text-blue-900">â‚¨ {result.invested.toLocaleString()}</p>
+                </div>
+                <div className="px-4 py-2 bg-emerald-50 rounded-xl border border-emerald-100">
+                  <p className="text-[10px] uppercase font-bold text-emerald-400">Total Profit</p>
+                  <p className="text-lg font-black text-emerald-900">â‚¨ {Math.round(result.returns).toLocaleString()}</p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          <div className="h-48 w-full mt-auto relative z-10">
+            <ResponsiveContainer width="100%" height="100%">
+              <AreaChart data={data}>
+                <defs>
+                  <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stopColor="#10b981" stopOpacity={0.3} />
+                    <stop offset="95%" stopColor="#10b981" stopOpacity={0} />
+                  </linearGradient>
+                </defs>
+                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
+                <Tooltip
+                  contentStyle={{ borderRadius: '16px', border: 'none', boxShadow: '0 10px 30px rgba(0,0,0,0.1)', fontSize: '12px' }}
+                  formatter={(v: number) => `â‚¨ ${v.toLocaleString()}`}
+                  labelStyle={{ display: 'none' }}
+                />
+                <Area type="monotone" dataKey="value" stroke="#10b981" fillOpacity={1} fill="url(#colorValue)" strokeWidth={3} />
+                <Area type="monotone" dataKey="invested" stroke="#3b82f6" fillOpacity={0} strokeWidth={2} strokeDasharray="4 4" />
+              </AreaChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+      </div>
+      <InvestmentBlogContent />
+      <InvestmentSEOArticle />
+    </div>
+  );
+};
+
+export const RetirementTool = () => {
+  const [currentAge, setCurrentAge] = useState(30);
+  const [retireAge, setRetireAge] = useState(60);
+  const [lifeExpectancy, setLifeExpectancy] = useState(80);
+  const [monthlyExpense, setMonthlyExpense] = useState(100000);
+  const [currentSavings, setCurrentSavings] = useState(500000);
+  const [inflation, setInflation] = useState(10); // High inflation in PK
+  const [preRetireReturn, setPreRetireReturn] = useState(12); // Equity/Mutual Funds
+  const [postRetireReturn, setPostRetireReturn] = useState(10); // Safer debt funds
+
+  // 1. Calculate expense at retirement
+  const yearsToRetire = Math.max(0, retireAge - currentAge);
+  const yearsInRetirement = Math.max(0, lifeExpectancy - retireAge);
+
+  const expenseAtRetirement = monthlyExpense * Math.pow(1 + inflation / 100, yearsToRetire);
+
+  // 2. Calculate Corpus Needed
+  // Corpus = (Annual Expense at Retirement) * ((1 - (1+r)^-n ) / r) 
+  // Where r = real rate of return during retirement (return - inflation)
+  // Real Rate approx = (1+Ret)/ (1+Inf) - 1
+  const realRatePostRetire = ((1 + postRetireReturn / 100) / (1 + inflation / 100)) - 1;
+  const annualExpenseAtStart = expenseAtRetirement * 12;
+
+  // PV of Annuity Due (assuming expense at start of year/month)
+  // If Real Rate is 0 or negative (rare but possible in high inflation), handled carefully
+  let corpusNeeded = 0;
+  if (Math.abs(realRatePostRetire) < 0.0001) {
+    corpusNeeded = annualExpenseAtStart * yearsInRetirement;
+  } else {
+    corpusNeeded = annualExpenseAtStart * ((1 - Math.pow(1 + realRatePostRetire, -yearsInRetirement)) / realRatePostRetire);
+  }
+
+  // 3. Gap Analysis
+  // FV of current savings
+  const fvCurrentSavings = currentSavings * Math.pow(1 + preRetireReturn / 100, yearsToRetire);
+  const shortfall = Math.max(0, corpusNeeded - fvCurrentSavings);
+
+  // 4. Monthly Savings Needed to cover shortfall
+  // PMT formula: P = (FV * r) / ((1+r)^n - 1) * (1+r) if start of period? or end? Let's use standard end.
+  const rMonthly = (preRetireReturn / 100) / 12;
+  const nMonths = yearsToRetire * 12;
+  const monthlySavingsNeeded = shortfall > 0 ? (shortfall * rMonthly) / (Math.pow(1 + rMonthly, nMonths) - 1) : 0;
+
+  return (
+    <div className="space-y-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+          <h3 className="text-2xl font-bold text-blue-900">Retirement Plan</h3>
+
+          <div className="grid grid-cols-3 gap-3">
+            <div>
+              <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Current Age</label>
+              <input type="number" value={currentAge} onChange={e => setCurrentAge(Number(e.target.value))} className="w-full p-3 bg-slate-50 border rounded-xl font-bold" />
+            </div>
+            <div>
+              <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Retire Age</label>
+              <input type="number" value={retireAge} onChange={e => setRetireAge(Number(e.target.value))} className="w-full p-3 bg-slate-50 border rounded-xl font-bold" />
+            </div>
+            <div>
+              <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Life Exp.</label>
+              <input type="number" value={lifeExpectancy} onChange={e => setLifeExpectancy(Number(e.target.value))} className="w-full p-3 bg-slate-50 border rounded-xl font-bold" />
+            </div>
+          </div>
+
+          <div>
+            <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Current Monthly Expense</label>
+            <input type="number" value={monthlyExpense} onChange={e => setMonthlyExpense(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl text-lg font-bold" />
+          </div>
+
+          <div>
+            <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Current Savings (Optional)</label>
+            <input type="number" value={currentSavings} onChange={e => setCurrentSavings(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+          </div>
+
+          <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+            <p className="text-xs font-bold text-slate-400 uppercase mb-3">Assumptions</p>
+            <div className="grid grid-cols-3 gap-2">
+              <div>
+                <span className="text-[10px] text-slate-500 block">Inflation</span>
+                <input type="number" value={inflation} onChange={e => setInflation(Number(e.target.value))} className="w-full p-2 bg-white border rounded-lg text-xs font-bold" />
+              </div>
+              <div>
+                <span className="text-[10px] text-slate-500 block">Pre-Ret %</span>
+                <input type="number" value={preRetireReturn} onChange={e => setPreRetireReturn(Number(e.target.value))} className="w-full p-2 bg-white border rounded-lg text-xs font-bold" />
+              </div>
+              <div>
+                <span className="text-[10px] text-slate-500 block">Post-Ret %</span>
+                <input type="number" value={postRetireReturn} onChange={e => setPostRetireReturn(Number(e.target.value))} className="w-full p-2 bg-white border rounded-lg text-xs font-bold" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-blue-900 text-white p-8 rounded-[2.5rem] shadow-2xl flex flex-col justify-center relative overflow-hidden">
+          <div className="absolute right-0 top-0 w-64 h-64 bg-blue-500 rounded-full blur-[100px] opacity-30 -mr-32 -mt-32"></div>
+
+          <div className="relative z-10 text-center space-y-8">
+            <div>
+              <p className="text-blue-200 uppercase text-[10px] font-black tracking-widest mb-2">Total Corpus Needed</p>
+              <h4 className="text-4xl lg:text-5xl font-black text-white">â‚¨ {Math.round(corpusNeeded / 10000000).toFixed(2)} Cr</h4>
+              <p className="text-[10px] text-blue-300 mt-2">
+                To sustain {yearsInRetirement} years with inflation adjusted expenses (Rs. {Math.round(expenseAtRetirement).toLocaleString()}/mo at start)
+              </p>
+            </div>
+
+            <div className="pt-8 border-t border-blue-800">
+              <p className="text-blue-200 uppercase text-[10px] font-black tracking-widest mb-1">Gap & Required Action</p>
+              <div className="flex flex-col items-center">
+                <p className="text-3xl font-black text-emerald-400">Save â‚¨ {Math.round(monthlySavingsNeeded).toLocaleString()} <span className="text-sm text-emerald-200 font-normal">/ month</span></p>
+                {currentSavings > 0 && <p className="text-[10px] text-blue-400 mt-2">considering your existing {Math.round(currentSavings / 100000).toFixed(1)} Lakh savings</p>}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <RetirementBlogContent />
+      <RetirementSEOArticle />
+    </div>
+  );
+};
+
+export const RealEstateROITool = () => {
+  const [purchasePrice, setPurchasePrice] = useState(10000000);
+  const [sellingPrice, setSellingPrice] = useState(15000000);
+  const [monthlyRent, setMonthlyRent] = useState(45000);
+  const [holdingYears, setHoldingYears] = useState(5);
+
+  // Expenses
+  const [stampDutyRate, setStampDutyRate] = useState(3); // % (Transfer + Reg)
+  const [annualMaintenance, setAnnualMaintenance] = useState(20000); // PKR per year
+  const [commissionRate, setCommissionRate] = useState(1); // % Agent Fee (Buy + Sell)
+
+  const buyCosts = purchasePrice * (stampDutyRate / 100) + (purchasePrice * commissionRate / 100);
+  const totalCostBasis = purchasePrice + buyCosts;
+
+  const totalRentCollected = monthlyRent * 12 * holdingYears;
+  const totalMaintenance = annualMaintenance * holdingYears;
+  const netRent = totalRentCollected - totalMaintenance;
+
+  const capitalGain = sellingPrice - totalCostBasis - (sellingPrice * commissionRate / 100); // Sell commission
+
+  const totalProfit = capitalGain + netRent;
+  const annualizedROI = (Math.pow((totalProfit + purchasePrice) / purchasePrice, 1 / holdingYears) - 1) * 100;
+  const rentalYield = ((monthlyRent * 12) / purchasePrice) * 100;
+
+  return (
+    <div className="space-y-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+          <h3 className="text-2xl font-bold text-slate-900">Property Deal</h3>
+
+          <div className="space-y-4">
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Purchase Price</label>
+                <input type="number" value={purchasePrice} onChange={e => setPurchasePrice(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold" />
+              </div>
+              <div>
+                <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Expected Sale Price</label>
+                <input type="number" value={sellingPrice} onChange={e => setSellingPrice(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold" />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-3 gap-3">
+              <div className="col-span-1">
+                <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Rent/Mo</label>
+                <input type="number" value={monthlyRent} onChange={e => setMonthlyRent(Number(e.target.value))} className="w-full p-3 bg-slate-50 border rounded-xl" />
+              </div>
+              <div className="col-span-1">
+                <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Years Held</label>
+                <input type="number" value={holdingYears} onChange={e => setHoldingYears(Number(e.target.value))} className="w-full p-3 bg-slate-50 border rounded-xl" />
+              </div>
+              <div className="col-span-1">
+                <label className="text-[10px] font-black uppercase text-slate-400 mb-1">Maint./Yr</label>
+                <input type="number" value={annualMaintenance} onChange={e => setAnnualMaintenance(Number(e.target.value))} className="w-full p-3 bg-slate-50 border rounded-xl" />
+              </div>
+            </div>
+
+            <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+              <p className="text-xs font-bold text-slate-400 uppercase mb-3">One-time Costs (%)</p>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <span className="text-[10px] text-slate-500 block">Stamp Duty/Tax</span>
+                  <input type="number" value={stampDutyRate} onChange={e => setStampDutyRate(Number(e.target.value))} className="w-full p-2 bg-white border rounded-lg text-xs font-bold" />
+                </div>
+                <div>
+                  <span className="text-[10px] text-slate-500 block">Agent Comm.</span>
+                  <input type="number" value={commissionRate} onChange={e => setCommissionRate(Number(e.target.value))} className="w-full p-2 bg-white border rounded-lg text-xs font-bold" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-slate-900 text-white p-8 rounded-[2.5rem] shadow-2xl flex flex-col justify-center relative overflow-hidden">
+          <div className="absolute left-0 bottom-0 w-full h-32 bg-gradient-to-t from-black/50 to-transparent"></div>
+
+          <div className="relative z-10 text-center mb-8">
+            <p className="text-slate-400 uppercase text-[10px] font-black tracking-widest mb-2">Total Net Profit</p>
+            <h4 className="text-5xl font-black text-emerald-400">â‚¨ {Math.round(totalProfit).toLocaleString()}</h4>
+            <div className="inline-flex gap-4 mt-2">
+              <span className="text-xs text-slate-400">Yield: <b className="text-white">{rentalYield.toFixed(1)}%</b></span>
+              <span className="text-xs text-slate-400">CAGR: <b className="text-white">{annualizedROI.toFixed(1)}%</b></span>
+            </div>
+          </div>
+
+          <div className="relative z-10 space-y-3 bg-white/5 p-6 rounded-3xl border border-white/10">
+            <div className="flex justify-between text-sm">
+              <span className="text-slate-400">Capital Gain (Net)</span>
+              <span className="font-bold">Rs. {Math.round(capitalGain).toLocaleString()}</span>
+            </div>
+            <div className="flex justify-between text-sm">
+              <span className="text-slate-400">Rental Income (Net)</span>
+              <span className="font-bold">Rs. {Math.round(netRent).toLocaleString()}</span>
+            </div>
+            <div className="flex justify-between text-sm pt-3 border-t border-white/10">
+              <span className="text-rose-300 text-xs">Total Buying Costs</span>
+              <span className="text-rose-300 text-xs">- Rs. {Math.round(buyCosts).toLocaleString()}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <RealEstateBlogContent />
+      <RealEstateSEOArticle />
+    </div>
+  );
+};
+
+export const PFTool = () => {
+  const [basicSalary, setBasicSalary] = useState(100000);
+  const [empContribution, setEmpContribution] = useState(10); // %
+  const [employerContribution, setEmployerContribution] = useState(10); // %
+  const [interestRate, setInterestRate] = useState(12); // %
+  const [years, setYears] = useState(10);
+
+  const monthlyEmpPF = basicSalary * (empContribution / 100);
+  const monthlyEmployerPF = basicSalary * (employerContribution / 100);
+  const totalMonthlyContribution = monthlyEmpPF + monthlyEmployerPF;
+
+  // Detailed loop to track principal vs interest
+  let totalBalance = 0;
+  let totalPrincipal = 0;
+
+  const yearlyContribution = totalMonthlyContribution * 12;
+
+  for (let i = 0; i < years; i++) {
+    totalPrincipal += yearlyContribution;
+    totalBalance = (totalBalance + yearlyContribution) * (1 + interestRate / 100);
+  }
+
+  const totalInterest = totalBalance - totalPrincipal;
+
+  return (
+    <div className="space-y-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+          <h3 className="text-2xl font-bold">Provident Fund Calculation in Pakistan</h3>
+          <p className="text-xs text-slate-500 mb-2">Easily find your PF deduction amount and PF percentage in salary.</p>
+          <div>
+            <label className="text-xs font-bold text-slate-500 uppercase">Monthly Basic Salary (PKR)</label>
+            <input type="number" value={basicSalary} onChange={e => setBasicSalary(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-xl" />
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="text-xs font-bold text-slate-500 uppercase">Your Share %</label>
+              <input type="number" value={empContribution} onChange={e => setEmpContribution(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-500 uppercase">Employer Share %</label>
+              <input type="number" value={employerContribution} onChange={e => setEmployerContribution(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="text-xs font-bold text-slate-500 uppercase">Return Rate %</label>
+              <input type="number" value={interestRate} onChange={e => setInterestRate(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-500 uppercase">Years</label>
+              <input type="number" value={years} onChange={e => setYears(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-blue-900 text-white p-8 rounded-[2.5rem] shadow-2xl flex flex-col justify-center relative overflow-hidden">
+          <div className="absolute right-0 top-0 w-64 h-64 bg-blue-500 rounded-full blur-[100px] opacity-30 -mr-32 -mt-32"></div>
+
+          <div className="text-center mb-8 relative z-10">
+            <p className="text-blue-200 uppercase text-xs font-black tracking-widest mb-2">Projected Maturity Amount</p>
+            <h4 className="text-5xl font-black text-emerald-400">Rs. {Math.round(totalBalance).toLocaleString()}</h4>
+            <p className="text-[10px] text-blue-300 mt-2">After {years} years of compounding</p>
+          </div>
+
+          <div className="space-y-4 pt-8 border-t border-white/10 relative z-10">
+            <div className="flex justify-between items-center text-sm">
+              <span className="text-blue-200">Total Contributed (Principal)</span>
+              <span className="font-bold">Rs. {Math.round(totalPrincipal).toLocaleString()}</span>
+            </div>
+            <div className="flex justify-between items-center text-sm">
+              <span className="text-blue-200">Total Interest Earned</span>
+              <span className="font-bold text-emerald-400">+ Rs. {Math.round(totalInterest).toLocaleString()}</span>
+            </div>
+
+            {/* Simple Bar Visualization */}
+            <div className="w-full h-3 bg-blue-950 rounded-full mt-4 flex overflow-hidden">
+              <div className="h-full bg-blue-400" style={{ width: `${(totalPrincipal / totalBalance) * 100}%` }}></div>
+              <div className="h-full bg-emerald-400" style={{ width: `${(totalInterest / totalBalance) * 100}%` }}></div>
+            </div>
+            <div className="flex justify-between text-[10px] text-blue-300">
+              <span>P: {Math.round((totalPrincipal / totalBalance) * 100)}%</span>
+              <span>I: {Math.round((totalInterest / totalBalance) * 100)}%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <PFBlogContent />
+      <PFSEOArticle />
+    </div>
+  );
+};
+
+export const GratuityTool = () => {
+  const [basicSalary, setBasicSalary] = useState(50000); // Last Drawn GROSS Salary technically
+  const [years, setYears] = useState(5);
+
+  // Rule: (Last Drawn Gross Wages * Years * 30) / 26
+  // Note: Some companies use Basic, but Law says "Wages" which is Gross. We will label it carefully.
+  const gratuity = (basicSalary * years * 30) / 26;
+
+  // Tax Exemptions
+  const approvedExemption = Math.min(gratuity, 300000);
+  const unapprovedExemption = Math.min(gratuity, 75000); // Simplification of "Lower of 75k or 50%"
+
+  return (
+    <div className="space-y-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+          <h3 className="text-2xl font-bold">Service Details</h3>
+
+          <div className="p-4 bg-indigo-50 border border-indigo-100 rounded-2xl flex gap-3">
+            <span className="text-2xl">ðŸ’¡</span>
+            <p className="text-xs text-indigo-800 leading-relaxed">
+              <strong>Tip:</strong> According to Pakistan Labor Laws, Gratuity is usually calculated on your <strong>Last Drawn GROSS Salary</strong> (including COLA), not just Basic Salary.
+            </p>
+          </div>
+
+          <div>
+            <label className="text-xs font-bold text-slate-500 uppercase">Last Monthly Gross Salary</label>
+            <input
+              type="number"
+              value={basicSalary}
+              onChange={e => setBasicSalary(Number(e.target.value))}
+              className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-xl"
+            />
+          </div>
+          <div>
+            <label className="text-xs font-bold text-slate-500 uppercase">Total Completed Years</label>
+            <input
+              type="number"
+              value={years}
+              onChange={e => setYears(Number(e.target.value))}
+              className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-xl"
+            />
+            <p className="text-[10px] text-slate-400 mt-2 ml-1">Note: Service of more than 6 months in the last year is counted as a full year.</p>
+          </div>
+        </div>
+
+        <div className="bg-indigo-700 text-white p-8 rounded-[2.5rem] shadow-2xl flex flex-col justify-center relative overflow-hidden">
+          <div className="absolute left-0 top-0 w-64 h-64 bg-indigo-500 rounded-full blur-[120px] opacity-50 -ml-20 -mt-20"></div>
+
+          <div className="relative z-10 text-center">
+            <p className="text-indigo-200 uppercase text-xs font-black tracking-widest mb-4">Total Gratuity Payable</p>
+            <h4 className="text-5xl font-black mb-2">Rs. {Math.round(gratuity).toLocaleString()}</h4>
+
+            <div className="mt-8 pt-8 border-t border-indigo-500/50 text-left space-y-3">
+              <p className="text-xs font-black text-indigo-300 uppercase tracking-widest mb-2">Tax Exemption Limits</p>
+              <div className="flex justify-between text-sm">
+                <span className="opacity-80">If Approved Fund:</span>
+                <span className="font-bold">Up to Rs. 300k Exempt</span>
+              </div>
+              <div className="flex justify-between text-sm">
+                <span className="opacity-80">If Unapproved:</span>
+                <span className="font-bold">Up to Rs. 75k Exempt</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <GratuityBlogContent />
+      <GratuitySEOArticle />
+    </div>
+  );
+};
+
+export const FreelancerTool = ({ isUrdu }: { isUrdu: boolean }) => {
+  const [income, setIncome] = useState(1000); // Monthly Income
+  const [currency, setCurrency] = useState<'PKR' | 'USD'>('USD');
+  const [exchangeRate, setExchangeRate] = useState(278); // Default est.
+  const [isPSEB, setIsPSEB] = useState(true); // PSEB Registered?
+  const [bankFee, setBankFee] = useState(0); // Optional fixed fee
+
+  const grossPKR = currency === 'USD' ? income * exchangeRate : income;
+  const taxRate = isPSEB ? 0.0025 : 0.01; // 0.25% vs 1%
+  const taxAmount = grossPKR * taxRate;
+  const netIncome = grossPKR - taxAmount - bankFee;
+  const annualNet = netIncome * 12;
+
+  return (
+    <div className={`space-y-12 ${isUrdu ? 'rtl font-urdu' : ''}`}>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Input Section */}
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+          <h3 className="text-2xl font-bold">{isUrdu ? 'ÙØ±ÛŒ Ù„Ø§Ù†Ø³Ø± Ø§Ù†Ú©Ù…' : 'Freelancer Income'}</h3>
+
+          <div className="space-y-4">
+            <div>
+              <label className="text-xs font-bold text-slate-500 uppercase">{isUrdu ? 'Ù…Ø§ÛØ§Ù†Û Ø¢Ù…Ø¯Ù†ÛŒ' : 'Monthly Income'}</label>
+              <div className="flex gap-4">
+                <div className="relative w-full">
+                  <input
+                    type="number"
+                    value={income}
+                    onChange={e => setIncome(Number(e.target.value))}
+                    className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-lg"
+                  />
+                  <div className={`absolute ${isUrdu ? 'left-2' : 'right-2'} top-2 p-2 bg-slate-200 rounded-xl text-xs font-bold`}>{currency}</div>
+                </div>
+                <button
+                  onClick={() => setCurrency(currency === 'USD' ? 'PKR' : 'USD')}
+                  className="px-6 bg-slate-900 text-white rounded-2xl font-bold hover:bg-slate-800 transition-colors"
+                >
+                  {currency === 'USD' ? 'â†’ PKR' : 'â†’ USD'}
+                </button>
+              </div>
+            </div>
+
+            {currency === 'USD' && (
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="text-[10px] text-slate-400 font-bold uppercase">{isUrdu ? 'Ø§ÛŒÚ©Ø³Ú†ÛŒÙ†Ø¬ Ø±ÛŒÙ¹ (PKR)' : 'Exchange Rate (PKR)'}</label>
+                  <input
+                    type="number"
+                    value={exchangeRate}
+                    onChange={e => setExchangeRate(Number(e.target.value))}
+                    className="w-full p-4 bg-slate-50 border rounded-2xl"
+                  />
+                </div>
+                <div>
+                  <label className="text-[10px] text-slate-400 font-bold uppercase">{isUrdu ? 'Ø¨ÛŒÙ†Ú© ÙÛŒØ³ (Ø§Ú¯Ø± ÛÙˆ)' : 'Bank Fee (Optional)'}</label>
+                  <input
+                    type="number"
+                    value={bankFee}
+                    onChange={e => setBankFee(Number(e.target.value))}
+                    className="w-full p-4 bg-slate-50 border rounded-2xl"
+                  />
+                </div>
+              </div>
+            )}
+
+            <div className="p-4 bg-emerald-50 rounded-3xl border border-emerald-100">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h4 className="font-bold text-emerald-900 text-sm">{isUrdu ? 'PSEB Ø±Ø¬Ø³Ù¹Ø±ÛŒØ´Ù†' : 'PSEB Registration'}</h4>
+                  <p className="text-[10px] text-emerald-600">{isUrdu ? 'Ú©ÛŒ Ú©ÛŒØ§ Ø¢Ù¾ PSEB Ú©Û’ Ø³Ø§ØªÚ¾ Ø±Ø¬Ø³Ù¹Ø±Úˆ ÙØ±ÛŒ Ù„Ø§Ù†Ø³Ø± ÛÛŒÚºØŸ' : 'Are you a registered IT exporter with PSEB?'}</p>
+                </div>
+                <button
+                  onClick={() => setIsPSEB(!isPSEB)}
+                  className={`w-14 h-8 rounded-full transition-colors relative ${isPSEB ? 'bg-emerald-500' : 'bg-slate-300'}`}
+                >
+                  <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all ${isPSEB ? (isUrdu ? 'left-1' : 'right-1') : (isUrdu ? 'right-1' : 'left-1')}`} />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Results Section */}
+        <div className="bg-slate-900 text-white p-8 rounded-[4rem] shadow-xl flex flex-col justify-center relative overflow-hidden group">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl -mr-16 -mt-16"></div>
+
+          <div className="text-center relative z-10">
+            <p className="text-slate-400 uppercase text-[10px] font-black tracking-widest mb-4">
+              {isUrdu ? 'Ø¢Ù¾ Ú©ÛŒ Ø®Ø§Ù„Øµ Ù…Ø§ÛØ§Ù†Û Ø¢Ù…Ø¯Ù†ÛŒ' : 'Your Net Monthly Take-Home'}
+            </p>
+            <h4 className="text-5xl font-black text-emerald-400 mb-2">Rs. {Math.round(netIncome).toLocaleString()}</h4>
+            <p className="text-slate-500 text-xs">
+              {isUrdu ? `Ù¹ÛŒÚ©Ø³ Ú©Ù¹ÙˆØªÛŒ: Rs. ${Math.round(taxAmount).toLocaleString()} (${isPSEB ? '0.25%' : '1%'})` : `Tax Withheld: Rs. ${Math.round(taxAmount).toLocaleString()} (${isPSEB ? '0.25%' : '1%'})`}
+            </p>
+          </div>
+
+          <div className="mt-10 grid grid-cols-2 gap-6 relative z-10 border-t border-white/10 pt-8">
+            <div className="text-center">
+              <p className="text-[10px] text-slate-500 uppercase font-bold mb-1">{isUrdu ? 'Ø³Ø§Ù„Ø§Ù†Û Ø®Ø§Ù„Øµ Ø¢Ù…Ø¯Ù†ÛŒ' : 'Annual Net Income'}</p>
+              <p className="font-black text-lg">Rs. {Math.round(annualNet).toLocaleString()}</p>
+            </div>
+            <div className="text-center">
+              <p className="text-[10px] text-slate-500 uppercase font-bold mb-1">{isUrdu ? 'Ú©ÙÙ„ Ú¯Ø±Ø§Ø³ (PKR)' : 'Gross Amount (PKR)'}</p>
+              <p className="font-black text-lg text-slate-300">Rs. {Math.round(grossPKR).toLocaleString()}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <FreelancerBlogContent />
+      <FreelancerSEOArticle />
+    </div>
+  );
+};
+
+export const UnitConverterTool = () => {
+  const [activeTab, setActiveTab] = useState<'area' | 'weight'>('area');
+
+  // Area State
+  const [marla, setMarla] = useState(1);
+  const [marlaType, setMarlaType] = useState<225 | 272.25>(225);
+
+  // Weight State
+  const [tola, setTola] = useState(1);
+  const TOLA_TO_GRAM = 11.664;
+
+  // Conversions
+  const totalSqFt = marla * marlaType;
+  const totalSqYards = totalSqFt / 9;
+  const totalKanal = marla / 20;
+
+  const totalGrams = tola * TOLA_TO_GRAM;
+  const totalMasha = tola * 12;
+
+  return (
+    <div className="space-y-12">
+      {/* Tabs */}
+      <div className="flex justify-center mb-8">
+        <div className="bg-white p-1 rounded-full border border-slate-100 shadow-sm inline-flex">
+          <button
+            onClick={() => setActiveTab('area')}
+            className={`px-8 py-3 rounded-full text-sm font-bold transition-all ${activeTab === 'area' ? 'bg-slate-900 text-white shadow-lg' : 'text-slate-500 hover:bg-slate-50'}`}
+          >
+            Hasba/Land Area
+          </button>
+          <button
+            onClick={() => setActiveTab('weight')}
+            className={`px-8 py-3 rounded-full text-sm font-bold transition-all ${activeTab === 'weight' ? 'bg-amber-500 text-white shadow-lg' : 'text-slate-500 hover:bg-slate-50'}`}
+          >
+            Gold Weight
+          </button>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+        {activeTab === 'area' ? (
+          <>
+            <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+              <h3 className="text-2xl font-bold">Land Measurement</h3>
+              <div>
+                <label className="text-xs font-bold text-slate-500 uppercase">Input Marla</label>
+                <input
+                  type="number"
+                  value={marla}
+                  onChange={e => setMarla(Number(e.target.value))}
+                  className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-xl"
+                />
+              </div>
+              <div>
+                <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Marla Standard</label>
+                <div className="grid grid-cols-2 gap-4">
+                  <button
+                    onClick={() => setMarlaType(225)}
+                    className={`p-4 rounded-2xl border text-sm font-bold transition-all ${marlaType === 225 ? 'bg-slate-900 text-white border-slate-900' : 'bg-white border-slate-200 text-slate-500'}`}
+                  >
+                    225 Sq.Ft <br /><span className="text-[10px] font-normal opacity-70">(DHA/Bahria)</span>
+                  </button>
+                  <button
+                    onClick={() => setMarlaType(272.25)}
+                    className={`p-4 rounded-2xl border text-sm font-bold transition-all ${marlaType === 272.25 ? 'bg-slate-900 text-white border-slate-900' : 'bg-white border-slate-200 text-slate-500'}`}
+                  >
+                    272.25 Sq.Ft <br /><span className="text-[10px] font-normal opacity-70">(Revenue/Village)</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-slate-900 text-white p-8 rounded-[2.5rem] shadow-xl flex flex-col justify-center">
+              <p className="text-slate-400 uppercase text-xs font-black mb-6 tracking-widest">Converted Area</p>
+
+              <div className="space-y-6">
+                <div className="flex justify-between items-center border-b border-white/10 pb-4">
+                  <span className="text-3xl font-black">{totalSqFt.toLocaleString()}</span>
+                  <span className="text-xs text-slate-400 uppercase font-bold">Square Feet</span>
+                </div>
+                <div className="flex justify-between items-center border-b border-white/10 pb-4">
+                  <span className="text-3xl font-black">{Math.round(totalSqYards).toLocaleString()}</span>
+                  <span className="text-xs text-slate-400 uppercase font-bold">Square Yards (Gaz)</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-3xl font-black text-emerald-400">{totalKanal.toFixed(2)}</span>
+                  <span className="text-xs text-slate-400 uppercase font-bold">Kanal</span>
+                </div>
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+              <h3 className="text-2xl font-bold text-amber-900">Gold Weight</h3>
+              <div>
+                <label className="text-xs font-bold text-slate-500 uppercase">Input Tola</label>
+                <input
+                  type="number"
+                  value={tola}
+                  onChange={e => setTola(Number(e.target.value))}
+                  className="w-full p-4 bg-amber-50 border border-amber-100 rounded-2xl font-bold text-xl text-amber-900 focus:ring-amber-500"
+                />
+              </div>
+              <p className="text-sm text-slate-500">
+                1 Tola = 11.664 Grams (Standard Pakistani Gold Rate Unit)
+              </p>
+            </div>
+
+            <div className="bg-amber-500 text-white p-8 rounded-[2.5rem] shadow-xl flex flex-col justify-center relative overflow-hidden">
+              <div className="absolute right-0 top-0 w-64 h-64 bg-amber-400 rounded-full blur-[80px] opacity-50 -mr-20 -mt-20"></div>
+
+              <div className="relative z-10 space-y-6">
+                <div className="flex justify-between items-center border-b border-amber-400/30 pb-4">
+                  <span className="text-4xl font-black">{totalGrams.toFixed(3)}</span>
+                  <span className="text-xs text-amber-100 uppercase font-bold">Grams</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-4xl font-black">{totalMasha.toFixed(2)}</span>
+                  <span className="text-xs text-amber-100 uppercase font-bold">Masha</span>
+                </div>
+              </div>
+            </div>
+          </>
+        )}
+      </div>
+      <UnitConverterBlogContent />
+      <UnitConverterSEOArticle />
+    </div>
+  );
+};
+
+export const MarkPercentageTool = () => {
+  const [obtained, setObtained] = useState(850);
+  const [total, setTotal] = useState(1100);
+  const percentage = total > 0 ? (obtained / total) * 100 : 0;
+
+  return (
+    <div className="space-y-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+          <h3 className="text-2xl font-bold">Marks Details</h3>
+          <div>
+            <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Obtained Marks</label>
+            <input type="number" value={obtained} onChange={e => setObtained(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-xl" />
+          </div>
+          <div>
+            <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Total Marks</label>
+            <input type="number" value={total} onChange={e => setTotal(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-xl" />
+          </div>
+        </div>
+
+        <div className="bg-emerald-600 text-white p-8 rounded-[2.5rem] shadow-xl flex flex-col justify-center text-center relative overflow-hidden">
+          <div className="absolute right-0 top-0 w-64 h-64 bg-white/10 rounded-full blur-[80px] -mr-32 -mt-32"></div>
+          <p className="text-emerald-100 uppercase text-xs font-black mb-2 tracking-widest">Percentage Score</p>
+          <h4 className="text-7xl font-black mb-4">{percentage.toFixed(2)}%</h4>
+          <div className="w-full bg-black/20 h-3 rounded-full overflow-hidden mb-6">
+            <div className="bg-white h-full transition-all duration-1000" style={{ width: `${Math.min(100, percentage)}%` }}></div>
+          </div>
+          <p className="text-emerald-100 text-sm font-medium">
+            You obtained {obtained} out of {total} marks.
+          </p>
+        </div>
+      </div>
+      <MarkPercentageBlogContent />
+    </div>
+  );
+};
+
+export const GradeCalculatorTool = () => {
+  const [obtained, setObtained] = useState(85);
+  const [total, setTotal] = useState(100);
+  const percentage = total > 0 ? (obtained / total) * 100 : 0;
+
+  let grade = 'F';
+  let color = 'text-rose-500';
+  let status = 'Fail';
+
+  if (percentage >= 80) { grade = 'A+'; color = 'text-emerald-500'; status = 'Exceptional'; }
+  else if (percentage >= 70) { grade = 'A'; color = 'text-emerald-400'; status = 'Excellent'; }
+  else if (percentage >= 60) { grade = 'B'; color = 'text-blue-500'; status = 'Good'; }
+  else if (percentage >= 50) { grade = 'C'; color = 'text-amber-500'; status = 'Average'; }
+  else if (percentage >= 40) { grade = 'D'; color = 'text-orange-500'; status = 'Pass'; }
+
+  return (
+    <div className="space-y-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6 text-slate-800">
+          <h3 className="text-2xl font-bold">Academic Performance</h3>
+          <div>
+            <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Marks Obtained</label>
+            <input type="number" value={obtained} onChange={e => setObtained(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-xl" />
+          </div>
+          <div>
+            <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Total Marks</label>
+            <input type="number" value={total} onChange={e => setTotal(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold text-xl" />
+          </div>
+        </div>
+
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl border border-slate-100 flex flex-col items-center justify-center text-center relative overflow-hidden">
+          <div className="absolute top-0 w-full h-2 bg-gradient-to-r from-rose-500 via-amber-500 to-emerald-500"></div>
+          <p className="text-slate-400 uppercase text-xs font-black mb-4 tracking-widest">Calculated Grade</p>
+          <h4 className={`text-8xl font-black ${color} mb-2`}>{grade}</h4>
+          <p className={`text-2xl font-bold ${color} mb-6 tracking-tight uppercase`}>{status}</p>
+          <div className="bg-slate-50 px-6 py-3 rounded-2xl border border-slate-100">
+            <p className="text-sm font-bold text-slate-600">Percentage: {percentage.toFixed(2)}%</p>
+          </div>
+        </div>
+      </div>
+      <GradeCalculatorBlogContent />
+    </div>
+  );
+};
+
+export const CGPACalculatorTool = () => {
+  const [semesters, setSemesters] = useState([{ id: 1, sgpa: 3.5, credits: 18 }]);
+
+  const addSemester = () => {
+    setSemesters([...semesters, { id: Date.now(), sgpa: 0, credits: 0 }]);
+  };
+
+  const removeSemester = (id: number) => {
+    if (semesters.length > 1) {
+      setSemesters(semesters.filter(s => s.id !== id));
+    }
+  };
+
+  const updateSemester = (id: number, field: 'sgpa' | 'credits', value: number) => {
+    setSemesters(semesters.map(s => s.id === id ? { ...s, [field]: value } : s));
+  };
+
+  const totalCredits = semesters.reduce((acc, s) => acc + s.credits, 0);
+  const totalPoints = semesters.reduce((acc, s) => acc + (s.sgpa * s.credits), 0);
+  const cgpa = totalCredits > 0 ? totalPoints / totalCredits : 0;
+
+  return (
+    <div className="space-y-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+          <div className="flex justify-between items-center mb-4">
+            <h3 className="text-2xl font-bold">Semester Details</h3>
+            <button
+              onClick={addSemester}
+              className="px-4 py-2 bg-emerald-600 text-white rounded-xl text-sm font-bold hover:bg-emerald-700 transition-colors shadow-lg"
+            >
+              + Add Semester
+            </button>
+          </div>
+
+          <div className="space-y-4 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
+            {semesters.map((s, index) => (
+              <div key={s.id} className="p-6 bg-slate-50 rounded-[2rem] border border-slate-100 relative animate-in fade-in slide-in-from-right-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="text-[10px] font-black uppercase text-slate-400 mb-1 block">Semester {index + 1} GPA</label>
+                    <input
+                      type="number"
+                      step="0.01"
+                      value={s.sgpa || ''}
+                      onChange={e => updateSemester(s.id, 'sgpa', Number(e.target.value))}
+                      className="w-full p-3 bg-white border rounded-xl font-bold"
+                      placeholder="e.g. 3.5"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-[10px] font-black uppercase text-slate-400 mb-1 block">Credit Hours</label>
+                    <input
+                      type="number"
+                      value={s.credits || ''}
+                      onChange={e => updateSemester(s.id, 'credits', Number(e.target.value))}
+                      className="w-full p-3 bg-white border rounded-xl font-bold"
+                      placeholder="e.g. 18"
+                    />
+                  </div>
+                </div>
+                {semesters.length > 1 && (
+                  <button
+                    onClick={() => removeSemester(s.id)}
+                    className="absolute -top-2 -right-2 w-8 h-8 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center text-lg hover:bg-rose-200 transition-colors shadow-sm"
+                  >
+                    Ã—
+                  </button>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="bg-slate-900 text-white p-8 rounded-[2.5rem] shadow-2xl flex flex-col justify-center text-center relative overflow-hidden">
+          <div className="absolute left-0 bottom-0 w-full h-32 bg-gradient-to-t from-emerald-500/20 to-transparent"></div>
+          <p className="text-slate-400 uppercase text-xs font-black mb-4 tracking-widest">Cumulative GPA (CGPA)</p>
+          <h4 className="text-8xl font-black text-emerald-400 mb-6 drop-shadow-2xl">{cgpa.toFixed(2)}</h4>
+          <div className="grid grid-cols-2 gap-4 bg-white/5 p-6 rounded-3xl border border-white/10 relative z-10">
+            <div>
+              <p className="text-[10px] text-slate-400 uppercase font-black mb-1">Total Credits</p>
+              <p className="text-2xl font-bold">{totalCredits}</p>
+            </div>
+            <div>
+              <p className="text-[10px] text-slate-400 uppercase font-black mb-1">Total Grade Points</p>
+              <p className="text-2xl font-bold">{totalPoints.toFixed(1)}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <CGPACalculatorBlogContent />
+    </div>
+  );
+};
+
+export const ElectricityBillTool = ({ isUrdu }: { isUrdu: boolean }) => {
+  const [activeTab, setActiveTab] = useState<'bill' | 'watts'>('bill');
+  const [units, setUnits] = useState(250);
+  const [consumerType, setConsumerType] = useState<'residential-non-protected' | 'residential-protected' | 'commercial'>('residential-non-protected');
+  const [fpa, setFpa] = useState(2.8);
+  const [disco, setDisco] = useState('LESCO');
+
+  // Watts to Units state
+  const [wattage, setWattage] = useState(1500);
+  const [hoursPerDay, setHoursPerDay] = useState(8);
+  const [daysPerMonth, setDaysPerMonth] = useState(30);
+  const wattsUnits = (wattage * hoursPerDay * daysPerMonth) / 1000;
+
+  // NEPRA Slabs 2025-26
+  const calculateEnergyCost = (u: number, type: string) => {
+    if (type === 'residential-protected') {
+      if (u <= 100) return u * 10.54;
+      if (u <= 200) return (100 * 10.54) + ((u - 100) * 13.01);
+      return (100 * 10.54) + (100 * 13.01) + ((u - 200) * 22.44);
+    } else if (type === 'commercial') {
+      if (u <= 100) return u * 30.10;
+      if (u <= 300) return (100 * 30.10) + ((u - 100) * 39.52);
+      return (100 * 30.10) + (200 * 39.52) + ((u - 300) * 48.77);
+    } else {
+      let cost = 0;
+      if (u <= 100) cost = u * 22.44;
+      else if (u <= 200) cost = (100 * 22.44) + ((u - 100) * 28.91);
+      else if (u <= 300) cost = (100 * 22.44) + (100 * 28.91) + ((u - 200) * 33.10);
+      else if (u <= 400) cost = (100 * 22.44) + (100 * 28.91) + (100 * 33.10) + ((u - 300) * 37.99);
+      else if (u <= 500) cost = (100 * 22.44) + (100 * 28.91) + (100 * 33.10) + (100 * 37.99) + ((u - 400) * 40.20);
+      else if (u <= 600) cost = (100 * 22.44) + (100 * 28.91) + (100 * 33.10) + (100 * 37.99) + (100 * 40.20) + ((u - 500) * 41.62);
+      else if (u <= 700) cost = (100 * 22.44) + (100 * 28.91) + (100 * 33.10) + (100 * 37.99) + (100 * 40.20) + (100 * 41.62) + ((u - 600) * 42.76);
+      else cost = (100 * 22.44) + (100 * 28.91) + (100 * 33.10) + (100 * 37.99) + (100 * 40.20) + (100 * 41.62) + (100 * 42.76) + ((u - 700) * 47.69);
+      return cost;
+    }
+  };
+
+  const energyCost = calculateEnergyCost(units, consumerType);
+  const fuelAdjustment = units * fpa;
+  const duty = energyCost * 0.015;
+  const fcSurcharge = units * 0.43;
+  const tvFee = consumerType === 'commercial' ? 0 : 35;
+  const totalTaxable = energyCost + fuelAdjustment + duty + fcSurcharge;
+  const gst = totalTaxable * 0.18;
+  const totalBill = totalTaxable + gst + tvFee;
+  const perUnitEffective = units > 0 ? totalBill / units : 0;
+
+  const discos = ['LESCO', 'MEPCO', 'IESCO', 'FESCO', 'PESCO', 'K-Electric', 'GEPCO', 'HESCO', 'SEPCO'];
+
+  return (
+    <div className="space-y-12 animate-in fade-in duration-700">
+
+      {/* Tab Toggle */}
+      <div className="flex justify-center">
+        <div className="bg-white p-1 rounded-full border border-slate-100 shadow-sm inline-flex">
+          <button
+            onClick={() => setActiveTab('bill')}
+            className={`px-6 py-3 rounded-full text-sm font-bold transition-all ${activeTab === 'bill' ? 'bg-slate-900 text-white shadow-lg' : 'text-slate-500 hover:bg-slate-50'}`}
+          >
+            Bill Calculator
+          </button>
+          <button
+            onClick={() => setActiveTab('watts')}
+            className={`px-6 py-3 rounded-full text-sm font-bold transition-all ${activeTab === 'watts' ? 'bg-amber-500 text-white shadow-lg' : 'text-slate-500 hover:bg-slate-50'}`}
+          >
+            Watts to Units
+          </button>
+        </div>
+      </div>
+
+      {activeTab === 'bill' ? (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+
+          {/* Input Panel */}
+          <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+            <h3 className="text-2xl font-bold">{isUrdu ? 'Ø¨Ø¬Ù„ÛŒ Ú©Û’ Ø¨Ù„ Ú©ÛŒ ØªÙØµÛŒÙ„Ø§Øª' : 'WAPDA Unit Calculator'}</h3>
+
+            {/* DISCO Selector */}
+            <div>
+              <label className="text-xs font-bold text-slate-500 uppercase mb-2 block tracking-widest">Distribution Company (DISCO)</label>
+              <div className="flex flex-wrap gap-2">
+                {discos.map(d => (
+                  <button
+                    key={d}
+                    onClick={() => setDisco(d)}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all border ${disco === d ? 'bg-slate-900 text-white border-slate-900' : 'bg-white border-slate-200 text-slate-500 hover:border-slate-400'}`}
+                  >
+                    {d}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Consumer Type */}
+            <div>
+              <label className="text-xs font-bold text-slate-500 uppercase mb-2 block tracking-widest">Consumer Type</label>
+              <div className="grid grid-cols-3 gap-2">
+                <button
+                  onClick={() => setConsumerType('residential-protected')}
+                  className={`py-2 px-2 rounded-xl text-xs font-bold transition-all border ${consumerType === 'residential-protected' ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-white border-slate-200 text-slate-600 hover:border-slate-400'}`}
+                >
+                  Protected
+                </button>
+                <button
+                  onClick={() => setConsumerType('residential-non-protected')}
+                  className={`py-2 px-2 rounded-xl text-xs font-bold transition-all border ${consumerType === 'residential-non-protected' ? 'bg-slate-900 text-white border-slate-900' : 'bg-white border-slate-200 text-slate-600 hover:border-slate-400'}`}
+                >
+                  Residential
+                </button>
+                <button
+                  onClick={() => setConsumerType('commercial')}
+                  className={`py-2 px-2 rounded-xl text-xs font-bold transition-all border ${consumerType === 'commercial' ? 'bg-blue-600 text-white border-blue-600' : 'bg-white border-slate-200 text-slate-600 hover:border-slate-400'}`}
+                >
+                  Commercial
+                </button>
+              </div>
+              {consumerType === 'residential-protected' && (
+                <p className="text-[10px] text-emerald-600 mt-2 ml-1">Protected = under 200 units for the last 6 consecutive months.</p>
+              )}
+              {consumerType === 'commercial' && (
+                <p className="text-[10px] text-blue-600 mt-2 ml-1">Commercial A-2 tariff applies. Higher per unit rate, no protected category.</p>
+              )}
+            </div>
+
+            {/* Units Input */}
+            <div>
+              <label className="text-xs font-bold text-slate-500 uppercase mb-2 block tracking-widest">Units Consumed (kWh)</label>
+              <input
+                type="number"
+                value={units}
+                onChange={e => setUnits(Number(e.target.value))}
+                className="w-full p-4 bg-slate-50 border rounded-2xl font-black text-2xl focus:ring-2 focus:ring-emerald-500 outline-none transition-all"
+              />
+              <p className="text-[10px] text-slate-400 mt-2 ml-1">
+                Based on NEPRA 2025-2026 tariff. Don't know your units?{' '}
+                <button onClick={() => setActiveTab('watts')} className="text-amber-600 font-bold underline">Use Watts to Units tab.</button>
+              </p>
+            </div>
+
+            {/* FPA */}
+            <div className="pt-4 border-t border-slate-100">
+              <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Fuel Price Adjustment â€” FPA (Rs./unit)</label>
+              <input
+                type="number"
+                value={fpa}
+                onChange={e => setFpa(Number(e.target.value))}
+                className="w-full p-3 bg-slate-50 border rounded-xl text-sm"
+                step="0.1"
+              />
+              <p className="text-[10px] text-slate-400 mt-1 ml-1">NEPRA announces FPA monthly. Adjust to match your DISCO's current rate.</p>
+            </div>
+          </div>
+
+          {/* Results Panel */}
+          <div className="bg-slate-900 text-white p-8 rounded-[2.5rem] shadow-2xl flex flex-col justify-center relative overflow-hidden group">
+            <div className="absolute right-0 top-0 w-64 h-64 bg-emerald-500 rounded-full blur-[120px] opacity-20 -mr-32 -mt-32 group-hover:opacity-30 transition-opacity"></div>
+
+            <div className="text-center mb-8 relative z-10">
+              <p className="text-slate-400 uppercase text-[10px] font-black tracking-widest mb-1">Estimated Monthly Bill â€” {disco}</p>
+              <h4 className="text-6xl lg:text-7xl font-black text-emerald-400 drop-shadow-lg">
+                Rs. {Math.round(totalBill).toLocaleString()}
+              </h4>
+              <div className="mt-3 inline-flex items-center gap-2 px-3 py-1 bg-white/5 rounded-full border border-white/10">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span className="text-[10px] font-bold text-slate-400">Effective rate: Rs. {perUnitEffective.toFixed(2)} / unit (all-in)</span>
+              </div>
+            </div>
+
+            <div className="space-y-3 pt-6 border-t border-white/10 relative z-10">
+              <div className="flex justify-between items-center text-sm">
+                <span className="text-slate-400">Energy Cost ({units} units)</span>
+                <span className="font-bold">Rs. {Math.round(energyCost).toLocaleString()}</span>
+              </div>
+              <div className="flex justify-between items-center text-sm">
+                <span className="text-slate-400">Fuel Price Adj. (FPA)</span>
+                <span className="font-bold">Rs. {Math.round(fuelAdjustment).toLocaleString()}</span>
+              </div>
+              <div className="flex justify-between items-center text-sm">
+                <span className="text-slate-400">FC Surcharge + Duty</span>
+                <span className="font-bold">Rs. {Math.round(fcSurcharge + duty).toLocaleString()}</span>
+              </div>
+              <div className="flex justify-between items-center text-sm">
+                <span className="text-rose-400">GST (18%)</span>
+                <span className="text-rose-400 font-bold">Rs. {Math.round(gst).toLocaleString()}</span>
+              </div>
+              {tvFee > 0 && (
+                <div className="flex justify-between items-center text-sm pt-3 border-t border-white/10">
+                  <span className="text-slate-400">TV License Fee</span>
+                  <span className="font-bold">Rs. {tvFee}</span>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+      ) : (
+
+        /* Watts to Units Calculator */
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
+            <h3 className="text-2xl font-bold">Watts to Units Calculator</h3>
+            <p className="text-sm text-slate-500">Formula: <strong>Units = (Watts x Hours/Day x Days) / 1000</strong></p>
+
+            <div>
+              <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Appliance Wattage (W)</label>
+              <input
+                type="number"
+                value={wattage}
+                onChange={e => setWattage(Number(e.target.value))}
+                className="w-full p-4 bg-amber-50 border border-amber-100 rounded-2xl font-black text-2xl text-amber-900 focus:ring-2 focus:ring-amber-400 outline-none"
+                placeholder="e.g. 1500 for AC"
+              />
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Hours Per Day</label>
+                <input
+                  type="number"
+                  value={hoursPerDay}
+                  onChange={e => setHoursPerDay(Number(e.target.value))}
+                  className="w-full p-4 bg-slate-50 border rounded-2xl font-bold"
+                  max={24}
+                />
+              </div>
+              <div>
+                <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Days Per Month</label>
+                <input
+                  type="number"
+                  value={daysPerMonth}
+                  onChange={e => setDaysPerMonth(Number(e.target.value))}
+                  className="w-full p-4 bg-slate-50 border rounded-2xl font-bold"
+                  max={31}
+                />
+              </div>
+            </div>
+
+            <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+              <p className="text-xs text-slate-400 mb-2 font-bold uppercase">Common Appliances â€” Click to Select</p>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { name: '1.5T Inverter AC', w: 1200 },
+                  { name: '1.5T Non-Inverter', w: 1850 },
+                  { name: 'Small Fridge', w: 150 },
+                  { name: 'LED TV 42"', w: 90 },
+                  { name: 'Water Motor', w: 750 },
+                  { name: 'Iron', w: 1100 },
+                ].map(a => (
+                  <button
+                    key={a.name}
+                    onClick={() => setWattage(a.w)}
+                    className="px-3 py-1 bg-white border border-slate-200 rounded-xl text-xs font-medium hover:border-amber-400 hover:bg-amber-50 transition-all"
+                  >
+                    {a.name} ({a.w}W)
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Watts Result */}
+          <div className="bg-amber-500 text-white p-8 rounded-[2.5rem] shadow-2xl flex flex-col justify-center relative overflow-hidden">
+            <div className="absolute right-0 top-0 w-48 h-48 bg-amber-400 rounded-full blur-[80px] opacity-50 -mr-24 -mt-24"></div>
+
+            <div className="relative z-10 text-center mb-8">
+              <p className="text-amber-100 uppercase text-[10px] font-black tracking-widest mb-2">Monthly Units Consumed</p>
+              <h4 className="text-7xl font-black drop-shadow-lg">{wattsUnits.toFixed(1)}</h4>
+              <p className="text-amber-200 text-sm mt-2">kWh / Units per Month</p>
+            </div>
+
+            <div className="relative z-10 space-y-3 pt-5 border-t border-amber-400/40">
+              <div className="flex justify-between text-sm">
+                <span className="text-amber-100">Formula used:</span>
+                <span className="font-bold">({wattage}W x {hoursPerDay}h x {daysPerMonth}d) / 1000</span>
+              </div>
+              <div className="flex justify-between text-sm">
+                <span className="text-amber-100">WAPDA per unit (est.)</span>
+                <span className="font-bold">Rs. 22.44 â€“ Rs. 47.69</span>
+              </div>
+              <div className="flex justify-between text-sm pt-3 border-t border-amber-400/30">
+                <span className="text-amber-100 font-bold">Approx. Bill (Non-Prot.)</span>
+                <span className="font-black text-xl">Rs. {Math.round(calculateEnergyCost(wattsUnits, 'residential-non-protected') * 1.25).toLocaleString()}</span>
+              </div>
+            </div>
+
+            <button
+              onClick={() => { setUnits(Math.round(wattsUnits)); setActiveTab('bill'); }}
+              className="relative z-10 mt-6 w-full py-3 bg-white/20 hover:bg-white/30 border border-white/30 rounded-2xl text-sm font-bold transition-all"
+            >
+              Calculate Full Bill for {Math.round(wattsUnits)} Units
+            </button>
+          </div>
+        </div>
+      )}
+
+      <ElectricityBillBlogContent />
+    </div>
+  );
+};
