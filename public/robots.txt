@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /all-tools?q=
 
 Host: https://pakcalc.site
 Sitemap: https://pakcalc.site/sitemap.xml

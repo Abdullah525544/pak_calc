@@ -100,108 +100,220 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     }
   },
   'investment-return': {
-    title: 'ROI & Investment Return Calculator Pakistan (2025)',
-    description: 'Track profits on mutual funds, National Savings, or real estate. Use our free 2025-26 ROI and Investment Return Calculator tailored for Pakistani investors. Try it!',
+    title: 'ROI & Investment Return Calculator Pakistan 2026',
+    description: 'Predict your investment growth today. Calculate ROI for mutual funds, stocks, and property in Pakistan with compounding interest and inflation adjustment.',
     faqs: [
-      { question: 'How to calculate investment return in Pakistan?', answer: 'To calculate your investment return: Enter your initial investment amount, expected annual return rate (NSC offers 11-15%, mutual funds 10-20%), investment duration, and our calculator will show you total profit with compound interest, adjusted for inflation.' }
-    ]
+      { question: 'How to calculate investment profit in Pakistan?', answer: 'Investment profit is calculated by subtracting the initial cost from the final value. For compounded returns, use our calculator to see how your wealth grows over time with factors like annual rates and duration.' },
+      { question: 'What is a good ROI for property in Pakistan?', answer: 'A good rental yield in major Pakistani cities like Karachi or Lahore is typically 4-6% annually, while capital appreciation can range from 10% to 20% in developing sectors.' }
+    ],
+    howTo: {
+      name: "How to Predict Your Investment Growth",
+      description: "Step-by-step guide to calculating your expected returns using our ROI tool.",
+      steps: [
+        { name: "Enter Initial Amount", text: "Input the starting capital you plan to invest." },
+        { name: "Set Expected Rate", text: "Choose the annual percentage return you expect (e.g., 15% for mutual funds)." },
+        { name: "Choose Duration", text: "Select the number of years you plan to hold the investment." },
+        { name: "Review Compounded Growth", text: "Observe the final maturity value and the total profit earned." }
+      ]
+    }
   },
   'retirement-plan': {
-    title: 'Retirement Savings Calculator Pakistan 2026 - Plan Your Pension & VPS',
-    description: 'Plan your retirement in Pakistan. Calculate required savings corpus, VPS calculator and inflation-adjusted projections. Start planning your secure future today.',
+    title: 'Retirement Savings Calculator Pakistan 2026 | Pension & VPS Planner',
+    description: 'Secure your future. Calculate the exact corpus needed for retirement in Pakistan, accounting for inflation and monthly expenses. Plan your VPS today.',
     faqs: [
-      { question: 'How much money do I need to retire in Pakistan?', answer: 'The amount depends on your lifestyle. For a comfortable retirement in Pakistan, you typically need 20-25x your annual expenses saved. With 8-10% inflation, someone spending PKR 100,000/month today would need approximately PKR 50-80 million by retirement age 60.' }
-    ]
+      { question: 'How much pension will I get in Pakistan?', answer: 'Pension amounts depend on your service years and last drawn salary. For private sector workers, Voluntary Pension Schemes (VPS) are recommended to build a substantial retirement fund.' },
+      { question: 'Is VPS better than Gratuity?', answer: 'VPS is an investment-linked saving plan that offers tax credits and growth, while Gratuity is a lump-sum end-of-service benefit provided by employers. Both are essential for a robust retirement plan.' }
+    ],
+    howTo: {
+      name: "How to Plan Your Retirement Corpus",
+      description: "Follow these steps to determine how much you need to save for a comfortable life after 60.",
+      steps: [
+        { name: "Define Monthly Expenses", text: "Estimate what your current monthly cost of living is." },
+        { name: "Estimate Inflation", text: "Account for Pakistan's average inflation (usually 8-12%) to see future costs." },
+        { name: "Set Retirement Age", text: "Decide when you want to stop working (standard is 60 in Pakistan)." },
+        { name: "View Required Savings", text: "The tool calculates the total 'nest egg' you need to sustain your lifestyle." }
+      ]
+    }
   },
   'real-estate-roi': {
-    title: 'Real Estate ROI Calculator Pakistan 2026 - Property Investment & Rental Yield',
-    description: 'Analyze rental yield, capital gains and FBR transfer taxes for property deals. ROI calculator for Karachi, Lahore and Islamabad with Marla and Kanal price analysis.',
+    title: 'Real Estate ROI Calculator Pakistan 2026 | Rental Yield & FBR Taxes',
+    description: 'Analyze property deals in Karachi, Lahore, and Islamabad. Calculate rental yields, capital gains, and FBR transfer taxes for 2026. Get accurate ROI now.',
     faqs: [
-      { question: 'How to calculate real estate ROI in Pakistan?', answer: 'Real Estate ROI = (Annual Rental Income + Property Appreciation - Expenses) / Total Investment × 100. In Pakistan, typical rental yields range from 3-6% in major cities, while capital appreciation can be 10-20% annually in developing areas.' }
-    ]
+      { question: 'What are FBR property transfer taxes in 2026?', answer: 'For 2025-26, FBR transfer taxes for filers are approximately 3% and significantly higher for non-filers (up to 12% or more). Always check latest FBR active tax payer list (ATL) status.' },
+      { question: 'How is rental yield calculated in Karachi?', answer: 'Rental Yield = (Monthly Rent × 12) / Total Property Value. In Karachi, average residential yields are 3-5%, while commercial shops can go higher.' }
+    ],
+    howTo: {
+      name: "How to Analyze a Property Deal",
+      description: "A comprehensive guide to evaluating real estate investments in Pakistan.",
+      steps: [
+        { name: "Input Buy Price", text: "Enter the total purchasing cost of the property including agent fees." },
+        { name: "Factor in Taxes", text: "Select your filer status to apply correct FBR Stamp Duty and CVT." },
+        { name: "Estimate Monthly Rent", text: "Enter the expected rent the property would fetch in the current market." },
+        { name: "Calculate Annual Yield", text: "Review the net ROI after accounting for maintenance and tax outlays." }
+      ]
+    }
   },
   'provident-fund': {
-    title: 'Provident Fund Calculator Pakistan 2026 - Free PF Balance & Deduction Calculator',
-    description: 'Calculate your Provident Fund (PF) balance with employer matching and interest. PF deduction percentage and contribution rules in Pakistan. Used by 5,000+ employees.',
+    title: 'Provident Fund Calculator Pakistan 2026 | PF Balance & Interest',
+    description: 'Estimate your Provident Fund (PF) balance with employer matching. Calculate monthly deductions and interest rates in Pakistan (FBR approved). Free PF tool.',
     faqs: [
-      { question: 'How to calculate Provident Fund in Pakistan?', answer: 'Provident Fund in Pakistan is calculated as a percentage of your basic salary (typically 6-8.33%). Both employee and employer contribute equally. The PF balance grows with monthly contributions plus interest (currently 13-15% per annum). Our calculator shows your projected PF balance at retirement.' },
-      { question: 'What is the PF deduction percentage in Pakistan?', answer: 'The standard PF deduction is 1/12th (8.33%) of basic salary in Pakistan, though some organizations deduct 6% or a fixed amount. The employer matches your contribution. The total contribution (employee + employer) is typically 16.67% of basic salary.' },
-      { question: 'Is Provident Fund taxable in Pakistan?', answer: 'Employer contributions to recognized Provident Funds are tax-exempt up to 10% of salary. The accumulated balance is also tax-free at the time of withdrawal after retirement or completion of service, provided the fund is approved by the FBR.' }
-    ]
+      { question: 'Is PF deducted on basic or gross salary?', answer: 'In Pakistan, Provident Fund is typically deducted as 8.33% (1/12th) of your basic salary. Your employer matches this contribution, making the total monthly addition 16.67% of basic salary.' },
+      { question: 'Can I withdraw PF before retirement in Pakistan?', answer: 'Yes, you can usually withdraw a portion of your PF balance for specific needs like house construction or medical emergencies, subject to your organization\'s rules and FBR regulations.' }
+    ],
+    howTo: {
+      name: "How to Estimate Your PF Balance",
+      description: "Step-by-step guide to projecting your provident fund growth until retirement.",
+      steps: [
+        { name: "Enter Monthly Contribution", text: "Input the amount deducted from your basic salary each month." },
+        { name: "Factor in Interest Rate", text: "Enter the annual interest rate (e.g., 10-14% for major funds)." },
+        { name: "Set Years to Retirement", text: "Select how many years you have left until you retire." },
+        { name: "See Payout Projection", text: "The calculator shows your estimated total balance including employer matching." }
+      ]
+    }
   },
   'gratuity': {
-    title: 'Gratuity Calculator Pakistan 2025 | As Per Labor Law',
-    description: 'Resigning or retiring? Calculate your exact end-of-service payout using the official Gratuity Calculator Pakistan 2025. Know your legal rights before leaving.',
+    title: 'Gratuity Calculator Pakistan 2026 | Official Labor Law Formula',
+    description: 'Calculate your end-of-service gratuity based on 2025-26 Pakistan labor laws. Free tool for private and govt employees. Check your resignation payout now.',
     faqs: [
-      { question: 'How is gratuity calculated in Pakistan?', answer: 'Gratuity in Pakistan is calculated as: Last drawn salary × number of years of service. Under the Pakistan labor laws, employees who have completed at least one year of continuous service are entitled to gratuity equal to 30 days wages for each completed year of service.' },
-      { question: 'Is gratuity calculated on basic salary or gross salary in Pakistan?', answer: 'In Pakistan, gratuity is typically calculated on the last drawn basic salary (not gross salary). However, some organizations calculate it on gross salary as per their company policy. The legal minimum is based on basic salary plus dearness allowance.' },
-      { question: 'What is the gratuity amount for 5 years service in Pakistan?', answer: 'For 5 years of service, your gratuity = Last basic salary × 5. For example, if your last basic salary is PKR 100,000, your gratuity would be PKR 500,000 (100,000 × 5 years). Some companies offer higher rates based on their HR policies.' }
-    ]
+      { question: 'Am I eligible for gratuity after 2 years?', answer: 'Yes, according to Pakistan labor laws, employees are typically eligible for gratuity after completing one year of continuous service.' },
+      { question: 'How to calculate gratuity for govt employees in Pakistan?', answer: 'Government gratuity formulas may vary slightly but generally follow: (Last drawn basic salary × service years). Use our tool for a quick estimate based on standard rules.' }
+    ],
+    howTo: {
+      name: "How to Calculate Your End-of-Service Gratuity",
+      description: "Easy steps to find your legal gratuity entitlement in Pakistan.",
+      steps: [
+        { name: "Check Eligibility (1yr+)", text: "Ensure you have completed at least one year of continuous service." },
+        { name: "Input Last Basic Salary", text: "Enter your most recent monthly basic salary (before allowances)." },
+        { name: "Enter Total Service Years", text: "Input the total number of years you served at the company." },
+        { name: "Calculate Final Benefit", text: "Click calculate to see your estimated redundancy or retirement payout." }
+      ]
+    }
   },
   'loan-emi': {
-    title: 'Loan EMI Calculator Pakistan 2026 - Free Monthly Installment Calculator (KIBOR)',
-    description: 'Calculate monthly EMI for car loans, home loans and bank loans. KIBOR-based rates for Meezan, HBL and Alfalah supported. Full payment schedule with interest breakdown.',
+    title: 'Loan EMI Calculator Pakistan 2026 | KIBOR car & home loan',
+    description: 'Calculate monthly EMI installments for car, home, or personal loans in Pakistan. Support for latest KIBOR rates (HBL, Meezan, Alfalah). Plan your loan free.',
     faqs: [
-      { question: 'How to calculate loan EMI in Pakistan?', answer: 'EMI (Equated Monthly Installment) is calculated using the formula: EMI = P × r × (1+r)^n / ((1+r)^n - 1), where P = loan amount, r = monthly interest rate, n = number of months. In Pakistan, car loan rates are typically KIBOR + 3-5% spread.' },
-      { question: 'How much EMI for 30 lakh loan in Pakistan?', answer: 'For a PKR 30 lakh loan at 18% annual interest for 5 years, the monthly EMI would be approximately PKR 76,000. The exact amount depends on the bank\'s interest rate and loan tenure. Use our calculator for precise EMI calculations.' }
-    ]
+      { question: 'What is the latest KIBOR rate in Pakistan?', answer: 'KIBOR (Karachi Interbank Offered Rate) fluctuates daily. Banks usually charge KIBOR + a spread of 2-5%. Check our tool for the latest estimated monthly payments.' },
+      { question: 'How much is the car loan down payment?', answer: 'In Pakistan, down payments usually range from 15% to 30% of the car\'s total value, depending on SBP regulations and the bank\'s policy.' }
+    ],
+    howTo: {
+      name: "How to Calculate Your Monthly Loan Installment (EMI)",
+      description: "Analyze your loan repayment schedule in simple steps.",
+      steps: [
+        { name: "Enter Loan Amount", text: "Input the total principal amount you intend to borrow." },
+        { name: "Select Interest Rate", text: "Enter the annual percentage rate (including bank spread)." },
+        { name: "Choose Tenure (Months)", text: "Select the repayment period in months (e.g., 60 months for 5 years)." },
+        { name: "Check Repayment Schedule", text: "Review the full breakdown of interest vs principal in your monthly payments." }
+      ]
+    }
   },
   'profit-margin': {
-    title: 'Profit Margin Calculator 2026 - Free Business Markup & Net Profit Finder',
-    description: 'Calculate net profit margin and markup percentage for your business. Gross vs net profit comparisons ideal for wholesalers, retailers and startups in Pakistan. Instant results.',
+    title: 'Profit Margin Calculator 2026 | Business Markup & Profit Finder',
+    description: 'Maximize your business profits today. Instantly calculate net profit margins, markups, and gross profit to scale your business in Pakistan. Get accurate, action-oriented financial data in seconds!',
     faqs: [
-      { question: 'How to calculate profit margin for a business in Pakistan?', answer: 'Profit Margin = (Revenue - Cost) / Revenue × 100. For example, if you buy a product for PKR 800 and sell for PKR 1,000, your profit margin is 20%. Markup would be 25% (200/800 × 100). Our calculator instantly shows both margin and markup.' }
-    ]
+      { question: 'How to calculate profit margin for a business in Pakistan?', answer: 'Profit Margin = (Revenue - Cost) / Revenue × 100. For example, if you buy a product for PKR 800 and sell for PKR 1,000, your profit margin is 20%. Markup would be 25% (200/800 × 100). Our calculator instantly shows both margin and markup.' },
+      { question: 'What is a good profit margin for retail in Pakistan?', answer: 'In Pakistan, retail margins typically range from 10% to 30%, depending on the industry. Wholesalers usually operate on thinner margins of 2-5%, while services can be much higher.' }
+    ],
+    howTo: {
+      name: "How to Calculate Profit Margin for your Business",
+      description: "Simple steps to evaluate your sales profitability and markup percentages.",
+      steps: [
+        { name: "Enter Cost Price", text: "Input the total cost spent to produce or purchase the item." },
+        { name: "Set Selling Price", text: "Enter the final price you charge the customer." },
+        { name: "Analyze Net Profit", text: "The tool instantly reveals your gross and net profit in PKR." },
+        { name: "Check Margin vs Markup", text: "View both calculations to understand your business overhead and growth." }
+      ]
+    }
   },
   'unit-converter': {
-    title: 'Pakistani Land Unit Converter 2025-26 | Murabba to Kanal',
+    title: 'Murabba to Kanal Converter | Land Units Pakistan',
     description: 'Quickly convert Pakistani land units like Murabba to Kanal, Marla, and Acres. Use our free, accurate 2025-26 calculator for your property deals. Try it now!',
     faqs: [
       { question: 'How many Kanal in 1 Murabba in Pakistan?', answer: '1 Murabba = 25 Acres = 200 Kanal in Pakistan. A Murabba is commonly used for agricultural land measurement in Punjab. 200 Murabba would be 40,000 Kanal or 5,000 Acres.' },
       { question: 'How many Marla in 1 Kanal?', answer: '1 Kanal = 20 Marla in Pakistan. 1 Marla = 272.25 sq ft. So 1 Kanal = 5,445 sq ft. These are the standard land measurement units used across Punjab and KPK.' },
       { question: 'How many Marla in 40 Gaz?', answer: '40 Gaz (Square Yards) is approximately equal to 1.32 Marla in Pakistan. 1 Marla = 30.25 Gaz/Square Yards. This conversion is commonly needed when buying plots in Pakistan.' }
-    ]
+    ],
+    howTo: {
+      name: "How to Convert Land Units in Pakistan",
+      description: "Accurately convert between Marla, Kanal, Acre, and Murabba for land deals.",
+      steps: [
+        { name: "Select Input Unit", text: "Choose the unit you currently have (e.g., Murabba or Marla)." },
+        { name: "Enter Quantity", text: "Input the numerical value you want to convert." },
+        { name: "Select Target Unit", text: "Choose the unit you want to see the results in (e.g., Kanal)." },
+        { name: "View Conversions", text: "The tool instantly displays the result along with other common Pakistani land metrics." }
+      ]
+    }
   },
   'bmi': {
-    title: 'BMI Calculator Pakistan 2026 - Free Body Mass Index & Health Check Tool',
+    title: 'BMI Calculator Pakistan 2026 | Health & Weight Check Tool',
     description: 'Calculate your BMI instantly. Check if you are underweight, normal, or overweight with Pakistan-specific health tips and weight management advice. 100% free.',
     faqs: [
-      { question: 'How to calculate BMI in Pakistan?', answer: 'BMI = Weight (kg) / Height (m²). For example, if you weigh 70kg and are 1.75m tall, your BMI = 70 / (1.75 × 1.75) = 22.86 (Normal weight). BMI categories: Under 18.5 = Underweight, 18.5-24.9 = Normal, 25-29.9 = Overweight, 30+ = Obese.' }
-    ]
+      { question: 'How to calculate BMI in Pakistan?', answer: 'BMI = Weight (kg) / Height (m²). For example, if you weigh 70kg and are 1.75m tall, your BMI = 70 / (1.75 × 1.75) = 22.86 (Normal weight). BMI categories: Under 18.5 = Underweight, 18.5-24.9 = Normal, 25-29.9 = Overweight, 30+ = Obese.' },
+      { question: 'What is a healthy weight for 5\'8 in Pakistan?', answer: 'For a height of 5\'8" (1.73m), a healthy BMI-based weight range is approximately 56kg to 74kg.' }
+    ],
+    howTo: {
+      name: "How to Check Your Body Mass Index (BMI)",
+      description: "Understand your weight category for better health in Pakistan.",
+      steps: [
+        { name: "Select Your Gender", text: "Choose male or female as physiology affects health recommendations." },
+        { name: "Enter Your Weight", text: "Input your current weight in kilograms for accuracy." },
+        { name: "Input Your Height", text: "Enter your height in centimeters or feet/inches." },
+        { name: "Observe Health Category", text: "Instantly see if you fall into the healthy, overweight, or underweight bracket." }
+      ]
+    }
   },
   'cgpa-calc': {
-    title: 'CGPA Calculator Pakistan 2026 - Free GPA Calculator (HEC Standards)',
-    description: 'Calculate CGPA and SGPA as per HEC Pakistan standards. Percentage to GPA conversion for all university grading systems supported. How to calculate GPA in Pakistan.',
+    title: 'CGPA Calculator Pakistan 2026 | HEC GPA Standards Tool',
+    description: 'Calculate CGPA and SGPA based on HEC Pakistan standards. Free GPA calculator for university students. Convert percentage to GPA easily in seconds.',
     faqs: [
       { question: 'How to calculate GPA in Pakistan?', answer: 'In Pakistan, GPA is calculated by: 1) Multiplying each course\'s grade points by its credit hours, 2) Adding all quality points, 3) Dividing by total credit hours. HEC uses 4.0 scale where A = 4.0, B+ = 3.3, B = 3.0, etc.' },
-      { question: 'How to calculate CGPA from SGPA in Pakistan?', answer: 'CGPA = Sum of (SGPA × semester credit hours) / Total credit hours of all semesters. For example, if Semester 1 SGPA = 3.5 (18 credits) and Semester 2 SGPA = 3.7 (15 credits), CGPA = (3.5×18 + 3.7×15) / (18+15) = 3.59.' }
-    ]
+      { question: 'How to convert GPA to percentage for HEC?', answer: 'HEC has a standard conversion formula. Generally, a 3.0 GPA is roughly equal to 70-75%, while a 4.0 is 85-90%+. Our tool helps you see the comparison instantly.' }
+    ],
+    howTo: {
+      name: "How to Calculate Your Semester GPA",
+      description: "Quick steps for Pakistani university students to find their SGPA/CGPA.",
+      steps: [
+        { name: "Enter Course Credit Hours", text: "Input the credit weighting for each subject." },
+        { name: "Select Grade Points", text: "Input the grade points achieved (e.g., 4.0 for A, 3.3 for B+)." },
+        { name: "Repeat for All Subjects", text: "Add all courses taken in the semester." },
+        { name: "Calculate SGPA/CGPA", text: "View your final average and total quality points." }
+      ]
+    }
   },
   'grade-calc': {
-    title: 'Grade Calculator Pakistan - Matric, Inter & University Marks Grade Finder',
-    description: 'Find your academic grade from marks obtained. Matric, Inter, O/A Level grading systems and Pakistan board results grade calculator. Instant and free.',
+    title: 'Grade Calculator Pakistan 2026 | Matric, Inter & Uni Result Finder',
+    description: 'Find your academic grade from marks obtained. Matric, Inter, O/A Level grading systems supported for all Pakistan boards. Fast, accurate Grade Finder.',
     faqs: [
-      { question: 'How to check grade from marks in Pakistan?', answer: 'In Pakistan\'s Matric/SSC system: A1 = 80%+, A = 70-79%, B = 60-69%, C = 50-59%, D = 40-49%, F = below 40%. For FSc/HSSC: A+ = 85%+, A = 80-84%, B = 70-79%, C = 60-69%. Our calculator supports all major grading systems.' }
-    ]
+      { question: 'How is Matric grade calculated in BISE Lahore?', answer: 'In Pakistan\'s Matric system: A1 (Outstanding) = 80%+, A (Excellent) = 70-79%, B (Very Good) = 60-69%. Our tool automates this for all boards including Punjab, Sindh, KPK, and Balochistan.' },
+      { question: 'What marks are needed for A+ in Inter?', answer: 'For FSc/HSSC, an A+ usually requires 80% or 85% depending on the specific board\'s policy. Use our calculator to see your exact classification.' }
+    ],
+    howTo: {
+      name: "How to Find Your Academic Grade",
+      description: "Simple steps to check your result grade in Pakistan.",
+      steps: [
+        { name: "Select Education System", text: "Choose between Matric, Inter, or University standards." },
+        { name: "Enter Obtained Marks", text: "Input the marks you secured in your exams." },
+        { name: "Enter Total Marks", text: "Input the maximum possible marks (e.g., 1100 or 1200)." },
+        { name: "View Calculated Grade", text: "The tool instantly shows your percentage and letter grade." }
+      ]
+    }
   },
   'mark-percentage': {
-    title: 'Marks Percentage Calculator | Find SSC/HSSC Grades Fast',
-    description: 'Check your exact board result percentage instantly. Use our free marks percentage calculator for Metric, Inter, and University grades in Pakistan. Calculate now!',
+    title: 'Marks Percentage Calculator | 1100 Marks & Matric SSC Results',
+    description: 'Calculate your Matric (SSC) and Inter (HSSC) marks percentage instantly out of 1100 or 1200. Free percentage calculator for all Pakistan boards (BISE). Check your grade now!',
     faqs: [
       { question: 'How to calculate marks percentage out of 1100?', answer: 'To calculate percentage out of 1100: Divide your obtained marks by 1100 and multiply by 100. Formula: (Obtained Marks / 1100) × 100. For example, if you got 935 marks, your percentage is (935/1100) × 100 = 85%.' },
       { question: 'What is the percentage of 850 out of 1100 marks?', answer: '850 out of 1100 marks percentage = (850 / 1100) × 100 = 77.27%. This is usually considered an A grade in Pakistan board exams.' },
-      { question: 'How to calculate 9th and 10th class result percentage?', answer: 'Add your 9th and 10th class marks to get the total obtained marks (usually out of 1100 or 1200). Use our calculator to enter these values and get your final Matric result percentage instantly.' },
-      { question: 'What is 550 out of 1100 marks in percentage?', answer: '550 out of 1100 is exactly 50%. Formula: (550 / 1100) × 100 = 50%.' },
-      { question: 'How to calculate percentage from total marks of 1200?', answer: 'If your total marks are 1200, divide your obtained marks by 1200 and multiply by 100. Our calculator lets you change the total marks field to 1200 for exact results.' }
+      { question: 'How to calculate SSC percentage for BISE Lahore/MEPCO?', answer: 'Simply enter your obtained marks and total marks (usually 1100) into our tool. It works for all boards including BISE Lahore, Rawalpindi, and Karachi.' }
     ],
     howTo: {
       name: "How to Calculate Marks Percentage for Pakistan Board Exams (Matric/Inter)",
-      description: "Quick guide to converting your exam marks into a percentage for BISE Lahore, MEPCO, IESCO, and other boards.",
+      description: "Quick guide for SSC/HSSC students to convert marks into percentage.",
       steps: [
         { name: "Enter Secured Marks", text: "Enter the total marks you obtained in your result (e.g., 940)." },
         { name: "Enter Maximum Marks", text: "Enter the total marks possible (usually 1100 for Matric/Inter or 1200)." },
         { name: "Get Instant Result", text: "Click calculate to see your percentage up to two decimal points instantly." },
-        { name: "See Your Grade", text: "The calculator will also show your grade classification based on Pakistan's board criteria." }
+        { name: "See Your Grade", text: "The calculator will also show your grade classification based on Pakistan board criteria." }
       ]
     }
   },
@@ -259,6 +371,7 @@ const App: React.FC = () => {
               title="PakCalc - Pakistan's #1 Financial Tools Suite"
               description="Free financial calculators for Income Tax (FBR 2025), Zakat, Loan EMI, and Business profit margins. Tailored for Pakistan."
               canonicalUrl="/"
+              includeWebSite={true}
             />
             <CalculatorList isUrdu={isUrdu} onSelect={handleSelectTool} onNavigate={handleNavigate} />
           </>
@@ -487,6 +600,8 @@ const ToolWrapper = ({ id, component, isUrdu, handleNavigate }: { id: string, co
         title={seoMeta?.title || `${tool.name} - PakCalc`}
         description={seoMeta?.description || tool.description}
         canonicalUrl={`/${id}`}
+        faqs={seoMeta?.faqs}
+        howTo={seoMeta?.howTo}
       />
 
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
@@ -501,63 +616,6 @@ const ToolWrapper = ({ id, component, isUrdu, handleNavigate }: { id: string, co
                 {isUrdu ? tool.nameUrdu : tool.name}
               </h1>
               <p className="text-slate-500 font-medium">Free Financial Utility Tool</p>
-
-              <Helmet>
-                <script type="application/ld+json">
-                  {JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "SoftwareApplication",
-                    "name": tool.name,
-                    "applicationCategory": "FinanceApplication",
-                    "operatingSystem": "Any",
-                    "url": `https://pakcalc.site/${id}`,
-                    "offers": {
-                      "@type": "Offer",
-                      "price": "0",
-                      "priceCurrency": "PKR"
-                    },
-                    "description": seoMeta?.description || tool.description,
-                    "aggregateRating": {
-                      "@type": "AggregateRating",
-                      "ratingValue": "4.8",
-                      "ratingCount": "150",
-                      "bestRating": "5"
-                    }
-                  })}
-                </script>
-                {seoMeta?.faqs && seoMeta.faqs.length > 0 && (
-                  <script type="application/ld+json">
-                    {JSON.stringify({
-                      "@context": "https://schema.org",
-                      "@type": "FAQPage",
-                      "mainEntity": seoMeta.faqs.map(faq => ({
-                        "@type": "Question",
-                        "name": faq.question,
-                        "acceptedAnswer": {
-                          "@type": "Answer",
-                          "text": faq.answer
-                        }
-                      }))
-                    })}
-                  </script>
-                )}
-                {seoMeta?.howTo && (
-                  <script type="application/ld+json">
-                    {JSON.stringify({
-                      "@context": "https://schema.org",
-                      "@type": "HowTo",
-                      "name": seoMeta.howTo.name,
-                      "description": seoMeta.howTo.description,
-                      "step": seoMeta.howTo.steps.map((step, index) => ({
-                        "@type": "HowToStep",
-                        "position": index + 1,
-                        "name": step.name,
-                        "text": step.text
-                      }))
-                    })}
-                  </script>
-                )}
-              </Helmet>
             </div>
           </div>
         </div>
