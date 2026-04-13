@@ -1,4 +1,8 @@
 import React from 'react';
+import {
+    LandConverterBlogContent, LandConverterSEOArticle,
+    ElectricityBillBlogContent
+} from './InfoPages';
 
 interface ToolArticleProps {
     id: string;
@@ -1265,9 +1269,16 @@ const MarkPercentageArticle = ({ isUrdu }: { isUrdu: boolean }) => {
 }
 
 const LandConverterArticle = ({ isUrdu }: { isUrdu: boolean }) => {
-    return null;
+    if (isUrdu) return null;
+    return (
+        <>
+            <LandConverterBlogContent />
+            <LandConverterSEOArticle />
+        </>
+    );
 };
 
 const ElectricityBillArticle = ({ isUrdu }: { isUrdu: boolean }) => {
-    return null;
+    if (isUrdu) return null;
+    return <ElectricityBillBlogContent />;
 };
