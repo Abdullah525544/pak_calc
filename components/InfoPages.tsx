@@ -433,11 +433,11 @@ export const BMIBlogContent = () => (
         <div className="grid grid-cols-1 gap-4">
           {[
             { l: 'Severe Thinness', r: '< 16.0', c: 'bg-blue-100 text-blue-800' },
-            { l: 'Moderate Thinness', r: '16.0 â€“ 17.0', c: 'bg-blue-50 text-blue-700' },
-            { l: 'Normal Weight', r: '18.5 â€“ 24.9', c: 'bg-emerald-100 text-emerald-800' },
-            { l: 'Overweight', r: '25.0 â€“ 29.9', c: 'bg-amber-100 text-amber-800' },
-            { l: 'Obese Class I', r: '30.0 â€“ 34.9', c: 'bg-rose-100 text-rose-800' },
-            { l: 'Obese Class II', r: '35.0 â€“ 39.9', c: 'bg-rose-200 text-rose-900' },
+            { l: 'Moderate Thinness', r: '16.0 – 17.0', c: 'bg-blue-50 text-blue-700' },
+            { l: 'Normal Weight', r: '18.5 – 24.9', c: 'bg-emerald-100 text-emerald-800' },
+            { l: 'Overweight', r: '25.0 – 29.9', c: 'bg-amber-100 text-amber-800' },
+            { l: 'Obese Class I', r: '30.0 – 34.9', c: 'bg-rose-100 text-rose-800' },
+            { l: 'Obese Class II', r: '35.0 – 39.9', c: 'bg-rose-200 text-rose-900' },
             { l: 'Obese Class III', r: '> 40.0', c: 'bg-rose-300 text-rose-950' },
           ].map((row, i) => (
             <div key={i} className={`flex justify-between items-center px-8 py-4 rounded-2xl border border-transparent shadow-sm ${row.c}`}>
@@ -774,10 +774,10 @@ export const TaxBlogContent = () => (
           </thead>
           <tbody className="divide-y divide-slate-100 italic">
             <tr><td className="p-6 font-medium">Up to Rs. 600,000</td><td className="p-6">Rs. 0</td><td className="p-6">0%</td></tr>
-            <tr className="bg-slate-50/50"><td className="p-6 font-medium">Rs. 600,001 â€“ 1,200,000</td><td className="p-6">Rs. 0</td><td className="p-6">5% over 600k</td></tr>
-            <tr><td className="p-6 font-medium">Rs. 1,200,001 â€“ 2,200,000</td><td className="p-6">Rs. 30,000</td><td className="p-6">15% over 1.2M</td></tr>
-            <tr className="bg-slate-50/50"><td className="p-6 font-medium">Rs. 2,200,001 â€“ 3,200,000</td><td className="p-6">Rs. 180,000</td><td className="p-6">25% over 2.2M</td></tr>
-            <tr><td className="p-6 font-medium">Rs. 3,200,001 â€“ 4,100,000</td><td className="p-6">Rs. 430,000</td><td className="p-6">30% over 3.2M</td></tr>
+            <tr className="bg-slate-50/50"><td className="p-6 font-medium">Rs. 600,001 – 1,200,000</td><td className="p-6">Rs. 0</td><td className="p-6">5% over 600k</td></tr>
+            <tr><td className="p-6 font-medium">Rs. 1,200,001 – 2,200,000</td><td className="p-6">Rs. 30,000</td><td className="p-6">15% over 1.2M</td></tr>
+            <tr className="bg-slate-50/50"><td className="p-6 font-medium">Rs. 2,200,001 – 3,200,000</td><td className="p-6">Rs. 180,000</td><td className="p-6">25% over 2.2M</td></tr>
+            <tr><td className="p-6 font-medium">Rs. 3,200,001 – 4,100,000</td><td className="p-6">Rs. 430,000</td><td className="p-6">30% over 3.2M</td></tr>
             <tr className="bg-slate-50/50"><td className="p-6 font-medium">Above Rs. 4,100,000</td><td className="p-6">Rs. 700,000</td><td className="p-6">35% over 4.1M</td></tr>
           </tbody>
         </table>
@@ -1270,7 +1270,7 @@ export const ProfitMarginBlogContent = () => (
         </div>
         <div className="bg-white/5 p-10 rounded-[3rem] border border-white/10 text-center">
           <p className="text-sm text-slate-400 mb-4 uppercase tracking-widest font-bold">Calculation Rule</p>
-          <div className="text-3xl font-black text-white mb-4">Margin = <br /> (Revenue â€“ Cost) / Revenue</div>
+          <div className="text-3xl font-black text-white mb-4">Margin = <br /> (Revenue – Cost) / Revenue</div>
           <p className="text-[10px] text-slate-500 italic">Multiplying by 100 gives you the Percentage.</p>
         </div>
       </div>
@@ -1291,12 +1291,12 @@ export const ProfitMarginBlogContent = () => (
           <tbody className="divide-y divide-slate-100">
             <tr className="bg-white hover:bg-slate-50 transition-colors shadow-sm">
               <td className="p-6 font-bold rounded-l-3xl">Software/IT Services</td>
-              <td className="p-6 text-emerald-600 font-bold">20% â€“ 45%</td>
+              <td className="p-6 text-emerald-600 font-bold">20% – 45%</td>
               <td className="p-6 rounded-r-3xl"><span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full font-black text-[9px]">LOW ASSETS</span></td>
             </tr>
             <tr className="bg-white hover:bg-slate-50 transition-colors shadow-sm">
               <td className="p-6 font-bold rounded-l-3xl">Retail (Grocery/FMCG)</td>
-              <td className="p-6 text-amber-600 font-bold">2% â€“ 5%</td>
+              <td className="p-6 text-amber-600 font-bold">2% – 5%</td>
               <td className="p-6 rounded-r-3xl"><span className="px-3 py-1 bg-rose-100 text-rose-700 rounded-full font-black text-[9px]">HIGH VOLUME</span></td>
             </tr>
             <tr className="bg-white hover:bg-slate-50 transition-colors shadow-sm">
@@ -2362,19 +2362,19 @@ export const GradeCalculatorBlogContent = () => (
       <h2 className="text-3xl font-bold text-center mb-12">Key Features of Our Tool</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
         <div className="bg-white/10 p-8 rounded-3xl border border-white/10 backdrop-blur-sm">
-          <h5 className="font-bold text-emerald-400 mb-2">âœ“ Advanced Algorithms</h5>
+          <h5 className="font-bold text-emerald-400 mb-2">✓ Advanced Algorithms</h5>
           <p className="text-sm text-slate-300">Uses professional <strong>weighted grade calculator</strong> logic to ensure your GPA and percentages are 100% correct.</p>
         </div>
         <div className="bg-white/10 p-8 rounded-3xl border border-white/10 backdrop-blur-sm">
-          <h5 className="font-bold text-emerald-400 mb-2">âœ“ Dynamic Interface</h5>
+          <h5 className="font-bold text-emerald-400 mb-2">✓ Dynamic Interface</h5>
           <p className="text-sm text-slate-300">An <strong>easy-to-use interface</strong> that works seamlessly on mobile, tablets, and desktops. Calculate on the go!</p>
         </div>
         <div className="bg-white/10 p-8 rounded-3xl border border-white/10 backdrop-blur-sm">
-          <h5 className="font-bold text-emerald-400 mb-2">âœ“ Multi-Scale Support</h5>
+          <h5 className="font-bold text-emerald-400 mb-2">✓ Multi-Scale Support</h5>
           <p className="text-sm text-slate-300">Supports various grading scales used by standard boards like CBSE, IB, and HEC Pakistan.</p>
         </div>
         <div className="bg-white/10 p-8 rounded-3xl border border-white/10 backdrop-blur-sm">
-          <h5 className="font-bold text-emerald-400 mb-2">âœ“ 100% Free Access</h5>
+          <h5 className="font-bold text-emerald-400 mb-2">✓ 100% Free Access</h5>
           <p className="text-sm text-slate-300">Our <strong>free grades calculator</strong> requires no subscription or login. Use it anytime, anywhere.</p>
         </div>
       </div>
@@ -3450,7 +3450,7 @@ export const ElectricityBillBlogContent = () => (
       <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">Protected vs Non-Protected Consumers</h2>
       <p>This is the single most impactful factor in your Pakistan electricity bill. Your category determines whether you pay a very low WAPDA per unit price or the full standard rate.</p>
       <div className="bg-amber-50 p-6 rounded-3xl border border-amber-200">
-        <p className="text-sm text-amber-900"><strong>âš ï¸ Warning:</strong> If you exceed 200 units in <em>any single month</em> over the last 6 months, you lose Protected status. Your <em>entire</em> bill is then recalculated at non-protected rates â€” potentially doubling your cost, even for the first 100 units.</p>
+        <p className="text-sm text-amber-900"><strong>⚠️ Warning:</strong> If you exceed 200 units in <em>any single month</em> over the last 6 months, you lose Protected status. Your <em>entire</em> bill is then recalculated at non-protected rates — potentially doubling your cost, even for the first 100 units.</p>
       </div>
     </section>
 
@@ -3462,12 +3462,12 @@ export const ElectricityBillBlogContent = () => (
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {[
-          { name: 'IESCO Online Bill', url: 'iesco.com.pk', region: 'Islamabad & Rawalpindi', note: 'Visit IESCO website â†’ My Consumer Services â†’ Enter Reference No.' },
-          { name: 'FESCO Online Bill Calculator', url: 'fesco.com.pk', region: 'Faisalabad Division', note: 'Visit FESCO portal â†’ Online Bill â†’ Enter 14-digit reference number.' },
-          { name: 'MEPCO Online Bill', url: 'mepco.com.pk', region: 'South Punjab (Multan)', note: 'Visit MEPCO website â†’ Bill Inquiry â†’ Consumer Reference Number.' },
-          { name: 'LESCO Online Bill', url: 'lesco.gov.pk', region: 'Lahore Division', note: 'Visit LESCO â†’ Customer Services â†’ Online Bill Inquiry.' },
+          { name: 'IESCO Online Bill', url: 'iesco.com.pk', region: 'Islamabad & Rawalpindi', note: 'Visit IESCO website → My Consumer Services → Enter Reference No.' },
+          { name: 'FESCO Online Bill Calculator', url: 'fesco.com.pk', region: 'Faisalabad Division', note: 'Visit FESCO portal → Online Bill → Enter 14-digit reference number.' },
+          { name: 'MEPCO Online Bill', url: 'mepco.com.pk', region: 'South Punjab (Multan)', note: 'Visit MEPCO website → Bill Inquiry → Consumer Reference Number.' },
+          { name: 'LESCO Online Bill', url: 'lesco.gov.pk', region: 'Lahore Division', note: 'Visit LESCO → Customer Services → Online Bill Inquiry.' },
           { name: 'K-Electric Bill', url: 'ke.com.pk', region: 'Karachi', note: 'K-Electric has its own portal. Search "K-Electric bill online" and use your 13-digit Consumer No.' },
-          { name: 'PESCO Online Bill', url: 'pesco.gov.pk', region: 'KPK / Peshawar', note: 'Visit PESCO website â†’ Online Services â†’ Bill Inquiry with Reference No.' },
+          { name: 'PESCO Online Bill', url: 'pesco.gov.pk', region: 'KPK / Peshawar', note: 'Visit PESCO website → Online Services → Bill Inquiry with Reference No.' },
         ].map((d, i) => (
           <div key={i} className="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm">
             <h4 className="font-bold text-slate-900 mb-1">{d.name}</h4>
@@ -3477,7 +3477,7 @@ export const ElectricityBillBlogContent = () => (
         ))}
       </div>
       <div className="bg-emerald-50 border border-emerald-100 p-6 rounded-3xl">
-        <p className="text-sm text-emerald-800"><strong>ðŸ’¡ Tip:</strong> Our <strong>online bill calculator</strong> helps you <em>predict</em> your bill before it arrives. Use it to verify your DISCO's actual bill and catch any billing errors or meter reading mistakes.</p>
+        <p className="text-sm text-emerald-800"><strong>💡 Tip:</strong> Our <strong>online bill calculator</strong> helps you <em>predict</em> your bill before it arrives. Use it to verify your DISCO's actual bill and catch any billing errors or meter reading mistakes.</p>
       </div>
     </section>
 
@@ -3487,11 +3487,11 @@ export const ElectricityBillBlogContent = () => (
       <p>Understanding these charges is key to the <strong>electricity bill calculation formula in Pakistan</strong>:</p>
       <div className="space-y-4">
         {[
-          { label: 'GST', value: '18%', desc: 'General Sales Tax â€” the largest tax. Applied to energy cost + FPA + FC + Duty. On a Rs. 10,000 base, this is Rs. 1,800 extra.' },
-          { label: 'FPA', value: 'Variable', desc: 'Fuel Price Adjustment â€” changes monthly based on global fuel prices. Can be negative (relief) or positive (Rs. 0â€“3.5/unit typically).' },
-          { label: 'FC', value: 'Rs. 0.43/unit', desc: 'Financing Cost Surcharge â€” covers Pakistan\'s circular debt financing costs.' },
-          { label: 'ED', value: '1.5%', desc: 'Electricity Duty â€” provincial tax on energy cost.' },
-          { label: 'ðŸ“º', value: 'Rs. 35', desc: 'PTV License Fee â€” fixed monthly charge on all residential connections.' },
+          { label: 'GST', value: '18%', desc: 'General Sales Tax — the largest tax. Applied to energy cost + FPA + FC + Duty. On a Rs. 10,000 base, this is Rs. 1,800 extra.' },
+          { label: 'FPA', value: 'Variable', desc: 'Fuel Price Adjustment — changes monthly based on global fuel prices. Can be negative (relief) or positive (Rs. 0–3.5/unit typically).' },
+          { label: 'FC', value: 'Rs. 0.43/unit', desc: 'Financing Cost Surcharge — covers Pakistan\'s circular debt financing costs.' },
+          { label: 'ED', value: '1.5%', desc: 'Electricity Duty — provincial tax on energy cost.' },
+          { label: '📺', value: 'Rs. 35', desc: 'PTV License Fee — fixed monthly charge on all residential connections.' },
         ].map((item, i) => (
           <div key={i} className="flex gap-6 items-start p-5 bg-white border border-slate-100 rounded-2xl">
             <div className="w-14 text-center shrink-0 font-bold text-sm bg-slate-100 rounded-xl p-2">{item.label}</div>
@@ -3509,12 +3509,12 @@ export const ElectricityBillBlogContent = () => (
       <div className="absolute right-0 top-0 w-64 h-64 bg-emerald-600 rounded-full blur-[120px] opacity-20 -mr-32 -mt-32"></div>
       <h2 className="text-3xl font-bold text-center mb-8 relative z-10">Electricity Bill Calculation Formula in Pakistan</h2>
       <div className="max-w-3xl mx-auto space-y-4 relative z-10">
-        <div className="bg-white/10 p-5 rounded-3xl border border-white/10"><p className="text-xs text-emerald-300 font-bold mb-1">Step 1</p><p className="font-bold">Energy Cost = Î£ (Units in each slab Ã— WAPDA rate for that slab)</p></div>
-        <div className="bg-white/10 p-5 rounded-3xl border border-white/10"><p className="text-xs text-emerald-300 font-bold mb-1">Step 2</p><p className="font-bold">Subtotal = Energy Cost + (Units Ã— FPA) + (Units Ã— 0.43) + (Energy Cost Ã— 1.5%)</p></div>
-        <div className="bg-white/10 p-5 rounded-3xl border border-white/10"><p className="text-xs text-emerald-300 font-bold mb-1">Step 3</p><p className="font-bold">Total Bill = Subtotal + (Subtotal Ã— 18% GST) + Rs. 35 TV Fee</p></div>
+        <div className="bg-white/10 p-5 rounded-3xl border border-white/10"><p className="text-xs text-emerald-300 font-bold mb-1">Step 1</p><p className="font-bold">Energy Cost = Σ (Units in each slab × WAPDA rate for that slab)</p></div>
+        <div className="bg-white/10 p-5 rounded-3xl border border-white/10"><p className="text-xs text-emerald-300 font-bold mb-1">Step 2</p><p className="font-bold">Subtotal = Energy Cost + (Units × FPA) + (Units × 0.43) + (Energy Cost × 1.5%)</p></div>
+        <div className="bg-white/10 p-5 rounded-3xl border border-white/10"><p className="text-xs text-emerald-300 font-bold mb-1">Step 3</p><p className="font-bold">Total Bill = Subtotal + (Subtotal × 18% GST) + Rs. 35 TV Fee</p></div>
       </div>
       <div className="mt-8 text-center relative z-10 text-slate-400 text-sm">
-        Example: 300 units (Non-Protected | FPA=2.8) â†’ Energy: Rs. 8,445 + FPA: Rs. 840 + FC: Rs. 129 + Duty: Rs. 127 + GST: Rs. 1,717 + TV: Rs. 35 = <strong className="text-emerald-400 text-lg">â‰ˆ Rs. 11,293</strong>
+        Example: 300 units (Non-Protected | FPA=2.8) → Energy: Rs. 8,445 + FPA: Rs. 840 + FC: Rs. 129 + Duty: Rs. 127 + GST: Rs. 1,717 + TV: Rs. 35 = <strong className="text-emerald-400 text-lg">≈ Rs. 11,293</strong>
       </div>
     </section>
 
@@ -3523,8 +3523,8 @@ export const ElectricityBillBlogContent = () => (
       <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">Frequently Asked Questions</h2>
       {[
         { q: 'How to calculate electricity bill in Pakistan?', a: 'To calculate electricity bill in Pakistan, find your units consumed, apply the NEPRA slab rates (Protected: starts Rs. 10.54/unit; Non-Protected: starts Rs. 22.44/unit; Commercial: starts Rs. 30.10/unit), then add FPA, FC Surcharge, 1.5% Electricity Duty, 18% GST, and Rs. 35 TV fee.' },
-        { q: 'What is the WAPDA unit price in Pakistan 2025-26?', a: 'The WAPDA per unit price for non-protected residential consumers starts at Rs. 22.44/unit (1-100 units) and goes up to Rs. 47.69/unit (700+ units). Protected consumers pay Rs. 10.54â€“13.01/unit. Commercial consumers pay Rs. 30.10â€“48.77/unit.' },
-        { q: 'What is the watt to unit formula in Pakistan?', a: 'Units (kWh) = (Watts Ã— Hours Used Per Day Ã— Days in Month) Ã· 1000. Example: 1000W appliance running 5 hours/day for 30 days = (1000 Ã— 5 Ã— 30) / 1000 = 150 units.' },
+        { q: 'What is the WAPDA unit price in Pakistan 2025-26?', a: 'The WAPDA per unit price for non-protected residential consumers starts at Rs. 22.44/unit (1-100 units) and goes up to Rs. 47.69/unit (700+ units). Protected consumers pay Rs. 10.54–13.01/unit. Commercial consumers pay Rs. 30.10–48.77/unit.' },
+        { q: 'What is the watt to unit formula in Pakistan?', a: 'Units (kWh) = (Watts × Hours Used Per Day × Days in Month) ÷ 1000. Example: 1000W appliance running 5 hours/day for 30 days = (1000 × 5 × 30) / 1000 = 150 units.' },
         { q: 'How do I check my electricity bill online (IESCO, FESCO, MEPCO)?', a: 'Visit your DISCO\'s official website (e.g., iesco.com.pk for IESCO, fesco.com.pk for FESCO). Enter your 14-digit Reference Number in the online bill inquiry section. Our calculator helps you estimate the bill in advance.' },
         { q: 'How to check my electricity bill online without reference number?', a: 'You need either your Reference Number or your Consumer ID (CNIC) in some DISCO portals. If you lost your old bill, contact your DISCO\'s helpline or visit their nearest customer service center.' },
         { q: 'Why is my bijli ka bill so high?', a: 'Common reasons: crossing 200 units and losing Protected status, high FPA in summer, using non-inverter ACs, phantom power consumption from standby devices, or meter reading errors. Use our WAPDA unit calculator to cross-verify.' },
@@ -3545,9 +3545,9 @@ export const ElectricityBillBlogContent = () => (
           { tip: 'Stay Under 200 Units', desc: 'Protected status saves 50-60% on per-unit rates. This is the single biggest money-saver.' },
           { tip: 'Switch to Inverter AC', desc: 'Inverter ACs use 40-60% less power. Use our watts to units calculator to see the savings.' },
           { tip: 'Install Solar Panels', desc: 'Net metering lets you sell surplus solar energy back to WAPDA, potentially zeroing your bill.' },
-          { tip: 'Use Off-Peak Hours', desc: 'Run heavy appliances like washing machines and irons during late night hours (11 PMâ€“5 AM).' },
+          { tip: 'Use Off-Peak Hours', desc: 'Run heavy appliances like washing machines and irons during late night hours (11 PM–5 AM).' },
           { tip: 'Replace Lights with LED', desc: 'LED lights use 80% less energy than incandescent bulbs. Use the watts formula to calculate savings.' },
-          { tip: 'Unplug Standby Devices', desc: 'TVs, chargers, WiFi routers in standby consume "phantom power" â€” up to 10% of your total bill.' },
+          { tip: 'Unplug Standby Devices', desc: 'TVs, chargers, WiFi routers in standby consume "phantom power" — up to 10% of your total bill.' },
         ].map((item, i) => (
           <div key={i} className="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm">
             <h4 className="font-bold text-slate-900 mb-2">{i + 1}. {item.tip}</h4>

@@ -38,6 +38,10 @@ export const ToolArticle: React.FC<ToolArticleProps> = ({ id, isUrdu }) => {
             return <GradeArticle isUrdu={isUrdu} />;
         case 'mark-percentage':
             return <MarkPercentageArticle isUrdu={isUrdu} />;
+        case 'land-converter':
+            return <LandConverterArticle isUrdu={isUrdu} />;
+        case 'electricity-bill':
+            return <ElectricityBillArticle isUrdu={isUrdu} />;
         default:
             return null;
     }
@@ -1259,3 +1263,11 @@ const MarkPercentageArticle = ({ isUrdu }: { isUrdu: boolean }) => {
         </ArticleWrapper>
     );
 }
+
+const LandConverterArticle = ({ isUrdu }: { isUrdu: boolean }) => {
+    return null;
+};
+
+const ElectricityBillArticle = ({ isUrdu }: { isUrdu: boolean }) => {
+    return null;
+};
