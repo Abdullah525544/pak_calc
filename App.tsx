@@ -321,7 +321,7 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     faqs: [
       { question: 'How to calculate marks percentage out of 1100?', answer: 'To calculate percentage out of 1100: Divide your obtained marks by 1100 and multiply by 100. Formula: (Obtained Marks / 1100) × 100. For example, if you got 935 marks, your percentage is (935/1100) × 100 = 85%.' },
       { question: 'What is the percentage of 850 out of 1100 marks?', answer: '850 out of 1100 marks percentage = (850 / 1100) × 100 = 77.27%. This is usually considered an A grade in Pakistan board exams.' },
-      { question: 'How to calculate SSC percentage for BISE Lahore/MEPCO?', answer: 'Simply enter your obtained marks and total marks (usually 1100) into our tool. It works for all boards including BISE Lahore, Rawalpindi, and Karachi.' }
+      { question: 'How to calculate SSC percentage for BISE Lahore/Board?', answer: 'Simply enter your obtained marks and total marks (usually 1100) into our tool. It works for all boards including BISE Lahore, Rawalpindi, and Karachi.' }
     ],
     howTo: {
       name: "How to Calculate Marks Percentage for Pakistan Board Exams (Matric/Inter)",

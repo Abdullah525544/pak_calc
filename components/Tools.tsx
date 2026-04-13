@@ -449,16 +449,16 @@ export const InvestmentReturnTool = () => {
               <p className="text-slate-400 uppercase text-xs font-black tracking-widest mb-1">
                 {adjustInflation ? "Real Maturity Value (Today's Money)" : "Projected Maturity Value"}
               </p>
-              <h4 className="text-5xl font-black text-emerald-600">â‚¨ {Math.round(result.total).toLocaleString()}</h4>
+              <h4 className="text-5xl font-black text-emerald-600">Rs. {Math.round(result.total).toLocaleString()}</h4>
 
               <div className="flex justify-center gap-2 mt-6">
                 <div className="px-4 py-2 bg-blue-50 rounded-xl border border-blue-100">
                   <p className="text-[10px] uppercase font-bold text-blue-400">Total Invested</p>
-                  <p className="text-lg font-black text-blue-900">â‚¨ {result.invested.toLocaleString()}</p>
+                  <p className="text-lg font-black text-blue-900">Rs. {result.invested.toLocaleString()}</p>
                 </div>
                 <div className="px-4 py-2 bg-emerald-50 rounded-xl border border-emerald-100">
                   <p className="text-[10px] uppercase font-bold text-emerald-400">Total Profit</p>
-                  <p className="text-lg font-black text-emerald-900">â‚¨ {Math.round(result.returns).toLocaleString()}</p>
+                  <p className="text-lg font-black text-emerald-900">Rs. {Math.round(result.returns).toLocaleString()}</p>
                 </div>
               </div>
             </div>
@@ -476,7 +476,7 @@ export const InvestmentReturnTool = () => {
                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
                 <Tooltip
                   contentStyle={{ borderRadius: '16px', border: 'none', boxShadow: '0 10px 30px rgba(0,0,0,0.1)', fontSize: '12px' }}
-                  formatter={(v: number) => `â‚¨ ${v.toLocaleString()}`}
+                  formatter={(v: number) => `Rs. ${v.toLocaleString()}`}
                   labelStyle={{ display: 'none' }}
                 />
                 <Area type="monotone" dataKey="value" stroke="#10b981" fillOpacity={1} fill="url(#colorValue)" strokeWidth={3} />
@@ -591,7 +591,7 @@ export const RetirementTool = () => {
           <div className="relative z-10 text-center space-y-8">
             <div>
               <p className="text-blue-200 uppercase text-[10px] font-black tracking-widest mb-2">Total Corpus Needed</p>
-              <h4 className="text-4xl lg:text-5xl font-black text-white">â‚¨ {Math.round(corpusNeeded / 10000000).toFixed(2)} Cr</h4>
+              <h4 className="text-4xl lg:text-5xl font-black text-white">Rs. {Math.round(corpusNeeded / 10000000).toFixed(2)} Cr</h4>
               <p className="text-[10px] text-blue-300 mt-2">
                 To sustain {yearsInRetirement} years with inflation adjusted expenses (Rs. {Math.round(expenseAtRetirement).toLocaleString()}/mo at start)
               </p>
@@ -600,7 +600,7 @@ export const RetirementTool = () => {
             <div className="pt-8 border-t border-blue-800">
               <p className="text-blue-200 uppercase text-[10px] font-black tracking-widest mb-1">Gap & Required Action</p>
               <div className="flex flex-col items-center">
-                <p className="text-3xl font-black text-emerald-400">Save â‚¨ {Math.round(monthlySavingsNeeded).toLocaleString()} <span className="text-sm text-emerald-200 font-normal">/ month</span></p>
+                <p className="text-3xl font-black text-emerald-400">Save Rs. {Math.round(monthlySavingsNeeded).toLocaleString()} <span className="text-sm text-emerald-200 font-normal">/ month</span></p>
                 {currentSavings > 0 && <p className="text-[10px] text-blue-400 mt-2">considering your existing {Math.round(currentSavings / 100000).toFixed(1)} Lakh savings</p>}
               </div>
             </div>
@@ -691,7 +691,7 @@ export const RealEstateROITool = () => {
 
           <div className="relative z-10 text-center mb-8">
             <p className="text-slate-400 uppercase text-[10px] font-black tracking-widest mb-2">Total Net Profit</p>
-            <h4 className="text-5xl font-black text-emerald-400">â‚¨ {Math.round(totalProfit).toLocaleString()}</h4>
+            <h4 className="text-5xl font-black text-emerald-400">Rs. {Math.round(totalProfit).toLocaleString()}</h4>
             <div className="inline-flex gap-4 mt-2">
               <span className="text-xs text-slate-400">Yield: <b className="text-white">{rentalYield.toFixed(1)}%</b></span>
               <span className="text-xs text-slate-400">CAGR: <b className="text-white">{annualizedROI.toFixed(1)}%</b></span>
