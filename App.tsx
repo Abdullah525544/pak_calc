@@ -11,7 +11,7 @@ import { Breadcrumbs } from './components/Breadcrumbs';
 import {
   IncomeTaxTool, ZakatTool, EMITool, ProfitMarginTool, BMICalcTool,
   InvestmentReturnTool, RetirementTool, PFTool, GratuityTool,
-  FreelancerTool, UnitConverterTool, RealEstateROITool,
+  FreelancerTool, UnitConverterTool, LandConverterTool, RealEstateROITool,
   CGPACalculatorTool, GradeCalculatorTool, MarkPercentageTool,
   ElectricityBillTool
 } from './components/Tools';
@@ -83,7 +83,7 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
   },
   'freelancer-tax': {
     title: 'Freelancer Tax Calculator Pakistan 2026 - IT Export Income and FBR Rules',
-    description: 'Calculate freelancing income after bank charges, FBR export tax and conversion fees. Per month income estimator for Fiverr, Upwork and remote workers in Pakistan.',
+    description: 'See your exact monthly take-home income after bank charges, FBR export tax and conversion fees. Per month income estimator for Fiverr, Upwork and remote workers in Pakistan.',
     faqs: [
       { question: 'Is there tax on freelancers in Pakistan?', answer: 'Yes, freelancer income is taxable in Pakistan under FBR rules. However, IT export income enjoys reduced tax rates (0.25% for filers). Freelancers earning through platforms like Fiverr, Upwork, or direct clients must file returns and can benefit from IT export exemptions.' },
       { question: 'How much do freelancers earn per month in Pakistan?', answer: 'Freelancer income varies widely. Pakistani IT freelancers typically earn between PKR 50,000 to PKR 500,000+ per month depending on skills and experience. After bank charges (1-3%), platform fees (5-20%), and taxes, your net take-home can differ significantly from gross earnings.' }
@@ -101,7 +101,7 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
   },
   'investment-return': {
     title: 'ROI & Investment Return Calculator Pakistan 2026',
-    description: 'Predict your investment growth today. Calculate ROI for mutual funds, stocks, and property in Pakistan with compounding interest and inflation adjustment.',
+    description: 'See your exact future wealth and compounding growth. Predict your investment returns for mutual funds, stocks, and property in Pakistan with compounding interest and inflation adjustment.',
     faqs: [
       { question: 'How to calculate investment profit in Pakistan?', answer: 'Investment profit is calculated by subtracting the initial cost from the final value. For compounded returns, use our calculator to see how your wealth grows over time with factors like annual rates and duration.' },
       { question: 'What is a good ROI for property in Pakistan?', answer: 'A good rental yield in major Pakistani cities like Karachi or Lahore is typically 4-6% annually, while capital appreciation can range from 10% to 20% in developing sectors.' }
@@ -244,9 +244,26 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
       ]
     }
   },
+  'land-converter': {
+    title: 'Land Area Converter Pakistan 2026 | Murabba, Kanal, Marla, Gaz',
+    description: 'Instantly convert Murabba to Kanal, Marla to Square Feet, and Gaz to Sarsahi. Accurate Pakistani land measurements for real estate and property deals.',
+    faqs: [
+      { question: 'How much is 1 Murabba in Kanal?', answer: 'In Pakistan, 1 Murabba is equal to 200 Kanal or 25 Acres. It is primarily used for large agricultural land.' },
+      { question: 'How many square feet in 1 Marla?', answer: 'In most parts of Pakistan, 1 Marla is equal to 272.25 square feet (especially in villages and older societies). However, in modern housing societies in Lahore, Islamabad, and Karachi, 1 Marla is often standardized as 225 square feet.' }
+    ],
+    howTo: {
+      name: "How to Convert Local Pakistan Land Units",
+      description: "Step-by-step guide to calculating accurate land sizes for housing and agriculture.",
+      steps: [
+        { name: "Select Unit", text: "Choose from Murabba, Kanal, Marla, Gaz, Sq Ft, or Sarsahi." },
+        { name: "Enter Value", text: "Type in the exact size of the land." },
+        { name: "Read Output", text: "Instantly see the converted sizes in all relevant local units." }
+      ]
+    }
+  },
   'bmi': {
     title: 'BMI Calculator Pakistan 2026 | Health & Weight Check Tool',
-    description: 'Calculate your BMI instantly. Check if you are underweight, normal, or overweight with Pakistan-specific health tips and weight management advice. 100% free.',
+    description: 'Find out if you are underweight, normal, or overweight instantly 100% free. Check your BMI with Pakistan-specific health tips and weight management advice.',
     faqs: [
       { question: 'How to calculate BMI in Pakistan?', answer: 'BMI = Weight (kg) / Height (m²). For example, if you weigh 70kg and are 1.75m tall, your BMI = 70 / (1.75 × 1.75) = 22.86 (Normal weight). BMI categories: Under 18.5 = Underweight, 18.5-24.9 = Normal, 25-29.9 = Overweight, 30+ = Obese.' },
       { question: 'What is a healthy weight for 5\'8 in Pakistan?', answer: 'For a height of 5\'8" (1.73m), a healthy BMI-based weight range is approximately 56kg to 74kg.' }
@@ -299,8 +316,8 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     }
   },
   'mark-percentage': {
-    title: 'Marks Percentage Calculator | 1100 Marks & Matric SSC Results',
-    description: 'Calculate your Matric (SSC) and Inter (HSSC) marks percentage instantly out of 1100 or 1200. Free percentage calculator for all Pakistan boards (BISE). Check your grade now!',
+    title: 'Marks Percentage Calculator — Matric, HSSC, SSC 2026',
+    description: 'Enter marks obtained and total marks for instant %. Calculate your Matric (SSC) and Inter (HSSC) marks percentage instantly out of 1100 or 1200.',
     faqs: [
       { question: 'How to calculate marks percentage out of 1100?', answer: 'To calculate percentage out of 1100: Divide your obtained marks by 1100 and multiply by 100. Formula: (Obtained Marks / 1100) × 100. For example, if you got 935 marks, your percentage is (935/1100) × 100 = 85%.' },
       { question: 'What is the percentage of 850 out of 1100 marks?', answer: '850 out of 1100 marks percentage = (850 / 1100) × 100 = 77.27%. This is usually considered an A grade in Pakistan board exams.' },
@@ -318,8 +335,8 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     }
   },
   'electricity-bill': {
-    title: 'WAPDA Unit Calculator Pakistan 2026 | Watts to Units & Online Bill Check',
-    description: 'Calculate electricity bill in Pakistan instantly. Use our WAPDA unit calculator, check IESCO/FESCO bill online, convert watts to units, and find the latest per unit rate.',
+    title: 'Bijli Bill Calculator Pakistan 2026 — Any Watt, Any Hours',
+    description: 'Calculate instantly: 300 watt 8 hours bill Pakistan, 1.5 unit electricity cost, or total WAPDA monthly bills online. See precise appliance costs now.',
     faqs: [
       { question: 'How to calculate electricity bill in Pakistan?', answer: 'To calculate your bill of electricity in Pakistan, use the WAPDA unit calculator. Simply enter your consumed units. The tool evaluates the electricity bill calculation formula in Pakistan by applying the appropriate NEPRA slab, adding the Fuel Price Adjustment (FPA), 18% GST, and other surcharges.' },
       { question: 'What is the WAPDA unit price in Pakistan for commercial and residential?', answer: 'WAPDA per unit price varies. For residential protected consumers, it starts very low (Rs. 10.54/unit). Non-protected residential starts at Rs. 22.44/unit. WAPDA commercial unit price is typically much higher and mostly a flat rate ranging from Rs. 39 to Rs. 50+ per unit depending on the exact load and tariff category (like A-2).' },
@@ -545,6 +562,14 @@ const App: React.FC = () => {
           <ToolWrapper
             id="unit-converter"
             component={<UnitConverterTool />}
+            isUrdu={isUrdu}
+            handleNavigate={handleNavigate}
+          />
+        } />
+        <Route path="/land-converter" element={
+          <ToolWrapper
+            id="land-converter"
+            component={<LandConverterTool />}
             isUrdu={isUrdu}
             handleNavigate={handleNavigate}
           />
