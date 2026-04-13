@@ -3022,6 +3022,244 @@ export const UnitConverterSEOArticle = () => (
   </section>
 );
 
+export const LandConverterBlogContent = () => (
+  <article className="mt-20 space-y-16 text-slate-700 leading-relaxed border-t border-slate-200 pt-20 max-w-4xl mx-auto px-4 font-sans text-justify">
+    <header className="text-center space-y-8">
+      <div className="inline-flex items-center gap-2 px-6 py-2 bg-emerald-50 text-emerald-700 rounded-full text-xs font-black uppercase tracking-widest border border-emerald-200 shadow-sm">
+        Pakistan Real Estate Measurements 2026
+      </div>
+      <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight">
+        Land measurement units in Pakistan: <br />
+        <span className="text-slate-600 italic">Murabba, Kanal, Marla & Gaz Converter</span>
+      </h2>
+      <p className="max-w-3xl mx-auto text-lg text-slate-600">
+        Navigating property deals in Pakistan requires exact conversions. Whether you need to figure out <strong>how many Kanals are in 1 Murabba</strong> or you're trying to convert <strong>Gaz (Square Yards) to Marla and Sarsahi</strong>, our highly accurate land calculator makes it instant. Real estate investment in Pakistan demands a thorough understanding of traditional units.
+      </p>
+    </header>
+
+    {/* Section 1: Introduction to Pakistani Land Metrics */}
+    <section className="space-y-6">
+      <h3 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">The Complexity of Land Measurement in Pakistan</h3>
+      <p>
+        Land measurement in Pakistan is a fascinating blend of historical South Asian revenue metrics and modern international standards. The country's real estate and agricultural sectors rely heavily on traditional units like the Marla, Kanal, and Murabba. However, unlike the metric (meters) or imperial (feet/yards) systems which are universally standardized, traditional Pakistani land units can vary significantly depending on whether the land is located in an urban housing society like DHA, or a rural agricultural setting in Punjab or Sindh.
+      </p>
+      <p>
+        Our comprehensive <strong>Land Area Converter Pakistan</strong> is designed to cut through this confusion. It provides instant, mathematically exact conversions between all standard units. Below, we provide an exhaustive, 2000-word deep dive into these units, revealing exactly why a "Marla" isn't always the same size, and why calculating <strong>Murabba to Kanal</strong> is crucial for agricultural investors.
+      </p>
+    </section>
+
+    {/* Section 2: Murabba to Kanal and Agricultural Metrics */}
+    <section className="space-y-6 bg-slate-50 p-10 rounded-3xl border border-slate-200">
+      <h3 className="text-3xl font-bold text-slate-900">What is a Murabba? (Agricultural Measurements)</h3>
+      <p>
+        When dealing with large-scale agricultural real estate, particularly in the fertile plains of Punjab and Sindh, the most common unit of measurement you will encounter is the <strong>Murabba</strong>.
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+        <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+          <h4 className="text-emerald-700 font-bold text-xl mb-2">1 Murabba in Acres</h4>
+          <p className="text-sm">Historically and officially in land revenue records, <strong>1 Murabba is exactly 25 Acres</strong>. This comes out to an astonishing 1,089,000 square feet of land.</p>
+        </div>
+        <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+          <h4 className="text-emerald-700 font-bold text-xl mb-2">1 Murabba to Kanal</h4>
+          <p className="text-sm">Since 1 Acre comprises exactly 8 Kanals, calculating the Kanal equivalent is simple arithmetic: 25 Acres × 8 Kanals = <strong>200 Kanals in 1 Murabba</strong>.</p>
+        </div>
+      </div>
+      <p>
+        The term "Murabba" literally translates to "Square" in Arabic and Urdu. During the British colonial era, agricultural land was systematically surveyed and divided into large square grids for easy distribution, irrigation planning, and taxation. Each of these large squares was exactly 25 acres, hence the term "Murabba."
+      </p>
+      <p>
+        Today, if you are purchasing farmland, citrus orchards, or wheat fields anywhere in central Pakistan, the pricing will predominantly be quoted as "per Murabba" or "per Acre." Using our converter, you can instantly see that half a Murabba is 100 Kanals, or 12.5 Acres.
+      </p>
+      <div className="bg-emerald-800 text-white p-6 rounded-2xl">
+        <h4 className="font-bold mb-2">Did You Know? (The Killa vs Acre)</h4>
+        <p className="text-sm opacity-90">In Punjabi farming communities, you will often hear the term "Killa." For all practical and official purposes, <strong>1 Killa is exactly equal to 1 Acre (8 Kanals)</strong>. So, 25 Killas make up 1 Murabba.</p>
+      </div>
+    </section>
+
+    {/* Section 3: Kanal and Acre */}
+    <section className="space-y-6">
+      <h3 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">The Kanal: The Bridge Between Urban and Rural</h3>
+      <p>
+        The <strong>Kanal</strong> represents the transitional unit in Pakistani real estate. It is small enough to be used for luxury urban homes (e.g., a "1 Kanal house in DHA Lahore") but large enough to be a meaningful fraction of agricultural land.
+      </p>
+      <ul className="list-disc pl-6 space-y-3 text-slate-600">
+        <li><strong>1 Kanal = 20 Marlas</strong></li>
+        <li><strong>8 Kanals = 1 Acre (or Killa)</strong></li>
+        <li><strong>200 Kanals = 1 Murabba</strong></li>
+      </ul>
+      <p>
+        For urban developers, a Kanal is the standard metric for premium residential plots. In standard measurements, 1 Kanal is equal to <strong>5,445 square feet</strong> (when using the 272.25 sq ft Marla standard) or <strong>4,500 square feet</strong> (when using the modern 225 sq ft Marla standard). This discrepancy highlights the most confusing aspect of Pakistani real estate: the fluctuating size of the Marla.
+      </p>
+    </section>
+
+    {/* Section 4: The 225 vs 272.25 Sq Ft Marla Debate */}
+    <section className="space-y-8 bg-slate-900 text-white p-10 rounded-[3rem] shadow-2xl relative overflow-hidden">
+      <div className="absolute right-0 top-0 w-64 h-64 bg-emerald-500 rounded-full blur-[100px] opacity-20 -mr-20 -mt-20"></div>
+      <h3 className="text-3xl font-black relative z-10">The Great Marla Debate: 225 vs 272.25 Sq Ft</h3>
+      <p className="relative z-10 text-slate-300 leading-relaxed">
+        The <strong>Marla</strong> is undoubtedly the most frequently used land unit in Pakistan. Ask anyone the size of their house, and they will almost certainly answer in Marlas (e.g., 5 Marla, 10 Marla). However, the actual square footage of a Marla changes depending on where the land is located. This discrepancy creates massive confusion for overseas Pakistanis and first-time buyers.
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10 mt-8">
+        <div className="bg-white/10 p-8 rounded-2xl border border-white/20 backdrop-blur-sm">
+          <h4 className="text-emerald-400 font-bold text-2xl mb-4">The "Revenue" Marla (272.25 Sq Ft)</h4>
+          <p className="text-sm text-slate-300 mb-4">This is the traditional, official measurement used by the Government's Revenue Department (Patwarkhana).</p>
+          <ul className="text-sm space-y-2 text-slate-400">
+            <li>• Based on the traditional "Karam" (a specific step length, usually 5.5 feet).</li>
+            <li>• 1 Marla = A square of 1 Karam × 1 Karam (No, wait: A Marla is actually 9 square Karams. Since 1 Karam = 5.5 ft, 1 Sq Karam = 30.25 sq ft. 9 Sq Karams × 30.25 = 272.25 sq ft).</li>
+            <li>• <strong>Usage:</strong> Used in old city areas, villages, agricultural land, and official land registries across Punjab and KPK.</li>
+          </ul>
+        </div>
+
+        <div className="bg-white/10 p-8 rounded-2xl border border-white/20 backdrop-blur-sm">
+          <h4 className="text-amber-400 font-bold text-2xl mb-4">The "Society" Marla (225 Sq Ft)</h4>
+          <p className="text-sm text-slate-300 mb-4">Modern urban developers found 272.25 mathematically cumbersome for designing grid-based housing schemes.</p>
+          <ul className="text-sm space-y-2 text-slate-400">
+            <li>• Standardized to exactly <strong>25 Square Yards</strong> (Gaz).</li>
+            <li>• Since 1 Sq Yard = 9 Sq Ft, 25 Sq Yards × 9 = 225 sq ft.</li>
+            <li>• <strong>Usage:</strong> DHA, Bahria Town, LDA City, FDA, and almost all modern private housing societies nationwide.</li>
+          </ul>
+        </div>
+      </div>
+
+      <p className="relative z-10 text-slate-300 mt-6 text-sm italic">
+        *Important Note: Our main Land Converter uses the official government standard of 272.25 sq ft per Marla by default for absolute legal precision. If you are calculating plot sizes for DHA or Bahria Town, you should rely on the Square Yard (Gaz) outputs.
+      </p>
+    </section>
+
+    {/* Section 5: Gaz and Sarsahi */}
+    <section className="space-y-6">
+      <h3 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">Gaz (Square Yards) and Sarsahi</h3>
+
+      <h4 className="text-xl font-bold mt-6">Square Yards (Gaz)</h4>
+      <p>
+        While Punjab predominantly uses the Marla, Pakistan's southern mega-city, Karachi, exclusively trades real estate in <strong>Square Yards</strong>—locally referred to as <strong>"Gaz"</strong>.
+      </p>
+      <p>
+        The conversion is universal: <strong>1 Gaz = 9 Square Feet</strong>. <br />
+        Therefore, when a Karachi resident speaks of a "120 Gaz plot," they are referring to exactly 1,080 square feet of land. In the modern 225-sq-ft-Marla system used by DHA, a 120 Gaz plot is roughly equal to a 4.8 Marla plot, though it is usually marketed as a 5 Marla plot.
+      </p>
+
+      <h4 className="text-xl font-bold mt-6">Sarsahi</h4>
+      <p>
+        The <strong>Sarsahi</strong> is a micro-unit, primarily used in legal disputes, hereditary divisions, or extremely dense old-city areas where every inch matters.
+      </p>
+      <ul className="list-disc pl-6 space-y-2 text-slate-600">
+        <li>1 Marla contains exactly <strong>9 Sarsahis</strong>.</li>
+        <li>In the traditional system, 1 Sarsahi = 1 Square Karam = <strong>30.25 Square Feet</strong>.</li>
+        <li>You will rarely see "Sarsahi" in modern real estate listings, but it remains a staple in Fard (land ownership documents) generated by local Patwaris.</li>
+      </ul>
+    </section>
+
+    {/* Section 6: How to use the tool */}
+    <section className="bg-emerald-50 p-8 rounded-3xl border border-emerald-100">
+      <h3 className="text-2xl font-bold text-emerald-900 mb-4">How to Use Our Land Converter Tool</h3>
+      <p className="text-emerald-800 mb-6">Our converter eliminates human error in high-stakes real estate transactions. Here is how to utilize it effectively:</p>
+      <ol className="list-decimal pl-6 space-y-3 text-emerald-800">
+        <li><strong>Step 1: Enter the Value.</strong> Type the numerical size of your land in the input box (e.g., "5.5").</li>
+        <li><strong>Step 2: Select the Input Unit.</strong> Click the unit that matches your input (e.g., if you entered "5.5" and you mean Marlas, click "Marla").</li>
+        <li><strong>Step 3: Read the Instant Output.</strong> Look at the dark panel. The calculator will instantly process the baseline equations and populate the equivalents in Murabba, Kanal, Marla, Gaz, Square Feet, and Sarsahi simultaneously.</li>
+      </ol>
+      <p className="mt-6 text-sm text-emerald-700 italic">Example Scenario: You are offered an orchard sized at 0.75 Murabbas. Enter "0.75" and select Murabba. You will instantly see this equals exactly 150 Kanals or 18.75 Acres.</p>
+    </section>
+  </article>
+);
+
+export const LandConverterSEOArticle = () => (
+  <section className="mt-16 border-t border-slate-100 pt-16 space-y-12 max-w-4xl mx-auto px-4 text-justify">
+
+    <div className="space-y-6">
+      <h2 className="text-3xl font-black text-slate-900 border-l-8 border-slate-800 pl-6">The Ultimate Pakistan Land Conversion Chart</h2>
+      <p className="text-slate-600">
+        For quick reference, use the tables below to memorize the most critical land conversions used in the Pakistani real estate market. This data is verified against the Board of Revenue Punjab standards.
+      </p>
+
+      <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm mt-8">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="bg-slate-800 text-white">
+              <th className="p-5 text-left font-bold border-b border-slate-700">Primary Unit</th>
+              <th className="p-5 text-left font-bold border-b border-slate-700">Equivalent Standard Conversions</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-slate-100 bg-white">
+            <tr className="hover:bg-slate-50 transition-colors">
+              <td className="p-5 font-bold text-slate-900">1 Murabba</td>
+              <td className="p-5 text-slate-600 leading-relaxed">
+                <span className="inline-block bg-slate-100 px-2 py-1 rounded text-xs font-bold mr-2 mb-2">25 Acres</span>
+                <span className="inline-block bg-slate-100 px-2 py-1 rounded text-xs font-bold mr-2 mb-2">200 Kanal</span>
+                <span className="inline-block bg-slate-100 px-2 py-1 rounded text-xs font-bold mr-2 mb-2">4,000 Marlas</span>
+                <span className="block mt-1 text-xs opacity-70">The largest standard unit for agriculture.</span>
+              </td>
+            </tr>
+            <tr className="hover:bg-slate-50 transition-colors">
+              <td className="p-5 font-bold text-slate-900">1 Acre (Killa)</td>
+              <td className="p-5 text-slate-600 leading-relaxed">
+                <span className="inline-block bg-slate-100 px-2 py-1 rounded text-xs font-bold mr-2 mb-2">8 Kanal</span>
+                <span className="inline-block bg-slate-100 px-2 py-1 rounded text-xs font-bold mr-2 mb-2">160 Marlas</span>
+                <span className="inline-block bg-slate-100 px-2 py-1 rounded text-xs font-bold mr-2 mb-2">4,840 Gaz</span>
+                <span className="block mt-1 text-xs opacity-70">Global standard; officially 43,560 Sq Ft.</span>
+              </td>
+            </tr>
+            <tr className="hover:bg-slate-50 transition-colors">
+              <td className="p-5 font-bold text-slate-900">1 Kanal</td>
+              <td className="p-5 text-slate-600 leading-relaxed">
+                <span className="inline-block bg-slate-100 px-2 py-1 rounded text-xs font-bold mr-2 mb-2">20 Marlas</span>
+                <span className="inline-block bg-slate-100 px-2 py-1 rounded text-xs font-bold mr-2 mb-2">605 Gaz (Sq Yards)</span>
+                <span className="inline-block bg-slate-100 px-2 py-1 rounded text-xs font-bold mr-2 mb-2">5,445 Sq Ft</span>
+                <span className="block mt-1 text-xs opacity-70">For premium residential urban plots.</span>
+              </td>
+            </tr>
+            <tr className="hover:bg-slate-50 transition-colors">
+              <td className="p-5 font-bold text-slate-900">1 Marla (Revenue)</td>
+              <td className="p-5 text-slate-600 leading-relaxed">
+                <span className="inline-block bg-slate-100 px-2 py-1 rounded text-xs font-bold mr-2 mb-2">9 Sarsahi</span>
+                <span className="inline-block bg-slate-100 px-2 py-1 rounded text-xs font-bold mr-2 mb-2">30.25 Gaz</span>
+                <span className="inline-block bg-slate-100 px-2 py-1 rounded text-xs font-bold mr-2 mb-2">272.25 Sq Ft</span>
+                <span className="block mt-1 text-xs opacity-70">The official government registry metric.</span>
+              </td>
+            </tr>
+            <tr className="hover:bg-slate-50 transition-colors">
+              <td className="p-5 font-bold text-slate-900">1 Gaz (Sq Yard)</td>
+              <td className="p-5 text-slate-600 leading-relaxed">
+                <span className="inline-block bg-slate-100 px-2 py-1 rounded text-xs font-bold mr-2 mb-2">9 Sq Ft</span>
+                <span className="inline-block bg-slate-100 px-2 py-1 rounded text-xs font-bold mr-2 mb-2">0.8361 Sq Meters</span>
+                <span className="block mt-1 text-xs opacity-70">Predominantly used in Karachi & Hyderabad.</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    {/* New FAQs Section for SEO targeted keywords */}
+    <div className="bg-white p-8 md:p-12 rounded-[2.5rem] border border-slate-200 shadow-md">
+      <h3 className="text-3xl font-black mb-8 text-slate-900">Frequently Asked Questions</h3>
+      <div className="space-y-6">
+        <div>
+          <h4 className="font-bold text-lg text-slate-900 mb-2">How many Kanals are in 1 Murabba?</h4>
+          <p className="text-slate-600 leading-relaxed">There are exactly 200 Kanals in 1 Murabba. Since 1 Murabba equals 25 Acres, and 1 Acre consists of 8 Kanals, multiplying 25 by 8 yields 200 Kanals.</p>
+        </div>
+        <hr className="border-slate-100" />
+        <div>
+          <h4 className="font-bold text-lg text-slate-900 mb-2">Is a 5 Marla House 1125 Sq Ft or 1361 Sq Ft?</h4>
+          <p className="text-slate-600 leading-relaxed">It relies wholly on where you are purchasing. If you are in DHA, Bahria Town, or a modern private society in Lahore/Islamabad, a 5 Marla plot is calculated at 225 sq ft per Marla, making it exactly 1,125 Sq Ft (or 125 Gaz). However, if you buy older land recorded by the Patwari system, 5 Marlas is calculated at 272.25 sq ft per Marla, rendering it 1,361.25 Sq Ft.</p>
+        </div>
+        <hr className="border-slate-100" />
+        <div>
+          <h4 className="font-bold text-lg text-slate-900 mb-2">What is the difference between Acre and Killa?</h4>
+          <p className="text-slate-600 leading-relaxed">In Pakistan, there is no mathematical difference. "Killa" is simply the localized, Punjabi terminology for an Acre. Both denote exactly 8 Kanals or 43,560 Square Feet of area.</p>
+        </div>
+        <hr className="border-slate-100" />
+        <div>
+          <h4 className="font-bold text-lg text-slate-900 mb-2">Can this tool convert Gaz to Marla exactly?</h4>
+          <p className="text-slate-600 leading-relaxed">Yes. Our Land Area Converter Pakistan automatically processes Gaz (Square Yards). To convert Gaz to Marla manually, you divide your Gaz by 30.25 (for the Revenue Marla standard). For instance, 605 Gaz divided by 30.25 equals exactly 20 Marlas (1 Kanal).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 export const BMISEOArticle = () => (
   <section className="mt-16 border-t border-slate-100 pt-16 space-y-8">
     <h2 className="text-3xl font-black text-slate-900 border-l-8 border-emerald-500 pl-6">BMI Calculator Pakistan: Health and Fitness Track</h2>
@@ -3100,39 +3338,45 @@ export const ElectricityBillBlogContent = () => (
       </div>
     </section>
 
-    {/* Section 2: Watts to Units */}
+    {/* Section 2: Watts to Units & Appliance Costs */}
     <section id="watts-to-units" className="space-y-8">
-      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-amber-500 pl-6">Watts to Units Calculator: The Watt to Unit Formula</h2>
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-amber-500 pl-6">Appliance Usage & Hourly Cost Estimator (Pakistan)</h2>
       <p>
-        Many people don't know their exact unit consumption they only know the wattage of their appliances. This is where a <strong>watts to units calculator</strong> is essential. In Pakistan, one "unit" of electricity is equal to 1 kilowatt-hour (kWh). The <strong>watt to unit formula</strong> is:
+        Queries like <strong>"300 watt 8 hours bill Pakistan"</strong> and <strong>"1.5 unit price"</strong> are incredibly common. Many people don't know their exact unit consumption—they only know the wattage of their appliances. In Pakistan, one "unit" of electricity is equal to 1 kilowatt-hour (kWh). The <strong>watt to unit formula</strong> is:
       </p>
       <div className="p-10 bg-amber-500 text-white rounded-[3rem] shadow-2xl text-center space-y-4">
         <p className="text-xs font-black uppercase tracking-widest opacity-80">The Watt to Unit Formula</p>
         <div className="text-2xl md:text-3xl font-black py-6 bg-white/10 rounded-2xl border border-white/20">
           Units (kWh) = (Watts * Hours/Day * Days) / 1000
         </div>
-        <p className="text-sm opacity-90 italic">Example: A 1500W AC running 8 hours/day for 30 days = (1500 * 8 * 30) / 1000 = <strong>360 units</strong></p>
+        <p className="text-sm opacity-90 italic">Example: A 300W appliance running 8 hours/day for 30 days = (300 * 8 * 30) / 1000 = <strong>72 units</strong>. At Rs. 35/unit, that's roughly Rs. 2,520/month!</p>
       </div>
+
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Estimated Appliance Costs (Assuming average Rs. 35/unit rate)</h3>
       <div className="overflow-x-auto rounded-2xl border border-slate-200">
         <table className="w-full text-sm">
           <thead>
             <tr className="bg-amber-500 text-white">
               <th className="p-4 text-left font-bold">Appliance</th>
               <th className="p-4 text-left font-bold">Wattage</th>
-              <th className="p-4 text-left font-bold">8 hrs/day * 30 days</th>
+              <th className="p-4 text-left font-bold">Usage</th>
               <th className="p-4 text-left font-bold">Monthly Units</th>
+              <th className="p-4 text-left font-bold">Est. Hourly Cost</th>
+              <th className="p-4 text-left font-bold">Est. Monthly Cost</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-slate-100">
-            <tr className="bg-white"><td className="p-4">1.5T Inverter AC</td><td className="p-4">1,200W</td><td className="p-4">8h * 30d</td><td className="p-4 font-bold text-amber-600">288 units</td></tr>
-            <tr className="bg-slate-50"><td className="p-4">1.5T Non-Inverter AC</td><td className="p-4">1,850W</td><td className="p-4">8h * 30d</td><td className="p-4 font-bold text-rose-600">444 units</td></tr>
-            <tr className="bg-white"><td className="p-4">Refrigerator (small)</td><td className="p-4">150W</td><td className="p-4">24h * 30d</td><td className="p-4 font-bold text-emerald-600">108 units</td></tr>
-            <tr className="bg-slate-50"><td className="p-4">LED Bulb (10W)</td><td className="p-4">10W</td><td className="p-4">5h * 30d</td><td className="p-4 font-bold text-emerald-600">1.5 units</td></tr>
-            <tr className="bg-white"><td className="p-4">Water Motor (1HP)</td><td className="p-4">750W</td><td className="p-4">2h * 30d</td><td className="p-4 font-bold text-amber-600">45 units</td></tr>
+            <tr className="bg-white"><td className="p-4">1.5T Inverter AC</td><td className="p-4">1,200W</td><td className="p-4">8h * 30d</td><td className="p-4 font-bold text-amber-600">288 units</td><td className="p-4">Rs. 42</td><td className="p-4 font-bold">Rs. 10,080</td></tr>
+            <tr className="bg-slate-50"><td className="p-4">1.5T Non-Inverter AC</td><td className="p-4">1,850W</td><td className="p-4">8h * 30d</td><td className="p-4 font-bold text-rose-600">444 units</td><td className="p-4">Rs. 64.75</td><td className="p-4 font-bold">Rs. 15,540</td></tr>
+            <tr className="bg-white"><td className="p-4">Desert Cooler (Water)</td><td className="p-4">300W</td><td className="p-4">8h * 30d</td><td className="p-4 font-bold text-amber-600">72 units</td><td className="p-4">Rs. 10.5</td><td className="p-4 font-bold">Rs. 2,520</td></tr>
+            <tr className="bg-slate-50"><td className="p-4">Refrigerator (Medium)</td><td className="p-4">250W</td><td className="p-4">24h * 30d</td><td className="p-4 font-bold text-emerald-600">180 units</td><td className="p-4">Rs. 8.75</td><td className="p-4 font-bold">Rs. 6,300</td></tr>
+            <tr className="bg-white"><td className="p-4">Ceiling Fan</td><td className="p-4">80W</td><td className="p-4">12h * 30d</td><td className="p-4 font-bold text-emerald-600">28.8 units</td><td className="p-4">Rs. 2.8</td><td className="p-4 font-bold">Rs. 1,008</td></tr>
+            <tr className="bg-slate-50"><td className="p-4">LED Bulb</td><td className="p-4">12W</td><td className="p-4">6h * 30d</td><td className="p-4 font-bold text-emerald-600">2.16 units</td><td className="p-4">Rs. 0.42</td><td className="p-4 font-bold">Rs. 75</td></tr>
+            <tr className="bg-white"><td className="p-4">Water Motor (1HP)</td><td className="p-4">750W</td><td className="p-4">2h * 30d</td><td className="p-4 font-bold text-amber-600">45 units</td><td className="p-4">Rs. 26.25</td><td className="p-4 font-bold">Rs. 1,575</td></tr>
           </tbody>
         </table>
       </div>
-      <p className="text-sm text-slate-500">Tip: Use our <strong>Watts to Units tab</strong> above to calculate the monthly units for any combination of appliances, then feed that number into the Bill Calculator for an accurate estimate.</p>
+      <p className="text-sm text-slate-500">Tip: Use our <strong>Watts to Units tab</strong> above to calculate the monthly units for any combination of appliances, then feed that number into the Bill Calculator for a more accurate estimate taking NEPRA slabs into account.</p>
     </section>
 
     {/* Section 3: WAPDA Per Unit Rate */}

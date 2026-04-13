@@ -92,6 +92,14 @@ export const CALCULATORS: Calculator[] = [
     icon: '📏'
   },
   {
+    id: 'land-converter',
+    name: 'Land Area Converter Pakistan',
+    nameUrdu: 'زمین کا کنورٹر',
+    description: 'Convert Murabba, Kanal, Marla, Gaz, and SqFt.',
+    category: Category.EVERYDAY,
+    icon: '🗺️'
+  },
+  {
     id: 'bmi',
     name: 'BMI Calculator',
     nameUrdu: 'بی ایم آئی کیلکولیٹر',
