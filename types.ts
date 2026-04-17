@@ -14,6 +14,8 @@ export interface Calculator {
   description: string;
   category: Category;
   icon: string;
+  seoTitle?: string;
+  seoDescription?: string;
 }
 
 export type View = 'home' | 'tool' | 'slabs' | 'zakat-info' | 'contact' | 'privacy' | 'terms' | 'disclaimer' | 'all-tools';

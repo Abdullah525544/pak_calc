@@ -46,6 +46,13 @@ export const ToolArticle: React.FC<ToolArticleProps> = ({ id, isUrdu }) => {
             return <LandConverterArticle isUrdu={isUrdu} />;
         case 'electricity-bill':
             return <ElectricityBillArticle isUrdu={isUrdu} />;
+        case 'percentage':
+            return <PercentageArticle isUrdu={isUrdu} />;
+        case 'password-gen':
+            return <PasswordGenArticle isUrdu={isUrdu} />;
+        case 'mortgage':
+            return <MortgageArticle isUrdu={isUrdu} />;
+
         default:
             return null;
     }
@@ -1282,3 +1289,97 @@ const ElectricityBillArticle = ({ isUrdu }: { isUrdu: boolean }) => {
     if (isUrdu) return null;
     return <ElectricityBillBlogContent />;
 };
+
+const PercentageArticle = ({ isUrdu }: { isUrdu: boolean }) => {
+    if (isUrdu) return null;
+    return (
+        <ArticleWrapper>
+            <h2>Percentage Calculator: Online Percent Increase & Ratio Tool</h2>
+            <p>
+                From academic grades to business markup, percentages are the universal language of comparison. Our <strong>Percentage Calculator</strong> is designed for speed and precision, whether you are calculating a discount while shopping at LuckyOne Mall or analyzing a complex business growth trajectory.
+            </p>
+
+            <HighlightBox title="Versatile Math Support" icon="🔢" color="slate">
+                We support all major percentage variations: finding what X% of Y is, determining the percentage difference between two values, and calculating percentage increases or decreases for finance and science.
+            </HighlightBox>
+
+            <h3>How to Use the Percentage Calculator</h3>
+            <StepGrid steps={[
+                { title: "Input the Part", desc: "Enter the specific value (numerator) you are investigating." },
+                { title: "Input the Whole", desc: "Enter the base value (denominator) for comparison." },
+                { title: "Review Percentage", desc: "The tool instantly reveals the ratio expressed as a percentage." },
+                { title: "Check Difference", desc: "Use the increase/decrease mode to see growth or loss percentages." }
+            ]} />
+
+            <h3>Why Accuracy Matters in Percentages</h3>
+            <p>
+                In finance and academics, a slight miscalculation in percentages can lead to incorrect grades or financial losses. Our tool uses standard mathematical algorithms to ensure your results are reliable every single time.
+            </p>
+        </ArticleWrapper>
+    );
+};
+
+const PasswordGenArticle = ({ isUrdu }: { isUrdu: boolean }) => {
+    if (isUrdu) return null;
+    return (
+        <ArticleWrapper>
+            <h2>Secure Password Generator: Create Strong Random Passwords</h2>
+            <p>
+                In an era of increasing digital security threats, reusing weak passwords like "birthday123" is a recipe for disaster. Our <strong>Secure Password Generator</strong> empowers you to create truly random, unbreakable passwords that protect your personal and financial data.
+            </p>
+
+            <HighlightBox title="Privacy First Approach" icon="🔐" color="blue">
+                Our tool generates passwords entirely on your local browser. No data is ever sent to our servers, ensuring your passwords remain strictly private and secure.
+            </HighlightBox>
+
+            <h3>Best Practices for Password Security</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8 not-prose">
+                <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 flex items-start gap-4">
+                    <span className="text-2xl">📝</span>
+                    <div><strong className="block text-slate-900 mb-1">Use 12+ Characters</strong><span className="text-sm text-slate-600">Longer passwords are exponentially harder to crack.</span></div>
+                </div>
+                <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 flex items-start gap-4">
+                    <span className="text-2xl">🔣</span>
+                    <div><strong className="block text-slate-900 mb-1">Mix Characters</strong><span className="text-sm text-slate-600">Always include symbols, numbers, and uppercase letters.</span></div>
+                </div>
+            </div>
+
+            <p>
+                Avoid using easily guessable information such as names, pet names, or birth dates. Instead, use our generator to create a string of characters that has no pattern.
+            </p>
+        </ArticleWrapper>
+    );
+};
+
+const MortgageArticle = ({ isUrdu }: { isUrdu: boolean }) => {
+    if (isUrdu) return null;
+    return (
+        <ArticleWrapper>
+            <h2>Mortgage Calculator Pakistan: Home Loan Installments & KIBOR</h2>
+            <p>
+                Investing in a home is perhaps the largest financial decision you will ever make. In Pakistan, home financing (Mortgage) is often complex due to fluctuating KIBOR rates and varying bank spreads. Our <strong>Mortgage Calculator Pakistan</strong> simplifies this by giving you a clear picture of your monthly installments and total cost of ownership.
+            </p>
+
+            <HighlightBox title="Local Bank Compatibility" icon="🏦" color="emerald">
+                Whether you are financing through Meezan Bank, HBL, or Bank Alfalah, our tool uses standard PKR denominations and interest models to match local banking practices.
+            </HighlightBox>
+
+            <h3>Factors Affecting Your Home Loan</h3>
+            <StyledTable
+                headers={['Factor', 'Impact on Loan', 'Pakistan Market Context']}
+                rows={[
+                    ['Interest Rate', 'Increase/Decrease Payment', 'Usually 1-year KIBOR + Bank Spread (e.g. 18%)'],
+                    ['Down Payment', 'Reduces Principal', 'Commonly 20% to 30% required by SBP'],
+                    ['Loan Tenure', 'Lowers Monthly EMI', 'Typically ranges from 5 to 20 years'],
+                    ['Property Value', 'Determines Loan Size', 'Prices vary wildly across DHA, Bahria, and societies']
+                ]}
+            />
+
+            <h3>How to Evaluate a Mortgage Offer</h3>
+            <p>
+                Always compare the Total Payout of the loan (Principal + Interest) against the actual property value. Sometimes a lower monthly payment over a longer period can significantly increase the total interest you pay. Use our tool to run different scenarios before signing your loan agreement.
+            </p>
+        </ArticleWrapper>
+    );
+};
+
