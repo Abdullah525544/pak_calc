@@ -3559,4 +3559,320 @@ export const ElectricityBillBlogContent = () => (
   </article>
 );
 
+export const PercentageBlogContent = () => (
+  <article className="mt-20 space-y-20 text-slate-700 leading-relaxed border-t border-slate-200 pt-20 max-w-5xl mx-auto px-4 font-sans text-justify">
+    <header className="text-center space-y-8">
+      <div className="inline-flex items-center gap-2 px-6 py-2 bg-indigo-50 text-indigo-700 rounded-full text-xs font-black uppercase tracking-widest border border-indigo-100">
+        Educational Series
+      </div>
+      <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
+        Understanding Percentages
+      </h2>
+      <p className="text-xl text-slate-500 max-w-4xl mx-auto leading-relaxed text-center italic">
+        "A clear guide to mastering the fundamentals of percent calculations for finance, data, and daily life."
+      </p>
+    </header>
+
+    {/* Section 1: What is a Percentage? */}
+    <section className="space-y-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="space-y-6">
+          <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-indigo-50 pl-6 bg-slate-50/50 py-2 rounded-r-2xl">What is a Percentage?</h2>
+          <p className="text-slate-600 leading-relaxed">
+            A <strong>percentage</strong> expresses a number as a fraction of 100. It is used to compare values, analyze data, and measure proportions. The symbol <strong>"%"</strong> represents a percentage.
+          </p>
+          <div className="bg-indigo-600 text-white p-8 rounded-[2.5rem] shadow-xl relative overflow-hidden group">
+            <div className="absolute right-0 top-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+            <p className="text-indigo-100 uppercase text-[10px] font-black mb-4 tracking-widest">Example Case</p>
+            <p className="mb-4 text-sm font-medium">A school has 200 students, and 50 are in the music club. The percentage of students in the club is:</p>
+            <div className="text-3xl font-black font-mono tracking-tighter">(50 ÷ 200) × 100 = 25%</div>
+            <p className="mt-4 text-indigo-200 text-xs italic text-right">Participating students</p>
+          </div>
+        </div>
+
+        {/* Section 2: How to Calculate */}
+        <div className="space-y-6">
+          <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-50 pl-6 bg-slate-50/50 py-2 rounded-r-2xl">How to Calculate a Percentage</h2>
+          <p className="text-slate-600 leading-relaxed">
+            To determine a percentage, use the following universal formula:
+          </p>
+          <div className="bg-emerald-50 border-2 border-emerald-100 p-8 rounded-[2.5rem] text-center">
+            <div className="text-2xl font-black text-emerald-900 mb-2">(Part ÷ Whole) × 100</div>
+            <p className="text-xs text-emerald-600 uppercase font-bold tracking-widest">The Core Percentage Formula</p>
+          </div>
+          <div className="space-y-4">
+            <p className="text-slate-600"><strong className="text-slate-900 underline decoration-indigo-500 underline-offset-4">Example:</strong> A fruit basket has 120 fruits, and 36 are oranges. The percentage of oranges is:</p>
+            <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100 font-bold text-center text-slate-800 text-xl">
+              (36 ÷ 120) × 100 = 30%
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Section 3: Conversions */}
+    <section className="bg-slate-900 text-white p-12 md:p-16 rounded-[4rem] relative overflow-hidden">
+      <div className="absolute left-0 bottom-0 w-64 h-64 bg-indigo-500 rounded-full blur-[120px] opacity-20 -ml-32 -mb-32"></div>
+      <h2 className="text-3xl font-bold text-center mb-12 relative z-10">How to Convert Percentages</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+        <div className="bg-white/5 p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition-all group">
+          <p className="text-indigo-400 font-black mb-2 uppercase text-[10px] tracking-widest">To Decimal</p>
+          <p className="text-sm font-medium text-slate-300 mb-4">Divide the value by 100.</p>
+          <div className="text-2xl font-bold font-mono group-hover:text-indigo-300 transition-colors">75% = 0.75</div>
+        </div>
+        <div className="bg-white/5 p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition-all group">
+          <p className="text-emerald-400 font-black mb-2 uppercase text-[10px] tracking-widest">To Percentage</p>
+          <p className="text-sm font-medium text-slate-300 mb-4">Multiply the decimal by 100.</p>
+          <div className="text-2xl font-bold font-mono group-hover:text-emerald-300 transition-colors">0.6 × 100 = 60%</div>
+        </div>
+        <div className="bg-white/5 p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition-all group">
+          <p className="text-amber-400 font-black mb-2 uppercase text-[10px] tracking-widest">To Fraction</p>
+          <p className="text-sm font-medium text-slate-300 mb-4">Place over 100 and simplify.</p>
+          <div className="text-2xl font-bold font-mono group-hover:text-amber-300 transition-colors">40% = 40/100 = 2/5</div>
+        </div>
+      </div>
+    </section>
+
+    {/* Section 4: Why Percentages Matter */}
+    <section className="space-y-12">
+      <div className="text-center space-y-4">
+        <h2 className="text-3xl font-black text-slate-900">Why Percentages Matter</h2>
+        <p className="text-slate-500 max-w-2xl mx-auto">Percentages are used in various fields to simplify complex data and make informed decisions.</p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          {
+            cat: "Finance & Shopping",
+            lines: [
+              "A 20% discount on a $50 item saves you $10 (50 × 0.2 = 10).",
+              "A bank offering 5% interest on $1,000 earns you $50 annually."
+            ],
+            color: "border-emerald-500",
+            bg: "bg-emerald-50/30"
+          },
+          {
+            cat: "Data & Statistics",
+            lines: [
+              "If 60% of people prefer coffee, it shows a preference trend.",
+              "Election results show the percentage of votes each candidate receives."
+            ],
+            color: "border-indigo-500",
+            bg: "bg-indigo-50/30"
+          },
+          {
+            cat: "Business & Economics",
+            lines: [
+              "Example: A company’s sales rise from $10,000 to $12,000.",
+              "The percentage increase is: ((12,000 - 10,000) ÷ 10,000) × 100 = 20%"
+            ],
+            color: "border-purple-500",
+            bg: "bg-purple-50/30"
+          },
+          {
+            cat: "Health & Fitness",
+            lines: [
+              "If 25% of a 2,000-calorie diet is protein, that equals 500 calories.",
+              "Helps in managing finances and wellness effectively."
+            ],
+            color: "border-rose-500",
+            bg: "bg-rose-50/30"
+          }
+        ].map((item, i) => (
+          <div key={i} className={`p-8 rounded-[2.5rem] border ${item.color} ${item.bg} space-y-4 flex flex-col`}>
+            <h5 className="font-black text-slate-900 uppercase text-xs tracking-widest">{item.cat}</h5>
+            <div className="space-y-4 flex-grow">
+              {item.lines.map((line, j) => (
+                <p key={j} className="text-[13px] text-slate-600 leading-relaxed font-medium">• {line}</p>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="text-center pt-8">
+        <p className="text-slate-800 font-bold bg-slate-100/50 inline-block px-8 py-4 rounded-2xl border border-dashed border-slate-300">
+          Understanding percentages helps in making informed decisions, analyzing data, and managing finances effectively.
+        </p>
+      </div>
+    </section>
+
+    <footer className="pt-20 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div className="text-[10px] text-slate-400 uppercase font-black tracking-widest">
+        Updated: April 2026 | Mathematical Performance Standards
+      </div>
+      <div className="flex gap-4">
+        <span className="px-3 py-1 bg-slate-100 rounded-full text-[10px] font-bold text-slate-400 italic">Financial Education Series</span>
+      </div>
+    </footer>
+  </article>
+);
+
+
+export const PasswordGenBlogContent = () => (
+  <article className="mt-20 space-y-20 text-slate-700 leading-relaxed border-t border-slate-200 pt-20 max-w-5xl mx-auto px-4 font-sans text-justify">
+    <header className="text-center space-y-8">
+      <div className="inline-flex items-center gap-2 px-6 py-2 bg-yellow-50 text-yellow-700 rounded-full text-xs font-black uppercase tracking-widest border border-yellow-100">
+        Cybersecurity Tools
+      </div>
+      <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
+        Secure Password Generator: <br />
+        <span className="text-yellow-600 italic">Protect Your Digital Identity</span>
+      </h2>
+      <p className="text-xl text-slate-500 max-w-4xl mx-auto leading-relaxed text-center">
+        With the average user having over 100 online accounts, using strong, unique passwords for each is the single most important step for digital security. Our **Secure Password Generator** creates unbreakable, random strings of characters that are impossible to guess or crack.
+      </p>
+    </header>
+
+    <section className="space-y-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="space-y-6">
+          <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-yellow-500 pl-6">Why Strong Passwords Matter</h2>
+          <p className="text-slate-600 leading-relaxed">
+            Cyber-attacks and data breaches are becoming more frequent. Simple passwords like "password123" or "pakistan786" can be cracked in milliseconds using automated brute-force tools.
+          </p>
+          <p className="text-slate-600 leading-relaxed">
+            A strong password significantly reduces the risk of account takeover, protecting your social media (Facebook, Instagram, X), banking apps, and sensitive emails.
+          </p>
+        </div>
+        <div className="space-y-6">
+          <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-yellow-500 pl-6">Password Best Practices</h2>
+          <ul className="space-y-3">
+            {[
+              "Minimum length of 12 characters (16+ is better).",
+              "Use a mix of Uppercase, Lowercase, Numbers, and Symbols.",
+              "Never reuse a password across multiple sites.",
+              "Use a Password Manager (like 1Password or Bitwarden) to keep track.",
+              "Avoid using personal info (birthdays, names, pet names)."
+            ].map((item, i) => (
+              <li key={i} className="flex gap-3 items-start">
+                <span className="text-yellow-500 font-bold">*</span>
+                <span className="text-slate-600">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div className="bg-yellow-50 border border-yellow-100 p-10 rounded-[3rem]">
+        <h2 className="text-3xl font-bold text-slate-900 text-center mb-8">How Our Generator Works</h2>
+        <p className="text-slate-600 text-center mb-8">
+          Our tool runs entirely on your local machine. No data is ever sent to our servers, ensuring your passwords remain private.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            { t: "Randomization", d: "Uses cryptographically secure random number generation." },
+            { t: "Customizable", d: "Choose length and include/exclude specific characters." },
+            { t: "Privacy First", d: "Zero server-side logging or storage." }
+          ].map((item, i) => (
+            <div key={i} className="bg-white p-6 rounded-2xl shadow-sm">
+              <h5 className="font-bold text-slate-900 mb-2">{item.t}</h5>
+              <p className="text-xs text-slate-500">{item.d}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <footer className="pt-20 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div className="text-[10px] text-slate-400 uppercase font-black tracking-widest">
+        Updated: April 2026 | Security Excellence
+      </div>
+      <div className="flex gap-4">
+        <span className="px-3 py-1 bg-yellow-100 rounded-full text-[10px] font-bold text-yellow-700 italic">Privacy & Security Tool</span>
+      </div>
+    </footer>
+  </article>
+);
+
+export const MortgageBlogContent = () => (
+  <article className="mt-20 space-y-20 text-slate-700 leading-relaxed border-t border-slate-200 pt-20 max-w-5xl mx-auto px-4 font-sans text-justify">
+    <header className="text-center space-y-8">
+      <div className="inline-flex items-center gap-2 px-6 py-2 bg-emerald-50 text-emerald-700 rounded-full text-xs font-black uppercase tracking-widest border border-emerald-100">
+        Home Ownership Pakistan
+      </div>
+      <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
+        Mortgage Calculator Pakistan: <br />
+        <span className="text-emerald-600 italic">Plan Your Dream Home Finance</span>
+      </h2>
+      <p className="text-xl text-slate-500 max-w-4xl mx-auto leading-relaxed text-center">
+        Owning a home is a milestone. In Pakistan, where real estate markets like Lahore, Karachi, and Islamabad are constantly evolving, understanding the true cost of home financing is crucial. Our **Mortgage Calculator** helps you estimate monthly payments, markup rates (KIBOR-linked), and long-term interest costs.
+      </p>
+    </header>
+
+    <section className="space-y-10">
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-emerald-500 pl-6">Understanding Home Finance</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="space-y-6">
+          <p>
+            Most banks in Pakistan (like Meezan, HBL, Bank Alfalah) offer "Diminishing Musharakah" or "Conventional Mortgages." These are typically linked to the **1-year KIBOR** rates plus a bank spread.
+          </p>
+          <p>
+            Our tool allows you to input these variables to see your monthly installment and how much of your payment goes towards the principal versus the markup.
+          </p>
+        </div>
+        <div className="bg-slate-900 text-white p-10 rounded-[3rem] shadow-2xl relative overflow-hidden">
+          <h3 className="text-xl font-bold mb-4 text-emerald-400">Typical Home Loan Terms (PK):</h3>
+          <ul className="space-y-4 text-sm">
+            <li className="flex justify-between border-b border-white/10 pb-2">
+              <span>Down Payment</span>
+              <span className="font-bold">20% - 30%</span>
+            </li>
+            <li className="flex justify-between border-b border-white/10 pb-2">
+              <span>Mark-up Rate</span>
+              <span className="font-bold">KIBOR + 2% to 4%</span>
+            </li>
+            <li className="flex justify-between border-b border-white/10 pb-2">
+              <span>Max Tenure</span>
+              <span className="font-bold">20 - 25 Years</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section className="space-y-12">
+      <h2 className="text-3xl font-bold text-slate-900 text-center">Key Considerations for Pakistani Buyers</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          { t: "FBC Registered", d: "Ensure the project is approved by relevant authorities (LDA, CDA, etc.)." },
+          { t: "Markup Revision", d: "Know that your rates will be revised annually based on KIBOR shifts." },
+          { t: "Insurance/Takaful", d: "Factor in mandatory insurance costs for the property and life coverage." }
+        ].map((item, i) => (
+          <div key={i} className="p-8 bg-white border border-slate-100 rounded-3xl shadow-sm">
+            <h5 className="font-bold text-emerald-900 mb-2">{item.t}</h5>
+            <p className="text-xs text-slate-500 leading-relaxed">{item.d}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section id="faqs" className="space-y-12">
+      <h2 className="text-3xl font-bold text-slate-900 text-center">Home Loan FAQ Pakistan</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {[
+          { q: "Can non-residents apply for a home loan?", a: "Yes, many Pakistani banks offer special products for Roshan Digital Account (RDA) holders to buy properties in Pakistan." },
+          { q: "What is the Mera Pakistan Mera Ghar scheme?", a: "This was a government-subsidized scheme for low-cost housing. Check current policy as these schemes may be revised periodically." },
+          { q: "How is KIBOR calculated?", a: "KIBOR is set daily by the State Bank of Pakistan (SBP) based on bank-to-bank lending rates." }
+        ].map((item, i) => (
+          <div key={i} className="p-10 bg-slate-50 rounded-[2.5rem] border border-slate-100 hover:bg-white hover:shadow-xl transition-all">
+            <h5 className="font-bold text-slate-900 mb-2">Q: {item.q}</h5>
+            <p className="text-sm text-slate-500 leading-relaxed">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <footer className="pt-20 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div className="text-[10px] text-slate-400 uppercase font-black tracking-widest">
+        Updated: Feb 2026 | SBP Consumer Finance Guidelines
+      </div>
+      <div className="flex gap-4">
+        <span className="px-3 py-1 bg-emerald-100 rounded-full text-[10px] font-bold text-emerald-700 italic">Home Finance Series</span>
+      </div>
+    </footer>
+  </article>
+);
+
 export const ElectricityBillSEOArticle2 = () => null;
+

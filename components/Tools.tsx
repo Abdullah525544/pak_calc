@@ -3,7 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip, AreaChart, Area, XAxis, YAxis, CartesianGrid } from 'recharts';
 import { SALARIED_TAX_SLABS } from '../constants';
 import { getFinancialAdvice } from '../services/geminiService';
-import { EMIBlogContent, TaxBlogContent, ZakatBlogContent, ProfitMarginBlogContent, BMIBlogContent, InvestmentBlogContent, RetirementBlogContent, RealEstateBlogContent, PFBlogContent, GratuityBlogContent, FreelancerBlogContent, UnitConverterBlogContent, LandConverterBlogContent, GradeCalculatorBlogContent, CGPACalculatorBlogContent, MarkPercentageBlogContent, IncomeTaxSEOArticle, ZakatSEOArticle, FreelancerSEOArticle, InvestmentSEOArticle, RetirementSEOArticle, RealEstateSEOArticle, PFSEOArticle, GratuitySEOArticle, EMISEOArticle, ProfitMarginSEOArticle, UnitConverterSEOArticle, LandConverterSEOArticle, BMISEOArticle, ElectricityBillBlogContent } from './InfoPages';
+import { EMIBlogContent, TaxBlogContent, ZakatBlogContent, ProfitMarginBlogContent, BMIBlogContent, InvestmentBlogContent, RetirementBlogContent, RealEstateBlogContent, PFBlogContent, GratuityBlogContent, FreelancerBlogContent, UnitConverterBlogContent, LandConverterBlogContent, GradeCalculatorBlogContent, CGPACalculatorBlogContent, MarkPercentageBlogContent, IncomeTaxSEOArticle, ZakatSEOArticle, FreelancerSEOArticle, InvestmentSEOArticle, RetirementSEOArticle, RealEstateSEOArticle, PFSEOArticle, GratuitySEOArticle, EMISEOArticle, ProfitMarginSEOArticle, UnitConverterSEOArticle, LandConverterSEOArticle, BMISEOArticle, ElectricityBillBlogContent, PercentageBlogContent, PasswordGenBlogContent, MortgageBlogContent } from './InfoPages';
+
 
 const COLORS = ['#10b981', '#ef4444', '#f59e0b', '#3b82f6', '#8b5cf6', '#ec4899'];
 
@@ -1701,6 +1702,219 @@ export const ElectricityBillTool = ({ isUrdu }: { isUrdu: boolean }) => {
       )}
 
       <ElectricityBillBlogContent />
+    </div>
+  );
+};
+
+export const PercentageTool = ({ isUrdu }: { isUrdu: boolean }) => {
+  const [value1, setValue1] = useState<number>(10);
+  const [value2, setValue2] = useState<number>(100);
+  const [result, setResult] = useState<number | null>(10);
+
+  const calculateBasic = () => {
+    setResult((value1 / value2) * 100);
+  };
+
+  useEffect(() => calculateBasic(), [value1, value2]);
+
+  return (
+    <div className={`space-y-12 ${isUrdu ? 'rtl font-urdu' : ''}`}>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6 border border-slate-100">
+          <h3 className="text-2xl font-bold text-slate-900">Basic Percentage</h3>
+          <div className="flex flex-wrap items-center gap-4 text-lg">
+            <span>What is</span>
+            <input
+              type="number"
+              value={value1}
+              onChange={e => setValue1(Number(e.target.value))}
+              className="w-24 p-3 bg-slate-50 border rounded-xl font-bold text-center"
+            />
+            <span>% of</span>
+            <input
+              type="number"
+              value={value2}
+              onChange={e => setValue2(Number(e.target.value))}
+              className="w-32 p-3 bg-slate-50 border rounded-xl font-bold text-center"
+            />
+            <span>?</span>
+          </div>
+        </div>
+
+        <div className="bg-purple-600 text-white p-8 rounded-[2.5rem] shadow-xl flex flex-col justify-center text-center relative overflow-hidden">
+          <div className="absolute right-0 top-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+          <p className="text-purple-100 uppercase text-xs font-black mb-2 tracking-widest text-center w-full">Calculation Result</p>
+          <h4 className="text-6xl font-black text-white">
+            {result !== null ? (value1 * value2 / 100).toLocaleString() : '0'}
+          </h4>
+          <p className="text-purple-200 mt-4 text-sm">
+            {value1}% of {value2} is {value1 * value2 / 100}
+          </p>
+        </div>
+      </div>
+      <PercentageBlogContent />
+    </div>
+  );
+};
+
+export const PasswordGenTool = () => {
+  const [password, setPassword] = useState('');
+  const [length, setLength] = useState(16);
+  const [includeUppercase, setIncludeUppercase] = useState(true);
+  const [includeNumbers, setIncludeNumbers] = useState(true);
+  const [includeSymbols, setIncludeSymbols] = useState(true);
+
+  const generate = () => {
+    let charset = 'abcdefghijklmnopqrstuvwxyz';
+    if (includeUppercase) charset += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    if (includeNumbers) charset += '0123456789';
+    if (includeSymbols) charset += '!@#$%^&*()_+~`|}{[]:;?><,./-=';
+
+    let res = '';
+    const array = new Uint32Array(length);
+    window.crypto.getRandomValues(array);
+    for (let i = 0; i < length; i++) {
+      res += charset[array[i] % charset.length];
+    }
+    setPassword(res);
+  };
+
+  useEffect(() => generate(), []);
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(password);
+    alert('Password copied to clipboard!');
+  };
+
+  return (
+    <div className="space-y-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6 border border-slate-100">
+          <h3 className="text-2xl font-bold">Customization</h3>
+
+          <div className="space-y-4">
+            <div>
+              <label className="text-xs font-bold text-slate-400 uppercase block mb-2">Password Length: {length}</label>
+              <input
+                type="range"
+                min="8" max="64"
+                value={length}
+                onChange={e => setLength(Number(e.target.value))}
+                className="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-yellow-500"
+              />
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+              <label className="flex items-center gap-3 cursor-pointer group">
+                <input type="checkbox" checked={includeUppercase} onChange={e => setIncludeUppercase(e.target.checked)} className="w-5 h-5 accent-yellow-500 rounded" />
+                <span className="text-sm font-bold text-slate-600 group-hover:text-slate-900">Uppercase</span>
+              </label>
+              <label className="flex items-center gap-3 cursor-pointer group">
+                <input type="checkbox" checked={includeNumbers} onChange={e => setIncludeNumbers(e.target.checked)} className="w-5 h-5 accent-yellow-500 rounded" />
+                <span className="text-sm font-bold text-slate-600 group-hover:text-slate-900">Numbers</span>
+              </label>
+              <label className="flex items-center gap-3 cursor-pointer group">
+                <input type="checkbox" checked={includeSymbols} onChange={e => setIncludeSymbols(e.target.checked)} className="w-5 h-5 accent-yellow-500 rounded" />
+                <span className="text-sm font-bold text-slate-600 group-hover:text-slate-900">Symbols</span>
+              </label>
+            </div>
+          </div>
+
+          <button
+            onClick={generate}
+            className="w-full py-4 bg-slate-900 text-white rounded-2xl font-bold hover:bg-slate-800 transition-all shadow-lg"
+          >
+            Regenerate Password
+          </button>
+        </div>
+
+        <div className="bg-yellow-400 text-slate-900 p-8 rounded-[2.5rem] shadow-xl flex flex-col justify-center items-center text-center border-4 border-white">
+          <p className="text-yellow-900 uppercase text-[10px] font-black mb-4 tracking-[0.2em]">Your Secure Password</p>
+          <div className="bg-white/50 backdrop-blur-sm p-6 rounded-3xl w-full break-all font-mono text-2xl font-bold mb-6 selection:bg-yellow-500">
+            {password}
+          </div>
+          <button
+            onClick={copyToClipboard}
+            className="flex items-center gap-2 px-8 py-3 bg-white hover:bg-slate-50 rounded-full text-sm font-black shadow-md transition-all active:scale-95"
+          >
+            <span>âœ…</span> Copy Password
+          </button>
+        </div>
+      </div>
+      <PasswordGenBlogContent />
+    </div>
+  );
+};
+
+export const MortgageTool = () => {
+  const [homeValue, setHomeValue] = useState(15000000);
+  const [downPayment, setDownPayment] = useState(3000000);
+  const [interestRate, setInterestRate] = useState(18);
+  const [tenure, setTenure] = useState(20);
+
+  const loanAmount = homeValue - downPayment;
+  const monthlyRate = (interestRate / 100) / 12;
+  const totalMonths = tenure * 12;
+
+  const emi = loanAmount * monthlyRate * Math.pow(1 + monthlyRate, totalMonths) / (Math.pow(1 + monthlyRate, totalMonths) - 1);
+  const totalPayment = emi * totalMonths;
+  const totalInterest = totalPayment - loanAmount;
+
+  return (
+    <div className="space-y-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6 border border-slate-100">
+          <h3 className="text-2xl font-bold">Property Details</h3>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label className="text-[10px] font-black uppercase text-slate-400 mb-1 block">Property Value (PKR)</label>
+              <input type="number" value={homeValue} onChange={e => setHomeValue(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold" />
+            </div>
+            <div>
+              <label className="text-[10px] font-black uppercase text-slate-400 mb-1 block">Down Payment (PKR)</label>
+              <input type="number" value={downPayment} onChange={e => setDownPayment(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl font-bold" />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label className="text-[10px] font-black uppercase text-slate-400 mb-1 block">Markup Rate (%)</label>
+              <input type="number" value={interestRate} onChange={e => setInterestRate(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            </div>
+            <div>
+              <label className="text-[10px] font-black uppercase text-slate-400 mb-1 block">Loan Tenure (Years)</label>
+              <input type="number" value={tenure} onChange={e => setTenure(Number(e.target.value))} className="w-full p-4 bg-slate-50 border rounded-2xl" />
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-slate-900 text-white p-8 rounded-[2.5rem] shadow-xl flex flex-col justify-center relative overflow-hidden">
+          <div className="absolute right-0 bottom-0 w-64 h-64 bg-emerald-500 rounded-full blur-[100px] opacity-20 -mr-32 -mb-32"></div>
+
+          <div className="text-center mb-8 relative z-10">
+            <p className="text-slate-400 uppercase text-xs font-black tracking-widest mb-2">Estimated Monthly Installment</p>
+            <h4 className="text-5xl font-black text-emerald-400">Rs. {Math.round(emi).toLocaleString()}</h4>
+            <p className="text-[10px] text-slate-500 mt-2">KIBOR linked estimate for Pakistan</p>
+          </div>
+
+          <div className="space-y-3 pt-8 border-t border-white/10 relative z-10">
+            <div className="flex justify-between text-sm">
+              <span className="text-slate-400">Total Loan Amount</span>
+              <span className="font-bold">Rs. {loanAmount.toLocaleString()}</span>
+            </div>
+            <div className="flex justify-between text-sm">
+              <span className="text-slate-400">Total Interest Payable</span>
+              <span className="font-bold text-rose-400">Rs. {Math.round(totalInterest).toLocaleString()}</span>
+            </div>
+            <div className="flex justify-between text-sm pt-3 border-t border-white/5">
+              <span className="font-bold">Total Cost of Property</span>
+              <span className="font-black text-xl text-emerald-400">Rs. {Math.round(totalPayment + downPayment).toLocaleString()}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <MortgageBlogContent />
     </div>
   );
 };

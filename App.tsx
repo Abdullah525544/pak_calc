@@ -13,8 +13,9 @@ import {
   InvestmentReturnTool, RetirementTool, PFTool, GratuityTool,
   FreelancerTool, UnitConverterTool, LandConverterTool, RealEstateROITool,
   CGPACalculatorTool, GradeCalculatorTool, MarkPercentageTool,
-  ElectricityBillTool
+  ElectricityBillTool, PercentageTool, PasswordGenTool, MortgageTool
 } from './components/Tools';
+
 import { FBRSlabsPage, ZakatInfoPage, ContactPage, PrivacyPage, TermsPage, DisclaimerPage } from './components/InfoPages';
 import { CALCULATORS } from './constants';
 import { ToolArticle } from './components/ToolArticle';
@@ -24,23 +25,28 @@ const getRelatedTools = (id: string) => {
   const map: Record<string, string[]> = {
     'income-tax': ['investment-return', 'real-estate-roi'],
     'zakat': ['investment-return', 'provident-fund', 'freelancer-tax'],
-    'loan-emi': ['zakat', 'investment-return'],
-    'profit-margin': ['income-tax', 'investment-return'],
+    'loan-emi': ['mortgage', 'investment-return'],
+    'profit-margin': ['percentage', 'income-tax'],
     'bmi': ['loan-emi', 'retirement-plan'],
-    'investment-return': ['provident-fund', 'gratuity'],
+    'investment-return': ['retirement-plan', 'real-estate-roi'],
     'retirement-plan': ['real-estate-roi', 'zakat', 'income-tax'],
-    'real-estate-roi': ['income-tax', 'investment-return'],
+    'real-estate-roi': ['mortgage', 'income-tax'],
     'provident-fund': ['retirement-plan', 'income-tax'],
     'gratuity': ['retirement-plan', 'income-tax'],
     'freelancer-tax': ['income-tax', 'unit-converter'],
-    'unit-converter': ['profit-margin', 'income-tax'],
+    'unit-converter': ['land-converter', 'real-estate-roi'],
+    'land-converter': ['unit-converter', 'real-estate-roi'],
     'cgpa-calc': ['grade-calc', 'mark-percentage'],
-    'grade-calc': ['cgpa-calc', 'unit-converter'],
-    'mark-percentage': ['cgpa-calc', 'unit-converter'],
-    'electricity-bill': ['income-tax', 'loan-emi', 'zakat']
+    'grade-calc': ['cgpa-calc', 'mark-percentage'],
+    'mark-percentage': ['grade-calc', 'cgpa-calc'],
+    'electricity-bill': ['income-tax', 'loan-emi', 'zakat'],
+    'percentage': ['profit-margin', 'cgpa-calc'],
+    'password-gen': ['unit-converter', 'income-tax'],
+    'mortgage': ['loan-emi', 'real-estate-roi']
   };
   return map[id] || ['income-tax', 'investment-return'];
 };
+
 
 // SEO metadata for each tool – CTR-optimized titles & descriptions based on GSC queries
 const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?: { question: string; answer: string }[]; howTo?: { name: string; description: string; steps: { name: string; text: string }[] } }> = {
@@ -339,22 +345,35 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     description: 'Calculate instantly: 300 watt 8 hours bill Pakistan, 1.5 unit electricity cost, or total WAPDA monthly bills online. See precise appliance costs now.',
     faqs: [
       { question: 'How to calculate electricity bill in Pakistan?', answer: 'To calculate your bill of electricity in Pakistan, use the WAPDA unit calculator. Simply enter your consumed units. The tool evaluates the electricity bill calculation formula in Pakistan by applying the appropriate NEPRA slab, adding the Fuel Price Adjustment (FPA), 18% GST, and other surcharges.' },
-      { question: 'What is the WAPDA unit price in Pakistan for commercial and residential?', answer: 'WAPDA per unit price varies. For residential protected consumers, it starts very low (Rs. 10.54/unit). Non-protected residential starts at Rs. 22.44/unit. WAPDA commercial unit price is typically much higher and mostly a flat rate ranging from Rs. 39 to Rs. 50+ per unit depending on the exact load and tariff category (like A-2).' },
-      { question: 'How do I use a Watts to Units calculator?', answer: 'The watt to unit formula is simple: Units (kWh) = (Watts × Hours Used × Days) / 1000. For example, a 1000-watt AC running for 8 hours a day for 30 days will consume 240 units.' },
-      { question: 'How can I check my electricity bill online (IESCO, FESCO, MEPCO)?', answer: 'You can check your light or power bill online via the official portal of your respective DISCO. For an IESCO online bill check, visit the IESCO portal with your 14-digit reference number. The same process applies for a FESCO online bill calculator or MEPCO bill tracking. Our tool helps you accurately predict that bill before it arrives.' }
-    ],
-    howTo: {
-      name: "How to Calculate Bill of Electricity in Pakistan",
-      description: "A step-by-step guide to calculating your electricity bill using our online WAPDA unit calculator.",
-      steps: [
-        { name: "Convert Watts to Units (Optional)", text: "If you don't know your units, use our watts to units calculator feature by entering your appliances' wattage and usage hours." },
-        { name: "Select Your Connection Type", text: "Choose between a Residential or Commercial WAPDA connection, as the commercial unit price is different." },
-        { name: "Enter Consumed Units", text: "Input your total consumed units into the online bill calculator." },
-        { name: "Review the Bill Breakdown", text: "The calculator instantly applies the exact WAPDA per unit rate, FPA, and GST to give you your final estimated bill amount." }
-      ]
-    }
+      { question: 'What is the WAPDA unit price in Pakistan for commercial and residential?', answer: 'WAPDA per unit price varies. For residential protected consumers, it starts very low (Rs. 10.54/unit). Non-protected residential starts at Rs. 22.44/unit. WAPDA commercial unit price is typically much higher and mostly a flat rate ranging from Rs. 39 to Rs. 50+ per unit depending on the exact load and tariff category (like A-2).' }
+    ]
+  },
+  'percentage': {
+    title: 'Percentage Calculator | Easy Online Percent Tool',
+    description: 'Quickly calculate percentages, increases, and decreases. Simple tool for students and professionals in Pakistan and globally.',
+    faqs: [
+      { question: 'How to calculate percentage in Pakistan?', answer: 'Divide the part by the whole and multiply by 100. For example, if you got 45 marks out of 50, your percentage is (45/50) * 100 = 90%.' },
+      { question: 'What is a percentage increase formula?', answer: 'Percentage Increase = [(New Value - Old Value) / Old Value] * 100.' }
+    ]
+  },
+  'password-gen': {
+    title: 'Secure Password Generator | Create Random Passwords',
+    description: 'Generate strong, random passwords to secure your online accounts. Customizable length and characters. Used by security pros.',
+    faqs: [
+      { question: 'What makes a password strong?', answer: 'A strong password should be at least 12 characters long and include a mix of uppercase letters, lowercase letters, numbers, and symbols.' },
+      { question: 'Are these passwords saved?', answer: 'No, our generator runs locally on your browser. We never store or transmit your passwords.' }
+    ]
+  },
+  'mortgage': {
+    title: 'Mortgage Calculator Pakistan | Home Finance ROI',
+    description: 'Calculate your home loan installments, interest rates, and loan terms in Pakistan. Support for local banks like Meezan and HBL.',
+    faqs: [
+      { question: 'How much is the minimum down payment for a home loan in Pakistan?', answer: 'Most banks in Pakistan require a minimum down payment of 20% to 30% of the property value, as per SBP guidelines.' },
+      { question: 'What is the standard tenure for a home mortgage in Pakistan?', answer: 'Mortgage tenures in Pakistan typically range from 5 to 20 years.' }
+    ]
   }
 };
+
 
 
 const App: React.FC = () => {
@@ -598,6 +617,32 @@ const App: React.FC = () => {
             handleNavigate={handleNavigate}
           />
         } />
+        <Route path="/percentage" element={
+          <ToolWrapper
+            id="percentage"
+            component={<PercentageTool isUrdu={isUrdu} />}
+            isUrdu={isUrdu}
+            handleNavigate={handleNavigate}
+          />
+        } />
+
+        <Route path="/password-gen" element={
+          <ToolWrapper
+            id="password-gen"
+            component={<PasswordGenTool />}
+            isUrdu={isUrdu}
+            handleNavigate={handleNavigate}
+          />
+        } />
+        <Route path="/mortgage" element={
+          <ToolWrapper
+            id="mortgage"
+            component={<MortgageTool />}
+            isUrdu={isUrdu}
+            handleNavigate={handleNavigate}
+          />
+        } />
+
 
         {/* Fallback */}
         <Route path="*" element={
@@ -622,12 +667,13 @@ const ToolWrapper = ({ id, component, isUrdu, handleNavigate }: { id: string, co
   return (
     <div className="max-w-6xl mx-auto px-4 py-12 md:py-20 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <SEOHead
-        title={seoMeta?.title || `${tool.name} - PakCalc`}
-        description={seoMeta?.description || tool.description}
+        title={seoMeta?.title || tool.seoTitle || `${tool.name} - PakCalc`}
+        description={seoMeta?.description || tool.seoDescription || tool.description}
         canonicalUrl={`/${id}`}
         faqs={seoMeta?.faqs}
         howTo={seoMeta?.howTo}
       />
+
 
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
         <div className="space-y-4 w-full">
