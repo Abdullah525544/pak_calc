@@ -1312,92 +1312,70 @@ export const GradeCalculatorTool = () => {
 };
 
 export const CGPACalculatorTool = () => {
-  const [semesters, setSemesters] = useState([{ id: 1, sgpa: 3.5, credits: 18 }]);
+  const [scale, setScale] = useState(10);
+  const [cgpa, setCgpa] = useState(8.5);
 
-  const addSemester = () => {
-    setSemesters([...semesters, { id: Date.now(), sgpa: 0, credits: 0 }]);
-  };
+  let percentage = 0;
+  if (scale === 10) {
+    percentage = cgpa * 9.5;
+  } else {
+    percentage = (cgpa / scale) * 100;
+  }
 
-  const removeSemester = (id: number) => {
-    if (semesters.length > 1) {
-      setSemesters(semesters.filter(s => s.id !== id));
-    }
-  };
-
-  const updateSemester = (id: number, field: 'sgpa' | 'credits', value: number) => {
-    setSemesters(semesters.map(s => s.id === id ? { ...s, [field]: value } : s));
-  };
-
-  const totalCredits = semesters.reduce((acc, s) => acc + s.credits, 0);
-  const totalPoints = semesters.reduce((acc, s) => acc + (s.sgpa * s.credits), 0);
-  const cgpa = totalCredits > 0 ? totalPoints / totalCredits : 0;
+  // ensure no weird values out of bounds
+  percentage = Math.min(100, Math.max(0, percentage));
 
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 animate-in fade-in duration-500">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-white p-8 rounded-[2.5rem] shadow-xl space-y-6">
-          <div className="flex justify-between items-center mb-4">
-            <h3 className="text-2xl font-bold">Semester Details</h3>
-            <button
-              onClick={addSemester}
-              className="px-4 py-2 bg-emerald-600 text-white rounded-xl text-sm font-bold hover:bg-emerald-700 transition-colors shadow-lg"
-            >
-              + Add Semester
-            </button>
+          <h3 className="text-2xl font-bold">Academic Performance</h3>
+
+          <div>
+            <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Grading Scale</label>
+            <div className="grid grid-cols-3 gap-2">
+              {[10, 5, 4].map(val => (
+                <button
+                  key={val}
+                  onClick={() => setScale(val)}
+                  className={`p-3 rounded-2xl border text-sm font-bold transition-all ${scale === val ? 'bg-emerald-600 text-white border-emerald-600 shadow-md' : 'bg-white border-slate-200 text-slate-500 hover:border-slate-300'}`}
+                >
+                  {val}-Point
+                </button>
+              ))}
+            </div>
+            <p className="text-[10px] text-slate-400 mt-2">Select the maximum CGPA possible at your institution.</p>
           </div>
 
-          <div className="space-y-4 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
-            {semesters.map((s, index) => (
-              <div key={s.id} className="p-6 bg-slate-50 rounded-[2rem] border border-slate-100 relative animate-in fade-in slide-in-from-right-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-[10px] font-black uppercase text-slate-400 mb-1 block">Semester {index + 1} GPA</label>
-                    <input
-                      type="number"
-                      step="0.01"
-                      value={s.sgpa || ''}
-                      onChange={e => updateSemester(s.id, 'sgpa', Number(e.target.value))}
-                      className="w-full p-3 bg-white border rounded-xl font-bold"
-                      placeholder="e.g. 3.5"
-                    />
-                  </div>
-                  <div>
-                    <label className="text-[10px] font-black uppercase text-slate-400 mb-1 block">Credit Hours</label>
-                    <input
-                      type="number"
-                      value={s.credits || ''}
-                      onChange={e => updateSemester(s.id, 'credits', Number(e.target.value))}
-                      className="w-full p-3 bg-white border rounded-xl font-bold"
-                      placeholder="e.g. 18"
-                    />
-                  </div>
-                </div>
-                {semesters.length > 1 && (
-                  <button
-                    onClick={() => removeSemester(s.id)}
-                    className="absolute -top-2 -right-2 w-8 h-8 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center text-lg hover:bg-rose-200 transition-colors shadow-sm"
-                  >
-                    Ã—
-                  </button>
-                )}
-              </div>
-            ))}
+          <div>
+            <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">Your CGPA</label>
+            <input
+              type="number"
+              step="0.1"
+              min="0"
+              max={scale}
+              value={cgpa}
+              onChange={e => setCgpa(Number(e.target.value))}
+              className="w-full p-4 bg-slate-50 border border-slate-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 rounded-2xl font-bold text-xl outline-none transition-all"
+              placeholder={`Max: ${scale}`}
+            />
           </div>
         </div>
 
-        <div className="bg-slate-900 text-white p-8 rounded-[2.5rem] shadow-2xl flex flex-col justify-center text-center relative overflow-hidden">
-          <div className="absolute left-0 bottom-0 w-full h-32 bg-gradient-to-t from-emerald-500/20 to-transparent"></div>
-          <p className="text-slate-400 uppercase text-xs font-black mb-4 tracking-widest">Cumulative GPA (CGPA)</p>
-          <h4 className="text-8xl font-black text-emerald-400 mb-6 drop-shadow-2xl">{cgpa.toFixed(2)}</h4>
-          <div className="grid grid-cols-2 gap-4 bg-white/5 p-6 rounded-3xl border border-white/10 relative z-10">
-            <div>
-              <p className="text-[10px] text-slate-400 uppercase font-black mb-1">Total Credits</p>
-              <p className="text-2xl font-bold">{totalCredits}</p>
-            </div>
-            <div>
-              <p className="text-[10px] text-slate-400 uppercase font-black mb-1">Total Grade Points</p>
-              <p className="text-2xl font-bold">{totalPoints.toFixed(1)}</p>
-            </div>
+        <div className="bg-slate-900 text-white p-8 rounded-[2.5rem] shadow-xl border border-slate-900 flex flex-col items-center justify-center text-center relative overflow-hidden group">
+          <div className="absolute right-0 top-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-emerald-500/20 transition-all"></div>
+
+          <p className="text-slate-400 uppercase text-xs font-black mb-4 tracking-widest relative z-10">Equivalent Percentage</p>
+          <h4 className="text-7xl font-black text-emerald-400 mb-2 relative z-10 drop-shadow-lg">{percentage.toFixed(2)}%</h4>
+
+          <div className="w-full bg-slate-800 h-4 rounded-full overflow-hidden mt-6 relative z-10 border border-white/5">
+            <div className="bg-gradient-to-r from-emerald-500 to-emerald-300 h-full transition-all duration-1000" style={{ width: `${percentage}%` }}></div>
+          </div>
+
+          <div className="bg-white/5 px-6 py-3 rounded-2xl border border-white/10 mt-6 relative z-10">
+            <p className="text-sm font-medium text-slate-300">
+              {scale === 10 ? 'Based on the standard 9.5 multiplier formula.' : `Calculated proportionally: (${cgpa} ÷ ${scale}) × 100.`}
+            </p>
           </div>
         </div>
       </div>

@@ -165,13 +165,13 @@ export const CALCULATORS: Calculator[] = [
   },
   {
     id: 'cgpa-calc',
-    name: 'CGPA Calculator',
+    name: 'CGPA to Percentage Calculator',
     nameUrdu: 'سی جی پی اے کیلکولیٹر',
-    description: 'Calculate your Semester and Cumulative GPA easily.',
+    description: 'Convert your CGPA to Percentage accurately for all university grading scales.',
     category: Category.EDUCATION,
     icon: '🎓',
-    seoTitle: 'CGPA Calculator for Universities | Semester & Cumulative GPA',
-    seoDescription: 'Calculate your CGPA and GPA instantly. Compatible with HEC standards for Pakistani universities like NUST, FAST, and COMSATS.'
+    seoTitle: 'CGPA to Percentage Calculator | Convert CGPA Accurately',
+    seoDescription: 'Convert your CGPA to percentage easily using our highly accurate calculator. Ideal for all grading scales including 10-point and 4-point.'
   },
   {
     id: 'grade-calc',
