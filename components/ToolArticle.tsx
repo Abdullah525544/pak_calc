@@ -728,50 +728,66 @@ const ProvidentFundArticle = ({ isUrdu }: { isUrdu: boolean }) => {
 
     return (
         <ArticleWrapper>
-            <h2>Provident Fund Calculator Pakistan 2026: Employee PF Balance & Rules</h2>
+            <h2>How to Use Provident Fund Calculator — Pakistan 2026</h2>
             <p>
-                For millions of corporate professionals across Pakistan, the Provident Fund (PF) serves as the primary, and often sole, vehicle for retirement wealth accumulation. Understanding the exact growth trajectory of this fund is critically important. Our <strong>Provident Fund Calculator Pakistan</strong> precisely projects your final accumulated PF balance, thoroughly factoring in employer matching, your monthly deductions, and the compounded annual interest rate applied to your account.
+                In Pakistan, a Provident Fund (PF) is one of the most reliable and common ways to secure your financial future after retirement. Whether you work in a corporate multinational or a local private firm, this mandatory or voluntary deduction serves as a forced savings mechanism. By entering your monthly basic salary, our free calculator accurately estimates your monthly provident fund deductions and projects the final accumulated lump sum over your employment tenure.
+            </p>
+            <p>
+                Understanding how your PF balance grows is crucial since both you and your employer contribute equally to the fund each month. Your final balance is not just the sum of deductions but also includes compounded annual interest distributed by your company’s Provident Fund Trust. Using this tool gives you absolute clarity on your retirement nest egg without having to wait for year-end HR statements.
             </p>
 
-            <HighlightBox title="Take Control of Your Data" icon="📊" color="emerald">
-                Human Resource (HR) departments rarely provide proactive visibility into your developing PF balance. We engineered this calculator to deliver total transparency regarding your monthly paycheck deductions and the ultimate maturity value of your fund.
-            </HighlightBox>
+            <h2>How is Provident Fund Calculated in Pakistan?</h2>
+            <p>
+                The calculation formula for a recognized provident fund across Pakistan is defined by long-standing corporate practices and FBR guidelines. The PF deduction applies only to your <strong>basic salary</strong>, not your gross salary (which includes allowances for house rent, transport, or medical).
+            </p>
+            <p>
+                There are typically two common rates applied by Pakistani employers:
+            </p>
+            <ul>
+                <li><strong>8.33% of Basic Salary:</strong> This translates to essentially one whole month of basic salary saved over the span of a year (1/12th of annual basic).</li>
+                <li><strong>10% of Basic Salary:</strong> A higher deduction rate popular among leading banks and multinational corporations for enhanced savings.</li>
+            </ul>
+            <p>
+                <strong>Example Calculation:</strong><br />
+                Let's assume an employee earns a gross salary of PKR 100,000. Under the standard labor practice, basic salary constitutes roughly PKR 60,000 of the total gross amount.
+            </p>
+            <ul>
+                <li><strong>Your Basic Salary:</strong> PKR 60,000</li>
+                <li><strong>Employee Deduction (10%):</strong> PKR 6,000 per month</li>
+                <li><strong>Employer Matching Contribution (10%):</strong> PKR 6,000 per month</li>
+                <li><strong>Total Monthly Deposit:</strong> PKR 12,000 per month</li>
+            </ul>
+            <p>
+                Annually, this secures PKR 144,000 for your retirement, excluding the 10% to 15% interest distributed by the PF trust at the end of the year. This compounded profit is entirely tax-free upon maturity for FBR recognized funds.
+            </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8 not-prose">
-                <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 flex items-start gap-4">
-                    <span className="text-2xl">⚙️</span>
-                    <div><strong className="block text-slate-900 mb-1">Accurate Simulation</strong><span className="text-sm text-slate-600">Enter basic salary to instantly see standard monthly deduction fractions.</span></div>
+            <h2>Frequently Asked Questions</h2>
+            <div className="space-y-4">
+                <div>
+                    <h3 className="text-xl font-bold text-slate-800">Is PF deducted on gross salary or basic salary?</h3>
+                    <p>In Pakistan, your Provident Fund is always deducted from your basic salary portion, never the gross salary. Allowances like travel, medical, and housing are completely excluded from the PF calculation.</p>
                 </div>
-                <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 flex items-start gap-4">
-                    <span className="text-2xl">🤝</span>
-                    <div><strong className="block text-slate-900 mb-1">Employer Matching</strong><span className="text-sm text-slate-600">Automatically integrates the mandatory matching contribution provided by your firm.</span></div>
+                <div>
+                    <h3 className="text-xl font-bold text-slate-800">Can I withdraw my Provident Fund before retirement?</h3>
+                    <p>Yes, most recognized provident funds allow partial withdrawals or loans against your balance for specific emergencies, such as purchasing/constructing a house, major medical illnesses, or children's higher education. However, rules vary per organization's Trust Deed.</p>
                 </div>
-                <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 flex items-start gap-4">
-                    <span className="text-2xl">🔄</span>
-                    <div><strong className="block text-slate-900 mb-1">Dynamic Interest</strong><span className="text-sm text-slate-600">Input rates (12-15%) to model exponential capital growth over decades.</span></div>
+                <div>
+                    <h3 className="text-xl font-bold text-slate-800">Is my Provident Fund balance taxable in Pakistan?</h3>
+                    <p>If your company operates a Recognized Provident Fund (registered with the FBR/Commissioner of Inland Revenue), the lump sum payout you receive at retirement or resignation is generally 100% tax-free. Unrecognized funds may incur tax on the employer's portion and accrued interest.</p>
                 </div>
-                <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 flex items-start gap-4">
-                    <span className="text-2xl">🎯</span>
-                    <div><strong className="block text-slate-900 mb-1">Wealth Projection</strong><span className="text-sm text-slate-600">Visualize how early career contributions compound over 30 years.</span></div>
+                <div>
+                    <h3 className="text-xl font-bold text-slate-800">What happens to my PF if I change jobs?</h3>
+                    <p>When you resign, you are entitled to receive your entire accumulated balance, including both your contributions, the employer's matching contributions, and accrued interest, provided you have completed the minimum vesting period laid out by your HR policy (often 1-3 years).</p>
                 </div>
             </div>
 
-            <h3>Step-by-Step Guide to Calculating Your PF Balance</h3>
-            <StepGrid steps={[
-                { title: "Input Base Salary", desc: "Enter strictly 'Basic Salary' as PF only applies to the basic component." },
-                { title: "Set Deduction Rate", desc: "The standard rate is usually 8.33% or 10%. Select your company's model." },
-                { title: "Add Existing Balance", desc: "If you have an accumulated PF amount, enter the opening balance." },
-                { title: "Define Tenure", desc: "Input the number of years remaining until retirement or resignation." }
-            ]} />
-
-            <h3>Provident Fund Rules and Taxation in Pakistan (2025-26)</h3>
-            <HighlightBox title="FBR Tax Relief" icon="⚖️" color="blue">
-                For a Recognized Provident Fund, employer contributions remain exempt up to 10% of basic salary or PKR 150,000 annually. Crucially, when you withdraw the accumulated balance upon retirement, the entire lump sum is 100% tax-free under current FBR statutes.
-            </HighlightBox>
-
-            <HighlightBox title="Verify Your Savings" icon="🛡️" color="slate">
-                Relying entirely on annual HR slips risks exposing you to internal corporate miscalculations. Use this tool to match your employer's contributions and verify the integrity of your hard-earned corporate savings.
-            </HighlightBox>
+            <h2>Related Calculators</h2>
+            <ul>
+                <li><a href="/income-tax">Income Tax Calculator Pakistan 2026</a></li>
+                <li><a href="/gratuity">Gratuity Calculator Pakistan</a></li>
+                <li><a href="/retirement-plan">Retirement Savings Planner</a></li>
+                <li><a href="/loan-emi">Loan EMI Calculator</a></li>
+            </ul>
         </ArticleWrapper>
     );
 }
@@ -781,60 +797,67 @@ const GratuityArticle = ({ isUrdu }: { isUrdu: boolean }) => {
 
     return (
         <ArticleWrapper>
-            <h2>Gratuity Calculator Pakistan 2026: End of Service Benefit Rules</h2>
-            <div className="bg-blue-50 p-6 rounded-2xl border border-blue-100 my-6 shadow-sm">
-                <h3 className="text-xl font-bold text-blue-900 mt-0 mb-2">Understanding Gratuity Rules in Pakistan</h3>
-                <p className="text-blue-800 m-0 text-sm">Under the پاکستانی Commercial and Industrial Employment (Standing Orders) Ordinance, 1968, eligible employees are entitled to gratuity upon resignation, retirement, or termination. The standard rule dictates you receive 30 days of wages for every completed year of service, calculated based on your final basic salary. If you have worked for more than 6 months in your final year, it counts as a full year. Use the calculator above to ensure your HR department provides an accurate final settlement.</p>
-            </div>
+            <h2>How to Use Gratuity Calculator — Pakistan 2026</h2>
             <p>
-                Leaving a company after years of dedicated service entitles you to a mandatory statutory payout. In Pakistan, gratuity serves as a highly vital severance benefit designed to cushion an employee's transition between jobs or into retirement. Our <strong>Gratuity Calculator Pakistan</strong> empowers private-sector employees to forcefully demand their exact legal entitlements by computing the precise payout commanded under current Pakistani labor laws.
+                In Pakistan, an end-of-service gratuity is a critical statutory benefit designed to financially support employees as they transition between jobs or into retirement. Navigating the legal complexities of your final settlement can be overwhelming, which is why our free Gratuity Calculator for Pakistan simplifies the process. By entering your last drawn basic salary and total years of service, the tool instantly computes the exact redundancy or retirement payout you are legally entitled to.
+            </p>
+            <p>
+                Accidentally miscalculating gratuity is a common issue that costs employees tens of thousands of rupees. Our tool eliminates the guesswork by strictly applying the industrial labor laws prevailing in 2026. Whether you are working in the private sector or for a semi-government entity, this calculator ensures your HR department provides a fair and accurate final settlement upon your departure.
             </p>
 
-            <HighlightBox title="Arm Yourself with Truth" icon="📜" color="amber">
-                Employers systematically exploit employee ignorance regarding end-of-service benefits. We built this calculator to arm you with immediate, irrefutable mathematical truth based on the Industrial and Commercial Employment Ordinance, 1968.
-            </HighlightBox>
+            <h2>How is Gratuity Calculated in Pakistan?</h2>
+            <p>
+                The formula for determining your payable gratuity is explicitly defined by the Industrial and Commercial Employment (Standing Orders) Ordinance, 1968. The law stipulates that an eligible employee must receive <strong>30 days of wages for every completed year of service</strong> or any service period exceeding six months.
+            </p>
+            <p>
+                To standardize the calculation, the law assumes a working month consists of 26 days. Therefore, the daily wage is extracted by dividing the monthly salary by 26, and then multiplied by 30 to get the gratuity baseline.
+            </p>
+            <p><strong>The Standard Gratuity Formula:</strong></p>
+            <p className="bg-slate-50 p-4 rounded text-center text-lg font-mono">
+                Gratuity = (Last Drawn Basic Salary ÷ 26) × 30 × Years of Service
+            </p>
+            <p>
+                <strong>Example Calculation:</strong><br />
+                Suppose your last drawn basic salary is PKR 75,000, and you have served the company for 5 years and 8 months. Since the extra months exceed 6, your total service tenure rounds up to 6 years.
+            </p>
+            <ul>
+                <li><strong>Determine Daily Wage:</strong> 75,000 ÷ 26 = PKR 2,884.61</li>
+                <li><strong>Determine 30 Days Wage:</strong> 2,884.61 × 30 = PKR 86,538.30</li>
+                <li><strong>Multiply by Years of Service (6):</strong> 86,538.30 × 6 = PKR 519,229.80</li>
+            </ul>
+            <p>Your total tax-free gratuity payout would be <strong>PKR 519,230</strong>.</p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
-                    <span className="text-4xl block mb-2">⚖️</span>
-                    <strong className="block text-slate-900">Wage Isolation</strong>
-                    <span className="text-xs text-slate-500">Correctly isolates 'last drawn basic wage' from gross allowances.</span>
+            <h2>Frequently Asked Questions</h2>
+            <div className="space-y-4">
+                <div>
+                    <h3 className="text-xl font-bold text-slate-800">Who is eligible for gratuity in Pakistan?</h3>
+                    <p>According to Pakistan labor law, any employee who has completed at least one year of continuous service with an employer is generally eligible for a gratuity payout upon resignation, retirement, or termination (except in cases of gross misconduct).</p>
                 </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
-                    <span className="text-4xl block mb-2">📅</span>
-                    <strong className="block text-slate-900">Tenure Benchmarking</strong>
-                    <span className="text-xs text-slate-500">Addresses the 'six-month rounding rule' embedded in labor law.</span>
+                <div>
+                    <h3 className="text-xl font-bold text-slate-800">Is gratuity calculated on basic or gross salary?</h3>
+                    <p>Gratuity is legally calculated on your last drawn basic salary, plus any permanent cost-of-living allowances. It strictly excludes temporary allowances like house rent, transport, utility, or performance bonuses.</p>
                 </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
-                    <span className="text-4xl block mb-2">⚡</span>
-                    <strong className="block text-slate-900">Instant Statutory Computation</strong>
-                    <span className="text-xs text-slate-500">Determine what your employer legally owes you in seconds.</span>
+                <div>
+                    <h3 className="text-xl font-bold text-slate-800">Is gratuity taxable in Pakistan?</h3>
+                    <p>Under FBR regulations, gratuity received from an approved gratuity fund is usually exempt from income tax up to a specific limit (e.g., PKR 300,000). Excess amounts or payouts from unapproved funds might be subject to taxation depending on your filer status.</p>
                 </div>
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm text-center">
-                    <span className="text-4xl block mb-2">🛡️</span>
-                    <strong className="block text-slate-900">Labor Law Compliance</strong>
-                    <span className="text-xs text-slate-500">Ensures your HR department cannot shortchange your payout.</span>
+                <div>
+                    <h3 className="text-xl font-bold text-slate-800">Do I get gratuity if my company provides a Provident Fund?</h3>
+                    <p>Often, employers are required by law to offer either a Provident Fund or a Gratuity scheme. If your employer provides a recognized Provident Fund where their matching contribution equals or exceeds the statutory gratuity requirement, they are generally not legally obligated to pay gratuity as well.</p>
                 </div>
             </div>
 
-            <h3>Step-by-Step Guide to Calculating Final Gratuity</h3>
-            <StepGrid steps={[
-                { title: "Locate Basic Salary", desc: "Review your payslip. Ignore 'Gross Salary'—find the 'Basic Salary' field." },
-                { title: "Count Total Tenure", desc: "If you worked 4 years and 7 months, it counts as 5 complete years." },
-                { title: "View Entitlement", desc: "The calculator applies the 30-day wage formula for every year of service." }
-            ]} />
-
-            <h3>How Pakistan Labor Laws Calculate Gratuity (2025-26)</h3>
-            <p>
-                The calculation is rigid: you receive <strong>30 days of wages for every completed year of service, or any part thereof exceeding six months</strong>. Many organizations unlawfully attempt to calculate gratuity based on 15 days. Our calculator prevents this wage theft by enforcing the strict 30-day formula.
-            </p>
-
-            <HighlightBox title="FBR Tax Exemptions" icon="💡" color="blue">
-                If your employer operates an FBR-Approved Gratuity Fund, your payout is exempt from income tax up to PKR 300,000. For unapproved funds, the exemption drops drastically to PKR 75,000 or 50% of the amount.
-            </HighlightBox>
+            <h2>Related Calculators</h2>
+            <ul>
+                <li><a href="/provident-fund">Provident Fund Calculator 2026</a></li>
+                <li><a href="/income-tax">Income Tax Calculator Pakistan</a></li>
+                <li><a href="/retirement-plan">Retirement Planning Calculator</a></li>
+                <li><a href="/loan-emi">Loan EMI Calculator</a></li>
+            </ul>
         </ArticleWrapper>
     );
 }
+
 
 const LoanEMIArticle = ({ isUrdu }: { isUrdu: boolean }) => {
     if (isUrdu) return null;
@@ -1294,27 +1317,72 @@ const PercentageArticle = ({ isUrdu }: { isUrdu: boolean }) => {
     if (isUrdu) return null;
     return (
         <ArticleWrapper>
-            <h2>Percentage Calculator: Online Percent Increase & Ratio Tool</h2>
+            <h2>Percentage Calculator Pakistan 2026: Fast Discounts & Margins</h2>
             <p>
-                From academic grades to business markup, percentages are the universal language of comparison. Our <strong>Percentage Calculator</strong> is designed for speed and precision, whether you are calculating a discount while shopping at LuckyOne Mall or analyzing a complex business growth trajectory.
+                From academic merit aggregates for MDCAT/NUST to wholesale margin math at Jodia Bazaar, percentages are the numerical lifeblood of daily life in Pakistan. Whether you are dealing with business markup, calculating the impact of standard GST (18%), determining your final academic average, or locking in a shopping discount at LuckyOne Mall, you need absolute mathematical precision. Our <strong>Percentage Calculator Pakistan</strong> delivers an instant, universally applicable solution to handle all your core percentage matrices effortlessly.
             </p>
 
-            <HighlightBox title="Versatile Math Support" icon="🔢" color="slate">
-                We support all major percentage variations: finding what X% of Y is, determining the percentage difference between two values, and calculating percentage increases or decreases for finance and science.
+            <HighlightBox title="Commercial & Academic Lifeline" icon="📊" color="blue">
+                Many businesses fail in Pakistan simply because entrepreneurs incorrectly calculate their percentage margins versus markups. Similarly, students frequently miscalculate their aggregate percentages for university admission. We built this calculator to function as an infallible, high-speed mathematical verifier for both business finance and academic planning.
             </HighlightBox>
 
-            <h3>How to Use the Percentage Calculator</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
+                    <span className="text-3xl">📉</span>
+                    <div>
+                        <strong className="block text-slate-900 mb-1">Discount & Sale Pricing</strong>
+                        <span className="text-xs text-slate-500">Instantly reveal the final price after a 20% or 30% brand sale discount.</span>
+                    </div>
+                </div>
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
+                    <span className="text-3xl">📈</span>
+                    <div>
+                        <strong className="block text-slate-900 mb-1">Percentage Increase</strong>
+                        <span className="text-xs text-slate-500">Calculate exact hyperinflation growth or rent hikes (e.g. 10% annual bump).</span>
+                    </div>
+                </div>
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
+                    <span className="text-3xl">🧮</span>
+                    <div>
+                        <strong className="block text-slate-900 mb-1">Fraction to Percentage</strong>
+                        <span className="text-xs text-slate-500">Determine exactly what X is compared to Y for grading or ratios.</span>
+                    </div>
+                </div>
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
+                    <span className="text-3xl">⚖️</span>
+                    <div>
+                        <strong className="block text-slate-900 mb-1">FBR GST Addition</strong>
+                        <span className="text-xs text-slate-500">Quickly tack on the standard 18% General Sales Tax to an invoice payload.</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Step-by-Step Guide to the Four Core Calculations</h3>
             <StepGrid steps={[
-                { title: "Input the Part", desc: "Enter the specific value (numerator) you are investigating." },
-                { title: "Input the Whole", desc: "Enter the base value (denominator) for comparison." },
-                { title: "Review Percentage", desc: "The tool instantly reveals the ratio expressed as a percentage." },
-                { title: "Check Difference", desc: "Use the increase/decrease mode to see growth or loss percentages." }
+                { title: "Find X% of Y", desc: "Example: You need to extract exactly 18% GST (X) from a base invoice of 50,000 (Y)." },
+                { title: "X is what % of Y?", desc: "Example: You secured 820 marks (X) out of 1100 (Y). Result reveals your exam success." },
+                { title: "Percentage Increase", desc: "Track how much your rent grew from 30,000 (Old) to 35,000 (New) as a pure percentage." },
+                { title: "Percentage Decrease", desc: "Check the exact mathematical impact of a brand discount on a retail product." }
             ]} />
 
-            <h3>Why Accuracy Matters in Percentages</h3>
+            <h3>Why Mental Math Often Fails in Business</h3>
             <p>
-                In finance and academics, a slight miscalculation in percentages can lead to incorrect grades or financial losses. Our tool uses standard mathematical algorithms to ensure your results are reliable every single time.
+                A severe operational flaw occurs when merchants assume a 50% markup equals a 50% profit margin. If a product costs PKR 1,000 and is marked up by 50% (PKR 1,500 selling price), the actual profit margin is only 33% (500 ÷ 1500). When that same merchant throws a "30% Off Sale," the price drops to PKR 1,050. They haven't retained a 20% margin—they've practically wiped out all profit.
             </p>
+
+            <StyledTable
+                headers={['Calculation Type', 'Real World Pakistani Scenario', 'Urgency']}
+                rows={[
+                    [<strong className="text-blue-700">Tax Implementation</strong>, 'Adding exactly 18% General Sales Tax (GST) onto customer POS bills.', 'High'],
+                    [<strong className="text-emerald-700">Academic Aggregate</strong>, 'Averaging intermediate marks and MDCAT entry test percentiles.', 'Critical'],
+                    [<strong className="text-amber-700">Contract Increases</strong>, 'Calculating compounding 10% annual escalations on rental agreements.', 'Moderate'],
+                    [<strong className="text-slate-700">Salary Appraisals</strong>, 'Calculating if your current salary raise actually beats the 10% inflation rate.', 'High']
+                ]}
+            />
+
+            <HighlightBox title="The Baseline Standard" icon="🛡️" color="slate">
+                Never utilize gross estimations for financial deals. Deploy our calculator to mathematically lock in your exact ratios. Precision is your ultimate defense mechanism against monetary loss.
+            </HighlightBox>
         </ArticleWrapper>
     );
 };
@@ -1355,30 +1423,72 @@ const MortgageArticle = ({ isUrdu }: { isUrdu: boolean }) => {
     if (isUrdu) return null;
     return (
         <ArticleWrapper>
-            <h2>Mortgage Calculator Pakistan: Home Loan Installments & KIBOR</h2>
+            <h2>Mortgage Calculator Pakistan 2026: Home Finance & KIBOR EMI</h2>
             <p>
-                Investing in a home is perhaps the largest financial decision you will ever make. In Pakistan, home financing (Mortgage) is often complex due to fluctuating KIBOR rates and varying bank spreads. Our <strong>Mortgage Calculator Pakistan</strong> simplifies this by giving you a clear picture of your monthly installments and total cost of ownership.
+                Property acquisition is statistically the largest financial transaction executed by an average household in Pakistan. In a highly volatile macroeconomic environment where the State Bank of Pakistan (SBP) aggressively manipulates the policy rate, home financing (Mortgage) becomes highly complex due to fluctuating KIBOR (Karachi Interbank Offered Rate) variants. Our <strong>Mortgage Calculator Pakistan</strong> aggressively models your long-term debt, providing an unvarnished projection of your monthly installments and the colossal total interest burden.
             </p>
 
-            <HighlightBox title="Local Bank Compatibility" icon="🏦" color="emerald">
-                Whether you are financing through Meezan Bank, HBL, or Bank Alfalah, our tool uses standard PKR denominations and interest models to match local banking practices.
+            <HighlightBox title="Neutralizing Banking Jargon" icon="🏦" color="emerald">
+                Local banks aggressively advertise minimum markup spreads while burying the compounding realities of 20-year KIBOR-linked debt. Whether you are dealing with Meezan Bank's Islamic Musharakah model or HBL's conventional home loans, our tool enforces strict mathematical transparency on the complete lifecycle of your mortgage.
             </HighlightBox>
 
-            <h3>Factors Affecting Your Home Loan</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
+                    <span className="text-3xl">📉</span>
+                    <div>
+                        <strong className="block text-slate-900 mb-1">Amortization Truth</strong>
+                        <span className="text-xs text-slate-500">Discover exactly how much of your early EMI feeds interest vs principal.</span>
+                    </div>
+                </div>
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
+                    <span className="text-3xl">📈</span>
+                    <div>
+                        <strong className="block text-slate-900 mb-1">KIBOR Volatility Check</strong>
+                        <span className="text-xs text-slate-500">Calculate the brutal impact of a sudden 2% leap in the SBP policy rate.</span>
+                    </div>
+                </div>
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
+                    <span className="text-3xl">💰</span>
+                    <div>
+                        <strong className="block text-slate-900 mb-1">Down Payment Impact</strong>
+                        <span className="text-xs text-slate-500">Run simulations adjusting equity to see the total interest reduction.</span>
+                    </div>
+                </div>
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex gap-4 items-start">
+                    <span className="text-3xl">⏱️</span>
+                    <div>
+                        <strong className="block text-slate-900 mb-1">Tenure Manipulation</strong>
+                        <span className="text-xs text-slate-500">Compare a 10-year lock versus a 20-year lock to find your sweet spot.</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Step-by-Step Guide to Calculating Your Home Loan</h3>
+            <StepGrid steps={[
+                { title: "Define Principal", desc: "Enter the exact loan amount (property price minus your upfront down payment)." },
+                { title: "Set Markup Rate", desc: "Input the current prevailing rate (1-year KIBOR + the specific bank's profit spread)." },
+                { title: "Decide Tenure", desc: "Select the payback timeframe (Most Pakistani home loans vary from 5 to 20 years)." },
+                { title: "Analyze Outputs", desc: "Instantly view your fixed monthly EMI, cumulative interest paid, and total lifetime repayment." }
+            ]} />
+
+            <h3>Critical Variables in Pakistani Real Estate Financing</h3>
+            <p>
+                It is imperative to understand that securing a 15-year mortgage on a raw plot in Bahria Town carries entirely different risk parameters compared to buying a constructed apartment in DHA. The financing cost alone can eclipse the original property value if not managed proactively.
+            </p>
+
             <StyledTable
-                headers={['Factor', 'Impact on Loan', 'Pakistan Market Context']}
+                headers={['Mortgage Factor', 'Financial Impact Structure', 'Pakistan Market Context']}
                 rows={[
-                    ['Interest Rate', 'Increase/Decrease Payment', 'Usually 1-year KIBOR + Bank Spread (e.g. 18%)'],
-                    ['Down Payment', 'Reduces Principal', 'Commonly 20% to 30% required by SBP'],
-                    ['Loan Tenure', 'Lowers Monthly EMI', 'Typically ranges from 5 to 20 years'],
-                    ['Property Value', 'Determines Loan Size', 'Prices vary wildly across DHA, Bahria, and societies']
+                    [<strong className="text-rose-700">Interest (Markup) Rate</strong>, 'Massively dictates your monthly burden.', 'Generally floating. Tied to 1-Year KIBOR + Bank Spread (e.g., KIBOR + 3%).'],
+                    [<strong className="text-emerald-700">Down Payment (Equity)</strong>, 'Slashes the borrowed principal generating interest.', 'SBP mandates a minimum equity requirement, often between 20% to 30%.'],
+                    [<strong className="text-blue-700">Loan Tenure Length</strong>, 'Lowers the monthly EMI but balloons total interest.', 'Extending to 20 years dramatically doubles the profit transferred to the bank.'],
+                    [<strong className="text-slate-700">Early Settlement Penalty</strong>, 'A fee charged for clearing debt too rapidly.', 'Crucial to check. Typically ranges from 1% to 5% of the outstanding balance.']
                 ]}
             />
 
-            <h3>How to Evaluate a Mortgage Offer</h3>
-            <p>
-                Always compare the Total Payout of the loan (Principal + Interest) against the actual property value. Sometimes a lower monthly payment over a longer period can significantly increase the total interest you pay. Use our tool to run different scenarios before signing your loan agreement.
-            </p>
+            <HighlightBox title="Strategic Defense" icon="⚠️" color="rose">
+                A lower monthly EMI over 20 years seems immediately attractive, but mathematically, you will be paying for the house twice over. Always inject the highest down payment your liquidity allows and strive for the shortest viable payback tenure to starve the compound interest engine.
+            </HighlightBox>
         </ArticleWrapper>
     );
 };
