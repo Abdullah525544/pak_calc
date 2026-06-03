@@ -193,13 +193,13 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     }
   },
   'gratuity': {
-    title: 'Gratuity Calculator Pakistan 2026 — End of Service Pay (Labour Law)',
-    description: 'Calculate exact gratuity amount under Pakistan Labour Law. Enter last salary + years served → instant result. Updated 2026.',
+    title: 'Gratuity Calculator Pakistan 2026 — Labour Law End of Service Pay',
+    description: 'Calculate gratuity under Pakistan Labour Law. Enter last drawn salary + years of service → get exact gratuity amount. Covers private sector & government employees.',
     faqs: [
-      { question: 'Who is eligible for gratuity in Pakistan?', answer: 'According to Pakistan labor law, any employee who has completed at least one year of continuous service with an employer is generally eligible for a gratuity payout upon resignation, retirement, or termination (except in cases of gross misconduct).' },
-      { question: 'Is gratuity calculated on basic or gross salary?', answer: 'Gratuity is legally calculated on your last drawn basic salary, plus any permanent cost-of-living allowances. It strictly excludes temporary allowances like house rent, transport, utility, or performance bonuses.' },
-      { question: 'Is gratuity taxable in Pakistan?', answer: 'Under FBR regulations, gratuity received from an approved gratuity fund is usually exempt from income tax up to a specific limit (e.g., PKR 300,000). Excess amounts or payouts from unapproved funds might be subject to taxation depending on your filer status.' },
-      { question: 'Do I get gratuity if my company provides a Provident Fund?', answer: 'Often, employers are required by law to offer either a Provident Fund or a Gratuity scheme. If your employer provides a recognized Provident Fund where their matching contribution equals or exceeds the statutory gratuity requirement, they are generally not legally obligated to pay gratuity as well.' }
+      { question: 'What is gratuity law in Pakistan?', answer: 'Under Pakistan Labour Law, every permanent employee is entitled to gratuity after completing 1 year of continuous service. The formula is: Last basic salary ÷ 26 × 30 × years served.' },
+      { question: 'What is gratuity formula in Pakistan?', answer: 'Gratuity = (Last drawn basic salary ÷ 26) × 30 × Number of years served. This applies to private sector employees under Standing Orders Ordinance 1968.' },
+      { question: 'Is gratuity taxable in Pakistan?', answer: 'Gratuity received from approved gratuity fund is exempt from tax up to PKR 300,000. Amount above PKR 300,000 is taxable under FBR rules.' },
+      { question: 'What if employer does not pay gratuity?', answer: 'Employees can file a complaint with the Labour Court or NIRC (National Industrial Relations Commission) for non-payment of gratuity in Pakistan.' }
     ],
     howTo: {
       name: "How to Calculate Your End-of-Service Gratuity",
