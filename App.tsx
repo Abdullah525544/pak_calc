@@ -251,8 +251,8 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     }
   },
   'unit-converter': {
-    title: 'Unit Converter Pakistan — Tola, Marla, Kanal, SqFt & Grams',
-    description: 'Convert units instantly. Support for local Pakistani measurements like Tola to Grams, SqFt to Marla. Free, accurate unit conversion app.',
+    title: 'Unit & Land Converter Pakistan — Murabba, Kanal, Marla, Gaz, Weight, Length',
+    description: 'Convert Pakistani land units (murabba to kanal, marla to gaz) and standard units (kg to lbs, km to miles). Free converter updated for 2026.',
     faqs: [
       { question: 'How many Kanal in 1 Murabba in Pakistan?', answer: '1 Murabba = 25 Acres = 200 Kanal in Pakistan. A Murabba is commonly used for agricultural land measurement in Punjab. 200 Murabba would be 40,000 Kanal.' },
       { question: 'How many Marla in 1 Kanal?', answer: '1 Kanal = 20 Marla in Pakistan. Depending on the district, 1 Marla is either 225 or 272.25 sq ft.' },
@@ -271,9 +271,13 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     }
   },
   'land-converter': {
-    title: 'Land Unit Converter Pakistan — Murabba, Kanal, Marla, Gaz, Sarsahi',
-    description: 'Convert murabba to kanal, marla to gaz, kanal to acre instantly. Pakistan land unit calculator for Punjab, Sindh, KPK & all provinces.',
+    title: 'Land Unit Converter Pakistan — 1 Murabba to Kanal, Marla, Gaz, Sarsahi',
+    description: 'Convert murabba to kanal, kanal to marla, gaz to marla and all Pakistani land units instantly. Punjab, Sindh, KPK land measurements supported. Free 2026.',
     faqs: [
+      { question: '1 murabba mein kitne kanal hote hain?', answer: '1 murabba mein 25 kanal hote hain. Pakistan mein yeh measurement Punjab mein sab se zyada use hoti hai.' },
+      { question: '1 kanal mein kitne marla hote hain?', answer: '1 kanal mein 20 marla hote hain. Yeh Pakistan ka standard land measurement hai.' },
+      { question: '1 marla mein kitne sarsahi hote hain?', answer: '1 marla mein 9 sarsahi hote hain.' },
+      { question: 'Murabba to kanal conversion formula kya hai?', answer: 'Murabba ko kanal mein convert karne ke liye murabba ki value ko 25 se multiply karein. Example: 2 murabba = 50 kanal.' },
       { question: 'How much is 1 Murabba in Kanal?', answer: 'In Pakistan, 1 Murabba is exactly equal to 200 Kanal or 25 Acres.' },
       { question: 'How many square feet in 1 Marla?', answer: 'In older cities and rural areas of Punjab, 1 Marla is 272.25 sq ft. However, modern housing societies (like DHA and Bahria) officially standardize 1 Marla as 225 sq ft.' },
       { question: 'How many acres are in a hectare in Pakistan?', answer: 'One hectare is internationally recognized and equals precisely 2.47 acres.' },

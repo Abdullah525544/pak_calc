@@ -1022,6 +1022,11 @@ export const UnitConverterTool = () => {
 
   return (
     <div className="space-y-12">
+      <div className="mb-4 text-slate-800 bg-white p-8 rounded-[2.5rem] shadow-xl border border-slate-100">
+        <h2 className="text-3xl font-black mb-4">Pakistan Unit Converter — Land, Weight & Length</h2>
+        <p className="mb-2 leading-relaxed text-slate-600">This converts both Pakistani land units (murabba, kanal, marla, gaz, sarsahi) AND standard units (weight, length, temperature).</p>
+        <p className="leading-relaxed text-slate-600">It is widely used by farmers, real estate buyers, and students across Pakistan.</p>
+      </div>
       {/* Tabs */}
       <div className="flex justify-center mb-8">
         <div className="bg-white p-1 rounded-full border border-slate-100 shadow-sm inline-flex">
@@ -1223,6 +1228,30 @@ export const LandConverterTool = () => {
           </div>
         </div>
       </div>
+
+      <div className="bg-white p-8 rounded-[2.5rem] shadow-xl border border-slate-100">
+        <h3 className="text-2xl font-bold mb-6 text-slate-800">Conversion Reference Table</h3>
+        <div className="overflow-x-auto">
+          <table className="w-full text-left border-collapse">
+            <thead>
+              <tr className="bg-slate-50 text-slate-500 uppercase text-xs tracking-wider">
+                <th className="p-4 rounded-tl-xl border-b border-slate-100">Unit</th>
+                <th className="p-4 rounded-tr-xl border-b border-slate-100">Values</th>
+              </tr>
+            </thead>
+            <tbody className="text-sm font-medium text-slate-700 divide-y divide-slate-100">
+              <tr><td className="p-4">1 Murabba</td><td className="p-4">25 Kanals</td></tr>
+              <tr><td className="p-4">1 Kanal</td><td className="p-4">20 Marlas</td></tr>
+              <tr><td className="p-4">1 Marla</td><td className="p-4">9 Sarsahi</td></tr>
+              <tr><td className="p-4">1 Kanal</td><td className="p-4">605 Square Yards</td></tr>
+              <tr><td className="p-4">1 Kanal</td><td className="p-4">500 Square Meters (approx)</td></tr>
+              <tr><td className="p-4">1 Acre</td><td className="p-4">8 Kanals</td></tr>
+              <tr><td className="p-4">1 Murabba</td><td className="p-4">25 Acres (approx)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       <LandConverterBlogContent />
       <LandConverterSEOArticle />
     </div>
