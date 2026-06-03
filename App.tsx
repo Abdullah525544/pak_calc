@@ -51,13 +51,13 @@ const getRelatedTools = (id: string) => {
 // SEO metadata for each tool – CTR-optimized titles & descriptions based on GSC queries
 const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?: { question: string; answer: string }[]; howTo?: { name: string; description: string; steps: { name: string; text: string }[] } }> = {
   'income-tax': {
-    title: 'Income Tax Calculator Pakistan 2026 — FBR Salary Tax (Salaried & Business)',
-    description: 'Calculate your FBR income tax for 2025-26. Enter monthly salary → get annual tax, monthly deduction & tax bracket instantly.',
+    title: 'Income Tax Calculator Pakistan 2026 — FBR Salary Tax Slabs (Updated)',
+    description: 'Calculate your exact FBR income tax for 2025-26. Enter monthly salary → get annual tax, monthly deduction & which tax bracket you fall in. Salaried & business both.',
     faqs: [
-      { question: 'What are the FBR salary tax slabs for 2025-26 in Pakistan?', answer: 'The FBR has announced updated income tax slabs for tax year 2026 (July 2025 – June 2026). Salaried individuals earning up to PKR 600,000 annually are exempt. Rates range from 5% to 35% depending on income brackets. Use our free calculator for your exact tax liability.' },
-      { question: 'How to calculate income tax in Pakistan for salaried persons?', answer: 'To calculate your official income tax: First, multiply your gross monthly salary by 12 to find your annual taxable income. Second, deduct authorized legal exemptions like Zakat or medical allowances. Finally, find your relevant FBR slab and apply the corresponding percentage.' },
-      { question: 'What is the penalty for not filing taxes in Pakistan?', answer: 'If you fail to file your income tax return within the FBR deadline, you become a non-filer. Non-filers in Pakistan face massively increased withholding taxes on bank transactions, property purchases, and vehicle registrations, alongside potential legal fines under the Income Tax Ordinance.' },
-      { question: 'Can I save on my income tax in Pakistan?', answer: 'Yes! FBR allows tax credits under sections 62, 63, and others. You can reduce your gross taxable income by investing in Voluntary Pension Schemes (VPS), recognized mutual funds, or by paying Zakat through official channels.' }
+      { question: 'What is the income tax rate in Pakistan 2026?', answer: 'For salaried persons, income up to PKR 600,000 annually is tax-free. Above that, rates range from 5% to 35% based on FBR 2025-26 slabs.' },
+      { question: 'How much salary is tax free in Pakistan?', answer: 'Monthly salary up to PKR 50,000 (annual PKR 600,000) is completely tax free in Pakistan for salaried employees under FBR 2025-26 rules.' },
+      { question: 'How to calculate income tax on salary in Pakistan?', answer: 'Multiply your monthly salary by 12 to get annual income. Then apply FBR tax slab rates to the amount above PKR 600,000. Our calculator does this automatically.' },
+      { question: 'Is freelancer income taxable in Pakistan?', answer: 'Yes. Freelancers earning above PKR 600,000 annually must file income tax returns with FBR. IT export income may have reduced rates under SRO exemptions.' }
     ],
     howTo: {
       name: "How to Calculate Income Tax on Salary in Pakistan",

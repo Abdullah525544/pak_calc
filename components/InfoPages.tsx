@@ -2675,33 +2675,64 @@ export const MarkPercentageBlogContent = () => (
 );
 
 export const IncomeTaxSEOArticle = () => (
-  <section className="mt-16 border-t border-slate-100 pt-16 space-y-8">
-    <h2 className="text-3xl font-black text-slate-900 border-l-8 border-emerald-500 pl-6">Income Tax Calculator Pakistan 2026: Comprehensive Guide</h2>
-    <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-6">
-      <p>
-        The <strong>Income Tax Calculator Pakistan 2026</strong> is an essential tool for every salaried and business individual in the country. With the Federal Board of Revenue (FBR) frequently updating tax slabs, manually calculating your monthly and annual tax liability can be prone to errors. This guide explains the mechanism of tax calculation under the Finance Act 2025 and how you can optimize your finances using our <strong>FBR tax calculator 2026</strong>.
-      </p>
-      <p>
-        In Pakistan, the tax system is progressive. This means as your income increases, the percentage of tax you pay also increases. For the tax year 2025-2026, the threshold for taxable income remains at Rs. 600,000 per year. Anyone earning below this amount is not required to pay income tax, though they are encouraged to file returns. Our <strong>online tax calculator Pakistan</strong> automatically identifies which slab you fall into and applies the correct fixed and percentage-based tax rates.
-      </p>
-      <p>
-        For salaried individuals, the employer usually deducts tax at source (Withholding Tax). However, knowing your exact liability helps you verify if the deduction is correct. If you are also managing a small business or have freelance income, you might need to use our <Link to="/freelancer-tax" className="text-emerald-600 hover:underline font-bold">Freelancer Income Calculator</Link> to see how export taxes affect your net earnings. Additionally, if you are planning to save for the future, understanding your tax-free income can help you better utilize the <Link to="/investment-return" className="text-emerald-600 hover:underline font-bold">Investment Return Calculator</Link> for wealth growth.
-      </p>
-    </div>
-
-    <div className="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-200 mt-12">
-      <h3 className="text-2xl font-bold mb-6">Frequently Asked Questions (FAQs)</h3>
-      <div className="space-y-6">
-        <div>
-          <h4 className="font-bold text-slate-900">What is the tax-free limit in Pakistan for 2026?</h4>
-          <p className="text-sm text-slate-500">The current tax-free limit is Rs. 600,000 per annum for both salaried and non-salaried individuals. This threshold is pivotal for the middle-class workforce to manage their disposable income effectively.</p>
-        </div>
-        <div>
-          <h4 className="font-bold text-slate-900">How to reduce tax liability legally?</h4>
-          <p className="text-sm text-slate-500">You can claim tax credits for investments in voluntary pension schemes (VPS), charitable donations to NPOs, and health insurance. Our tool provides insights into how these deductions impact your net payable tax.</p>
-        </div>
+  <section className="mt-16 border-t border-slate-100 pt-16 space-y-12">
+    <div className="bg-white p-8 rounded-[2.5rem] shadow-xl border border-slate-100 mb-12">
+      <h3 className="text-3xl font-bold mb-6 text-slate-900 border-l-8 border-emerald-500 pl-6">FBR Income Tax Slabs 2025-26 — Salaried Persons</h3>
+      <div className="overflow-x-auto">
+        <table className="w-full text-left border-collapse">
+          <thead>
+            <tr className="bg-emerald-50 text-emerald-700 uppercase text-xs tracking-wider">
+              <th className="p-4 rounded-tl-xl border-b border-emerald-100">Annual Income (PKR)</th>
+              <th className="p-4 rounded-tr-xl border-b border-emerald-100">Tax Rate</th>
+            </tr>
+          </thead>
+          <tbody className="text-sm font-medium text-slate-700 divide-y divide-slate-100">
+            <tr><td className="p-4">Up to 600,000</td><td className="p-4">0% (No tax)</td></tr>
+            <tr><td className="p-4">600,001 – 1,200,000</td><td className="p-4">5% on amount exceeding 600,000</td></tr>
+            <tr><td className="p-4">1,200,001 – 2,400,000</td><td className="p-4">30,000 + 15% on amount exceeding 1,200,000</td></tr>
+            <tr><td className="p-4">2,400,001 – 3,600,000</td><td className="p-4">210,000 + 25% on amount exceeding 2,400,000</td></tr>
+            <tr><td className="p-4">3,600,001 – 6,000,000</td><td className="p-4">510,000 + 30% on amount exceeding 3,600,000</td></tr>
+            <tr><td className="p-4">Above 6,000,000</td><td className="p-4">1,230,000 + 35% on amount exceeding 6,000,000</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
+
+    <article className="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-8">
+      <h2 className="text-3xl font-black text-slate-900">How to Calculate Income Tax in Pakistan 2026</h2>
+      <p>
+        Calculating your income tax in Pakistan requires a systematic approach. With the Federal Board of Revenue (FBR) implementing the latest Finance Act, you must first ascertain your gross monthly income.
+        Take your monthly salary and multiply it by 12 to find your annual income. For instance, if you earn PKR 150,000 per month, your annual income aggregates to PKR 1,800,000.
+        Once you have your annual total, refer to the FBR tax slabs to identify your bracket. Subtract the base threshold of your slab from your annual income.
+        Then, apply the percentage prescribed for the exceeding amount and add the fixed tax sum. Our accurate 2026 tax calculator executes this complex arithmetic instantaneously, completely avoiding any miscalculations.
+        Many working professionals overlook minor tax credits they might be eligible for. Ensuring precision while you calculate income tax secures your hard-earned money carefully.
+      </p>
+
+      <h2 className="text-3xl font-black text-slate-900">FBR Tax Slabs for Salaried Persons vs Business Income</h2>
+      <p>
+        The FBR effectively maintains distinct tax structures based exclusively on your primary source of income. The comprehensive table featured above explicitly details the tax slices designed solely for salaried individuals.
+        According to Pakistani law, a person is legally classified as "salaried" when their salary constitutes more than 75% of their total taxable earnings.
+        Conversely, business individuals, including independent self-employed professionals, traders, and small business owners face a marginally steeper tax scale, as they fundamentally do not benefit from the same lower initial brackets and fixed baseline deductions.
+        If your income stream consists mainly of IT export services, you may be categorized quite differently. Specifically, independent contractors should consult our <Link to="/freelancer-tax" className="text-emerald-600 hover:underline font-bold">Freelancer Tax Calculator</Link> to comprehensively analyze how export remittance exemptions operate for software engineers, designers, and foreign remote employees.
+      </p>
+
+      <h2 className="text-3xl font-black text-slate-900">How to File Income Tax Return in Pakistan — Step by Step</h2>
+      <p>
+        Becoming an active tax filer in Pakistan offers profound financial benefits, chiefly including massively reduced withholding taxes on property purchases, banking transactions, and vehicle registrations. The filing process is now fully digitized through the FBR IRIS portal web architecture.
+        First, appropriately register yourself on the e-portal to officially obtain a National Tax Number (NTN). Second, intuitively navigate to the standard declaration section for the relevant tax year ending June 30th.
+        Third, meticulously compute your wealth statements, explicitly detailing your cash assets, properties, and annual expenses.
+        Furthermore, be extremely mindful to seamlessly report retirement benefits such as your <Link to="/provident-fund" className="text-emerald-600 hover:underline font-bold">Provident Fund</Link> savings and other statutory allowances you have earned.
+        Ultimately, after thoroughly reconciling your complete wealth statement and properly verifying any tax already deducted by your registered employer, securely submit the return directly online. While the FBR frequently extends standard deadlines, attempting to file early expertly avoids unexpected portal downtime and last-minute panic.
+      </p>
+
+      <h2 className="text-3xl font-black text-slate-900">Frequently Asked Questions — Income Tax Pakistan</h2>
+      <p>
+        The dynamic, continuously evolving nature of the Pakistan tax code unavoidably leaves multitudes of citizens thoroughly confused every fiscal budget season. We systematically compiled frequently encountered queries above to help illuminate the most common bureaucratic pitfalls.
+        Understanding precisely how much raw salary is exempted from taxation can dramatically reorganize your personal finance planning, particularly when reviewing all the <Link to="/slabs" className="text-emerald-600 hover:underline font-bold">detailed FBR Slabs</Link> for 2025-2026.
+        A vital rule of thumb dictates that if your standard income exceeds the PKR 600,000 statutory baseline, your employer is legally mandated to deduct withdrawing tax automatically at the source, irrespective of whether you proactively attempt to manually file an independent return or not.
+        By intelligently and continuously adapting to the complex 2025-2026 economic environment, you can accurately forecast your exact monthly budget, perfectly optimize your take-home pay, and confidently secure your long-term financial future in Pakistan.
+      </p>
+    </article>
   </section>
 );
 
