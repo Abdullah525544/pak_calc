@@ -2901,6 +2901,26 @@ export const PFSEOArticle = () => (
       <p>
         A Provident Fund is a mandatory or voluntary saving scheme for many employees in Pakistan. Our <strong>Provident Fund (PF) Calculator Pakistan</strong> helps you estimate the final balance of your fund at the time of retirement or resignation. It accounts for your monthly contribution, your employer's matching contribution, and the annual profit/interest rate credited to the fund.
       </p>
+
+      <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">PF Contribution Calculation in Pakistan — Formula & Example</h2>
+      <p>
+        The standard provident fund calculation is incredibly straightforward. Generally, the <strong>employee contributes 10% of their basic salary per month</strong>, and the <strong>employer also contributes 10% of basic salary per month</strong>. This means the <strong>total monthly PF equals 20% of the basic salary</strong> depositing into the trust.
+      </p>
+      <p>
+        <strong>Example:</strong> If your basic salary = <strong>PKR 30,000</strong>:
+        <br />→ Employee deduction = PKR 3,000
+        <br />→ Employer contribution = PKR 3,000
+        <br />→ Total monthly PF deposit = PKR 6,000
+      </p>
+      <p>
+        Over the course of a year, the <strong>annual PF accumulation equals PKR 72,000</strong> (before any profit is applied). Annually, the government or company trust adds a declared profit percentage. Ultimately, at retirement or resignation, the employee gets the full balance.
+      </p>
+
+      <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">How is PF Deducted from Salary in Pakistan?</h2>
+      <p>
+        Your PF deduction is formally processed directly by your employer's payroll and appears clearly on your salary slip as "PF deduction." This deduction is entirely mandatory for companies legally registered under the Provident Fund Act. By law, a minimum of 10% of your basic salary must be deducted, protecting your long-term wealth.
+      </p>
+
       <p>
         Understanding your PF balance is a key part of your <Link to="/retirement-plan" className="text-emerald-600 hover:underline font-bold">Retirement Plan</Link>. In most cases, the contribution to PF also provides you with tax benefits. You can calculate your net monthly income after PF deductions using our <Link to="/income-tax" className="text-emerald-600 hover:underline font-bold">Income Tax Calculator</Link>.
       </p>
@@ -2909,6 +2929,14 @@ export const PFSEOArticle = () => (
     <div className="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-200 mt-12">
       <h3 className="text-2xl font-bold mb-6">Frequently Asked Questions (FAQs)</h3>
       <div className="space-y-6">
+        <div>
+          <h4 className="font-bold text-slate-900">What is PF contribution calculation formula in Pakistan?</h4>
+          <p className="text-sm text-slate-500">PF contribution = 10% of basic salary (employee) + 10% of basic salary (employer). Total monthly deposit = 20% of basic salary into the PF trust.</p>
+        </div>
+        <div>
+          <h4 className="font-bold text-slate-900">How to calculate provident fund in Pakistan?</h4>
+          <p className="text-sm text-slate-500">Multiply your basic salary by 10% to get your monthly PF deduction. Your employer adds an equal amount. Both go into your PF account every month.</p>
+        </div>
         <div>
           <h4 className="font-bold text-slate-900">Are Provident Funds tax-free upon withdrawal?</h4>
           <p className="text-sm text-slate-500">In Pakistan, withdrawals from recognized Provident Funds are generally tax-exempt if you have completed 10 years of service.</p>

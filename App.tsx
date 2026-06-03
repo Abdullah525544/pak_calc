@@ -171,9 +171,11 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     }
   },
   'provident-fund': {
-    title: 'Provident Fund Calculator Pakistan 2026 — PF Deduction & Employer Contribution',
+    title: 'Provident Fund Calculator Pakistan 2026 — PF Deduction & Contribution Formula',
     description: 'Calculate your monthly PF deduction and employer contribution instantly. Enter basic salary → get exact amounts. Updated for Pakistan 2026.',
     faqs: [
+      { question: 'What is PF contribution calculation formula in Pakistan?', answer: 'PF contribution = 10% of basic salary (employee) + 10% of basic salary (employer). Total monthly deposit = 20% of basic salary into the PF trust.' },
+      { question: 'How to calculate provident fund in Pakistan?', answer: 'Multiply your basic salary by 10% to get your monthly PF deduction. Your employer adds an equal amount. Both go into your PF account every month.' },
       { question: 'Is PF deducted on gross salary or basic salary?', answer: 'In Pakistan, your Provident Fund is always deducted from your basic salary portion, never the gross salary. Allowances like travel, medical, and housing are completely excluded from the PF calculation.' },
       { question: 'Can I withdraw my Provident Fund before retirement?', answer: 'Yes, most recognized provident funds allow partial withdrawals or loans against your balance for specific emergencies, such as purchasing/constructing a house, major medical illnesses, or children\'s higher education. However, rules vary per organization\'s Trust Deed.' },
       { question: 'Is my Provident Fund balance taxable in Pakistan?', answer: 'If your company operates a Recognized Provident Fund (registered with the FBR/Commissioner of Inland Revenue), the lump sum payout you receive at retirement or resignation is generally 100% tax-free. Unrecognized funds may incur tax on the employer\'s portion and accrued interest.' },
