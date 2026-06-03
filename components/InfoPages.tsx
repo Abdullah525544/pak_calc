@@ -2552,115 +2552,98 @@ export const MarkPercentageBlogContent = () => (
         <span className="text-blue-600 italic">Instant Percentage & Merit Discovery</span>
       </h1>
       <p className="max-w-4xl mx-auto text-lg text-slate-600">
-        In the fast-paced academic landscape of Pakistan, your marks are your currency. Whether you're a student calculating your <strong>matric percentage</strong>, a teacher preparing result cards, or a candidate checking merit lists, our <strong>Mark Percentage Calculator</strong> provides the speed and accuracy you need. Stop struggling with manual division and the 100-multiplier; use our professional score to percent calculator to <strong>convert marks to percentage</strong> instantly. Once you have your aggregate, don't forget to <a href="/cgpa-calc" className="text-blue-600 font-bold hover:underline">calculate your cumulative GPA</a> for a complete academic profile.
+        In the fast-paced academic landscape of Pakistan, your marks are your currency. Whether you're a student calculating your <strong>matric percentage</strong>, a teacher preparing result cards, or a candidate checking merit lists, our <strong>Mark Percentage Calculator</strong> provides the speed and accuracy you need. Stop struggling with manual division and the 100-multiplier; use our professional score to percent calculator to <strong>convert marks to percentage</strong> instantly.
+        Once you have your aggregate, don't forget to <Link to="/cgpa-calc" className="text-blue-600 font-bold hover:underline">calculate your cumulative GPA</Link> or utilize our <Link to="/grade-calc" className="text-blue-600 font-bold hover:underline">Grade Calculator</Link> for a complete academic profile.
       </p>
     </header>
 
-    <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200">
-      <h3 className="text-lg font-bold mb-4">Calculation Guide: Table of Contents</h3>
-      <ul className="space-y-2 text-sm text-blue-600 font-medium grid grid-cols-1 md:grid-cols-2">
-        <li><a href="#how-to-calc" className="hover:underline">1. How to Calculate Percentage from Marks</a></li>
-        <li><a href="#multiple-exams" className="hover:underline">2. The Multiple-Exam Aggregate Formula</a></li>
-        <li><a href="#worked-examples" className="hover:underline">3. Worked Examples for Students</a></li>
-        <li><a href="#board-specific" className="hover:underline">4. Board-Specific Conversions (CBSE, IB, Cambridge)</a></li>
-        <li><a href="#merit-lists" className="hover:underline">5. Why Percentage Matters: Merit & Admissions</a></li>
-      </ul>
+    <div className="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-200">
+      <h2 className="text-3xl font-bold mb-6 text-slate-900 border-l-8 border-blue-500 pl-6">Common Matric & HSSC Percentage Reference — Pakistan Boards</h2>
+      <p className="mb-8">Quickly find your grade based on your total obtained marks out of 1100 (Matric) and 1200 (HSSC) in Pakistan.</p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 className="text-xl font-bold mb-4 text-slate-800">Matric (1100 Marks)</h3>
+          <table className="w-full text-left border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
+            <thead>
+              <tr className="bg-blue-50 text-blue-700 uppercase text-xs tracking-wider">
+                <th className="p-4 border-b border-blue-100">Marks / 1100</th>
+                <th className="p-4 border-b border-blue-100">Percentage</th>
+                <th className="p-4 border-b border-blue-100">Grade</th>
+              </tr>
+            </thead>
+            <tbody className="text-sm font-medium text-slate-700 divide-y divide-slate-100">
+              <tr><td className="p-4">990+</td><td className="p-4">90%+</td><td className="p-4 text-emerald-600 font-bold">A1</td></tr>
+              <tr><td className="p-4">880-989</td><td className="p-4">80-89%</td><td className="p-4 text-blue-600 font-bold">A</td></tr>
+              <tr><td className="p-4">770-879</td><td className="p-4">70-79%</td><td className="p-4">B</td></tr>
+              <tr><td className="p-4">660-769</td><td className="p-4">60-69%</td><td className="p-4">C</td></tr>
+              <tr><td className="p-4">550-659</td><td className="p-4">50-59%</td><td className="p-4">D</td></tr>
+              <tr><td className="p-4">Below 550</td><td className="p-4">Below 50%</td><td className="p-4 text-red-600 font-bold">Fail</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold mb-4 text-slate-800">HSSC (1200 Marks)</h3>
+          <table className="w-full text-left border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
+            <thead>
+              <tr className="bg-blue-50 text-blue-700 uppercase text-xs tracking-wider">
+                <th className="p-4 border-b border-blue-100">Marks / 1200</th>
+                <th className="p-4 border-b border-blue-100">Percentage</th>
+                <th className="p-4 border-b border-blue-100">Grade</th>
+              </tr>
+            </thead>
+            <tbody className="text-sm font-medium text-slate-700 divide-y divide-slate-100">
+              <tr><td className="p-4">1080+</td><td className="p-4">90%+</td><td className="p-4 text-emerald-600 font-bold">A1</td></tr>
+              <tr><td className="p-4">960-1079</td><td className="p-4">80-89%</td><td className="p-4 text-blue-600 font-bold">A</td></tr>
+              <tr><td className="p-4">840-959</td><td className="p-4">70-79%</td><td className="p-4">B</td></tr>
+              <tr><td className="p-4">720-839</td><td className="p-4">60-69%</td><td className="p-4">C</td></tr>
+              <tr><td className="p-4">600-719</td><td className="p-4">50-59%</td><td className="p-4">D</td></tr>
+              <tr><td className="p-4">Below 600</td><td className="p-4">Below 50%</td><td className="p-4 text-red-600 font-bold">Fail</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
 
-    <section id="how-to-calc" className="space-y-8">
-      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-blue-500 pl-6">How to Calculate a Percentage from Marks</h2>
+    <section className="space-y-8">
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-blue-500 pl-6">How to Calculate Percentage of Marks in Pakistan</h2>
       <p>
-        The most basic student question is: "How do I calculate my percentage?" At its core, percentage is a way of expressing a score as a fraction of 100. This allow for easy comparison across different total marks.
+        The most basic student question is: "How do I calculate my percentage?" At its core, percentage is a way of expressing a score as a fraction of 100.
+        The universal formula is: <strong>(Obtained Marks ÷ Total Marks) × 100</strong>.
       </p>
-      <div className="p-10 bg-blue-600 text-white rounded-[3rem] shadow-2xl space-y-6">
-        <h4 className="font-black text-center uppercase tracking-widest text-xs opacity-80">The Fundamental Marks Formula</h4>
-        <div className="text-3xl md:text-4xl font-black text-center py-6 bg-white/10 rounded-2xl border border-white/20">
-          (Obtained / Total) * 100 = %
-        </div>
-        <p className="text-sm text-center font-medium opacity-90 italic">
-          Example: If you scored 85 out of 100, the calculation is (85/100) * 100 = 85%.
-        </p>
-      </div>
-      <p>
-        While simple for single subjects, <strong>calculate percentage of marks</strong> becomes complex when dealing with irregular totals (like 75 marks for Practical and 85 for Theory). Our tool handles these decimals effortlessly to ensure you get the exact floating-point percentage.
-      </p>
-    </section>
 
-    <section id="multiple-exams" className="space-y-8">
-      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-blue-500 pl-6">The Multiple-Exam Aggregate Formula</h2>
-      <p>
-        Students often make the mistake of averaging percentages to find their overall result. This is mathematically incorrect. To find your true <strong>exam percentage calculation</strong>, you must aggregate the totals:
-      </p>
       <div className="bg-white border-2 border-slate-100 p-8 rounded-3xl space-y-6 shadow-sm">
-        <h4 className="font-bold text-slate-900">The Correct Weighted Method:</h4>
-        <ol className="space-y-3 text-sm list-decimal pl-5">
-          <li>Sum all obtained marks from all subjects.</li>
-          <li>Sum all maximum (total) marks from all subjects.</li>
-          <li>Divide the total obtained by the grand total.</li>
-          <li>Multiply by 100 for the final aggregate percentage.</li>
+        <h4 className="font-bold text-slate-900 text-lg">Examples of Percentage Calculation</h4>
+        <ol className="space-y-4 text-sm list-decimal pl-5 text-slate-700">
+          <li><strong>Matric:</strong> If you obtained 950 out of 1100 marks, the calculation is (950 ÷ 1100) × 100 = <strong>86.36%</strong>.</li>
+          <li><strong>HSSC:</strong> If you obtained 1050 out of 1200 marks, the calculation is (1050 ÷ 1200) × 100 = <strong>87.5%</strong>.</li>
+          <li><strong>University:</strong> If you obtained 78 out of 100 marks in a course, the calculation is (78 ÷ 100) × 100 = <strong>78%</strong>.</li>
         </ol>
       </div>
-      <p>
-        This method is particularly important for <strong>percentage converter for students</strong> in university systems where different subjects have different credit weighting.
-      </p>
     </section>
 
-    <section id="worked-examples" className="space-y-12">
-      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-blue-500 pl-6">Worked Examples & Practical Cases</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="p-8 bg-slate-50 rounded-3xl border border-slate-100 space-y-4">
-          <h4 className="font-bold text-blue-900">Example 1: Board Result</h4>
-          <p className="text-sm">Total Obtained: 980</p>
-          <p className="text-sm">Grand Total (Matric): 1100</p>
-          <p className="text-sm font-black text-blue-600">Percentage: (980/1100) * 100 = 89.09%</p>
-        </div>
-        <div className="p-8 bg-slate-50 rounded-3xl border border-slate-100 space-y-4">
-          <h4 className="font-bold text-blue-900">Example 2: Class Average</h4>
-          <p className="text-sm text-slate-500 italic mb-2">Useful for teachers calculating class performance.</p>
-          <p className="text-sm">Sum of all student scores: 4500</p>
-          <p className="text-sm">Sum of all possible marks: 6000</p>
-          <p className="text-sm font-black text-blue-600">Class Performance: (4500/6000) * 100 = 75%</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="board-specific" className="space-y-8">
-      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-blue-500 pl-6">Board-Specific Conversions</h2>
-      <p>
-        Different educational systems use varied metrics to evaluate performance. Here is how our <strong>marks percentage calculator</strong> adapts:
-      </p>
+    <div className="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-200 mt-12">
+      <h3 className="text-2xl font-bold mb-6">Frequently Asked Questions (FAQs)</h3>
       <div className="space-y-6">
-        <div className="flex gap-4 p-6 bg-white border border-slate-100 rounded-3xl items-center">
-          <div className="w-12 h-12 bg-amber-100 text-amber-700 rounded-2xl flex items-center justify-center font-black">CBSE</div>
-          <p className="text-sm text-slate-500 flex-1">Uses a 9.5 multiplier on Grade Points to approximate percentage. Our tool includes a toggle for this conversion.</p>
+        <div>
+          <h4 className="font-bold text-slate-900">1100 mein se 900 marks ka percentage kya hoga?</h4>
+          <p className="text-sm text-slate-500">900 ÷ 1100 × 100 = 81.81%. Yeh A grade mein aata hai Pakistan ke Matric board system mein.</p>
         </div>
-        <div className="flex gap-4 p-6 bg-white border border-slate-100 rounded-3xl items-center">
-          <div className="w-12 h-12 bg-rose-100 text-rose-700 rounded-2xl flex items-center justify-center font-black">CIE</div>
-          <p className="text-sm text-slate-500 flex-1">Cambridge O/A Levels use PUM (Percentage Uniform Marks) which is already percentage-based, but our tool helps find the raw-to-percent ratio.</p>
+        <div>
+          <h4 className="font-bold text-slate-900">Matric mein percentage kaise calculate karte hain?</h4>
+          <p className="text-sm text-slate-500">Total obtained marks ko 1100 se divide karein aur 100 se multiply karein. Example: 850 ÷ 1100 × 100 = 77.27%.</p>
         </div>
-        <div className="flex gap-4 p-6 bg-white border border-slate-100 rounded-3xl items-center">
-          <div className="w-12 h-12 bg-indigo-100 text-indigo-700 rounded-2xl flex items-center justify-center font-black">GPA</div>
-          <p className="text-sm text-slate-500 flex-1">Most university portals convert 3.0/4.0 GPA to 75% or 80% depending on the institution's specific <strong>marks to percent formula</strong>.</p>
+        <div>
+          <h4 className="font-bold text-slate-900">SSC mein passing percentage kitni hoti hai?</h4>
+          <p className="text-sm text-slate-500">Pakistan mein SSC (Matric) mein passing ke liye minimum 33% marks (363 out of 1100) chahiye hote hain har subject mein.</p>
         </div>
-      </div>
-    </section>
-
-    <section id="merit-lists" className="space-y-12">
-      <h2 className="text-3xl font-bold text-slate-900 text-center">Why Precision Matters</h2>
-      <p className="text-center max-w-4xl mx-auto italic text-slate-600">
-        In Pakistan, a difference of 0.01% can mean the difference between getting into King Edward Medical University or miss the merit list entirely.
-      </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="p-8 bg-blue-50 rounded-[2.5rem] border border-blue-100">
-          <h4 className="font-bold text-lg mb-4 text-blue-900">Merit Calculations</h4>
-          <p className="text-sm text-slate-600 leading-relaxed">Most engineering and medical colleges (UET, FAST, PMC) use an aggregate formula: (Matric % * 0.1) + (Inter % * 0.4) + (Entry Test % * 0.5). Knowing your exact percentage is critical for these sums.</p>
-        </div>
-        <div className="p-8 bg-blue-50 rounded-[2.5rem] border border-blue-100">
-          <h4 className="font-bold text-lg mb-4 text-blue-900">Accuracy & Integrity</h4>
-          <p className="text-sm text-slate-600 leading-relaxed">Arithmetic errors are common in high-stress result days. Our tool ensures your <strong>marks to percent calculation</strong> is 100% verified against standard math libraries.</p>
+        <div>
+          <h4 className="font-bold text-slate-900">HSSC percentage calculator kaise use karein?</h4>
+          <p className="text-sm text-slate-500">Apne total obtained marks enter karein aur total marks (usually 1200) enter karein. Calculator automatically percentage calculate kar dega.</p>
         </div>
       </div>
-    </section>
+    </div>
 
     <footer className="pt-20 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
       <div className="text-[10px] text-slate-400 uppercase font-black tracking-widest">

@@ -350,12 +350,13 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     }
   },
   'mark-percentage': {
-    title: 'Marks Percentage Calculator Pakistan — Matric, SSC, HSSC 2026',
-    description: 'Enter obtained marks & total marks → get percentage instantly. Works for Matric 1100, HSSC 1200, SSC, FBISE and all Pakistan boards.',
+    title: 'Marks Percentage Calculator Pakistan — Matric 1100, HSSC 1200, SSC',
+    description: 'Calculate marks percentage instantly. Enter obtained marks & total marks → get exact %. Works for Matric (1100), HSSC (1200), SSC, FBISE, all Pakistan boards. Free 2026.',
     faqs: [
-      { question: 'How to calculate marks percentage out of 1100?', answer: 'To calculate percentage out of 1100: Divide your obtained marks by 1100 and multiply by 100. Formula: (Obtained Marks / 1100) × 100. For example, if you got 935 marks, your percentage is (935/1100) × 100 = 85%.' },
-      { question: 'What is the percentage of 850 out of 1100 marks?', answer: '850 out of 1100 marks percentage = (850 / 1100) × 100 = 77.27%. This is usually considered an A grade in Pakistan board exams.' },
-      { question: 'How to calculate SSC percentage for BISE Lahore/Board?', answer: 'Simply enter your obtained marks and total marks (usually 1100) into our tool. It works for all boards including BISE Lahore, Rawalpindi, and Karachi.' }
+      { question: '1100 mein se 900 marks ka percentage kya hoga?', answer: '900 ÷ 1100 × 100 = 81.81%. Yeh A grade mein aata hai Pakistan ke Matric board system mein.' },
+      { question: 'Matric mein percentage kaise calculate karte hain?', answer: 'Total obtained marks ko 1100 se divide karein aur 100 se multiply karein. Example: 850 ÷ 1100 × 100 = 77.27%.' },
+      { question: 'SSC mein passing percentage kitni hoti hai?', answer: 'Pakistan mein SSC (Matric) mein passing ke liye minimum 33% marks (363 out of 1100) chahiye hote hain har subject mein.' },
+      { question: 'HSSC percentage calculator kaise use karein?', answer: 'Apne total obtained marks enter karein aur total marks (usually 1200) enter karein. Calculator automatically percentage calculate kar dega.' }
     ],
     howTo: {
       name: "How to Calculate Marks Percentage for Pakistan Board Exams (Matric/Inter)",
