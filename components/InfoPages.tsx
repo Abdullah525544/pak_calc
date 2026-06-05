@@ -3393,31 +3393,30 @@ export const ElectricityBillBlogContent = () => (
         <p className="text-sm opacity-90 italic">Example: A 300W appliance running 8 hours/day for 30 days = (300 * 8 * 30) / 1000 = <strong>72 units</strong>. At Rs. 35/unit, that's roughly Rs. 2,520/month!</p>
       </div>
 
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Estimated Appliance Costs (Assuming average Rs. 35/unit rate)</h3>
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Common Appliance Electricity Cost in Pakistan — NEPRA 2026 Rates (PKR 50/unit avg)</h3>
       <div className="overflow-x-auto rounded-2xl border border-slate-200">
         <table className="w-full text-sm">
           <thead>
             <tr className="bg-amber-500 text-white">
               <th className="p-4 text-left font-bold">Appliance</th>
-              <th className="p-4 text-left font-bold">Wattage</th>
-              <th className="p-4 text-left font-bold">Usage</th>
-              <th className="p-4 text-left font-bold">Monthly Units</th>
-              <th className="p-4 text-left font-bold">Est. Hourly Cost</th>
-              <th className="p-4 text-left font-bold">Est. Monthly Cost</th>
+              <th className="p-4 text-left font-bold">Watts</th>
+              <th className="p-4 text-left font-bold">Hours/Day</th>
+              <th className="p-4 text-left font-bold">Units/Month</th>
+              <th className="p-4 text-left font-bold">Monthly Cost (PKR)</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-slate-100">
-            <tr className="bg-white"><td className="p-4">1.5T Inverter AC</td><td className="p-4">1,200W</td><td className="p-4">8h * 30d</td><td className="p-4 font-bold text-amber-600">288 units</td><td className="p-4">Rs. 42</td><td className="p-4 font-bold">Rs. 10,080</td></tr>
-            <tr className="bg-slate-50"><td className="p-4">1.5T Non-Inverter AC</td><td className="p-4">1,850W</td><td className="p-4">8h * 30d</td><td className="p-4 font-bold text-rose-600">444 units</td><td className="p-4">Rs. 64.75</td><td className="p-4 font-bold">Rs. 15,540</td></tr>
-            <tr className="bg-white"><td className="p-4">Desert Cooler (Water)</td><td className="p-4">300W</td><td className="p-4">8h * 30d</td><td className="p-4 font-bold text-amber-600">72 units</td><td className="p-4">Rs. 10.5</td><td className="p-4 font-bold">Rs. 2,520</td></tr>
-            <tr className="bg-slate-50"><td className="p-4">Refrigerator (Medium)</td><td className="p-4">250W</td><td className="p-4">24h * 30d</td><td className="p-4 font-bold text-emerald-600">180 units</td><td className="p-4">Rs. 8.75</td><td className="p-4 font-bold">Rs. 6,300</td></tr>
-            <tr className="bg-white"><td className="p-4">Ceiling Fan</td><td className="p-4">80W</td><td className="p-4">12h * 30d</td><td className="p-4 font-bold text-emerald-600">28.8 units</td><td className="p-4">Rs. 2.8</td><td className="p-4 font-bold">Rs. 1,008</td></tr>
-            <tr className="bg-slate-50"><td className="p-4">LED Bulb</td><td className="p-4">12W</td><td className="p-4">6h * 30d</td><td className="p-4 font-bold text-emerald-600">2.16 units</td><td className="p-4">Rs. 0.42</td><td className="p-4 font-bold">Rs. 75</td></tr>
-            <tr className="bg-white"><td className="p-4">Water Motor (1HP)</td><td className="p-4">750W</td><td className="p-4">2h * 30d</td><td className="p-4 font-bold text-amber-600">45 units</td><td className="p-4">Rs. 26.25</td><td className="p-4 font-bold">Rs. 1,575</td></tr>
+            <tr className="bg-white"><td className="p-4">Ceiling Fan</td><td className="p-4">75W</td><td className="p-4">12 hrs</td><td className="p-4 font-bold text-emerald-600">27 units</td><td className="p-4 font-bold">~1,350</td></tr>
+            <tr className="bg-slate-50"><td className="p-4">LED Bulb</td><td className="p-4">10W</td><td className="p-4">8 hrs</td><td className="p-4 font-bold text-emerald-600">2.4 units</td><td className="p-4 font-bold">~120</td></tr>
+            <tr className="bg-white"><td className="p-4">1-ton AC</td><td className="p-4">1000W</td><td className="p-4">8 hrs</td><td className="p-4 font-bold text-amber-600">240 units</td><td className="p-4 font-bold">~12,000</td></tr>
+            <tr className="bg-slate-50"><td className="p-4">1.5-ton AC</td><td className="p-4">1500W</td><td className="p-4">8 hrs</td><td className="p-4 font-bold text-rose-600">360 units</td><td className="p-4 font-bold">~18,000</td></tr>
+            <tr className="bg-white"><td className="p-4">Refrigerator</td><td className="p-4">150W</td><td className="p-4">24 hrs</td><td className="p-4 font-bold text-amber-600">108 units</td><td className="p-4 font-bold">~5,400</td></tr>
+            <tr className="bg-slate-50"><td className="p-4">Washing Machine</td><td className="p-4">500W</td><td className="p-4">1 hr</td><td className="p-4 font-bold text-emerald-600">15 units</td><td className="p-4 font-bold">~750</td></tr>
+            <tr className="bg-white"><td className="p-4">Water Motor</td><td className="p-4">750W</td><td className="p-4">2 hrs</td><td className="p-4 font-bold text-amber-600">45 units</td><td className="p-4 font-bold">~2,250</td></tr>
           </tbody>
         </table>
       </div>
-      <p className="text-sm text-slate-500">Tip: Use our <strong>Watts to Units tab</strong> above to calculate the monthly units for any combination of appliances, then feed that number into the Bill Calculator for a more accurate estimate taking NEPRA slabs into account.</p>
+      <p className="text-sm text-slate-500">Note: Monthly cost assumes PKR 50/unit average (NEPRA 301–700 unit slab). Actual cost varies by consumer category (Protected/Non-Protected) and monthly FPA. Use our <strong>Watts to Units tab</strong> above to compute your personal usage.</p>
     </section>
 
     {/* Section 3: WAPDA Per Unit Rate */}
@@ -3576,6 +3575,46 @@ export const ElectricityBillBlogContent = () => (
           <p className="text-sm text-slate-600">{faq.a}</p>
         </div>
       ))}
+    </section>
+
+    {/* Section: NEPRA Slab Rates */}
+    <section id="nepra-slabs" className="space-y-8">
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-yellow-400 pl-6">WAPDA Electricity Rates Per Unit Pakistan 2026 — NEPRA Slabs</h2>
+      <p>
+        The <strong>NEPRA 2026 tariff</strong> for non-protected domestic consumers follows a slab structure — you pay a higher per-unit rate as consumption increases. Below are the <strong>approximate NEPRA unit rates</strong> (verify latest figures at <a href="https://www.nepra.org.pk" target="_blank" rel="noopener noreferrer" className="text-emerald-600 underline">nepra.org.pk</a>):
+      </p>
+      <div className="overflow-x-auto rounded-2xl border border-slate-200">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="bg-yellow-500 text-white">
+              <th className="p-4 text-left font-bold">Units Consumed</th>
+              <th className="p-4 text-left font-bold">Rate (PKR/unit)</th>
+              <th className="p-4 text-left font-bold">Category</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-slate-100">
+            <tr className="bg-white"><td className="p-4">1 – 100 units</td><td className="p-4 font-bold text-emerald-600">PKR 19.57</td><td className="p-4 text-emerald-700 font-semibold">Protected (subsidised)</td></tr>
+            <tr className="bg-slate-50"><td className="p-4">101 – 200 units</td><td className="p-4 font-bold text-emerald-600">PKR 27.24</td><td className="p-4">Low consumption</td></tr>
+            <tr className="bg-white"><td className="p-4">201 – 300 units</td><td className="p-4 font-bold text-amber-600">PKR 34.15</td><td className="p-4">Mid-tier</td></tr>
+            <tr className="bg-slate-50"><td className="p-4">301 – 700 units</td><td className="p-4 font-bold text-rose-500">PKR 43.94</td><td className="p-4">High consumption</td></tr>
+            <tr className="bg-white"><td className="p-4">Above 700 units</td><td className="p-4 font-bold text-rose-700">PKR 50.50</td><td className="p-4 text-rose-700 font-semibold">Peak slab</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p className="text-xs text-slate-400 italic">⚠️ These are approximate NEPRA base rates for non-protected residential consumers. Final bill also includes Fuel Price Adjustment (FPA), FC Surcharge, 18% GST, and TV fee. Always verify with the official NEPRA website or your DISCO for the most current figures.</p>
+    </section>
+
+    {/* Internal Links */}
+    <section className="bg-emerald-50 border border-emerald-100 p-8 rounded-3xl space-y-4">
+      <h3 className="text-xl font-bold text-emerald-900">🔗 Related Tools You Might Find Useful</h3>
+      <ul className="space-y-3 text-sm">
+        <li>
+          <a href="/unit-converter" className="text-emerald-700 font-bold underline hover:text-emerald-900">
+            Pakistan Unit Converter — Watts, kWh, kW & More
+          </a>
+          <span className="text-slate-500"> — Convert electrical units, land measurements, weights and more in one place.</span>
+        </li>
+      </ul>
     </section>
 
     {/* Tips */}

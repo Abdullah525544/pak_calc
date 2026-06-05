@@ -110,6 +110,18 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
       ]
     }
   },
+  'electricity-bill': {
+    title: 'Electricity Bill Calculator Pakistan 2026 — WAPDA Units to PKR (LESCO, FESCO)',
+    description: 'Calculate electricity bill by units consumed. Enter units → get exact PKR bill with NEPRA 2026 tariff. Supports LESCO, FESCO, GEPCO, MEPCO, PESCO. Free & instant.',
+    faqs: [
+      { question: 'How to calculate electricity bill in Pakistan?', answer: 'To calculate your bill of electricity in Pakistan, use the WAPDA unit calculator. Simply enter your consumed units. The tool evaluates the electricity bill calculation formula in Pakistan by applying the appropriate NEPRA slab, adding the Fuel Price Adjustment (FPA), 18% GST, and other surcharges.' },
+      { question: 'What is the WAPDA unit price in Pakistan for commercial and residential?', answer: 'WAPDA per unit price varies. For residential protected consumers, it starts very low (Rs. 10.54/unit). Non-protected residential starts at Rs. 22.44/unit. WAPDA commercial unit price is typically much higher and mostly a flat rate ranging from Rs. 39 to Rs. 50+ per unit depending on the exact load and tariff category (like A-2).' },
+      { question: '1 WAPDA unit kitne kW hota hai?', answer: '1 WAPDA unit = 1 kilowatt-hour (kWh). Matlab ek 1000 watt ka appliance 1 ghante mein 1 unit bijli consume karta hai. Agar aapka appliance 500 watt ka hai, to woh 2 ghante mein 1 unit use karega.' },
+      { question: '300 watt ka appliance 8 ghante mein kitni units use karta hai?', answer: '300W × 8 hours = 2,400 Wh = 2.4 units per day. Monthly (30 days) = 72 units. Formula: (Watts × Hours × Days) ÷ 1000 = Units.' },
+      { question: 'Pakistan mein 100 units ka bill kitna aata hai?', answer: 'NEPRA protected category (1-100 units) mein 100 units ka bill approximately PKR 1,957 aata hai. Non-protected mein Rs. 19.57/unit se shuru hota hai. Taxes (GST 18%, FPA, surcharges) add hone ke baad final bill Rs. 2,400 ke qareeb ho sakta hai.' },
+      { question: 'LESCO aur FESCO ka rate same hota hai?', answer: 'NEPRA tariff mostly uniform hai lekin fuel adjustment charges (FPA) alag ho sakti hain har DISCO ke liye. Basic unit rate same NEPRA schedule follow karta hai. LESCO (Lahore) aur FESCO (Faisalabad) dono ka base rate same hai, sirf monthly FPA mein farq ho sakta hai.' }
+    ]
+  },
   'investment-return': {
     title: 'ROI & Investment Return Calculator Pakistan 2026 — Stocks, Property, Savings',
     description: 'Calculate return on investment in PKR. Enter invested amount & profit → get % return & annual yield instantly.',
@@ -370,11 +382,13 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     }
   },
   'electricity-bill': {
-    title: 'Electricity Bill Calculator Pakistan 2026 — WAPDA LESCO FESCO Units',
-    description: 'Calculate monthly electricity bill by units consumed. Supports LESCO, FESCO, GEPCO, PESCO, MEPCO. NEPRA 2026 tariff rates included.',
+    title: 'Electricity Bill Calculator Pakistan 2026 — WAPDA Units to PKR (LESCO, FESCO)',
+    description: 'Calculate electricity bill by units consumed. Enter units → get exact PKR bill with NEPRA 2026 tariff. Supports LESCO, FESCO, GEPCO, MEPCO, PESCO. Free & instant.',
     faqs: [
-      { question: 'How to calculate electricity bill in Pakistan?', answer: 'To calculate your bill of electricity in Pakistan, use the WAPDA unit calculator. Simply enter your consumed units. The tool evaluates the electricity bill calculation formula in Pakistan by applying the appropriate NEPRA slab, adding the Fuel Price Adjustment (FPA), 18% GST, and other surcharges.' },
-      { question: 'What is the WAPDA unit price in Pakistan for commercial and residential?', answer: 'WAPDA per unit price varies. For residential protected consumers, it starts very low (Rs. 10.54/unit). Non-protected residential starts at Rs. 22.44/unit. WAPDA commercial unit price is typically much higher and mostly a flat rate ranging from Rs. 39 to Rs. 50+ per unit depending on the exact load and tariff category (like A-2).' }
+      { question: '1 WAPDA unit kitne kW hota hai?', answer: '1 WAPDA unit = 1 kilowatt-hour (kWh). Matlab ek 1000 watt ka appliance 1 ghante mein 1 unit bijli consume karta hai.' },
+      { question: '300 watt ka appliance 8 ghante mein kitni units use karta hai?', answer: '300W × 8 hours = 2,400 Wh = 2.4 units. Monthly (30 days) = 72 units.' },
+      { question: 'Pakistan mein 100 units ka bill kitna aata hai?', answer: 'NEPRA protected category (1-100 units) mein 100 units ka bill approximately PKR 1,957 aata hai. Yeh rate subsidized hai.' },
+      { question: 'LESCO aur FESCO ka rate same hota hai?', answer: 'NEPRA tariff mostly uniform hai lekin fuel adjustment charges alag ho sakti hain. Basic unit rate same NEPRA schedule follow karta hai.' }
     ]
   },
   'percentage': {
