@@ -2552,115 +2552,98 @@ export const MarkPercentageBlogContent = () => (
         <span className="text-blue-600 italic">Instant Percentage & Merit Discovery</span>
       </h1>
       <p className="max-w-4xl mx-auto text-lg text-slate-600">
-        In the fast-paced academic landscape of Pakistan, your marks are your currency. Whether you're a student calculating your <strong>matric percentage</strong>, a teacher preparing result cards, or a candidate checking merit lists, our <strong>Mark Percentage Calculator</strong> provides the speed and accuracy you need. Stop struggling with manual division and the 100-multiplier; use our professional score to percent calculator to <strong>convert marks to percentage</strong> instantly. Once you have your aggregate, don't forget to <a href="/cgpa-calc" className="text-blue-600 font-bold hover:underline">calculate your cumulative GPA</a> for a complete academic profile.
+        In the fast-paced academic landscape of Pakistan, your marks are your currency. Whether you're a student calculating your <strong>matric percentage</strong>, a teacher preparing result cards, or a candidate checking merit lists, our <strong>Mark Percentage Calculator</strong> provides the speed and accuracy you need. Stop struggling with manual division and the 100-multiplier; use our professional score to percent calculator to <strong>convert marks to percentage</strong> instantly.
+        Once you have your aggregate, don't forget to <Link to="/cgpa-calc" className="text-blue-600 font-bold hover:underline">calculate your cumulative GPA</Link> or utilize our <Link to="/grade-calc" className="text-blue-600 font-bold hover:underline">Grade Calculator</Link> for a complete academic profile.
       </p>
     </header>
 
-    <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200">
-      <h3 className="text-lg font-bold mb-4">Calculation Guide: Table of Contents</h3>
-      <ul className="space-y-2 text-sm text-blue-600 font-medium grid grid-cols-1 md:grid-cols-2">
-        <li><a href="#how-to-calc" className="hover:underline">1. How to Calculate Percentage from Marks</a></li>
-        <li><a href="#multiple-exams" className="hover:underline">2. The Multiple-Exam Aggregate Formula</a></li>
-        <li><a href="#worked-examples" className="hover:underline">3. Worked Examples for Students</a></li>
-        <li><a href="#board-specific" className="hover:underline">4. Board-Specific Conversions (CBSE, IB, Cambridge)</a></li>
-        <li><a href="#merit-lists" className="hover:underline">5. Why Percentage Matters: Merit & Admissions</a></li>
-      </ul>
+    <div className="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-200">
+      <h2 className="text-3xl font-bold mb-6 text-slate-900 border-l-8 border-blue-500 pl-6">Common Matric & HSSC Percentage Reference — Pakistan Boards</h2>
+      <p className="mb-8">Quickly find your grade based on your total obtained marks out of 1100 (Matric) and 1200 (HSSC) in Pakistan.</p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 className="text-xl font-bold mb-4 text-slate-800">Matric (1100 Marks)</h3>
+          <table className="w-full text-left border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
+            <thead>
+              <tr className="bg-blue-50 text-blue-700 uppercase text-xs tracking-wider">
+                <th className="p-4 border-b border-blue-100">Marks / 1100</th>
+                <th className="p-4 border-b border-blue-100">Percentage</th>
+                <th className="p-4 border-b border-blue-100">Grade</th>
+              </tr>
+            </thead>
+            <tbody className="text-sm font-medium text-slate-700 divide-y divide-slate-100">
+              <tr><td className="p-4">990+</td><td className="p-4">90%+</td><td className="p-4 text-emerald-600 font-bold">A1</td></tr>
+              <tr><td className="p-4">880-989</td><td className="p-4">80-89%</td><td className="p-4 text-blue-600 font-bold">A</td></tr>
+              <tr><td className="p-4">770-879</td><td className="p-4">70-79%</td><td className="p-4">B</td></tr>
+              <tr><td className="p-4">660-769</td><td className="p-4">60-69%</td><td className="p-4">C</td></tr>
+              <tr><td className="p-4">550-659</td><td className="p-4">50-59%</td><td className="p-4">D</td></tr>
+              <tr><td className="p-4">Below 550</td><td className="p-4">Below 50%</td><td className="p-4 text-red-600 font-bold">Fail</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold mb-4 text-slate-800">HSSC (1200 Marks)</h3>
+          <table className="w-full text-left border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
+            <thead>
+              <tr className="bg-blue-50 text-blue-700 uppercase text-xs tracking-wider">
+                <th className="p-4 border-b border-blue-100">Marks / 1200</th>
+                <th className="p-4 border-b border-blue-100">Percentage</th>
+                <th className="p-4 border-b border-blue-100">Grade</th>
+              </tr>
+            </thead>
+            <tbody className="text-sm font-medium text-slate-700 divide-y divide-slate-100">
+              <tr><td className="p-4">1080+</td><td className="p-4">90%+</td><td className="p-4 text-emerald-600 font-bold">A1</td></tr>
+              <tr><td className="p-4">960-1079</td><td className="p-4">80-89%</td><td className="p-4 text-blue-600 font-bold">A</td></tr>
+              <tr><td className="p-4">840-959</td><td className="p-4">70-79%</td><td className="p-4">B</td></tr>
+              <tr><td className="p-4">720-839</td><td className="p-4">60-69%</td><td className="p-4">C</td></tr>
+              <tr><td className="p-4">600-719</td><td className="p-4">50-59%</td><td className="p-4">D</td></tr>
+              <tr><td className="p-4">Below 600</td><td className="p-4">Below 50%</td><td className="p-4 text-red-600 font-bold">Fail</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
 
-    <section id="how-to-calc" className="space-y-8">
-      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-blue-500 pl-6">How to Calculate a Percentage from Marks</h2>
+    <section className="space-y-8">
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-blue-500 pl-6">How to Calculate Percentage of Marks in Pakistan</h2>
       <p>
-        The most basic student question is: "How do I calculate my percentage?" At its core, percentage is a way of expressing a score as a fraction of 100. This allow for easy comparison across different total marks.
+        The most basic student question is: "How do I calculate my percentage?" At its core, percentage is a way of expressing a score as a fraction of 100.
+        The universal formula is: <strong>(Obtained Marks ÷ Total Marks) × 100</strong>.
       </p>
-      <div className="p-10 bg-blue-600 text-white rounded-[3rem] shadow-2xl space-y-6">
-        <h4 className="font-black text-center uppercase tracking-widest text-xs opacity-80">The Fundamental Marks Formula</h4>
-        <div className="text-3xl md:text-4xl font-black text-center py-6 bg-white/10 rounded-2xl border border-white/20">
-          (Obtained / Total) * 100 = %
-        </div>
-        <p className="text-sm text-center font-medium opacity-90 italic">
-          Example: If you scored 85 out of 100, the calculation is (85/100) * 100 = 85%.
-        </p>
-      </div>
-      <p>
-        While simple for single subjects, <strong>calculate percentage of marks</strong> becomes complex when dealing with irregular totals (like 75 marks for Practical and 85 for Theory). Our tool handles these decimals effortlessly to ensure you get the exact floating-point percentage.
-      </p>
-    </section>
 
-    <section id="multiple-exams" className="space-y-8">
-      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-blue-500 pl-6">The Multiple-Exam Aggregate Formula</h2>
-      <p>
-        Students often make the mistake of averaging percentages to find their overall result. This is mathematically incorrect. To find your true <strong>exam percentage calculation</strong>, you must aggregate the totals:
-      </p>
       <div className="bg-white border-2 border-slate-100 p-8 rounded-3xl space-y-6 shadow-sm">
-        <h4 className="font-bold text-slate-900">The Correct Weighted Method:</h4>
-        <ol className="space-y-3 text-sm list-decimal pl-5">
-          <li>Sum all obtained marks from all subjects.</li>
-          <li>Sum all maximum (total) marks from all subjects.</li>
-          <li>Divide the total obtained by the grand total.</li>
-          <li>Multiply by 100 for the final aggregate percentage.</li>
+        <h4 className="font-bold text-slate-900 text-lg">Examples of Percentage Calculation</h4>
+        <ol className="space-y-4 text-sm list-decimal pl-5 text-slate-700">
+          <li><strong>Matric:</strong> If you obtained 950 out of 1100 marks, the calculation is (950 ÷ 1100) × 100 = <strong>86.36%</strong>.</li>
+          <li><strong>HSSC:</strong> If you obtained 1050 out of 1200 marks, the calculation is (1050 ÷ 1200) × 100 = <strong>87.5%</strong>.</li>
+          <li><strong>University:</strong> If you obtained 78 out of 100 marks in a course, the calculation is (78 ÷ 100) × 100 = <strong>78%</strong>.</li>
         </ol>
       </div>
-      <p>
-        This method is particularly important for <strong>percentage converter for students</strong> in university systems where different subjects have different credit weighting.
-      </p>
     </section>
 
-    <section id="worked-examples" className="space-y-12">
-      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-blue-500 pl-6">Worked Examples & Practical Cases</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="p-8 bg-slate-50 rounded-3xl border border-slate-100 space-y-4">
-          <h4 className="font-bold text-blue-900">Example 1: Board Result</h4>
-          <p className="text-sm">Total Obtained: 980</p>
-          <p className="text-sm">Grand Total (Matric): 1100</p>
-          <p className="text-sm font-black text-blue-600">Percentage: (980/1100) * 100 = 89.09%</p>
-        </div>
-        <div className="p-8 bg-slate-50 rounded-3xl border border-slate-100 space-y-4">
-          <h4 className="font-bold text-blue-900">Example 2: Class Average</h4>
-          <p className="text-sm text-slate-500 italic mb-2">Useful for teachers calculating class performance.</p>
-          <p className="text-sm">Sum of all student scores: 4500</p>
-          <p className="text-sm">Sum of all possible marks: 6000</p>
-          <p className="text-sm font-black text-blue-600">Class Performance: (4500/6000) * 100 = 75%</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="board-specific" className="space-y-8">
-      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-blue-500 pl-6">Board-Specific Conversions</h2>
-      <p>
-        Different educational systems use varied metrics to evaluate performance. Here is how our <strong>marks percentage calculator</strong> adapts:
-      </p>
+    <div className="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-200 mt-12">
+      <h3 className="text-2xl font-bold mb-6">Frequently Asked Questions (FAQs)</h3>
       <div className="space-y-6">
-        <div className="flex gap-4 p-6 bg-white border border-slate-100 rounded-3xl items-center">
-          <div className="w-12 h-12 bg-amber-100 text-amber-700 rounded-2xl flex items-center justify-center font-black">CBSE</div>
-          <p className="text-sm text-slate-500 flex-1">Uses a 9.5 multiplier on Grade Points to approximate percentage. Our tool includes a toggle for this conversion.</p>
+        <div>
+          <h4 className="font-bold text-slate-900">1100 mein se 900 marks ka percentage kya hoga?</h4>
+          <p className="text-sm text-slate-500">900 ÷ 1100 × 100 = 81.81%. Yeh A grade mein aata hai Pakistan ke Matric board system mein.</p>
         </div>
-        <div className="flex gap-4 p-6 bg-white border border-slate-100 rounded-3xl items-center">
-          <div className="w-12 h-12 bg-rose-100 text-rose-700 rounded-2xl flex items-center justify-center font-black">CIE</div>
-          <p className="text-sm text-slate-500 flex-1">Cambridge O/A Levels use PUM (Percentage Uniform Marks) which is already percentage-based, but our tool helps find the raw-to-percent ratio.</p>
+        <div>
+          <h4 className="font-bold text-slate-900">Matric mein percentage kaise calculate karte hain?</h4>
+          <p className="text-sm text-slate-500">Total obtained marks ko 1100 se divide karein aur 100 se multiply karein. Example: 850 ÷ 1100 × 100 = 77.27%.</p>
         </div>
-        <div className="flex gap-4 p-6 bg-white border border-slate-100 rounded-3xl items-center">
-          <div className="w-12 h-12 bg-indigo-100 text-indigo-700 rounded-2xl flex items-center justify-center font-black">GPA</div>
-          <p className="text-sm text-slate-500 flex-1">Most university portals convert 3.0/4.0 GPA to 75% or 80% depending on the institution's specific <strong>marks to percent formula</strong>.</p>
+        <div>
+          <h4 className="font-bold text-slate-900">SSC mein passing percentage kitni hoti hai?</h4>
+          <p className="text-sm text-slate-500">Pakistan mein SSC (Matric) mein passing ke liye minimum 33% marks (363 out of 1100) chahiye hote hain har subject mein.</p>
         </div>
-      </div>
-    </section>
-
-    <section id="merit-lists" className="space-y-12">
-      <h2 className="text-3xl font-bold text-slate-900 text-center">Why Precision Matters</h2>
-      <p className="text-center max-w-4xl mx-auto italic text-slate-600">
-        In Pakistan, a difference of 0.01% can mean the difference between getting into King Edward Medical University or miss the merit list entirely.
-      </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="p-8 bg-blue-50 rounded-[2.5rem] border border-blue-100">
-          <h4 className="font-bold text-lg mb-4 text-blue-900">Merit Calculations</h4>
-          <p className="text-sm text-slate-600 leading-relaxed">Most engineering and medical colleges (UET, FAST, PMC) use an aggregate formula: (Matric % * 0.1) + (Inter % * 0.4) + (Entry Test % * 0.5). Knowing your exact percentage is critical for these sums.</p>
-        </div>
-        <div className="p-8 bg-blue-50 rounded-[2.5rem] border border-blue-100">
-          <h4 className="font-bold text-lg mb-4 text-blue-900">Accuracy & Integrity</h4>
-          <p className="text-sm text-slate-600 leading-relaxed">Arithmetic errors are common in high-stress result days. Our tool ensures your <strong>marks to percent calculation</strong> is 100% verified against standard math libraries.</p>
+        <div>
+          <h4 className="font-bold text-slate-900">HSSC percentage calculator kaise use karein?</h4>
+          <p className="text-sm text-slate-500">Apne total obtained marks enter karein aur total marks (usually 1200) enter karein. Calculator automatically percentage calculate kar dega.</p>
         </div>
       </div>
-    </section>
+    </div>
 
     <footer className="pt-20 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
       <div className="text-[10px] text-slate-400 uppercase font-black tracking-widest">
@@ -2675,33 +2658,64 @@ export const MarkPercentageBlogContent = () => (
 );
 
 export const IncomeTaxSEOArticle = () => (
-  <section className="mt-16 border-t border-slate-100 pt-16 space-y-8">
-    <h2 className="text-3xl font-black text-slate-900 border-l-8 border-emerald-500 pl-6">Income Tax Calculator Pakistan 2026: Comprehensive Guide</h2>
-    <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-6">
-      <p>
-        The <strong>Income Tax Calculator Pakistan 2026</strong> is an essential tool for every salaried and business individual in the country. With the Federal Board of Revenue (FBR) frequently updating tax slabs, manually calculating your monthly and annual tax liability can be prone to errors. This guide explains the mechanism of tax calculation under the Finance Act 2025 and how you can optimize your finances using our <strong>FBR tax calculator 2026</strong>.
-      </p>
-      <p>
-        In Pakistan, the tax system is progressive. This means as your income increases, the percentage of tax you pay also increases. For the tax year 2025-2026, the threshold for taxable income remains at Rs. 600,000 per year. Anyone earning below this amount is not required to pay income tax, though they are encouraged to file returns. Our <strong>online tax calculator Pakistan</strong> automatically identifies which slab you fall into and applies the correct fixed and percentage-based tax rates.
-      </p>
-      <p>
-        For salaried individuals, the employer usually deducts tax at source (Withholding Tax). However, knowing your exact liability helps you verify if the deduction is correct. If you are also managing a small business or have freelance income, you might need to use our <Link to="/freelancer-tax" className="text-emerald-600 hover:underline font-bold">Freelancer Income Calculator</Link> to see how export taxes affect your net earnings. Additionally, if you are planning to save for the future, understanding your tax-free income can help you better utilize the <Link to="/investment-return" className="text-emerald-600 hover:underline font-bold">Investment Return Calculator</Link> for wealth growth.
-      </p>
-    </div>
-
-    <div className="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-200 mt-12">
-      <h3 className="text-2xl font-bold mb-6">Frequently Asked Questions (FAQs)</h3>
-      <div className="space-y-6">
-        <div>
-          <h4 className="font-bold text-slate-900">What is the tax-free limit in Pakistan for 2026?</h4>
-          <p className="text-sm text-slate-500">The current tax-free limit is Rs. 600,000 per annum for both salaried and non-salaried individuals. This threshold is pivotal for the middle-class workforce to manage their disposable income effectively.</p>
-        </div>
-        <div>
-          <h4 className="font-bold text-slate-900">How to reduce tax liability legally?</h4>
-          <p className="text-sm text-slate-500">You can claim tax credits for investments in voluntary pension schemes (VPS), charitable donations to NPOs, and health insurance. Our tool provides insights into how these deductions impact your net payable tax.</p>
-        </div>
+  <section className="mt-16 border-t border-slate-100 pt-16 space-y-12">
+    <div className="bg-white p-8 rounded-[2.5rem] shadow-xl border border-slate-100 mb-12">
+      <h3 className="text-3xl font-bold mb-6 text-slate-900 border-l-8 border-emerald-500 pl-6">FBR Income Tax Slabs 2025-26 — Salaried Persons</h3>
+      <div className="overflow-x-auto">
+        <table className="w-full text-left border-collapse">
+          <thead>
+            <tr className="bg-emerald-50 text-emerald-700 uppercase text-xs tracking-wider">
+              <th className="p-4 rounded-tl-xl border-b border-emerald-100">Annual Income (PKR)</th>
+              <th className="p-4 rounded-tr-xl border-b border-emerald-100">Tax Rate</th>
+            </tr>
+          </thead>
+          <tbody className="text-sm font-medium text-slate-700 divide-y divide-slate-100">
+            <tr><td className="p-4">Up to 600,000</td><td className="p-4">0% (No tax)</td></tr>
+            <tr><td className="p-4">600,001 – 1,200,000</td><td className="p-4">5% on amount exceeding 600,000</td></tr>
+            <tr><td className="p-4">1,200,001 – 2,400,000</td><td className="p-4">30,000 + 15% on amount exceeding 1,200,000</td></tr>
+            <tr><td className="p-4">2,400,001 – 3,600,000</td><td className="p-4">210,000 + 25% on amount exceeding 2,400,000</td></tr>
+            <tr><td className="p-4">3,600,001 – 6,000,000</td><td className="p-4">510,000 + 30% on amount exceeding 3,600,000</td></tr>
+            <tr><td className="p-4">Above 6,000,000</td><td className="p-4">1,230,000 + 35% on amount exceeding 6,000,000</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
+
+    <article className="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-8">
+      <h2 className="text-3xl font-black text-slate-900">How to Calculate Income Tax in Pakistan 2026</h2>
+      <p>
+        Calculating your income tax in Pakistan requires a systematic approach. With the Federal Board of Revenue (FBR) implementing the latest Finance Act, you must first ascertain your gross monthly income.
+        Take your monthly salary and multiply it by 12 to find your annual income. For instance, if you earn PKR 150,000 per month, your annual income aggregates to PKR 1,800,000.
+        Once you have your annual total, refer to the FBR tax slabs to identify your bracket. Subtract the base threshold of your slab from your annual income.
+        Then, apply the percentage prescribed for the exceeding amount and add the fixed tax sum. Our accurate 2026 tax calculator executes this complex arithmetic instantaneously, completely avoiding any miscalculations.
+        Many working professionals overlook minor tax credits they might be eligible for. Ensuring precision while you calculate income tax secures your hard-earned money carefully.
+      </p>
+
+      <h2 className="text-3xl font-black text-slate-900">FBR Tax Slabs for Salaried Persons vs Business Income</h2>
+      <p>
+        The FBR effectively maintains distinct tax structures based exclusively on your primary source of income. The comprehensive table featured above explicitly details the tax slices designed solely for salaried individuals.
+        According to Pakistani law, a person is legally classified as "salaried" when their salary constitutes more than 75% of their total taxable earnings.
+        Conversely, business individuals, including independent self-employed professionals, traders, and small business owners face a marginally steeper tax scale, as they fundamentally do not benefit from the same lower initial brackets and fixed baseline deductions.
+        If your income stream consists mainly of IT export services, you may be categorized quite differently. Specifically, independent contractors should consult our <Link to="/freelancer-tax" className="text-emerald-600 hover:underline font-bold">Freelancer Tax Calculator</Link> to comprehensively analyze how export remittance exemptions operate for software engineers, designers, and foreign remote employees.
+      </p>
+
+      <h2 className="text-3xl font-black text-slate-900">How to File Income Tax Return in Pakistan — Step by Step</h2>
+      <p>
+        Becoming an active tax filer in Pakistan offers profound financial benefits, chiefly including massively reduced withholding taxes on property purchases, banking transactions, and vehicle registrations. The filing process is now fully digitized through the FBR IRIS portal web architecture.
+        First, appropriately register yourself on the e-portal to officially obtain a National Tax Number (NTN). Second, intuitively navigate to the standard declaration section for the relevant tax year ending June 30th.
+        Third, meticulously compute your wealth statements, explicitly detailing your cash assets, properties, and annual expenses.
+        Furthermore, be extremely mindful to seamlessly report retirement benefits such as your <Link to="/provident-fund" className="text-emerald-600 hover:underline font-bold">Provident Fund</Link> savings and other statutory allowances you have earned.
+        Ultimately, after thoroughly reconciling your complete wealth statement and properly verifying any tax already deducted by your registered employer, securely submit the return directly online. While the FBR frequently extends standard deadlines, attempting to file early expertly avoids unexpected portal downtime and last-minute panic.
+      </p>
+
+      <h2 className="text-3xl font-black text-slate-900">Frequently Asked Questions — Income Tax Pakistan</h2>
+      <p>
+        The dynamic, continuously evolving nature of the Pakistan tax code unavoidably leaves multitudes of citizens thoroughly confused every fiscal budget season. We systematically compiled frequently encountered queries above to help illuminate the most common bureaucratic pitfalls.
+        Understanding precisely how much raw salary is exempted from taxation can dramatically reorganize your personal finance planning, particularly when reviewing all the <Link to="/slabs" className="text-emerald-600 hover:underline font-bold">detailed FBR Slabs</Link> for 2025-2026.
+        A vital rule of thumb dictates that if your standard income exceeds the PKR 600,000 statutory baseline, your employer is legally mandated to deduct withdrawing tax automatically at the source, irrespective of whether you proactively attempt to manually file an independent return or not.
+        By intelligently and continuously adapting to the complex 2025-2026 economic environment, you can accurately forecast your exact monthly budget, perfectly optimize your take-home pay, and confidently secure your long-term financial future in Pakistan.
+      </p>
+    </article>
   </section>
 );
 
@@ -2870,6 +2884,26 @@ export const PFSEOArticle = () => (
       <p>
         A Provident Fund is a mandatory or voluntary saving scheme for many employees in Pakistan. Our <strong>Provident Fund (PF) Calculator Pakistan</strong> helps you estimate the final balance of your fund at the time of retirement or resignation. It accounts for your monthly contribution, your employer's matching contribution, and the annual profit/interest rate credited to the fund.
       </p>
+
+      <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">PF Contribution Calculation in Pakistan — Formula & Example</h2>
+      <p>
+        The standard provident fund calculation is incredibly straightforward. Generally, the <strong>employee contributes 10% of their basic salary per month</strong>, and the <strong>employer also contributes 10% of basic salary per month</strong>. This means the <strong>total monthly PF equals 20% of the basic salary</strong> depositing into the trust.
+      </p>
+      <p>
+        <strong>Example:</strong> If your basic salary = <strong>PKR 30,000</strong>:
+        <br />→ Employee deduction = PKR 3,000
+        <br />→ Employer contribution = PKR 3,000
+        <br />→ Total monthly PF deposit = PKR 6,000
+      </p>
+      <p>
+        Over the course of a year, the <strong>annual PF accumulation equals PKR 72,000</strong> (before any profit is applied). Annually, the government or company trust adds a declared profit percentage. Ultimately, at retirement or resignation, the employee gets the full balance.
+      </p>
+
+      <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">How is PF Deducted from Salary in Pakistan?</h2>
+      <p>
+        Your PF deduction is formally processed directly by your employer's payroll and appears clearly on your salary slip as "PF deduction." This deduction is entirely mandatory for companies legally registered under the Provident Fund Act. By law, a minimum of 10% of your basic salary must be deducted, protecting your long-term wealth.
+      </p>
+
       <p>
         Understanding your PF balance is a key part of your <Link to="/retirement-plan" className="text-emerald-600 hover:underline font-bold">Retirement Plan</Link>. In most cases, the contribution to PF also provides you with tax benefits. You can calculate your net monthly income after PF deductions using our <Link to="/income-tax" className="text-emerald-600 hover:underline font-bold">Income Tax Calculator</Link>.
       </p>
@@ -2878,6 +2912,14 @@ export const PFSEOArticle = () => (
     <div className="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-200 mt-12">
       <h3 className="text-2xl font-bold mb-6">Frequently Asked Questions (FAQs)</h3>
       <div className="space-y-6">
+        <div>
+          <h4 className="font-bold text-slate-900">What is PF contribution calculation formula in Pakistan?</h4>
+          <p className="text-sm text-slate-500">PF contribution = 10% of basic salary (employee) + 10% of basic salary (employer). Total monthly deposit = 20% of basic salary into the PF trust.</p>
+        </div>
+        <div>
+          <h4 className="font-bold text-slate-900">How to calculate provident fund in Pakistan?</h4>
+          <p className="text-sm text-slate-500">Multiply your basic salary by 10% to get your monthly PF deduction. Your employer adds an equal amount. Both go into your PF account every month.</p>
+        </div>
         <div>
           <h4 className="font-bold text-slate-900">Are Provident Funds tax-free upon withdrawal?</h4>
           <p className="text-sm text-slate-500">In Pakistan, withdrawals from recognized Provident Funds are generally tax-exempt if you have completed 10 years of service.</p>
@@ -2894,8 +2936,30 @@ export const GratuitySEOArticle = () => (
       <p>
         Gratuity is a lump-sum payment provided by an employer to an employee at the end of their service, as a token of gratitude for their loyalty. Our <strong>Gratuity Calculator Pakistan</strong> helps you find out exactly how much you are owed based on your last drawn basic salary and years of service, as per the Pakistan Labor Laws.
       </p>
+
+      <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Gratuity Calculation Formula in Pakistan — Labour Law</h2>
       <p>
-        If you are moving to a new job, knowing your gratuity payout can help you plan your next move. It also plays a major role in your <Link to="/retirement-plan" className="text-emerald-600 hover:underline font-bold">Retirement Planning</Link>. Many employees choose to invest their gratuity amount for long-term growth; see our <Link to="/investment-return" className="text-emerald-600 hover:underline font-bold">Investment Return Calculator</Link> for suggestions on how to grow this capital.
+        Under Pakistan Labour Law (specifically the West Pakistan Industrial and Commercial Employment Standing Orders Ordinance 1968), the gratuity calculation is standardized to ensure fairness across the board.
+      </p>
+      <ul>
+        <li><strong>Gratuity = (Last drawn basic salary ÷ 26) × 30 days × Years of service</strong></li>
+      </ul>
+      <p>
+        <strong>Example:</strong> If your basic salary is PKR 40,000 and you have completed 5 years of service:
+        <br />→ Gratuity = (40,000 ÷ 26) × 30 × 5 = <strong>PKR 230,769</strong>
+      </p>
+      <p>
+        Remember that the minimum service required to be eligible is 1 year of continuous service. Employees are entitled to this payout after resignation, retirement, death, or termination. However, it is fundamentally not applicable if the employee is officially dismissed for gross misconduct.
+      </p>
+
+      <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Who is Eligible for Gratuity in Pakistan?</h2>
+      <p>
+        Eligibility for gratuity extends to all permanent employees who have successfully completed a minimum of 1 year of continuous service. It encompasses both the private sector and the government sector, although government employees are governed by slightly different civil service rules and pension regulations.
+        If a company unlawfully refuses to pay your rightful gratuity, you have the legal right to file a formal complaint with the Labour Court or the NIRC to recover your dues with potential damages.
+      </p>
+
+      <p>
+        If you are moving to a new job, knowing your gratuity payout can help you plan your next move. It also plays a major role in your overall <Link to="/retirement-plan" className="text-emerald-600 hover:underline font-bold">Retirement Planning</Link>. Unlike your <Link to="/provident-fund" className="text-emerald-600 hover:underline font-bold">Provident Fund</Link> which deducts from your monthly salary, gratuity is solely paid by your employer.
       </p>
     </div>
 
@@ -2903,8 +2967,20 @@ export const GratuitySEOArticle = () => (
       <h3 className="text-2xl font-bold mb-6">Frequently Asked Questions (FAQs)</h3>
       <div className="space-y-6">
         <div>
-          <h4 className="font-bold text-slate-900">What is the formula for Gratuity in Pakistan?</h4>
-          <p className="text-sm text-slate-500">Standard law dictates 30 days of the last drawn basic salary for every completed year of service above six months.</p>
+          <h4 className="font-bold text-slate-900">What is gratuity law in Pakistan?</h4>
+          <p className="text-sm text-slate-500">Under Pakistan Labour Law, every permanent employee is entitled to gratuity after completing 1 year of continuous service. The formula is: Last basic salary ÷ 26 × 30 × years served.</p>
+        </div>
+        <div>
+          <h4 className="font-bold text-slate-900">What is gratuity formula in Pakistan?</h4>
+          <p className="text-sm text-slate-500">Gratuity = (Last drawn basic salary ÷ 26) × 30 × Number of years served. This applies to private sector employees under Standing Orders Ordinance 1968.</p>
+        </div>
+        <div>
+          <h4 className="font-bold text-slate-900">Is gratuity taxable in Pakistan?</h4>
+          <p className="text-sm text-slate-500">Gratuity received from approved gratuity fund is exempt from tax up to PKR 300,000. Amount above PKR 300,000 is taxable under FBR rules.</p>
+        </div>
+        <div>
+          <h4 className="font-bold text-slate-900">What if employer does not pay gratuity?</h4>
+          <p className="text-sm text-slate-500">Employees can file a complaint with the Labour Court or NIRC (National Industrial Relations Commission) for non-payment of gratuity in Pakistan.</p>
         </div>
       </div>
     </div>
@@ -3317,31 +3393,30 @@ export const ElectricityBillBlogContent = () => (
         <p className="text-sm opacity-90 italic">Example: A 300W appliance running 8 hours/day for 30 days = (300 * 8 * 30) / 1000 = <strong>72 units</strong>. At Rs. 35/unit, that's roughly Rs. 2,520/month!</p>
       </div>
 
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Estimated Appliance Costs (Assuming average Rs. 35/unit rate)</h3>
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Common Appliance Electricity Cost in Pakistan — NEPRA 2026 Rates (PKR 50/unit avg)</h3>
       <div className="overflow-x-auto rounded-2xl border border-slate-200">
         <table className="w-full text-sm">
           <thead>
             <tr className="bg-amber-500 text-white">
               <th className="p-4 text-left font-bold">Appliance</th>
-              <th className="p-4 text-left font-bold">Wattage</th>
-              <th className="p-4 text-left font-bold">Usage</th>
-              <th className="p-4 text-left font-bold">Monthly Units</th>
-              <th className="p-4 text-left font-bold">Est. Hourly Cost</th>
-              <th className="p-4 text-left font-bold">Est. Monthly Cost</th>
+              <th className="p-4 text-left font-bold">Watts</th>
+              <th className="p-4 text-left font-bold">Hours/Day</th>
+              <th className="p-4 text-left font-bold">Units/Month</th>
+              <th className="p-4 text-left font-bold">Monthly Cost (PKR)</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-slate-100">
-            <tr className="bg-white"><td className="p-4">1.5T Inverter AC</td><td className="p-4">1,200W</td><td className="p-4">8h * 30d</td><td className="p-4 font-bold text-amber-600">288 units</td><td className="p-4">Rs. 42</td><td className="p-4 font-bold">Rs. 10,080</td></tr>
-            <tr className="bg-slate-50"><td className="p-4">1.5T Non-Inverter AC</td><td className="p-4">1,850W</td><td className="p-4">8h * 30d</td><td className="p-4 font-bold text-rose-600">444 units</td><td className="p-4">Rs. 64.75</td><td className="p-4 font-bold">Rs. 15,540</td></tr>
-            <tr className="bg-white"><td className="p-4">Desert Cooler (Water)</td><td className="p-4">300W</td><td className="p-4">8h * 30d</td><td className="p-4 font-bold text-amber-600">72 units</td><td className="p-4">Rs. 10.5</td><td className="p-4 font-bold">Rs. 2,520</td></tr>
-            <tr className="bg-slate-50"><td className="p-4">Refrigerator (Medium)</td><td className="p-4">250W</td><td className="p-4">24h * 30d</td><td className="p-4 font-bold text-emerald-600">180 units</td><td className="p-4">Rs. 8.75</td><td className="p-4 font-bold">Rs. 6,300</td></tr>
-            <tr className="bg-white"><td className="p-4">Ceiling Fan</td><td className="p-4">80W</td><td className="p-4">12h * 30d</td><td className="p-4 font-bold text-emerald-600">28.8 units</td><td className="p-4">Rs. 2.8</td><td className="p-4 font-bold">Rs. 1,008</td></tr>
-            <tr className="bg-slate-50"><td className="p-4">LED Bulb</td><td className="p-4">12W</td><td className="p-4">6h * 30d</td><td className="p-4 font-bold text-emerald-600">2.16 units</td><td className="p-4">Rs. 0.42</td><td className="p-4 font-bold">Rs. 75</td></tr>
-            <tr className="bg-white"><td className="p-4">Water Motor (1HP)</td><td className="p-4">750W</td><td className="p-4">2h * 30d</td><td className="p-4 font-bold text-amber-600">45 units</td><td className="p-4">Rs. 26.25</td><td className="p-4 font-bold">Rs. 1,575</td></tr>
+            <tr className="bg-white"><td className="p-4">Ceiling Fan</td><td className="p-4">75W</td><td className="p-4">12 hrs</td><td className="p-4 font-bold text-emerald-600">27 units</td><td className="p-4 font-bold">~1,350</td></tr>
+            <tr className="bg-slate-50"><td className="p-4">LED Bulb</td><td className="p-4">10W</td><td className="p-4">8 hrs</td><td className="p-4 font-bold text-emerald-600">2.4 units</td><td className="p-4 font-bold">~120</td></tr>
+            <tr className="bg-white"><td className="p-4">1-ton AC</td><td className="p-4">1000W</td><td className="p-4">8 hrs</td><td className="p-4 font-bold text-amber-600">240 units</td><td className="p-4 font-bold">~12,000</td></tr>
+            <tr className="bg-slate-50"><td className="p-4">1.5-ton AC</td><td className="p-4">1500W</td><td className="p-4">8 hrs</td><td className="p-4 font-bold text-rose-600">360 units</td><td className="p-4 font-bold">~18,000</td></tr>
+            <tr className="bg-white"><td className="p-4">Refrigerator</td><td className="p-4">150W</td><td className="p-4">24 hrs</td><td className="p-4 font-bold text-amber-600">108 units</td><td className="p-4 font-bold">~5,400</td></tr>
+            <tr className="bg-slate-50"><td className="p-4">Washing Machine</td><td className="p-4">500W</td><td className="p-4">1 hr</td><td className="p-4 font-bold text-emerald-600">15 units</td><td className="p-4 font-bold">~750</td></tr>
+            <tr className="bg-white"><td className="p-4">Water Motor</td><td className="p-4">750W</td><td className="p-4">2 hrs</td><td className="p-4 font-bold text-amber-600">45 units</td><td className="p-4 font-bold">~2,250</td></tr>
           </tbody>
         </table>
       </div>
-      <p className="text-sm text-slate-500">Tip: Use our <strong>Watts to Units tab</strong> above to calculate the monthly units for any combination of appliances, then feed that number into the Bill Calculator for a more accurate estimate taking NEPRA slabs into account.</p>
+      <p className="text-sm text-slate-500">Note: Monthly cost assumes PKR 50/unit average (NEPRA 301–700 unit slab). Actual cost varies by consumer category (Protected/Non-Protected) and monthly FPA. Use our <strong>Watts to Units tab</strong> above to compute your personal usage.</p>
     </section>
 
     {/* Section 3: WAPDA Per Unit Rate */}
@@ -3500,6 +3575,46 @@ export const ElectricityBillBlogContent = () => (
           <p className="text-sm text-slate-600">{faq.a}</p>
         </div>
       ))}
+    </section>
+
+    {/* Section: NEPRA Slab Rates */}
+    <section id="nepra-slabs" className="space-y-8">
+      <h2 className="text-3xl font-bold text-slate-900 border-l-8 border-yellow-400 pl-6">WAPDA Electricity Rates Per Unit Pakistan 2026 — NEPRA Slabs</h2>
+      <p>
+        The <strong>NEPRA 2026 tariff</strong> for non-protected domestic consumers follows a slab structure — you pay a higher per-unit rate as consumption increases. Below are the <strong>approximate NEPRA unit rates</strong> (verify latest figures at <a href="https://www.nepra.org.pk" target="_blank" rel="noopener noreferrer" className="text-emerald-600 underline">nepra.org.pk</a>):
+      </p>
+      <div className="overflow-x-auto rounded-2xl border border-slate-200">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="bg-yellow-500 text-white">
+              <th className="p-4 text-left font-bold">Units Consumed</th>
+              <th className="p-4 text-left font-bold">Rate (PKR/unit)</th>
+              <th className="p-4 text-left font-bold">Category</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-slate-100">
+            <tr className="bg-white"><td className="p-4">1 – 100 units</td><td className="p-4 font-bold text-emerald-600">PKR 19.57</td><td className="p-4 text-emerald-700 font-semibold">Protected (subsidised)</td></tr>
+            <tr className="bg-slate-50"><td className="p-4">101 – 200 units</td><td className="p-4 font-bold text-emerald-600">PKR 27.24</td><td className="p-4">Low consumption</td></tr>
+            <tr className="bg-white"><td className="p-4">201 – 300 units</td><td className="p-4 font-bold text-amber-600">PKR 34.15</td><td className="p-4">Mid-tier</td></tr>
+            <tr className="bg-slate-50"><td className="p-4">301 – 700 units</td><td className="p-4 font-bold text-rose-500">PKR 43.94</td><td className="p-4">High consumption</td></tr>
+            <tr className="bg-white"><td className="p-4">Above 700 units</td><td className="p-4 font-bold text-rose-700">PKR 50.50</td><td className="p-4 text-rose-700 font-semibold">Peak slab</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p className="text-xs text-slate-400 italic">⚠️ These are approximate NEPRA base rates for non-protected residential consumers. Final bill also includes Fuel Price Adjustment (FPA), FC Surcharge, 18% GST, and TV fee. Always verify with the official NEPRA website or your DISCO for the most current figures.</p>
+    </section>
+
+    {/* Internal Links */}
+    <section className="bg-emerald-50 border border-emerald-100 p-8 rounded-3xl space-y-4">
+      <h3 className="text-xl font-bold text-emerald-900">🔗 Related Tools You Might Find Useful</h3>
+      <ul className="space-y-3 text-sm">
+        <li>
+          <a href="/unit-converter" className="text-emerald-700 font-bold underline hover:text-emerald-900">
+            Pakistan Unit Converter — Watts, kWh, kW & More
+          </a>
+          <span className="text-slate-500"> — Convert electrical units, land measurements, weights and more in one place.</span>
+        </li>
+      </ul>
     </section>
 
     {/* Tips */}

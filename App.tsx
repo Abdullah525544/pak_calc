@@ -51,13 +51,13 @@ const getRelatedTools = (id: string) => {
 // SEO metadata for each tool – CTR-optimized titles & descriptions based on GSC queries
 const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?: { question: string; answer: string }[]; howTo?: { name: string; description: string; steps: { name: string; text: string }[] } }> = {
   'income-tax': {
-    title: 'Income Tax Calculator Pakistan 2026 — FBR Salary Tax (Salaried & Business)',
-    description: 'Calculate your FBR income tax for 2025-26. Enter monthly salary → get annual tax, monthly deduction & tax bracket instantly.',
+    title: 'Income Tax Calculator Pakistan 2026 — FBR Salary Tax Slabs (Updated)',
+    description: 'Calculate your exact FBR income tax for 2025-26. Enter monthly salary → get annual tax, monthly deduction & which tax bracket you fall in. Salaried & business both.',
     faqs: [
-      { question: 'What are the FBR salary tax slabs for 2025-26 in Pakistan?', answer: 'The FBR has announced updated income tax slabs for tax year 2026 (July 2025 – June 2026). Salaried individuals earning up to PKR 600,000 annually are exempt. Rates range from 5% to 35% depending on income brackets. Use our free calculator for your exact tax liability.' },
-      { question: 'How to calculate income tax in Pakistan for salaried persons?', answer: 'To calculate your official income tax: First, multiply your gross monthly salary by 12 to find your annual taxable income. Second, deduct authorized legal exemptions like Zakat or medical allowances. Finally, find your relevant FBR slab and apply the corresponding percentage.' },
-      { question: 'What is the penalty for not filing taxes in Pakistan?', answer: 'If you fail to file your income tax return within the FBR deadline, you become a non-filer. Non-filers in Pakistan face massively increased withholding taxes on bank transactions, property purchases, and vehicle registrations, alongside potential legal fines under the Income Tax Ordinance.' },
-      { question: 'Can I save on my income tax in Pakistan?', answer: 'Yes! FBR allows tax credits under sections 62, 63, and others. You can reduce your gross taxable income by investing in Voluntary Pension Schemes (VPS), recognized mutual funds, or by paying Zakat through official channels.' }
+      { question: 'What is the income tax rate in Pakistan 2026?', answer: 'For salaried persons, income up to PKR 600,000 annually is tax-free. Above that, rates range from 5% to 35% based on FBR 2025-26 slabs.' },
+      { question: 'How much salary is tax free in Pakistan?', answer: 'Monthly salary up to PKR 50,000 (annual PKR 600,000) is completely tax free in Pakistan for salaried employees under FBR 2025-26 rules.' },
+      { question: 'How to calculate income tax on salary in Pakistan?', answer: 'Multiply your monthly salary by 12 to get annual income. Then apply FBR tax slab rates to the amount above PKR 600,000. Our calculator does this automatically.' },
+      { question: 'Is freelancer income taxable in Pakistan?', answer: 'Yes. Freelancers earning above PKR 600,000 annually must file income tax returns with FBR. IT export income may have reduced rates under SRO exemptions.' }
     ],
     howTo: {
       name: "How to Calculate Income Tax on Salary in Pakistan",
@@ -109,6 +109,18 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
         { name: "Apply FBR Tax", text: "Select filer status. The calculator deducts the exact IT export tax." }
       ]
     }
+  },
+  'electricity-bill': {
+    title: 'Electricity Bill Calculator Pakistan 2026 — WAPDA Units to PKR (LESCO, FESCO)',
+    description: 'Calculate electricity bill by units consumed. Enter units → get exact PKR bill with NEPRA 2026 tariff. Supports LESCO, FESCO, GEPCO, MEPCO, PESCO. Free & instant.',
+    faqs: [
+      { question: 'How to calculate electricity bill in Pakistan?', answer: 'To calculate your bill of electricity in Pakistan, use the WAPDA unit calculator. Simply enter your consumed units. The tool evaluates the electricity bill calculation formula in Pakistan by applying the appropriate NEPRA slab, adding the Fuel Price Adjustment (FPA), 18% GST, and other surcharges.' },
+      { question: 'What is the WAPDA unit price in Pakistan for commercial and residential?', answer: 'WAPDA per unit price varies. For residential protected consumers, it starts very low (Rs. 10.54/unit). Non-protected residential starts at Rs. 22.44/unit. WAPDA commercial unit price is typically much higher and mostly a flat rate ranging from Rs. 39 to Rs. 50+ per unit depending on the exact load and tariff category (like A-2).' },
+      { question: '1 WAPDA unit kitne kW hota hai?', answer: '1 WAPDA unit = 1 kilowatt-hour (kWh). Matlab ek 1000 watt ka appliance 1 ghante mein 1 unit bijli consume karta hai. Agar aapka appliance 500 watt ka hai, to woh 2 ghante mein 1 unit use karega.' },
+      { question: '300 watt ka appliance 8 ghante mein kitni units use karta hai?', answer: '300W × 8 hours = 2,400 Wh = 2.4 units per day. Monthly (30 days) = 72 units. Formula: (Watts × Hours × Days) ÷ 1000 = Units.' },
+      { question: 'Pakistan mein 100 units ka bill kitna aata hai?', answer: 'NEPRA protected category (1-100 units) mein 100 units ka bill approximately PKR 1,957 aata hai. Non-protected mein Rs. 19.57/unit se shuru hota hai. Taxes (GST 18%, FPA, surcharges) add hone ke baad final bill Rs. 2,400 ke qareeb ho sakta hai.' },
+      { question: 'LESCO aur FESCO ka rate same hota hai?', answer: 'NEPRA tariff mostly uniform hai lekin fuel adjustment charges (FPA) alag ho sakti hain har DISCO ke liye. Basic unit rate same NEPRA schedule follow karta hai. LESCO (Lahore) aur FESCO (Faisalabad) dono ka base rate same hai, sirf monthly FPA mein farq ho sakta hai.' }
+    ]
   },
   'investment-return': {
     title: 'ROI & Investment Return Calculator Pakistan 2026 — Stocks, Property, Savings',
@@ -171,9 +183,11 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     }
   },
   'provident-fund': {
-    title: 'Provident Fund Calculator Pakistan 2026 — PF Deduction & Employer Contribution',
+    title: 'Provident Fund Calculator Pakistan 2026 — PF Deduction & Contribution Formula',
     description: 'Calculate your monthly PF deduction and employer contribution instantly. Enter basic salary → get exact amounts. Updated for Pakistan 2026.',
     faqs: [
+      { question: 'What is PF contribution calculation formula in Pakistan?', answer: 'PF contribution = 10% of basic salary (employee) + 10% of basic salary (employer). Total monthly deposit = 20% of basic salary into the PF trust.' },
+      { question: 'How to calculate provident fund in Pakistan?', answer: 'Multiply your basic salary by 10% to get your monthly PF deduction. Your employer adds an equal amount. Both go into your PF account every month.' },
       { question: 'Is PF deducted on gross salary or basic salary?', answer: 'In Pakistan, your Provident Fund is always deducted from your basic salary portion, never the gross salary. Allowances like travel, medical, and housing are completely excluded from the PF calculation.' },
       { question: 'Can I withdraw my Provident Fund before retirement?', answer: 'Yes, most recognized provident funds allow partial withdrawals or loans against your balance for specific emergencies, such as purchasing/constructing a house, major medical illnesses, or children\'s higher education. However, rules vary per organization\'s Trust Deed.' },
       { question: 'Is my Provident Fund balance taxable in Pakistan?', answer: 'If your company operates a Recognized Provident Fund (registered with the FBR/Commissioner of Inland Revenue), the lump sum payout you receive at retirement or resignation is generally 100% tax-free. Unrecognized funds may incur tax on the employer\'s portion and accrued interest.' },
@@ -191,13 +205,13 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     }
   },
   'gratuity': {
-    title: 'Gratuity Calculator Pakistan 2026 — End of Service Pay (Labour Law)',
-    description: 'Calculate exact gratuity amount under Pakistan Labour Law. Enter last salary + years served → instant result. Updated 2026.',
+    title: 'Gratuity Calculator Pakistan 2026 — Labour Law End of Service Pay',
+    description: 'Calculate gratuity under Pakistan Labour Law. Enter last drawn salary + years of service → get exact gratuity amount. Covers private sector & government employees.',
     faqs: [
-      { question: 'Who is eligible for gratuity in Pakistan?', answer: 'According to Pakistan labor law, any employee who has completed at least one year of continuous service with an employer is generally eligible for a gratuity payout upon resignation, retirement, or termination (except in cases of gross misconduct).' },
-      { question: 'Is gratuity calculated on basic or gross salary?', answer: 'Gratuity is legally calculated on your last drawn basic salary, plus any permanent cost-of-living allowances. It strictly excludes temporary allowances like house rent, transport, utility, or performance bonuses.' },
-      { question: 'Is gratuity taxable in Pakistan?', answer: 'Under FBR regulations, gratuity received from an approved gratuity fund is usually exempt from income tax up to a specific limit (e.g., PKR 300,000). Excess amounts or payouts from unapproved funds might be subject to taxation depending on your filer status.' },
-      { question: 'Do I get gratuity if my company provides a Provident Fund?', answer: 'Often, employers are required by law to offer either a Provident Fund or a Gratuity scheme. If your employer provides a recognized Provident Fund where their matching contribution equals or exceeds the statutory gratuity requirement, they are generally not legally obligated to pay gratuity as well.' }
+      { question: 'What is gratuity law in Pakistan?', answer: 'Under Pakistan Labour Law, every permanent employee is entitled to gratuity after completing 1 year of continuous service. The formula is: Last basic salary ÷ 26 × 30 × years served.' },
+      { question: 'What is gratuity formula in Pakistan?', answer: 'Gratuity = (Last drawn basic salary ÷ 26) × 30 × Number of years served. This applies to private sector employees under Standing Orders Ordinance 1968.' },
+      { question: 'Is gratuity taxable in Pakistan?', answer: 'Gratuity received from approved gratuity fund is exempt from tax up to PKR 300,000. Amount above PKR 300,000 is taxable under FBR rules.' },
+      { question: 'What if employer does not pay gratuity?', answer: 'Employees can file a complaint with the Labour Court or NIRC (National Industrial Relations Commission) for non-payment of gratuity in Pakistan.' }
     ],
     howTo: {
       name: "How to Calculate Your End-of-Service Gratuity",
@@ -348,12 +362,13 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     }
   },
   'mark-percentage': {
-    title: 'Marks Percentage Calculator Pakistan — Matric, SSC, HSSC 2026',
-    description: 'Enter obtained marks & total marks → get percentage instantly. Works for Matric 1100, HSSC 1200, SSC, FBISE and all Pakistan boards.',
+    title: 'Marks Percentage Calculator Pakistan — Matric 1100, HSSC 1200, SSC',
+    description: 'Calculate marks percentage instantly. Enter obtained marks & total marks → get exact %. Works for Matric (1100), HSSC (1200), SSC, FBISE, all Pakistan boards. Free 2026.',
     faqs: [
-      { question: 'How to calculate marks percentage out of 1100?', answer: 'To calculate percentage out of 1100: Divide your obtained marks by 1100 and multiply by 100. Formula: (Obtained Marks / 1100) × 100. For example, if you got 935 marks, your percentage is (935/1100) × 100 = 85%.' },
-      { question: 'What is the percentage of 850 out of 1100 marks?', answer: '850 out of 1100 marks percentage = (850 / 1100) × 100 = 77.27%. This is usually considered an A grade in Pakistan board exams.' },
-      { question: 'How to calculate SSC percentage for BISE Lahore/Board?', answer: 'Simply enter your obtained marks and total marks (usually 1100) into our tool. It works for all boards including BISE Lahore, Rawalpindi, and Karachi.' }
+      { question: '1100 mein se 900 marks ka percentage kya hoga?', answer: '900 ÷ 1100 × 100 = 81.81%. Yeh A grade mein aata hai Pakistan ke Matric board system mein.' },
+      { question: 'Matric mein percentage kaise calculate karte hain?', answer: 'Total obtained marks ko 1100 se divide karein aur 100 se multiply karein. Example: 850 ÷ 1100 × 100 = 77.27%.' },
+      { question: 'SSC mein passing percentage kitni hoti hai?', answer: 'Pakistan mein SSC (Matric) mein passing ke liye minimum 33% marks (363 out of 1100) chahiye hote hain har subject mein.' },
+      { question: 'HSSC percentage calculator kaise use karein?', answer: 'Apne total obtained marks enter karein aur total marks (usually 1200) enter karein. Calculator automatically percentage calculate kar dega.' }
     ],
     howTo: {
       name: "How to Calculate Marks Percentage for Pakistan Board Exams (Matric/Inter)",
@@ -367,11 +382,13 @@ const TOOL_SEO_META: Record<string, { title: string; description: string; faqs?:
     }
   },
   'electricity-bill': {
-    title: 'Electricity Bill Calculator Pakistan 2026 — WAPDA LESCO FESCO Units',
-    description: 'Calculate monthly electricity bill by units consumed. Supports LESCO, FESCO, GEPCO, PESCO, MEPCO. NEPRA 2026 tariff rates included.',
+    title: 'Electricity Bill Calculator Pakistan 2026 — WAPDA Units to PKR (LESCO, FESCO)',
+    description: 'Calculate electricity bill by units consumed. Enter units → get exact PKR bill with NEPRA 2026 tariff. Supports LESCO, FESCO, GEPCO, MEPCO, PESCO. Free & instant.',
     faqs: [
-      { question: 'How to calculate electricity bill in Pakistan?', answer: 'To calculate your bill of electricity in Pakistan, use the WAPDA unit calculator. Simply enter your consumed units. The tool evaluates the electricity bill calculation formula in Pakistan by applying the appropriate NEPRA slab, adding the Fuel Price Adjustment (FPA), 18% GST, and other surcharges.' },
-      { question: 'What is the WAPDA unit price in Pakistan for commercial and residential?', answer: 'WAPDA per unit price varies. For residential protected consumers, it starts very low (Rs. 10.54/unit). Non-protected residential starts at Rs. 22.44/unit. WAPDA commercial unit price is typically much higher and mostly a flat rate ranging from Rs. 39 to Rs. 50+ per unit depending on the exact load and tariff category (like A-2).' }
+      { question: '1 WAPDA unit kitne kW hota hai?', answer: '1 WAPDA unit = 1 kilowatt-hour (kWh). Matlab ek 1000 watt ka appliance 1 ghante mein 1 unit bijli consume karta hai.' },
+      { question: '300 watt ka appliance 8 ghante mein kitni units use karta hai?', answer: '300W × 8 hours = 2,400 Wh = 2.4 units. Monthly (30 days) = 72 units.' },
+      { question: 'Pakistan mein 100 units ka bill kitna aata hai?', answer: 'NEPRA protected category (1-100 units) mein 100 units ka bill approximately PKR 1,957 aata hai. Yeh rate subsidized hai.' },
+      { question: 'LESCO aur FESCO ka rate same hota hai?', answer: 'NEPRA tariff mostly uniform hai lekin fuel adjustment charges alag ho sakti hain. Basic unit rate same NEPRA schedule follow karta hai.' }
     ]
   },
   'percentage': {
