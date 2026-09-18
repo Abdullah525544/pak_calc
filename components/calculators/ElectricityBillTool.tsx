@@ -229,7 +229,7 @@ export default function ElectricityBillTool({ isUrdu }: { isUrdu: boolean }) {
             <div className="absolute right-0 top-0 w-64 h-64 bg-emerald-500 rounded-full blur-[120px] opacity-20 -mr-32 -mt-32 group-hover:opacity-30 transition-opacity"></div>
 
             <div className="text-center mb-8 relative z-10">
-              <p className="text-slate-400 uppercase text-[10px] font-black tracking-widest mb-1">Estimated Total Payable</p>
+              <p className="text-slate-400 uppercase text-[10px] font-black tracking-widest mb-1">Estimated Bill (Based on Inputs)</p>
               <h4 className="text-6xl lg:text-7xl font-black text-emerald-400 drop-shadow-lg">
                 Rs. {Math.round(totalBill).toLocaleString()}
               </h4>

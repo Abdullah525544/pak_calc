@@ -56,11 +56,11 @@ export const ElectricityBillSEO = ({ isUrdu }: { isUrdu?: boolean }) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
           <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100">
             <h4 className="font-bold text-slate-900 mb-2">FPA (Fuel Price Adjustment)</h4>
-            <p className="text-sm text-slate-600">The difference between the estimated fuel cost (used to generate electricity) and the actual cost. It fluctuates monthly based on global oil/coal prices.</p>
+            <p className="text-sm text-slate-600">The difference between the estimated fuel cost (used to generate electricity) and the actual cost. It fluctuates monthly based on global oil/coal prices and is treated as an estimate based on user input.</p>
           </div>
           <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100">
             <h4 className="font-bold text-slate-900 mb-2">QTA (Quarterly Tariff Adj)</h4>
-            <p className="text-sm text-slate-600">Adjustments made every 3 months by NEPRA to account for capacity charges, transmission losses, and overall system costs.</p>
+            <p className="text-sm text-slate-600">Adjustments made every 3 months by NEPRA to account for capacity charges, transmission losses, and overall system costs, incorporated as estimates based on user input.</p>
           </div>
           <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100">
             <h4 className="font-bold text-slate-900 mb-2">FC Surcharge</h4>

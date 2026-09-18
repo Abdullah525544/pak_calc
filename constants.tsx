@@ -201,7 +201,7 @@ export const CALCULATORS: Calculator[] = [
     category: Category.PAK_SPECIFIC,
     icon: '⚡',
     seoTitle: 'Electricity Bill Calculator Pakistan 2026 — WAPDA LESCO FESCO Units',
-    seoDescription: 'Calculate monthly electricity bill by units consumed. Supports LESCO, FESCO, GEPCO, PESCO, MEPCO. NEPRA 2026 tariff rates included.'
+    seoDescription: 'Calculate monthly electricity bill by units consumed. Supports LESCO, FESCO, GEPCO, PESCO, MEPCO. NEPRA FY 2024-25 base tariff rates included.'
   }
 ];
 
@@ -225,10 +225,11 @@ export const SALARIED_TAX_SLABS = [
   { threshold: Infinity, rate: 35, fixed: 616000  }    // 616,000 + 35% above 4.1M
 ];
 
-// 10% surcharge on slab tax when taxable income > PKR 10,000,000 (FBR FY 2025-26).
-// Applies to salaried and non-salaried individuals + AOPs (not companies).
+// 10% surcharge on slab tax for non-salaried/AOPs, 9% for salaried individuals when taxable income > PKR 10,000,000.
+// Applies to Tax Year 2026.
 export const SURCHARGE_THRESHOLD = 10000000;
-export const SURCHARGE_RATE = 0.10;
+export const SURCHARGE_RATE_SALARIED = 0.09;
+export const SURCHARGE_RATE_NON_SALARIED = 0.10;
 
 // Non-Salaried / AOP / Individual business income — FBR 2025-26.
 // Source: PWC Pakistan Tax Summaries 2025-26 + FBR.
@@ -260,7 +261,7 @@ export const GOVERNMENT_NISAB_2026 = 503529;
 export const DEDUCTION_DATE_2026 = '19–20 February 2026 (1st Ramadan 1447 AH, subject to moon sighting)';
 
 // ---------------------------------------------------------------------------
-// NEPRA Electricity Tariff Slabs (FY 2025-26)
+// NEPRA Electricity Tariff Slabs (FY 2024-25 Base Tariff)
 // Last verified: September 2026.
 // ---------------------------------------------------------------------------
 

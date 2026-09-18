@@ -76,8 +76,8 @@ export const FreelancerTool = ({ isUrdu }: { isUrdu: boolean }) => {
             <div className="p-4 bg-emerald-50 rounded-3xl border border-emerald-100">
               <div className="flex items-center justify-between">
                 <div>
-                  <h4 className="font-bold text-emerald-900 text-sm">{isUrdu ? 'PSEB Ø±Ø¬Ø³Ù¹Ø±ÛŒØ´Ù†' : 'PSEB Registration'}</h4>
-                  <p className="text-[10px] text-emerald-600">{isUrdu ? 'Ú©ÛŒ Ú©ÛŒØ§ Ø¢Ù¾ PSEB Ú©Û’ Ø³Ø§ØªÚ¾ Ø±Ø¬Ø³Ù¹Ø±Úˆ ÙØ±ÛŒ Ù„Ø§Ù†Ø³Ø± ÛÛŒÚºØŸ' : 'Are you a registered IT exporter with PSEB?'}</p>
+                  <h4 className="font-bold text-emerald-900 text-sm">{isUrdu ? 'PSEB & FBR Conditions' : 'PSEB & FBR Conditions Met?'}</h4>
+                  <p className="text-[10px] text-emerald-600">{isUrdu ? 'کیا آپ PSEB رجسٹرڈ اور ایکٹو ٹیکس پیئر (ATL) ہیں؟' : 'Registered with PSEB, on FBR Active Taxpayer List, and fulfill Sec 154A conditions?'}</p>
                 </div>
                 <button
                   onClick={() => setIsPSEB(!isPSEB)}
@@ -86,6 +86,11 @@ export const FreelancerTool = ({ isUrdu }: { isUrdu: boolean }) => {
                   <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all ${isPSEB ? (isUrdu ? 'left-1' : 'right-1') : (isUrdu ? 'right-1' : 'left-1')}`} />
                 </button>
               </div>
+            </div>
+            <div className="mt-2">
+              <p className="text-[10px] text-slate-400 leading-tight">
+                * Note: The 0.25% concessionary rate under Sec 154A requires PSEB registration, ATL status, filing returns, and bringing at least 80% proceeds to Pakistan. Otherwise, a 1% rate or normal taxation may apply.
+              </p>
             </div>
           </div>
         </div>

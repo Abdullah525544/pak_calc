@@ -81,10 +81,10 @@
     "h1": "Financial Disclaimer"
   },
   "/income-tax": {
-    "title": "Income Tax Calculator Pakistan 2026 — FBR Tax Year 2025-26 Slabs",
-    "description": "Calculate your FBR income tax for Tax Year 2025-26 (Finance Act 2025). Salaried + Non-Salaried / AOP slabs, 10% surcharge above PKR 10M, slab-by-slab breakdown. Free.",
-    "h1": "Pakistan Income Tax Calculator 2025-26 (FBR)",
-    "intro": "Use this free FBR-aligned calculator to work out your monthly and annual income tax for Tax Year 2025-26 (Finance Act 2025). Choose Salaried or Non-Salaried / AOP, see the slab-by-slab breakdown, the 10% surcharge above PKR 10M, and your net take-home.",
+    "title": "Income Tax Calculator Pakistan 2026 — FBR Tax Year 2026",
+    "description": "Calculate your FBR income tax for Tax Year 2026 (Historical). Enter your monthly salary to calculate annual tax, monthly deductions, and your exact tax bracket.",
+    "h1": "Pakistan Income Tax Calculator 2026 (Historical)",
+    "intro": "Understanding your income tax liability in Pakistan can be complicated. Our calculator uses the official Federal Board of Revenue (FBR) tax slabs for Tax Year 2026 (Finance Act 2025). This is a historical/reference calculator as the current tax year is TY 2027.",
     "faqs": [
       { "question": "What is the income tax rate in Pakistan 2025-26?", "answer": "For salaried persons under Finance Act 2025, annual income up to PKR 600,000 is tax-free. Above that, the marginal rates are 1% (PKR 600,001–1,200,000), 11% (PKR 1,200,001–2,200,000), 23% (PKR 2,200,001–3,200,000), 30% (PKR 3,200,001–4,100,000), and 35% above PKR 4,100,000. A 10% surcharge is added to the slab tax if annual taxable income exceeds PKR 10,000,000." },
       { "question": "How much salary is tax free in Pakistan?", "answer": "Monthly salary up to PKR 50,000 (annual PKR 600,000) is completely tax-free in Pakistan for salaried employees under FBR Tax Year 2025-26." },
@@ -147,9 +147,9 @@
     "h1": "Freelancer Income & Tax Calculator Pakistan",
     "intro": "Estimate your net take-home as a Pakistani freelancer after platform fees, bank conversion spreads, and FBR / PSEB withholding tax.",
     "faqs": [
-      { "question": "Is there tax on freelancers in Pakistan?", "answer": "Yes, freelancer income is taxable in Pakistan under FBR rules. However, IT export income enjoys reduced tax rates (0.25% for PSEB registered filers). Freelancers earning through platforms like Fiverr or Upwork must file returns to benefit from IT export exemptions." },
+      { "question": "Is there tax on freelancers in Pakistan?", "answer": "Yes, freelancer income is taxable under FBR rules. However, under Section 154A, IT and IT-enabled services export income enjoys a concessionary 0.25% tax rate if the freelancer is registered with PSEB, is on the Active Taxpayer List (ATL), files returns, and brings at least 80% of export proceeds to Pakistan. Otherwise, a 1% rate or normal taxation applies." },
       { "question": "How much do freelancers earn per month in Pakistan?", "answer": "Freelancer income varies widely. Pakistani IT freelancers typically earn between PKR 50,000 to PKR 500,000+ per month depending on skills. After bank charges, platform fees, and taxes, your net take-home will be reduced." },
-      { "question": "Do I get taxed on Upwork and Fiverr in Pakistan?", "answer": "Yes, when your Upwork or Fiverr earnings are remitted to your Pakistani bank account, the bank is legally required to deduct a 1% withholding tax (or 0.25% if registered with PSEB) upon realization of the foreign exchange." },
+      { "question": "Do I get taxed on Upwork and Fiverr in Pakistan?", "answer": "Yes, when your Upwork or Fiverr earnings are remitted to your Pakistani bank account, the bank is legally required to deduct withholding tax upon realization. This is 0.25% if you meet all Section 154A conditions (including PSEB registration and ATL status), or 1% if you do not." },
       { "question": "How can a freelancer become a filer in Pakistan?", "answer": "You can become a filer by registering on FBR's IRIS portal, obtaining a National Tax Number (NTN), and filing your annual income tax return declaring your foreign remittance income." }
     ],
     "howTo": {

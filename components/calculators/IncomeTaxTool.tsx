@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip, AreaChart, Area, XAxis, YAxis, CartesianGrid } from 'recharts';
 import {
-  SALARIED_TAX_SLABS, NON_SALARIED_TAX_SLABS, SURCHARGE_THRESHOLD, SURCHARGE_RATE,
+  SALARIED_TAX_SLABS, NON_SALARIED_TAX_SLABS, SURCHARGE_THRESHOLD, SURCHARGE_RATE_SALARIED, SURCHARGE_RATE_NON_SALARIED,
   NISAB_GOLD_GRAMS, NISAB_SILVER_GRAMS, GOVERNMENT_NISAB_2026, DEDUCTION_DATE_2026
 } from '../../constants';
 import { getFinancialAdvice } from '../../services/geminiService';
@@ -57,8 +57,9 @@ export const IncomeTaxTool = ({ isUrdu }: { isUrdu: boolean }) => {
 
   const baseTax = breakdown.length ? breakdown[breakdown.length - 1].cumulative : 0;
 
-  // 10% surcharge when taxable income > PKR 10M (FBR FY 2025-26).
-  const surcharge = taxableIncome > SURCHARGE_THRESHOLD ? baseTax * SURCHARGE_RATE : 0;
+  // 9% surcharge for salaried, 10% for non-salaried when taxable income > PKR 10M (Tax Year 2026).
+  const surchargeRate = mode === 'salaried' ? SURCHARGE_RATE_SALARIED : SURCHARGE_RATE_NON_SALARIED;
+  const surcharge = taxableIncome > SURCHARGE_THRESHOLD ? baseTax * surchargeRate : 0;
   const totalTax = baseTax + surcharge;
 
   const effectiveRate = annualIncome > 0 ? (totalTax / annualIncome) * 100 : 0;
@@ -71,7 +72,7 @@ export const IncomeTaxTool = ({ isUrdu }: { isUrdu: boolean }) => {
     <div className="space-y-12">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-white p-8 rounded-[2.5rem] shadow-xl">
-          <h3 className="text-2xl font-bold mb-6">Income Details (FBR Tax Year 2025-26)</h3>
+          <h3 className="text-2xl font-bold mb-6">Income Details (FBR Tax Year 2026 - Historical)</h3>
 
           <div className="mb-6">
             <label className="block text-xs font-bold text-slate-500 uppercase mb-2">Taxpayer Type</label>
