@@ -5,7 +5,7 @@ import {
   NISAB_GOLD_GRAMS, NISAB_SILVER_GRAMS, GOVERNMENT_NISAB_2026, DEDUCTION_DATE_2026
 } from '../../constants';
 import { getFinancialAdvice } from '../../services/geminiService';
-import * as InfoPages from '../InfoPages';
+import { PFSEO } from './seo/PFSEO';
 const COLORS = ['#10b981', '#ef4444', '#f59e0b', '#3b82f6', '#8b5cf6', '#ec4899'];
 
 export const PFTool = () => {
@@ -95,8 +95,7 @@ export const PFTool = () => {
           </div>
         </div>
       </div>
-      <InfoPages.PFBlogContent />
-      <InfoPages.PFSEOArticle />
+      <PFSEO />
     </div>
   );
 };

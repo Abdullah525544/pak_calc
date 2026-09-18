@@ -5,7 +5,7 @@ import {
   NISAB_GOLD_GRAMS, NISAB_SILVER_GRAMS, GOVERNMENT_NISAB_2026, DEDUCTION_DATE_2026
 } from '../../constants';
 import { getFinancialAdvice } from '../../services/geminiService';
-import * as InfoPages from '../InfoPages';
+import { InvestmentReturnSEO } from './seo/InvestmentReturnSEO';
 const COLORS = ['#10b981', '#ef4444', '#f59e0b', '#3b82f6', '#8b5cf6', '#ec4899'];
 
 export const InvestmentReturnTool = () => {
@@ -147,8 +147,7 @@ export const InvestmentReturnTool = () => {
           </div>
         </div>
       </div>
-      <InfoPages.InvestmentBlogContent />
-      <InfoPages.InvestmentSEOArticle />
+      <InvestmentReturnSEO />
     </div>
   );
 };

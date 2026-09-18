@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEOHead from './SEOHead';
 import { Calculator } from '../types';
 import { CALCULATORS } from '../constants';
 
@@ -17,10 +17,11 @@ export const HubPage: React.FC<HubPageProps> = ({ title, description, toolIds, i
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-16 space-y-12 animate-in fade-in duration-700">
-      <Helmet>
-        <title>{title} | PakCalc</title>
-        <meta name="description" content={description} />
-      </Helmet>
+      <SEOHead
+        title={`${title} | PakCalc`}
+        description={description}
+        canonicalUrl=""
+      />
 
       <div className="text-center space-y-6">
         <h1 className="text-4xl md:text-5xl font-black text-slate-900">{title}</h1>

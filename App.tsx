@@ -37,7 +37,6 @@ const ContactPage      = lazy(() => import('./components/InfoPages').then(m => (
 const PrivacyPage      = lazy(() => import('./components/InfoPages').then(m => ({ default: m.PrivacyPage })));
 const TermsPage        = lazy(() => import('./components/InfoPages').then(m => ({ default: m.TermsPage })));
 const DisclaimerPage   = lazy(() => import('./components/InfoPages').then(m => ({ default: m.DisclaimerPage })));
-const ToolArticle      = lazy(() => import('./components/ToolArticle').then(m => ({ default: m.ToolArticle })));
 
 import { CALCULATORS } from './constants';
 import { RelatedTools } from './components/RelatedTools';
@@ -449,8 +448,6 @@ const ToolWrapper = ({ id, component, isUrdu, handleNavigate }: { id: string, co
       <div className="relative mb-8">
         {component}
       </div>
-
-      <ToolArticle id={id} isUrdu={isUrdu} />
 
       <RelatedTools toolIds={getRelatedTools(id)} />
 

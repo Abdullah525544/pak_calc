@@ -3,7 +3,7 @@ import {
   NEPRA_FY_2025_BASE_SLABS, GST_RATE_2026,
   ELECTRICITY_DUTY_RATE, FC_SURCHARGE_RATE, TV_FEE
 } from '../../constants';
-import * as InfoPages from '../InfoPages';
+import { ElectricityBillSEO } from './seo/ElectricityBillSEO';
 
 export default function ElectricityBillTool({ isUrdu }: { isUrdu: boolean }) {
   const [activeTab, setActiveTab] = useState<'bill' | 'watts'>('bill');
@@ -364,7 +364,7 @@ export default function ElectricityBillTool({ isUrdu }: { isUrdu: boolean }) {
         </div>
       )}
       
-      <InfoPages.ElectricityBillBlogContent />
+      <ElectricityBillSEO isUrdu={isUrdu} />
     </div>
   );
 }
