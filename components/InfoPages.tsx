@@ -1,4 +1,4 @@
-﻿
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SALARIED_TAX_SLABS, NISAB_GOLD_GRAMS, NISAB_SILVER_GRAMS } from '../constants';
@@ -554,12 +554,12 @@ export const EMIBlogContent = () => (
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-8 bg-white rounded-3xl border border-blue-100 shadow-sm">
-            <h4 className="font-bold text-blue-900 mb-2">Floating Rates</h4>
-            <p className="text-sm text-slate-500">Your rate = 12-Month KIBOR + Bank Spread. If KIBOR increases by 2%, your EMI will be recalculated at the next anniversary of your loan.</p>
+            <h4 className="font-bold text-blue-900 mb-2">Floating Rates & Bank Spread</h4>
+            <p className="text-sm text-slate-500">Your rate = 12-Month KIBOR + Bank Spread. Current typical bank markup ranges are <strong>KIBOR + 2% to 4%</strong> for auto loans and <strong>KIBOR + 1.5% to 3.5%</strong> for home finance. If KIBOR increases by 2%, your EMI will be recalculated at the next anniversary of your loan.</p>
           </div>
           <div className="p-8 bg-white rounded-3xl border border-blue-100 shadow-sm">
             <h4 className="font-bold text-blue-900 mb-2">The Revision Date</h4>
-            <p className="text-sm text-slate-500">Most banks in Pakistan revise the markup rate on a 1-year or 6-month cycle. Ask your bank <em>"When is my first rate revision due?"</em></p>
+            <p className="text-sm text-slate-500">Most banks in Pakistan revise the markup rate on a 1-year or 6-month cycle based on the prevailing KIBOR. Ask your bank <em>"When is my first rate revision due?"</em></p>
           </div>
         </div>
       </div>
@@ -2922,7 +2922,11 @@ export const PFSEOArticle = () => (
         </div>
         <div>
           <h4 className="font-bold text-slate-900">Are Provident Funds tax-free upon withdrawal?</h4>
-          <p className="text-sm text-slate-500">In Pakistan, withdrawals from recognized Provident Funds are generally tax-exempt if you have completed 10 years of service.</p>
+          <p className="text-sm text-slate-500">In Pakistan, the accumulated balance received from a recognized Provident Fund (recognized by the Commissioner of Inland Revenue) is completely exempt from income tax at the time of withdrawal, making it one of the most tax-efficient savings vehicles.</p>
+        </div>
+        <div>
+          <h4 className="font-bold text-slate-900">What is "Vesting" in a Provident Fund?</h4>
+          <p className="text-sm text-slate-500">Vesting refers to your right to keep the <em>employer's</em> matching contribution if you resign. Many companies require you to serve for 3 to 5 years to be 100% "vested." If you leave before this period, you will only receive your own contributions plus profit, while forfeiting the employer's share.</p>
         </div>
       </div>
     </div>

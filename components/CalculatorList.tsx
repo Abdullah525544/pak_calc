@@ -139,10 +139,10 @@ const CalculatorList: React.FC<CalculatorListProps> = ({ onSelect, onNavigate, i
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {[
-                { icon: '🛡️', t: 'Bank-Grade Accuracy', d: 'Validated calculations.' },
-                { icon: '🔒', t: 'Privacy Absolute', d: 'Zero server-side storage.' },
-                { icon: '⚖️', t: 'Shariah Compliant', d: 'Fatwa-verified logic.' },
-                { icon: '⚡', t: 'Real-time Updates', d: 'FBR slabs 2025-26.' }
+                { icon: '🛡️', t: 'Validated Calculations', d: 'Based on FBR, SBP and HEC references.' },
+                { icon: '🔒', t: 'Privacy First', d: 'Inputs stay in your browser — no storage.' },
+                { icon: '📚', t: 'Methodology Disclosed', d: 'Each tool shows its formula and sources.' },
+                { icon: '⚡', t: 'Updated for 2026', d: 'Tax, gratuity and Zakat slabs refreshed annually.' }
               ].map((feat, i) => (
                 <div key={i} className="flex gap-4 group">
                   <div className="w-12 h-12 bg-white shadow-lg rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
@@ -162,12 +162,12 @@ const CalculatorList: React.FC<CalculatorListProps> = ({ onSelect, onNavigate, i
             <div className="relative grid grid-cols-2 gap-6">
               <div className="space-y-6 pt-12">
                 <div className="bg-white p-8 rounded-[3rem] shadow-2xl border border-slate-50 flex flex-col items-center text-center">
-                  <span className="text-4xl font-black text-emerald-600 mb-2">1M+</span>
-                  <span className="text-[10px] uppercase font-bold text-slate-400 tracking-widest">Active Users</span>
+                  <span className="text-4xl font-black text-emerald-600 mb-2">25+</span>
+                  <span className="text-[10px] uppercase font-bold text-slate-400 tracking-widest">Free Calculators</span>
                 </div>
                 <div className="bg-slate-900 p-8 rounded-[3rem] shadow-2xl text-white flex flex-col items-center text-center">
-                  <span className="text-4xl font-black text-emerald-400 mb-2">99%</span>
-                  <span className="text-[10px] uppercase font-bold text-slate-500 tracking-widest">Accuracy</span>
+                  <span className="text-4xl font-black text-emerald-400 mb-2">5</span>
+                  <span className="text-[10px] uppercase font-bold text-slate-500 tracking-widest">Categories</span>
                 </div>
               </div>
               <div className="space-y-6">
@@ -176,8 +176,8 @@ const CalculatorList: React.FC<CalculatorListProps> = ({ onSelect, onNavigate, i
                   <span className="text-[10px] uppercase font-bold text-emerald-100 tracking-widest">Forever</span>
                 </div>
                 <div className="bg-white p-8 rounded-[3rem] shadow-2xl border border-slate-50 flex flex-col items-center text-center">
-                  <span className="text-4xl font-black text-slate-900 mb-2">AI</span>
-                  <span className="text-[10px] uppercase font-bold text-slate-400 tracking-widest">Integrated</span>
+                  <span className="text-4xl font-black text-slate-900 mb-2">EN+UR</span>
+                  <span className="text-[10px] uppercase font-bold text-slate-400 tracking-widest">Bilingual</span>
                 </div>
               </div>
             </div>
@@ -232,7 +232,7 @@ const CalculatorList: React.FC<CalculatorListProps> = ({ onSelect, onNavigate, i
                   </div>
                 ))}
                 <div className="w-14 h-14 rounded-full border-4 border-slate-900 bg-emerald-600 flex items-center justify-center text-xs font-bold text-white ring-2 ring-emerald-500/20">
-                  +50k
+                  NEW
                 </div>
               </div>
 
@@ -243,7 +243,7 @@ const CalculatorList: React.FC<CalculatorListProps> = ({ onSelect, onNavigate, i
               <p className="text-slate-400 text-lg md:text-xl font-medium">
                 {isUrdu
                   ? 'ہزاروں پاکستانیوں کی طرح آپ بھی اپنی بچت اور ٹیکس کو بہتر بنائیں۔'
-                  : 'Join over 50,000 monthly active users who trust PakCalc to navigate their financial landscape with confidence.'}
+                  : 'PakCalc helps thousands of Pakistani taxpayers, students, freelancers and small businesses every month calculate tax, Zakat, EMI, ROI and more. Try any tool — free, no sign-up.'}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center pt-6">

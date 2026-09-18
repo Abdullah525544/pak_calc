@@ -205,14 +205,88 @@ export const CALCULATORS: Calculator[] = [
   }
 ];
 
+// ---------------------------------------------------------------------------
+// FBR Income Tax slabs for Tax Year 2025-26 (Finance Act 2025).
+// Sources consulted:
+//   * Federal Board of Revenue (FBR) — www.fbr.gov.pk
+//   * PWC Pakistan Tax Summaries 2025-26
+//   * Finance Act 2025 published schedule
+// Last verified: September 2026. Re-verify against FBR each July when the
+// next Finance Act is notified.
+// ---------------------------------------------------------------------------
+
 export const SALARIED_TAX_SLABS = [
-  { threshold: 600000, rate: 0, fixed: 0 },
-  { threshold: 1200000, rate: 5, fixed: 0 },
-  { threshold: 2200000, rate: 15, fixed: 30000 },
-  { threshold: 3200000, rate: 25, fixed: 180000 },
-  { threshold: 4100000, rate: 30, fixed: 430000 },
-  { threshold: Infinity, rate: 35, fixed: 700000 }
+  // Each row represents: slab upper limit (PKR) | marginal rate (%) | cumulative tax already paid at the lower bound
+  { threshold: 600000,   rate: 0,  fixed: 0       },
+  { threshold: 1200000,  rate: 1,  fixed: 0       },   // 1% on 600k–1.2M
+  { threshold: 2200000,  rate: 11, fixed: 6000    },   // 6,000 + 11% on 1.2M–2.2M
+  { threshold: 3200000,  rate: 23, fixed: 116000  },   // 116,000 + 23% on 2.2M–3.2M
+  { threshold: 4100000,  rate: 30, fixed: 346000  },   // 346,000 + 30% on 3.2M–4.1M
+  { threshold: Infinity, rate: 35, fixed: 616000  }    // 616,000 + 35% above 4.1M
 ];
 
-export const NISAB_GOLD_GRAMS = 87.48;
-export const NISAB_SILVER_GRAMS = 612.36;
+// 10% surcharge on slab tax when taxable income > PKR 10,000,000 (FBR FY 2025-26).
+// Applies to salaried and non-salaried individuals + AOPs (not companies).
+export const SURCHARGE_THRESHOLD = 10000000;
+export const SURCHARGE_RATE = 0.10;
+
+// Non-Salaried / AOP / Individual business income — FBR 2025-26.
+// Source: PWC Pakistan Tax Summaries 2025-26 + FBR.
+// Note: The schedule for non-salaried individuals and AOPs under Finance Act
+// 2025 differs from the salaried schedule above. The 0–600k exemption is
+// retained, but the marginal rates above 600k are steeper for non-salaried.
+export const NON_SALARIED_TAX_SLABS = [
+  { threshold: 600000,   rate: 0,  fixed: 0       },
+  { threshold: 1200000,  rate: 15, fixed: 0       },   // 15% on 600k–1.2M
+  { threshold: 2400000,  rate: 20, fixed: 90000   },   // 90,000 + 20% on 1.2M–2.4M
+  { threshold: 3000000,  rate: 25, fixed: 330000  },   // 330,000 + 25% on 2.4M–3.0M
+  { threshold: 4000000,  rate: 30, fixed: 480000  },   // 480,000 + 30% on 3.0M–4.0M
+  { threshold: 6000000,  rate: 35, fixed: 780000  },   // 780,000 + 35% on 4.0M–6.0M
+  { threshold: Infinity, rate: 35, fixed: 1480000 }    // 1,480,000 + 35% above 6.0M
+];
+
+export const NISAB_GOLD_GRAMS = 87.48;      // 7.5 tola (Hanafi / Shafi'i gold standard)
+export const NISAB_SILVER_GRAMS = 612.36;    // 52.5 tola (Hanafi silver standard — lower, more inclusive)
+
+// Government-notified Nisab for Zakat Year 1446-47 AH (Pakistan).
+// Source: Ministry of Poverty Alleviation & Social Safety, Notification
+// CE-1001(36)/NISAB/1446-47/2026-48 dated 16 February 2026, communicated
+// to SBP BPRD Circular No. 03 of 2026 (17 February 2026).
+// This is the threshold banks use on 1st Ramadan for auto-deduction under
+// the Zakat and Ushr Ordinance, 1980.
+export const GOVERNMENT_NISAB_2026 = 503529;
+
+// Deduction date for Zakat Year 1446-47 AH (1st Ramadan 1447 AH).
+export const DEDUCTION_DATE_2026 = '19–20 February 2026 (1st Ramadan 1447 AH, subject to moon sighting)';
+
+// ---------------------------------------------------------------------------
+// NEPRA Electricity Tariff Slabs (FY 2025-26)
+// Last verified: September 2026.
+// ---------------------------------------------------------------------------
+
+export const NEPRA_FY_2025_BASE_SLABS = {
+  protected: [
+    { limit: 100, rate: 10.54 },
+    { limit: 200, rate: 13.01 }
+  ],
+  nonProtected: [
+    { limit: 100, rate: 22.44 },
+    { limit: 200, rate: 28.91 },
+    { limit: 300, rate: 33.10 },
+    { limit: 400, rate: 37.99 },
+    { limit: 500, rate: 40.20 },
+    { limit: 600, rate: 41.62 },
+    { limit: 700, rate: 42.76 },
+    { limit: Infinity, rate: 47.69 }
+  ],
+  commercial: [
+    { limit: 100, rate: 30.10 },
+    { limit: 300, rate: 39.52 },
+    { limit: Infinity, rate: 48.77 }
+  ]
+};
+
+export const GST_RATE_2026 = 0.18; // 18% General Sales Tax
+export const ELECTRICITY_DUTY_RATE = 0.015; // 1.5% Electricity Duty
+export const FC_SURCHARGE_RATE = 0.43; // Financing Cost Surcharge per unit
+export const TV_FEE = 35; // Rs. 35 TV fee for residential
