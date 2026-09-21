@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/prerender.cjs",
+    "build:vite": "vite build",
+    "prerender": "node scripts/prerender.cjs",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -23,8 +25,10 @@
     "@types/react-dom": "^19.0.3",
     "@types/react-helmet-async": "^1.0.1",
     "@vitejs/plugin-react": "^5.0.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
     "typescript": "^5.7.2",
-    "vite": "^6.2.0",
-    "vite-plugin-prerender": "^1.0.8"
+    "vite": "^6.2.0"
   }
 }

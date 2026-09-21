@@ -4,11 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PakCalc</title>
-  <meta name="description" content="PakCalc Financial Suite">
+  <meta name="theme-color" content="#065f46">
+  <title>PakCalc — Free Financial Calculators for Pakistan (Income Tax, Zakat, EMI, Zakat & More)</title>
+  <meta name="description" content="Free financial calculators tailored for Pakistan — FBR income tax, Zakat (SBP Nisab), loan EMI, real-estate ROI, provident fund, gratuity, CGPA, BMI and more. Updated for 2026." />
+  <meta name="keywords" content="Pakistan calculators, FBR income tax calculator, Zakat calculator Pakistan, loan EMI calculator, provident fund calculator, gratuity calculator Pakistan, CGPA calculator HEC, NEPRA bill calculator, real estate ROI Pakistan" />
+  <meta name="author" content="PakCalc Team" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <link rel="canonical" href="https://pakcalc.site/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PakCalc" />
+  <meta property="og:title" content="PakCalc — Free Financial Calculators for Pakistan" />
+  <meta property="og:description" content="FBR income tax, Zakat, loan EMI, real-estate ROI and more. Tailored for Pakistan, updated for 2026." />
+  <meta property="og:url" content="https://pakcalc.site/" />
+  <meta property="og:image" content="https://pakcalc.site/favicon.png" />
+  <meta property="og:locale" content="en_PK" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PakCalc — Free Financial Calculators for Pakistan" />
+  <meta name="twitter:description" content="FBR income tax, Zakat, loan EMI, real-estate ROI and more. Tailored for Pakistan, updated for 2026." />
+  <meta name="twitter:image" content="https://pakcalc.site/favicon.png" />
+
   <meta name="google-site-verification" content="hgaF15p_M85TxV2CKPv0mEjnUXyi8n1_ccvdFKBhO8E" />
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-V4C4F47Q9T"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -19,10 +40,7 @@
 
   <link rel="icon" type="image/png" href="/favicon.png?v=3">
   <link rel="shortcut icon" type="image/png" href="/favicon.png?v=3">
-  <meta name="author" content="PakCalc Team">
-  <meta name="robots" content="index, follow">
 
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,73 +48,31 @@
     href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap"
     rel="stylesheet">
 
-  <style>
-    :root {
-      --pak-green: #065f46;
-      --pak-gold: #fbbf24;
-    }
-
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      scroll-behavior: smooth;
-    }
-
-    .urdu {
-      font-family: 'Noto Nastaliq Urdu', serif;
-      line-height: 2.8;
-    }
-
-    .mesh-gradient {
-      background-color: #f8fafc;
-      background-image:
-        radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.1) 0px, transparent 50%),
-        radial-gradient(at 100% 0%, rgba(251, 191, 36, 0.1) 0px, transparent 50%);
-    }
-
-    .glass {
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .tool-card:hover .icon-box {
-      transform: scale(1.1) rotate(5deg);
-    }
-
-    @keyframes float {
-      0% {
-        transform: translateY(0px);
-      }
-
-      50% {
-        transform: translateY(-10px);
-      }
-
-      100% {
-        transform: translateY(0px);
+  <script type="application/ld+json" data-seo="pakcalc-home">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "PakCalc",
+      "url": "https://pakcalc.site",
+      "description": "Pakistan's free financial calculator suite — income tax, zakat, loan EMI, real-estate ROI and more.",
+      "inLanguage": ["en", "ur"],
+      "publisher": {
+        "@type": "Organization",
+        "name": "PakCalc",
+        "url": "https://pakcalc.site",
+        "logo": {"@type": "ImageObject", "url": "https://pakcalc.site/favicon.png"}
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://pakcalc.site/all-tools?q={search_term_string}",
+        "query-input": "required name=search_term_string"
       }
     }
-
-    .animate-float {
-      animation: float 3s ease-in-out infinite;
-    }
-
-    .sr-only-h1 {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border-width: 0;
-    }
-  </style>
+  </script>
 </head>
 
-<body class="bg-slate-50 text-slate-900 transition-colors duration-200 mesh-gradient">
-  <h1 class="sr-only-h1">PakCalc - Free Financial Calculators Pakistan 2026</h1>
+<body>
+  <h1 class="sr-only-h1">PakCalc — Free Financial Calculators for Pakistan (Updated 2026)</h1>
   <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
